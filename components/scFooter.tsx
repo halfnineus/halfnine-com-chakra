@@ -1,17 +1,13 @@
 import {
     Box,
-    chakra,
     Container,
-    Flex,
     Image,
     Link,
     Stack,
     Text,
     useColorModeValue,
-    VisuallyHidden,
 } from '@chakra-ui/react';
 
-import { ReactNode } from 'react';
 
 import NextLink from 'next/link'
 
@@ -21,39 +17,8 @@ import wsmlog from '../public/img/wsmlog.png'
 const Logo = () => {
     return (
         <>
-            <Image /*viewBox="0 0 120 28"*/ pointerEvents={'none'} width={'100%'} height={'10'} src={useColorModeValue(smlog.src, wsmlog.src)} />
+            <Image /*viewBox="0 0 120 28"*/ alt={'ochoa.pro'} pointerEvents={'none'} width={'100%'} height={'10'} src={useColorModeValue(smlog.src, wsmlog.src)} />
         </>
-    );
-};
-
-const SocialButton = ({
-    children,
-    label,
-    href,
-}: {
-    children: ReactNode;
-    label: string;
-    href: string;
-}) => {
-    return (
-        <chakra.button
-            bg={useColorModeValue('blackAlpha.100', 'whiteAlpha.100')}
-            rounded={'full'}
-            w={8}
-            h={8}
-            cursor={'pointer'}
-            as={'a'}
-            href={href}
-            display={'inline-flex'}
-            alignItems={'center'}
-            justifyContent={'center'}
-            transition={'background 0.3s ease'}
-            _hover={{
-                bg: useColorModeValue('blackAlpha.200', 'whiteAlpha.200'),
-            }}>
-            <VisuallyHidden>{label}</VisuallyHidden>
-            {children}
-        </chakra.button>
     );
 };
 
@@ -61,7 +26,7 @@ export default function SCFooter() {
     return (
         <Box
             color={useColorModeValue('gray.700', 'gray.200')}
-            bg={useColorModeValue('blackAlpha.100', 'whiteAlpha.100')}           
+            bg={useColorModeValue('blackAlpha.100', 'whiteAlpha.100')}
             width={'100%'}
             top={'100%'}
             position={'sticky'}
