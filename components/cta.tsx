@@ -1,11 +1,20 @@
 import React from "react";
-import { chakra, Box, Stack, Image, Flex } from "@chakra-ui/react";
+import { Button, Link } from '@chakra-ui/react';
+import {
+  chakra,
+  Box,
+  useColorModeValue,
+  Stack,
+  Image,
+  Flex,
+} from "@chakra-ui/react";
+import NextLink from 'next/link';
 
-const Choc = () => {
+const CTA = () => {
   return (
     <Flex
       direction={{ base: "column", md: "row" }}
-      _light={{ bg: "brand.500" }}
+      bg={useColorModeValue("brand.500", "brand.500")}
       px={8}
       py={24}
       mx="auto"
@@ -19,55 +28,62 @@ const Choc = () => {
           fontSize={{ base: "3xl", sm: "4xl" }}
           fontWeight="extrabold"
           lineHeight="shorter"
-          color="white"
-          _dark={{ color: "gray.100" }}
+          color={useColorModeValue("brand.600", "brand.500")}
           mb={6}
         >
-          <chakra.span display="block">Ready to dive in?</chakra.span>
+          <chakra.span display="block">Full Service Product</chakra.span>
           <chakra.span
             display="block"
-            color="white"
-            _dark={{ color: "gray.500" }}
+          // color={useColorModeValue("brand.600", "brand.500")}
           >
-            Start your free trial today.
+            Development &
           </chakra.span>
+          <chakra.span display="block">Manufacturing Company</chakra.span>
+
         </chakra.h2>
         <chakra.p
-          mb={6}
           fontSize={{ base: "lg", md: "xl" }}
-          color="gray.100"
-          _dark={{ color: "gray.300" }}
+          color={useColorModeValue("brand.600", "brand.500")}
         >
-          Hellonext is a feature voting software where you can allow your users
-          to vote on features, publish roadmap, and complete your customer
-          feedback loop.
+          Get In Touch With Us
+
         </chakra.p>
+        Note: If you are reaching out to us about a new project please submit your project.
+
+        <chakra.p
+          fontSize={{ base: "lg", md: "xl" }}
+          mb={6}
+          color={useColorModeValue("brand.600", "brand.500")}
+
+        >
+        </chakra.p>
+
         <Stack
           direction={{ base: "column", sm: "row" }}
           mb={{ base: 4, md: 8 }}
           spacing={2}
         >
           <Box display="inline-flex" rounded="md" shadow="md">
-            <chakra.a
-              display="inline-flex"
-              alignItems="center"
-              justifyContent="center"
-              px={5}
-              py={3}
-              border="solid transparent"
-              fontWeight="bold"
-              w="full"
-              rounded="md"
-              _light={{ color: "white" }}
-              bg="brand.600"
-              _dark={{ bg: "brand.500" }}
-              _hover={{
-                bg: "brand.700",
-                _dark: { bg: "brand.600" },
-              }}
-            >
-              Sign up for free
-            </chakra.a>
+            <NextLink href={'/contact'} passHref>
+              <Link>
+                <Button
+                  display="inline-flex"
+                  alignItems="center"
+                  justifyContent="center"
+                  px={5}
+                  py={3}
+                  border="solid transparent"
+                  fontWeight="bold"
+                  w="full"
+                  rounded="md"
+                  color={useColorModeValue("brand.600", "brand.500")}
+                  bg={useColorModeValue("#80808044", "#80808044")}
+                  _hover={{ bg: 'useColorModeValue("brand.700", "brand.600")' }}
+                >
+                  Get Started
+                </Button>
+              </Link>
+            </NextLink>
           </Box>
         </Stack>
       </Box>
@@ -76,6 +92,7 @@ const Choc = () => {
           w="full"
           rounded="lg"
           shadow="2xl"
+          pointerEvents={'none'}
           src="https://kutty.netlify.app/hero.jpg"
           alt="Hellonext feedback boards software screenshot"
         />
@@ -84,4 +101,4 @@ const Choc = () => {
   );
 };
 
-export default Choc;
+export default CTA;

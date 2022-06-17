@@ -61,10 +61,7 @@ export default function SCFooter() {
     return (
         <Box
             color={useColorModeValue('gray.700', 'gray.200')}
-            bg={useColorModeValue('blackAlpha.100', 'whiteAlpha.100')}
-            userSelect={'none'}
-
-           
+            bg={useColorModeValue('blackAlpha.100', 'whiteAlpha.100')}           
             width={'100%'}
             top={'100%'}
             position={'sticky'}

@@ -18,7 +18,6 @@ export default function Custom404() {
                     pr={{ md: 20 }}
                 >
                     <chakra.h2
-                        userSelect={'none'}
                         fontSize={{ base: "3xl", sm: "4xl" }}
                         fontWeight="extrabold"
                         lineHeight="shorter"
