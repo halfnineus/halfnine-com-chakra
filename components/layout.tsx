@@ -3,16 +3,14 @@ import { Navbar, SCFooter } from './index'
 
 interface Props {
     children: any,
-    title: any
+    // title: any
 }
 
-const MainLayout: NextPage<Props> = ({ children, title }) => {
+const MainLayout: NextPage<Props> = ({ children /* , title*/  }) => {
     return (
         <>
             <Navbar />
-            <main>
-                {children}
-            </main>
+            <main >{children}</main>
             <SCFooter />
         </>
     )

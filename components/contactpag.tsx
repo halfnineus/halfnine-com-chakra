@@ -26,12 +26,12 @@ import { BsPerson } from 'react-icons/bs';
 
 export default function ContactPag() {
     return (
-        <Container maxW="full" mt={0} centerContent overflow="hidden">
+        <Container maxW="full" mt={0} centerContent overflow="hidden" >
             <Flex>
                 <Box
                     bg={useColorModeValue('gray.50', 'gray.700')}
                     color="white"
-                    borderRadius="lg"
+                    borderRadius='2xl'
                     m={{ sm: 4, md: 16, lg: 10 }}
                     p={{ sm: 5, md: 5, lg: 16 }}
                     boxShadow={'lg'}>
