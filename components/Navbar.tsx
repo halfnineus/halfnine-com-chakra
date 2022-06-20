@@ -58,14 +58,14 @@ export default function Navbar() {
         justifySelf="self-start"
         onClick={mobileNav.onClose}
       />
-      <NextLink href={'/dash'} passHref>
+      <NextLink href={'/'} passHref>
         <Link display="flex" alignItems="center">
           <Button size="sm" w="full" variant="ghost" leftIcon={<AiFillHome />}>
-            Dashboard
+            Home
           </Button>
         </Link>
       </NextLink>
-      <NextLink href={'/inbox'} passHref>
+      <NextLink href={'/contact'} passHref>
         <Link display="flex" alignItems="center">
           <Button
             w="full"
@@ -73,7 +73,7 @@ export default function Navbar() {
             colorScheme="brand"
             leftIcon={<AiOutlineInbox />}
           >
-            Inbox
+            Contact
           </Button>
         </Link>
       </NextLink>

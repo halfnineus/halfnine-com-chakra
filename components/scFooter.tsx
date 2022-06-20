@@ -24,48 +24,52 @@ const Logo = () => {
 
 export default function SCFooter() {
     return (
-        <Box
-            color={useColorModeValue('gray.700', 'gray.200')}
-            bg={useColorModeValue('blackAlpha.100', 'whiteAlpha.100')}
-            width={'100%'}
-            top={'100%'}
-            position={'sticky'}
+        <div
+            style={{ position: "absolute", bottom: 0, width: "100%" }}
         >
             <Box
-            // borderTopWidth={2}
-            // borderStyle={'solid'}
-            // borderColor={useColorModeValue('gray.200', 'gray.700')}
+                color={useColorModeValue('gray.700', 'gray.200')}
+                bg={useColorModeValue('blackAlpha.100', 'whiteAlpha.100')}
+                // width={'100%'}
+                // top={'100%'}
+                // position={'sticky'}
             >
-                <Container
-                    as={Stack}
-                    maxW={''}
-                    py={4}
-                    direction={{ base: 'column', md: 'row' }}
-                    // spacing={4}
-                    justify={{ base: 'center', md: 'space-between' }}
-                    align={{ base: 'center', md: 'center' }}>
-                    <NextLink href={'/'} passHref>
-                        <Link>
-                            <Logo />
-                        </Link>
-                    </NextLink>
-                    <Text>© 2022 Ochoa LLC. All rights reserved</Text>
-                    <Stack direction={'row'} spacing={6}>
+                <Box
+                // borderTopWidth={2}
+                // borderStyle={'solid'}
+                // borderColor={useColorModeValue('gray.200', 'gray.700')}
+                >
+                    <Container
+                        as={Stack}
+                        maxW={''}
+                        py={4}
+                        direction={{ base: 'column', md: 'row' }}
+                        // spacing={4}
+                        justify={{ base: 'center', md: 'space-between' }}
+                        align={{ base: 'center', md: 'center' }}>
                         <NextLink href={'/'} passHref>
-                            <Link>Home</Link>
+                            <Link>
+                                <Logo />
+                            </Link>
                         </NextLink>
-                        <NextLink href={'/about'} passHref>
-                            <Link>About</Link>
-                        </NextLink>
-                        <NextLink href={'/blog'} passHref>
-                            <Link>Blog</Link>
-                        </NextLink>
-                        <NextLink href={'/contact'} passHref>
-                            <Link>Contact</Link>
-                        </NextLink>
-                    </Stack>
-                </Container>
-            </Box>
-        </Box >
+                        <Text>© 2022 Ochoa LLC. All rights reserved</Text>
+                        <Stack direction={'row'} spacing={6}>
+                            <NextLink href={'/'} passHref>
+                                <Link>Home</Link>
+                            </NextLink>
+                            <NextLink href={'/about'} passHref>
+                                <Link>About</Link>
+                            </NextLink>
+                            <NextLink href={'/blog'} passHref>
+                                <Link>Blog</Link>
+                            </NextLink>
+                            <NextLink href={'/contact'} passHref>
+                                <Link>Contact</Link>
+                            </NextLink>
+                        </Stack>
+                    </Container>
+                </Box>
+            </Box >
+        </div>
     );
 }
