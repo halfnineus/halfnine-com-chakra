@@ -6,9 +6,6 @@ export default class MyDocument extends Document {
         return (
             <Html lang="en">
                 <Head>
-                    <title>
-                        {/* {title + ' - ochoa.pro' || 'ochoa.pro'} */}
-                    </title>
                     <meta charSet='utf-8' />
                     <meta name='viewport' content='initial-scale=1.0, height=device-height, width=device-width' />
                     {/* <meta name="description" content={`Informacion sobre el ${title}`} /> */}
