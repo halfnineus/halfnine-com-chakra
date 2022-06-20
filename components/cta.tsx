@@ -23,6 +23,7 @@ const CTA = () => {
         w={{ base: "full", md: 11 / 12, xl: 9 / 12 }}
         mx="auto"
         pr={{ md: 20 }}
+        userSelect={'none'}
       >
         <chakra.h2
           fontSize={{ base: "3xl", sm: "4xl" }}
@@ -80,7 +81,7 @@ const CTA = () => {
                   bg={useColorModeValue("#80808044", "#80808044")}
                   _hover={{ bg: 'useColorModeValue("brand.700", "brand.600")' }}
                 >
-                  Get Started
+                  Contact Us
                 </Button>
               </Link>
             </NextLink>

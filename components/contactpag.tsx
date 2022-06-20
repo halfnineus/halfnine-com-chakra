@@ -90,7 +90,11 @@ export default function ContactPag() {
                                                     <InputLeftElement pointerEvents="none">
                                                         <BsPerson color="gray.800" />
                                                     </InputLeftElement>
-                                                    <Input placeholder="John Doe" type="text" size="md" />
+                                                    <Input
+                                                        isDisabled
+
+                                                        placeholder="John Doe" type="text" size="md"
+                                                    />
                                                 </InputGroup>
                                             </FormControl>
                                             <FormControl id="name">
@@ -99,12 +103,17 @@ export default function ContactPag() {
                                                     <InputLeftElement pointerEvents="none">
                                                         <MdOutlineEmail color="gray.800" />
                                                     </InputLeftElement>
-                                                    <Input placeholder="webmaster@ochoa.pro" type="text" size="md" />
+                                                    <Input
+                                                        isDisabled
+
+                                                        placeholder="webmaster@ochoa.pro" type="text" size="md"
+                                                    />
                                                 </InputGroup>
                                             </FormControl>
                                             <FormControl id="name">
                                                 <FormLabel>Message</FormLabel>
                                                 <Textarea
+                                                    isDisabled
                                                     _hover={{
                                                         borderRadius: 'gray.300',
                                                     }}
@@ -113,6 +122,7 @@ export default function ContactPag() {
                                             </FormControl>
                                             <FormControl id="name" float="right">
                                                 <Button
+                                                    isDisabled
                                                     variant="solid"
                                                     bg={'blue.400'}
                                                     color="white"
