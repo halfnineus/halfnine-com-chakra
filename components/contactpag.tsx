@@ -1,3 +1,4 @@
+import { useRouter } from 'next/router'
 import {
     Container,
     Flex,
@@ -25,6 +26,7 @@ import {
 import { BsPerson } from 'react-icons/bs';
 
 export default function ContactPag() {
+    const router = useRouter()
     return (
         <Container maxW="full" mt={0} centerContent overflow="hidden" >
             <Flex>
@@ -46,6 +48,7 @@ export default function ContactPag() {
                                     <Box py={{ base: 5, sm: 5, md: 8, lg: 10 }}>
                                         <VStack pl={0} spacing={3} alignItems="flex-start">
                                             <Button
+                                                onClick={() => router.push('tel:+1-123-456-7890')}
                                                 size="md"
                                                 height="48px"
                                                 width="200px"
@@ -53,10 +56,10 @@ export default function ContactPag() {
                                                 color={useColorModeValue('black', 'white')}
                                                 _hover={{ border: '2px solid #1C6FEB' }}
                                                 leftIcon={<MdPhone color={useColorModeValue('black', 'white')} size="20px" />}>
-                                                {/* onClick={'phone:+1 (123) 456-7890'} */}
                                                 +1 (123) 456-7890
                                             </Button>
                                             <Button
+                                                onClick={() => router.push('mailto:dan@ochoa.pro')}
                                                 size="md"
                                                 height="48px"
                                                 width="200px"
@@ -67,6 +70,7 @@ export default function ContactPag() {
                                                 support@ochoa.pro
                                             </Button>
                                             <Button
+                                                // onClick={() => router.push('https://orlando.gov')}
                                                 size="md"
                                                 height="48px"
                                                 width="200px"
@@ -90,11 +94,7 @@ export default function ContactPag() {
                                                     <InputLeftElement pointerEvents="none">
                                                         <BsPerson color="gray.800" />
                                                     </InputLeftElement>
-                                                    <Input
-                                                        isDisabled
-
-                                                        placeholder="John Doe" type="text" size="md"
-                                                    />
+                                                    <Input placeholder="John Doe" type="text" size="md" />
                                                 </InputGroup>
                                             </FormControl>
                                             <FormControl id="name">
@@ -103,17 +103,12 @@ export default function ContactPag() {
                                                     <InputLeftElement pointerEvents="none">
                                                         <MdOutlineEmail color="gray.800" />
                                                     </InputLeftElement>
-                                                    <Input
-                                                        isDisabled
-
-                                                        placeholder="webmaster@ochoa.pro" type="text" size="md"
-                                                    />
+                                                    <Input placeholder="webmaster@ochoa.pro" type="text" size="md" />
                                                 </InputGroup>
                                             </FormControl>
                                             <FormControl id="name">
                                                 <FormLabel>Message</FormLabel>
                                                 <Textarea
-                                                    isDisabled
                                                     _hover={{
                                                         borderRadius: 'gray.300',
                                                     }}

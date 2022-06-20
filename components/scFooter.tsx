@@ -57,12 +57,12 @@ export default function SCFooter() {
                             <NextLink href={'/'} passHref>
                                 <Link>Home</Link>
                             </NextLink>
-                            <NextLink href={'/about'} passHref>
+                            {/* <NextLink href={'https://about.ochoa.pro'} passHref>
                                 <Link>About</Link>
                             </NextLink>
-                            <NextLink href={'/blog'} passHref>
+                            <NextLink href={'https://blog.ochoa.pro'} passHref>
                                 <Link>Blog</Link>
-                            </NextLink>
+                            </NextLink> */}
                             <NextLink href={'/contact'} passHref>
                                 <Link>Contact</Link>
                             </NextLink>

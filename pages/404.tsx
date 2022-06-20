@@ -38,7 +38,7 @@ export default function Custom404() {
                     spacing={2}
                 >
                     <Box display="inline-flex" rounded="md" shadow="md">
-                        <NextLink href={'/auth/sign-up'} passHref>
+                        <NextLink href={'/contact'} passHref>
                             <Link>
                                 <Button
                                     display="inline-flex"
