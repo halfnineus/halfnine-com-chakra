@@ -30,9 +30,9 @@ export default function SCFooter() {
             <Box
                 color={useColorModeValue('gray.700', 'gray.200')}
                 bg={useColorModeValue('blackAlpha.100', 'whiteAlpha.100')}
-                // width={'100%'}
-                // top={'100%'}
-                // position={'sticky'}
+            // width={'100%'}
+            // top={'100%'}
+            // position={'sticky'}
             >
                 <Box
                 // borderTopWidth={2}
@@ -52,7 +52,7 @@ export default function SCFooter() {
                                 <Logo />
                             </Link>
                         </NextLink>
-                        <Text>© 2022 Ochoa LLC. All rights reserved</Text>
+                        <Text userSelect={'none'}>© 2022 Ochoa LLC. All rights reserved</Text>
                         <Stack direction={'row'} spacing={6}>
                             <NextLink href={'/'} passHref>
                                 <Link>Home</Link>
