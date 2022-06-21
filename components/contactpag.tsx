@@ -67,7 +67,7 @@ export default function ContactPag() {
                                                 color={useColorModeValue('black', 'white')}
                                                 _hover={{ border: '2px solid #1C6FEB' }}
                                                 leftIcon={<MdEmail color={useColorModeValue('black', 'white')} size="20px" />}>
-                                                support@ochoa.pro
+                                                dan@ochoa.pro
                                             </Button>
                                             <Button
                                                 // onClick={() => router.push('https://orlando.gov')}
@@ -97,7 +97,7 @@ export default function ContactPag() {
                                                     <Input placeholder="John Doe" type="text" size="md" />
                                                 </InputGroup>
                                             </FormControl>
-                                            <FormControl id="name">
+                                            <FormControl id="mail">
                                                 <FormLabel>Mail</FormLabel>
                                                 <InputGroup >
                                                     <InputLeftElement pointerEvents="none">
@@ -106,7 +106,7 @@ export default function ContactPag() {
                                                     <Input placeholder="webmaster@ochoa.pro" type="text" size="md" />
                                                 </InputGroup>
                                             </FormControl>
-                                            <FormControl id="name">
+                                            <FormControl aria-required={'true'} id="message">
                                                 <FormLabel>Message</FormLabel>
                                                 <Textarea
                                                     _hover={{
@@ -115,9 +115,9 @@ export default function ContactPag() {
                                                     placeholder="Message"
                                                 />
                                             </FormControl>
-                                            <FormControl id="name" float="right">
+                                            <FormControl id="submit" /* float="right" */ >
                                                 <Button
-                                                    isDisabled
+                                                    type={'submit'}
                                                     variant="solid"
                                                     bg={'blue.400'}
                                                     color="white"
