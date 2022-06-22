@@ -1,5 +1,5 @@
 import React from "react";
-import { Button, Link } from '@chakra-ui/react';
+import { Button, Center, Link, Wrap, WrapItem } from '@chakra-ui/react';
 import {
   chakra,
   Box,
@@ -10,7 +10,7 @@ import {
 } from "@chakra-ui/react";
 import NextLink from 'next/link';
 
-const index = () => {
+const Index = () => {
   return (
     <>
       <title>
@@ -59,7 +59,6 @@ const index = () => {
             fontSize={{ base: "lg", md: "xl" }}
             mb={6}
             color={useColorModeValue("brand.600", "brand.500")}
-
           >
           </chakra.p>
 
@@ -92,19 +91,33 @@ const index = () => {
             </Box>
           </Stack>
         </Box>
-        <Box w={{ base: "full", md: 10 / 12 }} mx="auto" textAlign="center">
-          <Image
-            w="full"
-            rounded="lg"
-            shadow="2xl"
-            pointerEvents={'none'}
-            src="https://kutty.netlify.app/hero.jpg"
-            alt="Hellonext feedback boards software screenshot"
-          />
+        <Box mx="auto" /* w={{ base: "4xl", md: 10 / 12 }} textAlign="center" */ >
+          <Wrap spacing='30px'  align="normal">
+            <WrapItem >
+              <Center /* _hover={{ width: '260px', height: '260px' }} */ w='250px' h='250px' bg={useColorModeValue("red.400", "red.600")}>
+                Product Design
+              </Center>
+            </WrapItem>
+            <WrapItem>
+              <Center /* _hover={{ width: '260px', height: '260px' }} */ w='250px' h='250px' bg={useColorModeValue("green.400", "green.600")}>
+                Electronic Engineering
+              </Center>
+            </WrapItem>
+            <WrapItem>
+              <Center /* _hover={{ width: '260px', height: '260px' }} */ w='250px' h='250px' bg={useColorModeValue("orange.400", "orange.600")}>
+                Electronic Engineering
+              </Center>
+            </WrapItem>
+            <WrapItem>
+              <Center /* _hover={{ width: '260px', height: '260px' }} */ w='250px' h='250px' bg={useColorModeValue("blue.400", "blue.600")}>
+                Mechanical Engineering
+              </Center>
+            </WrapItem>
+          </Wrap>
         </Box>
       </Flex>
     </>
   );
 }
 
-export default index
+export default Index

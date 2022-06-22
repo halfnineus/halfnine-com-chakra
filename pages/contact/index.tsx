@@ -78,7 +78,7 @@ const INDEX = () => {
                                                     dan@ochoa.pro
                                                 </Button>
                                                 <Button
-                                                    // onClick={() => router.push('https://orlando.gov')}
+                                                    onClick={() => router.push('map')}
                                                     size="md"
                                                     height="48px"
                                                     width="200px"
@@ -103,20 +103,20 @@ const INDEX = () => {
                                                     {/* <FormControl isRequired>
                                                         <InputGroup>
                                                             <InputLeftAddon children={<InfoIcon name='info' />} />
-                                                            <Input type={'name'} placeholder={'First Name'} aria-lable={'Name'} />
+                                                            <Input type={'name'} placeholder={'First Name'} aria-label={'Name'} />
                                                         </InputGroup>
                                                     </FormControl>
                                                     <FormControl isRequired>
                                                         <InputGroup>
                                                             <InputLeftAddon children={<InfoIcon name='info' />} />
-                                                            <Input type={'name'} placeholder={'Last Name'} aria-lable={'Last Name'} />
+                                                            <Input type={'name'} placeholder={'Last Name'} aria-label={'Last Name'} />
                                                         </InputGroup>
                                                     </FormControl>
                                                     <Divider />
                                                     <FormControl isRequired>
                                                         <InputGroup>
                                                             <InputLeftAddon children={<EmailIcon name='email' />} />
-                                                            <Input type={'email'} placeholder={'Email'} aria-lable={'Email'} />
+                                                            <Input type={'email'} placeholder={'Email'} aria-label={'Email'} />
                                                         </InputGroup>
                                                     </FormControl>
                                                     <FormControl isRequired>
@@ -128,40 +128,38 @@ const INDEX = () => {
                                                     <Divider />
                                                     <Button children={'Sign up'} type='submit' _hover={{ boxShadow: "md" }} /> */}
 
-
-                                                    <FormControl id="name">
+                                                    <FormControl isRequired id="name">
                                                         <FormLabel>Your Name</FormLabel>
                                                         <InputGroup>
                                                             <InputLeftElement pointerEvents="none">
                                                                 <BsPerson color="gray.800" />
                                                             </InputLeftElement>
-                                                            <Input placeholder="John Doe" type="text" size="md" />
+                                                            <Input type={'name'} placeholder={'John Doe'} aria-label={'Name'} size="md" />
                                                         </InputGroup>
                                                     </FormControl>
-                                                    <FormControl id="mail">
-                                                        <FormLabel>Mail</FormLabel>
+                                                    <FormControl isRequired id="mail">
+                                                        <FormLabel>Email</FormLabel>
                                                         <InputGroup>
                                                             <InputLeftElement pointerEvents="none">
                                                                 <MdOutlineEmail color="gray.800" />
                                                             </InputLeftElement>
-                                                            <Input placeholder="webmaster@ochoa.pro" type="text" size="md" />
+                                                            <Input type={'email'} placeholder={'Email'} aria-label={'Email'} size="md" />
                                                         </InputGroup>
-                                                    </FormControl>
-                                                    <FormControl aria-required={'true'} id="message">
+                                                    </FormControl >
+                                                    <FormControl isRequired id="message">
                                                         <FormLabel>Message</FormLabel>
                                                         <Textarea
-
-                                                            _hover={{
-                                                                borderRadius: 'gray.300',
-                                                            }}
+                                                            // type={'email'}
+                                                            // _hover={{ borderRadius: 'gray.300', }}
                                                             placeholder="Message"
+                                                            aria-label={'Message'}
                                                         />
                                                     </FormControl>
-                                                    <FormControl id="submit" >
+                                                    <FormControl >
                                                         <Button
                                                             loadingText='Submitting'
-                                                            variant="solid"
-                                                            bg={'blue.400'}
+                                                            variant={"solid"}
+                                                            bg={'blue.500'}
                                                             color="white"
                                                             _hover={{}}
                                                             type={'submit'}
@@ -172,7 +170,7 @@ const INDEX = () => {
 
 
                                                 </VStack>
-                                                
+
                                             </form>
 
                                         </Box>

@@ -17,7 +17,7 @@ import {
 import { EmailIcon, InfoIcon, LockIcon } from '@chakra-ui/icons'
 
 
-const dev = () => {
+const Dev = () => {
     return (
         <>
             <Container>
@@ -32,31 +32,41 @@ const dev = () => {
                             <Stack spacing={'2'}>
                                 <FormControl isRequired>
                                     <InputGroup>
-                                        <InputLeftAddon children={<InfoIcon name='info' />} />
-                                        <Input type={'name'} placeholder={'First Name'} aria-lable={'Name'} />
+                                        <InputLeftAddon  >
+                                            <InfoIcon name='info' />
+                                        </InputLeftAddon>
+                                        <Input type={'name'} placeholder={'First Name'} aria-label={'Name'} />
                                     </InputGroup>
                                 </FormControl>
                                 <FormControl isRequired>
                                     <InputGroup>
-                                        <InputLeftAddon children={<InfoIcon name='info' />} />
-                                        <Input type={'name'} placeholder={'Last Name'} aria-lable={'Last Name'} />
+                                        <InputLeftAddon >
+                                            <InfoIcon name='info' />
+                                        </InputLeftAddon>
+                                        <Input type={'name'} placeholder={'Last Name'} aria-label={'Last Name'} />
                                     </InputGroup>
                                 </FormControl>
                                 <Divider />
                                 <FormControl isRequired>
                                     <InputGroup>
-                                        <InputLeftAddon children={<EmailIcon name='email' />} />
-                                        <Input type={'email'} placeholder={'Email'} aria-lable={'Email'} />
+                                        <InputLeftAddon >
+                                            <EmailIcon name='email' />
+                                        </InputLeftAddon>
+                                        <Input type={'email'} placeholder={'Email'} aria-label={'Email'} />
                                     </InputGroup>
                                 </FormControl>
                                 <FormControl isRequired>
                                     <InputGroup>
-                                        <InputLeftAddon children={<LockIcon name='lock' />} />
+                                        <InputLeftAddon >
+                                            <LockIcon name='lock' />
+                                        </InputLeftAddon>
                                         <Input type={'password'} placeholder={'Password'} aria-label={'Password'} />
                                     </InputGroup>
                                 </FormControl>
                                 <Divider />
-                                <Button children={'Sign up'} type='submit' _hover={{ boxShadow: "md" }} />
+                                <Button type='submit' _hover={{ boxShadow: "md" }} >
+                                    Sign up
+                                </Button>
                             </Stack>
                         </form>
 
@@ -67,4 +77,4 @@ const dev = () => {
     )
 }
 
-export default dev
+export default Dev
