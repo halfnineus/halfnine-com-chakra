@@ -9,6 +9,10 @@ import {
   Flex,
 } from "@chakra-ui/react";
 import NextLink from 'next/link';
+import pdi from '../public/img-land/Product-Design-Image.png'
+import eei from '../public/img-land/Electronic-Engineering-Image.png'
+import padi from '../public/img-land/Packaging-Design-Image.png'
+import mei from '../public/img-land/Mechanical-Engineering-Image.png'
 
 const Index = () => {
   return (
@@ -91,28 +95,28 @@ const Index = () => {
             </Box>
           </Stack>
         </Box>
-        <Box mx="auto" /* w={{ base: "4xl", md: 10 / 12 }} textAlign="center" */ >
-          <Wrap spacing='30px'  align="normal">
-            <WrapItem >
-              <Center /* _hover={{ width: '260px', height: '260px' }} */ w='250px' h='250px' bg={useColorModeValue("red.400", "red.600")}>
-                Product Design
-              </Center>
-            </WrapItem>
-            <WrapItem>
-              <Center /* _hover={{ width: '260px', height: '260px' }} */ w='250px' h='250px' bg={useColorModeValue("green.400", "green.600")}>
-                Electronic Engineering
-              </Center>
-            </WrapItem>
-            <WrapItem>
-              <Center /* _hover={{ width: '260px', height: '260px' }} */ w='250px' h='250px' bg={useColorModeValue("orange.400", "orange.600")}>
-                Electronic Engineering
-              </Center>
-            </WrapItem>
-            <WrapItem>
-              <Center /* _hover={{ width: '260px', height: '260px' }} */ w='250px' h='250px' bg={useColorModeValue("blue.400", "blue.600")}>
-                Mechanical Engineering
-              </Center>
-            </WrapItem>
+        <Box >
+          <Wrap spacing='30px' align="normal">
+            <NextLink href={'/services/product-design'}>
+              <Link>
+                <Image boxShadow={'md'} src={pdi.src} alt={'pdi'} />
+              </Link>
+            </NextLink>
+            <NextLink href={'/services/electronic-engineering'}>
+              <Link>
+                <Image boxShadow={'md'} src={eei.src} alt={'pdi'} />
+              </Link>
+            </NextLink>
+            <NextLink href={'/services/packaging-design'}>
+              <Link>
+                <Image boxShadow={'md'} src={padi.src} alt={'pdi'} />
+              </Link>
+            </NextLink>
+            <NextLink href={'/services/mechanical-engineering'}>
+              <Link>
+                <Image boxShadow={'md'} src={mei.src} alt={'pdi'} />
+              </Link>
+            </NextLink>
           </Wrap>
         </Box>
       </Flex>
