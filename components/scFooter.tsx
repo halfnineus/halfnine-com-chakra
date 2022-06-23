@@ -52,7 +52,7 @@ export default function SCFooter() {
                                 <Logo />
                             </Link>
                         </NextLink>
-                        <Text userSelect={'none'}>© 2022 ochoa.pro All rights reserved</Text>
+                        <Text userSelect={'none'}>© 2022 ochoa.pro -  All rights reserved</Text>
                         <Stack direction={'row'} spacing={6}>
                             <NextLink href={'/'} passHref>
                                 <Link>Home</Link>
@@ -69,7 +69,7 @@ export default function SCFooter() {
                         </Stack>
                     </Container>
                 </Box>
-            </Box >
+            </Box>
         </div>
     );
 }

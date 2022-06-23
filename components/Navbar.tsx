@@ -50,7 +50,7 @@ export default function Navbar() {
     >
       <NextLink href={'/'} passHref>
         <Link display="flex" alignItems="center">
-          <Image pointerEvents={'none'} width={'100%'} height={'10'} src={useColorModeValue(smlog.src, wsmlog.src)} alt={'ochoa.pro'} />
+          <Image width={'100%'} height={'10'} src={useColorModeValue(smlog.src, wsmlog.src)} alt={'ochoa.pro'} />
         </Link>
       </NextLink>
       <CloseButton
