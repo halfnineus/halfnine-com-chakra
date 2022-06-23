@@ -32,7 +32,7 @@ const Dev = () => {
                             <Stack spacing={'2'}>
                                 <FormControl isRequired>
                                     <InputGroup>
-                                        <InputLeftAddon  >
+                                        <InputLeftAddon>
                                             <InfoIcon name='info' />
                                         </InputLeftAddon>
                                         <Input type={'name'} placeholder={'First Name'} aria-label={'Name'} />
@@ -40,7 +40,7 @@ const Dev = () => {
                                 </FormControl>
                                 <FormControl isRequired>
                                     <InputGroup>
-                                        <InputLeftAddon >
+                                        <InputLeftAddon>
                                             <InfoIcon name='info' />
                                         </InputLeftAddon>
                                         <Input type={'name'} placeholder={'Last Name'} aria-label={'Last Name'} />
@@ -49,7 +49,7 @@ const Dev = () => {
                                 <Divider />
                                 <FormControl isRequired>
                                     <InputGroup>
-                                        <InputLeftAddon >
+                                        <InputLeftAddon>
                                             <EmailIcon name='email' />
                                         </InputLeftAddon>
                                         <Input type={'email'} placeholder={'Email'} aria-label={'Email'} />
@@ -57,22 +57,21 @@ const Dev = () => {
                                 </FormControl>
                                 <FormControl isRequired>
                                     <InputGroup>
-                                        <InputLeftAddon >
+                                        <InputLeftAddon>
                                             <LockIcon name='lock' />
                                         </InputLeftAddon>
                                         <Input type={'password'} placeholder={'Password'} aria-label={'Password'} />
                                     </InputGroup>
                                 </FormControl>
                                 <Divider />
-                                <Button type='submit' _hover={{ boxShadow: "md" }} >
+                                <Button type='submit' _hover={{ boxShadow: "md" }}>
                                     Sign up
                                 </Button>
                             </Stack>
                         </form>
-
                     </Box>
                 </Flex>
-            </Container >
+            </Container>
         </>
     )
 }

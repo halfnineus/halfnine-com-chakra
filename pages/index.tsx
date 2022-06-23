@@ -31,9 +31,10 @@ const Index = () => {
           w={{ base: "full", md: 11 / 12, xl: 9 / 12 }}
           mx="auto"
           pr={{ md: 20 }}
-          userSelect={'none'}
+        // userSelect={'none'}
         >
           <chakra.h2
+            pointerEvents={'none'}
             fontSize={{ base: "3xl", sm: "4xl" }}
             fontWeight="extrabold"
             lineHeight="shorter"
@@ -95,24 +96,24 @@ const Index = () => {
             </Box>
           </Stack>
         </Box>
-        <Box >
+        <Box>
           <Wrap spacing='30px' align="normal">
-            <NextLink href={'/services/product-design'}>
+            <NextLink href={'contact'} passHref>
               <Link>
                 <Image boxShadow={'md'} src={pdi.src} alt={'pdi'} />
               </Link>
             </NextLink>
-            <NextLink href={'/services/electronic-engineering'}>
+            <NextLink href={'contact'} passHref>
               <Link>
                 <Image boxShadow={'md'} src={eei.src} alt={'pdi'} />
               </Link>
             </NextLink>
-            <NextLink href={'/services/packaging-design'}>
+            <NextLink href={'contact'} passHref>
               <Link>
                 <Image boxShadow={'md'} src={padi.src} alt={'pdi'} />
               </Link>
             </NextLink>
-            <NextLink href={'/services/mechanical-engineering'}>
+            <NextLink href={'contact'} passHref>
               <Link>
                 <Image boxShadow={'md'} src={mei.src} alt={'pdi'} />
               </Link>
@@ -125,3 +126,8 @@ const Index = () => {
 }
 
 export default Index
+
+// href={'/services/product-design'}
+// href={'/services/electronic-engineering'}
+// href={'/services/packaging-design'}
+// href={'/services/mechanical-engineering'}

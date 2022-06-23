@@ -10,7 +10,7 @@ const MainLayout: NextPage<Props> = ({ children /* , title */ }) => {
     return (
         <>
             <Navbar />
-            <main >{children}</main>
+            <main>{children}</main>
             <SCFooter />
         </>
     )

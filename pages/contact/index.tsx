@@ -45,7 +45,7 @@ const INDEX = () => {
                     >
                         <Box p={4}>
                             <Wrap spacing={{ base: 20, sm: 3, md: 5, lg: 20 }}>
-                                <WrapItem >
+                                <WrapItem>
                                     <Box>
                                         <Heading color={useColorModeValue('black', 'white')} fontSize={'4xl'}>Contact</Heading>
                                         <Text mt={{ sm: 3, md: 3, lg: 5 }} color="gray.500">
@@ -145,7 +145,7 @@ const INDEX = () => {
                                                             </InputLeftElement>
                                                             <Input type={'email'} placeholder={'Email'} aria-label={'Email'} size="md" />
                                                         </InputGroup>
-                                                    </FormControl >
+                                                    </FormControl>
                                                     <FormControl isRequired id="message">
                                                         <FormLabel>Message</FormLabel>
                                                         <Textarea
@@ -155,7 +155,7 @@ const INDEX = () => {
                                                             aria-label={'Message'}
                                                         />
                                                     </FormControl>
-                                                    <FormControl >
+                                                    <FormControl>
                                                         <Button
                                                             loadingText='Submitting'
                                                             variant={"solid"}
