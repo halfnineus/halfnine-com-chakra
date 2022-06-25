@@ -1,4 +1,5 @@
 import router, { useRouter } from 'next/router'
+import NextLink from "next/link"
 import {
     Container,
     Flex,
@@ -27,6 +28,7 @@ import {
 } from 'react-icons/md';
 import { BsPerson } from 'react-icons/bs';
 import { EmailIcon, InfoIcon, LockIcon } from '@chakra-ui/icons';
+import Link from 'next/link';
 
 
 const INDEX = () => {
@@ -78,7 +80,7 @@ const INDEX = () => {
                                                     dan@ochoa.pro
                                                 </Button>
                                                 <Button
-                                                    onClick={() => router.push('map')}
+                                                    // onClick={() => router.push('map')}
                                                     size="md"
                                                     height="48px"
                                                     width="200px"

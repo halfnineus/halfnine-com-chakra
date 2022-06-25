@@ -1,3 +1,4 @@
+import { Box } from '@chakra-ui/react'
 import { NextPage } from 'next'
 import { Navbar, SCFooter } from './index'
 
@@ -11,6 +12,7 @@ const MainLayout: NextPage<Props> = ({ children /* , title */ }) => {
         <>
             <Navbar />
             <main>{children}</main>
+            <Box minH={"9rem"} /* bg={mode('gray.50', 'gray.700')} */ />
             <SCFooter />
         </>
     )
