@@ -6,12 +6,12 @@
       <changefreq>weekly</changefreq>
       <priority>1.00</priority>
     </url>
-    <url>
+    <!-- <url>
       <loc>https://ochoa.pro/contact</loc>
       <lastmod>2021-06-01</lastmod>
       <changefreq>weekly</changefreq>
       <priority>1.00</priority>
-    </url>
+    </url> -->
     <url>
       <loc>https://ochoa.pro/services/software-engineering</loc>
       <lastmod>2021-06-01</lastmod>

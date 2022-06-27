@@ -1,4 +1,6 @@
+import Head from "next/head";
 import NextLink from "next/link"
+
 import {
     Container,
     Flex,
@@ -13,24 +15,28 @@ import {
     FormLabel,
     Input,
     InputGroup,
-    InputLeftElement,   
+    InputLeftElement,
     Textarea,
     useColorModeValue,
     Link,
 } from '@chakra-ui/react';
+
 import {
     MdPhone,
     MdEmail,
     MdLocationOn,
     MdOutlineEmail,
 } from 'react-icons/md';
+
 import { BsPerson } from 'react-icons/bs';
 
 
 const INDEX = () => {
     return (
         <>
-            <title>contact - ochoa.pro</title>
+            <Head>
+                <title>contact - ochoa.pro</title>
+            </Head>
             <Container maxW="full" mt={0} centerContent overflow="hidden">
                 <Flex>
                     <Box
@@ -46,7 +52,7 @@ const INDEX = () => {
                                 <WrapItem>
                                     <Box>
                                         <Heading color={useColorModeValue('black', 'white')} fontSize={'4xl'}>Contact</Heading>
-                                        <Text mt={{ sm: 3, md: 3, lg: 5 }} color="gray.500">
+                                        <Text pointerEvents={'none'} mt={{ sm: 3, md: 3, lg: 5 }} color="gray.500">
                                             Fill up the form below to contact
                                         </Text>
                                         <Box py={{ base: 5, sm: 5, md: 8, lg: 10 }}>
@@ -66,7 +72,7 @@ const INDEX = () => {
                                                         </Button>
                                                     </Link>
                                                 </NextLink>
-                                                <NextLink href={'dan@ochoa.pro'} passHref>
+                                                <NextLink href={'mailto:dan@ochoa.pro'} passHref>
                                                     <Link>
                                                         <Button
                                                             size="md"
@@ -152,5 +158,4 @@ const INDEX = () => {
         </>
     );
 }
-
 export default INDEX;

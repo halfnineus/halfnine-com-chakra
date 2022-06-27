@@ -15,47 +15,41 @@ export interface Link {
 
 export const links: Link[] = [
   // { label: 'For Designers', href: '#' },
-  { label: 'For Teams', href: '#' },
+  // { label: 'For Teams', href: '#' },
   {
-    label: 'Resources',
+    label: 'Development',
     children: [
       {
-        label: 'Get Help',
-        description: 'Read our documentation and FAQs, or get in touch.',
-        href: '#',
+        label: 'electronic-engineering',
+        description: 'Product design and development processes that bring ideas to life.',
+        href: '/services/development/electronic-engineering',
         icon: <IoHelpBuoy />,
       },
       {
-        label: 'Get Help',
-        description: 'Read our documentation and FAQs, or get in touch.',
-        href: '#',
-        icon: <IoHelpBuoy />,
+        label: 'software-engineering',
+        description: 'Get updates, articles and insights from the team.',
+        href: '/services/development/software-engineering',
+        icon: <MdWeb />,
       },
       {
-        label: 'Get Help',
-        description: 'Read our documentation and FAQs, or get in touch.',
-        href: '#',
-        icon: <IoHelpBuoy />,
-      },
-      {
-        label: 'Events & Meetups',
-        description: 'Discover and join your local Sketch community.',
-        href: '#',
-        icon: <IoCalendar />,
-      },
-      {
-        label: 'Extensions',
-        description: 'Do even more with Assistants, plugins and integrations.',
-        href: '#',
+        label: 'mechanical-engineering',
+        description: 'Manufacturing processes make or break product success.',
+        href: '/services/development/mechanical-engineering',
         icon: <IoGrid />,
       },
       {
-        label: 'Blog',
+        label: 'packaging-design',
+        description: 'Discover and join your local Sketch community.',
+        href: '/services/development/packaging-design',
+        icon: <IoCalendar />,
+      },
+      {
+        label: 'product-design',
         description: 'Get updates, articles and insights from the team.',
-        href: '#',
+        href: '/services/development/product-design',
         icon: <MdWeb />,
       },
     ],
   },
-  { label: 'Pricing', href: '#' },
+  // { label: 'Pricing', href: '#' },
 ]

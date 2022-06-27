@@ -16,6 +16,7 @@ import { NavMenu } from './NavMenu'
 import { Submenu } from './Submenu'
 import { ToggleButton } from './ToggleButton'
 import { links } from './_data'
+import { links2 } from './_data2'
 
 import smlog from '../../public/img/smlog.png'
 import wsmlog from '../../public/img/wsmlog.png'
@@ -34,7 +35,7 @@ const MobileNavContext = (props: FlexProps) => {
           </Link>
         </NextLink>
         <Box visibility={{ base: 'hidden', sm: 'visible' }}>
-          <Button as="a" colorScheme="blue">
+          <Button as="a" /* colorScheme="blue" */>
             Get Started
           </Button>
         </Box>
@@ -44,6 +45,17 @@ const MobileNavContext = (props: FlexProps) => {
 
 
         {links.map((link, idx) =>
+          link.children ? (
+            <Submenu.Mobile key={idx} link={link} />
+          )
+            :
+            (
+              <NavLink.Mobile key={idx} href={'contact'}>
+                {link.label}
+              </NavLink.Mobile>
+            ),
+        )}
+        {links2.map((link, idx) =>
           link.children ? (
             <Submenu.Mobile key={idx} link={link} />
           )
@@ -75,6 +87,15 @@ const DesktopNavContent = (props: FlexProps) => {
       </NextLink>
       <HStack as="ul" id="nav__primary-menu" aria-label="Main Menu" listStyleType="none">
         {links.map((link, idx) => (
+          <Box as="li" key={idx} id={`nav__menuitem-${idx}`}>
+            {link.children ? (
+              <Submenu.Desktop link={link} />
+            ) : (
+              <NavLink.Desktop href={link.href}>{link.label}</NavLink.Desktop>
+            )}
+          </Box>
+        ))}
+        {links2.map((link, idx) => (
           <Box as="li" key={idx} id={`nav__menuitem-${idx}`}>
             {link.children ? (
               <Submenu.Desktop link={link} />
