@@ -17,13 +17,13 @@ export const links2: Link2[] = [
     children: [
       {
         label: 'Production',
-        description: 'Product design and development processes that bring ideas to life.',
+        description: 'Products and quality that live up to the expectations of all customers.',
         href: '/services/manufacturing/production',
         icon: <IoConstructOutline />,
       },
       {
         label: 'Logistics',
-        description: 'Manufacturing processes make or break product success.',
+        description: 'Product storage, distribution and supply chain management. ',
         href: '/services/manufacturing/logistics',
         icon: <IoSwapHorizontalOutline />,
       },
