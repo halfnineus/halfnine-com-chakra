@@ -57,7 +57,7 @@ const INDEX = () => {
                                         </Text>
                                         <Box py={{ base: 5, sm: 5, md: 8, lg: 10 }}>
                                             <VStack pl={0} spacing={3} alignItems="flex-start">
-                                                <NextLink href={'tel:+1-123-456-7890'} passHref>
+                                                {/* <NextLink href={'tel:+1-123-456-7890'} passHref>
                                                     <Link>
                                                         <Button
                                                             size="md"
@@ -71,7 +71,7 @@ const INDEX = () => {
                                                             +1 (123) 456-7890
                                                         </Button>
                                                     </Link>
-                                                </NextLink>
+                                                </NextLink> */}
                                                 <NextLink href={'mailto:dan@ochoa.pro'} passHref>
                                                     <Link>
                                                         <Button

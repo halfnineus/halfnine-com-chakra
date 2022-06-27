@@ -12,7 +12,7 @@ const MainLayout: NextPage<Props> = ({ children /* , title */ }) => {
         <>
             <Navbar />
             <main>{children}</main>
-            <Box /* display={{ base: 'none', lg: 'flex' }} */ minH={"9rem"} /* bg={mode('gray.50', 'gray.700')} */ />
+            <Box  minH={{ base: '8rem', md: '4rem', lg: '4rem', }} />
             <SCFooter />
         </>
     )

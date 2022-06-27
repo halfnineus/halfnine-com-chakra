@@ -39,15 +39,16 @@ const MobileNavContext = (props: FlexProps) => {
           </Link>
         </NextLink>
         <Box visibility={{ base: 'hidden', sm: 'visible' }}>
-          <Button as="a" /* colorScheme="blue" */>
-            Get Started
-          </Button>
+          <NextLink href={'/contact'} passHref>
+            <Link>
+              <Button /* colorScheme="blue" */ fontWeight="bold">
+                Get Started
+              </Button>
+            </Link>
+          </NextLink>
         </Box>
       </Flex>
       <NavMenu animate={isOpen ? 'open' : 'closed'}>
-
-
-
         {links.map((link, idx) =>
           link.children ? (
             <Submenu.Mobile key={idx} link={link} />
@@ -70,9 +71,6 @@ const MobileNavContext = (props: FlexProps) => {
               </NavLink.Mobile>
             ),
         )}
-
-
-
         {/* <Button colorScheme="blue" w="full" size="lg" mt="5">
           Try for free
         </Button> */}
@@ -117,6 +115,13 @@ const DesktopNavContent = (props: FlexProps) => {
         {/* <Box as="a" href="#" color={mode('blue.600', 'blue.300')} fontWeight="bold">
           Sign In
         </Box> */}
+        <NextLink href={'/contact'} passHref>
+          <Link>
+            <Button /* colorScheme="blue" */ fontWeight="bold">
+              Get Started
+            </Button>
+          </Link>
+        </NextLink>
         <IconButton
           size="md"
           fontSize="lg"
@@ -136,13 +141,6 @@ const DesktopNavContent = (props: FlexProps) => {
           icon={<AiOutlineMenu />}
           onClick={mobileNav.onOpen}
         />
-        <NextLink href={'contact'} passHref>
-          <Link>
-            <Button /* colorScheme="blue" */ fontWeight="bold">
-              Get Started
-            </Button>
-          </Link>
-        </NextLink>
       </HStack>
     </Flex>
   )
