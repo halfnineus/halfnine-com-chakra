@@ -141,6 +141,9 @@ const INDEX = () => {
                                                             color="white"
                                                             _hover={{}}
                                                             type={'submit'}
+
+                                                            isDisabled
+
                                                         >
                                                             Send Message
                                                         </Button>
