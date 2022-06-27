@@ -5,9 +5,11 @@ import {
   FlexProps,
   HStack,
   useDisclosure,
+  useColorMode,
   useColorModeValue as mode,
   Link,
   Image,
+  IconButton,
 } from '@chakra-ui/react'
 import NextLink from 'next/link'
 import * as React from 'react'
@@ -20,6 +22,8 @@ import { links2 } from './_data2'
 
 import smlog from '../../public/img/smlog.png'
 import wsmlog from '../../public/img/wsmlog.png'
+import { AiOutlineMenu } from 'react-icons/ai'
+import { FaMoon, FaSun } from 'react-icons/fa'
 
 const MobileNavContext = (props: FlexProps) => {
   const { isOpen, onToggle } = useDisclosure()
@@ -78,6 +82,10 @@ const MobileNavContext = (props: FlexProps) => {
 }
 
 const DesktopNavContent = (props: FlexProps) => {
+  const mobileNav = useDisclosure();
+  const { toggleColorMode: toggleMode } = useColorMode();
+  const text = mode("dark", "light");
+  const SwitchIcon = mode(FaMoon, FaSun);
   return (
     <Flex className="nav-content__desktop" align="center" justify="space-between" {...props}>
       <NextLink href={'/'} passHref>
@@ -109,6 +117,25 @@ const DesktopNavContent = (props: FlexProps) => {
         {/* <Box as="a" href="#" color={mode('blue.600', 'blue.300')} fontWeight="bold">
           Sign In
         </Box> */}
+        <IconButton
+          size="md"
+          fontSize="lg"
+          aria-label={`Switch to ${text} mode`}
+          variant="ghost"
+          color="current"
+          ml={{ base: "0", md: "3" }}
+          onClick={toggleMode}
+          icon={<SwitchIcon />}
+        />
+        <IconButton
+          display={{ base: "flex", md: "none" }}
+          aria-label="Open menu"
+          fontSize="20px"
+          color={mode("gray.800", "inherit")}
+          variant="ghost"
+          icon={<AiOutlineMenu />}
+          onClick={mobileNav.onOpen}
+        />
         <NextLink href={'contact'} passHref>
           <Link>
             <Button /* colorScheme="blue" */ fontWeight="bold">
