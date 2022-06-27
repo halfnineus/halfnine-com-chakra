@@ -94,9 +94,10 @@ const index: NextPage<Props> = () => {
                 <Link>
                   <Button
                     size="lg"
-                    bg="white"
-                    color="gray.800"
-                    _hover={{ bg: 'gray.50' }}
+                    // bg="white"
+                    // color="gray.800"
+                    colorScheme="blue"
+                    // _hover={{ bg: 'gray.50' }}
                     height="14"
                     px="8"
                     shadow="base"
