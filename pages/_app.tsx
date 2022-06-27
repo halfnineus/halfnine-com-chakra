@@ -10,6 +10,7 @@ export default function MyApp({ Component, pageProps }: AppProps) {
         <Head>
           <meta charSet='utf-8' />
           <meta name='viewport' content='initial-scale=1.0, height=device-height, width=device-width' />
+          <meta name="robots" content="all" />
         </Head>
         {/* <meta name="description" content={`Informacion sobre el ${title}`} /> */}
         {/* <meta name="keywords" content={`${title}`} /> */}

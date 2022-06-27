@@ -1,4 +1,5 @@
 import { NextPage } from 'next'
+import Head from 'next/head'
 
 interface Props {
 
@@ -6,9 +7,11 @@ interface Props {
 
 const Production: NextPage<Props> = () => {
     return (
-        <div>
-            
-        </div>
+        <>
+            <Head>
+                <title>Logistics - ochoa.pro</title>
+            </Head>
+        </>
     )
 }
 

@@ -1,6 +1,4 @@
-import * as React from 'react'
-import { IoCalendar, IoGrid, IoHelpBuoy } from 'react-icons/io5'
-import { MdWeb } from 'react-icons/md'
+import { IoConstructOutline, IoSwapHorizontalOutline, IoInformation } from 'react-icons/io5'
 
 export interface Link2 {
   label: string
@@ -18,18 +16,18 @@ export const links2: Link2[] = [
     label: 'Manufacturing',
     children: [
       {
-        label: 'production',
+        label: 'Production',
         description: 'Product design and development processes that bring ideas to life.',
         href: '/services/manufacturing/production',
-        icon: <IoHelpBuoy />,
+        icon: <IoConstructOutline />,
       },
       {
-        label: 'logistics',
+        label: 'Logistics',
         description: 'Manufacturing processes make or break product success.',
         href: '/services/manufacturing/logistics',
-        icon: <IoGrid />,
+        icon: <IoSwapHorizontalOutline />,
       },
     ],
   },
-  { label: 'About Us', href: '/about' },
+  { label: 'About Us', href: '/about', /* icon: <IoInformation /> */ },
 ]

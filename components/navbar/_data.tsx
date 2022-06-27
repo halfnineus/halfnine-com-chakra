@@ -1,6 +1,9 @@
-import * as React from 'react'
-import { IoCalendar, IoGrid, IoHelpBuoy } from 'react-icons/io5'
-import { MdWeb } from 'react-icons/md'
+import { MdDevicesOther } from 'react-icons/md'
+import { IoHardwareChipOutline } from 'react-icons/io5'
+import { VscTerminalCmd } from 'react-icons/vsc'
+import { GiMechanicalArm } from 'react-icons/gi'
+import { BiPackage } from 'react-icons/bi'
+
 
 export interface Link {
   label: string
@@ -20,34 +23,34 @@ export const links: Link[] = [
     label: 'Development',
     children: [
       {
-        label: 'electronic-engineering',
-        description: 'Product design and development processes that bring ideas to life.',
+        label: 'Electronic Engineering',
+        description: 'Highly reliable innovative solutions that enable a digital transformation.',
         href: '/services/development/electronic-engineering',
-        icon: <IoHelpBuoy />,
+        icon: <IoHardwareChipOutline />,
       },
       {
-        label: 'software-engineering',
-        description: 'Get updates, articles and insights from the team.',
+        label: 'Software Engineering',
+        description: 'Highly reliable product design and development on the latest technology.',
         href: '/services/development/software-engineering',
-        icon: <MdWeb />,
+        icon: <VscTerminalCmd />,
       },
       {
-        label: 'mechanical-engineering',
-        description: 'Manufacturing processes make or break product success.',
+        label: 'Mechanical Engineering',
+        description: 'Take product ideas from concepts to working prototypes.',
         href: '/services/development/mechanical-engineering',
-        icon: <IoGrid />,
+        icon: <GiMechanicalArm />,
       },
       {
-        label: 'packaging-design',
-        description: 'Discover and join your local Sketch community.',
-        href: '/services/development/packaging-design',
-        icon: <IoCalendar />,
-      },
-      {
-        label: 'product-design',
-        description: 'Get updates, articles and insights from the team.',
+        label: 'Product Design',
+        description: 'Innovative product design processes that bring ideas to life.',
         href: '/services/development/product-design',
-        icon: <MdWeb />,
+        icon: <MdDevicesOther />,
+      },
+      {
+        label: 'Packaging Design',
+        description: 'Packaging can be the top-shelf difference in retail success.',
+        href: '/services/development/packaging-design',
+        icon: <BiPackage />,
       },
     ],
   },

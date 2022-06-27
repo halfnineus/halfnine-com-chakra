@@ -2,45 +2,43 @@
   <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
       <loc>https://ochoa.pro/</loc>
-      <lastmod>2021-06-01</lastmod>
-      <changefreq>weekly</changefreq>
-      <priority>1.00</priority>
+      <lastmod>2022-06-27</lastmod>
+    </url>
+    <url>
+      <loc>https://ochoa.pro/about</loc>
+      <lastmod>2022-06-27</lastmod>
     </url>
     <!-- <url>
       <loc>https://ochoa.pro/contact</loc>
-      <lastmod>2021-06-01</lastmod>
-      <changefreq>weekly</changefreq>
-      <priority>1.00</priority>
-    </url> -->
+      <lastmod>2022-06-27</lastmod>
+</url> -->
     <url>
-      <loc>https://ochoa.pro/services/software-engineering</loc>
-      <lastmod>2021-06-01</lastmod>
-      <changefreq>weekly</changefreq>
-      <priority>1.00</priority>
+      <loc>https://ochoa.pro/services/development/electronic-engineering</loc>
+      <lastmod>2022-06-27</lastmod>
     </url>
     <url>
-      <loc>https://ochoa.pro/services/electronic-engineering</loc>
-      <lastmod>2021-06-01</lastmod>
-      <changefreq>weekly</changefreq>
-      <priority>1.00</priority>
+      <loc>https://ochoa.pro/services/development/software-engineering</loc>
+      <lastmod>2022-06-27</lastmod>
     </url>
     <url>
-      <loc>https://ochoa.pro/services/mechanical-engineering</loc>
-      <lastmod>2021-06-01</lastmod>
-      <changefreq>weekly</changefreq>
-      <priority>1.00</priority>
+      <loc>https://ochoa.pro/services/development/mechanical-engineering</loc>
+      <lastmod>2022-06-27</lastmod>
     </url>
     <url>
-      <loc>https://ochoa.pro/services/packaging-design</loc>
-      <lastmod>2021-06-01</lastmod>
-      <changefreq>weekly</changefreq>
-      <priority>1.00</priority>
+      <loc>https://ochoa.pro/services/development/product-design</loc>
+      <lastmod>2022-06-27</lastmod>
     </url>
     <url>
-      <loc>https://ochoa.pro/services/product-design</loc>
-      <lastmod>2021-06-01</lastmod>
-      <changefreq>weekly</changefreq>
-      <priority>1.00</priority>
+      <loc>https://ochoa.pro/services/development/packaging-design</loc>
+      <lastmod>2022-06-27</lastmod>
+    </url>
+    <url>
+      <loc>https://ochoa.pro/services/manufacturing/logistics</loc>
+      <lastmod>2022-06-27</lastmod>
+    </url>
+    <url>
+      <loc>https://ochoa.pro/services/manufacturing/production</loc>
+      <lastmod>2022-06-27</lastmod>
     </url>
   </urlset>
 </xml>
