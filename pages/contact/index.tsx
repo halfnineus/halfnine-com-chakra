@@ -1,4 +1,6 @@
-import router, { useRouter } from 'next/router'
+import Head from "next/head";
+import NextLink from "next/link"
+
 import {
     Container,
     Flex,
@@ -16,23 +18,25 @@ import {
     InputLeftElement,
     Textarea,
     useColorModeValue,
-    InputLeftAddon,
-    Divider,
+    Link,
 } from '@chakra-ui/react';
+
 import {
     MdPhone,
     MdEmail,
     MdLocationOn,
     MdOutlineEmail,
 } from 'react-icons/md';
+
 import { BsPerson } from 'react-icons/bs';
-import { EmailIcon, InfoIcon, LockIcon } from '@chakra-ui/icons';
 
 
 const INDEX = () => {
     return (
         <>
-            <title>contact - ochoa.pro</title>
+            <Head>
+                <title>contact - ochoa.pro</title>
+            </Head>
             <Container maxW="full" mt={0} centerContent overflow="hidden">
                 <Flex>
                     <Box
@@ -48,47 +52,56 @@ const INDEX = () => {
                                 <WrapItem>
                                     <Box>
                                         <Heading color={useColorModeValue('black', 'white')} fontSize={'4xl'}>Contact</Heading>
-                                        <Text mt={{ sm: 3, md: 3, lg: 5 }} color="gray.500">
+                                        <Text pointerEvents={'none'} mt={{ sm: 3, md: 3, lg: 5 }} color="gray.500">
                                             Fill up the form below to contact
                                         </Text>
                                         <Box py={{ base: 5, sm: 5, md: 8, lg: 10 }}>
                                             <VStack pl={0} spacing={3} alignItems="flex-start">
-                                                <Button
-                                                    onClick={() => router.push('tel:+1-123-456-7890')}
-                                                    size="md"
-                                                    height="48px"
-                                                    width="200px"
-                                                    variant="ghost"
-                                                    color={useColorModeValue('black', 'white')}
-                                                    _hover={{ border: '2px solid #1C6FEB' }}
-                                                    leftIcon={<MdPhone color={useColorModeValue('black', 'white')} size="20px" />}
-                                                >
-                                                    +1 (123) 456-7890
-                                                </Button>
-                                                <Button
-                                                    onClick={() => router.push('mailto:dan@ochoa.pro')}
-                                                    size="md"
-                                                    height="48px"
-                                                    width="200px"
-                                                    variant="ghost"
-                                                    color={useColorModeValue('black', 'white')}
-                                                    _hover={{ border: '2px solid #1C6FEB' }}
-                                                    leftIcon={<MdEmail color={useColorModeValue('black', 'white')} size="20px" />}
-                                                >
-                                                    dan@ochoa.pro
-                                                </Button>
-                                                <Button
-                                                    onClick={() => router.push('map')}
-                                                    size="md"
-                                                    height="48px"
-                                                    width="200px"
-                                                    variant="ghost"
-                                                    color={useColorModeValue('black', 'white')}
-                                                    _hover={{ border: '2px solid #1C6FEB' }}
-                                                    leftIcon={<MdLocationOn color={useColorModeValue('black', 'white')} size="20px" />}
-                                                >
-                                                    Orlando, Florida
-                                                </Button>
+                                                <NextLink href={'tel:+1-123-456-7890'} passHref>
+                                                    <Link>
+                                                        <Button
+                                                            size="md"
+                                                            height="48px"
+                                                            width="200px"
+                                                            variant="ghost"
+                                                            color={useColorModeValue('black', 'white')}
+                                                            _hover={{ border: '2px solid #1C6FEB' }}
+                                                            leftIcon={<MdPhone color={useColorModeValue('black', 'white')} size="20px" />}
+                                                        >
+                                                            +1 (123) 456-7890
+                                                        </Button>
+                                                    </Link>
+                                                </NextLink>
+                                                <NextLink href={'mailto:dan@ochoa.pro'} passHref>
+                                                    <Link>
+                                                        <Button
+                                                            size="md"
+                                                            height="48px"
+                                                            width="200px"
+                                                            variant="ghost"
+                                                            color={useColorModeValue('black', 'white')}
+                                                            _hover={{ border: '2px solid #1C6FEB' }}
+                                                            leftIcon={<MdEmail color={useColorModeValue('black', 'white')} size="20px" />}
+                                                        >
+                                                            dan@ochoa.pro
+                                                        </Button>
+                                                    </Link>
+                                                </NextLink>
+                                                <NextLink href={'https://duckduckgo.com/?q=Orlando%2C+Florida&iaxm=maps'} passHref>
+                                                    <Link isExternal>
+                                                        <Button
+                                                            size="md"
+                                                            height="48px"
+                                                            width="200px"
+                                                            variant="ghost"
+                                                            color={useColorModeValue('black', 'white')}
+                                                            _hover={{ border: '2px solid #1C6FEB' }}
+                                                            leftIcon={<MdLocationOn color={useColorModeValue('black', 'white')} size="20px" />}
+                                                        >
+                                                            Orlando, Florida
+                                                        </Button>
+                                                    </Link>
+                                                </NextLink>
                                             </VStack>
                                         </Box>
                                     </Box>
@@ -97,37 +110,7 @@ const INDEX = () => {
                                     <Box bg={useColorModeValue('gray.100', 'gray.600')} borderRadius="lg">
                                         <Box m={8} color={useColorModeValue('black', 'white')}>
                                             <form action={'submit'}>
-
                                                 <VStack spacing={5}>
-
-                                                    {/* <FormControl isRequired>
-                                                        <InputGroup>
-                                                            <InputLeftAddon children={<InfoIcon name='info' />} />
-                                                            <Input type={'name'} placeholder={'First Name'} aria-label={'Name'} />
-                                                        </InputGroup>
-                                                    </FormControl>
-                                                    <FormControl isRequired>
-                                                        <InputGroup>
-                                                            <InputLeftAddon children={<InfoIcon name='info' />} />
-                                                            <Input type={'name'} placeholder={'Last Name'} aria-label={'Last Name'} />
-                                                        </InputGroup>
-                                                    </FormControl>
-                                                    <Divider />
-                                                    <FormControl isRequired>
-                                                        <InputGroup>
-                                                            <InputLeftAddon children={<EmailIcon name='email' />} />
-                                                            <Input type={'email'} placeholder={'Email'} aria-label={'Email'} />
-                                                        </InputGroup>
-                                                    </FormControl>
-                                                    <FormControl isRequired>
-                                                        <InputGroup>
-                                                            <InputLeftAddon children={<LockIcon name='lock' />} />
-                                                            <Input type={'password'} placeholder={'Password'} aria-label={'Password'} />
-                                                        </InputGroup>
-                                                    </FormControl>
-                                                    <Divider />
-                                                    <Button children={'Sign up'} type='submit' _hover={{ boxShadow: "md" }} /> */}
-
                                                     <FormControl isRequired id="name">
                                                         <FormLabel>Your Name</FormLabel>
                                                         <InputGroup>
@@ -148,12 +131,7 @@ const INDEX = () => {
                                                     </FormControl>
                                                     <FormControl isRequired id="message">
                                                         <FormLabel>Message</FormLabel>
-                                                        <Textarea
-                                                            // type={'email'}
-                                                            // _hover={{ borderRadius: 'gray.300', }}
-                                                            placeholder="Message"
-                                                            aria-label={'Message'}
-                                                        />
+                                                        <Textarea placeholder="Message" aria-label={'Message'} />
                                                     </FormControl>
                                                     <FormControl>
                                                         <Button
@@ -167,12 +145,8 @@ const INDEX = () => {
                                                             Send Message
                                                         </Button>
                                                     </FormControl>
-
-
                                                 </VStack>
-
                                             </form>
-
                                         </Box>
                                     </Box>
                                 </WrapItem>
@@ -184,5 +158,4 @@ const INDEX = () => {
         </>
     );
 }
-
 export default INDEX;
