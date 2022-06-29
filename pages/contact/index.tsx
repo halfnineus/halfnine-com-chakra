@@ -30,7 +30,6 @@ import {
 
 import { BsPerson } from 'react-icons/bs';
 
-
 const INDEX = () => {
     return (
         <>

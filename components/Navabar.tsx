@@ -23,7 +23,6 @@ import { FaMoon, FaSun } from "react-icons/fa";
 import smlog from '../public/img/smlog.png'
 import wsmlog from '../public/img/wsmlog.png'
 
-
 export default function Navbar() {
 
   const bg = useColorModeValue("white", "gray.800");

@@ -6,9 +6,7 @@ import {
     Stack,
     Text,
     useColorModeValue,
-    chakra,
 } from '@chakra-ui/react';
-
 
 import NextLink from 'next/link'
 
@@ -53,7 +51,7 @@ export default function SCFooter() {
                                 <Logo />
                             </Link>
                         </NextLink>
-                        <Text pointerEvents={'none'}>© 2022 ochoa.pro -  All rights reserved</Text>
+                        <Text pointerEvents={'none'}>© 2022 ochoa.pro - All rights reserved</Text>
                         <Stack direction={'row'} spacing={6}>
                             <NextLink href={'/'} passHref>
                                 <Link>

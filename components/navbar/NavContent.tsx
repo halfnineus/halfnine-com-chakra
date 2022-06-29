@@ -18,7 +18,6 @@ import { NavMenu } from './NavMenu'
 import { Submenu } from './Submenu'
 import { ToggleButton } from './ToggleButton'
 import { links } from './_data'
-import { links2 } from './_data2'
 
 import smlog from '../../public/img/smlog.png'
 import wsmlog from '../../public/img/wsmlog.png'
@@ -42,7 +41,7 @@ const MobileNavContext = (props: FlexProps) => {
           <NextLink href={'/contact'} passHref>
             <Link>
               <Button /* colorScheme="blue" */ fontWeight="bold">
-                Get Started
+                Contact Us
               </Button>
             </Link>
           </NextLink>
@@ -55,18 +54,7 @@ const MobileNavContext = (props: FlexProps) => {
           )
             :
             (
-              <NavLink.Mobile key={idx} href={'contact'}>
-                {link.label}
-              </NavLink.Mobile>
-            ),
-        )}
-        {links2.map((link, idx) =>
-          link.children ? (
-            <Submenu.Mobile key={idx} link={link} />
-          )
-            :
-            (
-              <NavLink.Mobile key={idx} href={'contact'}>
+              <NavLink.Mobile key={idx} href={link.href}>
                 {link.label}
               </NavLink.Mobile>
             ),
@@ -74,7 +62,7 @@ const MobileNavContext = (props: FlexProps) => {
         {/* <Button colorScheme="blue" w="full" size="lg" mt="5">
           Try for free
         </Button> */}
-      </NavMenu>
+      </NavMenu >
     </>
   )
 }
@@ -101,15 +89,6 @@ const DesktopNavContent = (props: FlexProps) => {
             )}
           </Box>
         ))}
-        {links2.map((link, idx) => (
-          <Box as="li" key={idx} id={`nav__menuitem-${idx}`}>
-            {link.children ? (
-              <Submenu.Desktop link={link} />
-            ) : (
-              <NavLink.Desktop href={link.href}>{link.label}</NavLink.Desktop>
-            )}
-          </Box>
-        ))}
       </HStack>
       <HStack spacing="8" /* minW="240px" justify="space-between" */ >
         {/* <Box as="a" href="#" color={mode('blue.600', 'blue.300')} fontWeight="bold">
@@ -117,8 +96,8 @@ const DesktopNavContent = (props: FlexProps) => {
         </Box> */}
         <NextLink href={'/contact'} passHref>
           <Link>
-            <Button /* colorScheme="blue" */ fontWeight="bold">
-              Get Started
+            <Button  /* colorScheme="blue" */ fontWeight="bold">
+              Contact Us
             </Button>
           </Link>
         </NextLink>

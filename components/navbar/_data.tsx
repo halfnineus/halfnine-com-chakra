@@ -1,8 +1,8 @@
 import { MdDevicesOther } from 'react-icons/md'
-import { IoHardwareChipOutline } from 'react-icons/io5'
 import { VscTerminalCmd } from 'react-icons/vsc'
 import { GiMechanicalArm } from 'react-icons/gi'
 import { BiPackage } from 'react-icons/bi'
+import { IoConstructOutline, IoSwapHorizontalOutline, IoHardwareChipOutline, IoInformation } from 'react-icons/io5'
 
 
 export interface Link {
@@ -17,8 +17,11 @@ export interface Link {
 }
 
 export const links: Link[] = [
-  // { label: 'For Designers', href: '#' },
-  // { label: 'For Teams', href: '#' },
+  // { label: 'For Facilities', href: '/facilities' },
+  // { label: 'For Factories', href: '/factories' },
+  // { label: 'For Retail', href: '/retail' },
+  // { label: 'For Consumers', href: '/consumers' },
+  { label: 'Our products', href: '/products' },
   {
     label: 'Development',
     children: [
@@ -54,5 +57,22 @@ export const links: Link[] = [
       },
     ],
   },
-  // { label: 'Pricing', href: '#' },
+  {
+    label: 'Manufacturing',
+    children: [
+      {
+        label: 'Production',
+        description: 'Products and quality that live up to the expectations of all customers.',
+        href: '/services/manufacturing/production',
+        icon: <IoConstructOutline />,
+      },
+      {
+        label: 'Logistics',
+        description: 'Product storage, distribution and supply chain management. ',
+        href: '/services/manufacturing/logistics',
+        icon: <IoSwapHorizontalOutline />,
+      },
+    ],
+  },
+  { label: 'About Us', href: '/about', /* icon: <IoInformation /> */ },
 ]

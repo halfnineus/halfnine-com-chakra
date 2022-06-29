@@ -53,7 +53,7 @@ const PAD = () => {
                             </Text>
                             <Stack direction={{ base: 'column', md: 'row' }} spacing="4" mt="8">
                                 <Button size="lg" minW="210px" colorScheme="blue" height="14" px="8">
-                                    Get Started
+                                    Contact Us
                                 </Button>
                                 {/* <Button
                                     size="lg"
