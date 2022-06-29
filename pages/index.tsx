@@ -2,7 +2,6 @@ import { NextPage } from 'next'
 import NextLink from 'next/link'
 import Head from 'next/head'
 import {
-  Badge,
   Box,
   Button,
   Container,
@@ -19,7 +18,7 @@ import {
   VStack,
 } from '@chakra-ui/react'
 
-import { HiArrowRight, HiChevronRight } from 'react-icons/hi'
+import { HiChevronRight } from 'react-icons/hi'
 import { CheckIcon } from '@chakra-ui/icons'
 
 interface Props {
@@ -45,40 +44,9 @@ const index: NextPage<Props> = () => {
             pt={{ base: '20', lg: '40' }}
             pb={{ base: '16', lg: '24' }}
           >
-            {/* <HStack
-              className="group"
-              as="a"
-              href="#"
-              px="2"
-              py="1"
-              bg={mode('gray.200', 'gray.700')}
-              rounded="full"
-              fontSize="sm"
-              mb="8"
-              display="inline-flex"
-              minW="18rem"
-            >
-              <Badge
-                px="2"
-                variant="solid"
-                colorScheme="green"
-                rounded="full"
-                textTransform="capitalize"
-              >
-                New
-              </Badge>
-              <Box fontWeight="medium">Introducing the new Chakra API</Box>
-              <Box
-                aria-hidden
-                transition="0.2s all"
-                _groupHover={{ transform: 'translateX(2px)' }}
-                as={HiArrowRight}
-                display="inline-block"
-              />
-            </HStack> */}
             <Heading pointerEvents={'none'} as="h1" size="3xl" lineHeight="1" fontWeight="extrabold" letterSpacing="tight">
               Full Service Product{' '}
-              <Box as="mark" color={mode('blue.500', 'blue.300')} bg="transparent">
+              <Box as="mark" color={mode('blue.600', 'blue.300')} bg="transparent">
                 Development & Manufacturing
               </Box>
             </Heading>
@@ -87,25 +55,16 @@ const index: NextPage<Props> = () => {
               manufacturing through our experts and professionals.
             </Text>
             <Stack direction={{ base: 'column', sm: 'row' }} spacing="4" mt="8">
-              {/* <NextLink href={'/contact'} passHref>
-                <Link>
-                  <Button size="lg" colorScheme="blue" height="14" px="8" fontSize="md">
-                    Contact Us Now
-                  </Button>
-                </Link>
-              </NextLink> */}
               <NextLink href={'/contact'} passHref>
                 <Link>
                   <Button
                     size="lg"
-                    // bg="white"
-                    // color="gray.800"
                     colorScheme="blue"
-                    // _hover={{ bg: 'gray.50' }}
                     height="14"
                     px="8"
                     shadow="base"
                     fontSize="md"
+                    bg={mode('blue.600', 'blue.300')}
                   >
                     Talk to an expert
                   </Button>
@@ -137,14 +96,14 @@ const index: NextPage<Props> = () => {
 
 
 
-      <Box minH={{ /* base: '8rem', */ base: 'none', md: 'none', lg: '4rem', }} />
+      <Box minH={{ base: 'none', md: 'none', lg: '4rem', }} />
 
 
 
       <Box pointerEvents={'none'} p={4}>
-        <Stack  spacing={4} as={Container} maxW={'3xl'} textAlign={'center'}>
+        <Stack spacing={4} as={Container} maxW={'3xl'} textAlign={'center'}>
           <Heading fontSize={'3xl'}>This is the headline</Heading>
-          <Text color={'gray.600'} fontSize={'xl'}>
+          <Text color={mode('gray.600', 'gray.400')} fontSize={'xl'}>
             Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
             nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
             sed diam voluptua.
@@ -160,7 +119,7 @@ const index: NextPage<Props> = () => {
                 <Text fontWeight={600}>
                   Lorem ipsum dolor sit amet
                 </Text>
-                <Text color={'gray.600'}>
+                <Text color={mode('gray.600', 'gray.400')}>
                   Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam.
                 </Text>
               </VStack>
@@ -173,7 +132,7 @@ const index: NextPage<Props> = () => {
                 <Text fontWeight={600}>
                   Lorem ipsum dolor sit amet
                 </Text>
-                <Text color={'gray.600'}>
+                <Text color={mode('gray.600', 'gray.400')}>
                   Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam.
                 </Text>
               </VStack>
@@ -186,7 +145,7 @@ const index: NextPage<Props> = () => {
                 <Text fontWeight={600}>
                   Lorem ipsum dolor sit amet
                 </Text>
-                <Text color={'gray.600'}>
+                <Text color={mode('gray.600', 'gray.400')}>
                   Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam.
                 </Text>
               </VStack>
@@ -199,7 +158,7 @@ const index: NextPage<Props> = () => {
                 <Text fontWeight={600}>
                   Lorem ipsum dolor sit amet
                 </Text>
-                <Text color={'gray.600'}>
+                <Text color={mode('gray.600', 'gray.400')}>
                   Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam.
                 </Text>
               </VStack>
@@ -212,7 +171,7 @@ const index: NextPage<Props> = () => {
                 <Text fontWeight={600}>
                   Lorem ipsum dolor sit amet
                 </Text>
-                <Text color={'gray.600'}>
+                <Text color={mode('gray.600', 'gray.400')}>
                   Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam.
                 </Text>
               </VStack>
@@ -225,7 +184,7 @@ const index: NextPage<Props> = () => {
                 <Text fontWeight={600}>
                   Lorem ipsum dolor sit amet
                 </Text>
-                <Text color={'gray.600'}>
+                <Text color={mode('gray.600', 'gray.400')}>
                   Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam.
                 </Text>
               </VStack>
@@ -238,7 +197,7 @@ const index: NextPage<Props> = () => {
                 <Text fontWeight={600}>
                   Lorem ipsum dolor sit amet
                 </Text>
-                <Text color={'gray.600'}>
+                <Text color={mode('gray.600', 'gray.400')}>
                   Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam.
                 </Text>
               </VStack>
@@ -251,7 +210,7 @@ const index: NextPage<Props> = () => {
                 <Text fontWeight={600}>
                   Lorem ipsum dolor sit amet
                 </Text>
-                <Text color={'gray.600'}>
+                <Text color={mode('gray.600', 'gray.400')}>
                   Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam.
                 </Text>
               </VStack>
@@ -262,16 +221,16 @@ const index: NextPage<Props> = () => {
 
 
 
-      <Box minH={{ /* base: '8rem', */ base: '4rem', md: '4rem', lg: '5rem', }} />
+      <Box minH={{ base: '4rem', md: '4rem', lg: '5rem', }} />
 
 
 
-      <Box  bg="gray.800" as="section" minH="140px" position="relative">
+      <Box bg="gray.800" as="section" minH="140px" position="relative">
         <Box py="32" position="relative" zIndex={1}>
-          <Box maxW={{ base: 'xl', md: '7xl' }} mx="auto" px={{ base: '6', md: '8' }} color="white">
+          <Box maxW={{ base: 'xl', md: '98%' }} mx="auto" px={{ base: '6', md: '8' }} color="white">
             <Box maxW="xl">
               <Heading pointerEvents={'none'} as="h1" size="3xl" fontWeight="extrabold">
-                Build relationship with the your customers
+              Lorem ipsum dolor sit amet amet consectetur 
               </Heading>
               <Text pointerEvents={'none'} fontSize={{ md: '2xl' }} mt="4" maxW="lg">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
@@ -333,10 +292,6 @@ const index: NextPage<Props> = () => {
           </Box>
         </Flex>
       </Box>
-
-      {/* <Box minH={{ base: '1rem', md: '1rem', lg: '1rem', }} /> */}
-
-
     </>
   )
 }

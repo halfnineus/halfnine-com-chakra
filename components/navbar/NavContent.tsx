@@ -19,10 +19,11 @@ import { Submenu } from './Submenu'
 import { ToggleButton } from './ToggleButton'
 import { links } from './_data'
 
-import smlog from '../../public/img/smlog.png'
-import wsmlog from '../../public/img/wsmlog.png'
 import { AiOutlineMenu } from 'react-icons/ai'
 import { FaMoon, FaSun } from 'react-icons/fa'
+
+import smlog from '../../public/img/smlog.png'
+import wsmlog from '../../public/img/wsmlog.png'
 
 const MobileNavContext = (props: FlexProps) => {
   const { isOpen, onToggle } = useDisclosure()
@@ -40,7 +41,7 @@ const MobileNavContext = (props: FlexProps) => {
         <Box visibility={{ base: 'hidden', sm: 'visible' }}>
           <NextLink href={'/contact'} passHref>
             <Link>
-              <Button /* colorScheme="blue" */ fontWeight="bold">
+              <Button  fontWeight="bold">
                 Contact Us
               </Button>
             </Link>
@@ -59,9 +60,6 @@ const MobileNavContext = (props: FlexProps) => {
               </NavLink.Mobile>
             ),
         )}
-        {/* <Button colorScheme="blue" w="full" size="lg" mt="5">
-          Try for free
-        </Button> */}
       </NavMenu >
     </>
   )

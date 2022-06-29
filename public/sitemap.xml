@@ -4,11 +4,15 @@
       <loc>https://ochoa.pro/</loc>
       <lastmod>2022-06-27</lastmod>
     </url>
+        <url>
+      <loc>https://ochoa.pro/products</loc>
+      <lastmod>2022-06-27</lastmod>
+    </url>
     <url>
       <loc>https://ochoa.pro/about</loc>
       <lastmod>2022-06-27</lastmod>
     </url>
-    <!-- <url>
+        <!-- <url>
       <loc>https://ochoa.pro/contact</loc>
       <lastmod>2022-06-27</lastmod>
 </url> -->

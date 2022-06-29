@@ -7,7 +7,7 @@ interface Props {
 const Index: NextPage<Props> = () => {
     return (
         <div>
-
+            Product Showcase
         </div>
     )
 }
