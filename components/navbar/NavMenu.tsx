@@ -16,7 +16,7 @@ export const NavMenu = (props: MotionBoxProps) => (
     pos="absolute"
     insetX="0"
     pt="6"
-    pb="12"
+    pb="8"
     {...props}
   />
 )

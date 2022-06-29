@@ -30,7 +30,6 @@ import {
 
 import { BsPerson } from 'react-icons/bs';
 
-
 const INDEX = () => {
     return (
         <>
@@ -57,7 +56,7 @@ const INDEX = () => {
                                         </Text>
                                         <Box py={{ base: 5, sm: 5, md: 8, lg: 10 }}>
                                             <VStack pl={0} spacing={3} alignItems="flex-start">
-                                                <NextLink href={'tel:+1-123-456-7890'} passHref>
+                                                {/* <NextLink href={'tel:+1-123-456-7890'} passHref>
                                                     <Link>
                                                         <Button
                                                             size="md"
@@ -71,7 +70,7 @@ const INDEX = () => {
                                                             +1 (123) 456-7890
                                                         </Button>
                                                     </Link>
-                                                </NextLink>
+                                                </NextLink> */}
                                                 <NextLink href={'mailto:dan@ochoa.pro'} passHref>
                                                     <Link>
                                                         <Button
@@ -141,6 +140,9 @@ const INDEX = () => {
                                                             color="white"
                                                             _hover={{}}
                                                             type={'submit'}
+
+                                                            isDisabled
+
                                                         >
                                                             Send Message
                                                         </Button>

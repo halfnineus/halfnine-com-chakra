@@ -8,7 +8,6 @@ import {
     useColorModeValue,
 } from '@chakra-ui/react';
 
-
 import NextLink from 'next/link'
 
 import smlog from '../public/img/smlog.png'
@@ -52,19 +51,25 @@ export default function SCFooter() {
                                 <Logo />
                             </Link>
                         </NextLink>
-                        <Text pointerEvents={'none'}>© 2022 ochoa.pro -  All rights reserved</Text>
+                        <Text pointerEvents={'none'}>© 2022 ochoa.pro - All rights reserved</Text>
                         <Stack direction={'row'} spacing={6}>
                             <NextLink href={'/'} passHref>
-                                <Link>Home</Link>
+                                <Link>
+                                    Home
+                                </Link>
                             </NextLink>
-                            {/* <NextLink href={'https://about.ochoa.pro'} passHref>
-                                <Link>About</Link>
-                            </NextLink>
-                            <NextLink href={'https://blog.ochoa.pro'} passHref>
+                            {/* <NextLink href={'https://blog.ochoa.pro'} passHref>
                                 <Link>Blog</Link>
                             </NextLink> */}
+                            <NextLink href={'/about'} passHref>
+                                <Link>
+                                    About Us
+                                </Link>
+                            </NextLink>
                             <NextLink href={'/contact'} passHref>
-                                <Link>Contact</Link>
+                                <Link>
+                                    Contact
+                                </Link>
                             </NextLink>
                         </Stack>
                     </Container>
