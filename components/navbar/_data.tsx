@@ -21,7 +21,7 @@ export const links: Link[] = [
   // { label: 'For Factories', href: '/factories' },
   // { label: 'For Retail', href: '/retail' },
   // { label: 'For Consumers', href: '/consumers' },
-  { label: 'Our products', href: '/products' },
+  { label: 'Our Products', href: '/products' },
   {
     label: 'Development',
     children: [
@@ -74,5 +74,5 @@ export const links: Link[] = [
       },
     ],
   },
-  { label: 'About Us', href: '/about', /* icon: <IoInformation /> */ },
+  { label: 'About Us', href: '/about', },
 ]

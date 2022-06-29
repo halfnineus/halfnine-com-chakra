@@ -1,3 +1,5 @@
+import { useRouter } from 'next/router'
+
 import {
   Box,
   Center,
@@ -18,11 +20,12 @@ interface SubmenuItemProps extends HTMLChakraProps<'a'> {
 }
 
 export const SubmenuItem = (props: SubmenuItemProps) => {
-  const { title, icon, children, href, ...rest } = props
+  const { title, icon, children, href } = props
+  const router = useRouter()
   return (
     <chakra.a
+      onClick={() => router.push(href)}
       className="group"
-      href={href}
       m="-3"
       p="3"
       display="flex"
@@ -31,7 +34,6 @@ export const SubmenuItem = (props: SubmenuItemProps) => {
       rounded="lg"
       _hover={{ bg: mode('gray.50', 'gray.600') }}
       _focus={{ shadow: 'outline' }}
-      {...rest}
     >
       <Center
         aria-hidden

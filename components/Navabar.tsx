@@ -83,7 +83,6 @@ export default function Navbar() {
     <React.Fragment>
       <chakra.header h="full" bg={bg} w="full" px={{ base: 2, sm: 4 }} py={4}>
         <Flex alignItems="center" justifyContent="space-between" mx="auto">
-          {/* <Box display={{ base: "none", md: "inline-flex" }}> */}
           <HStack spacing={1}>
             <NextLink href={'/'} passHref>
               <Link display="flex" alignItems="center">
@@ -91,24 +90,9 @@ export default function Navbar() {
               </Link>
             </NextLink>
           </HStack>
-          {/* </Box> */}
           <Spacer />
           <Box display="flex" alignItems="center">
             <HStack spacing={1}>
-              {/* <NextLink href={'/auth/sign-in'} passHref>
-                <Link>
-                  <Button colorScheme="brand" variant="ghost" size="sm">
-                    Sign in
-                  </Button>
-                </Link>
-              </NextLink>
-              <NextLink href={'/auth/sign-up'} passHref>
-                <Link>
-                  <Button colorScheme="gray" variant="solid" size="sm">
-                    Sign up
-                  </Button>
-                </Link>
-              </NextLink> */}
             </HStack>
             <IconButton
               size="md"

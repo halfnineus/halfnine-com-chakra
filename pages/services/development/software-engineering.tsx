@@ -19,8 +19,8 @@ export default function SoftwareEngineering() {
             <Head>
                 <title>Software Engineering - ochoa.pro</title>
             </Head>
-            <Box as="section" bg={mode('gray.50', 'gray.800')} pt="16" pb="24">
-                <Box maxW={{ base: 'xl', md: '96%' }} mx="auto" px={{ base: '6', md: '8' }}>
+            <Box pt="16" /* pb="24"*/ pe={'4'}>
+                <Box maxW={{ base: 'xl', md: '98%' }} mx="auto" px={{ base: '6', md: '8' }}>
                     <Stack
                         direction={{ base: 'column', lg: 'row' }}
                         spacing={{ base: '3rem', lg: '2rem' }}
@@ -29,7 +29,7 @@ export default function SoftwareEngineering() {
                         justify="space-between"
                     >
                         <Box flex="1" maxW={{ lg: '520px' }}>
-                            <Text
+                            {/* <Text
                                 size="xs"
                                 textTransform="uppercase"
                                 fontWeight="semibold"
@@ -37,11 +37,11 @@ export default function SoftwareEngineering() {
                                 letterSpacing="wide"
                             >
                                 Hire Talents
-                            </Text>
+                            </Text> */}
                             <Heading
                                 as="h1"
                                 size="3xl"
-                                color={mode('blue.600', 'blue.300')}
+                                
                                 mt="8"
                                 fontWeight="extrabold"
                                 letterSpacing="tight"
@@ -56,26 +56,8 @@ export default function SoftwareEngineering() {
                                 <Button size="lg" minW="210px" colorScheme="blue" height="14" px="8">
                                     Contact Us
                                 </Button>
-                                {/* <Button
-                                    size="lg"
-                                    bg="white"
-                                    color="gray.900"
-                                    _hover={{ bg: 'gray.50' }}
-                                    height="14"
-                                    px="8"
-                                    shadow="base"
-                                    leftIcon={<Box as={HiPlay} fontSize="2xl" />}
-                                >
-                                    Watch Demo
-                                </Button> */}
                             </Stack>
                             <Box minH={'40'}/>
-                            {/* <Text mt="8" color={mode('gray.600', 'gray.400')}>
-                                Already have an account store?{' '}
-                                <Link href="#" textDecoration="underline">
-                                    Log in
-                                </Link>
-                            </Text> */}
                         </Box>
                         <Box pos="relative" w={{ base: 'full', lg: '560px' }} h={{ base: 'auto', lg: '560px' }}>
                             <Img

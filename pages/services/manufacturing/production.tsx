@@ -9,7 +9,7 @@ const Production: NextPage<Props> = () => {
     return (
         <>
             <Head>
-                <title>Logistics - ochoa.pro</title>
+                <title>Production - ochoa.pro</title>
             </Head>
         </>
     )

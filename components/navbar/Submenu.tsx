@@ -5,7 +5,7 @@ import { FaChevronDown } from 'react-icons/fa'
 import { Link } from './_data'
 import { NavLink } from './NavLink'
 import { NavMenu } from './NavMenu'
-import { SubmenuItem as DesktopMenuItem } from './SubmenuItem'
+import { SubmenuItem } from './SubmenuItem'
 
 interface SubmenuProps {
   link: Link
@@ -28,14 +28,13 @@ const DesktopSubmenu = (props: SubmenuProps) => {
         <Box>{link.label}</Box>
         <Box marginStart="2" as={FaChevronDown} fontSize="xs" />
       </NavLink.Desktop>
-
       <NavMenu {...getMenuProps()} animate={isOpen ? 'open' : 'closed'}>
         <Box maxW="7xl" mx="auto" px="8">
           <SimpleGrid spacing="10" columns={2}>
             {link.children?.map((item, idx) => (
-              <DesktopMenuItem key={idx} title={item.label} href={item.href} icon={item.icon}>
+              <SubmenuItem key={idx} title={item.label} href={item.href} icon={item.icon}>
                 {item.description}
-              </DesktopMenuItem>
+              </SubmenuItem>
             ))}
           </SimpleGrid>
         </Box>
