@@ -8,11 +8,8 @@ import {
     useColorModeValue as mode,
 } from '@chakra-ui/react'
 import Head from 'next/head'
-import * as React from 'react'
 
-import img from '../../../public/img-land/Packaging-Design-Image.png'
-
-const PAD = () => {
+export default function PAD() {
     return (
         <>
             <Head>
@@ -28,26 +25,17 @@ const PAD = () => {
                         justify="space-between"
                     >
                         <Box flex="1" maxW={{ lg: '520px' }}>
-                            {/* <Text
-                                size="xs"
-                                textTransform="uppercase"
-                                fontWeight="semibold"
-                                color={mode('blue.600', 'blue.300')}
-                                letterSpacing="wide"
-                            >
-                                Hire Talents
-                            </Text> */}
                             <Heading
                                 as="h1"
                                 size="3xl"
-                                
+                                pointerEvents={'none'}
                                 mt="8"
                                 fontWeight="extrabold"
                                 letterSpacing="tight"
                             >
                                 Get world class talents for your project
                             </Heading>
-                            <Text color={mode('gray.600', 'gray.400')} mt="4" fontSize="lg" fontWeight="medium">
+                            <Text pointerEvents={'none'} color={mode('gray.600', 'gray.400')} mt="4" fontSize="lg" fontWeight="medium">
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                                 incididunt ut labore et dolore magna aliqua.
                             </Text>
@@ -56,7 +44,7 @@ const PAD = () => {
                                     Contact Us
                                 </Button>
                             </Stack>
-                            <Box minH={'40'}/>
+                            <Box minH={'40'} />
                         </Box>
                         <Box pos="relative" w={{ base: 'full', lg: '560px' }} h={{ base: 'auto', lg: '560px' }}>
                             <Img
@@ -65,7 +53,7 @@ const PAD = () => {
                                 zIndex="1"
                                 h={{ lg: '100%' }}
                                 objectFit="cover"
-                                src={img.src}
+                                src={`https://external-content.duckduckgo.com/iu/?u=https://i.ibb.co/fDYY06M/Packaging-Design-Image.png                                `}
                                 alt="Screening talent"
                             />
                             <Box
@@ -83,5 +71,3 @@ const PAD = () => {
         </>
     )
 }
-
-export default PAD

@@ -3,15 +3,11 @@ import {
     Button,
     Heading,
     Img,
-    Link,
     Stack,
     Text,
     useColorModeValue as mode,
 } from '@chakra-ui/react'
 import Head from 'next/head'
-import * as React from 'react'
-
-import img from '../../../public/img-land/Electronic-Engineering-Image.png'
 
 export default function App() {
     return (
@@ -39,17 +35,16 @@ export default function App() {
                                 Hire Talents
                             </Text> */}
                             <Heading
+                                pointerEvents={'none'}
                                 as="h1"
                                 size="3xl"
-                                // color.={mode('blue.600', 'blue.300')}
-                                
                                 mt="8"
                                 fontWeight="extrabold"
                                 letterSpacing="tight"
                             >
                                 Get world class talents for your project
                             </Heading>
-                            <Text color={mode('gray.600', 'gray.400')} mt="4" fontSize="lg" fontWeight="medium">
+                            <Text pointerEvents={'none'} color={mode('gray.600', 'gray.400')} mt="4" fontSize="lg" fontWeight="medium">
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                                 incididunt ut labore et dolore magna aliqua.
                             </Text>
@@ -58,7 +53,7 @@ export default function App() {
                                     Contact Us
                                 </Button>
                             </Stack>
-                            <Box minH={'40'}/>
+                            <Box minH={'40'} />
                         </Box>
                         <Box pos="relative" w={{ base: 'full', lg: '560px' }} h={{ base: 'auto', lg: '560px' }}>
                             <Img
@@ -67,15 +62,15 @@ export default function App() {
                                 zIndex="1"
                                 h={{ lg: '100%' }}
                                 objectFit="cover"
-                                src={img.src}
+                                src={`https://external-content.duckduckgo.com/iu/?u=https://i.ibb.co/pnFHrN8/Electronic-Engineering-Image.png`}
                                 alt="Screening talent"
                             />
                             <Box
                                 pos="absolute"
                                 w="100%"
                                 h="100%"
-                                top="-4"
-                                left="-4"
+                                top="-5"
+                                left="-5"
                                 bg={mode('gray.200', 'gray.700')}
                             />
                         </Box>

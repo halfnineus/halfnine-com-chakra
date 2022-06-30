@@ -1,15 +1,15 @@
-import { Box, Button, Flex, Heading, HStack, Img, Stack, Text, useColorModeValue as mode, } from '@chakra-ui/react'
-import { NextPage } from 'next'
+import {
+    Box,
+    Button,
+    Heading,
+    Img,
+    Stack,
+    Text,
+    useColorModeValue as mode,
+} from '@chakra-ui/react'
 import Head from 'next/head'
-import { HiChevronRight } from 'react-icons/hi'
 
-import img from '../../../public/img-land/Mechanical-Engineering-Image.png'
-
-interface Props {
-
-}
-
-const ME: NextPage<Props> = () => {
+export default function ME() {
     return (
         <>
             <Head>
@@ -25,26 +25,17 @@ const ME: NextPage<Props> = () => {
                         justify="space-between"
                     >
                         <Box flex="1" maxW={{ lg: '520px' }}>
-                            {/* <Text
-                                size="xs"
-                                textTransform="uppercase"
-                                fontWeight="semibold"
-                                color={mode('blue.600', 'blue.300')}
-                                letterSpacing="wide"
-                            >
-                                Hire Talents
-                            </Text> */}
                             <Heading
                                 as="h1"
                                 size="3xl"
-                                
+                                pointerEvents={'none'}
                                 mt="8"
                                 fontWeight="extrabold"
                                 letterSpacing="tight"
                             >
                                 Get world class talents for your project
                             </Heading>
-                            <Text color={mode('gray.600', 'gray.400')} mt="4" fontSize="lg" fontWeight="medium">
+                            <Text pointerEvents={'none'} color={mode('gray.600', 'gray.400')} mt="4" fontSize="lg" fontWeight="medium">
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                                 incididunt ut labore et dolore magna aliqua.
                             </Text>
@@ -62,7 +53,7 @@ const ME: NextPage<Props> = () => {
                                 zIndex="1"
                                 h={{ lg: '100%' }}
                                 objectFit="cover"
-                                src={img.src}
+                                src={`https://external-content.duckduckgo.com/iu/?u=https://i.ibb.co/rZGJJWW/Mechanical-Engineering-Image.png`}
                                 alt="Screening talent"
                             />
                             <Box
@@ -80,5 +71,3 @@ const ME: NextPage<Props> = () => {
         </>
     )
 }
-
-export default ME

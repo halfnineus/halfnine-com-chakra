@@ -29,13 +29,63 @@ import {
 } from 'react-icons/md';
 
 import { BsPerson } from 'react-icons/bs';
+import { SetStateAction, useState } from "react";
 
 const INDEX = () => {
+    const [name, setName] = useState('');
+    const [email, setEmail] = useState('');
+    const [message, setMessage] = useState('');
+
+    const [submitted, setSubmitted] = useState(false)
+
+    const handleSubmit = (e) => {
+        e.preventDefault()
+        console.log('Sending')
+
+        let data = {
+            name,
+            email,
+            message
+        }
+
+        fetch('/api/contact', {
+            method: 'POST',
+            headers: {
+                'Accept': 'application/json, text/plain, */*',
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(data)
+        }).then((res) => {
+            console.log('Response received')
+            if (res.status === 200) {
+                console.log('Response succeeded!')
+                setSubmitted(true)
+                setName('')
+                setEmail('')
+                setMessage('')
+            }
+        })
+    }
+
+    // const handleSubmit = (e: { preventDefault: () => void; }) => {
+    //     e.preventDefault();
+    //     const data = {
+    //         name,
+    //         email,
+    //         message,
+    //     };
+    //     console.log(data);
+    //     fetch('/api/contact', {
+    //         method: 'post',
+    //         body: JSON.stringify(data),
+    //     });
+    // };
     return (
         <>
             <Head>
                 <title>contact - ochoa.pro</title>
             </Head>
+
             <Container maxW="full" mt={0} centerContent overflow="hidden">
                 <Flex>
                     <Box
@@ -108,7 +158,7 @@ const INDEX = () => {
                                 <WrapItem>
                                     <Box bg={useColorModeValue('gray.100', 'gray.600')} borderRadius="lg">
                                         <Box m={8} color={useColorModeValue('black', 'white')}>
-                                            <form action={'submit'}>
+                                            <form onSubmit={handleSubmit}>
                                                 <VStack spacing={5}>
                                                     <FormControl isRequired id="name">
                                                         <FormLabel>Your Name</FormLabel>
@@ -116,7 +166,15 @@ const INDEX = () => {
                                                             <InputLeftElement pointerEvents="none">
                                                                 <BsPerson color="gray.800" />
                                                             </InputLeftElement>
-                                                            <Input type={'name'} placeholder={'John Doe'} aria-label={'Name'} size="md" />
+                                                            <Input
+                                                                type={'name'}
+                                                                placeholder={'John Doe'}
+                                                                id={"name"}
+                                                                aria-label={'Name'}
+                                                                size="md"
+                                                                onChange={(e: { target: { value: SetStateAction<string>; }; }) => setName(e.target.value)}
+                                                                name='name'
+                                                            />
                                                         </InputGroup>
                                                     </FormControl>
                                                     <FormControl isRequired id="mail">
@@ -125,24 +183,35 @@ const INDEX = () => {
                                                             <InputLeftElement pointerEvents="none">
                                                                 <MdOutlineEmail color="gray.800" />
                                                             </InputLeftElement>
-                                                            <Input type={'email'} placeholder={'Email'} aria-label={'Email'} size="md" />
+                                                            <Input
+                                                                name='email'
+                                                                type={'email'}
+                                                                placeholder={'Email'}
+                                                                aria-label={'Email'}
+                                                                size="md"
+                                                                id="email"
+                                                                onChange={(e: { target: { value: SetStateAction<string>; }; }) => setEmail(e.target.value)}
+                                                            />
                                                         </InputGroup>
                                                     </FormControl>
                                                     <FormControl isRequired id="message">
                                                         <FormLabel>Message</FormLabel>
-                                                        <Textarea placeholder="Message" aria-label={'Message'} />
+                                                        <Textarea
+                                                            name='message'
+                                                            placeholder="Message"
+                                                            aria-label={'Message'}
+                                                            onChange={(e: { target: { value: SetStateAction<string>; }; }) => setMessage(e.target.value)}
+                                                        />
                                                     </FormControl>
                                                     <FormControl>
                                                         <Button
+                                                            onClick={(e) => { handleSubmit(e) }}
                                                             loadingText='Submitting'
                                                             variant={"solid"}
                                                             bg={'blue.500'}
                                                             color="white"
                                                             _hover={{}}
                                                             type={'submit'}
-
-                                                            isDisabled
-
                                                         >
                                                             Send Message
                                                         </Button>

@@ -64,6 +64,7 @@ const index: NextPage<Props> = () => {
                     px="8"
                     shadow="base"
                     fontSize="md"
+                    bg={mode('blue.600', 'blue.300')}
                   >
                     Talk to an expert
                   </Button>
@@ -229,7 +230,7 @@ const index: NextPage<Props> = () => {
           <Box maxW={{ base: 'xl', md: '98%' }} mx="auto" px={{ base: '6', md: '8' }} color="white">
             <Box maxW="xl">
               <Heading pointerEvents={'none'} as="h1" size="3xl" fontWeight="extrabold">
-                Build relationship with the your customers
+              Lorem ipsum dolor sit amet amet consectetur 
               </Heading>
               <Text pointerEvents={'none'} fontSize={{ md: '2xl' }} mt="4" maxW="lg">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
