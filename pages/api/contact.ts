@@ -1,4 +1,4 @@
-export default async function (req, res) {
+export default async function (req: { body: { name: any; message: string; email: string; }; }, res: { send: (arg0: string) => void; }) {
   require('dotenv').config()
   let nodemailer = require('nodemailer')
 
@@ -21,7 +21,7 @@ export default async function (req, res) {
   }
   
 
-  transporter.sendMail(mailData, function (err, info) {
+  transporter.sendMail(mailData, function (err: any, info: any) {
     if (err)
       console.log(err)
     else
