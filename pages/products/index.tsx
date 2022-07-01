@@ -1,4 +1,5 @@
 import { NextPage } from 'next'
+import Head from 'next/head'
 
 interface Props {
 
@@ -6,9 +7,14 @@ interface Props {
 
 const Index: NextPage<Props> = () => {
     return (
-        <div>
-            Product Showcase
-        </div>
+        <>
+            <Head>
+                <title>Product Showcase - ochoa.pro</title>
+            </Head>
+            <div>
+                Product Showcase
+            </div>
+        </>
     )
 }
 

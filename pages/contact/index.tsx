@@ -22,14 +22,13 @@ import {
 } from '@chakra-ui/react';
 
 import {
-    MdPhone,
     MdEmail,
     MdLocationOn,
     MdOutlineEmail,
 } from 'react-icons/md';
 
 import { BsPerson } from 'react-icons/bs';
-import { SetStateAction, useState } from "react";
+import { useState } from "react";
 
 const INDEX = () => {
     const [name, setName] = useState('');
@@ -37,17 +36,17 @@ const INDEX = () => {
     const [message, setMessage] = useState('');
 
     const [submitted, setSubmitted] = useState(false)
+    const [submittedmsg, setSubmittedmsg] = useState(false)
+    const [errormsg, setErrormsg] = useState(false)
 
-    const handleSubmit = (e) => {
+    const handleSubmit = (e: any) => {
         e.preventDefault()
-        console.log('Sending')
-
         let data = {
             name,
             email,
             message
         }
-
+        setSubmitted(true)
         fetch('/api/contact', {
             method: 'POST',
             headers: {
@@ -59,33 +58,18 @@ const INDEX = () => {
             console.log('Response received')
             if (res.status === 200) {
                 console.log('Response succeeded!')
-                setSubmitted(true)
-                setName('')
-                setEmail('')
-                setMessage('')
+            } else {
             }
+            setSubmittedmsg(true)
+            // setErrormsg(true)
+            setSubmitted(false)
         })
     }
-
-    // const handleSubmit = (e: { preventDefault: () => void; }) => {
-    //     e.preventDefault();
-    //     const data = {
-    //         name,
-    //         email,
-    //         message,
-    //     };
-    //     console.log(data);
-    //     fetch('/api/contact', {
-    //         method: 'post',
-    //         body: JSON.stringify(data),
-    //     });
-    // };
     return (
         <>
             <Head>
                 <title>contact - ochoa.pro</title>
             </Head>
-
             <Container maxW="full" mt={0} centerContent overflow="hidden">
                 <Flex>
                     <Box
@@ -156,24 +140,32 @@ const INDEX = () => {
                                     </Box>
                                 </WrapItem>
                                 <WrapItem>
-                                    <Box bg={useColorModeValue('gray.100', 'gray.600')} borderRadius="lg">
-                                        <Box m={8} color={useColorModeValue('black', 'white')}>
-                                            <form onSubmit={handleSubmit}>
+                                    <Box width="100%" bg={useColorModeValue('gray.100', 'gray.600')} borderRadius='2xl'>
+                                        <Box w={{ sm: 'auto', md: 'auto', lg: '340px' }} m={8} color={useColorModeValue('black', 'white')}>
+                                            <form /* action={'submit'} */ onSubmit={handleSubmit}>
                                                 <VStack spacing={5}>
-                                                    <FormControl isRequired id="name">
+                                                    {submittedmsg === true && (
+                                                        <FormControl isRequired >
+                                                            <Text pointerEvents="none" color={useColorModeValue('green.500', 'green.200')} >Message sent! We will contact you shortly!</Text>
+                                                        </FormControl>
+                                                    )}
+                                                    {errormsg === true && (
+                                                        <FormControl isRequired >
+                                                            <Text pointerEvents="none" color={useColorModeValue('red.500', 'red.200')} >Something went wrong while submitting the form, please try again later.</Text>
+                                                        </FormControl>
+                                                    )}
+                                                    <FormControl isRequired >
                                                         <FormLabel>Your Name</FormLabel>
                                                         <InputGroup>
                                                             <InputLeftElement pointerEvents="none">
                                                                 <BsPerson color="gray.800" />
                                                             </InputLeftElement>
                                                             <Input
+                                                                value={name}
+                                                                onChange={(e: any) => setName(e.target.value)}
                                                                 type={'name'}
                                                                 placeholder={'John Doe'}
-                                                                id={"name"}
-                                                                aria-label={'Name'}
-                                                                size="md"
-                                                                onChange={(e: { target: { value: SetStateAction<string>; }; }) => setName(e.target.value)}
-                                                                name='name'
+                                                                isRequired
                                                             />
                                                         </InputGroup>
                                                     </FormControl>
@@ -184,34 +176,38 @@ const INDEX = () => {
                                                                 <MdOutlineEmail color="gray.800" />
                                                             </InputLeftElement>
                                                             <Input
-                                                                name='email'
-                                                                type={'email'}
+                                                                value={email}
+                                                                onChange={(e: any) => setEmail(e.target.value)}
                                                                 placeholder={'Email'}
-                                                                aria-label={'Email'}
-                                                                size="md"
-                                                                id="email"
-                                                                onChange={(e: { target: { value: SetStateAction<string>; }; }) => setEmail(e.target.value)}
+                                                                type={'email'}
+                                                                isRequired
                                                             />
                                                         </InputGroup>
                                                     </FormControl>
                                                     <FormControl isRequired id="message">
                                                         <FormLabel>Message</FormLabel>
                                                         <Textarea
-                                                            name='message'
+                                                            value={message}
+                                                            onChange={(e: any) => setMessage(e.target.value)}
                                                             placeholder="Message"
-                                                            aria-label={'Message'}
-                                                            onChange={(e: { target: { value: SetStateAction<string>; }; }) => setMessage(e.target.value)}
+                                                            isRequired
                                                         />
                                                     </FormControl>
                                                     <FormControl>
                                                         <Button
-                                                            onClick={(e) => { handleSubmit(e) }}
-                                                            loadingText='Submitting'
-                                                            variant={"solid"}
                                                             bg={'blue.500'}
-                                                            color="white"
-                                                            _hover={{}}
+                                                            color='white'
                                                             type={'submit'}
+                                                            isLoading={submitted}
+                                                            loadingText={'Submitting'}
+                                                            _hover={{}}
+                                                            onClick={(e: any) => {
+                                                                handleSubmit(e);
+                                                                // if (inputEmail.isInvalid()) {
+                                                                //     console.log("inputEmail is invalid")
+                                                                //     //handleSubmit(e);
+                                                                // }
+                                                            }}
                                                         >
                                                             Send Message
                                                         </Button>

@@ -1,33 +1,71 @@
-export default async function (req: { body: { name: any; message: string; email: string; }; }, res: { send: (arg0: string) => void; }) {
-  require('dotenv').config()
-  let nodemailer = require('nodemailer')
+export default async function contactMail(req: any, res: any) {
 
-  const transporter = nodemailer.createTransport({
-    host: "smtp.ochoa.pro",
-    port: 465,
-    auth: {
-      user: process.env.email,
-      pass: process.env.password,
-    },
-    secure: true,
-  });
+  if (req.method === 'POST') {
 
-  const mailData = {
-    from: process.env.email,
-    to: process.env.myemail,
-    subject: `Message From ${req.body.name}`,
-    text: req.body.message + " | Sent from: " + req.body.email,
-    html: `<div>${req.body.message}</div><p>Sent from: ${req.body.email}</p>`
+
+
+    require('dotenv').config()
+    let nodemailer = require('nodemailer')
+
+    const transporter = nodemailer.createTransport({
+      host: process.env.smtpserver,
+      port: process.env.smtpport,
+      auth: {
+        user: process.env.donotreplyemail,
+        pass: process.env.password,
+      },
+      secure: true,
+    });
+
+    const mailData = {
+      from: process.env.donotreplyemail,
+      to: req.body.email,
+      subject: `Hello! ${req.body.name} We will contact you shortly. Thankyou for your interest!`,
+      text: req.body.message + " | Sent from: " + req.body.email,
+      html: `<div>${req.body.message}</div><p>Sent from: ${req.body.email}</p>`
+    }
+
+    const mailData2 = {
+      from: process.env.donotreplyemail,
+      to: process.env.myemail,
+      subject: `Message From ${req.body.name}`,
+      text: req.body.message + " | Sent from: " + req.body.email,
+      html: `<div>${req.body.message}</div><p>Sent from: ${req.body.email}</p>`
+    }
+
+    // const errorMailData3 = {
+    //   from: process.env.donotreplyemail,
+    //   to: process.env.myemail,
+    //   subject: `Failed Message From ${req.body.name}`,
+    //   text: req.body.message + " | Sent from: " + req.body.email,
+    //   html: `<div>${req.body.message}</div><p>Sent from: ${req.body.email}</p>`
+    // }
+
+    transporter.sendMail(mailData, function (err: any, info: any) {
+      if (err) {
+        console.log(err)
+      }
+      else {
+        console.log(info);
+      }
+    })
+
+
+    transporter.sendMail2(mailData, function (err: any, info: any) {
+      if (err) {
+        console.log(err)
+      }
+      else {
+        console.log(info);
+      }
+    })
+
+
+    console.log(req.body)
+    res.send('success')
+
+  } else {
+    res.send('nope')
   }
-  
 
-  transporter.sendMail(mailData, function (err: any, info: any) {
-    if (err)
-      console.log(err)
-    else
-      console.log(info);
-  })
-
-  console.log(req.body)
-  res.send('success')
 }
