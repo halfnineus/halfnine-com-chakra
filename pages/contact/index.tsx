@@ -105,6 +105,21 @@ const INDEX = () => {
                                                         </Button>
                                                     </Link>
                                                 </NextLink> */}
+                                                <NextLink href={'mailto:rodolfo@ochoa.pro'} passHref>
+                                                    <Link>
+                                                        <Button
+                                                            size="md"
+                                                            height="48px"
+                                                            width="200px"
+                                                            variant="ghost"
+                                                            color={useColorModeValue('black', 'white')}
+                                                            _hover={{ border: '2px solid #1C6FEB' }}
+                                                            leftIcon={<MdEmail color={useColorModeValue('black', 'white')} size="20px" />}
+                                                        >
+                                                            rodolfo@ochoa.pro
+                                                        </Button>
+                                                    </Link>
+                                                </NextLink>
                                                 <NextLink href={'mailto:dan@ochoa.pro'} passHref>
                                                     <Link>
                                                         <Button
@@ -146,12 +161,12 @@ const INDEX = () => {
                                                 <VStack spacing={5}>
                                                     {submittedmsg === true && (
                                                         <FormControl isRequired >
-                                                            <Text pointerEvents="none" color={useColorModeValue('green.500', 'green.200')} >Message sent! We will contact you shortly!</Text>
+                                                            <Text pointerEvents="none" colorScheme={'green'} >Message sent! We will contact you shortly!</Text>
                                                         </FormControl>
                                                     )}
                                                     {errormsg === true && (
                                                         <FormControl isRequired >
-                                                            <Text pointerEvents="none" color={useColorModeValue('red.500', 'red.200')} >Something went wrong while submitting the form, please try again later.</Text>
+                                                            <Text pointerEvents="none" colorScheme={'red'} >Something went wrong while submitting the form, please try again later.</Text>
                                                         </FormControl>
                                                     )}
                                                     <FormControl isRequired >
