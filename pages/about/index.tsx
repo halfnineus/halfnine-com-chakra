@@ -19,6 +19,7 @@ const IndexAbout = () => {
       <Box as="section" py="16">
         <Box maxW={{ base: 'xl', md: '7xl' }} mx="auto" px={{ base: '6', md: '8' }}>
           <Heading pointerEvents={'none'} textAlign={'center'} fontWeight="extrabold" maxW="md" mx="auto">
+            
             {`Trusted By World's Leading Companies`}
           </Heading>
           <SimpleGrid
@@ -27,17 +28,17 @@ const IndexAbout = () => {
             spacing="6"
             color={useColorModeValue('inherit', 'white')}
           >
-            <Center py="8" px="8" bg={useColorModeValue('gray.50', 'gray.800')} rounded={{ md: 'lg' }}>
+          <Center py={'12'} px={'12'} bg={useColorModeValue('gray.100', 'gray.700')} rounded={{ md: 'lg' }}>
             </Center>
-            <Center py="8" px="8" bg={useColorModeValue('gray.50', 'gray.800')} rounded={{ md: 'lg' }}>
+            <Center py={'12'} px={'12'} bg={useColorModeValue('gray.100', 'gray.700')} rounded={{ md: 'lg' }}>
             </Center>
-            <Center py="8" px="8" bg={useColorModeValue('gray.50', 'gray.800')} rounded={{ md: 'lg' }}>
+            <Center py={'12'} px={'12'} bg={useColorModeValue('gray.100', 'gray.700')} rounded={{ md: 'lg' }}>
             </Center>
-            <Center py="8" px="8" bg={useColorModeValue('gray.50', 'gray.800')} rounded={{ md: 'lg' }}>
+            <Center py={'12'} px={'12'} bg={useColorModeValue('gray.100', 'gray.700')} rounded={{ md: 'lg' }}>
             </Center>
-            <Center py="8" px="8" bg={useColorModeValue('gray.50', 'gray.800')} rounded={{ md: 'lg' }}>
+            <Center py={'12'} px={'12'} bg={useColorModeValue('gray.100', 'gray.700')} rounded={{ md: 'lg' }}>
             </Center>
-            <Center py="8" px="8" bg={useColorModeValue('gray.50', 'gray.800')} rounded={{ md: 'lg' }}>
+            <Center py={'12'} px={'12'} bg={useColorModeValue('gray.100', 'gray.700')} rounded={{ md: 'lg' }}>
             </Center>
           </SimpleGrid>
         </Box>
