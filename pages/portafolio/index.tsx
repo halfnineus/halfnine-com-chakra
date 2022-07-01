@@ -9,10 +9,9 @@ const IndexPortafolio = () => {
             </Head>
             <Box as="section" py={'16'}>
                 <Box maxW={{ base: 'xl', md: '7xl' }} textAlign={'center'} mx={"auto"} px={{ base: '6', md: '8' }}>
-                    <Heading pointerEvents={'none'} fontWeight={'extrabold'} maxW={'md'} mx={'auto'}>
+                    <Heading pointerEvents={'none'} textAlign={'center'} fontWeight="extrabold" maxW="md" mx="auto">
                         {`Made For Industry's Leading Companies`}
                     </Heading>
-                    <Text></Text>
                     <SimpleGrid
                         columns={{ base: 1, sm: 2, md: 3 }}
                         mt="8"
