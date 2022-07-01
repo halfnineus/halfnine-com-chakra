@@ -13,9 +13,9 @@ export default function App() {
     return (
         <>
             <Head>
-                <title>Electronic Engineering - ochoa.pro</title>
+                <title>Electronic Engineering - ochoa.pro  - International Product Development, Design and Production</title>
             </Head>
-            <Box pt="16" /* pb="24"*/ pe={'4'}>
+            <Box pt="16" pe={'4'}>
                 <Box maxW={{ base: 'xl', md: '98%' }} mx="auto" px={{ base: '6', md: '8' }}>
                     <Stack
                         direction={{ base: 'column', lg: 'row' }}
@@ -75,6 +75,7 @@ export default function App() {
                             />
                         </Box>
                     </Stack>
+                    <Box padding={'4'} />
                 </Box>
             </Box>
         </>

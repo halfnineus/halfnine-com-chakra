@@ -18,8 +18,7 @@ import {
   VStack,
 } from '@chakra-ui/react'
 
-import { HiChevronRight } from 'react-icons/hi'
-import { CheckIcon } from '@chakra-ui/icons'
+import { CheckIcon, CloseIcon } from '@chakra-ui/icons'
 
 interface Props {
 
@@ -29,7 +28,7 @@ const index: NextPage<Props> = () => {
   return (
     <>
       <Head>
-        <title>ochoa.pro</title>
+        <title>International Product Development, Design and Production - ochoa.pro</title>
       </Head>
       <Box
         as="section"
@@ -102,7 +101,7 @@ const index: NextPage<Props> = () => {
 
       <Box pointerEvents={'none'} p={4}>
         <Stack spacing={4} as={Container} maxW={'3xl'} textAlign={'center'}>
-          <Heading fontSize={'3xl'}>This is the headline</Heading>
+          <Heading fontSize={'3xl'}>What we do.</Heading>
           <Text color={mode('gray.600', 'gray.400')} fontSize={'xl'}>
             Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
             nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
@@ -117,10 +116,10 @@ const index: NextPage<Props> = () => {
               </Box>
               <VStack align={'start'}>
                 <Text fontWeight={600}>
-                  Lorem ipsum dolor sit amet
+                  Electronic Engineering
                 </Text>
                 <Text color={mode('gray.600', 'gray.400')}>
-                  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam.
+                  Highly reliable innovative solutions that enable a digital transformation.
                 </Text>
               </VStack>
             </HStack>
@@ -130,10 +129,10 @@ const index: NextPage<Props> = () => {
               </Box>
               <VStack align={'start'}>
                 <Text fontWeight={600}>
-                  Lorem ipsum dolor sit amet
+                  Software Engineering
                 </Text>
                 <Text color={mode('gray.600', 'gray.400')}>
-                  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam.
+                  Highly reliable product design and development on the latest technology.
                 </Text>
               </VStack>
             </HStack>
@@ -143,10 +142,10 @@ const index: NextPage<Props> = () => {
               </Box>
               <VStack align={'start'}>
                 <Text fontWeight={600}>
-                  Lorem ipsum dolor sit amet
+                  Mechanical Engineering
                 </Text>
                 <Text color={mode('gray.600', 'gray.400')}>
-                  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam.
+                  Take product ideas from concepts to working prototypes.
                 </Text>
               </VStack>
             </HStack>
@@ -156,10 +155,23 @@ const index: NextPage<Props> = () => {
               </Box>
               <VStack align={'start'}>
                 <Text fontWeight={600}>
-                  Lorem ipsum dolor sit amet
+                  Product Design
                 </Text>
                 <Text color={mode('gray.600', 'gray.400')}>
-                  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam.
+                  Innovative product design processes that bring ideas to life.
+                </Text>
+              </VStack>
+            </HStack>
+            <HStack key={'i'} align={'top'}>
+              <Box color={'red.400'} px={2}>
+                <Icon as={CloseIcon} />
+              </Box>
+              <VStack align={'start'}>
+                <Text fontWeight={600}>
+                  Packaging Design
+                </Text>
+                <Text color={mode('gray.600', 'gray.400')}>
+                  Packaging can be the top-shelf difference in retail success.
                 </Text>
               </VStack>
             </HStack>
@@ -169,49 +181,37 @@ const index: NextPage<Props> = () => {
               </Box>
               <VStack align={'start'}>
                 <Text fontWeight={600}>
-                  Lorem ipsum dolor sit amet
+                  Product Manufacturing
                 </Text>
                 <Text color={mode('gray.600', 'gray.400')}>
-                  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam.
+                  Products and quality that live up to the expectations of all customers.
                 </Text>
               </VStack>
             </HStack>
             <HStack key={'i'} align={'top'}>
-              <Box color={'green.400'} px={2}>
-                <Icon as={CheckIcon} />
+              <Box color={'red.400'} px={2}>
+                <Icon as={CloseIcon} />
               </Box>
               <VStack align={'start'}>
                 <Text fontWeight={600}>
-                  Lorem ipsum dolor sit amet
+                  Delivery Logistics
                 </Text>
                 <Text color={mode('gray.600', 'gray.400')}>
-                  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam.
+                  {/* Product storage and supply chain management. */}
+                  Product storage, distribution and supply chain management.
                 </Text>
               </VStack>
             </HStack>
             <HStack key={'i'} align={'top'}>
-              <Box color={'green.400'} px={2}>
-                <Icon as={CheckIcon} />
+              <Box color={'red.400'} px={2}>
+                <Icon as={CloseIcon} />
               </Box>
               <VStack align={'start'}>
                 <Text fontWeight={600}>
-                  Lorem ipsum dolor sit amet
+                  Marketing
                 </Text>
                 <Text color={mode('gray.600', 'gray.400')}>
-                  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam.
-                </Text>
-              </VStack>
-            </HStack>
-            <HStack key={'i'} align={'top'}>
-              <Box color={'green.400'} px={2}>
-                <Icon as={CheckIcon} />
-              </Box>
-              <VStack align={'start'}>
-                <Text fontWeight={600}>
-                  Lorem ipsum dolor sit amet
-                </Text>
-                <Text color={mode('gray.600', 'gray.400')}>
-                  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam.
+                  Researching Markets and Promoting products to Consumers.
                 </Text>
               </VStack>
             </HStack>
@@ -225,12 +225,12 @@ const index: NextPage<Props> = () => {
 
 
 
-      <Box bg="gray.800" as="section" minH="140px" position="relative">
+      {/* <Box bg="gray.800" as="section" minH="140px" position="relative">
         <Box py="32" position="relative" zIndex={1}>
           <Box maxW={{ base: 'xl', md: '98%' }} mx="auto" px={{ base: '6', md: '8' }} color="white">
             <Box maxW="xl">
-              <Heading pointerEvents={'none'} as="h1" size="3xl" fontWeight="extrabold">
-              Lorem ipsum dolor sit amet amet consectetur 
+              <Heading as={'h3'} pointerEvents={'none'} size="3xl" fontWeight="extrabold">
+                Lorem ipsum dolor sit amet amet consectetur
               </Heading>
               <Text pointerEvents={'none'} fontSize={{ md: '2xl' }} mt="4" maxW="lg">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
@@ -247,7 +247,7 @@ const index: NextPage<Props> = () => {
                   fontSize="md"
                   fontWeight="bold"
                 >
-                  Get Started for Free
+                  Lorem ipsum dolor
                 </Button>
                 <HStack
                   as="a"
@@ -261,7 +261,7 @@ const index: NextPage<Props> = () => {
                   py="3"
                   _hover={{ bg: 'whiteAlpha.300' }}
                 >
-                  <span>Talk to Sales</span>
+                  <span>Lorem ipsum</span>
                   <HiChevronRight />
                 </HStack>
               </Stack>
@@ -291,7 +291,7 @@ const index: NextPage<Props> = () => {
             <Box position="absolute" w="full" h="full" bg="blackAlpha.600" />
           </Box>
         </Flex>
-      </Box>
+      </Box> */}
     </>
   )
 }

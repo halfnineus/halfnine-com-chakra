@@ -21,7 +21,7 @@ export const links: Link[] = [
   // { label: 'For Factories', href: '/factories' },
   // { label: 'For Retail', href: '/retail' },
   // { label: 'For Consumers', href: '/consumers' },
-  { label: 'Our Products', href: '/products' },
+  { label: 'Our Portafolio', href: '/portafolio' },
   {
     label: 'Development',
     children: [
@@ -68,7 +68,8 @@ export const links: Link[] = [
       },
       {
         label: 'Logistics',
-        description: 'Product storage, distribution and supply chain management. ',
+        // description: 'Product storage, distribution and supply chain management. ',
+        description: 'Product storage and supply chain management. ',
         href: '/services/manufacturing/logistics',
         icon: <IoSwapHorizontalOutline />,
       },

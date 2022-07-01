@@ -52,6 +52,7 @@ export const SubmenuItem = (props: SubmenuItemProps) => {
             fontWeight="semibold"
             color={mode('gray.900', 'white')}
             _groupHover={{ color: mode('blue.600', 'inherit') }}
+            pointerEvents={'none'}
           >
             {title}
           </Text>
@@ -62,7 +63,8 @@ export const SubmenuItem = (props: SubmenuItemProps) => {
             _groupHover={{ color: mode('blue.600', 'inherit'), transform: 'translateX(2px)' }}
           />
         </HStack>
-        <Text as="dd" color={mode('gray.500', 'gray.400')}>
+        <Text as="dd" color={mode('gray.500', 'gray.400')} pointerEvents={'none'}>
+
           {children}
         </Text>
       </Box>

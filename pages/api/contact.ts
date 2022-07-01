@@ -17,7 +17,7 @@ export default async function contactMail(req: any, res: any) {
       secure: true,
     });
 
-    
+
     const mailData = {
       from: process.env.donotreplyemail,
       to: process.env.myemail,
@@ -25,13 +25,13 @@ export default async function contactMail(req: any, res: any) {
       text: req.body.message + " | Sent from: " + req.body.email,
       html: `<div>${req.body.message}</div><p>Sent from: ${req.body.email}</p>`
     }
-    const mailData2 = {
-      from: process.env.donotreplyemail,
-      to: req.body.email,
-      subject: `Hello! ${req.body.name} We will contact you shortly. Thankyou for your interest!`,
-      text: req.body.message + " | Sent from: " + req.body.email,
-      html: `<div>${req.body.message}</div><p>Sent from: ${req.body.email}</p>`
-    }
+    // const mailData2 = {
+    //   from: process.env.donotreplyemail,
+    //   to: req.body.email,
+    //   subject: `Hello! ${req.body.name} We will contact you shortly. Thankyou for your interest!`,
+    //   text: req.body.message + " | Sent from: " + req.body.email,
+    //   html: `<div>${req.body.message}</div><p>Sent from: ${req.body.email}</p>`
+    // }
 
     // const errorMailData3 = {
     //   from: process.env.donotreplyemail,
@@ -50,14 +50,14 @@ export default async function contactMail(req: any, res: any) {
       }
     })
 
-    transporter.sendMail(mailData2, function (err2: any, info2: any) {
-      if (err2) {
-        console.log(err2)
-      }
-      else {
-        console.log(info2);
-      }
-    })
+    // transporter.sendMail(mailData2, function (err2: any, info2: any) {
+    //   if (err2) {
+    //     console.log(err2)
+    //   }
+    //   else {
+    //     console.log(info2);
+    //   }
+    // })
 
 
     console.log(req.body)

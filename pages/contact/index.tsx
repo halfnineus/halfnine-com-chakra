@@ -68,7 +68,7 @@ const INDEX = () => {
     return (
         <>
             <Head>
-                <title>contact - ochoa.pro</title>
+                <title>Contact Us - ochoa.pro - International Product Development, Design and Production</title>
             </Head>
             <Container maxW="full" mt={0} centerContent overflow="hidden">
                 <Flex>
@@ -161,7 +161,7 @@ const INDEX = () => {
                                                 <VStack spacing={5}>
                                                     {submittedmsg === true && (
                                                         <FormControl isRequired >
-                                                            <Text pointerEvents="none" colorScheme={'green'} >Message sent! We will contact you shortly!</Text>
+                                                            <Text pointerEvents="none" colorScheme={'green'} >Message sent! We will contact you shortly.</Text>
                                                         </FormControl>
                                                     )}
                                                     {errormsg === true && (

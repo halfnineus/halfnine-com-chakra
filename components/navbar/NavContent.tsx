@@ -41,7 +41,7 @@ const MobileNavContext = (props: FlexProps) => {
         <Box visibility={{ base: 'hidden', sm: 'visible' }}>
           <NextLink href={'/contact'} passHref>
             <Link>
-              <Button  fontWeight="bold">
+              <Button fontWeight="bold">
                 Contact Us
               </Button>
             </Link>
@@ -88,13 +88,10 @@ const DesktopNavContent = (props: FlexProps) => {
           </Box>
         ))}
       </HStack>
-      <HStack spacing="8" /* minW="240px" justify="space-between" */ >
-        {/* <Box as="a" href="#" color={mode('blue.600', 'blue.300')} fontWeight="bold">
-          Sign In
-        </Box> */}
+      <HStack spacing="4" >
         <NextLink href={'/contact'} passHref>
           <Link>
-            <Button  /* colorScheme="blue" */ fontWeight="bold">
+            <Button colorScheme="blue" fontWeight="bold">
               Contact Us
             </Button>
           </Link>
