@@ -13,7 +13,8 @@ export default function ProductDesign() {
     return (
         <>
             <Head>
-                <title>Mechanical Engineering - ochoa.pro  - International Product Development, Design and Production</title>
+                <title>Product Design - Ochoa - International Product Development, Design and Production</title>
+                <meta name="description" content="" />
             </Head>
             <Box pt="16" pe={'4'}>
                 <Box maxW={{ base: 'xl', md: '98%' }} mx="auto" px={{ base: '6', md: '8' }}>

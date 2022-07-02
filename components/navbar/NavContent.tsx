@@ -10,6 +10,7 @@ import {
   Link,
   Image,
   IconButton,
+  Text,
 } from '@chakra-ui/react'
 import NextLink from 'next/link'
 import * as React from 'react'
@@ -35,7 +36,7 @@ const MobileNavContext = (props: FlexProps) => {
         </Box>
         <NextLink href={'/'} passHref>
           <Link display="flex" alignItems="center">
-            <Image width={'100%'} height={'8'} src={mode(smlog.src, wsmlog.src)} alt={'ochoa.pro'} />
+            <Image width={'100%'} height={'8'} src={mode(smlog.src, wsmlog.src)} alt={'Ochoa'} />
           </Link>
         </NextLink>
         <Box visibility={{ base: 'hidden', sm: 'visible' }}>
@@ -48,6 +49,7 @@ const MobileNavContext = (props: FlexProps) => {
           </NextLink>
         </Box>
       </Flex>
+      <Text position={'absolute'} fontWeight={'semibold'} userSelect={'none'} color={'red.500'} visibility={{ base: 'visible', sm: 'hidden' }}>Site is not optimized for use on mobile devices yet, Use a Desktop Browser for a better experience</Text>
       <NavMenu animate={isOpen ? 'open' : 'closed'}>
         {links.map((link, idx) =>
           link.children ? (
@@ -74,7 +76,7 @@ const DesktopNavContent = (props: FlexProps) => {
     <Flex className="nav-content__desktop" align="center" justify="space-between" {...props}>
       <NextLink href={'/'} passHref>
         <Link display="flex" alignItems="center">
-          <Image width={'100%'} height={'8'} src={mode(smlog.src, wsmlog.src)} alt={'ochoa.pro'} />
+          <Image width={'100%'} height={'10'} src={mode(smlog.src, wsmlog.src)} alt={'Ochoa'} />
         </Link>
       </NextLink>
       <HStack as="ul" id="nav__primary-menu" aria-label="Main Menu" listStyleType="none">

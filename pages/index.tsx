@@ -28,7 +28,8 @@ const index: NextPage<Props> = () => {
   return (
     <>
       <Head>
-        <title>International Product Development, Design and Production - ochoa.pro</title>
+        <title>International Product Development, Design and Production - Ochoa</title>
+        <meta name="description" content="Full-service product developoment with Ochoa, Providing services from software, hardware and mechanical engineering. And product manufacturing." />
       </Head>
       <Box
         as="section"
@@ -50,7 +51,7 @@ const index: NextPage<Props> = () => {
               </Box>
             </Heading>
             <Text pointerEvents={'none'} mt={4} fontSize="xl" fontWeight="medium" color={mode('gray.600', 'gray.400')}>
-              Ochoa Development Services provides end-to-end solutions for product design and development and
+              Ochoa offers Development Services provides end-to-end solutions for product design and development and
               manufacturing through our experts and professionals.
             </Text>
             <Stack direction={{ base: 'column', sm: 'row' }} spacing="4" mt="8">
@@ -99,14 +100,14 @@ const index: NextPage<Props> = () => {
 
 
 
-      <Box pointerEvents={'none'} p={4}>
+      <Box p={4}>
         <Stack spacing={4} as={Container} maxW={'3xl'} textAlign={'center'}>
-          <Heading fontSize={'3xl'}>What we do.</Heading>
-          <Text color={mode('gray.600', 'gray.400')} fontSize={'xl'}>
+          <Heading pointerEvents={'none'} fontSize={'3xl'}>What we do.</Heading>
+          {/* <Text color={mode('gray.600', 'gray.400')} fontSize={'xl'}>
             Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
             nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
             sed diam voluptua.
-          </Text>
+          </Text> */}
         </Stack>
         <Container maxW={'6xl'} mt={10}>
           <SimpleGrid columns={{ base: 1, md: 2, lg: 4 }} spacing={10}>
@@ -115,10 +116,14 @@ const index: NextPage<Props> = () => {
                 <Icon as={CheckIcon} />
               </Box>
               <VStack align={'start'}>
-                <Text fontWeight={600}>
-                  Electronic Engineering
-                </Text>
-                <Text color={mode('gray.600', 'gray.400')}>
+                <NextLink href={'#'} passHref>
+                  <Link>
+                    <Text fontWeight={600}>
+                      Electronic Engineering
+                    </Text>
+                  </Link>
+                </NextLink>
+                <Text pointerEvents={'none'} color={mode('gray.600', 'gray.400')}>
                   Highly reliable innovative solutions that enable a digital transformation.
                 </Text>
               </VStack>
@@ -131,7 +136,7 @@ const index: NextPage<Props> = () => {
                 <Text fontWeight={600}>
                   Software Engineering
                 </Text>
-                <Text color={mode('gray.600', 'gray.400')}>
+                <Text pointerEvents={'none'} color={mode('gray.600', 'gray.400')}>
                   Highly reliable product design and development on the latest technology.
                 </Text>
               </VStack>
@@ -144,7 +149,7 @@ const index: NextPage<Props> = () => {
                 <Text fontWeight={600}>
                   Mechanical Engineering
                 </Text>
-                <Text color={mode('gray.600', 'gray.400')}>
+                <Text pointerEvents={'none'} color={mode('gray.600', 'gray.400')}>
                   Take product ideas from concepts to working prototypes.
                 </Text>
               </VStack>
@@ -157,7 +162,7 @@ const index: NextPage<Props> = () => {
                 <Text fontWeight={600}>
                   Product Design
                 </Text>
-                <Text color={mode('gray.600', 'gray.400')}>
+                <Text pointerEvents={'none'} color={mode('gray.600', 'gray.400')}>
                   Innovative product design processes that bring ideas to life.
                 </Text>
               </VStack>
@@ -170,7 +175,7 @@ const index: NextPage<Props> = () => {
                 <Text fontWeight={600}>
                   Packaging Design
                 </Text>
-                <Text color={mode('gray.600', 'gray.400')}>
+                <Text pointerEvents={'none'} color={mode('gray.600', 'gray.400')}>
                   Packaging can be the top-shelf difference in retail success.
                 </Text>
               </VStack>
@@ -183,7 +188,7 @@ const index: NextPage<Props> = () => {
                 <Text fontWeight={600}>
                   Product Manufacturing
                 </Text>
-                <Text color={mode('gray.600', 'gray.400')}>
+                <Text pointerEvents={'none'} color={mode('gray.600', 'gray.400')}>
                   Products and quality that live up to the expectations of all customers.
                 </Text>
               </VStack>
@@ -196,9 +201,9 @@ const index: NextPage<Props> = () => {
                 <Text fontWeight={600}>
                   Delivery Logistics
                 </Text>
-                <Text color={mode('gray.600', 'gray.400')}>
-                  {/* Product storage and supply chain management. */}
-                  Product storage, distribution and supply chain management.
+                <Text pointerEvents={'none'} color={mode('gray.600', 'gray.400')}>
+                  {/* Product storage, distribution and supply chain management. */}
+                  Product storage and supply chain management.
                 </Text>
               </VStack>
             </HStack>
@@ -210,7 +215,7 @@ const index: NextPage<Props> = () => {
                 <Text fontWeight={600}>
                   Marketing
                 </Text>
-                <Text color={mode('gray.600', 'gray.400')}>
+                <Text pointerEvents={'none'} color={mode('gray.600', 'gray.400')}>
                   Researching Markets and Promoting products to Consumers.
                 </Text>
               </VStack>

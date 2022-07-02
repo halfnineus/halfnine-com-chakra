@@ -13,7 +13,7 @@ export default function PAD() {
     return (
         <>
             <Head>
-                <title>Packaging Design - ochoa.pro  - International Product Development, Design and Production</title>
+                <title>Packaging Design - Ochoa - International Product Development, Design and Production</title>
             </Head>
             <Box pt="16" pe={'4'}>
                 <Box maxW={{ base: 'xl', md: '98%' }} mx="auto" px={{ base: '6', md: '8' }}>

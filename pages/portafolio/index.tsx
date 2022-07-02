@@ -5,7 +5,8 @@ const IndexPortafolio = () => {
     return (
         <>
             <Head>
-                <title>Product Showcase - ochoa.pro - International Product Development, Design and Production</title>
+                <title>Product Showcase - Ochoa - International Product Development, Design and Production</title>
+                <meta name="description" content="" />
             </Head>
             <Box as="section" py={'16'}>
                 <Box maxW={{ base: 'xl', md: '7xl' }} textAlign={'center'} mx={"auto"} px={{ base: '6', md: '8' }}>

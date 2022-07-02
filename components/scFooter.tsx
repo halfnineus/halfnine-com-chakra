@@ -16,7 +16,7 @@ import wsmlog from '../public/img/wsmlog.png'
 const Logo = () => {
     return (
         <>
-            <Image alt={'ochoa.pro'} pointerEvents={'none'} width={'100%'} height={'8'} src={useColorModeValue(smlog.src, wsmlog.src)} />
+            <Image alt={'Ochoa'} pointerEvents={'none'} width={'100%'} height={'8'} src={useColorModeValue(smlog.src, wsmlog.src)} />
         </>
     );
 };
@@ -43,7 +43,7 @@ export default function SCFooter() {
                             <Logo />
                         </Link>
                     </NextLink>
-                    <Text pointerEvents={'none'}>© 2022 ochoa.pro - All rights reserved</Text>
+                    <Text pointerEvents={'none'}>© 2022 Ochoa - All rights reserved</Text>
                     <Stack direction={'row'} spacing={6}>
                         <NextLink href={'/'} passHref>
                             <Link>

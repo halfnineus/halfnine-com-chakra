@@ -69,6 +69,7 @@ const INDEX = () => {
         <>
             <Head>
                 <title>Contact Us - ochoa.pro - International Product Development, Design and Production</title>
+                <meta name="description" content="" />
             </Head>
             <Container maxW="full" mt={0} centerContent overflow="hidden">
                 <Flex>

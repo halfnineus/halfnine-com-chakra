@@ -2344,9 +2344,9 @@
   "version" "2.0.5"
 
 "nodemailer@^6.7.5":
-  "integrity" "sha512-6VtMpwhsrixq1HDYSBBHvW0GwiWawE75dS3oal48VqRhUvKJNnKnJo2RI/bCVQubj1vgrgscMNW4DHaD6xtMCg=="
-  "resolved" "https://registry.npmjs.org/nodemailer/-/nodemailer-6.7.5.tgz"
-  "version" "6.7.5"
+  "integrity" "sha512-/6KF/umU7r7X21Y648/yiRLrgkfz0dmpyuo4BfgYWIpnT/jCbkPTvegMfxCsDAu+O810p2L1BGXieMTPp3nJVA=="
+  "resolved" "https://registry.npmjs.org/nodemailer/-/nodemailer-6.7.6.tgz"
+  "version" "6.7.6"
 
 "object-assign@^4.1.1":
   "integrity" "sha512-rJgTQnkUnH1sFw8yT6VSU3zD3sWmu6sZhIseY8VX+GRu3P6F7Fu+JNDoXfklElbLJSnc3FUQHVe4cU5hj+BcUg=="
