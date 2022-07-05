@@ -69,7 +69,7 @@ const INDEX = () => {
         <>
             <Head>
                 <title>Contact Us - ochoa.pro - International Product Development, Design and Production</title>
-                <meta name="description" content="" />
+                <meta name="description" content="Contact Us about Product Development, Design and Production Related Inquiries." />
             </Head>
             <Container maxW="full" mt={0} centerContent overflow="hidden">
                 <Flex>
@@ -85,7 +85,7 @@ const INDEX = () => {
                             <Wrap spacing={{ base: 20, sm: 3, md: 5, lg: 20 }}>
                                 <WrapItem>
                                     <Box>
-                                        <Heading pointerEvents={'none'} color={useColorModeValue('black', 'white')} fontSize={'4xl'}>Contact</Heading>
+                                        <Heading pointerEvents={'none'} color={useColorModeValue('black', 'white')} fontSize={'4xl'}>Get In Touch</Heading>
                                         <Text pointerEvents={'none'} mt={{ sm: 3, md: 3, lg: 5 }} color="gray.500">
                                             Fill up the form below to contact
                                         </Text>

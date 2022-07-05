@@ -15,11 +15,11 @@ module.exports = {
         destination: '/',
         permanent: true,
       },
-      {
-        source: '/services/manufacturing',
-        destination: '/',
-        permanent: true,
-      },
+      // {
+      //   source: '/services/manufacturing',
+      //   destination: '/',
+      //   permanent: true,
+      // },
     ];
   },
   nextConfig,

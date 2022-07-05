@@ -54,8 +54,9 @@ export default function ProductDesign() {
                                 zIndex="1"
                                 h={{ lg: '100%' }}
                                 objectFit="cover"
-                                src={`https://external-content.duckduckgo.com/iu/?u=https://i.ibb.co/Z8ZhvNN/Product-Design-Image.png`}
+                                src={`https://i.ibb.co/Z8ZhvNN/Product-Design-Image.png`}
                                 alt="Screening talent"
+                                pointerEvents={"none"}
                             />
                             <Box
                                 pos="absolute"

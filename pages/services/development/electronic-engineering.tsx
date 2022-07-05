@@ -14,6 +14,7 @@ export default function App() {
         <>
             <Head>
                 <title>Electronic Engineering - Ochoa - International Product Development, Design and Production</title>
+                <meta name="description" content="" />
             </Head>
             <Box pt="16" pe={'4'}>
                 <Box maxW={{ base: 'xl', md: '98%' }} mx="auto" px={{ base: '6', md: '8' }}>
@@ -62,8 +63,9 @@ export default function App() {
                                 zIndex="1"
                                 h={{ lg: '100%' }}
                                 objectFit="cover"
-                                src={`https://external-content.duckduckgo.com/iu/?u=https://i.ibb.co/pnFHrN8/Electronic-Engineering-Image.png`}
+                                src={`https://i.ibb.co/pnFHrN8/Electronic-Engineering-Image.png`}
                                 alt="Screening talent"
+                                pointerEvents={"none"}
                             />
                             <Box
                                 pos="absolute"

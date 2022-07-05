@@ -1,5 +1,6 @@
-import { Box, Center, Heading, Image, SimpleGrid, Text, useColorModeValue } from "@chakra-ui/react";
+import { Box, Link, Center, Heading, Image, SimpleGrid, Text, useColorModeValue } from "@chakra-ui/react";
 import Head from "next/head";
+import NextLink from "next/link";
 
 const IndexPortafolio = () => {
     return (
@@ -20,26 +21,30 @@ const IndexPortafolio = () => {
                         color={useColorModeValue('inherit', 'white')}
                     >
                         <Center py={'4'} px={'4'} bg={useColorModeValue('gray.100', 'gray.700')} rounded={{ md: 'lg' }}>
-                            <Image width={'100%'} height={'100%'} src={'https://external-content.duckduckgo.com/iu/?u=https://i.ibb.co/wNp0pqR/1.png'} alt={'component'} />
+                            <Image pointerEvents={"none"} width={'100%'} height={'100%'} src={'https://i.ibb.co/xsXw3WM/1.png'} alt={'component'} />
                         </Center>
                         <Center py={'4'} px={'4'} bg={useColorModeValue('gray.100', 'gray.700')} rounded={{ md: 'lg' }}>
-                            <Image width={'100%'} height={'100%'} src={'https://external-content.duckduckgo.com/iu/?u=https://i.ibb.co/rbnsps6/2.png'} alt={'component'} />
+                            <Image pointerEvents={"none"} width={'100%'} height={'100%'} src={'https://i.ibb.co/7QkQ2f5/2.png'} alt={'component'} />
                         </Center>
                         <Center py={'4'} px={'4'} bg={useColorModeValue('gray.100', 'gray.700')} rounded={{ md: 'lg' }}>
-                            <Image width={'100%'} height={'100%'} src={'https://external-content.duckduckgo.com/iu/?u=https://i.ibb.co/B2PyXRt/3.png'} alt={'component'} />
+                            <Image pointerEvents={"none"} width={'100%'} height={'100%'} src={'https://i.ibb.co/THQpY8G/3.png'} alt={'component'} />
                         </Center>
                         <Center py={'4'} px={'4'} bg={useColorModeValue('gray.100', 'gray.700')} rounded={{ md: 'lg' }}>
-                            <Image width={'100%'} height={'100%'} src={'https://external-content.duckduckgo.com/iu/?u=https://i.ibb.co/D91tBgS/4.png'} alt={'component'} />
+                            <Image pointerEvents={"none"} width={'100%'} height={'100%'} src={'https://i.ibb.co/ZHCgLkT/4.png'} alt={'component'} />
                         </Center>
                         <Center py={'4'} px={'4'} bg={useColorModeValue('gray.100', 'gray.700')} rounded={{ md: 'lg' }}>
-                            <Image width={'100%'} height={'100%'} src={'https://external-content.duckduckgo.com/iu/?u=https://i.ibb.co/WsYsjCV/5.png'} alt={'component'} />
+                            <Image pointerEvents={"none"} width={'100%'} height={'100%'} src={'https://i.ibb.co/6W1WQx5/5.png'} alt={'component'} />
                         </Center>
                         <Center py={'4'} px={'4'} bg={useColorModeValue('gray.100', 'gray.700')} rounded={{ md: 'lg' }}>
-                            <Image width={'100%'} height={'100%'} src={'https://external-content.duckduckgo.com/iu/?u=https://i.ibb.co/pJ5tnQS/6.png'} alt={'component'} />
+                            <Image pointerEvents={"none"} width={'100%'} height={'100%'} src={'https://i.ibb.co/Tqqz2d2/6.png'} alt={'component'} />
                         </Center>
                     </SimpleGrid>
                     <Box padding={'4'} />
-                    <Text pointerEvents={'none'} align={'center'} fontSize={'2xl'} fontWeight={'bold'}>And More...</Text>
+                    <NextLink href={"/contact"} passHref>
+                        <Link>
+                            <Text align={'center'} fontSize={'2xl'} fontWeight={'bold'}>And More...</Text>
+                        </Link>
+                    </NextLink>
                 </Box>
             </Box>
         </>

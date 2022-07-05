@@ -10,6 +10,7 @@ const Logistics: NextPage<Props> = () => {
         <>
             <Head>
                 <title>Logistics - Ochoa - International Product Development, Design and Production</title>
+                <meta name="description" content="" />
             </Head>
         </>
     )
