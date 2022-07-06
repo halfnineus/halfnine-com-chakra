@@ -1,4 +1,4 @@
-import { Box, Button, chakra, Flex, HStack, Link, Stack, useColorModeValue } from '@chakra-ui/react';
+import { Box, Button, chakra, Flex, HStack, Link, Stack, Text, useColorModeValue } from '@chakra-ui/react';
 import Head from 'next/head';
 import NextLink from 'next/link'
 import { HiChevronRight } from 'react-icons/hi';
@@ -56,14 +56,15 @@ export default function Custom404() {
                             transition="background 0.2s"
                             justify={{ base: 'center', md: 'flex-start' }}
                             href="/contact"
-                            color="white"
                             rounded="full"
                             fontWeight="bold"
                             px="6"
                             py="3"
                             _hover={{ bg: 'whiteAlpha.300' }}
                         >
-                            <span>Contact Us</span>
+                            <Text>
+                                Contact Us
+                            </Text>
                             <HiChevronRight />
                         </HStack>
                     </Stack>

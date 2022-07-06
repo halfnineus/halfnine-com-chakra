@@ -59,9 +59,9 @@ const INDEX = () => {
             if (res.status === 200) {
                 console.log('Response succeeded!')
             } else {
+                setErrormsg(true)
             }
             setSubmittedmsg(true)
-            // setErrormsg(true)
             setSubmitted(false)
         })
     }
@@ -71,7 +71,7 @@ const INDEX = () => {
                 <title>Contact Us - ochoa.pro - International Product Development, Design and Production</title>
                 <meta name="description" content="Contact Us about Product Development, Design and Production Related Inquiries." />
             </Head>
-            <Container maxW="full" mt={0} centerContent overflow="hidden">
+            <Container maxW="full" mt={0} centerContent overflow="hidden" py='8'>
                 <Flex>
                     <Box
                         bg={useColorModeValue('gray.50', 'gray.700')}

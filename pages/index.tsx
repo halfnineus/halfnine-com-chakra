@@ -95,7 +95,7 @@ const index: NextPage<Props> = () => {
             width="100%"
             objectFit="cover"
             src="https://i.ibb.co/y5b5V1C/1.jpg"
-            alt="Lady working"
+            alt="Base"
           />
         </Box>
       </Box>

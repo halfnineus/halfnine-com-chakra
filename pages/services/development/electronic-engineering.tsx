@@ -63,7 +63,7 @@ export default function App() {
                                 zIndex="1"
                                 h={{ lg: '100%' }}
                                 objectFit="cover"
-                                src={`https://i.ibb.co/pnFHrN8/Electronic-Engineering-Image.png`}
+                                src={`https://i.ibb.co/89DtNZs/Electronic-Engineering-Image-min.png`}
                                 alt="Screening talent"
                                 pointerEvents={"none"}
                             />

@@ -2,47 +2,39 @@
   <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
       <loc>https://ochoa.pro/</loc>
-      <lastmod>2022-07-02</lastmod>
+      <lastmod>2022-07-07</lastmod>
     </url>
         <url>
       <loc>https://ochoa.pro/products</loc>
-      <lastmod>2022-07-02</lastmod>
+      <lastmod>2022-07-07</lastmod>
     </url>
     <url>
       <loc>https://ochoa.pro/about</loc>
-      <lastmod>2022-07-02</lastmod>
+      <lastmod>2022-07-07</lastmod>
     </url>
         <!-- <url>
       <loc>https://ochoa.pro/contact</loc>
-      <lastmod>2022-07-02</lastmod>
+      <lastmod>2022-07-07</lastmod>
 </url> -->
     <url>
       <loc>https://ochoa.pro/services/development/electronic-engineering</loc>
-      <lastmod>2022-07-02</lastmod>
+      <lastmod>2022-07-07</lastmod>
     </url>
     <url>
       <loc>https://ochoa.pro/services/development/software-engineering</loc>
-      <lastmod>2022-07-02</lastmod>
+      <lastmod>2022-07-07</lastmod>
     </url>
     <url>
       <loc>https://ochoa.pro/services/development/mechanical-engineering</loc>
-      <lastmod>2022-07-02</lastmod>
+      <lastmod>2022-07-07</lastmod>
     </url>
     <url>
       <loc>https://ochoa.pro/services/development/product-design</loc>
-      <lastmod>2022-07-02</lastmod>
+      <lastmod>2022-07-07</lastmod>
     </url>
     <url>
-      <loc>https://ochoa.pro/services/development/packaging-design</loc>
-      <lastmod>2022-07-02</lastmod>
-    </url>
-    <url>
-      <loc>https://ochoa.pro/services/manufacturing/logistics</loc>
-      <lastmod>2022-07-02</lastmod>
-    </url>
-    <url>
-      <loc>https://ochoa.pro/services/manufacturing/production</loc>
-      <lastmod>2022-07-02</lastmod>
+      <loc>https://ochoa.pro/services/manufacturing/</loc>
+      <lastmod>2022-07-07</lastmod>
     </url>
   </urlset>
 </xml>

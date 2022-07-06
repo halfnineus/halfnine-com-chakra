@@ -54,7 +54,7 @@ export default function ProductDesign() {
                                 zIndex="1"
                                 h={{ lg: '100%' }}
                                 objectFit="cover"
-                                src={`https://i.ibb.co/Z8ZhvNN/Product-Design-Image.png`}
+                                src={`https://i.ibb.co/3kXkGhk/Product-Design-Image-min.png`}
                                 alt="Screening talent"
                                 pointerEvents={"none"}
                             />

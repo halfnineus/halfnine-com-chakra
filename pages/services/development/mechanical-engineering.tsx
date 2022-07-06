@@ -54,7 +54,7 @@ export default function ME() {
                                 zIndex="1"
                                 h={{ lg: '100%' }}
                                 objectFit="cover"
-                                src={`https://i.ibb.co/rZGJJWW/Mechanical-Engineering-Image.png`}
+                                src={`https://i.ibb.co/LhQpSdb/Mechanical-Engineering-Image-min.png`}
                                 alt="Screening talent"
                                 pointerEvents={"none"}
                             />

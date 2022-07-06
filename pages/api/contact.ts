@@ -59,12 +59,11 @@ export default async function contactMail(req: any, res: any) {
     //   }
     // })
 
-
     console.log(req.body)
     res.send('success')
 
   } else {
-    res.send('nope')
+    // let skids spam the api thinking they are sending something -_- "im evil ahahahah"
+    res.send('success')
   }
-
 }

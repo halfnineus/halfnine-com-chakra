@@ -54,7 +54,7 @@ export default function SoftwareEngineering() {
                                 zIndex="1"
                                 h={{ lg: '100%' }}
                                 objectFit="cover"
-                                src={`https://i.ibb.co/80JrQSC/Software-Engineering-Image.png`}
+                                src={`https://i.ibb.co/qp6syZQ/Software-Engineering-Image-min.png`}
                                 alt="Screening talent"
                                 pointerEvents={"none"}
                             />
