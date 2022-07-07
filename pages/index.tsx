@@ -116,7 +116,7 @@ const index: NextPage<Props> = () => {
           </Text>
         </Stack>
         <Container maxW={'6xl'} mt={10}>
-          <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} spacing={10}>
+          <SimpleGrid columns={{ base: 1, md: 1, lg: 3 }} spacing={10}>
             <HStack align={'top'}>
               <Box color={'green.400'} px={2}>
                 <Icon as={CheckIcon} />
@@ -169,7 +169,7 @@ const index: NextPage<Props> = () => {
               </VStack>
             </HStack>
           </SimpleGrid>
-          <SimpleGrid columns={{ base: 1, md: 2, lg: 2 }} my={10} mx={52} spacing={10}>
+          <SimpleGrid columns={{ base: 1, md: 1, lg: 2 }} my={10} mx={{ md: 0, lg: 52 }} spacing={10}>
             <HStack align={'top'}>
               <Box color={'green.400'} px={2}>
                 <Icon as={CheckIcon} />
