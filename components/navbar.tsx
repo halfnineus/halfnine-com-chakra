@@ -12,7 +12,6 @@ import {
     IconButton,
     SimpleGrid,
     VStack,
-    CloseButton,
     useColorMode,
     Center,
     Text,
@@ -21,7 +20,7 @@ import {
 } from "@chakra-ui/react";
 
 import { IoIosArrowDown } from "react-icons/io";
-import { AiFillHome, AiOutlineInbox, AiOutlineMenu } from "react-icons/ai";
+import { AiFillHome, AiOutlineInbox, AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 import { BsFillCameraVideoFill } from "react-icons/bs";
 import { FaMoon, FaSun } from "react-icons/fa";
 import { IoHardwareChipOutline } from 'react-icons/io5'
@@ -64,11 +63,7 @@ const Navbar = () => {
                             </Link>
                         </NextLink>
                         <HStack as="ul" id="nav__primary-menu" aria-label="Main Menu" listStyleType="none">
-
                             <Flex alignItems="center" justifyContent="space-between" mx="auto">
-                                <Link display="flex" alignItems="center" href="/">
-                                    {/* <Logo /> */}
-                                </Link>
                                 <Box display={{ base: 'none', lg: 'flex' }}>
                                     <HStack spacing={1}>
                                         <Button
@@ -311,7 +306,7 @@ const Navbar = () => {
                                             fontSize="md"
                                             _hover={{ color: cl }}
                                             _focus={{ boxShadow: "none" }}
-                                            onClick={() => router.push('#')}
+                                            onClick={() => router.push('/services/manufacturing')}
                                         >
                                             Manufacturing
                                         </Button>
@@ -323,7 +318,7 @@ const Navbar = () => {
                                             fontSize="md"
                                             _hover={{ color: cl }}
                                             _focus={{ boxShadow: "none" }}
-                                            onClick={() => router.push('#')}
+                                            onClick={() => router.push('/about')}
                                         >
                                             About Us
                                         </Button>
@@ -341,36 +336,75 @@ const Navbar = () => {
                                 p={2}
                                 pb={4}
                                 m={2}
+                                // mt={1}
                                 bg={bg}
                                 spacing={3}
                                 rounded="sm"
                                 shadow="sm"
                             >
-                                <CloseButton
+                                {/* <Button
+                                    w="full"
+                                    variant="ghost"
+                                    leftIcon={<AiOutlineClose />}
+                                    onClick={() => { mobileNav.onClose(); }}
                                     aria-label="Close menu"
                                     justifySelf="self-start"
-                                    onClick={mobileNav.onClose}
-                                />
-                                <Button w="full" variant="ghost" leftIcon={<AiFillHome />}>
-                                    Dashboard
+
+                                >
+                                    About Us
+                                </Button> */}
+                                <Button
+                                    w="full"
+                                    variant="ghost"
+                                    leftIcon={<AiFillHome />}
+                                    onClick={() => {
+                                        mobileNav.onClose();
+                                        router.push('/about');
+                                    }}
+                                >
+                                    About Us
+                                </Button>
+                                <Button
+                                    w="full"
+                                    variant="ghost"
+                                    leftIcon={<AiFillHome />}
+                                    onClick={() => {
+                                        mobileNav.onClose();
+                                        router.push('/services/development');
+                                    }}
+                                >
+                                    Development
+                                </Button>
+                                <Button
+                                    w="full"
+                                    variant="ghost"
+                                    leftIcon={<BsFillCameraVideoFill />}
+                                    onClick={() => {
+                                        mobileNav.onClose();
+                                        router.push('/services/manufacturing');
+                                    }}
+                                >
+                                    Manufacturing
                                 </Button>
                                 <Button
                                     w="full"
                                     variant="solid"
-                                    colorScheme="brand"
+                                    colorScheme="blue"
                                     leftIcon={<AiOutlineInbox />}
+                                    onClick={() => {
+                                        mobileNav.onClose();
+                                        router.push('/contact');
+                                    }}
                                 >
-                                    Inbox
-                                </Button>
-                                <Button w="full" variant="ghost" leftIcon={<BsFillCameraVideoFill />}>
-                                    Videos
+                                    Contact Us
                                 </Button>
                             </VStack>
                         </HStack>
                         <HStack spacing="4" >
                             <NextLink href={'/contact'} passHref>
                                 <Link>
-                                    <Button colorScheme="blue" fontWeight="bold">
+                                    <Button display={{ base: 'none', sm: 'none', md: 'flex', lg: 'flex' }} colorScheme="blue" fontWeight="bold">
+                                        {/* display={{ base: 'none', sm: 'flex', lg: 'flex', md: 'flex' }} */}
                                         Contact Us
                                     </Button>
                                 </Link>
@@ -379,20 +413,23 @@ const Navbar = () => {
                                 size="md"
                                 fontSize="lg"
                                 aria-label={`Switch to ${text} mode`}
-                                variant="ghost"
+                                variant={"ghost"}
                                 color="current"
                                 ml={{ base: "0", md: "3" }}
                                 onClick={toggleMode}
+                                display={mobileNav.isOpen ? "none" : "flex"}
                                 icon={useColorModeValue(<FaMoon />, <FaSun />)}
                             />
                             <IconButton
-                                display={{ base: "flex", md: "none" }}
-                                aria-label="Open menu"
+                                display={{ base: "flex", sm: "flex", md: "flex", lg: "none" }}
+                                aria-label="Open and Close menu"
                                 fontSize="20px"
                                 color={useColorModeValue("gray.800", "inherit")}
                                 variant="ghost"
-                                icon={<AiOutlineMenu />}
-                                onClick={mobileNav.onOpen}
+                                icon={
+                                    mobileNav.isOpen ? <AiOutlineClose /> : <AiOutlineMenu />
+                                }
+                                onClick={mobileNav.onToggle}
                             />
                         </HStack>
                     </Flex>
