@@ -142,7 +142,7 @@ const Navbar = () => {
                                                                         <Text
                                                                             fontWeight="semibold"
                                                                             color={useColorModeValue('gray.900', 'white')}
-                                                                            _groupHover={{ color: useColorModeValue('blue.600', 'inherit') }}
+                                                                            // _groupHover={{ color: useColorModeValue('blue.600', 'inherit') }}
                                                                             pointerEvents={'none'}
                                                                         >
                                                                             {'Electronic Engineering'}
@@ -150,7 +150,7 @@ const Navbar = () => {
                                                                         <Box
                                                                             fontSize="xs"
                                                                             transition="all 0.2s"
-                                                                            _groupHover={{ color: useColorModeValue('blue.600', 'inherit'), transform: 'translateX(2px)' }}
+                                                                        // _groupHover={{ color: useColorModeValue('blue.600', 'inherit'), transform: 'translateX(2px)' }}
                                                                         />
                                                                     </HStack>
                                                                     <Text as="dd" color={useColorModeValue('gray.500', 'gray.400')} pointerEvents={'none'}>
@@ -187,7 +187,7 @@ const Navbar = () => {
                                                                         <Text
                                                                             fontWeight="semibold"
                                                                             color={useColorModeValue('gray.900', 'white')}
-                                                                            _groupHover={{ color: useColorModeValue('blue.600', 'inherit') }}
+                                                                            // _groupHover={{ color: useColorModeValue('blue.600', 'inherit') }}
                                                                             pointerEvents={'none'}
                                                                         >
                                                                             {'Software Engineering'}
@@ -195,7 +195,7 @@ const Navbar = () => {
                                                                         <Box
                                                                             fontSize="xs"
                                                                             transition="all 0.2s"
-                                                                            _groupHover={{ color: useColorModeValue('blue.600', 'inherit'), transform: 'translateX(2px)' }}
+                                                                        // _groupHover={{ color: useColorModeValue('blue.600', 'inherit'), transform: 'translateX(2px)' }}
                                                                         />
                                                                     </HStack>
                                                                     <Text as="dd" color={useColorModeValue('gray.500', 'gray.400')} pointerEvents={'none'}>
@@ -232,7 +232,7 @@ const Navbar = () => {
                                                                         <Text
                                                                             fontWeight="semibold"
                                                                             color={useColorModeValue('gray.900', 'white')}
-                                                                            _groupHover={{ color: useColorModeValue('blue.600', 'inherit') }}
+                                                                            // _groupHover={{ color: useColorModeValue('blue.600', 'inherit') }}
                                                                             pointerEvents={'none'}
                                                                         >
                                                                             {'Mechanical Engineering'}
@@ -240,7 +240,7 @@ const Navbar = () => {
                                                                         <Box
                                                                             fontSize="xs"
                                                                             transition="all 0.2s"
-                                                                            _groupHover={{ color: useColorModeValue('blue.600', 'inherit'), transform: 'translateX(2px)' }}
+                                                                        // _groupHover={{ color: useColorModeValue('blue.600', 'inherit'), transform: 'translateX(2px)' }}
                                                                         />
                                                                     </HStack>
                                                                     <Text as="dd" color={useColorModeValue('gray.500', 'gray.400')} pointerEvents={'none'}>
@@ -277,7 +277,7 @@ const Navbar = () => {
                                                                         <Text
                                                                             fontWeight="semibold"
                                                                             color={useColorModeValue('gray.900', 'white')}
-                                                                            _groupHover={{ color: useColorModeValue('blue.600', 'inherit') }}
+                                                                            // _groupHover={{ color: useColorModeValue('blue.600', 'inherit') }}
                                                                             pointerEvents={'none'}
                                                                         >
                                                                             {'Product Design'}
@@ -285,7 +285,7 @@ const Navbar = () => {
                                                                         <Box
                                                                             fontSize="xs"
                                                                             transition="all 0.2s"
-                                                                            _groupHover={{ color: useColorModeValue('blue.600', 'inherit'), transform: 'translateX(2px)' }}
+                                                                        // _groupHover={{ color: useColorModeValue('blue.600', 'inherit'), transform: 'translateX(2px)' }}
                                                                         />
                                                                     </HStack>
                                                                     <Text as="dd" color={useColorModeValue('gray.500', 'gray.400')} pointerEvents={'none'}>
