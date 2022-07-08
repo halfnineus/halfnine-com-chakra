@@ -1,6 +1,5 @@
 import { Box, Button, chakra, Flex, HStack, Link, Stack, Text, useColorModeValue } from '@chakra-ui/react';
 import Head from 'next/head';
-import NextLink from 'next/link'
 import { HiChevronRight } from 'react-icons/hi';
 
 export default function Custom404() {
@@ -30,7 +29,7 @@ export default function Custom404() {
                         mb={6}
                     >
                         <chakra.span
-                            as={'h1'}
+                            // as={'h1'}
                             display="block"
                             color={useColorModeValue("brand.600", "brand.500")}
                         >

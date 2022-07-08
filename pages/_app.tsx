@@ -26,8 +26,8 @@ export default function MyApp({ Component, pageProps }: AppProps) {
           <meta property="og:url" content="https://ochoa.pro/" />
           <meta property="og:title" content="International Product Development, Design and Production" />
           <meta property="og:description" content="Full-service product development with Ochoa, Providing services from software, hardware and mechanical engineering. And electronics manufacturing." />
-          <meta property="og:image" content="https://i.ibb.co/d02BsKM/metatag.png" />
-          <meta property="og:image:secure_url" content="https://i.ibb.co/d02BsKM/metatag.png" />
+          <meta property="og:image" content="https://ochoa.pro/perma/metatag.png" />
+          <meta property="og:image:secure_url" content="https://ochoa.pro/perma/metatag.png" />
           <meta property="og:image:width" content="1200" />
           <meta property="og:image:height" content="628" />
 
@@ -35,7 +35,7 @@ export default function MyApp({ Component, pageProps }: AppProps) {
           <meta property="twitter:url" content="https://ochoa.pro/" />
           <meta property="twitter:title" content="International Product Development, Design and Production" />
           <meta property="twitter:description" content="Full-service product development with Ochoa, Providing services from software, hardware and mechanical engineering. And electronics manufacturing." />
-          <meta property="twitter:image" content="https://i.ibb.co/d02BsKM/metatag.png" />
+          <meta property="twitter:image" content="https://ochoa.pro/perma/metatag.png" />
 
         </Head>
         <Component {...pageProps} />

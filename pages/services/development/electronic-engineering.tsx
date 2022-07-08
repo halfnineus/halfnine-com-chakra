@@ -9,6 +9,8 @@ import {
 } from '@chakra-ui/react'
 import Head from 'next/head'
 
+import devsrc from '../../../public/perma/Electronic-Engineering-Image-min.png'
+
 export default function App() {
     return (
         <>
@@ -63,7 +65,7 @@ export default function App() {
                                 zIndex="1"
                                 h={{ lg: '100%' }}
                                 objectFit="cover"
-                                src={`https://i.ibb.co/89DtNZs/Electronic-Engineering-Image-min.png`}
+                                src={devsrc.src}
                                 alt="Screening talent"
                                 pointerEvents={"none"}
                             />

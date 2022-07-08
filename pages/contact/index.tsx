@@ -40,30 +40,39 @@ const INDEX = () => {
     const [errormsg, setErrormsg] = useState(false)
 
     const handleSubmit = (e: any) => {
-        e.preventDefault()
-        let data = {
-            name,
-            email,
-            message
-        }
-        setSubmitted(true)
-        fetch('/api/contact', {
-            method: 'POST',
-            headers: {
-                'Accept': 'application/json, text/plain, */*',
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(data)
-        }).then((res) => {
-            console.log('Response received')
-            if (res.status === 200) {
-                console.log('Response succeeded!')
-            } else {
-                setErrormsg(true)
+        if ((name === "") || (email === "") || (message === "")) {
+            setErrormsg(true)
+            setSubmittedmsg(false)
+        } else {
+            e.preventDefault()
+            let data = {
+                name,
+                email,
+                message
             }
-            setSubmittedmsg(true)
-            setSubmitted(false)
-        })
+            setSubmitted(true)
+            fetch('/api/contact', {
+                method: 'POST',
+                headers: {
+                    'Accept': 'application/json, text/plain, */*',
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data)
+            }).then((res) => {
+                console.log('Response received')
+                if (res.status === 200) {
+                    console.log('Response succeeded!')
+                } else {
+                    setErrormsg(true)
+                }
+                setErrormsg(false)
+
+                setSubmittedmsg(true)
+
+                setSubmitted(false)
+            })
+        }
+
     }
     return (
         <>
@@ -106,7 +115,7 @@ const INDEX = () => {
                                                         </Button>
                                                     </Link>
                                                 </NextLink> */}
-                                                <NextLink href={'mailto:rodolfo@ochoa.pro'} passHref>
+                                                {/* <NextLink href={'mailto:rodolfo@ochoa.pro'} passHref>
                                                     <Link>
                                                         <Button
                                                             size="md"
@@ -135,7 +144,7 @@ const INDEX = () => {
                                                             dan@ochoa.pro
                                                         </Button>
                                                     </Link>
-                                                </NextLink>
+                                                </NextLink> */}
                                                 <NextLink href={'https://duckduckgo.com/?q=Orlando%2C+Florida&iaxm=maps'} passHref>
                                                     <Link isExternal>
                                                         <Button
@@ -167,7 +176,7 @@ const INDEX = () => {
                                                     )}
                                                     {errormsg === true && (
                                                         <FormControl isRequired >
-                                                            <Text pointerEvents="none" colorScheme={'red'} >Something went wrong while submitting the form, please try again later.</Text>
+                                                            <Text pointerEvents="none" colorScheme={'red'} >Something went wrong while submitting the form, Please try again later.</Text>
                                                         </FormControl>
                                                     )}
                                                     <FormControl isRequired >
@@ -177,9 +186,9 @@ const INDEX = () => {
                                                                 <BsPerson color="gray.800" />
                                                             </InputLeftElement>
                                                             <Input
-                                                                value={name}
+                                                                name="name"
                                                                 onChange={(e: any) => setName(e.target.value)}
-                                                                type={'name'}
+                                                                type={'text'}
                                                                 placeholder={'John Doe'}
                                                                 isRequired
                                                             />
@@ -192,7 +201,7 @@ const INDEX = () => {
                                                                 <MdOutlineEmail color="gray.800" />
                                                             </InputLeftElement>
                                                             <Input
-                                                                value={email}
+                                                                // defaultValue={email}
                                                                 onChange={(e: any) => setEmail(e.target.value)}
                                                                 placeholder={'Email'}
                                                                 type={'email'}
@@ -203,7 +212,7 @@ const INDEX = () => {
                                                     <FormControl isRequired id="message">
                                                         <FormLabel>Message</FormLabel>
                                                         <Textarea
-                                                            value={message}
+                                                            // defaultValue={message}
                                                             onChange={(e: any) => setMessage(e.target.value)}
                                                             placeholder="Message"
                                                             isRequired

@@ -1,4 +1,5 @@
 # Docker build img
+docker build -t ochoadan/ochoapro .
 ```docker build -t ochoadan/ochoapro .```
 
 

@@ -35,22 +35,22 @@ const IndexAbout = () => {
             color={useColorModeValue('inherit', 'white')}
           >
             <Center py={'4'} px={'4'} bg={useColorModeValue('gray.100', 'gray.200')} rounded={{ md: 'lg' }}>
-              {/* <Image width={'100%'} height={'100%'} src={'https://i.ibb.co/R7w07Hb/5.png'} alt={'component'} /> */}
+              {/* <Image width={'100%'} height={'100%'} src={''} alt={'component'} /> */}
             </Center>
             <Center py={'4'} px={'4'} bg={useColorModeValue('gray.100', 'gray.200')} rounded={{ md: 'lg' }}>
-              {/* <Image width={'100%'} height={'100%'} src={'https://i.ibb.co/QmNghWX/2.png'} alt={'component'} /> */}
+              {/* <Image width={'100%'} height={'100%'} src={''} alt={'component'} /> */}
             </Center>
             <Center py={'4'} px={'4'} bg={useColorModeValue('gray.100', 'gray.200')} rounded={{ md: 'lg' }}>
-              {/* <Image width={'100%'} height={'100%'} src={'https://i.ibb.co/1ssst7F/6.png'} alt={'component'} /> */}
+              {/* <Image width={'100%'} height={'100%'} src={''} alt={'component'} /> */}
             </Center>
             <Center py={'4'} px={'4'} bg={useColorModeValue('gray.100', 'gray.200')} rounded={{ md: 'lg' }}>
-              {/* <Image width={'100%'} height={'100%'} src={'https://i.ibb.co/7zZQ9bJ/1.png'} alt={'component'} /> */}
+              {/* <Image width={'100%'} height={'100%'} src={''} alt={'component'} /> */}
             </Center>
             <Center py={'4'} px={'4'} bg={useColorModeValue('gray.100', 'gray.200')} rounded={{ md: 'lg' }}>
-              {/* <Image width={'100%'} height={'100%'} src={'https://i.ibb.co/JKZw7xM/4.png'} alt={'component'} /> */}
+              {/* <Image width={'100%'} height={'100%'} src={''} alt={'component'} /> */}
             </Center>
             <Center py={'4'} px={'4'} bg={useColorModeValue('gray.100', 'gray.200')} rounded={{ md: 'lg' }}>
-              {/* <Image width={'100%'} height={'100%'} src={'https://i.ibb.co/Pwp0Dbw/3.png'} alt={'component'} /> */}
+              {/* <Image width={'100%'} height={'100%'} src={''} alt={'component'} /> */}
             </Center>
           </SimpleGrid>
         </Box>
@@ -127,7 +127,7 @@ const IndexAbout = () => {
               </chakra.p>
             </Flex>
             <Avatar
-              src={"https://i.ibb.co/VxtywYk/1.jpg"}
+              src={""}
               height={'80px'}
               width={'80px'}
               alignSelf={'center'}
@@ -168,7 +168,7 @@ const IndexAbout = () => {
               </chakra.p>
             </Flex>
             <Avatar
-              src={"https://i.ibb.co/RQ5CZSm/2.jpg"}
+              src={""}
               height={'80px'}
               width={'80px'}
               alignSelf={'center'}
@@ -209,7 +209,7 @@ const IndexAbout = () => {
               </chakra.p>
             </Flex>
             <Avatar
-              src={"https://i.ibb.co/8BS5Ypr/3.jpg"}
+              src={""}
               height={'80px'}
               width={'80px'}
               alignSelf={'center'}
@@ -250,7 +250,7 @@ const IndexAbout = () => {
               </chakra.p>
             </Flex>
             <Avatar
-              src={"https://i.ibb.co/sHhSkjc/4.jpg"}
+              src={""}
               height={'80px'}
               width={'80px'}
               alignSelf={'center'}

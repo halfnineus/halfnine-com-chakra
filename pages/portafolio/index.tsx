@@ -2,6 +2,15 @@ import { Box, Link, Center, Heading, Image, SimpleGrid, Text, useColorModeValue 
 import Head from "next/head";
 import NextLink from "next/link";
 
+import img1 from '../../public/perma/1.png'
+import img2 from '../../public/perma/2.png'
+import img3 from '../../public/perma/3.png'
+import img4 from '../../public/perma/4.png'
+import img5 from '../../public/perma/5.png'
+import img6 from '../../public/perma/6.png'
+
+
+
 const IndexPortafolio = () => {
     return (
         <>
@@ -21,22 +30,22 @@ const IndexPortafolio = () => {
                         color={useColorModeValue('inherit', 'white')}
                     >
                         <Center py={'4'} px={'4'} bg={useColorModeValue('gray.100', 'gray.700')} rounded={{ md: 'lg' }}>
-                            <Image pointerEvents={"none"} width={'100%'} height={'100%'} src={'https://i.ibb.co/xsXw3WM/1.png'} alt={'component'} />
+                            <Image pointerEvents={"none"} width={'100%'} height={'100%'} src={img1.src} alt={'component'} />
                         </Center>
                         <Center py={'4'} px={'4'} bg={useColorModeValue('gray.100', 'gray.700')} rounded={{ md: 'lg' }}>
-                            <Image pointerEvents={"none"} width={'100%'} height={'100%'} src={'https://i.ibb.co/7QkQ2f5/2.png'} alt={'component'} />
+                            <Image pointerEvents={"none"} width={'100%'} height={'100%'} src={img2.src} alt={'component'} />
                         </Center>
                         <Center py={'4'} px={'4'} bg={useColorModeValue('gray.100', 'gray.700')} rounded={{ md: 'lg' }}>
-                            <Image pointerEvents={"none"} width={'100%'} height={'100%'} src={'https://i.ibb.co/THQpY8G/3.png'} alt={'component'} />
+                            <Image pointerEvents={"none"} width={'100%'} height={'100%'} src={img3.src} alt={'component'} />
                         </Center>
                         <Center py={'4'} px={'4'} bg={useColorModeValue('gray.100', 'gray.700')} rounded={{ md: 'lg' }}>
-                            <Image pointerEvents={"none"} width={'100%'} height={'100%'} src={'https://i.ibb.co/ZHCgLkT/4.png'} alt={'component'} />
+                            <Image pointerEvents={"none"} width={'100%'} height={'100%'} src={img4.src} alt={'component'} />
                         </Center>
                         <Center py={'4'} px={'4'} bg={useColorModeValue('gray.100', 'gray.700')} rounded={{ md: 'lg' }}>
-                            <Image pointerEvents={"none"} width={'100%'} height={'100%'} src={'https://i.ibb.co/6W1WQx5/5.png'} alt={'component'} />
+                            <Image pointerEvents={"none"} width={'100%'} height={'100%'} src={img5.src} alt={'component'} />
                         </Center>
                         <Center py={'4'} px={'4'} bg={useColorModeValue('gray.100', 'gray.700')} rounded={{ md: 'lg' }}>
-                            <Image pointerEvents={"none"} width={'100%'} height={'100%'} src={'https://i.ibb.co/Tqqz2d2/6.png'} alt={'component'} />
+                            <Image pointerEvents={"none"} width={'100%'} height={'100%'} src={img6.src} alt={'component'} />
                         </Center>
                     </SimpleGrid>
                     <Box padding={'4'} />

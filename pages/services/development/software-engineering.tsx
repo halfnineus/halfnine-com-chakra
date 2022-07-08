@@ -8,6 +8,7 @@ import {
     useColorModeValue as mode,
 } from '@chakra-ui/react'
 import Head from 'next/head'
+import devsrc from '../../../public/perma/Software-Engineering-Image-min.png'
 
 export default function SoftwareEngineering() {
     return (
@@ -54,7 +55,7 @@ export default function SoftwareEngineering() {
                                 zIndex="1"
                                 h={{ lg: '100%' }}
                                 objectFit="cover"
-                                src={`https://i.ibb.co/qp6syZQ/Software-Engineering-Image-min.png`}
+                                src={devsrc.src}
                                 alt="Screening talent"
                                 pointerEvents={"none"}
                             />

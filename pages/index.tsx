@@ -21,7 +21,7 @@ import {
 import { CheckIcon, CloseIcon } from '@chakra-ui/icons'
 import { HiChevronRight } from 'react-icons/hi'
 
-
+import ximg from '../public/perma/x.jpg'
 
 
 
@@ -94,7 +94,7 @@ const index: NextPage<Props> = () => {
             height="100%"
             width="100%"
             objectFit="cover"
-            src="https://i.ibb.co/y5b5V1C/1.jpg"
+            src={ximg.src}
             alt="Base"
           />
         </Box>
@@ -308,7 +308,7 @@ const index: NextPage<Props> = () => {
           <Box position="relative" w="full" h="full">
             <Img
               pointerEvents={"none"}
-              src="https://i.ibb.co/wCzzW7v/1.jpg"
+              src={1jpg.src}
               alt="Main Image"
               w="full"
               h="full"
