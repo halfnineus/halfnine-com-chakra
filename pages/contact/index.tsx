@@ -177,6 +177,21 @@ const INDEX = () => {
                                                         </Button>
                                                     </Link>
                                                 </NextLink>
+                                                <NextLink href={'https://duckduckgo.com/?q=Hong+Kong+SAR+China&iaxm=maps'} passHref>
+                                                    <Link isExternal>
+                                                        <Button
+                                                            size="md"
+                                                            height="48px"
+                                                            width="200px"
+                                                            variant="ghost"
+                                                            color={useColorModeValue('black', 'white')}
+                                                            _hover={{ border: '2px solid #1C6FEB' }}
+                                                            leftIcon={<MdLocationOn color={useColorModeValue('black', 'white')} size="20px" />}
+                                                        >
+                                                            Hong Kong SAR, China
+                                                        </Button>
+                                                    </Link>
+                                                </NextLink>
                                             </VStack>
                                         </Box>
                                     </Box>
@@ -186,16 +201,6 @@ const INDEX = () => {
                                         <Box w={{ sm: 'auto', md: 'auto', lg: '340px' }} m={8} color={useColorModeValue('black', 'white')}>
                                             <form /* action={'submit'} */ onSubmit={handleSubmit}>
                                                 <VStack spacing={5}>
-                                                    {/* {submittedmsg === true && (
-                                                        <FormControl isRequired >
-                                                            <Text pointerEvents="none" colorScheme={'green'} >Message sent! We will contact you shortly.</Text>
-                                                        </FormControl>
-                                                    )}
-                                                    {errormsg === true && (
-                                                        <FormControl isRequired >
-                                                            <Text pointerEvents="none" colorScheme={'red'} >Something went wrong while submitting the form, Please try again later.</Text>
-                                                        </FormControl>
-                                                    )} */}
                                                     <FormControl isRequired >
                                                         <FormLabel>Your Name</FormLabel>
                                                         <InputGroup>

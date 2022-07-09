@@ -1,34 +1,46 @@
 {
-    "posts": [
-      {
-        "locale": "en-US",
-        "title": "Sample Title For the First Blog Post in English",
-        "description": "This is the first blog post in English published on the blog",
-        "image": "https://source.unsplash.com/GnvurwJsKaY/1600x900"
-      },
-      {
-        "locale": "en-US",
-        "title": "Sample Title For the Second Blog Post in English",
-        "description": "This is the second blog post in English published on the blog",
-        "image": "https://source.unsplash.com/8XddFc6NkBY/1600x900"
-      },
-      {
-        "locale": "es-ES",
-        "title": "Título de ejemplo para la primera entrada en español del blog",
-        "description": "Esta es la primera entrada del blog en español publicada en el blog",
-        "image": "https://source.unsplash.com/0gkw_9fy0eQ/1600x900"
-      },
-      {
-        "locale": "es-ES",
-        "title": "Título de ejemplo para la segunda entrada en español del blog",
-        "description": "Esta es la segunda entrada del blog en español publicada en el blog",
-        "image": "https://source.unsplash.com/q10VITrVYUM/1600x900"
-      },
-      {
-        "locale": "it-IT",
-        "title": "Titolo di esempio per il primo post in italiano del blog",
-        "description": "Questo è il primo post in italiano pubblicato nel blog",
-        "image": "https://source.unsplash.com/xG8IQMqMITM/1600x900"
-      }
-    ]
-  }
+  "head": [
+    {
+      "locale": "en",
+      "intitle": "International Product Development, Design and Production - Ochoa",
+      "description": "Full-service product development with Ochoa, Providing services from software, hardware and mechanical engineering. And electronics manufacturing.",
+      "b1": "Full Service Product",
+      "b1p": "Development & Manufacturing",
+      "b1txt": "Ochoa offers Development Services provides end-to-end solutions for product development and design and manufacturing through our experts and professionals.",
+      "b1button": "Talk to an expert",
+      "b2h": "What we do.",
+      "b2txt": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.",
+      "b2i1": "Electronic Engineering",
+      "b2i1d": "Highly reliable innovative solutions that enable a digital transformation.",
+      "b2i2": "Software Engineering ",
+      "b2i2d": "Highly reliable product development and design on the latest technology.",
+      "b2i3": "Mechanical Engineering",
+      "b2i3d": "Take product ideas from concepts to working prototypes.",
+      "b2i4": "Product Design",
+      "b2i4d": "Innovative product design processes that bring ideas to life.",
+      "b2i5": "Electronics Manufacturing",
+      "b2i5d": "Electronics with quality that live up to the expectations of all customers."
+    },
+    {
+      "locale": "es",
+      "intitle": "Desarrollo Internacional de Productos, Diseño y Produccion - Ochoa",
+      "description": "Full-service product development with Ochoa, Providing services from software, hardware and mechanical engineering. And electronics manufacturing.",
+      "b1": "Servicio Completo de productos ",
+      "b1p": " Desarrollo & Fabricación",
+      "b1txt": "Ochoa ofrece Servicios de Desarrollo brinda soluciones integrales para el desarrollo y diseño de productos y fabricación a través de nuestros expertos y profesionales.",
+      "b1button": "Habla con un experto",
+      "b2h": "Que es lo que hacemos.",
+      "b2txt": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.",
+      "b2i1": "Ingeniería Electrónica",
+      "b2i1d": "Soluciones innovadoras de alta fiabilidad que permiten una transformación digital.",
+      "b2i2": "Ingeniería de software ",
+      "b2i2d": "Desarrollo y diseño de productos altamente confiables con las últimas tecnologías.",
+      "b2i3": "Ingeniería Mecánica",
+      "b2i3d": "Lleve las ideas de productos de conceptos a prototipos de trabajo.",
+      "b2i4": "Diseño de producto",
+      "b2i4d": "Procesos innovadores de diseño de productos que dan vida a las ideas.",
+      "b2i5": "Fabricación de productos electrónicos",
+      "b2i5d": "Electrónica con calidad a la altura de las expectativas de todos los clientes."
+    }
+  ]
+}
