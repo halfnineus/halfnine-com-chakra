@@ -19,6 +19,7 @@ import {
     Textarea,
     useColorModeValue,
     Link,
+    useToast,
 } from '@chakra-ui/react';
 
 import {
@@ -36,13 +37,20 @@ const INDEX = () => {
     const [message, setMessage] = useState('');
 
     const [submitted, setSubmitted] = useState(false)
-    const [submittedmsg, setSubmittedmsg] = useState(false)
-    const [errormsg, setErrormsg] = useState(false)
+
+    const toast = useToast({
+        position: 'bottom-right',
+        containerStyle: { width: 'auto', maxWidth: '100%', paddingBottom: 'auto' },
+    })
 
     const handleSubmit = (e: any) => {
         if ((name === "") || (email === "") || (message === "")) {
-            setErrormsg(true)
-            setSubmittedmsg(false)
+            toast.closeAll();
+            toast({
+                description: 'Something went wrong while submitting the form, Please try again later.',
+                isClosable: true,
+                status: 'error',
+            })
         } else {
             e.preventDefault()
             let data = {
@@ -63,13 +71,22 @@ const INDEX = () => {
                 if (res.status === 200) {
                     console.log('Response succeeded!')
                 } else {
-                    setErrormsg(true)
+                    toast.closeAll();
+                    toast({
+                        description: 'Something went wrong while submitting the form, Please try again later.',
+                        isClosable: true,
+                        status: 'error',
+                    })
                 }
-                setErrormsg(false)
-
-                setSubmittedmsg(true)
 
                 setSubmitted(false)
+                toast.closeAll();
+                toast({
+                    description: 'Message sent! We will contact you shortly.',
+                    isClosable: true,
+                    status: 'success',
+                    containerStyle: { width: 'auto', maxWidth: '100%', paddingBottom: 'auto' }
+                })
             })
         }
 
@@ -169,7 +186,7 @@ const INDEX = () => {
                                         <Box w={{ sm: 'auto', md: 'auto', lg: '340px' }} m={8} color={useColorModeValue('black', 'white')}>
                                             <form /* action={'submit'} */ onSubmit={handleSubmit}>
                                                 <VStack spacing={5}>
-                                                    {submittedmsg === true && (
+                                                    {/* {submittedmsg === true && (
                                                         <FormControl isRequired >
                                                             <Text pointerEvents="none" colorScheme={'green'} >Message sent! We will contact you shortly.</Text>
                                                         </FormControl>
@@ -178,7 +195,7 @@ const INDEX = () => {
                                                         <FormControl isRequired >
                                                             <Text pointerEvents="none" colorScheme={'red'} >Something went wrong while submitting the form, Please try again later.</Text>
                                                         </FormControl>
-                                                    )}
+                                                    )} */}
                                                     <FormControl isRequired >
                                                         <FormLabel>Your Name</FormLabel>
                                                         <InputGroup>

@@ -37,7 +37,7 @@ const MobileNavContext = (props: FlexProps) => {
         </Box>
         <NextLink href={'/'} passHref>
           <Link display="flex" alignItems="center">
-            <Image pointerEvents={"none"} width={'100%'} height={'8'} src={mode(smlog.src, wsmlog.src)} alt={'Ochoa'} />
+            <Image pointerEvents={"none"} width={'auto'} height={'8'} src={mode(smlog.src, wsmlog.src)} alt={'Ochoa'} />
           </Link>
         </NextLink>
         <Box visibility={{ base: 'hidden', sm: 'visible' }}>
@@ -77,7 +77,7 @@ const DesktopNavContent = (props: FlexProps) => {
     <Flex className="nav-content__desktop" align="center" justify="space-between" {...props}>
       <NextLink href={'/'} passHref>
         <Link display="flex" alignItems="center">
-          <Image pointerEvents={"none"} width={'100%'} height={'10'} src={mode(smlog.src, wsmlog.src)} alt={'Ochoa'} />
+          <Image onClick={() => router.push('/')} cursor={'pointer'} pointerEvents={'none'} width={'auto'} height={'10'} src={mode(smlog.src, wsmlog.src)} alt={'Ochoa'} />
         </Link>
       </NextLink>
       <HStack as="ul" id="nav__primary-menu" aria-label="Main Menu" listStyleType="none">

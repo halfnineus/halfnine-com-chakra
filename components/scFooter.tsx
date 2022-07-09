@@ -16,7 +16,7 @@ import wsmlog from '../public/img/wsmlog.png'
 const Logo = () => {
     return (
         <>
-            <Image alt={'Ochoa'} pointerEvents={'none'} width={'100%'} height={'8'} src={useColorModeValue(smlog.src, wsmlog.src)} />
+            <Image alt={'Ochoa'} pointerEvents={'none'} width={'auto'} height={'8'} src={useColorModeValue(smlog.src, wsmlog.src)} />
         </>
     );
 };

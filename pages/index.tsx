@@ -109,7 +109,7 @@ const index: NextPage<Props> = () => {
       <Box p={4}>
         <Stack spacing={5} as={Container} maxW={'3xl'} textAlign={'center'}>
           <Heading pointerEvents={'none'} fontSize={'3xl'}>What we do.</Heading>
-          <Text color={mode('gray.600', 'gray.400')} fontSize={'xl'}>
+          <Text pointerEvents={'none'} color={mode('gray.600', 'gray.400')} fontSize={'xl'}>
             Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
             nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
             sed diam voluptua.
@@ -123,7 +123,7 @@ const index: NextPage<Props> = () => {
               </Box>
               <VStack align={'start'}>
                 <NextLink href={'/services/development/electronic-engineering'} passHref>
-                  <Link>
+                  <Link _hover={{ color: 'blue.500' }}>
                     <Text fontWeight={600}>
                       Electronic Engineering
                     </Text>
@@ -140,7 +140,7 @@ const index: NextPage<Props> = () => {
               </Box>
               <VStack align={'start'}>
                 <NextLink href={'/services/development/software-engineering'} passHref>
-                  <Link>
+                  <Link _hover={{ color: 'blue.500' }}>
                     <Text fontWeight={600}>
                       Software Engineering
                     </Text>
@@ -157,7 +157,7 @@ const index: NextPage<Props> = () => {
               </Box>
               <VStack align={'start'}>
                 <NextLink href={'/services/development/mechanical-engineering'} passHref>
-                  <Link>
+                  <Link _hover={{ color: 'blue.500' }}>
                     <Text fontWeight={600}>
                       Mechanical Engineering
                     </Text>
@@ -176,7 +176,7 @@ const index: NextPage<Props> = () => {
               </Box>
               <VStack align={'start'}>
                 <NextLink href={'/services/development/product-design'} passHref>
-                  <Link>
+                  <Link _hover={{ color: 'blue.500' }}>
                     <Text fontWeight={600}>
                       Product Design
                     </Text>
@@ -206,7 +206,7 @@ const index: NextPage<Props> = () => {
               </Box>
               <VStack align={'start'}>
                 <NextLink href={'/services/manufacturing'} passHref>
-                  <Link>
+                  <Link _hover={{ color: 'blue.500' }}>
                     <Text fontWeight={600}>
                       Electronics Manufacturing
                     </Text>
