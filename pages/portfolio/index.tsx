@@ -11,7 +11,7 @@ import img6 from '../../public/perma/6.png'
 
 
 
-const IndexPortafolio = () => {
+const IndexPortfolio = () => {
     return (
         <>
             <Head>
@@ -58,4 +58,4 @@ const IndexPortafolio = () => {
     );
 }
 
-export default IndexPortafolio;
+export default IndexPortfolio;

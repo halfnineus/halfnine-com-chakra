@@ -1,4 +1,7 @@
 import {
+  Center,
+  chakra,
+  VisuallyHidden,
   Box,
   Button,
   Flex,
@@ -13,11 +16,7 @@ import {
   Text,
 } from '@chakra-ui/react'
 import NextLink from 'next/link'
-import * as React from 'react'
-import { NavLink } from './NavLink'
-import { NavMenu } from './NavMenu'
-import { Submenu } from './Submenu'
-import { ToggleButton } from './ToggleButton'
+import { Submenu, NavMenu, NavLink } from './Submenu'
 import { links } from './_data'
 
 import { AiOutlineMenu } from 'react-icons/ai'
@@ -26,6 +25,71 @@ import { FaMoon, FaSun } from 'react-icons/fa'
 import smlog from '../../public/img/smlog.png'
 import wsmlog from '../../public/img/wsmlog.png'
 import { useRouter } from 'next/router'
+
+
+// ToggleButton
+const Bar = chakra('span', {
+  baseStyle: {
+    display: 'block',
+    pos: 'absolute',
+    w: '1.25rem',
+    h: '0.125rem',
+    rounded: 'full',
+    bg: 'currentcolor',
+    mx: 'auto',
+    insetStart: '0.125rem',
+    transition: 'all 0.12s',
+  },
+})
+
+const ToggleIcon = (props: { active: boolean }) => {
+  const { active } = props
+  return (
+    <Box
+      className="group"
+      data-active={active ? '' : undefined}
+      as="span"
+      display="block"
+      w="1.5rem"
+      h="1.5rem"
+      pos="relative"
+      aria-hidden
+      pointerEvents="none"
+    >
+      <Bar top="0.4375rem" _groupActive={{ top: '0.6875rem', transform: 'rotate(45deg)' }} />
+      <Bar bottom="0.4375rem" _groupActive={{ bottom: '0.6875rem', transform: 'rotate(-45deg)' }} />
+    </Box>
+  )
+}
+
+interface ToggleButtonProps {
+  isOpen: boolean
+  onClick(): void
+}
+
+export const ToggleButton = (props: ToggleButtonProps) => {
+  const { isOpen, onClick } = props
+  return (
+    <Center
+      marginStart="-6"
+      px="4"
+      py="4"
+      as="button"
+      color="gray.400"
+      _active={{ color: 'blue.600' }}
+      onClick={onClick}
+    >
+      <ToggleIcon active={isOpen} />
+      <VisuallyHidden>Toggle Menu</VisuallyHidden>
+    </Center>
+  )
+}
+
+// end ToggleButton
+
+
+
+
 
 const MobileNavContext = (props: FlexProps) => {
   const { isOpen, onToggle } = useDisclosure()
@@ -37,7 +101,7 @@ const MobileNavContext = (props: FlexProps) => {
         </Box>
         <NextLink href={'/'} passHref>
           <Link display="flex" alignItems="center">
-            <Image pointerEvents={"none"} width={'auto'} height={'8'} src={mode(smlog.src, wsmlog.src)} alt={'Ochoa'} />
+            <Image loading={"eager"} pointerEvents={"none"} width={'auto'} height={'8'} src={mode(smlog.src, wsmlog.src)} alt={'log.ochoa'} />
           </Link>
         </NextLink>
         <Box visibility={{ base: 'hidden', sm: 'visible' }}>
@@ -77,7 +141,7 @@ const DesktopNavContent = (props: FlexProps) => {
     <Flex className="nav-content__desktop" align="center" justify="space-between" {...props}>
       <NextLink href={'/'} passHref>
         <Link display="flex" alignItems="center">
-          <Image onClick={() => router.push('/')} cursor={'pointer'} pointerEvents={'none'} width={'auto'} height={'10'} src={mode(smlog.src, wsmlog.src)} alt={'Ochoa'} />
+          <Image loading={"eager"} cursor={'pointer'} pointerEvents={'none'} width={'auto'} height={'10'} src={mode(smlog.src, wsmlog.src)} alt={'Ochoa'} />
         </Link>
       </NextLink>
       <HStack as="ul" id="nav__primary-menu" aria-label="Main Menu" listStyleType="none">
@@ -92,13 +156,9 @@ const DesktopNavContent = (props: FlexProps) => {
         ))}
       </HStack>
       <HStack spacing="4" >
-        <NextLink href={'/contact'} passHref>
-          <Link>
-            <Button colorScheme="blue" fontWeight="bold">
-              Contact Us
-            </Button>
-          </Link>
-        </NextLink>
+        <Button colorScheme="blue" fontWeight="bold" onClick={() => router.push('/contact')}>
+          Contact Us
+        </Button>
         <IconButton
           size="md"
           fontSize="lg"

@@ -173,7 +173,7 @@ const INDEX = () => {
                                                             _hover={{ border: '2px solid #1C6FEB' }}
                                                             leftIcon={<MdLocationOn color={useColorModeValue('black', 'white')} size="20px" />}
                                                         >
-                                                            Orlando, Florida
+                                                            Orlando, Florida, USA
                                                         </Button>
                                                     </Link>
                                                 </NextLink>

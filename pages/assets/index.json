@@ -1,46 +1,58 @@
 {
-  "head": [
+  "data": [
     {
       "locale": "en",
-      "intitle": "International Product Development, Design and Production - Ochoa",
-      "description": "Full-service product development with Ochoa, Providing services from software, hardware and mechanical engineering. And electronics manufacturing.",
-      "b1": "Full Service Product",
-      "b1p": "Development & Manufacturing",
-      "b1txt": "Ochoa offers Development Services provides end-to-end solutions for product development and design and manufacturing through our experts and professionals.",
-      "b1button": "Talk to an expert",
-      "b2h": "What we do.",
-      "b2txt": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.",
-      "b2i1": "Electronic Engineering",
-      "b2i1d": "Highly reliable innovative solutions that enable a digital transformation.",
-      "b2i2": "Software Engineering ",
-      "b2i2d": "Highly reliable product development and design on the latest technology.",
-      "b2i3": "Mechanical Engineering",
-      "b2i3d": "Take product ideas from concepts to working prototypes.",
-      "b2i4": "Product Design",
-      "b2i4d": "Innovative product design processes that bring ideas to life.",
-      "b2i5": "Electronics Manufacturing",
-      "b2i5d": "Electronics with quality that live up to the expectations of all customers."
+      "head": {
+        "title": "International Product Development, Design and Production - Ochoa",
+        "description": "Full-service product development with Ochoa, Providing services from software, hardware and mechanical engineering. And electronics manufacturing."
+      },
+      "block1": {
+        "h1_1": "Agile Automation",
+        "h1_2": "Development & Manufacturing",
+        "txt": "Ochoa offers Agile Automation services and  provides end-to-end solutions for product development, design and manufacturing through our experts and professionals.",
+        "button": "Talk to an expert"
+      },
+      "block2": {
+        "h2": "Our Solutions.",
+        "txt": "Every area that we work on brings its own challenges and requires teams with assortment of specializations to turn ideas into solutions.",
+        "item1": "Electronic Engineering",
+        "item1d": "Reliable and innovative solutions that enable a digital transformation.",
+        "item2": "Software Engineering",
+        "item2d": "Reliable product development and design on the latest technology.",
+        "item3": "Mechanical Engineering",
+        "item3d": "Take product ideas from concepts to working prototypes.",
+        "item4": "Product Design",
+        "item4d": "Innovative product design processes that bring ideas to life.",
+        "item5": "Electronics Manufacturing",
+        "item5d": "Electronics with quality that live up to the expectations of all customers."
+      }
     },
     {
       "locale": "es",
-      "intitle": "Desarrollo Internacional de Productos, Diseño y Produccion - Ochoa",
-      "description": "Full-service product development with Ochoa, Providing services from software, hardware and mechanical engineering. And electronics manufacturing.",
-      "b1": "Servicio Completo de productos ",
-      "b1p": " Desarrollo & Fabricación",
-      "b1txt": "Ochoa ofrece Servicios de Desarrollo brinda soluciones integrales para el desarrollo y diseño de productos y fabricación a través de nuestros expertos y profesionales.",
-      "b1button": "Habla con un experto",
-      "b2h": "Que es lo que hacemos.",
-      "b2txt": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.",
-      "b2i1": "Ingeniería Electrónica",
-      "b2i1d": "Soluciones innovadoras de alta fiabilidad que permiten una transformación digital.",
-      "b2i2": "Ingeniería de software ",
-      "b2i2d": "Desarrollo y diseño de productos altamente confiables con las últimas tecnologías.",
-      "b2i3": "Ingeniería Mecánica",
-      "b2i3d": "Lleve las ideas de productos de conceptos a prototipos de trabajo.",
-      "b2i4": "Diseño de producto",
-      "b2i4d": "Procesos innovadores de diseño de productos que dan vida a las ideas.",
-      "b2i5": "Fabricación de productos electrónicos",
-      "b2i5d": "Electrónica con calidad a la altura de las expectativas de todos los clientes."
+      "title": {
+        "intitle": "Desarrollo Internacional de Productos, Diseño y Produccion - Ochoa",
+        "description": "Full-service product development with Ochoa, Providing services from software, hardware and mechanical engineering. And electronics manufacturing."
+      },
+      "block1": {
+        "h1_1": "Automatización Ágil",
+        "h1_2": "Desarrollo & Fabricación",
+        "txt": "Ochoa ofrece servicios de Automatización Ágil y brinda soluciónes funcionales para el desarrollo, diseño y fabricación de productos a través de nuestros expertos y profesionales.",
+        "button": "Habla con un experto"
+      },
+      "block2": {
+        "h2": "Que es lo que hacemos.",
+        "txt": "Cada área en la que trabajamos trae sus propios desafíos y requiere equipos y una variedad de especializaciones para convertir ideas en soluciones.",
+        "item1": "Ingeniería Electrónica",
+        "item1d": "Soluciones innovadoras de alta fiabilidad que permiten una transformación digital.",
+        "item2": "Ingeniería de software",
+        "item2d": "Desarrollo y diseño de productos altamente confiables con las últimas tecnologías.",
+        "item3": "Ingeniería Mecánica",
+        "item3d": "Lleve las ideas de productos de conceptos a prototipos que funcionan.",
+        "item4": "Diseño de producto",
+        "item4d": "Procesos innovadores de diseño de productos que dan vida a las ideas.",
+        "item5": "Fabricación de productos electrónicos",
+        "item5d": "Electrónica con calidad a la altura de las expectativas de todos los clientes."
+      }
     }
   ]
 }
