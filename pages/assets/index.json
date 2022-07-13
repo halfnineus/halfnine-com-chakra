@@ -1,34 +1,58 @@
 {
-    "posts": [
-      {
-        "locale": "en-US",
-        "title": "Sample Title For the First Blog Post in English",
-        "description": "This is the first blog post in English published on the blog",
-        "image": "https://source.unsplash.com/GnvurwJsKaY/1600x900"
+  "data": [
+    {
+      "locale": "en",
+      "head": {
+        "title": "International Product Development, Design and Production - Ochoa",
+        "description": "Full-service product development with Ochoa, Providing services from software, hardware and mechanical engineering. And electronics manufacturing."
       },
-      {
-        "locale": "en-US",
-        "title": "Sample Title For the Second Blog Post in English",
-        "description": "This is the second blog post in English published on the blog",
-        "image": "https://source.unsplash.com/8XddFc6NkBY/1600x900"
+      "block1": {
+        "h1_1": "Agile Automation",
+        "h1_2": "Development & Manufacturing",
+        "txt": "Ochoa offers Agile Automation services and  provides end-to-end solutions for product development, design and manufacturing through our experts and professionals.",
+        "button": "Talk to an expert"
       },
-      {
-        "locale": "es-ES",
-        "title": "Título de ejemplo para la primera entrada en español del blog",
-        "description": "Esta es la primera entrada del blog en español publicada en el blog",
-        "image": "https://source.unsplash.com/0gkw_9fy0eQ/1600x900"
-      },
-      {
-        "locale": "es-ES",
-        "title": "Título de ejemplo para la segunda entrada en español del blog",
-        "description": "Esta es la segunda entrada del blog en español publicada en el blog",
-        "image": "https://source.unsplash.com/q10VITrVYUM/1600x900"
-      },
-      {
-        "locale": "it-IT",
-        "title": "Titolo di esempio per il primo post in italiano del blog",
-        "description": "Questo è il primo post in italiano pubblicato nel blog",
-        "image": "https://source.unsplash.com/xG8IQMqMITM/1600x900"
+      "block2": {
+        "h2": "Our Solutions.",
+        "txt": "Every area that we work on brings its own challenges and requires teams with assortment of specializations to turn ideas into solutions.",
+        "item1": "Electronic Engineering",
+        "item1d": "Reliable and innovative solutions that enable a digital transformation.",
+        "item2": "Software Engineering",
+        "item2d": "Reliable product development and design on the latest technology.",
+        "item3": "Mechanical Engineering",
+        "item3d": "Take product ideas from concepts to working prototypes.",
+        "item4": "Product Design",
+        "item4d": "Innovative product design processes that bring ideas to life.",
+        "item5": "Electronics Manufacturing",
+        "item5d": "Electronics with quality that live up to the expectations of all customers."
       }
-    ]
-  }
+    },
+    {
+      "locale": "es",
+      "title": {
+        "intitle": "Desarrollo Internacional de Productos, Diseño y Produccion - Ochoa",
+        "description": "Full-service product development with Ochoa, Providing services from software, hardware and mechanical engineering. And electronics manufacturing."
+      },
+      "block1": {
+        "h1_1": "Automatización Ágil",
+        "h1_2": "Desarrollo & Fabricación",
+        "txt": "Ochoa ofrece servicios de Automatización Ágil y brinda soluciónes funcionales para el desarrollo, diseño y fabricación de productos a través de nuestros expertos y profesionales.",
+        "button": "Habla con un experto"
+      },
+      "block2": {
+        "h2": "Que es lo que hacemos.",
+        "txt": "Cada área en la que trabajamos trae sus propios desafíos y requiere equipos y una variedad de especializaciones para convertir ideas en soluciones.",
+        "item1": "Ingeniería Electrónica",
+        "item1d": "Soluciones innovadoras de alta fiabilidad que permiten una transformación digital.",
+        "item2": "Ingeniería de software",
+        "item2d": "Desarrollo y diseño de productos altamente confiables con las últimas tecnologías.",
+        "item3": "Ingeniería Mecánica",
+        "item3d": "Lleve las ideas de productos de conceptos a prototipos que funcionan.",
+        "item4": "Diseño de producto",
+        "item4d": "Procesos innovadores de diseño de productos que dan vida a las ideas.",
+        "item5": "Fabricación de productos electrónicos",
+        "item5d": "Electrónica con calidad a la altura de las expectativas de todos los clientes."
+      }
+    }
+  ]
+}

@@ -3,57 +3,57 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://ochoa.pro/</loc>
-    <lastmod>2022-07-07</lastmod>
+    <lastmod>2022-07-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://ochoa.pro/" />
     <xhtml:link rel="alternate" hreflang="es" href="https://ochoa.pro/es/" />
   </url>
   <url>
-    <loc>https://ochoa.pro/portafolio</loc>
-    <lastmod>2022-07-07</lastmod>
+    <loc>https://ochoa.pro/portfolio</loc>
+    <lastmod>2022-07-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://ochoa.pro/about</loc>
-    <lastmod>2022-07-07</lastmod>
+    <lastmod>2022-07-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <!-- <url>
       <loc>https://ochoa.pro/contact</loc>
-      <lastmod>2022-07-07</lastmod>
+      <lastmod>2022-07-11</lastmod>
       <changefreq>weekly</changefreq>
       <priority>1.0</priority>
 </url> -->
   <url>
     <loc>https://ochoa.pro/services/development/electronic-engineering</loc>
-    <lastmod>2022-07-07</lastmod>
+    <lastmod>2022-07-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://ochoa.pro/services/development/software-engineering</loc>
-    <lastmod>2022-07-07</lastmod>
+    <lastmod>2022-07-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://ochoa.pro/services/development/mechanical-engineering</loc>
-    <lastmod>2022-07-07</lastmod>
+    <lastmod>2022-07-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://ochoa.pro/services/development/product-design</loc>
-    <lastmod>2022-07-07</lastmod>
+    <lastmod>2022-07-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://ochoa.pro/services/manufacturing/</loc>
-    <lastmod>2022-07-07</lastmod>
+    <lastmod>2022-07-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>

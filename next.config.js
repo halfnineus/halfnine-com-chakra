@@ -28,14 +28,14 @@ module.exports = {
     locales: ["en", "es"],
     //  default locale used when the non-locale paths are visited
     defaultLocale: "en",
+    // locale detection true by default
+    // localeDetection: true,
   },
+  trailingSlash: true,
 
-  // i18n: {
-  //   // providing the locales supported by your application
-  //   locales: ["en", "es", "zh-CN", "zh-CN", "ru", "fr", "id", "de", "pt", "it", "ja", "hi", "ar","bn"],
-  //   //  default locale used when the non-locale paths are visited
-  //   defaultLocale: "en-US",
-  // },
+  // Langs to add
+  //  "zh-Hans", "zh-Hant", "ru", "fr", "id", "de", "pt", "it", "ja", "hi", "ar", "bn"
+
 
   // nextConfig,
   experimental: {
