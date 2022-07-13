@@ -1,6 +1,5 @@
-import { Box, Link, Center, Heading, Image, SimpleGrid, Text, useColorModeValue } from "@chakra-ui/react";
-import Head from "next/head";
-import NextLink from "next/link";
+import { Box, Link, Center, Heading, Image, SimpleGrid, Text, useColorModeValue } from "@chakra-ui/react"
+import Head from "next/head"
 
 import img1 from '../../public/perma/1.png'
 import img2 from '../../public/perma/2.png'

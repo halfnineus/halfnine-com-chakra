@@ -1,4 +1,4 @@
-import Head from "next/head";
+import Head from "next/head"
 import NextLink from "next/link"
 
 import {
@@ -28,8 +28,8 @@ import {
     MdOutlineEmail,
 } from 'react-icons/md';
 
-import { BsPerson } from 'react-icons/bs';
-import { useState } from "react";
+import { BsPerson } from 'react-icons/bs'
+import { useState } from "react"
 
 const INDEX = () => {
     const [name, setName] = useState('');
