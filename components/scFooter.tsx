@@ -53,12 +53,12 @@ export default function SCFooter() {
                                     Home
                                 </Link>
                             </NextLink>
-                            <NextLink href={'/about'} passHref>
+                            <NextLink href={'/about/'} passHref>
                                 <Link>
                                     About Us
                                 </Link>
                             </NextLink>
-                            <NextLink href={'/contact'} passHref>
+                            <NextLink href={'/contact/'} passHref>
                                 <Link>
                                     Contact
                                 </Link>

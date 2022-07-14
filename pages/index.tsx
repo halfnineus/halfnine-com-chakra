@@ -54,7 +54,7 @@ const IndexPag: NextPage<Props> = () => {
               as="section"
               pb="24"
               pos="relative"
-              px={{ base: '6', lg: '12' }}
+              px={{ base: '6', lg: '16' }}
             >
               <Box maxW={"100%"} mx="auto">
                 <Box
@@ -73,7 +73,7 @@ const IndexPag: NextPage<Props> = () => {
                   </Text>
                   <Stack direction={{ base: 'column', sm: 'row' }} spacing="4" mt="8">
                     <Button
-                      onClick={() => router.push('/contact')}
+                      onClick={() => router.push('/contact/')}
                       size="lg"
                       colorScheme="blue"
                       height="14"
@@ -105,7 +105,9 @@ const IndexPag: NextPage<Props> = () => {
                   src={ximg.src}
                   alt="Base" />
               </Box>
-            </Box><Box minH={{ base: 'none', md: 'none', lg: '4rem', }} /><Box p={4}>
+            </Box>
+            <Box minH={{ base: 'none', md: 'none', lg: '4rem', }} />
+            <Box p={4}>
               <Stack spacing={5} as={Container} maxW={'3xl'} textAlign={'center'}>
                 <Heading pointerEvents={'none'} fontSize={'3xl'}>
                   {indexData.block2.h2}
@@ -121,7 +123,7 @@ const IndexPag: NextPage<Props> = () => {
                       <Icon as={CheckIcon} />
                     </Box>
                     <VStack align={'start'}>
-                      <NextLink href={'/services/development/electronic-engineering'} passHref>
+                      <NextLink href={'/services/development/electronic-engineering/'} passHref>
                         <Link _hover={{ color: 'blue.500' }}>
                           <Text fontWeight={600}>
                             {indexData.block2.item1}
@@ -138,7 +140,7 @@ const IndexPag: NextPage<Props> = () => {
                       <Icon as={CheckIcon} />
                     </Box>
                     <VStack align={'start'}>
-                      <NextLink href={'/services/development/software-engineering'} passHref>
+                      <NextLink href={'/services/development/software-engineering/'} passHref>
                         <Link _hover={{ color: 'blue.500' }}>
                           <Text fontWeight={600}>
                             {indexData.block2.item2}
@@ -155,7 +157,7 @@ const IndexPag: NextPage<Props> = () => {
                       <Icon as={CheckIcon} />
                     </Box>
                     <VStack align={'start'}>
-                      <NextLink href={'/services/development/mechanical-engineering'} passHref>
+                      <NextLink href={'/services/development/mechanical-engineering/'} passHref>
                         <Link _hover={{ color: 'blue.500' }}>
                           <Text fontWeight={600}>
                             {indexData.block2.item3}
@@ -174,7 +176,7 @@ const IndexPag: NextPage<Props> = () => {
                       <Icon as={CheckIcon} />
                     </Box>
                     <VStack align={'start'}>
-                      <NextLink href={'/services/development/product-design'} passHref>
+                      <NextLink href={'/services/development/product-design/'} passHref>
                         <Link _hover={{ color: 'blue.500' }}>
                           <Text fontWeight={600}>
                             {indexData.block2.item4}
@@ -191,7 +193,7 @@ const IndexPag: NextPage<Props> = () => {
                       <Icon as={CheckIcon} />
                     </Box>
                     <VStack align={'start'}>
-                      <NextLink href={'/services/manufacturing'} passHref>
+                      <NextLink href={'/services/manufacturing/'} passHref>
                         <Link _hover={{ color: 'blue.500' }}>
                           <Text fontWeight={600}>
                             {indexData.block2.item5}
@@ -211,7 +213,7 @@ const IndexPag: NextPage<Props> = () => {
 
 
 
-            <Box px={8} py={24} mx="auto">
+            <Box px={8} pb={24} pt={14} mx="auto">
               <Box
                 w={{
                   base: "full",
@@ -236,14 +238,10 @@ const IndexPag: NextPage<Props> = () => {
                     base: "normal",
                     md: "tight",
                   }}
-                  color="gray.900"
-                  _dark={{
-                    color: "gray.100",
-                  }}
+                  color={mode('gray.900', 'gray.100')}
                   pointerEvents={"none"}
                 >
                   All your needs in a{" "}
-
                   <Text
                     display={{
                       base: "block",
@@ -268,12 +266,9 @@ const IndexPag: NextPage<Props> = () => {
                     base: "lg",
                     md: "xl",
                   }}
-                  color="gray.600"
-                  _dark={{
-                    color: "gray.300",
-                  }}
+                  color={mode("gray.600", "gray.300")}
                 >
-                  Dont know where to start? Companies often have small needs
+                  Don't know where to start? Companies often have small needs
                   in terms of their Technology and can use already-built applications.
                   But we are here for those who need more.
                 </chakra.p>
@@ -305,7 +300,7 @@ const IndexPag: NextPage<Props> = () => {
                     size="lg"
                     cursor="pointer"
                     rightIcon={<AiOutlineCalendar />}
-                    onClick={() => router.push('/contact')}
+                    onClick={() => router.push('/contact/')}
                   >
                     Schedule a Meeting
                   </Button>
@@ -340,13 +335,13 @@ const IndexPag: NextPage<Props> = () => {
 
 
             <Flex
-              pb={20}
-              px={8}
+              pb={8}
+              px={6}
               w="auto"
               justifyContent="center"
               alignItems="center"
             >
-              <Box py={12} px={6} bg={mode('gray.50', 'gray.700')} rounded="xl">
+              <Box py={8} px={6} bg={mode('gray.50', 'gray.700')} rounded="xl">
                 <Box maxW="7xl" mx="auto" px={{ base: 4, lg: 8 }}>
                   <Box textAlign={{ lg: "center" }}>
                     <chakra.h2
@@ -375,7 +370,8 @@ const IndexPag: NextPage<Props> = () => {
                       color="gray.500"
                       pointerEvents={'none'}
                     >
-                      Our solutions help all kind of industries and companies who want to work
+
+                      Our solutions help All industries and companies who want to work
                       with Technology that meets their specific needs, ideas and achieve goals.
                     </chakra.p>
                   </Box>
@@ -409,10 +405,11 @@ const IndexPag: NextPage<Props> = () => {
                           </chakra.dt>
                           <chakra.dd mt={2} color="gray.500"
                           >
-                            {"Lorem ipsum, dolor sit amet consectetur adipisicing elit."}
+                            {"Manufacturing and Processing becomes complex with scale."}
                           </chakra.dd>
                         </Box>
                       </Flex>
+
                       <Flex>
                         <Icon
                           boxSize={12}
@@ -590,7 +587,76 @@ const IndexPag: NextPage<Props> = () => {
                       </Flex>
                     </Stack>
                   </Box>
+                  <Box textAlign={{ lg: "center" }}>
+                    <chakra.h2
+                      pt={{ base: '2', lg: '4' }}
+                      color="gray.500"
+                      fontSize={'xl'}
+                      letterSpacing="wide"
+                      pointerEvents={'none'}
+                    >
+                      And more...
+                    </chakra.h2>
+                  </Box>
                 </Box>
+              </Box>
+            </Flex>
+
+
+
+
+
+            <Flex justify="center" w="full">
+              <Box
+                bg={mode('gray.50', 'gray.700')}
+                w={{ base: "full", md: "75%", lg: "50%" }}
+                rounded={20}
+                px={6}
+                pt={6}
+                mt={4}
+                pb={8}
+                mb={12}
+                textAlign={{ base: "left", md: "center" }}
+              >
+                <chakra.span
+                  fontSize={{ base: "3xl", sm: "4xl" }}
+                  fontWeight="extrabold"
+                  letterSpacing="tight"
+                  lineHeight="shorter"
+                >
+                  <chakra.span pointerEvents={'none'} display="block">Ready to dive in?</chakra.span>
+                  <chakra.span
+                    pointerEvents={'none'}
+                    display="block"
+                    pb={2}
+                  >
+                    Request a prototype today.
+                  </chakra.span>
+                </chakra.span>
+                <Stack
+                  justifyContent={{ base: "left", md: "center" }}
+                  direction={{ base: "column", sm: "row" }}
+                  spacing={2}
+                  mt={2}
+                >
+                  <Box display="inline-flex" rounded="md" shadow="md">
+                    <Button
+                      w="full"
+                      display="inline-flex"
+                      alignItems="center"
+                      justifyContent="center"
+                      px={5}
+                      py={5}
+                      border="solid transparent"
+                      fontWeight="bold"
+                      rounded="md"
+                      colorScheme={'blue'}
+                      onClick={() => router.push('/contact/')}
+                    >
+                      Get started
+                    </Button>
+                  </Box>
+                </Stack>
               </Box>
             </Flex>
           </>

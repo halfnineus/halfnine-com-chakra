@@ -6,22 +6,25 @@ module.exports = {
   // async redirects() {
   //   return [
   //     {
-  //       source: '/services',
+  //       source: '/services/',
   //       destination: '/',
   //       permanent: true,
   //     },
   //     {
-  //       source: '/services/development',
+  //       source: '/services/development/',
   //       destination: '/',
   //       permanent: true,
   //     },
   //     // {
-  //     //   source: '/services/manufacturing',
+  //     //   source: '/services/manufacturing/',
   //     //   destination: '/',
   //     //   permanent: true,
   //     // },
   //   ];
   // },
+  images: {
+    domains: ['external-content.duckduckgo.com'],
+  },
   reactStrictMode: true,
   i18n: {
     // providing the locales supported the application

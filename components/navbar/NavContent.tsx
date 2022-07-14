@@ -105,7 +105,7 @@ const MobileNavContext = (props: FlexProps) => {
           </Link>
         </NextLink>
         <Box visibility={{ base: 'hidden', sm: 'visible' }}>
-          <NextLink href={'/contact'} passHref>
+          <NextLink href={'/contact/'} passHref>
             <Link>
               <Button fontWeight="bold">
                 Contact Us
@@ -156,7 +156,7 @@ const DesktopNavContent = (props: FlexProps) => {
         ))}
       </HStack>
       <HStack spacing="4" >
-        <Button colorScheme="blue" fontWeight="bold" onClick={() => router.push('/contact')}>
+        <Button colorScheme="blue" fontWeight="bold" onClick={() => router.push('/contact/')}>
           Contact Us
         </Button>
         <IconButton
