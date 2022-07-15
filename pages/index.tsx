@@ -32,7 +32,7 @@ import { GiProtectionGlasses } from 'react-icons/gi'
 
 import ximg from '../public/perma/x.jpg'
 // import projekt from '../public/perma/Projekt-Landing-min.jpg'
-import indexdat from "./assets/index.json"
+import indexdat from './assets/index.json'
 
 
 interface Props {
@@ -213,12 +213,12 @@ const IndexPag: NextPage<Props> = () => {
 
 
 
-            <Box px={8} pb={24} pt={14} mx="auto">
+            <Box px={8} pb={24} pt={10} mx="auto">
               <Box
                 w={{
                   base: "full",
                   md: 11 / 12,
-                  xl: 9 / 12,
+                  xl: "full",
                 }}
                 mx="auto"
                 textAlign={{
@@ -588,15 +588,19 @@ const IndexPag: NextPage<Props> = () => {
                     </Stack>
                   </Box>
                   <Box textAlign={{ lg: "center" }}>
-                    <chakra.h2
-                      pt={{ base: '2', lg: '4' }}
+                    <Text
+                      mt={4}
+                      maxW="28"
+                      fontSize="xl"
+                      mx={{ lg: "auto" }}
                       color="gray.500"
-                      fontSize={'xl'}
-                      letterSpacing="wide"
-                      pointerEvents={'none'}
+                      _hover={{ color: 'blue.500' }}
+                      cursor={'pointer'}
+                      userSelect={'none'}
+                      onClick={() => router.push('/portfolio/')}
                     >
                       And more...
-                    </chakra.h2>
+                    </Text>
                   </Box>
                 </Box>
               </Box>
@@ -606,7 +610,7 @@ const IndexPag: NextPage<Props> = () => {
 
 
 
-            <Flex justify="center" w="full">
+            <Flex justify="center" w="full" px={6}>
               <Box
                 bg={mode('gray.50', 'gray.700')}
                 w={{ base: "full", md: "75%", lg: "50%" }}

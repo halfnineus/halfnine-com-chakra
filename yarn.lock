@@ -3326,10 +3326,10 @@
   "resolved" "https://registry.npmjs.org/sqlite/-/sqlite-4.1.1.tgz"
   "version" "4.1.1"
 
-"sqlite3@^5.0.8":
-  "integrity" "sha512-f2ACsbSyb2D1qFFcqIXPfFscLtPVOWJr5GmUzYxf4W+0qelu5MWrR+FAQE1d5IUArEltBrzSDxDORG8P/IkqyQ=="
-  "resolved" "https://registry.npmjs.org/sqlite3/-/sqlite3-5.0.8.tgz"
-  "version" "5.0.8"
+"sqlite3@^5.0.9":
+  "integrity" "sha512-e2lEKevUF65UJu4IIuuFytgW7yNMkmCkfyn66jXWeb7OcdHvRo7nXhF+IQ25iW6x2grB0DyKdGCpx8Rd8EkA2Q=="
+  "resolved" "https://registry.npmjs.org/sqlite3/-/sqlite3-5.0.9.tgz"
+  "version" "5.0.9"
   dependencies:
     "@mapbox/node-pre-gyp" "^1.0.0"
     "node-addon-api" "^4.2.0"

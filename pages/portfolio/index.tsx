@@ -1,4 +1,4 @@
-import { Box, Link, Center, Heading, Image, SimpleGrid, Text, useColorModeValue } from "@chakra-ui/react"
+import { Box, Heading, Image, SimpleGrid, useColorModeValue, Text, Stack } from "@chakra-ui/react"
 import Head from "next/head"
 
 import img1 from '../../public/perma/1.png'
@@ -17,41 +17,168 @@ const IndexPortfolio = () => {
                 <title>Product Showcase - Ochoa - International Product Development, Design and Production</title>
                 <meta name="description" content="" />
             </Head>
-            <Box as="section" py={'16'} maxW={{ base: 'xl', md: '7xl' }} textAlign={'center'} mx={"auto"} px={{ base: '6', md: '8' }}>
-                <Heading pointerEvents={'none'} textAlign={'center'} fontWeight="extrabold" maxW="md" mx="auto">
-                    {`Made For Industry's Leading Companies`}
+            <Box as="section" py={'8'} maxW={{ base: 'xl', md: '7xl' }} textAlign={'center'} mx={"auto"} px={{ base: '6', md: '8' }}>
+                <Heading pointerEvents={'none'} textAlign={'center'} fontWeight="extrabold" maxW="xlg" mx="auto">
+                    {`Made for and Used by Industry Leading Companies`}
                 </Heading>
+                <Text pointerEvents={'none'} pt={2} fontSize={'lg'} color={'gray.500'}>
+                    Developed by us in Orlando and Manufactured by our partners in Hong Kong SAR.
+                </Text>
                 <SimpleGrid
                     columns={{ base: 1, sm: 2, md: 3 }}
                     mt="8"
                     spacing={'6'}
                     color={useColorModeValue('inherit', 'white')}
                 >
-                    <Center py={'4'} px={'4'} bg={useColorModeValue('gray.100', 'gray.700')} rounded={{ md: 'lg' }}>
-                        <Image pointerEvents={"none"} width={'100%'} height={'100%'} src={img1.src} alt={'component'} />
-                    </Center>
-                    <Center py={'4'} px={'4'} bg={useColorModeValue('gray.100', 'gray.700')} rounded={{ md: 'lg' }}>
-                        <Image pointerEvents={"none"} width={'100%'} height={'100%'} src={img2.src} alt={'component'} />
-                    </Center>
-                    <Center py={'4'} px={'4'} bg={useColorModeValue('gray.100', 'gray.700')} rounded={{ md: 'lg' }}>
-                        <Image pointerEvents={"none"} width={'100%'} height={'100%'} src={img3.src} alt={'component'} />
-                    </Center>
-                    <Center py={'4'} px={'4'} bg={useColorModeValue('gray.100', 'gray.700')} rounded={{ md: 'lg' }}>
-                        <Image pointerEvents={"none"} width={'100%'} height={'100%'} src={img4.src} alt={'component'} />
-                    </Center>
-                    <Center py={'4'} px={'4'} bg={useColorModeValue('gray.100', 'gray.700')} rounded={{ md: 'lg' }}>
-                        <Image pointerEvents={"none"} width={'100%'} height={'100%'} src={img5.src} alt={'component'} />
-                    </Center>
-                    <Center py={'4'} px={'4'} bg={useColorModeValue('gray.100', 'gray.700')} rounded={{ md: 'lg' }}>
-                        <Image pointerEvents={"none"} width={'100%'} height={'100%'} src={img6.src} alt={'component'} />
-                    </Center>
+                    <Box
+                        // maxW={'450px'}
+                        // w={'full'}
+                        bg={useColorModeValue('gray.50', 'gray.700')}
+                        boxShadow={'md'}
+                        rounded={'md'}
+                        p={6}
+                        overflow={'hidden'}
+                    >
+                        <Box h={'250px'} bg={'gray.100'} mt={-6} mx={-6} mb={6} pos={'relative'}>
+                            <Image pointerEvents={'none'} src={img1.src} />
+                        </Box>
+                        <Stack>
+                            <Heading pointerEvents={'none'} color={useColorModeValue('gray.700', 'white')} fontSize={'2xl'}>
+                                Production Automation Board
+                            </Heading>
+                            {/* <Text color={'gray.500'}>
+                                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+                                nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
+                                erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
+                                et ea rebum.
+                            </Text> */}
+                        </Stack>
+                    </Box>
+                    <Box
+                        maxW={'450px'}
+                        w={'full'}
+                        bg={useColorModeValue('gray.50', 'gray.700')}
+                        boxShadow={'md'}
+                        rounded={'md'}
+                        p={6}
+                        overflow={'hidden'}
+                    >
+                        <Box h={'250px'} bg={'gray.100'} mt={-6} mx={-6} mb={6} pos={'relative'}>
+                            <Image pointerEvents={'none'} src={img2.src} />
+                        </Box>
+                        <Stack>
+                            <Heading pointerEvents={'none'} color={useColorModeValue('gray.700', 'white')} fontSize={'2xl'}>
+                                Production Automation Board
+                            </Heading>
+                            {/* <Text color={'gray.500'}>
+                                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+                                nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
+                                erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
+                                et ea rebum.
+                            </Text> */}
+                        </Stack>
+                    </Box>
+                    <Box
+                        maxW={'450px'}
+                        w={'full'}
+                        bg={useColorModeValue('gray.50', 'gray.700')}
+                        boxShadow={'md'}
+                        rounded={'md'}
+                        p={6}
+                        overflow={'hidden'}
+                    >
+                        <Box h={'250px'} bg={'gray.100'} mt={-6} mx={-6} mb={6} pos={'relative'}>
+                            <Image pointerEvents={'none'} src={img3.src} />
+                        </Box>
+                        <Stack>
+                            <Heading pointerEvents={'none'} color={useColorModeValue('gray.700', 'white')} fontSize={'2xl'}>
+                                Production Automation Board
+                            </Heading>
+                            {/* <Text color={'gray.500'}>
+                                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+                                nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
+                                erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
+                                et ea rebum.
+                            </Text> */}
+                        </Stack>
+                    </Box>
+                    <Box
+                        maxW={'450px'}
+                        w={'full'}
+                        bg={useColorModeValue('gray.50', 'gray.700')}
+                        boxShadow={'md'}
+                        rounded={'md'}
+                        p={6}
+                        overflow={'hidden'}
+                    >
+                        <Box h={'250px'} bg={'gray.100'} mt={-6} mx={-6} mb={6} pos={'relative'}>
+                            <Image pointerEvents={'none'} src={img4.src} />
+                        </Box>
+                        <Stack>
+                            <Heading pointerEvents={'none'} color={useColorModeValue('gray.700', 'white')} fontSize={'2xl'}>
+                                Production Automation Board
+                            </Heading>
+                            {/* <Text color={'gray.500'}>
+                                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+                                nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
+                                erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
+                                et ea rebum.
+                            </Text> */}
+                        </Stack>
+                    </Box>
+                    <Box
+                        maxW={'450px'}
+                        w={'full'}
+                        bg={useColorModeValue('gray.50', 'gray.700')}
+                        boxShadow={'md'}
+                        rounded={'md'}
+                        p={6}
+                        overflow={'hidden'}
+                    >
+                        <Box h={'250px'} bg={'gray.100'} mt={-6} mx={-6} mb={6} pos={'relative'}>
+                            <Image pointerEvents={'none'} src={img5.src} />
+                        </Box>
+                        <Stack>
+                            <Heading pointerEvents={'none'} color={useColorModeValue('gray.700', 'white')} fontSize={'2xl'}>
+                                Production Automation Board
+                            </Heading>
+                            {/* <Text color={'gray.500'}>
+                                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+                                nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
+                                erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
+                                et ea rebum.
+                            </Text> */}
+                        </Stack>
+                    </Box>
+                    <Box
+                        maxW={'450px'}
+                        w={'full'}
+                        bg={useColorModeValue('gray.50', 'gray.700')}
+                        boxShadow={'md'}
+                        rounded={'md'}
+                        p={6}
+                        overflow={'hidden'}
+                    >
+                        <Box h={'250px'} bg={'gray.100'} mt={-6} mx={-6} mb={6} pos={'relative'}>
+                            <Image pointerEvents={'none'} src={img6.src} />
+                        </Box>
+                        <Stack>
+                            <Heading pointerEvents={'none'} color={useColorModeValue('gray.700', 'white')} fontSize={'2xl'}>
+                                Production Automation Board
+                            </Heading>
+                            {/* <Text color={'gray.500'}>
+                                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+                                nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
+                                erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
+                                et ea rebum.
+                            </Text> */}
+                        </Stack>
+                    </Box>
                 </SimpleGrid>
                 <Box padding={'4'} />
-                {/* <NextLink href={"/contact"} passHref>
-                    <Link>
-                        <Text align={'center'} fontSize={'2xl'} fontWeight={'bold'}>And More...</Text>
-                    </Link>
-                </NextLink> */}
+                <Heading pointerEvents={'none'} textAlign={'center'} fontWeight="bold" maxW="xlg" pt={'2'} mx="auto">
+                    {`Software, And more...`}
+                </Heading>
             </Box>
         </>
     );
