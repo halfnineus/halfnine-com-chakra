@@ -53,7 +53,7 @@ export default async function contactMail(req: any, res: any) {
   // })
 
 
-  console.log(req.body)
+  // console.log(req.body)
   res.send('success')
 
 }

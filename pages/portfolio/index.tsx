@@ -17,7 +17,7 @@ const IndexPortfolio = () => {
                 <title>Product Showcase - Ochoa - International Product Development, Design and Production</title>
                 <meta name="description" content="" />
             </Head>
-            <Box as="section" py={'8'} maxW={{ base: 'xl', md: '7xl' }} textAlign={'center'} mx={"auto"} px={{ base: '6', md: '8' }}>
+            <Box as="section" py={'6'} maxW={{ base: 'xl', md: '7xl' }} textAlign={'center'} mx={"auto"} px={{ base: '6', md: '8' }}>
                 <Heading pointerEvents={'none'} textAlign={'center'} fontWeight="extrabold" maxW="xlg" mx="auto">
                     {`Made for and Used by Industry Leading Companies`}
                 </Heading>
@@ -31,16 +31,14 @@ const IndexPortfolio = () => {
                     color={useColorModeValue('inherit', 'white')}
                 >
                     <Box
-                        // maxW={'450px'}
-                        // w={'full'}
                         bg={useColorModeValue('gray.50', 'gray.700')}
                         boxShadow={'md'}
                         rounded={'md'}
-                        p={6}
+                        p={'6'}
                         overflow={'hidden'}
                     >
-                        <Box h={'250px'} bg={'gray.100'} mt={-6} mx={-6} mb={6} pos={'relative'}>
-                            <Image pointerEvents={'none'} src={img1.src} />
+                        <Box h={'auto'} bg={'gray.100'} mt={-6} mx={-6} mb={6} pos={'relative'}>
+                            <Image alt={'img'} pointerEvents={'none'} src={img1.src} />
                         </Box>
                         <Stack>
                             <Heading pointerEvents={'none'} color={useColorModeValue('gray.700', 'white')} fontSize={'2xl'}>
@@ -63,8 +61,8 @@ const IndexPortfolio = () => {
                         p={6}
                         overflow={'hidden'}
                     >
-                        <Box h={'250px'} bg={'gray.100'} mt={-6} mx={-6} mb={6} pos={'relative'}>
-                            <Image pointerEvents={'none'} src={img2.src} />
+                        <Box h={'auto'} bg={'gray.100'} mt={-6} mx={-6} mb={6} pos={'relative'}>
+                            <Image alt={'img'} pointerEvents={'none'} src={img2.src} />
                         </Box>
                         <Stack>
                             <Heading pointerEvents={'none'} color={useColorModeValue('gray.700', 'white')} fontSize={'2xl'}>
@@ -87,8 +85,8 @@ const IndexPortfolio = () => {
                         p={6}
                         overflow={'hidden'}
                     >
-                        <Box h={'250px'} bg={'gray.100'} mt={-6} mx={-6} mb={6} pos={'relative'}>
-                            <Image pointerEvents={'none'} src={img3.src} />
+                        <Box h={'auto'} bg={'gray.100'} mt={-6} mx={-6} mb={6} pos={'relative'}>
+                            <Image alt={'img'} pointerEvents={'none'} src={img3.src} />
                         </Box>
                         <Stack>
                             <Heading pointerEvents={'none'} color={useColorModeValue('gray.700', 'white')} fontSize={'2xl'}>
@@ -111,8 +109,8 @@ const IndexPortfolio = () => {
                         p={6}
                         overflow={'hidden'}
                     >
-                        <Box h={'250px'} bg={'gray.100'} mt={-6} mx={-6} mb={6} pos={'relative'}>
-                            <Image pointerEvents={'none'} src={img4.src} />
+                        <Box h={'auto'} bg={'gray.100'} mt={-6} mx={-6} mb={6} pos={'relative'}>
+                            <Image alt={'img'} pointerEvents={'none'} src={img4.src} />
                         </Box>
                         <Stack>
                             <Heading pointerEvents={'none'} color={useColorModeValue('gray.700', 'white')} fontSize={'2xl'}>
@@ -135,8 +133,8 @@ const IndexPortfolio = () => {
                         p={6}
                         overflow={'hidden'}
                     >
-                        <Box h={'250px'} bg={'gray.100'} mt={-6} mx={-6} mb={6} pos={'relative'}>
-                            <Image pointerEvents={'none'} src={img5.src} />
+                        <Box h={'auto'} bg={'gray.100'} mt={-6} mx={-6} mb={6} pos={'relative'}>
+                            <Image alt={'img'} pointerEvents={'none'} src={img5.src} />
                         </Box>
                         <Stack>
                             <Heading pointerEvents={'none'} color={useColorModeValue('gray.700', 'white')} fontSize={'2xl'}>
@@ -159,8 +157,8 @@ const IndexPortfolio = () => {
                         p={6}
                         overflow={'hidden'}
                     >
-                        <Box h={'250px'} bg={'gray.100'} mt={-6} mx={-6} mb={6} pos={'relative'}>
-                            <Image pointerEvents={'none'} src={img6.src} />
+                        <Box h={'auto'} bg={'gray.100'} mt={-6} mx={-6} mb={6} pos={'relative'}>
+                            <Image alt={'img'} pointerEvents={'none'} src={img6.src} />
                         </Box>
                         <Stack>
                             <Heading pointerEvents={'none'} color={useColorModeValue('gray.700', 'white')} fontSize={'2xl'}>
@@ -176,7 +174,7 @@ const IndexPortfolio = () => {
                     </Box>
                 </SimpleGrid>
                 <Box padding={'4'} />
-                <Heading pointerEvents={'none'} textAlign={'center'} fontWeight="bold" maxW="xlg" pt={'2'} mx="auto">
+                <Heading pointerEvents={'none'} textAlign={'center'} fontWeight="bold" maxW="xlg" pt={''} pb={'4'} mx="auto">
                     {`Software, And more...`}
                 </Heading>
             </Box>

@@ -22,6 +22,7 @@ import {
   chakra,
   Flex,
   Image,
+  useColorModeValue,
 } from '@chakra-ui/react'
 import { CheckIcon } from '@chakra-ui/icons'
 
@@ -241,7 +242,7 @@ const IndexPag: NextPage<Props> = () => {
                   color={mode('gray.900', 'gray.100')}
                   pointerEvents={"none"}
                 >
-                  All your needs in a{" "}
+                  All your needs with{" "}
                   <Text
                     display={{
                       base: "block",
@@ -252,7 +253,7 @@ const IndexPag: NextPage<Props> = () => {
                     bgGradient="linear(to-r, green.400,blue.600)"
                     fontWeight="extrabold"
                   >
-                    customized application
+                    customized technology
                   </Text>{" "}
                 </chakra.h1>
                 <chakra.p
@@ -268,9 +269,9 @@ const IndexPag: NextPage<Props> = () => {
                   }}
                   color={mode("gray.600", "gray.300")}
                 >
-                  Don't know where to start? Companies often have small needs
-                  in terms of their Technology and can use already-built applications.
-                  But we are here for those who need more.
+                  {`Don't know where to start? Companies often have small needs
+                  in terms of their Technology and can use already-built applications.`} <br />
+                  {`But we are here for those who need more.`}
                 </chakra.p>
                 <Stack
                   direction={{
@@ -302,7 +303,7 @@ const IndexPag: NextPage<Props> = () => {
                     rightIcon={<AiOutlineCalendar />}
                     onClick={() => router.push('/contact/')}
                   >
-                    Schedule a Meeting
+                    {'Schedule a Meeting'}
                   </Button>
                 </Stack>
               </Box>
@@ -350,7 +351,7 @@ const IndexPag: NextPage<Props> = () => {
                       letterSpacing="wide"
                       userSelect={'none'}
                     >
-                      ochoa.pro
+                      {'ochoa.pro'}
                     </chakra.h2>
                     <chakra.p
                       mt={2}
@@ -360,7 +361,7 @@ const IndexPag: NextPage<Props> = () => {
                       letterSpacing="tight"
                       pointerEvents={'none'}
                     >
-                      Technology transformation, migration and implementation
+                      {'Technology transformation, migration and implementation'}
                     </chakra.p>
                     <chakra.p
                       mt={4}
@@ -370,9 +371,7 @@ const IndexPag: NextPage<Props> = () => {
                       color="gray.500"
                       pointerEvents={'none'}
                     >
-
-                      Our solutions help All industries and companies who want to work
-                      with Technology that meets their specific needs, ideas and achieve goals.
+                      {'Our solutions help All industries and companies who want to work with Technology that meets their specific needs, ideas and achieve goals.'}
                     </chakra.p>
                   </Box>
                   <Box mt={10}>
@@ -396,17 +395,17 @@ const IndexPag: NextPage<Props> = () => {
                           {<FaIndustry />}
                         </Icon>
                         <Box ml={4}>
-                          <chakra.dt
+                          <Text
                             fontSize="lg"
                             fontWeight="semibold"
                             lineHeight="6"
                           >
                             {"Industrial Solutions"}
-                          </chakra.dt>
-                          <chakra.dd mt={2} color="gray.500"
+                          </Text>
+                          <Text mt={2} color="gray.500"
                           >
-                            {"Manufacturing and Processing becomes complex with scale."}
-                          </chakra.dd>
+                            {"Smart farms and factories."}
+                          </Text>
                         </Box>
                       </Flex>
 
@@ -422,17 +421,17 @@ const IndexPag: NextPage<Props> = () => {
                           {<AiOutlineShop />}
                         </Icon>
                         <Box ml={4}>
-                          <chakra.dt
+                          <Text
                             fontSize="lg"
                             fontWeight="semibold"
                             lineHeight="6"
                           >
                             {"Retail Solutions"}
-                          </chakra.dt>
-                          <chakra.dd mt={2} color="gray.500"
+                          </Text>
+                          <Text mt={2} color="gray.500"
                           >
-                            {"Lorem ipsum, dolor sit amet consectetur adipisicing elit."}
-                          </chakra.dd>
+                            {"Data Technology and Analytics "}
+                          </Text>
                         </Box>
                       </Flex>
                       <Flex>
@@ -447,17 +446,17 @@ const IndexPag: NextPage<Props> = () => {
                           {<AiFillBank />}
                         </Icon>
                         <Box ml={4}>
-                          <chakra.dt
+                          <Text
                             fontSize="lg"
                             fontWeight="semibold"
                             lineHeight="6"
                           >
                             {"Financial Solutions"}
-                          </chakra.dt>
-                          <chakra.dd mt={2} color="gray.500"
+                          </Text>
+                          <Text mt={2} color="gray.500"
                           >
-                            {"Lorem ipsum, dolor sit amet consectetur adipisicing elit."}
-                          </chakra.dd>
+                            {"Finance Management."}
+                          </Text>
                         </Box>
                       </Flex>
                       <Flex>
@@ -472,17 +471,17 @@ const IndexPag: NextPage<Props> = () => {
                           {<AiOutlineFileProtect />}
                         </Icon>
                         <Box ml={4}>
-                          <chakra.dt
+                          <Text
                             fontSize="lg"
                             fontWeight="semibold"
                             lineHeight="6"
                           >
                             {"Security Solutions"}
-                          </chakra.dt>
-                          <chakra.dd mt={2} color="gray.500"
+                          </Text>
+                          <Text mt={2} color="gray.500"
                           >
-                            {"Lorem ipsum, dolor sit amet consectetur adipisicing elit."}
-                          </chakra.dd>
+                            {"Bulletproof systems"}
+                          </Text>
                         </Box>
                       </Flex>
                       <Flex>
@@ -497,17 +496,17 @@ const IndexPag: NextPage<Props> = () => {
                           {<FaShippingFast />}
                         </Icon>
                         <Box ml={4}>
-                          <chakra.dt
+                          <Text
                             fontSize="lg"
                             fontWeight="semibold"
                             lineHeight="6"
                           >
                             {"Logistics Solutions"}
-                          </chakra.dt>
-                          <chakra.dd mt={2} color="gray.500"
+                          </Text>
+                          <Text mt={2} color="gray.500"
                           >
-                            {"Lorem ipsum, dolor sit amet consectetur adipisicing elit."}
-                          </chakra.dd>
+                            {"Comprehensive supply chains"}
+                          </Text>
                         </Box>
                       </Flex>
                       <Flex>
@@ -522,17 +521,17 @@ const IndexPag: NextPage<Props> = () => {
                           {<BsFileEarmarkPerson />}
                         </Icon>
                         <Box ml={4}>
-                          <chakra.dt
+                          <Text
                             fontSize="lg"
                             fontWeight="semibold"
                             lineHeight="6"
                           >
                             {"Management Solutions"}
-                          </chakra.dt>
-                          <chakra.dd mt={2} color="gray.500"
+                          </Text>
+                          <Text mt={2} color="gray.500"
                           >
-                            {"Lorem ipsum, dolor sit amet consectetur adipisicing elit."}
-                          </chakra.dd>
+                            {"Plan and Coordinate."}
+                          </Text>
                         </Box>
                       </Flex>
                       <Flex>
@@ -547,17 +546,17 @@ const IndexPag: NextPage<Props> = () => {
                           {<AiOutlineGlobal />}
                         </Icon>
                         <Box ml={4}>
-                          <chakra.dt
+                          <Text
                             fontSize="lg"
                             fontWeight="semibold"
                             lineHeight="6"
                           >
                             {"Franchise Solutions"}
-                          </chakra.dt>
-                          <chakra.dd mt={2} color="gray.500"
+                          </Text>
+                          <Text mt={2} color="gray.500"
                           >
-                            {"Lorem ipsum, dolor sit amet consectetur adipisicing elit."}
-                          </chakra.dd>
+                            {"Simple and More efficient."}
+                          </Text>
                         </Box>
                       </Flex>
                       <Flex>
@@ -572,17 +571,17 @@ const IndexPag: NextPage<Props> = () => {
                           {<GiProtectionGlasses />}
                         </Icon>
                         <Box ml={4}>
-                          <chakra.dt
+                          <Text
                             fontSize="lg"
                             fontWeight="semibold"
                             lineHeight="6"
                           >
                             {"Safety Solutions"}
-                          </chakra.dt>
-                          <chakra.dd mt={2} color="gray.500"
+                          </Text>
+                          <Text mt={2} color="gray.500"
                           >
-                            {"Lorem ipsum, dolor sit amet consectetur adipisicing elit."}
-                          </chakra.dd>
+                            {"Safety Solutions made Simple."}
+                          </Text>
                         </Box>
                       </Flex>
                     </Stack>
@@ -593,13 +592,13 @@ const IndexPag: NextPage<Props> = () => {
                       maxW="28"
                       fontSize="xl"
                       mx={{ lg: "auto" }}
-                      color="gray.500"
+                      color={useColorModeValue("gray.700", "gray.300")}
                       _hover={{ color: 'blue.500' }}
                       cursor={'pointer'}
                       userSelect={'none'}
                       onClick={() => router.push('/portfolio/')}
                     >
-                      And more...
+                      {'And more...'}
                     </Text>
                   </Box>
                 </Box>
@@ -634,7 +633,7 @@ const IndexPag: NextPage<Props> = () => {
                     display="block"
                     pb={2}
                   >
-                    Request a prototype today.
+                    {'Request a prototype today.'}
                   </chakra.span>
                 </chakra.span>
                 <Stack
@@ -657,7 +656,7 @@ const IndexPag: NextPage<Props> = () => {
                       colorScheme={'blue'}
                       onClick={() => router.push('/contact/')}
                     >
-                      Get started
+                      {'Get started'}
                     </Button>
                   </Box>
                 </Stack>

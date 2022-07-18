@@ -87,7 +87,7 @@ export const ToggleButton = (props: ToggleButtonProps) => {
 
 // end ToggleButton
 
-
+  
 
 
 
@@ -101,7 +101,7 @@ const MobileNavContext = (props: FlexProps) => {
         </Box>
         <NextLink href={'/'} passHref>
           <Link display="flex" alignItems="center">
-            <Image loading={"eager"} pointerEvents={"none"} width={'auto'} height={'8'} src={mode(smlog.src, wsmlog.src)} alt={'log.ochoa'} />
+            <Image userSelect={'none'} loading={"eager"} pointerEvents={"none"} width={'auto'} height={'8'} src={mode(smlog.src, wsmlog.src)} alt={'log.ochoa'} />
           </Link>
         </NextLink>
         <Box visibility={{ base: 'hidden', sm: 'visible' }}>
@@ -141,7 +141,7 @@ const DesktopNavContent = (props: FlexProps) => {
     <Flex className="nav-content__desktop" align="center" justify="space-between" {...props}>
       <NextLink href={'/'} passHref>
         <Link display="flex" alignItems="center">
-          <Image loading={"eager"} cursor={'pointer'} pointerEvents={'none'} width={'auto'} height={'10'} src={mode(smlog.src, wsmlog.src)} alt={'Ochoa'} />
+          <Image userSelect={'none'} loading={"eager"} cursor={'pointer'} pointerEvents={'none'} width={'auto'} height={'10'} src={mode(smlog.src, wsmlog.src)} alt={'Ochoa'} />
         </Link>
       </NextLink>
       <HStack as="ul" id="nav__primary-menu" aria-label="Main Menu" listStyleType="none">

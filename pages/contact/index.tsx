@@ -26,6 +26,7 @@ import {
     MdEmail,
     MdLocationOn,
     MdOutlineEmail,
+    MdPhone,
 } from 'react-icons/md';
 
 import { BsPerson } from 'react-icons/bs'
@@ -104,43 +105,47 @@ const INDEX = () => {
                         color="white"
                         borderRadius='2xl'
                         m={{ sm: 4, md: 16, lg: 10 }}
-                        p={{ sm: 5, md: 5, lg: 16 }}
+                        p={{ sm: 5, md: 5, lg: 10 }}
                         boxShadow={'lg'}
                     >
-                        <Box p={4}>
-                            <Wrap spacing={{ base: 20, sm: 3, md: 5, lg: 20 }}>
+                        <Box p={5}>
+                            <Wrap spacing={{ base: 3, sm: 3, md: 5, lg: 6 }}>
                                 <WrapItem>
                                     <Box>
-                                        <Heading pointerEvents={'none'} color={useColorModeValue('black', 'white')} fontSize={'4xl'}>Get In Touch</Heading>
-                                        <Text pointerEvents={'none'} mt={{ sm: 3, md: 3, lg: 5 }} color="gray.500">
-                                            Fill up the form below to contact
+                                        <Heading pt={5} pb={2} px={5} pointerEvents={'none'} color={useColorModeValue('black', 'white')} fontSize={'4xl'}>Get In Touch</Heading>
+                                        <Text py={2} px={5} pointerEvents={'none'} mt={'auto'} color="gray.500">
+                                            Fill up the form to contact or<br />
+                                            use our contacts below:
                                         </Text>
-                                        <Box py={{ base: 5, sm: 5, md: 8, lg: 10 }}>
-                                            <VStack pl={0} spacing={3} alignItems="flex-start">
+                                        <Box pr={5} pl={'1'} py={5}>
+                                            <VStack pl={0} spacing={2} alignItems="flex-start">
                                                 {/* <NextLink href={'tel:+1-123-456-7890'} passHref>
-                                                    <Link>
+                                                    <Link isExternal>
                                                         <Button
                                                             size="md"
-                                                            height="48px"
-                                                            width="200px"
+                                                            height="auto"
+                                                            width="auto"
+                                                            minH={'10'}
                                                             variant="ghost"
                                                             color={useColorModeValue('black', 'white')}
-                                                            _hover={{ border: '2px solid #1C6FEB' }}
+                                                            _hover={useColorModeValue({ color: 'blue.500', bg: 'blackAlpha.100' }, { color: 'blue.200', bg: 'whiteAlpha.100' })}
                                                             leftIcon={<MdPhone color={useColorModeValue('black', 'white')} size="20px" />}
                                                         >
                                                             +1 (123) 456-7890
                                                         </Button>
                                                     </Link>
                                                 </NextLink> */}
-                                                {/* <NextLink href={'mailto:rodolfo@ochoa.pro'} passHref>
-                                                    <Link>
+                                                <NextLink href={'mailto:rodolfo@ochoa.pro'} passHref>
+                                                    <Link isExternal>
                                                         <Button
+                                                            alignContent={'start'}
                                                             size="md"
-                                                            height="48px"
-                                                            width="200px"
+                                                            height="auto"
+                                                            width="auto"
+                                                            minH={'10'}
                                                             variant="ghost"
                                                             color={useColorModeValue('black', 'white')}
-                                                            _hover={{ border: '2px solid #1C6FEB' }}
+                                                            _hover={useColorModeValue({ color: 'blue.500', bg: 'blackAlpha.100' }, { color: 'blue.200', bg: 'whiteAlpha.100' })}
                                                             leftIcon={<MdEmail color={useColorModeValue('black', 'white')} size="20px" />}
                                                         >
                                                             rodolfo@ochoa.pro
@@ -148,29 +153,31 @@ const INDEX = () => {
                                                     </Link>
                                                 </NextLink>
                                                 <NextLink href={'mailto:dan@ochoa.pro'} passHref>
-                                                    <Link>
+                                                    <Link isExternal>
                                                         <Button
                                                             size="md"
-                                                            height="48px"
-                                                            width="200px"
+                                                            height="auto"
+                                                            width="auto"
+                                                            minH={'10'}
                                                             variant="ghost"
                                                             color={useColorModeValue('black', 'white')}
-                                                            _hover={{ border: '2px solid #1C6FEB' }}
+                                                            _hover={useColorModeValue({ color: 'blue.500', bg: 'blackAlpha.100' }, { color: 'blue.200', bg: 'whiteAlpha.100' })}
                                                             leftIcon={<MdEmail color={useColorModeValue('black', 'white')} size="20px" />}
                                                         >
                                                             dan@ochoa.pro
                                                         </Button>
                                                     </Link>
-                                                </NextLink> */}
+                                                </NextLink>
                                                 <NextLink href={'https://duckduckgo.com/?q=Orlando%2C+Florida&iaxm=maps'} passHref>
                                                     <Link isExternal>
                                                         <Button
                                                             size="md"
-                                                            height="48px"
-                                                            width="200px"
+                                                            height="auto"
+                                                            width="auto"
+                                                            minH={'10'}
                                                             variant="ghost"
                                                             color={useColorModeValue('black', 'white')}
-                                                            _hover={{ border: '2px solid #1C6FEB' }}
+                                                            _hover={useColorModeValue({ color: 'blue.500', bg: 'blackAlpha.100' }, { color: 'blue.200', bg: 'whiteAlpha.100' })}
                                                             leftIcon={<MdLocationOn color={useColorModeValue('black', 'white')} size="20px" />}
                                                         >
                                                             Orlando, Florida, USA
@@ -181,11 +188,12 @@ const INDEX = () => {
                                                     <Link isExternal>
                                                         <Button
                                                             size="md"
-                                                            height="48px"
-                                                            width="200px"
+                                                            height="auto"
+                                                            width="auto"
+                                                            minH={'10'}
                                                             variant="ghost"
                                                             color={useColorModeValue('black', 'white')}
-                                                            _hover={{ border: '2px solid #1C6FEB' }}
+                                                            _hover={useColorModeValue({ color: 'blue.500', bg: 'blackAlpha.100' }, { color: 'blue.200', bg: 'whiteAlpha.100' })}
                                                             leftIcon={<MdLocationOn color={useColorModeValue('black', 'white')} size="20px" />}
                                                         >
                                                             Hong Kong SAR, China
@@ -198,7 +206,7 @@ const INDEX = () => {
                                 </WrapItem>
                                 <WrapItem>
                                     <Box width="100%" bg={useColorModeValue('gray.100', 'gray.600')} borderRadius='2xl'>
-                                        <Box w={{ sm: 'auto', md: 'auto', lg: '340px' }} m={8} color={useColorModeValue('black', 'white')}>
+                                        <Box w={{ base: 'auto', sm: 'auto', md: 'auto', lg: 'auto', xl: '360px' }} m={8} color={useColorModeValue('black', 'white')}>
                                             <form /* action={'submit'} */ onSubmit={handleSubmit}>
                                                 <VStack spacing={5}>
                                                     <FormControl isRequired >
@@ -236,7 +244,10 @@ const INDEX = () => {
                                                         <Textarea
                                                             // defaultValue={message}
                                                             onChange={(e: any) => setMessage(e.target.value)}
-                                                            placeholder="Message"
+                                                            placeholder={
+                                                                'Message'
+                                                                // 'For long messages please use any E-Mail provided on the contact list.'
+                                                            }
                                                             isRequired
                                                         />
                                                     </FormControl>
