@@ -1,0 +1,44 @@
+{
+    "data": [
+        {
+            "locale": "en",
+            "head": {
+                "title": "Product Showcase - Ochoa - International Product Development, Design and Production",
+                "description": "We keep developing systems to automate simple and complicated industrial processes. Contact us to know more."
+            },
+            "block": {
+                "h1": "Made for and Used by Industry Leading Companies",
+                "h2": "Developed by us in Orlando and Manufactured by our partners in Hong Kong SAR.",
+                "h3": "Software, And more..."
+            },
+            "components": {
+                "itemTitle1": "Production Automation Board",
+                "itemTitle2": "Production Automation Board",
+                "itemTitle3": "Production Automation Board",
+                "itemTitle4": "Production Automation Board",
+                "itemTitle5": "Production Automation Board",
+                "itemTitle6": "Production Automation Board"
+            }
+        },
+        {
+            "locale": "es",
+            "head": {
+                "title": "Exposition de Productos - Ochoa - Desarrollo Internacional de Productos, Diseño y Produccion",
+                "description": "Seguimos desarrollando sistemas para automatizar procesos industriales simples y complicados. Contáctanos para saber más."
+            },
+            "block": {
+                "h1": "Fabricado y utilizado por empresas líderes en la industria",
+                "h2": "Desarrollado por nosotros en Orlando y fabricado por nuestros socios en Hong Kong SAR.",
+                "h3": "Software, y más..."
+            },
+            "components": {
+                "itemTitle1": "Tablero Electronico de Automatización de Producción",
+                "itemTitle2": "Tablero Electronico de Automatización de Producción",
+                "itemTitle3": "Tablero Electronico de Automatización de Producción",
+                "itemTitle4": "Tablero Electronico de Automatización de Producción",
+                "itemTitle5": "Tablero Electronico de Automatización de Producción",
+                "itemTitle6": "Tablero Electronico de Automatización de Producción"
+            }
+        }
+    ]
+}

@@ -25,12 +25,46 @@
         "item4d": "Innovative product design processes that bring ideas to life.",
         "item5": "Electronics Manufacturing",
         "item5d": "Electronics with quality that live up to the expectations of all customers."
+      },
+      "block3": {
+        "h3_1": "All your needs with",
+        "h3_2": "customized technology",
+        "txt_1": "Don't know where to start? Companies often have small needs in terms of their Technology and can use already-built applications.",
+        "txt_2": "But we are here for those who need more.",
+        "button": "Schedule a Meeting"
+      },
+      "block4": {
+        "site": "ochoa.pro",
+        "h4": "Technology transformation, migration and implementation",
+        "txt": "Our solutions help All industries and companies who want to work with Technology that meets their specific needs, ideas and achieve goals.",
+        "item1": "Industrial Solutions",
+        "item1d": "Smart farms and factories.",
+        "item2": "Retail Solutions",
+        "item2d": "Data Technology and Analytics",
+        "item3": "Financial Solutions",
+        "item3d": "Finance Management.",
+        "item4": "Security Solutions",
+        "item4d": "Bulletproof systems",
+        "item5": "Logistics Solutions",
+        "item5d": "Comprehensive supply chains",
+        "item6": "Management Solutions",
+        "item6d": "Plan and Coordinate.",
+        "item7": "Franchise Solutions",
+        "item7d": "Simple and More efficient.",
+        "item8": "Safety Solutions",
+        "item8d": "Safety Solutions made Simple.",
+        "bot": "And more..."
+      },
+      "block5": {
+        "h5_1": "Ready to dive in?",
+        "h5_2": "Request a prototype today.",
+        "button": "Get started"
       }
     },
     {
       "locale": "es",
-      "title": {
-        "intitle": "Desarrollo Internacional de Productos, Diseño y Produccion - Ochoa",
+      "head": {
+        "title": "Desarrollo Internacional de Productos, Diseño y Produccion - Ochoa",
         "description": "Full-service product development with Ochoa, Providing services from software, hardware and mechanical engineering. And electronics manufacturing."
       },
       "block1": {
@@ -52,6 +86,40 @@
         "item4d": "Procesos innovadores de diseño de productos que dan vida a las ideas.",
         "item5": "Fabricación de productos electrónicos",
         "item5d": "Electrónica con calidad a la altura de las expectativas de todos los clientes."
+      },
+      "block3": {
+        "h3_1": "Todas tus necesidades con",
+        "h3_2": "tecnologia customizada",
+        "txt_1": "¿No sabes por dónde empezar? Las empresas a menudo tienen pequeñas necesidades en términos de su tecnología y pueden usar aplicaciones ya construidas.",
+        "txt_2": "Pero estamos aquí para los que necesitan más.",
+        "button": "Programar una reunión"
+      },
+      "block4": {
+        "site": "ochoa.pro",
+        "h4": "Transformación, migración e implementación de tecnología",
+        "txt": "Nuestras soluciones ayudan a todas las industrias y empresas que desean trabajar con tecnología que satisfaga sus necesidades específicas, ideas y objetivos.",
+        "item1": "Soluciones Industriales",
+        "item1d": "Granjas y fábricas inteligentes.",
+        "item2": "Soluciones minoristas",
+        "item2d": "Tecnología de datos y análisis",
+        "item3": "Soluciones Financieras",
+        "item3d": "Gestión financiera.",
+        "item4": "Soluciones de seguridad",
+        "item4d": "Sistemas a prueba de balas",
+        "item5": "Soluciones Logísticas",
+        "item5d": "Cadenas de suministro",
+        "item6": "Soluciones de gestión",
+        "item6d": "Planificar y coordinar.",
+        "item7": "Soluciones de franquicia",
+        "item7d": "Sencillo y más eficiente.",
+        "item8": "Soluciones de seguridad",
+        "item8d": "Seguridad hecha simple.",
+        "bot": "Y más..."
+      },
+      "block5": {
+        "h5_1": "Listo para probarnos?",
+        "h5_2": "Solicite un prototipo hoy.",
+        "button": "Comenzar"
       }
     }
   ]

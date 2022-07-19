@@ -5,21 +5,13 @@ import {
     Link,
     Stack,
     Text,
-    useColorModeValue,
+    useColorModeValue as mode,
 } from '@chakra-ui/react';
 
 import NextLink from 'next/link'
 
 import smlog from '../public/img/smlog.png'
 import wsmlog from '../public/img/wsmlog.png'
-
-const Logo = () => {
-    return (
-        <>
-            <Image userSelect={'none'} alt={'Ochoa'} pointerEvents={'none'} width={'auto'} height={'8'} src={useColorModeValue(smlog.src, wsmlog.src)} />
-        </>
-    );
-};
 
 export default function SCFooter() {
     return (
@@ -30,8 +22,8 @@ export default function SCFooter() {
                 style={{ position: "absolute", bottom: 0, width: "100%" }}
             >
                 <Box
-                    color={useColorModeValue('gray.700', 'gray.200')}
-                    bg={useColorModeValue('blackAlpha.100', 'whiteAlpha.100')}
+                    color={mode('gray.700', 'gray.200')}
+                    bg={mode('blackAlpha.100', 'whiteAlpha.100')}
                 >
                     <Container
                         as={Stack}
@@ -43,7 +35,7 @@ export default function SCFooter() {
                         align={{ base: 'center', md: 'center' }}>
                         <NextLink href={'/'} passHref>
                             <Link>
-                                <Logo />
+                                <Image userSelect={'none'} alt={'Ochoa'} pointerEvents={'none'} width={'auto'} height={'8'} src={mode(smlog.src, wsmlog.src)} />
                             </Link>
                         </NextLink>
                         <Text pointerEvents={'none'}>© 2022 Ochoa - All rights reserved</Text>

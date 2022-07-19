@@ -12,7 +12,6 @@ import {
   HTMLChakraProps,
   Text,
   useColorModeValue as mode,
-  useColorModeValue,
   BoxProps,
 } from '@chakra-ui/react'
 import { FaChevronDown, FaChevronRight } from 'react-icons/fa'
@@ -91,7 +90,7 @@ export const NavMenu = (props: MotionBoxProps) => (
     variants={variants}
     outline="0"
     opacity="0"
-    bg={useColorModeValue('white', 'gray.700')}
+    bg={mode('white', 'gray.700')}
     w="full"
     shadow="lg"
     px="4"

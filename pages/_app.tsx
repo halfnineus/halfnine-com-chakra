@@ -12,13 +12,8 @@ export default function MyApp({ Component, pageProps }: AppProps) {
           <meta charSet='utf-8' />
           <meta name='viewport' content='initial-scale=1.0, height=device-height, width=device-width' />
           <meta name="robots" content="all" />
-
-          {/* <meta name="title" content="International Product Development, Design and Production" /> */}
-
           {/* Analytics */}
-          {/* <React.Fragment>
-            <script src="https://pastebin.mozilla.org/NhkcUGsQ/raw" defer></script>
-          </React.Fragment> */}
+
 
           {/* Open Graph Meta Tags */}
           <meta property="og:type" content="website" />

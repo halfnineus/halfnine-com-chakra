@@ -19,30 +19,13 @@ const Choc = () => {
     const Feature = (props: any) => {
         return (
             <Box>
-                <Icon
-                    boxSize={12}
-                    _light={{ color: "brand.700" }}
-                    mb={4}
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    aria-hidden="true"
-                >
+                <Icon boxSize={12} _light={{ color: "brand.700" }} mb={4} fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                     {props.icon}
                 </Icon>
-                <chakra.h3
-                    mb={3}
-                    fontSize="lg"
-                    lineHeight="shorter"
-                    fontWeight="bold"
-                    _light={{ color: "gray.900" }}
-                >
+                <chakra.h3 mb={3} fontSize="lg" lineHeight="shorter" fontWeight="bold" _light={{ color: "gray.900" }}>
                     {props.title}
                 </chakra.h3>
-                <chakra.p
-                    lineHeight="tall"
-                    color={useColorModeValue("gray.600", "gray.400")}
-                >
+                <chakra.p lineHeight="tall" color={useColorModeValue("gray.600", "gray.400")}>
                     {props.children}
                 </chakra.p>
             </Box>

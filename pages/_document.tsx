@@ -4,7 +4,7 @@ import Script from 'next/script';
 export default class MyDocument extends Document {
     render(): JSX.Element {
         return (
-            <Html lang="en">
+            <Html>
                 <Head />
                 <body style={{ minHeight: '100vh' }}>
                     <Main />
