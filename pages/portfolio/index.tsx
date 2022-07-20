@@ -9,7 +9,7 @@ import img4 from '../../public/img/portfolio/4.png'
 import img5 from '../../public/img/portfolio/5.png'
 import img6 from '../../public/img/portfolio/6.png'
 
-import portafoliodat from '../assets/portfolio.json'
+import portafoliodat from '../../assets/portfolio.json'
 const IndexPortfolio = () => {
     const Feature = (props: any) => {
         return (
@@ -22,10 +22,7 @@ const IndexPortfolio = () => {
                     {props.title}
                 </Heading>
                 {/* <Text color={'gray.500'}>
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-                nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
-                erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
-                et ea rebum.
+                    {props.children}
                 </Text> */}
                 {/* </Stack> */}
             </Box>
@@ -47,6 +44,7 @@ const IndexPortfolio = () => {
                             {protafolioData.block.h2}
                         </Text>
                         <SimpleGrid
+                            pb={8}
                             columns={{ base: 1, sm: 2, md: 2, lg: 3 }}
                             mt="8"
                             spacing={'6'}
@@ -59,7 +57,6 @@ const IndexPortfolio = () => {
                             <Feature img={img5.src} title={protafolioData.components.itemTitle5} />
                             <Feature img={img6.src} title={protafolioData.components.itemTitle6} />
                         </SimpleGrid>
-                        <Box padding={'4'} />
                         <Heading pointerEvents={'none'} textAlign={'center'} fontWeight="bold" maxW="xlg" pt={''} pb={'4'} mx="auto">
                             {protafolioData.block.h3}
                         </Heading>

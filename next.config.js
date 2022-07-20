@@ -6,6 +6,11 @@ module.exports = {
         destination: '/',
         permanent: true,
       },
+      {
+        source: '/services/development/',
+        destination: '/',
+        permanent: true,
+      },
     ];
   },
   reactStrictMode: true,

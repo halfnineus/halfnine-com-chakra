@@ -11,7 +11,7 @@ import { BsFileEarmarkPerson } from 'react-icons/bs'
 import { GiProtectionGlasses } from 'react-icons/gi'
 
 import ximg from '../public/img/index/x.jpg'
-import indexdat from './assets/index.json'
+import indexdat from '../assets/index.json'
 
 const IndexPage = () => {
   const { locale } = useRouter()
@@ -121,7 +121,7 @@ const IndexPage = () => {
               </Box>
             </Box>
             <Flex pb={8} px={6} w="auto" justifyContent="center" alignItems="center">
-              <Box py={8} px={6} bg={mode('gray.50', 'gray.700')} rounded="xl">
+              <Box shadow="md" py={8} px={6} bg={mode('gray.50', 'gray.700')} rounded="xl">
                 <Box maxW="7xl" mx="auto" px={{ base: 4, lg: 8 }}>
                   <Box textAlign={{ lg: "center" }}>
                     <Text fontWeight="semibold" textTransform="uppercase" letterSpacing="wide" userSelect={'none'}>
@@ -173,6 +173,7 @@ const IndexPage = () => {
             </Flex>
             <Flex justify="center" w="full" px={6}>
               <Box
+                shadow="md"
                 bg={mode('gray.50', 'gray.700')}
                 w={{ base: "full", md: "75%", lg: "50%" }}
                 rounded={20} px={6} pt={6} mt={4} pb={8} mb={12}

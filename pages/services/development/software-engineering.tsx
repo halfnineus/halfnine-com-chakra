@@ -15,30 +15,8 @@ import Head from 'next/head'
 
 import DevTerms from '../../../components/devterms';
 
-const Choc = () => {
+const SoftwareEngineering = () => {
     const Feature = (props: any) => {
-        return (
-            <Box>
-                <Heading
-                    as={"h3"}
-                    mb={3}
-                    fontSize="lg"
-                    lineHeight="shorter"
-                    fontWeight="bold"
-                    _light={{ color: "gray.900" }}
-                >
-                    {props.title}
-                </Heading>
-                <Text
-                    lineHeight="tall"
-                    color={useColorModeValue("gray.600", "gray.400")}
-                >
-                    {props.children}
-                </Text>
-            </Box>
-        );
-    };
-    const Feature2 = (props: any) => {
         return (
             <Flex>
                 <Flex shrink={0}>
@@ -140,34 +118,34 @@ const Choc = () => {
                                 gridColumnGap={{ md: 8 }}
                                 gridRowGap={{ md: 10 }}
                             >
-                                <Feature2 title="Invite team members">
+                                <Feature title="Invite team members">
                                     Improve your conversion rates by monitoring exactly what's going
                                     on while your customers are in trial.{" "}
-                                </Feature2>
-                                <Feature2 title="Unify your payments stack">
+                                </Feature>
+                                <Feature title="Unify your payments stack">
                                     Manage all your online and offline sales in one place with a
                                     single integration, simplifying reporting and reconciliation.
-                                </Feature2>
-                                <Feature2 title="Own your in-store experience">
+                                </Feature>
+                                <Feature title="Own your in-store experience">
                                     {" "}
                                     Provide a seamless customer experience across channels, like
                                     reserving online and picking up in store.
-                                </Feature2>
-                                <Feature2 title="Grow your platform's revenue">
+                                </Feature>
+                                <Feature title="Grow your platform's revenue">
                                     {" "}
                                     Add in-person payments to your platform or marketplace. Using
                                     Terminal with Connect.{" "}
-                                </Feature2>
-                                <Feature2 title="Clear overview for efficient tracking">
+                                </Feature>
+                                <Feature title="Clear overview for efficient tracking">
                                     {" "}
                                     Handle your subscriptions and transactions efficiently with the
                                     clear overview in Dashboard. Fea
-                                </Feature2>
-                                <Feature2 title="Decide how you integrate Payments">
+                                </Feature>
+                                <Feature title="Decide how you integrate Payments">
                                     {" "}
                                     Love to code? Decide how you integrate Payments and build
                                     advanced and reliable products yourself from scratch.{" "}
-                                </Feature2>
+                                </Feature>
                             </Stack>
                         </GridItem>
                     </SimpleGrid>
@@ -235,4 +213,4 @@ const Choc = () => {
         </>
     );
 };
-export default Choc;
+export default SoftwareEngineering;

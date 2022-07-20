@@ -1,0 +1,48 @@
+{
+    "data": [
+        {
+            "locale": "en",
+            "head": {
+                "title": "Manufacturing - Ochoa - International Product Development, Design and Production",
+                "description": ""
+            },
+            "block1": {
+                "header": "Manufacturing provided by our partners in Hong Kong SAR.",
+                "text": "Being able to manufacture at a lower cost is essential but being able to establish trust with a foreign business presents many challenges like language barriers. But not to worry! We already have done this step for you.",
+                "button": "More Information"
+            },
+            "block2": {
+                "header": "Lorem ipsum dolor sit amet",
+                "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris",
+                "button": "Lorem ipsum"
+            },
+            "block3": {
+                "header": "Lorem ipsum dolor sit amet",
+                "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris",
+                "button": "Lorem ipsum"
+            }
+        },
+        {
+            "locale": "es",
+            "head": {
+                "title": "Manufacturing - Ochoa - International Product Development, Design and Production",
+                "description": ""
+            },
+            "block1": {
+                "header": "Manufacturing provided by our partners in Hong Kong SAR.",
+                "text": "Being able to manufacture at a lower cost is essential but being able to establish trust with a foreign business presents many challenges like language barriers. But not to worry! We already have done this step for you.",
+                "button": "More Information"
+            },
+            "block2": {
+                "header": "Lorem ipsum dolor sit amet",
+                "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris",
+                "button": "Lorem ipsum"
+            },
+            "block3": {
+                "header": "Lorem ipsum dolor sit amet",
+                "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris",
+                "button": "Lorem ipsum"
+            }
+        }
+    ]
+}

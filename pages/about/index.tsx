@@ -101,6 +101,14 @@ const IndexAbout = () => {
 
 
         <Grid templateColumns={{ base: 'repeat(1, 1fr)', sm: 'repeat(2, 1fr)', md: 'repeat(2, 1fr)', }} gap={4}>
+          <GridItem display={{ base: 'flex', sm: 'none' }} colSpan={1}>
+            <VStack alignItems="flex-end" spacing="20px">
+              <Heading>Why us</Heading>
+              {/* <Button colorScheme="green" size="md">
+                Call To Action
+              </Button> */}
+            </VStack>
+          </GridItem>
           <GridItem>
             <Flex>
               <Text>
@@ -137,7 +145,7 @@ const IndexAbout = () => {
             </Flex>
           </GridItem>
           <GridItem colSpan={1}>
-            <VStack alignItems="flex-end" spacing="20px">
+            <VStack display={{ base: 'none', sm: 'flex' }} alignItems="flex-end" spacing="20px">
               <Heading>Why us</Heading>
               {/* <Button colorScheme="green" size="md">
                 Call To Action
@@ -172,10 +180,10 @@ const IndexAbout = () => {
             text={'Short text describing one of you features/service'}
           />
         </Grid> */}
+        <Divider mt={16} mb={16} />
+
+
       </Box>
-
-      <Divider mt={16} mb={16} />
-
       <Box as="section" pt={'6'} pb={16} maxW={{ base: 'xl', md: '7xl' }} textAlign={{ md: 'center', sm: 'center', base: 'start' }} mx={"auto"} px={{ base: '6', md: '8' }}>
         <Heading pointerEvents={'none'} fontWeight="bold" maxW="xlg" mx="auto">
           {`Made with`}

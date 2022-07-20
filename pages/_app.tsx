@@ -1,13 +1,13 @@
 import type { AppProps } from 'next/app'
 import Head from 'next/head'
 import { ChakraProvider } from '@chakra-ui/react'
-import Layout from '../components/layout'
+import { MainLayout } from '../components'
 import React from 'react'
 
 export default function MyApp({ Component, pageProps }: AppProps) {
   return (
     <ChakraProvider>
-      <Layout>
+      <MainLayout>
         <Head>
           <meta charSet='utf-8' />
           <meta name='viewport' content='initial-scale=1.0, height=device-height, width=device-width' />
@@ -22,7 +22,6 @@ export default function MyApp({ Component, pageProps }: AppProps) {
           <meta property="og:title" content="International Product Development, Design and Production" />
           <meta property="og:description" content="Full-service product development with Ochoa, Providing services from software, hardware and mechanical engineering. And electronics manufacturing." />
           <meta property="og:image" content="https://ochoa.pro/perma/metatag.png" />
-          <meta property="og:image:secure_url" content="https://ochoa.pro/perma/metatag.png" />
           <meta property="og:image:width" content="1200" />
           <meta property="og:image:height" content="628" />
 
@@ -34,7 +33,7 @@ export default function MyApp({ Component, pageProps }: AppProps) {
 
         </Head>
         <Component {...pageProps} />
-      </Layout>
+      </MainLayout>
     </ChakraProvider >
   )
 }
