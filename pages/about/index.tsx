@@ -72,7 +72,7 @@ const IndexAbout = () => {
         <title>About Us - Ochoa - International Product Development, Design and Production</title>
         <meta name="description" content={"We keep developing systems to automate simple and complicated industrial processes. Contact us to know more."} />
       </Head>
-      <Box as={Container} maxW="7xl" mt={14} p={4}>
+      <Box pointerEvents={'none'} as={Container} maxW="7xl" mt={14} p={4}>
         <Grid templateColumns={{ base: 'repeat(1, 1fr)', sm: 'repeat(2, 1fr)', md: 'repeat(2, 1fr)', }} gap={4}>
           <GridItem colSpan={1}>
             <VStack alignItems="flex-start" spacing="20px">
@@ -176,7 +176,7 @@ const IndexAbout = () => {
 
       <Divider mt={16} mb={16} />
 
-      <Box as="section" py={'6'} maxW={{ base: 'xl', md: '7xl' }} textAlign={{ md: 'center', sm: 'center', base: 'start' }} mx={"auto"} px={{ base: '6', md: '8' }}>
+      <Box as="section" pt={'6'} pb={16} maxW={{ base: 'xl', md: '7xl' }} textAlign={{ md: 'center', sm: 'center', base: 'start' }} mx={"auto"} px={{ base: '6', md: '8' }}>
         <Heading pointerEvents={'none'} fontWeight="bold" maxW="xlg" mx="auto">
           {`Made with`}
         </Heading>

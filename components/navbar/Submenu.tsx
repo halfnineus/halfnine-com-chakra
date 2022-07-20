@@ -21,12 +21,14 @@ import { Variants } from 'framer-motion'
 import { HTMLMotionProps, motion } from 'framer-motion'
 
 
+
 // MotionBox
 
 export type MotionBoxProps = BoxProps & HTMLMotionProps<'div'>
 export const MotionBox = motion<BoxProps>(Box)
 
 // end MotionBox
+
 
 
 // NavLink
@@ -82,6 +84,8 @@ export const NavLink = {
 
 // end NavLink
 
+
+
 // NavMenu
 
 export const NavMenu = (props: MotionBoxProps) => (
@@ -129,12 +133,7 @@ const variants: Variants = {
 
 
 
-
-
-
-
 // SubmenuItem
-
 
 interface SubmenuItemProps extends HTMLChakraProps<'a'> {
   title: string
@@ -202,6 +201,7 @@ export const SubmenuItem = (props: SubmenuItemProps) => {
 
 
 // useNavMenu
+
 const getTarget = (event: React.FocusEvent) =>
   (event.relatedTarget || document.activeElement) as HTMLElement
 
@@ -320,10 +320,6 @@ function useNavMenu() {
 }
 
 //end useNavMenu
-
-
-
-
 
 
 

@@ -2,12 +2,12 @@ import { Box, Heading, Image, SimpleGrid, useColorModeValue, Text } from "@chakr
 import Head from "next/head"
 import { useRouter } from "next/router"
 
-import img1 from '../../public/perma/1.png'
-import img2 from '../../public/perma/2.png'
-import img3 from '../../public/perma/3.png'
-import img4 from '../../public/perma/4.png'
-import img5 from '../../public/perma/5.png'
-import img6 from '../../public/perma/6.png'
+import img1 from '../../public/img/portfolio/1.png'
+import img2 from '../../public/img/portfolio/2.png'
+import img3 from '../../public/img/portfolio/3.png'
+import img4 from '../../public/img/portfolio/4.png'
+import img5 from '../../public/img/portfolio/5.png'
+import img6 from '../../public/img/portfolio/6.png'
 
 import portafoliodat from '../assets/portfolio.json'
 const IndexPortfolio = () => {

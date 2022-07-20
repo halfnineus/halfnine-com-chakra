@@ -13,7 +13,6 @@ import {
     useColorModeValue,
 } from '@chakra-ui/react'
 import Head from 'next/head'
-import devsrc from '../../../public/perma/Mechanical-Engineering-Image-min.png'
 
 const Choc = () => {
     const Feature = (props: any) => {
@@ -151,7 +150,7 @@ const Choc = () => {
                                 gridRowGap={{ md: 10 }}
                             >
                                 <Feature2 title="Invite team members">
-                                    Improve your conversion rates by monitoring exactly what’s going
+                                    Improve your conversion rates by monitoring exactly what's going
                                     on while your customers are in trial.{" "}
                                 </Feature2>
                                 <Feature2 title="Unify your payments stack">
@@ -163,7 +162,7 @@ const Choc = () => {
                                     Provide a seamless customer experience across channels, like
                                     reserving online and picking up in store.
                                 </Feature2>
-                                <Feature2 title="Grow your platform’s revenue">
+                                <Feature2 title="Grow your platform's revenue">
                                     {" "}
                                     Add in-person payments to your platform or marketplace. Using
                                     Terminal with Connect.{" "}
@@ -183,14 +182,8 @@ const Choc = () => {
                     </SimpleGrid>
                 </Box>
             </Flex>
-
-
-
-
-
-
             <Box
-                maxW={{ base: 'xl', md: '98%' }}
+                maxW={{ base: 'xl', md: '100%' }}
                 mx="auto"
                 px={{ base: '6', md: '20' }}
                 py={{ base: '6', md: '8' }}
@@ -225,16 +218,16 @@ const Choc = () => {
                         <Box minH={'40'} />
                     </Box>
                     <Box pos="relative" w={{ base: 'full', lg: '560px' }} h={{ base: 'auto', lg: '560px' }}>
-                        <Img
+                        {/* <Img
                             w="full"
                             pos="relative"
                             zIndex="1"
                             h={{ lg: '100%' }}
                             objectFit="cover"
-                            src={devsrc.src}
+                            // src={devsrc.src}
                             alt="Screening talent"
                             pointerEvents={"none"}
-                        />
+                        /> */}
                         <Box
                             pos="absolute"
                             w="100%"
@@ -303,7 +296,7 @@ const Choc = () => {
                     </Feature>
 
                     <Feature
-                        title={`Grow your platform’s revenue`}
+                        title={`Grow your platform's revenue`}
                         icon={
                             <path
                                 strokeLinecap="round"

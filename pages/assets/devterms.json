@@ -1,0 +1,60 @@
+{
+    "data": [
+        {
+            "locale": "en",
+            "title": {
+                "h1": "Standard terms in a Development Contract",
+                "txt": "This is the the Asian International Arbitration Centre (AIAC) standard form contract for software development relased under (TEC) which aims to provide an easy-to-use template encompassing the technology industry practices to ensure the rights of stakeholders involved are balanced."
+            },
+            "block": {
+                "item1": "Services to be provided and obligations",
+                "item1d": "The type of service required of the software developer and type of software to be developed.",
+                "item2": "Cost and payment terms",
+                "item2d": "The total cost and payment terms will either be based on progressive milestone payments (time and materials) or a fixed/lump sum payment.",
+                "item3": "Project timeline",
+                "item3d": "The timeline sets out the commencement date of the project development and the term of the contract. It is also important to address whether extensions of time are allowed and the consequences of delays.",
+                "item4": "Variation",
+                "item4d": "Variation clauses address terms and conditions to cater for variations to the software required by the customer before completion of the project. These variations refer to changes to either the specifications, features or design of the software and usually come at an added cost to the customer by the software developer.",
+                "item5": "Testing - User Acceptance Test/ Final Acceptance Test",
+                "item5d_1": "User acceptance tests are based on user requirements and specifications to be carried out upon completion of the design, development and installation of the software which involve either a conditional trial run period or the client testing.",
+                "item5d_2": "Final acceptance tests are the final stages of testing the software (if required) after the user acceptance test, which involves testing of rectified bugs, errors or other defects highlighted in the user acceptance test (if any).",
+                "item6": "Liquidated Ascertained Damages",
+                "item6d": "Liquidated ascertained damages clauses are included to compensate the customer at predetermined rates in the event of any delay towards completion of the project.",
+                "item7": "Intellectual Property Rights",
+                "item7d": "To address ownership rights of the software and other intellectual properties developed in connection with the contract upon completion and, in some cases, ownership rights of property relating to the software before completion.",
+                "item8": "Confidentiality and Non-Disclosure",
+                "item8d": "Confidentiality clauses for software development contracts is an important element to ensure parties maintain confidentiality during the development and implementation phases. Confidentiality obligations typically survive the expiration or termination of the contract.",
+                "item9": "Support and Maintenance",
+                "item9d": "It is common for software development contracts to include pre-agreed service level agreements to be attached as annexures to cater for support and maintenance of operating the software after development by the same software developer. This would cover technical elements of when, how and where the support and maintenance services will be provided as well as cost for such services for a specified period of time."
+            }
+        },
+        {
+            "locale": "es",
+            "title": {
+                "h1": "Standard terms in a Development Contract",
+                "txt": "This is the the Asian International Arbitration Centre (AIAC) standard form contract for software development relased under (TEC) which aims to provide an easy-to-use template encompassing the technology industry practices to ensure the rights of stakeholders involved are balanced."
+            },
+            "block": {
+                "item1": "Services to be provided and obligations",
+                "item1d": "The type of service required of the software developer and type of software to be developed.",
+                "item2": "Cost and payment terms",
+                "item2d": "The total cost and payment terms will either be based on progressive milestone payments (time and materials) or a fixed/lump sum payment.",
+                "item3": "Project timeline",
+                "item3d": "The timeline sets out the commencement date of the project development and the term of the contract. It is also important to address whether extensions of time are allowed and the consequences of delays.",
+                "item4": "Variation",
+                "item4d": "Variation clauses address terms and conditions to cater for variations to the software required by the customer before completion of the project. These variations refer to changes to either the specifications, features or design of the software and usually come at an added cost to the customer by the software developer.",
+                "item5": "Testing - User Acceptance Test/ Final Acceptance Test",
+                "item5d_1": "User acceptance tests are based on user requirements and specifications to be carried out upon completion of the design, development and installation of the software which involve either a conditional trial run period or the client testing.",
+                "item5d_2": "Final acceptance tests are the final stages of testing the software (if required) after the user acceptance test, which involves testing of rectified bugs, errors or other defects highlighted in the user acceptance test (if any).",
+                "item6": "Liquidated Ascertained Damages",
+                "item6d": "Liquidated ascertained damages clauses are included to compensate the customer at predetermined rates in the event of any delay towards completion of the project.",
+                "item7": "Intellectual Property Rights",
+                "item7d": "To address ownership rights of the software and other intellectual properties developed in connection with the contract upon completion and, in some cases, ownership rights of property relating to the software before completion.",
+                "item8": "Confidentiality and Non-Disclosure",
+                "item8d": "Confidentiality clauses for software development contracts is an important element to ensure parties maintain confidentiality during the development and implementation phases. Confidentiality obligations typically survive the expiration or termination of the contract.",
+                "item9": "Support and Maintenance",
+                "item9d": "It is common for software development contracts to include pre-agreed service level agreements to be attached as annexures to cater for support and maintenance of operating the software after development by the same software developer. This would cover technical elements of when, how and where the support and maintenance services will be provided as well as cost for such services for a specified period of time."
+            }
+        }
+    ]
+}

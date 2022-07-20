@@ -10,7 +10,7 @@ import { FaIndustry, FaShippingFast } from 'react-icons/fa'
 import { BsFileEarmarkPerson } from 'react-icons/bs'
 import { GiProtectionGlasses } from 'react-icons/gi'
 
-import ximg from '../public/perma/x.jpg'
+import ximg from '../public/img/index/x.jpg'
 import indexdat from './assets/index.json'
 
 const IndexPage = () => {
