@@ -1,7 +1,7 @@
 import { useRouter } from 'next/router';
 import { Box, Container, Flex, Heading, SimpleGrid, Text, useColorModeValue, } from '@chakra-ui/react'
 
-import devdat from '../assets/devterms.json'
+import devdat from '../../assets/devterms.json'
 
 const Feature = (props: any) => {
     return (

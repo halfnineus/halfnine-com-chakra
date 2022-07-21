@@ -6,10 +6,8 @@ import {
   Text,
   useColorModeValue,
   Image,
-  Link,
   GridItem,
   Container,
-  Button,
   VStack,
   Flex,
   Divider,
@@ -18,7 +16,9 @@ import {
 } from '@chakra-ui/react';
 
 import Head from 'next/head'
-import { Router } from 'next/router';
+import { useRouter } from "next/router"
+
+import aboutdat from '../../assets/about.json'
 
 import img1 from './brands/1.png'
 import img2 from './brands/2.png'
@@ -42,7 +42,9 @@ const Feature = ({ heading, text }: FeatureProps) => {
   );
 };
 
+
 const IndexAbout = () => {
+  const { locale } = useRouter()
   const BuiltWith = (children: any) => {
     return (
       <Box
@@ -68,134 +70,95 @@ const IndexAbout = () => {
   }
   return (
     <>
-      <Head>
-        <title>About Us - Ochoa - International Product Development, Design and Production</title>
-        <meta name="description" content={"We keep developing systems to automate simple and complicated industrial processes. Contact us to know more."} />
-      </Head>
-      <Box pointerEvents={'none'} as={Container} maxW="7xl" mt={14} p={4}>
-        <Grid templateColumns={{ base: 'repeat(1, 1fr)', sm: 'repeat(2, 1fr)', md: 'repeat(2, 1fr)', }} gap={4}>
-          <GridItem colSpan={1}>
-            <VStack alignItems="flex-start" spacing="20px">
-              <Heading>About us</Heading>
-              {/* <Button colorScheme="green" size="md">
-                Call To Action
-              </Button> */}
-            </VStack>
-          </GridItem>
-          <GridItem>
-            <Flex>
-              <Text>
-                {`Hi there, we are the Ochoa's, A family of engineers, immigrants starting a business in the United States, chasing the American Dream, opportunity for prosperity and success.`}
-              </Text>
-            </Flex>
-            <Divider mt={4} mb={4} />
-            <Flex>
-              <Text>
-                {`We want to make the world better by Automating simple and repetitive tasks. If you give us the chance, we believe we will work our hardest and won't disappoint.`}
-              </Text>
-            </Flex>
-          </GridItem>
-        </Grid>
+      {aboutdat.data.filter(p => p.locale === locale).map((aboutData, i) => {
+        return (
+          <>
+            <Head><title>{aboutData.head.title}</title><meta name="description" content={aboutData.head.description} /></Head>
+            <Box pointerEvents={'none'} as={Container} maxW="7xl" mt={14} p={4}>
+              <Grid templateColumns={{ base: 'repeat(1, 1fr)', sm: 'repeat(2, 1fr)', md: 'repeat(2, 1fr)', }} gap={4}>
+                <GridItem colSpan={1}>
+                  <VStack alignItems="flex-start" spacing="20px">
+                    <Heading>{aboutData.block1.heading}</Heading>
+                  </VStack>
+                </GridItem>
+                <GridItem>
+                  <Flex><Text>{aboutData.block1.i1}</Text></Flex>
+                  <Divider mt={4} mb={4} />
+                  <Flex><Text>{aboutData.block1.i2}</Text></Flex>
+                </GridItem>
+              </Grid>
 
-        <Divider mt={16} mb={16} />
+              <Divider mt={16} mb={16} />
 
 
-        <Grid templateColumns={{ base: 'repeat(1, 1fr)', sm: 'repeat(2, 1fr)', md: 'repeat(2, 1fr)', }} gap={4}>
-          <GridItem display={{ base: 'flex', sm: 'none' }} colSpan={1}>
-            <VStack alignItems="flex-end" spacing="20px">
-              <Heading>Why us</Heading>
-              {/* <Button colorScheme="green" size="md">
-                Call To Action
-              </Button> */}
-            </VStack>
-          </GridItem>
-          <GridItem>
-            <Flex>
-              <Text>
-                {`Developing and Manufacturing becomes complex with scale. And many costly mistakes are taken through the path.`}
-              </Text>
-            </Flex>
-            <Divider mt={2} mb={2} />
-            <Flex>
-              <Text>
-                {`Chosing our profesional experience makes your project faster and more cost efficient.`}
-              </Text>
-            </Flex>
-            <Divider mt={2} mb={2} />
-            <Flex>
-              <Text>
-                {`Your ability scale directly affects if and how your business grows.`}
-              </Text>
-            </Flex>
-            <Divider mt={2} mb={2} />
-            <Flex>
-              <Text>
-                {`With our experience making software we have to see it from the point of the investors,
-                  what do they want done what are the technologies resources needed , what are the better
-                  alternatives for functionality. and how can we build a team around the idea making it a 
-                  cost effective product without overspending on overthinking and over engineering.`}
-              </Text>
-            </Flex>
-            <Divider mt={2} mb={2} />
-            <Flex>
-              <Text>
-                {`Upgrading environments merging teams and organizing large technological issues is a nightmare
-                   and if you're knowledge on technology is not that big that's why we are here.`}
-              </Text>
-            </Flex>
-          </GridItem>
-          <GridItem colSpan={1}>
-            <VStack display={{ base: 'none', sm: 'flex' }} alignItems="flex-end" spacing="20px">
-              <Heading>Why us</Heading>
-              {/* <Button colorScheme="green" size="md">
-                Call To Action
-              </Button> */}
-            </VStack>
-          </GridItem>
-        </Grid>
+              <Grid templateColumns={{ base: 'repeat(1, 1fr)', sm: 'repeat(2, 1fr)', md: 'repeat(2, 1fr)', }} gap={4}>
+                <GridItem display={{ base: 'flex', sm: 'none' }} colSpan={1}>
+                  <VStack alignItems="flex-end" spacing="20px">
+                    <Heading>{aboutData.block2.heading}</Heading>
+                  </VStack>
+                </GridItem>
+                <GridItem>
+                  <Flex><Text>{aboutData.block2.i1}</Text></Flex>
+                  <Divider mt={2} mb={2} />
+                  <Flex><Text>{aboutData.block2.i2}</Text></Flex>
+                  <Divider mt={2} mb={2} />
+                  <Flex><Text>{aboutData.block2.i3}</Text></Flex>
+                  <Divider mt={2} mb={2} />
+                  <Flex><Text>{aboutData.block2.i4}</Text></Flex>
+                  <Divider mt={2} mb={2} />
+                  <Flex><Text>{aboutData.block2.i5}</Text></Flex>
+                </GridItem>
+                <GridItem colSpan={1}>
+                  <VStack display={{ base: 'none', sm: 'flex' }} alignItems="flex-end" spacing="20px">
+                    <Heading>{aboutData.block2.heading}</Heading>
+                  </VStack>
+                </GridItem>
+              </Grid>
+              <Divider mt={16} mb={4} />
 
-        {/* <Divider mt={16} mb={16} />
-
-        <Grid
-          templateColumns={{
-            base: 'repeat(1, 1fr)',
-            sm: 'repeat(2, 1fr)',
-            md: 'repeat(4, 1fr)',
-          }}
-          gap={{ base: '8', sm: '12', md: '16' }}>
-          <Feature
-            heading={'First Feature'}
-            text={'Short text describing one of you features/service'}
-          />
-          <Feature
-            heading={'Second Feature'}
-            text={'Short text describing one of you features/service'}
-          />
-          <Feature
-            heading={'Third Feature'}
-            text={'Short text describing one of you features/service'}
-          />
-          <Feature
-            heading={'Fourth Feature'}
-            text={'Short text describing one of you features/service'}
-          />
-        </Grid> */}
-        <Divider mt={16} mb={16} />
+              {/* 
+              <Grid
+                templateColumns={{
+                  base: 'repeat(1, 1fr)',
+                  sm: 'repeat(2, 1fr)',
+                  md: 'repeat(4, 1fr)',
+                }}
+                gap={{ base: '8', sm: '12', md: '16' }}>
+                <Feature
+                  heading={'Lorem ipsum'}
+                  text={'Short text describing one of you features/service'}
+                />
+                <Feature
+                  heading={'Lorem ipsum'}
+                  text={'Short text describing one of you features/service'}
+                />
+                <Feature
+                  heading={'Lorem ipsum'}
+                  text={'Short text describing one of you features/service'}
+                />
+                <Feature
+                  heading={'Fourth Feature'}
+                  text={'Short text describing one of you features/service'}
+                />
+              </Grid>
+              <Divider mt={16} mb={16} /> */}
 
 
-      </Box>
-      <Box as="section" pt={'6'} pb={16} maxW={{ base: 'xl', md: '7xl' }} textAlign={{ md: 'center', sm: 'center', base: 'start' }} mx={"auto"} px={{ base: '6', md: '8' }}>
-        <Heading pointerEvents={'none'} fontWeight="bold" maxW="xlg" mx="auto">
-          {`Made with`}
-        </Heading>
-        <SimpleGrid columns={{ base: 1, sm: 2, md: 3, lg: 5 }} mt="8" spacing={'6'} pointerEvents={'none'}>
-          <BuiltWith tech={'Node.js'} img={img1.src} />
-          <BuiltWith tech={'React'} img={img2.src} />
-          <BuiltWith tech={'Next.js'} img={img3.src} />
-          <BuiltWith tech={'SQLite'} img={img4.src} />
-          <BuiltWith tech={'Nodemailer'} img={img5.src} />
-        </SimpleGrid>
-      </Box>
+            </Box>
+            <Box as="section" pt={'6'} pb={16} maxW={{ base: 'xl', md: '7xl' }} textAlign={{ md: 'center', sm: 'center', base: 'start' }} mx={"auto"} px={{ base: '6', md: '8' }}>
+              <Heading pointerEvents={'none'} fontWeight="bold" maxW="xlg" mx="auto">
+                {`Made with`}
+              </Heading>
+              <SimpleGrid columns={{ base: 1, sm: 2, md: 3, lg: 5 }} mt="8" spacing={'6'} pointerEvents={'none'}>
+                <BuiltWith tech={'Node.js'} img={img1.src} />
+                <BuiltWith tech={'React'} img={img2.src} />
+                <BuiltWith tech={'Next.js'} img={img3.src} />
+                <BuiltWith tech={'SQLite'} img={img4.src} />
+                <BuiltWith tech={'Nodemailer'} img={img5.src} />
+              </SimpleGrid>
+            </Box>
+          </>)
+      })}
     </>
   );
 }

@@ -1,0 +1,44 @@
+{
+    "data": [
+        {
+            "locale": "en",
+            "head": {
+                "title": "About Us - Ochoa - International Product Development, Design and Production",
+                "description": "Developing systems to automate simple and complicated industrial processes. Contact us to know more."
+            },
+            "block1": {
+                "heading": "About us",
+                "i1": "Hi there, we are the Ochoa's, A family of engineers, immigrants starting a business in the United States, chasing the American Dream, opportunity for prosperity and success.",
+                "i2": "Ochoa offers Agile Automation services and  provides end-to-end solutions for product development, design and manufacturing through our experts and professionals."
+            },
+            "block2": {
+                "heading": "Why us",
+                "i1": "Developing and Manufacturing becomes complex with scale. And many costly mistakes are taken through the path.",
+                "i2": "Chosing our profesional experience makes your project faster and more cost efficient.",
+                "i3": "We develop Scalable technology and Your ability scale directly affects if and how your business grows.",
+                "i4": "With our experience making software we have to see it from the point of the investors, what do they want done what are the technologies resources needed , what are the better alternatives for functionality. and how can we build a team around the idea making it a cost effective product without overspending on overthinking and over engineering.",
+                "i5": "Upgrading environments merging teams and organizing large technological issues is a nightmare and if you're knowledge on technology is not that big that's why we are here."
+            }
+        },
+        {
+            "locale": "es",
+            "head": {
+                "title": "About Us - Ochoa - International Product Development, Design and Production",
+                "description": "Developing systems to automate simple and complicated industrial processes. Contact us to know more."
+            },
+            "block1": {
+                "heading": "About us",
+                "i1": "Hi there, we are the Ochoa's, A family of engineers, immigrants starting a business in the United States, chasing the American Dream, opportunity for prosperity and success.",
+                "i2": "Ochoa offers Agile Automation services and  provides end-to-end solutions for product development, design and manufacturing through our experts and professionals."
+            },
+            "block2": {
+                "heading": "Why us",
+                "i1": "Developing and Manufacturing becomes complex with scale. And many costly mistakes are taken through the path.",
+                "i2": "Chosing our profesional experience makes your project faster and more cost efficient.",
+                "i3": "We develop Scalable technology and Your ability scale directly affects if and how your business grows.",
+                "i4": "With our experience making software we have to see it from the point of the investors, what do they want done what are the technologies resources needed , what are the better alternatives for functionality. and how can we build a team around the idea making it a cost effective product without overspending on overthinking and over engineering.",
+                "i5": "Upgrading environments merging teams and organizing large technological issues is a nightmare and if you're knowledge on technology is not that big that's why we are here."
+            }
+        }
+    ]
+}

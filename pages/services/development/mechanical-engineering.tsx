@@ -6,14 +6,13 @@ import {
     GridItem,
     Heading,
     Icon,
-    Img,
     SimpleGrid,
     Stack,
     Text,
     useColorModeValue,
 } from '@chakra-ui/react'
 import Head from 'next/head'
-import DevTerms from '../../../components/devterms';
+import DevTerms from '../../../components/dev/terms';
 
 const ElectronicEngineering = () => {
     const Feature = (props: any) => {
@@ -176,8 +175,7 @@ const ElectronicEngineering = () => {
                             Get world class talents for your project
                         </Heading>
                         <Text pointerEvents={'none'} color={useColorModeValue('gray.600', 'gray.400')} mt="4" fontSize="lg" fontWeight="medium">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                            incididunt ut labore et dolore magna aliqua.
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                         </Text>
                         <Stack direction={{ base: 'column', md: 'row' }} spacing="4" mt="8">
                             <Button size="lg" minW="140px" colorScheme="blue" height="14" px="8">

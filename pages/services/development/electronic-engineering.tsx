@@ -1,19 +1,16 @@
 import {
     Box,
-    Button,
     chakra,
     Flex,
     GridItem,
-    Heading,
     Icon,
-    Img,
     SimpleGrid,
     Stack,
-    Text,
     useColorModeValue,
 } from '@chakra-ui/react'
 import Head from 'next/head'
-import DevTerms from '../../../components/devterms';
+import { DevTerms, CTA } from '../../../components/dev';
+import EEimg from '../../../public/img/development/ElectronicEngineering.jpg'
 
 const ElectronicEngineering = () => {
     const Feature = (props: any) => {
@@ -151,64 +148,13 @@ const ElectronicEngineering = () => {
                     </SimpleGrid>
                 </Box>
             </Flex>
-            <Box
-                maxW={{ base: 'xl', md: '100%' }}
-                mx="auto"
-                px={{ base: '6', md: '20' }}
-                py={{ base: '6', md: '8' }}
-            >
-                <Stack
-                    direction={{ base: 'column', lg: 'row' }}
-                    spacing={{ base: '3rem', lg: '2rem' }}
-                    mt="8"
-                    align={{ lg: 'center' }}
-                    justify="space-between"
-                >
-                    <Box flex="1" maxW={{ lg: '520px' }}>
-                        <Heading
-                            as="h1"
-                            size="3xl"
-                            pointerEvents={'none'}
-                            mt="8"
-                            fontWeight="extrabold"
-                            letterSpacing="tight"
-                        >
-                            Get world class talents for your project
-                        </Heading>
-                        <Text pointerEvents={'none'} color={useColorModeValue('gray.600', 'gray.400')} mt="4" fontSize="lg" fontWeight="medium">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                            incididunt ut labore et dolore magna aliqua.
-                        </Text>
-                        <Stack direction={{ base: 'column', md: 'row' }} spacing="4" mt="8">
-                            <Button size="lg" minW="140px" colorScheme="blue" height="14" px="8">
-                                Contact Us
-                            </Button>
-                        </Stack>
-                        <Box minH={'40'} />
-                    </Box>
-                    <Box pos="relative" w={{ base: 'full', lg: '560px' }} h={{ base: 'auto', lg: '560px' }}>
-                        {/* <Img
-                            w="full"
-                            pos="relative"
-                            zIndex="1"
-                            h={{ lg: '100%' }}
-                            objectFit="cover"
-                            // src={devsrc.src}
-                            alt="Screening talent"
-                            pointerEvents={"none"}
-                        /> */}
-                        <Box
-                            pos="absolute"
-                            w="100%"
-                            h="100%"
-                            top="-4"
-                            left="-4"
-                            bg={useColorModeValue('gray.200', 'gray.700')}
-                        />
-                    </Box>
-                </Stack>
-                <Box padding={'4'} />
-            </Box>
+            <CTA
+                src={EEimg.src}
+                toptext={"Award winning support"}
+                heading={"Get world class talents for your project"}
+                text={"Get the #1 Business Messenger and start delivering personalized experiences at every stage of the customer journey."}
+                buttontxt={'Visit the Help Centre'}
+            />
             <DevTerms />
         </>
     );

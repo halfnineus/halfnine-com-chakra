@@ -6,7 +6,6 @@ import {
     GridItem,
     Heading,
     Icon,
-    Img,
     SimpleGrid,
     Stack,
     Text,
@@ -14,7 +13,7 @@ import {
 } from '@chakra-ui/react'
 import Head from 'next/head'
 
-import DevTerms from '../../../components/devterms';
+import DevTerms from '../../../components/dev/terms';
 
 const ProductDesign = () => {
     const Feature = (props: any) => {
