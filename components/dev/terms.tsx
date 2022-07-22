@@ -1,5 +1,5 @@
 import { useRouter } from 'next/router';
-import { Box, Container, Flex, Heading, SimpleGrid, Text, useColorModeValue, } from '@chakra-ui/react'
+import { Box, Container, Flex, Heading, SimpleGrid, Text, useColorModeValue as mode, } from '@chakra-ui/react'
 
 import devdat from '../../assets/components/devterms.json'
 
@@ -18,7 +18,7 @@ const Feature = (props: any) => {
             </Heading>
             <Text
                 lineHeight="tall"
-                color={useColorModeValue("gray.600", "gray.400")}
+                color={mode("gray.600", "gray.400")}
             >
                 {props.children}
             </Text>
@@ -41,11 +41,11 @@ const DevTerms = () => {
                             alignItems="center"
                             pointerEvents={'none'}
                         >
-                            <Box bg={useColorModeValue("gray.50", "gray.700")} rounded={24} mx="auto" shadow="md" pb={20}>
+                            <Box bg={mode("gray.50", "gray.700")} rounded={24} mx="auto" shadow="md" pb={20}>
                                 <Box my={12} textAlign={'center'}>
                                     <Container maxW='container.xl' >
                                         <Heading mb={3}>{devtermDat.title.h1}</Heading>
-                                        <Text color={useColorModeValue("gray.600", "gray.400")}>{devtermDat.title.txt}</Text>
+                                        <Text color={mode("gray.600", "gray.400")}>{devtermDat.title.txt}</Text>
                                     </Container>
                                 </Box>
                                 <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} spacing={20} px={{ base: 4, lg: 16, xl: 24 }}>

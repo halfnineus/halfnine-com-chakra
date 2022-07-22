@@ -5,7 +5,7 @@ import {
     Box,
     SimpleGrid,
     Heading,
-    useColorModeValue,
+    useColorModeValue as mode,
     Image,
     Divider,
 } from '@chakra-ui/react';
@@ -35,7 +35,7 @@ export default function WithBackgroundImage() {
                         justifyContent="center"
                         alignItems="center"
                     >
-                        <Box rounded={'20'} bg={useColorModeValue('gray.50', 'gray.700')} shadow="lg" px={8} py={20} mx="auto">
+                        <Box rounded={'20'} bg={mode('gray.50', 'gray.700')} shadow="lg" px={8} py={20} mx="auto">
                             <SimpleGrid alignItems="start" columns={{ base: 1, md: 2 }} spacingY={{ base: 10, md: 32 }} spacingX={{ base: 10, md: 24 }}>
                                 <Box>
                                     <Heading mb={4} textAlign={{ base: "center", sm: "left" }} lineHeight={{ md: "shorter" }} pointerEvents={'none'}>
@@ -44,7 +44,7 @@ export default function WithBackgroundImage() {
                                     <Text
                                         mb={5}
                                         textAlign={{ base: "center", sm: "left" }}
-                                        color={useColorModeValue('gray.600', 'gray.400')}
+                                        color={mode('gray.600', 'gray.400')}
                                         fontSize={{ md: "lg" }}
                                         pointerEvents={'none'}
                                     >
@@ -75,7 +75,7 @@ export default function WithBackgroundImage() {
                                     <Text
                                         mb={5}
                                         textAlign={{ base: "center", sm: "left" }}
-                                        color={useColorModeValue('gray.600', 'gray.400')}
+                                        color={mode('gray.600', 'gray.400')}
                                         fontSize={{ md: "lg" }}
                                         pointerEvents={'none'}
                                     >
@@ -100,7 +100,7 @@ export default function WithBackgroundImage() {
                                     <Text
                                         mb={5}
                                         textAlign={{ base: "center", sm: "left" }}
-                                        color={useColorModeValue('gray.600', 'gray.400')}
+                                        color={mode('gray.600', 'gray.400')}
                                         fontSize={{ md: "lg" }}
                                         pointerEvents={'none'}
                                     >

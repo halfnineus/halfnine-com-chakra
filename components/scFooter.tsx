@@ -5,7 +5,7 @@ import {
     Link,
     Stack,
     Text,
-    useColorModeValue,
+    useColorModeValue as mode,
 } from '@chakra-ui/react';
 
 import NextLink from 'next/link'
@@ -22,10 +22,10 @@ export default function SCFooter() {
             return (<>
                 <Box minH={{ base: '8rem', md: '4rem', lg: '4rem', }} />
                 <Flex w="full" alignItems="center" justifyContent="center" style={{ position: "absolute", bottom: 0, width: "100%" }}>
-                    <Flex bg={useColorModeValue('blackAlpha.100', 'whiteAlpha.100')} w="full" as="footer" flexDir={{ base: "column", sm: "column", md: "row" }} align="center" justify="space-between" px="6" py="4">
+                    <Flex bg={mode('blackAlpha.100', 'whiteAlpha.100')} w="full" as="footer" flexDir={{ base: "column", sm: "column", md: "row" }} align="center" justify="space-between" px="6" py="4">
                         <NextLink href={'/'} passHref>
                             <Link>
-                                <Image userSelect={'none'} alt={'Ochoa'} pointerEvents={'none'} width={'auto'} height={'8'} src={useColorModeValue(smlog.src, wsmlog.src)} />
+                                <Image userSelect={'none'} alt={'Ochoa'} pointerEvents={'none'} width={'auto'} height={'8'} src={mode(smlog.src, wsmlog.src)} />
                             </Link>
                         </NextLink>
                         <Text pl={{ sm: 'none', md: '16', lg: '32' }} pointerEvents={'none'}>{footerData.components.copyright}</Text>

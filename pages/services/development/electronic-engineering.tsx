@@ -6,7 +6,7 @@ import {
     Icon,
     SimpleGrid,
     Stack,
-    useColorModeValue,
+    useColorModeValue as mode,
 } from '@chakra-ui/react'
 import Head from 'next/head'
 import { DevTerms, CTA } from '../../../components/dev';
@@ -60,7 +60,7 @@ const ElectronicEngineering = () => {
                         boxSize={5}
                         mt={1}
                         mr={2}
-                        color={useColorModeValue("brand.500", "brand.300")}
+                        color={mode("brand.500", "brand.300")}
                         viewBox="0 0 20 20"
                         fill="currentColor"
                     >
@@ -80,7 +80,7 @@ const ElectronicEngineering = () => {
                     >
                         {props.title}
                     </chakra.dt>
-                    <chakra.dd mt={2} color={useColorModeValue("gray.500", "gray.400")}>
+                    <chakra.dd mt={2} color={mode("gray.500", "gray.400")}>
                         {props.children}
                     </chakra.dd>
                 </Box>
@@ -104,7 +104,7 @@ const ElectronicEngineering = () => {
                             justifyContent="center"
                             alignItems="center"
                         >
-                            <Box shadow="md" px={8} py={20} mx="auto" bg={useColorModeValue("gray.50", "gray.700")} rounded={24}>
+                            <Box shadow="md" px={8} py={20} mx="auto" bg={mode("gray.50", "gray.700")} rounded={24}>
                                 <SimpleGrid alignItems="center" columns={{ base: 1, lg: 3 }} spacingY={{ base: 10, lg: 32 }} spacingX={{ base: 10, lg: 24 }}>
                                     <Box alignSelf="start">
                                         <chakra.h2
@@ -130,7 +130,7 @@ const ElectronicEngineering = () => {
                                             mb={6}
                                             fontSize={{ base: "lg", md: "xl" }}
                                             textAlign={{ base: "center", sm: "left" }}
-                                            color={useColorModeValue("gray.600", "gray.500")}
+                                            color={mode("gray.600", "gray.500")}
                                         >
                                             Lorem ipsum dolor sit amet consect adipisicing elit. Possimus
                                             magnam voluptatum cupiditate veritatis in accusamus quisquam.
@@ -145,8 +145,7 @@ const ElectronicEngineering = () => {
                                             gridRowGap={{ md: 10 }}
                                         >
                                             <Feature title="Invite team members">
-                                                Improve your conversion rates by monitoring exactly what's going
-                                                on while your customers are in trial.
+                                                {`Improve your conversion rates by monitoring exactly what's going on while your customers are in trial.`}
                                             </Feature>
                                             <Feature title="Unify your payments stack">
                                                 Manage all your online and offline sales in one place with a
@@ -187,7 +186,7 @@ const ElectronicEngineering = () => {
                                 px={8}
                                 py={8}
                                 mx="auto"
-                                bg={useColorModeValue("gray.50", "gray.700")}
+                                bg={mode("gray.50", "gray.700")}
                                 shadow="md"
                             >
                                 <Box textAlign={{ lg: "center" }}>

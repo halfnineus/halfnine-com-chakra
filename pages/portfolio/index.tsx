@@ -43,13 +43,7 @@ const IndexPortfolio = () => {
                         <Text pointerEvents={'none'} pt={2} fontSize={'lg'} color={'gray.500'}>
                             {protafolioData.block.h2}
                         </Text>
-                        <SimpleGrid
-                            pb={8}
-                            columns={{ base: 1, sm: 2, md: 2, lg: 3 }}
-                            mt="8"
-                            spacing={'6'}
-                            color={useColorModeValue('inherit', 'white')}
-                        >
+                        <SimpleGrid pb={8} columns={{ base: 1, sm: 2, md: 2, lg: 3 }} mt="8" spacing={'6'}>
                             <Feature img={img1.src} title={protafolioData.components.itemTitle1} />
                             <Feature img={img2.src} title={protafolioData.components.itemTitle2} />
                             <Feature img={img3.src} title={protafolioData.components.itemTitle3} />
