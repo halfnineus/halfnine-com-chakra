@@ -1,7 +1,7 @@
 import { useRouter } from 'next/router';
 import { Box, Container, Flex, Heading, SimpleGrid, Text, useColorModeValue, } from '@chakra-ui/react'
 
-import devdat from '../../assets/devterms.json'
+import devdat from '../../assets/components/devterms.json'
 
 const Feature = (props: any) => {
     return (
@@ -35,13 +35,13 @@ const DevTerms = () => {
                         <Flex
                             px={{ base: '6', md: '20' }}
                             pt={{ base: '6', md: '8' }}
-                            pb={{ base: '6', md: '20' }}
+                            pb={{ base: '6', md: '14' }}
                             w="auto"
                             justifyContent="center"
                             alignItems="center"
                             pointerEvents={'none'}
                         >
-                            <Box bg={useColorModeValue("gray.50", "gray.700")} rounded={24} mx="auto" shadow="xl" pb={20}>
+                            <Box bg={useColorModeValue("gray.50", "gray.700")} rounded={24} mx="auto" shadow="md" pb={20}>
                                 <Box my={12} textAlign={'center'}>
                                     <Container maxW='container.xl' >
                                         <Heading mb={3}>{devtermDat.title.h1}</Heading>

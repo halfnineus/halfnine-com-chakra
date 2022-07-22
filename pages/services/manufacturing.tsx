@@ -58,9 +58,7 @@ export default function WithBackgroundImage() {
                                         {manuData.block1.button}
                                     </Button>
                                 </Box>
-                                <Box w="auto" h="auto" bg={useColorModeValue("gray.200", "gray.600")}>
-                                    <Image alt={'img'} pointerEvents={'none'} src={img1.src} />
-                                </Box>
+                                <Image shadow={'md'} rounded={20} alt={'img'} w={'full'} pointerEvents={'none'} src={img1.src} />
                             </SimpleGrid>
                             <Divider my={12} />
                             <SimpleGrid
@@ -91,9 +89,7 @@ export default function WithBackgroundImage() {
                                         {manuData.block1.button}
                                     </Button>
                                 </Box>
-                                <Box w="auto" h="auto" bg={useColorModeValue("gray.200", "gray.600")}>
-                                    <Image alt={'img'} pointerEvents={'none'} src={img2.src} />
-                                </Box>
+                                <Image shadow={'md'} rounded={20} alt={'img'} w={'full'} pointerEvents={'none'} src={img2.src} />
                             </SimpleGrid>
                             <Divider my={12} />
                             <SimpleGrid alignItems="start" columns={{ base: 1, md: 2 }} spacingY={{ base: 10, md: 32 }} spacingX={{ base: 10, md: 24 }}>
@@ -118,9 +114,7 @@ export default function WithBackgroundImage() {
                                         {manuData.block3.button}
                                     </Button>
                                 </Box>
-                                <Box w="auto" h="auto" bg={useColorModeValue("gray.200", "gray.600")}>
-                                    <Image alt={'img'} pointerEvents={'none'} src={img3.src} />
-                                </Box>
+                                <Image shadow={'md'} rounded={20} alt={'img'} w={'full'} pointerEvents={'none'} src={img3.src} />
                             </SimpleGrid>
                         </Box>
                     </Flex >

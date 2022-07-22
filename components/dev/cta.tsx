@@ -1,5 +1,6 @@
 import { SimpleGrid, Flex, Heading, Button, Image, Text, Box } from "@chakra-ui/react";
 import { FiExternalLink } from "react-icons/fi";
+import router from 'next/router'
 
 const CTA = (props: any) => {
     return (
@@ -13,21 +14,22 @@ const CTA = (props: any) => {
                     fit="cover"
                     w="full"
                     loading="lazy"
-                    opacity={0.8}
+                    opacity={0.9}
+                    pointerEvents={'none'}
                 />
             </Flex>
             <Flex direction="column" alignItems="start" justifyContent="center" px={{ base: 4, md: 8, lg: 20 }} py={24} zIndex={3}>
-                <Text fontSize="lg" textTransform="uppercase" fontWeight="bold">
+                <Text pointerEvents={'none'} fontSize="lg" textTransform="uppercase" fontWeight="bold">
                     {props.toptext}
                 </Text>
-                <Heading mb={4} fontSize={"4xl"} lineHeight="shorter" textShadow="2px 0 currentcolor">
+                <Heading pointerEvents={'none'} mb={4} fontSize={"4xl"} lineHeight="shorter" textShadow="2px 0 currentcolor">
                     {props.heading}
                 </Heading>
-                <Text pr={{ base: 0, lg: 16 }} mb={4} fontSize="lg" letterSpacing="wider">
+                <Text pointerEvents={'none'} pr={{ base: 0, lg: 16 }} mb={4} fontSize="lg" letterSpacing="wider">
                     {props.text}
                 </Text>
                 <Box display="inline-flex" rounded="md" shadow="md">
-                    <Button mt={2} rounded="md" rightIcon={<FiExternalLink />} colorScheme={'blue'}>
+                    <Button mt={2} rounded="md" rightIcon={<FiExternalLink />} colorScheme={'blue'} onClick={() => router.push('/contact/')}>
                         {props.buttontxt}
                     </Button>
                 </Box>

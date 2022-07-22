@@ -1,0 +1,30 @@
+{
+    "data": [
+        {
+            "locale": "en",
+            "head": {
+                "title": "Product Design - Ochoa - International Product Development, Design and Production",
+                "description": ""
+            },
+            "cta": {
+                "toptext": "Award winning support",
+                "heading": "Get world class talents for your project",
+                "text": "Get the #1 Business Messenger and start delivering personalized experiences at every stage of the customer journey.",
+                "buttontxt": "Visit the Help Centre"
+            }
+        },
+        {
+            "locale": "es",
+            "head": {
+                "title": "Diseño de Productos - Ochoa - Desarrollo, Diseño y Producción de Producto Internacional",
+                "description": ""
+            },
+            "cta": {
+                "toptext": "Soporte galardonado",
+                "heading": "Obtenga talentos de clase mundial para su proyecto",
+                "text": "Obtenga el Business Messenger numero 1 y comience a brindar experiencias personalizadas en cada etapa del recorrido del cliente.",
+                "buttontxt": "Visite el Centro de ayuda"
+            }
+        }
+    ]
+}
