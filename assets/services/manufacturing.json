@@ -7,19 +7,19 @@
                 "description": ""
             },
             "block1": {
-                "header": "Manufacturing provided by our partners in Hong Kong SAR.",
-                "text": "Being able to manufacture at a lower cost is essential but being able to establish trust with a foreign business presents many challenges like language barriers. But not to worry! We already have done this step for you.",
+                "header": "Manufacturing provided by our partners.",
+                "text": "Communicating effectively with your manufacturers is essential to ensure product quality that is why this job is often given to the developers.",
                 "button": "More Information"
             },
             "block2": {
-                "header": "Lorem ipsum dolor sit amet",
-                "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris",
-                "button": "Lorem ipsum"
+                "header": "Manufacturing in foreign countries",
+                "text": "Being able to manufacture at a lower cost is essential but being able to establish trust with a foreign business presents many challenges like language barriers. But not to worry! We already have done this step for you.",
+                "button": "More Information"
             },
             "block3": {
-                "header": "Lorem ipsum dolor sit amet",
-                "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris",
-                "button": "Lorem ipsum"
+                "header": "Advanced Manufacturing Technologies",
+                "text": "With every year that passes, electronics are growing smaller and more complex, making them more difficult to manufacture.",
+                "button": "More Information"
             }
         },
         {
@@ -29,7 +29,7 @@
                 "description": ""
             },
             "block1": {
-                "header": "Fabricación proporcionada por nuestros socios en la RAE de Hong Kong.",
+                "header": "Fabricación proporcionada por nuestros socios.",
                 "text": "Poder fabricar a un costo más bajo es esencial, pero poder establecer confianza con una empresa extranjera presenta muchos desafíos, como las barreras del idioma. ¡Pero no te preocupes! Ya hemos hecho este paso por ti.",
                 "button": "Más información"
             },

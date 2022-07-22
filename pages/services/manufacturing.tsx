@@ -11,9 +11,9 @@ import {
 } from '@chakra-ui/react';
 import Head from 'next/head';
 
-import img1 from '../../public/img/manufacturing/1.png'
-import img2 from '../../public/img/manufacturing/2.png'
-import img3 from '../../public/img/manufacturing/3.png'
+import img1 from '../../public/img/manufacturing/3.png'
+import img2 from '../../public/img/manufacturing/1.png'
+import img3 from '../../public/img/manufacturing/2.png'
 
 import { useRouter } from 'next/router';
 
@@ -86,7 +86,7 @@ export default function WithBackgroundImage() {
                                         rounded={'lg'}
                                         onClick={() => router.push('/contact')}
                                     >
-                                        {manuData.block1.button}
+                                        {manuData.block2.button}
                                     </Button>
                                 </Box>
                                 <Image shadow={'md'} rounded={20} alt={'img'} w={'full'} pointerEvents={'none'} src={img2.src} />

@@ -184,7 +184,7 @@ const INDEX = () => {
                                                         </Button>
                                                     </Link>
                                                 </NextLink>
-                                                <NextLink href={'https://duckduckgo.com/?q=Hong+Kong+SAR+China&iaxm=maps'} passHref>
+                                                {/* <NextLink href={'https://duckduckgo.com/?q=Hong+Kong+SAR+China&iaxm=maps'} passHref>
                                                     <Link isExternal>
                                                         <Button
                                                             size="md"
@@ -199,7 +199,7 @@ const INDEX = () => {
                                                             Hong Kong SAR, China
                                                         </Button>
                                                     </Link>
-                                                </NextLink>
+                                                </NextLink> */}
                                             </VStack>
                                         </Box>
                                     </Box>

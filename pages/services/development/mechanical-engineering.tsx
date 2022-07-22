@@ -244,8 +244,7 @@ const MechanicalEngineering = () => {
                                             />
                                         }
                                     >
-                                        Your central hub that helps you see, and react to, absolutely
-                                        everything that’s happening.
+{`Your central hub that helps you see, and react to, absolutely everything that's happening.`}
                                     </Feature2>
 
                                     <Feature2
@@ -327,8 +326,8 @@ const MechanicalEngineering = () => {
                                             />
                                         }
                                     >
-                                        Improve your conversion rates by monitoring exactly what’s going on
-                                        while your customers are in trial.
+                                        {`Improve your conversion rates by monitoring exactly what's going on while your customers are in trial.`}
+
                                     </Feature2>
 
                                     <Feature2
@@ -388,7 +387,7 @@ const MechanicalEngineering = () => {
                                             />
                                         }
                                     >
-                                        Send important updates from here to your team’s Support channels.
+                                        {`Send important updates from here to your team's Support channels.`}
                                     </Feature2>
 
                                     <Feature2

@@ -15,20 +15,38 @@
   </url>
   <url>
     <loc>https://ochoa.pro/about/</loc>
+    <xhtml:link href="https://ochoa.pro/about/" hreflang="x-default" rel="alternate"/>
+    <xhtml:link href="https://ochoa.pro/en/about/" hreflang="en" rel="alternate" />
+    <xhtml:link href="https://ochoa.pro/es/about/" hreflang="es" rel="alternate" />
   </url>
   <url>
     <loc>https://ochoa.pro/services/development/electronic-engineering/</loc>
+    <xhtml:link href="https://ochoa.pro/services/development/electronic-engineering/" hreflang="x-default" rel="alternate"/>
+    <xhtml:link href="https://ochoa.pro/en/services/development/electronic-engineering/" hreflang="en" rel="alternate" />
+    <xhtml:link href="https://ochoa.pro/es/services/development/electronic-engineering/" hreflang="es" rel="alternate" />
   </url>
   <url>
     <loc>https://ochoa.pro/services/development/software-engineering/</loc>
+    <xhtml:link href="https://ochoa.pro/services/development/software-engineering/" hreflang="x-default" rel="alternate"/>
+    <xhtml:link href="https://ochoa.pro/en/services/development/software-engineering/" hreflang="en" rel="alternate" />
+    <xhtml:link href="https://ochoa.pro/es/services/development/software-engineering/" hreflang="es" rel="alternate" />
   </url>
   <url>
     <loc>https://ochoa.pro/services/development/mechanical-engineering/</loc>
+    <xhtml:link href="https://ochoa.pro/services/development/mechanical-engineering/" hreflang="x-default" rel="alternate"/>
+    <xhtml:link href="https://ochoa.pro/en/services/development/mechanical-engineering/" hreflang="en" rel="alternate" />
+    <xhtml:link href="https://ochoa.pro/es/services/development/mechanical-engineering/" hreflang="es" rel="alternate" />
   </url>
   <url>
     <loc>https://ochoa.pro/services/development/product-design/</loc>
+    <xhtml:link href="https://ochoa.pro/services/development/product-design/" hreflang="x-default" rel="alternate"/>
+    <xhtml:link href="https://ochoa.pro/en/services/development/product-design/" hreflang="en" rel="alternate" />
+    <xhtml:link href="https://ochoa.pro/es/services/development/product-design/" hreflang="es" rel="alternate" />
   </url>
   <url>
     <loc>https://ochoa.pro/services/manufacturing/</loc>
+    <xhtml:link href="https://ochoa.pro/services/manufacturing/" hreflang="x-default" rel="alternate"/>
+    <xhtml:link href="https://ochoa.pro/en/services/manufacturing/" hreflang="en" rel="alternate" />
+    <xhtml:link href="https://ochoa.pro/es/services/manufacturing/" hreflang="es" rel="alternate" />
   </url>
 </urlset>
