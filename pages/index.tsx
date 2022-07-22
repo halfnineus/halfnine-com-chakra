@@ -97,16 +97,15 @@ const IndexPage = () => {
             <Box px={8} pb={20} pt={10} mx="auto">
               <Box w={{ base: "full", md: 11 / 12, xl: "full", }} mx="auto" textAlign={{ base: "left", md: "center", }}>
                 <Heading
-                  mb={6}
+                  mb={{ base: 4, md: 6 }}
                   fontSize={{ base: "4xl", md: "6xl", }}
                   fontWeight="bold"
                   lineHeight="none"
                   letterSpacing={{ base: "normal", md: "tight", }}
-                  color={mode('gray.900', 'gray.100')}
                   pointerEvents={"none"}
                 >
                   {indexData.block3.h3_1}{" "}
-                  <Text display={{ base: "block", lg: "inline", }} w="full" bgClip="text" bgGradient="linear(to-r, green.400,blue.600)" fontWeight="extrabold">
+                  <Text display={{ base: "block", lg: "inline", }} pr={{ md: "none", lg: 1 }} pb={{ base: 2, md: 3, lg: "none" }} bgClip="text" bgGradient="linear(to-r, green.400,blue.600)" fontWeight="extrabold">
                     {indexData.block3.h3_2}
                   </Text>{" "}
                 </Heading>
