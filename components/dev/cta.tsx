@@ -1,5 +1,5 @@
 import { SimpleGrid, Flex, Heading, Button, Image, Text, Box } from "@chakra-ui/react";
-import { FiExternalLink } from "react-icons/fi";
+import { BiMailSend } from "react-icons/bi";
 import router from 'next/router'
 
 const CTA = (props: any) => {
@@ -29,7 +29,7 @@ const CTA = (props: any) => {
                     {props.text}
                 </Text>
                 <Box display="inline-flex" rounded="md" shadow="md">
-                    <Button mt={2} rounded="md" rightIcon={<FiExternalLink />} colorScheme={'blue'} onClick={() => router.push('/contact/')}>
+                    <Button mt={2} rounded="md"  rightIcon={<BiMailSend />} colorScheme={'blue'} onClick={() => router.push('/contact/')}>
                         {props.buttontxt}
                     </Button>
                 </Box>
