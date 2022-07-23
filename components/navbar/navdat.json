@@ -1,0 +1,41 @@
+{
+    "data": {
+        "Block1": {
+            "label": "Our Portfolio",
+            "href": "/portfolio/"
+        },
+        "Block2": {
+            "label": "Development",
+            "children": [
+                {
+                    "label": "Electronic Engineering",
+                    "description": "Reliable and innovative solutions that enable a digital transformation.",
+                    "href": "/services/development/electronic-engineering/"
+                },
+                {
+                    "label": "Software Engineering",
+                    "description": "Reliable product development and design on the latest technology.",
+                    "href": "/services/development/software-engineering/"
+                },
+                {
+                    "label": "Mechanical Engineering",
+                    "description": "Take product ideas from concepts to working prototypes.",
+                    "href": "/services/development/mechanical-engineering/"
+                },
+                {
+                    "label": "Product Design",
+                    "description": "Innovative product design processes that bring ideas to life.",
+                    "href": "/services/development/product-design/"
+                }
+            ]
+        },
+        "Block3": {
+            "label": "Manufacturing",
+            "href": "/services/manufacturing/"
+        },
+        "Block4": {
+            "label": "About Us",
+            "href": "/about/"
+        }
+    }
+}
