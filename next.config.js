@@ -3,7 +3,7 @@ module.exports = {
   swcMinify: true,
   trailingSlash: true,
   output: 'standalone',
-    i18n: {
+  i18n: {
     locales: ["en", "es"],
     defaultLocale: "en",
     // Langs to add

@@ -4,14 +4,17 @@ import { useRouter } from "next/router"
 import { Box, Button, Container, Heading, HStack, Icon, SimpleGrid, Stack, Text, useColorModeValue as mode, VStack, Flex, Image, } from '@chakra-ui/react'
 
 import { CheckIcon } from '@chakra-ui/icons'
-import { AiOutlineGlobal, AiFillBank, AiOutlineShop, AiOutlineCalendar, AiOutlineFileProtect } from 'react-icons/ai'
-import { FaIndustry, FaShippingFast } from 'react-icons/fa'
-import { BsFileEarmarkPerson } from 'react-icons/bs'
-import { GiProtectionGlasses } from 'react-icons/gi'
+import { AiOutlineShop, AiOutlineCalendar, AiOutlineFileProtect } from 'react-icons/ai'
+import { FaIndustry } from 'react-icons/fa'
+import { BsController } from 'react-icons/bs'
+import { RiGovernmentLine } from 'react-icons/ri'
+import { TbReportMoney } from 'react-icons/tb'
 
 import ximg from '../public/img/index/x.jpg'
+import diagimg from '../public/img/index/diagram.jpg'
 import indexdat from '../assets/index.json'
 import { NextSeo } from 'next-seo'
+import { MdOutlineHealing, MdOutlineMovie } from 'react-icons/md'
 
 const IndexPage = () => {
   const { locale } = useRouter()
@@ -44,7 +47,7 @@ const IndexPage = () => {
         return (
           <>
             <NextSeo title={indexData.head.title} description={indexData.head.description} />
-            <Box key={i} as="section" pb="12" pos="relative" px={{ base: '6', lg: '16' }}>
+            <Box key={i} as="section" pb={{ base: "none", lg: "12" }} pos="relative" px={{ base: '6', lg: '10' }}>
               <Box maxW={"100%"} mx="auto">
                 <Box maxW={{ lg: 'md', xl: 'xl' }} pt={{ base: '12', lg: '20' }} pb={{ base: '16', lg: '24' }}>
                   <Heading as="h1" size="3xl" lineHeight="1" fontWeight="extrabold" letterSpacing="tight">
@@ -55,7 +58,7 @@ const IndexPage = () => {
                     {indexData.block1.txt}
                   </Text>
                   <Stack direction={{ base: 'column', sm: 'row' }} spacing="4" mt="8">
-                    <Button onClick={() => router.push('/contact/')} size="lg" colorScheme="blue" height="14" px="8" shadow="base" fontSize="md">
+                    <Button onClick={() => router.push('/contact/')} size="lg" colorScheme="blue" px="8" shadow="base" fontSize="md">
                       {indexData.block1.button}
                     </Button>
                   </Stack>
@@ -72,8 +75,10 @@ const IndexPage = () => {
                 <Image userSelect={'none'} pointerEvents={'none'} height="100%" width="100%" objectFit="cover" src={ximg.src} alt="Base" />
               </Box>
             </Box>
-            <Box minH={{ base: 'none', md: 'none', lg: '4rem', }} />
-            <Box px={8} pb={20} pt={10} mx="auto">
+
+            <Box minH={'5rem'} />
+
+            <Box px={{ base: '6', lg: '10' }} mx="auto">
               <Box w={{ base: "full", md: 11 / 12, xl: "full", }} mx="auto" textAlign={{ base: "left", md: "center", }}>
                 <Heading
                   mb={{ base: 4, md: 6 }}
@@ -83,53 +88,97 @@ const IndexPage = () => {
                   letterSpacing={{ base: "normal", md: "tight", }}
                 // 
                 >
-                  {indexData.block3.h3_1}{" "}
+                  {indexData.block2.h2_1}{" "}
                   <Text display={{ base: "block", lg: "inline", }} pr={{ md: "none", lg: 1 }} pb={{ base: 2, md: 3, lg: "none" }} bgClip="text" bgGradient="linear(to-r, green.400,blue.600)" fontWeight="extrabold">
-                    {indexData.block3.h3_2}
+                    {indexData.block2.h2_2}
                   </Text>{" "}
                 </Heading>
                 <Text px={{ base: 0, lg: 24, }} mb={6} fontSize={{ base: "lg", md: "xl", }} color={mode("gray.600", "gray.300")}>
-                  {indexData.block3.txt_1} <br />{indexData.block3.txt_2}
+                  {indexData.block2.txt_1} <br />{indexData.block2.txt_2}
                 </Text>
                 <Stack direction={{ base: "column", sm: "row", }} spacing={2} justifyContent={{ sm: "left", md: "center", }}>
                   <Button colorScheme="blue" size="lg" rightIcon={<AiOutlineCalendar />} onClick={() => router.push('/contact/')}>
-                    {indexData.block3.button}
+                    {indexData.block2.button}
                   </Button>
                 </Stack>
               </Box>
             </Box>
-            <Box p={4}>
-              <Stack spacing={5} as={Container} maxW={'3xl'} textAlign={'center'}>
-                <Heading fontSize={'3xl'}>
-                  {indexData.block2.h2}
+
+            <Box minH={'5rem'} />
+
+            <Flex direction={{ base: "column", md: "row" }} px={{ base: '6', lg: '10' }}>
+              <Box w={{ base: "full", md: 11 / 12, xl: 9 / 12 }} mx="auto" pr={{ md: 20 }}>
+                <Heading as={'h3'} fontSize={{ base: "3xl", sm: "4xl" }} fontWeight="extrabold" lineHeight="shorter" _dark={{ color: "gray.100" }} mb={6}>
+                  <Text display="block">{indexData.block3.h3_1}</Text>
+                  <Text display="block" color={mode("blue.600", "blue.400")}>
+                    {indexData.block3.h3_2}
+                  </Text>
                 </Heading>
-                <Text color={mode('gray.600', 'gray.400')} fontSize={'xl'}>
-                  {indexData.block2.txt}
+                <Text
+                  mb={6}
+                  fontSize={{ base: "md", md: "lg", lg: 'xl' }}
+                  color={mode("gray.700", "gray.300")}
+                >
+                  {indexData.block3.item1}<br />
+                  {indexData.block3.item2}<br />
+                  {indexData.block3.item3}<br />
+                  {indexData.block3.item4}<br />
                 </Text>
+                <Stack
+                  direction={{ base: "column", sm: "row" }}
+                  mb={{ base: 4, md: 8 }}
+                  spacing={2}
+                >
+                  <Button
+                    colorScheme={'blue'}
+                    rounded="md"
+                  >
+                    See my options
+                  </Button>
+                </Stack>
+              </Box>
+              <Box w={{ base: "full", md: 10 / 12 }} mx="auto" textAlign="center">
+                <Image pointerEvents={'none'} userSelect={'none'} w="full" rounded="3xl" border={'1px'} shadow="lg" src={diagimg.src} alt="Ready to consider options" />
+              </Box>
+            </Flex>
+
+            <Box minH={'5rem'} />
+
+
+
+
+            <Box px={{ base: '6', lg: '10' }}>
+              <Stack spacing={5} as={Container} maxW={'3xl'} textAlign={'center'}>
+                <Heading fontSize={'3xl'}>{indexData.block4.h4}</Heading>
+                <Text color={mode('gray.600', 'gray.400')} fontSize={'xl'}>{indexData.block4.txt}</Text>
               </Stack>
               <Container maxW={'6xl'} mt={10}>
                 <SimpleGrid columns={{ base: 1, md: 1, lg: 3 }} spacing={10}>
-                  <Feature title={indexData.block2.item1} href={'/services/development/electronic-engineering/'}>{indexData.block2.item1d}</Feature>
-                  <Feature title={indexData.block2.item2} href={'/services/development/software-engineering/'}>{indexData.block2.item2d}</Feature>
-                  <Feature title={indexData.block2.item3} href={'/services/development/mechanical-engineering/'}>{indexData.block2.item3d}</Feature>
+                  <Feature title={indexData.block4.item1} href={'/services/development/'}>{indexData.block4.item1d}</Feature>
+                  <Feature title={indexData.block4.item2} href={'/services/development/'}>{indexData.block4.item2d}</Feature>
+                  <Feature title={indexData.block4.item3} href={'/services/development/'}>{indexData.block4.item3d}</Feature>
                 </SimpleGrid>
                 <SimpleGrid columns={{ base: 1, md: 1, lg: 2 }} my={10} mx={{ md: 0, lg: 52 }} spacing={10}>
-                  <Feature title={indexData.block2.item4} href={'/services/development/product-design/'}>{indexData.block2.item4d}</Feature>
-                  <Feature title={indexData.block2.item5} href={'/services/manufacturing/'}>{indexData.block2.item5d}</Feature>
+                  <Feature title={indexData.block4.item4} href={'/services/development/'}>{indexData.block4.item4d}</Feature>
+                  <Feature title={indexData.block4.item5} href={'/services/manufacturing/'}>{indexData.block4.item5d}</Feature>
                 </SimpleGrid>
               </Container>
             </Box>
-            <Flex w="auto" justifyContent="center" alignItems="center">
+
+            <Box minH={'5rem'} />
+
+
+            <Flex px={{ base: '6', lg: '10' }} w="auto" justifyContent="center" alignItems="center">
               <Box shadow="md" py={8} bg={mode('gray.50', 'gray.700')} rounded="xl" maxW="7xl" mx="auto" px={{ base: 4, lg: 8 }}>
                 <Box textAlign={{ lg: "center" }}>
                   <Text fontWeight="semibold" textTransform="uppercase" letterSpacing="wide" userSelect={'none'}>
-                    {indexData.block4.site}
+                    {indexData.block5.site}
                   </Text>
                   <Text mt={2} fontSize={{ base: "3xl", sm: "4xl" }} lineHeight="8" fontWeight="extrabold" letterSpacing="tight" >
-                    {indexData.block4.h4}
+                    {indexData.block5.h5}
                   </Text>
                   <Text mt={4} maxW="2xl" fontSize="xl" mx={{ lg: "auto" }} color="gray.500" >
-                    {indexData.block4.txt}
+                    {indexData.block5.txt}
                   </Text>
                 </Box>
                 <Box mt={10}>
@@ -139,16 +188,15 @@ const IndexPage = () => {
                     gridTemplateColumns={{ md: "repeat(4,1fr)" }}
                     gridColumnGap={{ md: 8 }}
                     gridRowGap={{ md: 10 }}
-
                   >
-                    <Feature2 icon={<FaIndustry />} title={indexData.block4.item1}>{indexData.block4.item1d}</Feature2>
-                    <Feature2 icon={<AiOutlineShop />} title={indexData.block4.item2}>{indexData.block4.item2d}</Feature2>
-                    <Feature2 icon={<AiFillBank />} title={indexData.block4.item3}>{indexData.block4.item3d}</Feature2>
-                    <Feature2 icon={<AiOutlineFileProtect />} title={indexData.block4.item4}>{indexData.block4.item4d}</Feature2>
-                    <Feature2 icon={<FaShippingFast />} title={indexData.block4.item5}>{indexData.block4.item5d}</Feature2>
-                    <Feature2 icon={<BsFileEarmarkPerson />} title={indexData.block4.item6}>{indexData.block4.item6d}</Feature2>
-                    <Feature2 icon={<AiOutlineGlobal />} title={indexData.block4.item7}>{indexData.block4.item7d}</Feature2>
-                    <Feature2 icon={<GiProtectionGlasses />} title={indexData.block4.item8}>{indexData.block4.item8d}</Feature2>
+                    <Feature2 icon={<TbReportMoney />} title={indexData.block5.item1}>{indexData.block5.item1d}</Feature2>
+                    <Feature2 icon={<RiGovernmentLine />} title={indexData.block5.item2}>{indexData.block5.item2d}</Feature2>
+                    <Feature2 icon={<MdOutlineHealing />} title={indexData.block5.item3}>{indexData.block5.item3d}</Feature2>
+                    <Feature2 icon={<AiOutlineShop />} title={indexData.block5.item4}>{indexData.block5.item4d}</Feature2>
+                    <Feature2 icon={<FaIndustry />} title={indexData.block5.item5}>{indexData.block5.item5d}</Feature2>
+                    <Feature2 icon={<MdOutlineMovie />} title={indexData.block5.item6}>{indexData.block5.item6d}</Feature2>
+                    <Feature2 icon={<BsController />} title={indexData.block5.item7}>{indexData.block5.item7d}</Feature2>
+                    <Feature2 icon={<AiOutlineFileProtect />} title={indexData.block5.item8}>{indexData.block5.item8d}</Feature2>
                   </Stack>
                 </Box>
                 <Box textAlign={{ lg: "center" }}>
@@ -162,39 +210,14 @@ const IndexPage = () => {
                     cursor={'pointer'}
                     onClick={() => router.push('/portfolio/')}
                   >
-                    {indexData.block4.bot}
+                    {indexData.block5.bot}
                   </Text>
                 </Box>
               </Box>
             </Flex>
-            <Flex justify="center" w="full" px={6}>
-              <Box
-                shadow="md"
-                bg={mode('gray.50', 'gray.700')}
-                w={{ base: "full", md: "75%", lg: "50%" }}
-                rounded={20} px={6} pt={6} mt={4} pb={8} mb={12}
-                textAlign={{ base: "left", md: "center" }}
-              >
-                <Text
-                  fontSize={{ base: "3xl", sm: "4xl" }}
-                  fontWeight="extrabold"
-                  letterSpacing="tight"
-                  lineHeight="shorter"
 
-                  display="block"
-                  pb={2}
-                >
-                  {indexData.block5.h5_1}<br />{indexData.block5.h5_2}
-                </Text>
-                <Stack justifyContent={{ base: "left", md: "center" }} direction={{ base: "column", sm: "row" }} spacing={2} mt={2}>
-                  <Box display="inline-flex">
-                    <Button size={'lg'} w={'full'} fontWeight="bold" colorScheme={'blue'} onClick={() => router.push('/contact/')}>
-                      {indexData.block5.button}
-                    </Button>
-                  </Box>
-                </Stack>
-              </Box>
-            </Flex>
+            <Box minH={'5rem'} />
+
           </>
         )
       })}

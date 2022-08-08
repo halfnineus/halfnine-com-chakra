@@ -33,13 +33,13 @@ const DevTerms = () => {
                 return (
                     <>
                         <Flex
-                            px={{ base: '6', md: '20' }}
-                            pt={{ base: '6', md: '8' }}
-                            pb={{ base: '6', md: '14' }}
+                            px={{ base: '6', md: '12' }}
+                            // pt={{ base: '6', md: '8' }}
+                            // pb={{ base: '6', md: '14' }}
                             w="auto"
                             justifyContent="center"
                             alignItems="center"
-                            pointerEvents={'none'}
+                            
                         >
                             <Box bg={mode("gray.50", "gray.700")} rounded={24} mx="auto" shadow="md" pb={20}>
                                 <Box my={12} textAlign={'center'}>

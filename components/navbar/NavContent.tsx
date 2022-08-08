@@ -20,6 +20,7 @@ import NextLink from 'next/link'
 
 import { AiOutlineMenu } from 'react-icons/ai'
 import { FaMoon, FaSun } from 'react-icons/fa'
+import navdat from '../../assets/components/navbar.json'
 
 import smlog from '../../public/img/smlog.png'
 import wsmlog from '../../public/img/wsmlog.png'
@@ -128,6 +129,8 @@ const DesktopNavLink = React.forwardRef<HTMLAnchorElement, NavLinkProps>((props,
         color: 'blue.600',
         fontWeight: 'bold',
       }}
+      cursor={'pointer'}
+      userSelect={'none'}
     />
   )
 })
@@ -330,99 +333,115 @@ function useNavMenu() {
 
 const MobileNavContext = (props: FlexProps) => {
   const { isOpen, onToggle } = useDisclosure()
+  const { locale } = useRouter()
   return (
     <>
-      <Flex {...props} align="center" justify="space-between" className="nav-content__mobile">
-        <Box flexBasis="6rem">
-          <ToggleButton isOpen={isOpen} onClick={onToggle} />
-        </Box>
-        <NextLink href={'/'} passHref>
-          <Link display="flex" alignItems="center">
-            <Image userSelect={'none'} loading={"eager"} pointerEvents={"none"} width={'auto'} height={'8'} src={mode(smlog.src, wsmlog.src)} alt={'log.ochoa'} />
-          </Link>
-        </NextLink>
-        <Box visibility={{ base: 'hidden', sm: 'visible' }}>
-          <NextLink href={'/contact/'} passHref>
-            <Link>
-              <Button fontWeight="bold">
-                Contact Us
-              </Button>
-            </Link>
-          </NextLink>
-        </Box>
-      </Flex>
-      <NavMenu animate={isOpen ? 'open' : 'closed'}>
-        <NavLink.Mobile href={'/portfolio'}>
-          {'Our Portfolio'}
-        </NavLink.Mobile>
-        <NavLink.Mobile href={'/services/development/'}>
-          {'Development'}
-        </NavLink.Mobile>
-        <NavLink.Mobile href={'/services/manufacturing/'}>
-          {'Manufacturing'}
-        </NavLink.Mobile>
-        <NavLink.Mobile href={'/about/'}>
-          {'About Us'}
-        </NavLink.Mobile>
-      </NavMenu >
+      {navdat.data.filter(p => p.locale === locale).map((navigationData, i) => {
+        return (
+          <>
+            <Flex {...props} align="center" justify="space-between" className="nav-content__mobile">
+              <Box flexBasis="6rem">
+                <ToggleButton isOpen={isOpen} onClick={onToggle} />
+              </Box>
+              <NextLink href={'/'} passHref>
+                <Link display="flex" alignItems="center">
+                  <Image userSelect={'none'} loading={"eager"} pointerEvents={"none"} width={'auto'} height={'8'} src={mode(smlog.src, wsmlog.src)} alt={'log.ochoa'} />
+                </Link>
+              </NextLink>
+              <Box visibility={{ base: 'hidden', sm: 'visible' }}>
+                <NextLink href={'/contact/'} passHref>
+                  <Link>
+                    <Button fontWeight="bold">
+                      {navigationData.components.contact}
+                    </Button>
+                  </Link>
+                </NextLink>
+              </Box>
+            </Flex>
+            <NavMenu animate={isOpen ? 'open' : 'closed'}>
+              <NavLink.Mobile href={'/portfolio'}>
+                {navigationData.components.item1}
+              </NavLink.Mobile>
+              <NavLink.Mobile href={'/services/development/'}>
+                {navigationData.components.item2}
+              </NavLink.Mobile>
+              <NavLink.Mobile href={'/services/manufacturing/'}>
+                {navigationData.components.item3}
+              </NavLink.Mobile>
+              <NavLink.Mobile href={'/about/'}>
+                {navigationData.components.item4}
+              </NavLink.Mobile>
+            </NavMenu >
+          </>
+        )
+      })}
     </>
-  )
+  );
 }
 
 const DesktopNavContent = (props: FlexProps) => {
   const { isOpen, getMenuProps, getTriggerProps } = useNavMenu()
+  const { locale } = useRouter()
   const mobileNav = useDisclosure();
   const { toggleColorMode: toggleMode } = useColorMode();
   const text = mode("dark", "light");
   const SwitchIcon = mode(FaMoon, FaSun);
   const router = useRouter()
   return (
-    <Flex align="center" justify="space-between" {...props}>
-      <NextLink href={'/'} passHref>
-        <Link display="flex" alignItems="center">
-          <Image userSelect={'none'} loading={"eager"} cursor={'pointer'} pointerEvents={'none'} width={'auto'} height={'10'} src={mode(smlog.src, wsmlog.src)} alt={'Ochoa'} />
-        </Link>
-      </NextLink>
-      <HStack as="ul" id="nav__primary-menu" aria-label="Main Menu" listStyleType="none">
-        <Box as="li">
-          <NavLink.Desktop onClick={() => router.push("/portfolio/")} cursor={'pointer'}>{"Portfolio"}</NavLink.Desktop>
-        </Box>
-        <Box as="li">
-          <NavLink.Desktop onClick={() => router.push("/services/development/")} cursor={'pointer'}>{"Development"}</NavLink.Desktop>
-        </Box>
-        <Box as="li">
-          <NavLink.Desktop onClick={() => router.push("/services/manufacturing/")} cursor={'pointer'}>{"Manufacturing"}</NavLink.Desktop>
-        </Box>
-        <Box as="li">
-          <NavLink.Desktop onClick={() => router.push("/about/")} cursor={'pointer'}>{"About Us"}</NavLink.Desktop>
-        </Box>
-      </HStack>
-      <HStack spacing="4" >
-        <Button colorScheme="blue" fontWeight="bold" onClick={() => router.push('/contact/')}>
-          Contact Us
-        </Button>
-        <IconButton
-          size="md"
-          fontSize="lg"
-          aria-label={`Switch to ${text} mode`}
-          variant="ghost"
-          color="current"
-          ml={{ base: "0", md: "3" }}
-          onClick={toggleMode}
-          icon={<SwitchIcon />}
-        />
-        <IconButton
-          display={{ base: "flex", md: "none" }}
-          aria-label="Open menu"
-          fontSize="20px"
-          color={mode("gray.800", "inherit")}
-          variant="ghost"
-          icon={<AiOutlineMenu />}
-          onClick={mobileNav.onOpen}
-        />
-      </HStack>
-    </Flex>
-  )
+    <>
+      {navdat.data.filter(p => p.locale === locale).map((navigationData, i) => {
+        return (
+          <>
+            <Flex key={i} align="center" justify="space-between" {...props}>
+              <NextLink href={'/'} passHref>
+                <Link display="flex" alignItems="center">
+                  <Image userSelect={'none'} loading={"eager"} cursor={'pointer'} pointerEvents={'none'} width={'auto'} height={'10'} src={mode(smlog.src, wsmlog.src)} alt={'Ochoa'} />
+                </Link>
+              </NextLink>
+              <HStack as="ul" id="nav__primary-menu" aria-label="Main Menu" listStyleType="none">
+                <Box as="li">
+                  <NavLink.Desktop onClick={() => router.push("/portfolio/")} >{navigationData.components.item1}</NavLink.Desktop>
+                </Box>
+                <Box as="li">
+                  <NavLink.Desktop onClick={() => router.push("/services/development/")} >{navigationData.components.item2}</NavLink.Desktop>
+                </Box>
+                <Box as="li">
+                  <NavLink.Desktop onClick={() => router.push("/services/manufacturing/")} >{navigationData.components.item3}</NavLink.Desktop>
+                </Box>
+                <Box as="li">
+                  <NavLink.Desktop onClick={() => router.push("/about/")} >{navigationData.components.item4}</NavLink.Desktop>
+                </Box>
+              </HStack>
+              <HStack spacing="4" >
+                <Button colorScheme="blue" fontWeight="bold" onClick={() => router.push('/contact/')}>
+                  {navigationData.components.contact}
+                </Button>
+                <IconButton
+                  size="md"
+                  fontSize="lg"
+                  aria-label={`Switch to ${text} mode`}
+                  variant="ghost"
+                  color="current"
+                  ml={{ base: "0", md: "3" }}
+                  onClick={toggleMode}
+                  icon={<SwitchIcon />}
+                />
+                <IconButton
+                  display={{ base: "flex", md: "none" }}
+                  aria-label="Open menu"
+                  fontSize="20px"
+                  color={mode("gray.800", "inherit")}
+                  variant="ghost"
+                  icon={<AiOutlineMenu />}
+                  onClick={mobileNav.onOpen}
+                />
+              </HStack>
+            </Flex>
+          </>
+        )
+      })}
+    </>
+  );
 }
 
 export const NavContent = {

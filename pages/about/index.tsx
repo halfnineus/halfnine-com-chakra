@@ -4,7 +4,7 @@ import {
   SimpleGrid,
   Stack,
   Text,
-  useColorModeValue,
+  useColorModeValue as mode,
   Image,
   GridItem,
   Container,
@@ -14,6 +14,7 @@ import {
   Grid,
   chakra,
 } from '@chakra-ui/react';
+import { NextSeo } from 'next-seo';
 
 import Head from 'next/head'
 import { useRouter } from "next/router"
@@ -50,18 +51,18 @@ const IndexAbout = () => {
       <Box
         maxW={'220px'}
         w={'full'}
-        bg={useColorModeValue('gray.50', 'gray.700')}
+        bg={mode('gray.50', 'gray.700')}
         boxShadow={'md'}
         rounded={'md'}
         p={2}
         overflow={'hidden'}
         maxH={'auto'}
       >
-        <Box h={'auto'} bg={useColorModeValue('gray.100', 'gray.300')} mt={-2} mx={-2} mb={2} pos={'relative'}>
-          <Image alt={'img'} src={children.img} />
+        <Box h={'auto'} bg={mode('gray.100', 'gray.300')} mt={-2} mx={-2} mb={2} pos={'relative'}>
+          <Image userSelect={'none'} pointerEvents={'none'} alt={'img'} src={children.img} />
         </Box>
         <Stack>
-          <Heading color={useColorModeValue('gray.700', 'white')} fontSize={'2xl'}>
+          <Heading color={mode('gray.700', 'white')} fontSize={'2xl'}>
             {children.tech}
           </Heading>
         </Stack>
@@ -73,8 +74,8 @@ const IndexAbout = () => {
       {aboutdat.data.filter(p => p.locale === locale).map((aboutData, i) => {
         return (
           <>
-            <Head><title>{aboutData.head.title}</title><meta name="description" content={aboutData.head.description} /></Head>
-            <Box pointerEvents={'none'} as={Container} maxW="7xl" mt={14} p={4}>
+            <NextSeo title={aboutData.head.title} description={aboutData.head.description} />
+            <Box as={Container} maxW="7xl" mt={14} p={4}>
               <Grid templateColumns={{ base: 'repeat(1, 1fr)', sm: 'repeat(2, 1fr)', md: 'repeat(2, 1fr)', }} gap={4}>
                 <GridItem colSpan={1}>
                   <VStack alignItems="flex-start" spacing="20px">
@@ -146,10 +147,10 @@ const IndexAbout = () => {
 
             </Box>
             <Box as="section" pt={'6'} pb={16} maxW={{ base: 'xl', md: '7xl' }} textAlign={{ md: 'center', sm: 'center', base: 'start' }} mx={"auto"} px={{ base: '6', md: '8' }}>
-              <Heading pointerEvents={'none'} fontWeight="bold" maxW="xlg" mx="auto">
+              <Heading fontWeight="bold" maxW="xlg" mx="auto">
                 {`Made with`}
               </Heading>
-              <SimpleGrid columns={{ base: 1, sm: 2, md: 3, lg: 5 }} mt="8" spacing={'6'} pointerEvents={'none'}>
+              <SimpleGrid columns={{ base: 1, sm: 2, md: 3, lg: 5 }} mt="8" spacing={'6'} >
                 <BuiltWith tech={'Node.js'} img={img1.src} />
                 <BuiltWith tech={'React'} img={img2.src} />
                 <BuiltWith tech={'Next.js'} img={img3.src} />

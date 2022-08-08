@@ -5,7 +5,7 @@
             "components": {
                 "copyright": "© 2022 Ochoa - All rights reserved",
                 "i1": "Home",
-                "i2": "About Us",
+                "i2": "About",
                 "i3": "Contact"
             }
         },
@@ -13,9 +13,9 @@
             "locale": "es",
             "components": {
                 "copyright": "© 2022 Ochoa - Todos los derechos reservados",
-                "i1": "Hogar",
-                "i2": "Sobre Nosotros",
-                "i3": "Contactos"
+                "i1": "Inicio",
+                "i2": "Acerca De",
+                "i3": "Contáctanos"
             }
         }
     ]

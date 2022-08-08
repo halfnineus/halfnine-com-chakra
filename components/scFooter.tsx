@@ -28,7 +28,7 @@ export default function SCFooter() {
                                 <Image userSelect={'none'} alt={'Ochoa'} pointerEvents={'none'} width={'auto'} height={'8'} src={mode(smlog.src, wsmlog.src)} />
                             </Link>
                         </NextLink>
-                        <Text pl={{ sm: 'none', md: '16', lg: '32' }} pointerEvents={'none'}>{footerData.components.copyright}</Text>
+                        <Text pl={{ sm: 'none', md: '16', lg: '20' }} pointerEvents={'none'}>{footerData.components.copyright}</Text>
                         <Stack direction={'row'} spacing={6}>
                             <NextLink href={'/'} passHref><Link>{footerData.components.i1}</Link></NextLink>
                             <NextLink href={'/about/'} passHref><Link>{footerData.components.i2}</Link></NextLink>

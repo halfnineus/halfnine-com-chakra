@@ -1,4 +1,4 @@
-import { Box, Button, chakra, Flex, Heading, HStack, Link, Stack, Text, useColorModeValue } from '@chakra-ui/react';
+import { Box, Button, chakra, Flex, Heading, HStack, Link, Stack, Text, useColorModeValue as mode } from '@chakra-ui/react';
 import { NextSeo } from 'next-seo';
 import Head from 'next/head';
 import { HiChevronRight } from 'react-icons/hi';
@@ -7,7 +7,7 @@ export default function Custom404() {
     return (
         <>
             <NextSeo title={'404 Not Found'} description={'404 Not Found'} />
-            <Flex direction={{ base: "column", md: "row" }} bg={useColorModeValue("brand.500", "brand.500")} px={8} py={24} mx="auto">
+            <Flex direction={{ base: "column", md: "row" }} bg={mode("brand.500", "brand.500")} px={8} py={24} mx="auto">
                 <Box w={{ base: "full", md: 11 / 12, xl: 9 / 12 }} mx="auto" pr={{ md: 20 }}>
                     <Heading fontWeight="extrabold" mb={2} display="block">
                         {'Page not found'}

@@ -1,4 +1,3 @@
-import Head from "next/head"
 import NextLink from "next/link"
 
 import {
@@ -17,20 +16,16 @@ import {
     InputGroup,
     InputLeftElement,
     Textarea,
-    useColorModeValue,
+    useColorModeValue as mode,
     Link,
     useToast,
 } from '@chakra-ui/react';
 
-import {
-    MdEmail,
-    MdLocationOn,
-    MdOutlineEmail,
-    MdPhone,
-} from 'react-icons/md';
+import { MdEmail, MdLocationOn, MdOutlineEmail, } from 'react-icons/md';
 
 import { BsPerson } from 'react-icons/bs'
 import { useState } from "react"
+import { NextSeo } from "next-seo";
 
 const INDEX = () => {
     const [name, setName] = useState('');
@@ -94,14 +89,14 @@ const INDEX = () => {
     }
     return (
         <>
-            <Head>
-                <title>Contact Us - ochoa.pro - International Product Development, Design and Production</title>
-                <meta name="description" content="Contact Us about Product Development, Design and Production Related Inquiries." />
-            </Head>
+            <NextSeo
+                title={`Contact Us - ochoa.pro - International Product Development, Design and Production`}
+                description={`Contact Us about Product Development, Design and Production Related Inquiries.`}
+            />
             <Container maxW="full" mt={0} centerContent overflow="hidden" py='8'>
                 <Flex>
                     <Box
-                        bg={useColorModeValue('gray.50', 'gray.700')}
+                        bg={mode('gray.50', 'gray.700')}
                         color="white"
                         borderRadius='2xl'
                         m={{ sm: 4, md: 16, lg: 10 }}
@@ -112,8 +107,8 @@ const INDEX = () => {
                             <Wrap spacing={{ base: 3, sm: 3, md: 5, lg: 6 }}>
                                 <WrapItem>
                                     <Box>
-                                        <Heading pt={5} pb={2} px={5} pointerEvents={'none'} color={useColorModeValue('black', 'white')} fontSize={'4xl'}>Get In Touch</Heading>
-                                        <Text py={2} px={5} pointerEvents={'none'} mt={'auto'} color="gray.500">
+                                        <Heading pt={5} pb={2} px={5} color={mode('black', 'white')} fontSize={'4xl'}>Get In Touch</Heading>
+                                        <Text py={2} px={5} mt={'auto'} color="gray.500">
                                             Fill up the form to contact or<br />
                                             use our contacts below:
                                         </Text>
@@ -127,9 +122,9 @@ const INDEX = () => {
                                                             width="auto"
                                                             minH={'10'}
                                                             variant="ghost"
-                                                            color={useColorModeValue('black', 'white')}
-                                                            _hover={useColorModeValue({ color: 'blue.500', bg: 'blackAlpha.100' }, { color: 'blue.200', bg: 'whiteAlpha.100' })}
-                                                            leftIcon={<MdPhone color={useColorModeValue('black', 'white')} size="20px" />}
+                                                            color={mode('black', 'white')}
+                                                            _hover={mode({ color: 'blue.500', bg: 'blackAlpha.100' }, { color: 'blue.200', bg: 'whiteAlpha.100' })}
+                                                            leftIcon={<MdPhone color={mode('black', 'white')} size="20px" />}
                                                         >
                                                             +1 (123) 456-7890
                                                         </Button>
@@ -144,9 +139,9 @@ const INDEX = () => {
                                                             width="auto"
                                                             minH={'10'}
                                                             variant="ghost"
-                                                            color={useColorModeValue('black', 'white')}
-                                                            _hover={useColorModeValue({ color: 'blue.500', bg: 'blackAlpha.100' }, { color: 'blue.200', bg: 'whiteAlpha.100' })}
-                                                            leftIcon={<MdEmail color={useColorModeValue('black', 'white')} size="20px" />}
+                                                            color={mode('black', 'white')}
+                                                            _hover={mode({ color: 'blue.500', bg: 'blackAlpha.100' }, { color: 'blue.200', bg: 'whiteAlpha.100' })}
+                                                            leftIcon={<MdEmail color={mode('black', 'white')} size="20px" />}
                                                         >
                                                             rodolfo@ochoa.pro
                                                         </Button>
@@ -160,9 +155,9 @@ const INDEX = () => {
                                                             width="auto"
                                                             minH={'10'}
                                                             variant="ghost"
-                                                            color={useColorModeValue('black', 'white')}
-                                                            _hover={useColorModeValue({ color: 'blue.500', bg: 'blackAlpha.100' }, { color: 'blue.200', bg: 'whiteAlpha.100' })}
-                                                            leftIcon={<MdEmail color={useColorModeValue('black', 'white')} size="20px" />}
+                                                            color={mode('black', 'white')}
+                                                            _hover={mode({ color: 'blue.500', bg: 'blackAlpha.100' }, { color: 'blue.200', bg: 'whiteAlpha.100' })}
+                                                            leftIcon={<MdEmail color={mode('black', 'white')} size="20px" />}
                                                         >
                                                             dan@ochoa.pro
                                                         </Button>
@@ -176,9 +171,9 @@ const INDEX = () => {
                                                             width="auto"
                                                             minH={'10'}
                                                             variant="ghost"
-                                                            color={useColorModeValue('black', 'white')}
-                                                            _hover={useColorModeValue({ color: 'blue.500', bg: 'blackAlpha.100' }, { color: 'blue.200', bg: 'whiteAlpha.100' })}
-                                                            leftIcon={<MdLocationOn color={useColorModeValue('black', 'white')} size="20px" />}
+                                                            color={mode('black', 'white')}
+                                                            _hover={mode({ color: 'blue.500', bg: 'blackAlpha.100' }, { color: 'blue.200', bg: 'whiteAlpha.100' })}
+                                                            leftIcon={<MdLocationOn color={mode('black', 'white')} size="20px" />}
                                                         >
                                                             Orlando, Florida, USA
                                                         </Button>
@@ -192,9 +187,9 @@ const INDEX = () => {
                                                             width="auto"
                                                             minH={'10'}
                                                             variant="ghost"
-                                                            color={useColorModeValue('black', 'white')}
-                                                            _hover={useColorModeValue({ color: 'blue.500', bg: 'blackAlpha.100' }, { color: 'blue.200', bg: 'whiteAlpha.100' })}
-                                                            leftIcon={<MdLocationOn color={useColorModeValue('black', 'white')} size="20px" />}
+                                                            color={mode('black', 'white')}
+                                                            _hover={mode({ color: 'blue.500', bg: 'blackAlpha.100' }, { color: 'blue.200', bg: 'whiteAlpha.100' })}
+                                                            leftIcon={<MdLocationOn color={mode('black', 'white')} size="20px" />}
                                                         >
                                                             Hong Kong SAR, China
                                                         </Button>
@@ -205,8 +200,8 @@ const INDEX = () => {
                                     </Box>
                                 </WrapItem>
                                 <WrapItem>
-                                    <Box width="100%" bg={useColorModeValue('gray.100', 'gray.600')} borderRadius='2xl'>
-                                        <Box w={{ base: 'auto', sm: 'auto', md: 'auto', lg: 'auto', xl: '360px' }} m={8} color={useColorModeValue('black', 'white')}>
+                                    <Box width="100%" bg={mode('gray.100', 'gray.600')} borderRadius='2xl'>
+                                        <Box w={{ base: 'auto', sm: 'auto', md: 'auto', lg: 'auto', xl: '360px' }} m={8} color={mode('black', 'white')}>
                                             <form /* action={'submit'} */ onSubmit={handleSubmit}>
                                                 <VStack spacing={5}>
                                                     <FormControl isRequired >

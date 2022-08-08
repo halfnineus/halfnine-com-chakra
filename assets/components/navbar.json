@@ -1,0 +1,24 @@
+{
+    "data": [
+        {
+            "locale": "en",
+            "components": {
+                "item1": "Portfolio",
+                "item2": "Development",
+                "item3": "Manufacturing",
+                "item4": "About",
+                "contact": "Contact Us"
+            }
+        },
+        {
+            "locale": "es",
+            "components": {
+                "item1": "Portafolio",
+                "item2": "Desarrollo",
+                "item3": "Fabricación",
+                "item4": "Acerca De",
+                "contact": "Contáctanos"
+            }
+        }
+    ]
+}

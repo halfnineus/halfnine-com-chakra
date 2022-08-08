@@ -3,16 +3,16 @@
         {
             "locale": "en",
             "head": {
-                "title": "About Us - Ochoa - International Product Development, Design and Production",
+                "title": "About - Ochoa - International Product Development, Design and Production",
                 "description": "Developing systems to automate simple and complicated industrial processes. Contact us to know more."
             },
             "block1": {
-                "heading": "About us",
+                "heading": "About Us",
                 "i1": "Hi there, we are the Ochoa's, A family of engineers, immigrants starting a business in the United States, chasing the 'American Dream'.",
                 "i2": "We offer Agile Automation services and  provides end-to-end solutions for product Development, Design and Manufacturing."
             },
             "block2": {
-                "heading": "Why us",
+                "heading": "Why Us",
                 "i1": "We want to make your project succeed because that means we succeed too.",
                 "i2": "Choosing Professional experience makes your project faster and more cost efficient.",
                 "i3": "Developing and Manufacturing becomes complex with scale. Making a scalable project is essential as your ability scale directly affects your ability to grows.",
@@ -23,16 +23,16 @@
         {
             "locale": "es",
             "head": {
-                "title": "About Us - Ochoa - International Product Development, Design and Production",
+                "title": "About - Ochoa - International Product Development, Design and Production",
                 "description": "Developing systems to automate simple and complicated industrial processes. Contact us to know more."
             },
             "block1": {
-                "heading": "About us",
+                "heading": "About Us",
                 "i1": "Hi there, we are the Ochoa's, A family of engineers, immigrants starting a business in the United States, chasing the American Dream.",
                 "i2": "We offer Agile Automation services and  provides end-to-end solutions for product Development, Design and Manufacturing."
             },
             "block2": {
-                "heading": "Why us",
+                "heading": "Why Us",
                 "i1": "We want to make your project succeed because that means we succeed too.",
                 "i2": "Choosing Professional experience makes your project faster and more cost efficient.",
                 "i3": "Developing and Manufacturing becomes complex with scale. Making a scalable project is essential as your ability scale directly affects your ability to grows.",
