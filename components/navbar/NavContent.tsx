@@ -1,6 +1,3 @@
-// Is it a mess? Yes
-// Does it work? Yes
-
 import {
   Center,
   chakra,
@@ -16,9 +13,6 @@ import {
   Link,
   Image,
   IconButton,
-  Text,
-  Collapse,
-  SimpleGrid,
   HTMLChakraProps,
   BoxProps,
 } from '@chakra-ui/react'
@@ -32,12 +26,7 @@ import wsmlog from '../../public/img/wsmlog.png'
 import { useRouter } from 'next/router'
 import * as React from 'react'
 import { isFocusable, getOwnerDocument, isRightClick } from '@chakra-ui/utils'
-import { MdDevicesOther } from 'react-icons/md'
-import { VscTerminalCmd } from 'react-icons/vsc'
-import { GiMechanicalArm } from 'react-icons/gi'
-import { IoHardwareChipOutline } from 'react-icons/io5'
 
-import { FaChevronDown, FaChevronRight } from 'react-icons/fa'
 import { Variants } from 'framer-motion'
 import { HTMLMotionProps, motion } from 'framer-motion'
 
@@ -339,41 +328,6 @@ function useNavMenu() {
 //end useNavMenu
 
 
-const NavlinkwLinks = () => {
-  const { isOpen, onToggle } = useDisclosure()
-  return (
-    <Box>
-      <NavLink.Mobile
-        as="button"
-        textAlign="start"
-        type="button"
-        cursor="pointer"
-        onClick={onToggle}
-        paddingEnd="4"
-      >
-        <Box flex="1">{'Development'}</Box>
-        <Box as={FaChevronDown} transform={`rotate(${isOpen ? '180deg' : '0deg'})`} />
-      </NavLink.Mobile>
-      <Collapse in={isOpen}>
-        <Box pl="5">
-          <NavLink.Mobile href={'/portfolio'}>
-            {'Electronic Engineering'}
-          </NavLink.Mobile>
-          <NavLink.Mobile href={'/portfolio'}>
-            {'Software Engineering'}
-          </NavLink.Mobile>
-          <NavLink.Mobile href={'/portfolio'}>
-            {'Mechanical Engineering'}
-          </NavLink.Mobile>
-          <NavLink.Mobile href={'/portfolio'}>
-            {'Product Design'}
-          </NavLink.Mobile>
-        </Box>
-      </Collapse>
-    </Box>
-  )
-}
-
 const MobileNavContext = (props: FlexProps) => {
   const { isOpen, onToggle } = useDisclosure()
   return (
@@ -401,11 +355,13 @@ const MobileNavContext = (props: FlexProps) => {
         <NavLink.Mobile href={'/portfolio'}>
           {'Our Portfolio'}
         </NavLink.Mobile>
-        <NavlinkwLinks />
-        <NavLink.Mobile href={'/portfolio'}>
+        <NavLink.Mobile href={'/services/development/'}>
+          {'Development'}
+        </NavLink.Mobile>
+        <NavLink.Mobile href={'/services/manufacturing/'}>
           {'Manufacturing'}
         </NavLink.Mobile>
-        <NavLink.Mobile href={'/portfolio'}>
+        <NavLink.Mobile href={'/about/'}>
           {'About Us'}
         </NavLink.Mobile>
       </NavMenu >
@@ -429,215 +385,10 @@ const DesktopNavContent = (props: FlexProps) => {
       </NextLink>
       <HStack as="ul" id="nav__primary-menu" aria-label="Main Menu" listStyleType="none">
         <Box as="li">
-          <NavLink.Desktop onClick={() => router.push("/portfolio/")} cursor={'pointer'}>{"Our Portfolio"}</NavLink.Desktop>
+          <NavLink.Desktop onClick={() => router.push("/portfolio/")} cursor={'pointer'}>{"Portfolio"}</NavLink.Desktop>
         </Box>
         <Box as="li">
-          <NavLink.Desktop
-            display="flex"
-            alignItems="center"
-            as="button"
-            type="button"
-            px="4"
-            fontWeight="semibold"
-            {...getTriggerProps()}
-          >
-            <Box>{'Development'}</Box>
-            <Box marginStart="2" as={FaChevronDown} fontSize="xs" />
-          </NavLink.Desktop>
-          <NavMenu {...getMenuProps()} animate={isOpen ? 'open' : 'closed'}>
-            <Box maxW="7xl" mx="auto" px="8">
-              <SimpleGrid spacing="10" columns={2}>
-                <chakra.a
-                  onClick={() => router.push('/services/development/electronic-engineering/')}
-                  className="group"
-                  cursor={'pointer'}
-                  m="-3"
-                  p="3"
-                  display="flex"
-                  alignItems="flex-start"
-                  transition="all 0.2s"
-                  rounded="lg"
-                  _hover={{ bg: mode('gray.50', 'gray.600') }}
-                  _focus={{ shadow: 'outline' }}
-                >
-                  <Center
-                    aria-hidden
-                    as="span"
-                    flexShrink={0}
-                    w="10"
-                    h="10"
-                    fontSize="3xl"
-                    color={mode('blue.600', 'blue.400')}
-                  >
-                    {<IoHardwareChipOutline />}
-                  </Center>
-                  <Box marginStart="3" as="dl">
-                    <HStack as="dt">
-                      <Text
-                        fontWeight="semibold"
-                        color={mode('gray.900', 'white')}
-                        _groupHover={{ color: mode('blue.600', 'inherit') }}
-                        pointerEvents={'none'}
-                      >
-                        {'Electronic Engineering'}
-                      </Text>
-                      <Box
-                        fontSize="xs"
-                        as={FaChevronRight}
-                        transition="all 0.2s"
-                        _groupHover={{ color: mode('blue.600', 'inherit'), transform: 'translateX(2px)' }}
-                      />
-                    </HStack>
-                    <Text as="dd" color={mode('gray.500', 'gray.400')} pointerEvents={'none'}>
-
-                      {'Reliable and innovative solutions that enable a digital transformation.'}
-                    </Text>
-                  </Box>
-                </chakra.a>
-                <chakra.a
-                  onClick={() => router.push('/services/development/software-engineering/')}
-                  className="group"
-                  cursor={'pointer'}
-                  m="-3"
-                  p="3"
-                  display="flex"
-                  alignItems="flex-start"
-                  transition="all 0.2s"
-                  rounded="lg"
-                  _hover={{ bg: mode('gray.50', 'gray.600') }}
-                  _focus={{ shadow: 'outline' }}
-                >
-                  <Center
-                    aria-hidden
-                    as="span"
-                    flexShrink={0}
-                    w="10"
-                    h="10"
-                    fontSize="3xl"
-                    color={mode('blue.600', 'blue.400')}
-                  >
-                    {<VscTerminalCmd />}
-                  </Center>
-                  <Box marginStart="3" as="dl">
-                    <HStack as="dt">
-                      <Text
-                        fontWeight="semibold"
-                        color={mode('gray.900', 'white')}
-                        _groupHover={{ color: mode('blue.600', 'inherit') }}
-                        pointerEvents={'none'}
-                      >
-                        {'Software Engineering'}
-                      </Text>
-                      <Box
-                        fontSize="xs"
-                        as={FaChevronRight}
-                        transition="all 0.2s"
-                        _groupHover={{ color: mode('blue.600', 'inherit'), transform: 'translateX(2px)' }}
-                      />
-                    </HStack>
-                    <Text as="dd" color={mode('gray.500', 'gray.400')} pointerEvents={'none'}>
-
-                      {'Reliable product development and design on the latest technology.'}
-                    </Text>
-                  </Box>
-                </chakra.a>
-                <chakra.a
-                  onClick={() => router.push('/services/development/mechanical-engineering/')}
-                  className="group"
-                  cursor={'pointer'}
-                  m="-3"
-                  p="3"
-                  display="flex"
-                  alignItems="flex-start"
-                  transition="all 0.2s"
-                  rounded="lg"
-                  _hover={{ bg: mode('gray.50', 'gray.600') }}
-                  _focus={{ shadow: 'outline' }}
-                >
-                  <Center
-                    aria-hidden
-                    as="span"
-                    flexShrink={0}
-                    w="10"
-                    h="10"
-                    fontSize="3xl"
-                    color={mode('blue.600', 'blue.400')}
-                  >
-                    {<GiMechanicalArm />}
-                  </Center>
-                  <Box marginStart="3" as="dl">
-                    <HStack as="dt">
-                      <Text
-                        fontWeight="semibold"
-                        color={mode('gray.900', 'white')}
-                        _groupHover={{ color: mode('blue.600', 'inherit') }}
-                        pointerEvents={'none'}
-                      >
-                        {'Mechanical Engineering'}
-                      </Text>
-                      <Box
-                        fontSize="xs"
-                        as={FaChevronRight}
-                        transition="all 0.2s"
-                        _groupHover={{ color: mode('blue.600', 'inherit'), transform: 'translateX(2px)' }}
-                      />
-                    </HStack>
-                    <Text as="dd" color={mode('gray.500', 'gray.400')} pointerEvents={'none'}>
-
-                      {'Take product ideas from concepts to working prototypes.'}
-                    </Text>
-                  </Box>
-                </chakra.a>
-                <chakra.a
-                  onClick={() => router.push('/services/development/product-design/')}
-                  className="group"
-                  cursor={'pointer'}
-                  m="-3"
-                  p="3"
-                  display="flex"
-                  alignItems="flex-start"
-                  transition="all 0.2s"
-                  rounded="lg"
-                  _hover={{ bg: mode('gray.50', 'gray.600') }}
-                  _focus={{ shadow: 'outline' }}
-                >
-                  <Center
-                    aria-hidden
-                    as="span"
-                    flexShrink={0}
-                    w="10"
-                    h="10"
-                    fontSize="3xl"
-                    color={mode('blue.600', 'blue.400')}
-                  >
-                    {<MdDevicesOther />}
-                  </Center>
-                  <Box marginStart="3" as="dl">
-                    <HStack as="dt">
-                      <Text
-                        fontWeight="semibold"
-                        color={mode('gray.900', 'white')}
-                        _groupHover={{ color: mode('blue.600', 'inherit') }}
-                        pointerEvents={'none'}
-                      >
-                        {'Product Design'}
-                      </Text>
-                      <Box
-                        fontSize="xs"
-                        as={FaChevronRight}
-                        transition="all 0.2s"
-                        _groupHover={{ color: mode('blue.600', 'inherit'), transform: 'translateX(2px)' }}
-                      />
-                    </HStack>
-                    <Text as="dd" color={mode('gray.500', 'gray.400')} pointerEvents={'none'}>
-
-                      {'Innovative product design processes that bring ideas to life.'}
-                    </Text>
-                  </Box>
-                </chakra.a>
-              </SimpleGrid>
-            </Box>
-          </NavMenu>
+          <NavLink.Desktop onClick={() => router.push("/services/development/")} cursor={'pointer'}>{"Development"}</NavLink.Desktop>
         </Box>
         <Box as="li">
           <NavLink.Desktop onClick={() => router.push("/services/manufacturing/")} cursor={'pointer'}>{"Manufacturing"}</NavLink.Desktop>
@@ -645,7 +396,6 @@ const DesktopNavContent = (props: FlexProps) => {
         <Box as="li">
           <NavLink.Desktop onClick={() => router.push("/about/")} cursor={'pointer'}>{"About Us"}</NavLink.Desktop>
         </Box>
-
       </HStack>
       <HStack spacing="4" >
         <Button colorScheme="blue" fontWeight="bold" onClick={() => router.push('/contact/')}>

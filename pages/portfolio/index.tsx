@@ -15,10 +15,10 @@ const IndexPortfolio = () => {
         return (
             <Box w={'full'} bg={useColorModeValue('gray.50', 'gray.700')} boxShadow={'md'} rounded={'md'} p={6} overflow={'hidden'}>
                 <Box h={'auto'} bg={'gray.100'} mt={-6} mx={-6} mb={6} pos={'relative'}>
-                    <Image alt={'img'} pointerEvents={'none'} src={props.img} />
+                    <Image alt={'img'}  src={props.img} />
                 </Box>
                 {/* <Stack> */}
-                <Heading pointerEvents={'none'} color={useColorModeValue('gray.700', 'white')} fontSize={'2xl'}>
+                <Heading  color={useColorModeValue('gray.700', 'white')} fontSize={'2xl'}>
                     {props.title}
                 </Heading>
                 {/* <Text color={'gray.500'}>
@@ -37,10 +37,10 @@ const IndexPortfolio = () => {
                 <>
                     <Head><title>{protafolioData.head.title}</title><meta name="description" content={protafolioData.head.description} /></Head>
                     <Box key={i} as="section" py={'6'} maxW={{ base: 'xl', md: '7xl' }} textAlign={'center'} mx={"auto"} px={{ base: '6', md: '8' }}>
-                        <Heading pointerEvents={'none'} textAlign={'center'} fontWeight="extrabold" maxW="xlg" mx="auto">
+                        <Heading  textAlign={'center'} fontWeight="extrabold" maxW="xlg" mx="auto">
                             {protafolioData.block.h1}
                         </Heading>
-                        <Text pointerEvents={'none'} pt={2} fontSize={'lg'} color={'gray.500'}>
+                        <Text  pt={2} fontSize={'lg'} color={'gray.500'}>
                             {protafolioData.block.h2}
                         </Text>
                         <SimpleGrid pb={8} columns={{ base: 1, sm: 2, md: 2, lg: 3 }} mt="8" spacing={'6'}>
@@ -51,7 +51,7 @@ const IndexPortfolio = () => {
                             <Feature img={img5.src} title={protafolioData.components.itemTitle5} />
                             <Feature img={img6.src} title={protafolioData.components.itemTitle6} />
                         </SimpleGrid>
-                        <Heading pointerEvents={'none'} textAlign={'center'} fontWeight="bold" maxW="xlg" pt={''} pb={'4'} mx="auto">
+                        <Heading  textAlign={'center'} fontWeight="bold" maxW="xlg" pt={''} pb={'4'} mx="auto">
                             {protafolioData.block.h3}
                         </Heading>
                     </Box>

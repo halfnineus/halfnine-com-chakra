@@ -18,6 +18,7 @@ import img3 from '../../public/img/manufacturing/2.png'
 import { useRouter } from 'next/router';
 
 import manudat from '../../assets/services/manufacturing.json'
+import { NextSeo } from 'next-seo';
 
 export default function WithBackgroundImage() {
     const router = useRouter()
@@ -25,100 +26,101 @@ export default function WithBackgroundImage() {
     return (
         <>
             {manudat.data.filter(p => p.locale === locale).map((manuData, i) => {
-                return (<>
-                    <Head><title>{manuData.head.title}</title><meta name="description" content={manuData.head.description} /></Head>
-                    <Flex
-                        px={{ base: 4, lg: 24 }}
-                        pb={{ base: 4, lg: 6 }}
-                        pt={6}
-                        w="full"
-                        justifyContent="center"
-                        alignItems="center"
-                    >
-                        <Box rounded={'20'} bg={mode('gray.50', 'gray.700')} shadow="lg" px={8} py={20} mx="auto">
-                            <SimpleGrid alignItems="start" columns={{ base: 1, md: 2 }} spacingY={{ base: 10, md: 32 }} spacingX={{ base: 10, md: 24 }}>
-                                <Box>
-                                    <Heading mb={4} textAlign={{ base: "center", sm: "left" }} lineHeight={{ md: "shorter" }} pointerEvents={'none'}>
-                                        {manuData.block1.header}
-                                    </Heading>
-                                    <Text
-                                        mb={5}
-                                        textAlign={{ base: "center", sm: "left" }}
-                                        color={mode('gray.600', 'gray.400')}
-                                        fontSize={{ md: "lg" }}
-                                        pointerEvents={'none'}
-                                    >
-                                        {manuData.block1.text}
-                                    </Text>
-                                    <Button
-                                        colorScheme={'blue'}
-                                        rounded={'lg'}
-                                        onClick={() => router.push('/contact')}
-                                    >
-                                        {manuData.block1.button}
-                                    </Button>
-                                </Box>
-                                <Image shadow={'md'} rounded={20} alt={'img'} w={'full'} pointerEvents={'none'} src={img1.src} />
-                            </SimpleGrid>
-                            <Divider my={12} />
-                            <SimpleGrid
-                                alignItems="start"
-                                columns={{ base: 1, md: 2 }}
-                                flexDirection="column-reverse"
-                                spacingY={{ base: 10, md: 32 }}
-                                spacingX={{ base: 10, md: 24 }}
-                            >
-                                <Box order={{ base: "initial", md: 2 }}>
-                                    <Heading mb={4} textAlign={{ base: "center", sm: "left" }} lineHeight={{ md: "shorter" }} pointerEvents={'none'}>
-                                        {manuData.block2.header}
-                                    </Heading>
-                                    <Text
-                                        mb={5}
-                                        textAlign={{ base: "center", sm: "left" }}
-                                        color={mode('gray.600', 'gray.400')}
-                                        fontSize={{ md: "lg" }}
-                                        pointerEvents={'none'}
-                                    >
-                                        {manuData.block2.text}
-                                    </Text>
-                                    <Button
-                                        colorScheme={'blue'}
-                                        rounded={'lg'}
-                                        onClick={() => router.push('/contact')}
-                                    >
-                                        {manuData.block2.button}
-                                    </Button>
-                                </Box>
-                                <Image shadow={'md'} rounded={20} alt={'img'} w={'full'} pointerEvents={'none'} src={img2.src} />
-                            </SimpleGrid>
-                            <Divider my={12} />
-                            <SimpleGrid alignItems="start" columns={{ base: 1, md: 2 }} spacingY={{ base: 10, md: 32 }} spacingX={{ base: 10, md: 24 }}>
-                                <Box>
-                                    <Heading mb={4} textAlign={{ base: "center", sm: "left" }} lineHeight={{ md: "shorter" }} pointerEvents={'none'}>
-                                        {manuData.block3.header}
-                                    </Heading>
-                                    <Text
-                                        mb={5}
-                                        textAlign={{ base: "center", sm: "left" }}
-                                        color={mode('gray.600', 'gray.400')}
-                                        fontSize={{ md: "lg" }}
-                                        pointerEvents={'none'}
-                                    >
-                                        {manuData.block3.text}
-                                    </Text>
-                                    <Button
-                                        colorScheme={'blue'}
-                                        rounded={'lg'}
-                                        onClick={() => router.push('/contact')}
-                                    >
-                                        {manuData.block3.button}
-                                    </Button>
-                                </Box>
-                                <Image shadow={'md'} rounded={20} alt={'img'} w={'full'} pointerEvents={'none'} src={img3.src} />
-                            </SimpleGrid>
-                        </Box>
-                    </Flex >
-                </>)
+                return (
+                    <>
+                        <NextSeo title={manuData.head.title} description={manuData.head.description} />
+                        <Flex
+                            px={{ base: 4, lg: 24 }}
+                            pb={{ base: 4, lg: 6 }}
+                            pt={6}
+                            w="full"
+                            justifyContent="center"
+                            alignItems="center"
+                        >
+                            <Box rounded={'20'} bg={mode('gray.50', 'gray.700')} shadow="lg" px={8} py={20} mx="auto">
+                                <SimpleGrid alignItems="start" columns={{ base: 1, md: 2 }} spacingY={{ base: 10, md: 32 }} spacingX={{ base: 10, md: 24 }}>
+                                    <Box>
+                                        <Heading mb={4} textAlign={{ base: "center", sm: "left" }} lineHeight={{ md: "shorter" }} pointerEvents={'none'}>
+                                            {manuData.block1.header}
+                                        </Heading>
+                                        <Text
+                                            mb={5}
+                                            textAlign={{ base: "center", sm: "left" }}
+                                            color={mode('gray.600', 'gray.400')}
+                                            fontSize={{ md: "lg" }}
+                                            pointerEvents={'none'}
+                                        >
+                                            {manuData.block1.text}
+                                        </Text>
+                                        <Button
+                                            colorScheme={'blue'}
+                                            rounded={'lg'}
+                                            onClick={() => router.push('/contact')}
+                                        >
+                                            {manuData.block1.button}
+                                        </Button>
+                                    </Box>
+                                    <Image shadow={'md'} rounded={20} alt={'img'} w={'full'} pointerEvents={'none'} src={img1.src} />
+                                </SimpleGrid>
+                                <Divider my={12} />
+                                <SimpleGrid
+                                    alignItems="start"
+                                    columns={{ base: 1, md: 2 }}
+                                    flexDirection="column-reverse"
+                                    spacingY={{ base: 10, md: 32 }}
+                                    spacingX={{ base: 10, md: 24 }}
+                                >
+                                    <Box order={{ base: "initial", md: 2 }}>
+                                        <Heading mb={4} textAlign={{ base: "center", sm: "left" }} lineHeight={{ md: "shorter" }} pointerEvents={'none'}>
+                                            {manuData.block2.header}
+                                        </Heading>
+                                        <Text
+                                            mb={5}
+                                            textAlign={{ base: "center", sm: "left" }}
+                                            color={mode('gray.600', 'gray.400')}
+                                            fontSize={{ md: "lg" }}
+                                            pointerEvents={'none'}
+                                        >
+                                            {manuData.block2.text}
+                                        </Text>
+                                        <Button
+                                            colorScheme={'blue'}
+                                            rounded={'lg'}
+                                            onClick={() => router.push('/contact')}
+                                        >
+                                            {manuData.block2.button}
+                                        </Button>
+                                    </Box>
+                                    <Image shadow={'md'} rounded={20} alt={'img'} w={'full'} pointerEvents={'none'} src={img2.src} />
+                                </SimpleGrid>
+                                <Divider my={12} />
+                                <SimpleGrid alignItems="start" columns={{ base: 1, md: 2 }} spacingY={{ base: 10, md: 32 }} spacingX={{ base: 10, md: 24 }}>
+                                    <Box>
+                                        <Heading mb={4} textAlign={{ base: "center", sm: "left" }} lineHeight={{ md: "shorter" }} pointerEvents={'none'}>
+                                            {manuData.block3.header}
+                                        </Heading>
+                                        <Text
+                                            mb={5}
+                                            textAlign={{ base: "center", sm: "left" }}
+                                            color={mode('gray.600', 'gray.400')}
+                                            fontSize={{ md: "lg" }}
+                                            pointerEvents={'none'}
+                                        >
+                                            {manuData.block3.text}
+                                        </Text>
+                                        <Button
+                                            colorScheme={'blue'}
+                                            rounded={'lg'}
+                                            onClick={() => router.push('/contact')}
+                                        >
+                                            {manuData.block3.button}
+                                        </Button>
+                                    </Box>
+                                    <Image shadow={'md'} rounded={20} alt={'img'} w={'full'} pointerEvents={'none'} src={img3.src} />
+                                </SimpleGrid>
+                            </Box>
+                        </Flex >
+                    </>)
             })}
         </>
     );
