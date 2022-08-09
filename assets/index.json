@@ -4,28 +4,29 @@
       "locale": "en",
       "head": {
         "title": "International Product Development, Design and Production - Ochoa",
-        "description": "Full-service product development with Ochoa, Providing services from software, hardware and mechanical engineering. And electronics manufacturing."
+        "description": "Full-service product development with Ochoa, Providing services from software, hardware, and mechanical engineering. And electronics manufacturing."
       },
       "block1": {
         "h1_1": "Agile Automation",
         "h1_2": "Development & Manufacturing",
-        "txt": "Ochoa offers Agile Automation services and  provides end-to-end solutions for product development, design and manufacturing through our experts and professionals.",
+        "txt": "Ochoa offers Agile Automation services and provides end-to-end solutions for product development, design and manufacturing through our experts and professionals.",
         "button": "Talk to an expert"
       },
       "block2": {
         "h2_1": "All your needs with",
         "h2_2": "customized technology",
-        "txt_1": "Don't know where to start? We find the simplest and most cost effective solution for your needs, Without sacrificing quality and preformance.",
+        "txt_1": "Don't know where to start? We find the simplest and most cost-effective solution for your needs, without sacrificing quality and performance.",
         "txt_2": "We are here you, and those who need more.",
         "button": "Schedule a Meeting"
       },
       "block3": {
         "h3_1": "Ready to consider options?",
         "h3_2": "Contact us to see your options today!",
-        "item1": "Want a Simple Static Site with the Best Preformance? We can handle it!",
-        "item2": "Dont know how to use Shopify, Wordpress or another CMS? We can handle it!",
-        "item3": "Need a Custom Web Application to interact with hardware | IoT? We can handle it!",
-        "item4": "Want your own custom built CMS? We can handle it!"
+        "item1": "Want a Simple Static Site with the Best Performance? We can manage it!",
+        "item2": "Don't know how to use Shopify, WordPress, or another CMS? We can manage it!",
+        "item3": "Need a Custom Web Application to interact with hardware | IoT? We can manage it!",
+        "item4": "Want your own custom-built CMS? We can manage it!",
+        "options": "See my options"
       },
       "block4": {
         "h4": "Our Solutions.",
@@ -60,39 +61,40 @@
         "item7": "Game development",
         "item7d": "Build, scale, and operate games with custom hardware.",
         "item8": "Security and Safety",
-        "item8d": "Build, Construct and Operate in safe enviroments.",
+        "item8d": "Build, Construct and Operate in safe environments.",
         "bot": "And more..."
       }
     },
     {
       "locale": "es",
       "head": {
-        "title": "Desarrollo Internacional de Productos, Diseño y Produccion - Ochoa",
-        "description": "Full-service product development with Ochoa, Providing services from software, hardware and mechanical engineering. And electronics manufacturing."
+        "title": "Desarrollo Internacional de Productos, Diseño y Producción - Ochoa",
+        "description": "Desarrollo de productos de servicio completo con Ochoa, brindando servicios de software, hardware e ingeniería mecánica. Y la fabricación de productos electrónicos."
       },
       "block1": {
         "h1_1": "Automatización Ágil",
         "h1_2": "Desarrollo & Fabricación",
-        "txt": "Ochoa ofrece servicios de Automatización Ágil y brinda soluciónes funcionales para el desarrollo, diseño y fabricación de productos a través de nuestros expertos y profesionales.",
+        "txt": "Ochoa ofrece servicios de Automatización Ágil y brinda soluciones funcionales para el desarrollo, diseño y fabricación de productos a través de nuestros expertos y profesionales.",
         "button": "Habla con un experto"
       },
       "block2": {
-        "h3_1": "Todas tus necesidades con",
-        "h3_2": "tecnologia customizada",
-        "txt_1": "¿No sabes por dónde empezar? Las empresas a menudo tienen pequeñas necesidades en términos de su tecnología y pueden usar aplicaciones ya construidas.",
-        "txt_2": "Pero estamos aquí para los que necesitan más.",
+        "h2_1": "Todas tus necesidades con",
+        "h2_2": "tecnología customizada",
+        "txt_1": "¿No sabes por dónde empezar? Encontramos la solución más sencilla y rentable para sus necesidades, sin sacrificar la calidad y el rendimiento.",
+        "txt_2": "Estamos aquí para ustedes, y los que necesitan más.",
         "button": "Programar una reunión"
       },
       "block3": {
-        "h3_1": "Ready to consider options?",
-        "h3_2": "Contact us to see your options today!",
-        "item1": "Want a Simple Static Site with the Best Preformance? We can handle it!",
-        "item2": "Dont know how to use Shopify, Wordpress or another CMS? We can handle it!",
-        "item3": "Need a Custom Web Application to interact with hardware | IoT? We can handle it!",
-        "item4": "Want your own custom built CMS? We can handle it!"
+        "h3_1": "¿Listo para considerar opciones?",
+        "h3_2": "¡Contáctenos para ver sus opciones hoy!",
+        "item1": "¿Quieres un sitio estático simple con el mejor rendimiento? ¡Podemos hacerlo!",
+        "item2": "¿No sabes cómo usar Shopify, Wordpress u otro CMS? ¡Podemos hacerlo!",
+        "item3": "Necesita una aplicación web personalizada para interactuar con el hardware | IoT? ¡Podemos hacerlo!",
+        "item4": "¿Quieres tu propio CMS personalizado? ¡Podemos hacerlo!",
+        "options": "Ver mis opciones"
       },
       "block4": {
-        "h2": "Que es lo que hacemos.",
+        "h4": "Que es lo que hacemos.",
         "txt": "Cada área en la que trabajamos trae sus propios desafíos y requiere equipos y una variedad de especializaciones para convertir ideas en soluciones.",
         "item1": "Ingeniería Electrónica",
         "item1d": "Soluciones innovadoras de alta fiabilidad que permiten una transformación digital.",
@@ -107,25 +109,25 @@
       },
       "block5": {
         "site": "ochoa.pro",
-        "h4": "Technology transformation, migration, and implementation",
-        "txt": "We offer Industry solutions for companies who want to work with Technology that meets their specific needs, ideas and goals.",
+        "h5": "Technology transformation, migration, and implementation",
+        "txt": "We offer Industry solutions for companies who want to work with Technology that meets their specific needs, ideas, and goals.",
         "item1": "Servicios financieros",
-        "item1d": "Customize experiences and modernize systems.",
+        "item1d": "Personalice experiencias y modernice sistemas.",
         "item2": "Gobierno",
-        "item2d": "Implement remote access and cross-agency collaboration.",
+        "item2d": "Implementar acceso remoto y colaboración entre agencias.",
         "item3": "Salud",
-        "item3d": "Enhance engagement and improve insights.",
-        "item4": "Fabricación",
-        "item4d": "Improve operational efficiencies and reduce costs.",
-        "item5": "Venta minorista",
-        "item5d": "Personalize experiences and optimize supply chains.",
+        "item3d": "Mejore las interacciones y la información.",
+        "item4": "Venta minorista",
+        "item4d": "Personalice experiencias y optimice cadenas de suministro.",
+        "item5": "Fabricación",
+        "item5d": "Mejore la eficiencia de operaciones y reduzca los costos.",
         "item6": "Medios y entretenimiento",
-        "item6d": "Create content faster and deliver anywhere.",
+        "item6d": "Cree contenido rápido y en cualquier lugar.",
         "item7": "Desarrollo de Juegos",
-        "item7d": "Build, scale, and operate games with custom hardware.",
+        "item7d": "Cree, escale y opere juegos con hardware personalizado.",
         "item8": "Seguridad y protección",
-        "item8d": "Build, Construct and Operate in safe enviroments.",
-        "bot": "And more..."
+        "item8d": "Construya, Edifique y Opere en entornos seguros.",
+        "bot": "Y más..."
       }
     }
   ]

@@ -1,5 +1,6 @@
-import { Box, Heading, Image, SimpleGrid, useColorModeValue as mode, Text, Flex, Button, Stack } from "@chakra-ui/react"
+import { Box, Heading, Image, SimpleGrid, useColorModeValue as mode, Text, Flex, Button, Stack, Link } from "@chakra-ui/react"
 import router, { useRouter } from "next/router"
+import NextLink from 'next/link'
 
 import img1 from '../../public/img/portfolio/1.png'
 import img2 from '../../public/img/portfolio/2.png'
@@ -7,9 +8,12 @@ import img3 from '../../public/img/portfolio/3.png'
 import img4 from '../../public/img/portfolio/4.png'
 import img5 from '../../public/img/portfolio/5.png'
 import img6 from '../../public/img/portfolio/6.png'
+import opc from '../../public/img/portfolio/opc-min.png'
+import spade from '../../public/img/portfolio/spade-min.png'
 
 import portafoliodat from '../../assets/portfolio.json'
 import { NextSeo } from "next-seo"
+
 const IndexPortfolio = () => {
     const Feature = (props: any) => {
         return (
@@ -55,28 +59,38 @@ const IndexPortfolio = () => {
                     </Box>
 
                     <Box minH={'5rem'} />
-
-                    <Flex px={{ base: '6', lg: '10' }} justify="center" w="full" textAlign={{ base: "left", md: "center" }} >
-                        <Box>
-                            <Text
-                                fontSize={{ base: "3xl", sm: "4xl" }}
-                                fontWeight="semibold"
-                                letterSpacing="tight"
-                                lineHeight="shorter"
-                                display="block"
-                            >
-                                {`Ready to dive in?`}<br />{`Request a prototype today.`}
-                            </Text>
-                            <Stack justifyContent={{ base: "left", md: "center" }} direction={{ base: "column", sm: "row" }} spacing={2} mt={2}>
-                                <Box display="inline-flex">
-                                    <Button size={'lg'} w={'full'} fontWeight="bold" colorScheme={'blue'} onClick={() => router.push('/contact/')}>
-                                        {`Get started`}
-                                    </Button>
-                                </Box>
-                            </Stack>
-                        </Box>
-                    </Flex>
-
+                    <Box key={i} as="section" maxW={{ base: 'xl', md: '4xl' }} textAlign={'center'} mx={"auto"} px={{ base: '6', md: '8' }}>
+                        <Heading textAlign={'center'} fontWeight="extrabold" maxW="xlg" mx="auto">
+                            {"Our Current Projects"}
+                        </Heading>
+                        {/* <Text pt={2} fontSize={'lg'} color={'gray.500'}>{protafolioData.block.h2}</Text> */}
+                        <SimpleGrid pt={6} columns={{ base: 1, sm: 2, md: 2, lg: 2 }} spacing={'6'}>
+                            <NextLink href={'https://opencontracts.xyz'} passHref>
+                                <Link isExternal>
+                                    <Box maxW={'400px'} bg={mode('gray.50', 'gray.700')} boxShadow={'md'} rounded={'md'} p={6} overflow={'hidden'}>
+                                        <Box bg={'gray.100'} mt={-6} mx={-6} mb={6} pos={'relative'}>
+                                            <Image userSelect={'none'} pointerEvents={'none'} alt={'img'} src={opc.src} />
+                                        </Box>
+                                        <Heading _hover={{ color: 'gray.500' }} color={mode('gray.700', 'white')} fontSize={'2xl'}>
+                                            {'Open Contracts'}
+                                        </Heading>
+                                    </Box>
+                                </Link>
+                            </NextLink>
+                            <NextLink href={'https://agileautomation.dev'} passHref>
+                                <Link isExternal>
+                                    <Box maxW={'400px'} bg={mode('gray.50', 'gray.700')} boxShadow={'md'} rounded={'md'} p={6} overflow={'hidden'}>
+                                        <Box h={'auto'} bg={'gray.100'} mt={-6} mx={-6} mb={6} pos={'relative'}>
+                                            <Image userSelect={'none'} pointerEvents={'none'} alt={'img'} src={spade.src} />
+                                        </Box>
+                                        <Heading color={mode('gray.700', 'white')} fontSize={'2xl'}>
+                                            {'Spade Sensor'}
+                                        </Heading>
+                                    </Box>
+                                </Link>
+                            </NextLink>
+                        </SimpleGrid>
+                    </Box>
                     <Box minH={'5rem'} />
                 </>
 

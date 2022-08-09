@@ -39,7 +39,6 @@ const DevTerms = () => {
                             w="auto"
                             justifyContent="center"
                             alignItems="center"
-                            
                         >
                             <Box bg={mode("gray.50", "gray.700")} rounded={24} mx="auto" shadow="md" pb={20}>
                                 <Box my={12} textAlign={'center'}>

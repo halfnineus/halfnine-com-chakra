@@ -17,6 +17,6 @@ export default function MyApp({ Component, pageProps }: AppProps) {
         </Head>
         <Component {...pageProps} />
       </MainLayout>
-    </ChakraProvider >
+    </ChakraProvider>
   )
 }

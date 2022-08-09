@@ -20,7 +20,7 @@ export default function Custom404() {
                             {'Go Back'}
                         </Button>
                         <HStack as="a" href="/contact" fontWeight="bold" px="6">
-                            <Text >{'Contact Us'}</Text>
+                            <Text>{'Contact Us'}</Text>
                             <HiChevronRight />
                         </HStack>
                     </Stack>

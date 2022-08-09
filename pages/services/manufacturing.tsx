@@ -40,7 +40,7 @@ export default function WithBackgroundImage() {
                             <Box rounded={'20'} bg={mode('gray.50', 'gray.700')} shadow="lg" px={8} py={20} mx="auto">
                                 <SimpleGrid alignItems="start" columns={{ base: 1, md: 2 }} spacingY={{ base: 10, md: 32 }} spacingX={{ base: 10, md: 24 }}>
                                     <Box>
-                                        <Heading mb={4} textAlign={{ base: "center", sm: "left" }} lineHeight={{ md: "shorter" }} >
+                                        <Heading mb={4} textAlign={{ base: "center", sm: "left" }} lineHeight={{ md: "shorter" }}>
                                             {manuData.block1.header}
                                         </Heading>
                                         <Text
@@ -48,7 +48,6 @@ export default function WithBackgroundImage() {
                                             textAlign={{ base: "center", sm: "left" }}
                                             color={mode('gray.600', 'gray.400')}
                                             fontSize={{ md: "lg" }}
-
                                         >
                                             {manuData.block1.text}
                                         </Text>
@@ -71,7 +70,7 @@ export default function WithBackgroundImage() {
                                     spacingX={{ base: 10, md: 24 }}
                                 >
                                     <Box order={{ base: "initial", md: 2 }}>
-                                        <Heading mb={4} textAlign={{ base: "center", sm: "left" }} lineHeight={{ md: "shorter" }} >
+                                        <Heading mb={4} textAlign={{ base: "center", sm: "left" }} lineHeight={{ md: "shorter" }}>
                                             {manuData.block2.header}
                                         </Heading>
                                         <Text
@@ -79,7 +78,6 @@ export default function WithBackgroundImage() {
                                             textAlign={{ base: "center", sm: "left" }}
                                             color={mode('gray.600', 'gray.400')}
                                             fontSize={{ md: "lg" }}
-
                                         >
                                             {manuData.block2.text}
                                         </Text>
@@ -96,7 +94,7 @@ export default function WithBackgroundImage() {
                                 <Divider my={12} />
                                 <SimpleGrid alignItems="start" columns={{ base: 1, md: 2 }} spacingY={{ base: 10, md: 32 }} spacingX={{ base: 10, md: 24 }}>
                                     <Box>
-                                        <Heading mb={4} textAlign={{ base: "center", sm: "left" }} lineHeight={{ md: "shorter" }} >
+                                        <Heading mb={4} textAlign={{ base: "center", sm: "left" }} lineHeight={{ md: "shorter" }}>
                                             {manuData.block3.header}
                                         </Heading>
                                         <Text
@@ -104,7 +102,6 @@ export default function WithBackgroundImage() {
                                             textAlign={{ base: "center", sm: "left" }}
                                             color={mode('gray.600', 'gray.400')}
                                             fontSize={{ md: "lg" }}
-
                                         >
                                             {manuData.block3.text}
                                         </Text>
@@ -119,7 +116,7 @@ export default function WithBackgroundImage() {
                                     <Image pointerEvents={'none'} shadow={'md'} rounded={20} alt={'img'} w={'full'} src={img3.src} />
                                 </SimpleGrid>
                             </Box>
-                        </Flex >
+                        </Flex>
                     </>)
             })}
         </>

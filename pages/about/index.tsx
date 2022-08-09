@@ -76,7 +76,7 @@ const IndexAbout = () => {
           <>
             <NextSeo title={aboutData.head.title} description={aboutData.head.description} />
             <Box as={Container} maxW="7xl" mt={14} p={4}>
-              <Grid templateColumns={{ base: 'repeat(1, 1fr)', sm: 'repeat(2, 1fr)', md: 'repeat(2, 1fr)', }} gap={4}>
+              {/* <Grid templateColumns={{ base: 'repeat(1, 1fr)', sm: 'repeat(2, 1fr)', md: 'repeat(2, 1fr)', }} gap={4}>
                 <GridItem colSpan={1}>
                   <VStack alignItems="flex-start" spacing="20px">
                     <Heading>{aboutData.block1.heading}</Heading>
@@ -89,7 +89,7 @@ const IndexAbout = () => {
                 </GridItem>
               </Grid>
 
-              <Divider mt={16} mb={16} />
+              <Divider mt={16} mb={16} /> */}
 
 
               <Grid templateColumns={{ base: 'repeat(1, 1fr)', sm: 'repeat(2, 1fr)', md: 'repeat(2, 1fr)', }} gap={4}>
@@ -104,10 +104,10 @@ const IndexAbout = () => {
                   <Flex><Text>{aboutData.block2.i2}</Text></Flex>
                   <Divider mt={2} mb={2} />
                   <Flex><Text>{aboutData.block2.i3}</Text></Flex>
-                  <Divider mt={2} mb={2} />
-                  <Flex><Text>{aboutData.block2.i4}</Text></Flex>
-                  <Divider mt={2} mb={2} />
-                  <Flex><Text>{aboutData.block2.i5}</Text></Flex>
+                  {/* <Divider mt={2} mb={2} />
+                  <Flex><Text>{aboutData.block2.i4}</Text></Flex> */}
+                  {/* <Divider mt={2} mb={2} />
+                  <Flex><Text>{aboutData.block2.i5}</Text></Flex> */}
                 </GridItem>
                 <GridItem colSpan={1}>
                   <VStack display={{ base: 'none', sm: 'flex' }} alignItems="flex-end" spacing="20px">
@@ -150,7 +150,7 @@ const IndexAbout = () => {
               <Heading fontWeight="bold" maxW="xlg" mx="auto">
                 {`Made with`}
               </Heading>
-              <SimpleGrid columns={{ base: 1, sm: 2, md: 3, lg: 5 }} mt="8" spacing={'6'} >
+              <SimpleGrid columns={{ base: 1, sm: 2, md: 3, lg: 5 }} mt="8" spacing={'6'}>
                 <BuiltWith tech={'Node.js'} img={img1.src} />
                 <BuiltWith tech={'React'} img={img2.src} />
                 <BuiltWith tech={'Next.js'} img={img3.src} />

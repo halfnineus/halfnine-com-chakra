@@ -130,7 +130,7 @@ const INDEX = () => {
                                                         </Button>
                                                     </Link>
                                                 </NextLink> */}
-                                                <NextLink href={'mailto:rodolfo@ochoa.pro'} passHref>
+                                                {/* <NextLink href={'mailto:rodolfo@ochoa.pro'} passHref>
                                                     <Link isExternal>
                                                         <Button
                                                             alignContent={'start'}
@@ -146,7 +146,7 @@ const INDEX = () => {
                                                             rodolfo@ochoa.pro
                                                         </Button>
                                                     </Link>
-                                                </NextLink>
+                                                </NextLink> */}
                                                 <NextLink href={'mailto:dan@ochoa.pro'} passHref>
                                                     <Link isExternal>
                                                         <Button
@@ -204,7 +204,7 @@ const INDEX = () => {
                                         <Box w={{ base: 'auto', sm: 'auto', md: 'auto', lg: 'auto', xl: '360px' }} m={8} color={mode('black', 'white')}>
                                             <form /* action={'submit'} */ onSubmit={handleSubmit}>
                                                 <VStack spacing={5}>
-                                                    <FormControl isRequired >
+                                                    <FormControl isRequired>
                                                         <FormLabel>Your Name</FormLabel>
                                                         <InputGroup>
                                                             <InputLeftElement pointerEvents="none">

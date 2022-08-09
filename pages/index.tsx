@@ -33,7 +33,7 @@ const IndexPage = () => {
   const Feature2 = (props: any) => {
     return (
       <Flex>
-        <Icon boxSize={12} fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true" color={mode('blue.600', 'blue.400')} >{props.icon}</Icon>
+        <Icon boxSize={12} fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true" color={mode('blue.600', 'blue.200')}>{props.icon}</Icon>
         <Box ml={4}>
           <Text fontSize="lg" fontWeight="semibold" lineHeight="6">{props.title}</Text>
           <Text mt={2} color="gray.500">{props.children}</Text>
@@ -52,13 +52,13 @@ const IndexPage = () => {
                 <Box maxW={{ lg: 'md', xl: 'xl' }} pt={{ base: '12', lg: '20' }} pb={{ base: '16', lg: '24' }}>
                   <Heading as="h1" size="3xl" lineHeight="1" fontWeight="extrabold" letterSpacing="tight">
                     {indexData.block1.h1_1}{' '}
-                    <Box as="mark" color={mode('blue.600', 'blue.300')} bg="transparent">{indexData.block1.h1_2}</Box>
+                    <Box as="mark" color={mode('blue.600', 'blue.200')} bg="transparent">{indexData.block1.h1_2}</Box>
                   </Heading>
                   <Text mt={4} fontSize="xl" fontWeight="medium" color={mode('gray.600', 'gray.400')}>
                     {indexData.block1.txt}
                   </Text>
                   <Stack direction={{ base: 'column', sm: 'row' }} spacing="4" mt="8">
-                    <Button onClick={() => router.push('/contact/')} size="lg" colorScheme="blue" px="8" shadow="base" fontSize="md">
+                    <Button onClick={() => router.push('/contact/')} size="lg" colorScheme="blue" shadow="base" fontSize="md">
                       {indexData.block1.button}
                     </Button>
                   </Stack>
@@ -86,7 +86,6 @@ const IndexPage = () => {
                   fontWeight="bold"
                   lineHeight="none"
                   letterSpacing={{ base: "normal", md: "tight", }}
-                // 
                 >
                   {indexData.block2.h2_1}{" "}
                   <Text display={{ base: "block", lg: "inline", }} pr={{ md: "none", lg: 1 }} pb={{ base: 2, md: 3, lg: "none" }} bgClip="text" bgGradient="linear(to-r, green.400,blue.600)" fontWeight="extrabold">
@@ -110,7 +109,7 @@ const IndexPage = () => {
               <Box w={{ base: "full", md: 11 / 12, xl: 9 / 12 }} mx="auto" pr={{ md: 20 }}>
                 <Heading as={'h3'} fontSize={{ base: "3xl", sm: "4xl" }} fontWeight="extrabold" lineHeight="shorter" _dark={{ color: "gray.100" }} mb={6}>
                   <Text display="block">{indexData.block3.h3_1}</Text>
-                  <Text display="block" color={mode("blue.600", "blue.400")}>
+                  <Text display="block" color={mode("blue.600", "blue.200")}>
                     {indexData.block3.h3_2}
                   </Text>
                 </Heading>
@@ -133,7 +132,7 @@ const IndexPage = () => {
                     colorScheme={'blue'}
                     rounded="md"
                   >
-                    See my options
+                    {indexData.block3.options}
                   </Button>
                 </Stack>
               </Box>
@@ -174,10 +173,10 @@ const IndexPage = () => {
                   <Text fontWeight="semibold" textTransform="uppercase" letterSpacing="wide" userSelect={'none'}>
                     {indexData.block5.site}
                   </Text>
-                  <Text mt={2} fontSize={{ base: "3xl", sm: "4xl" }} lineHeight="8" fontWeight="extrabold" letterSpacing="tight" >
+                  <Text mt={2} fontSize={{ base: "3xl", sm: "4xl" }} lineHeight="8" fontWeight="extrabold" letterSpacing="tight">
                     {indexData.block5.h5}
                   </Text>
-                  <Text mt={4} maxW="2xl" fontSize="xl" mx={{ lg: "auto" }} color="gray.500" >
+                  <Text mt={4} maxW="2xl" fontSize="xl" mx={{ lg: "auto" }} color="gray.500">
                     {indexData.block5.txt}
                   </Text>
                 </Box>
@@ -217,7 +216,6 @@ const IndexPage = () => {
             </Flex>
 
             <Box minH={'5rem'} />
-
           </>
         )
       })}
