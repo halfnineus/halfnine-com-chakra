@@ -19,29 +19,30 @@ import {
     Divider,
     Spacer,
 } from '@chakra-ui/react'
-import * as React from 'react'
 import { FaUser, FaStore } from 'react-icons/fa'
 import { BsFillBriefcaseFill } from 'react-icons/bs'
 import { HiCheckCircle } from 'react-icons/hi'
 
 import { NextSeo } from "next-seo";
 import { DevTerms } from "../../components/dev";
-import router from 'next/router'
+import { useRouter } from 'next/router'
 import { MdCorporateFare } from 'react-icons/md'
-{/* <NextSeo title={'protafolioData.head.title'} description={'protafolioData.head.description'} /> */ }
 
+const ActionButton = (props: ButtonProps) => {
+    const router = useRouter()
+    return (
+        <Button
+            onClick={() => router.push('/contact/')}
+            colorScheme="blue"
+            size="lg"
+            w="full"
+            fontWeight="extrabold"
+            py={{ md: '8' }}
+            {...props}
+        />
+    )
+}
 
-const ActionButton = (props: ButtonProps) => (
-    <Button
-        onClick={() => router.push('/contact/')}
-        colorScheme="blue"
-        size="lg"
-        w="full"
-        fontWeight="extrabold"
-        py={{ md: '8' }}
-        {...props}
-    />
-)
 export interface CardProps extends BoxProps {
     isPopular?: boolean
 }
@@ -147,21 +148,17 @@ export const PricingCard = (props: PricingCardProps) => {
 
 
 
+import { NextPage } from 'next'
 
+interface Props {
 
+}
 
-
-const App = (props: FlexProps) => {
-    const { children, ...flexProps } = props
-
-    // <Box
-    //   as="section"
-    //   bg={mode('gray.50', 'gray.800')}
-    //   py="14"
-    //   px={{ base: '4', md: '8' }}
-    // >
+const Development: NextPage<Props> = () => {
+    const router = useRouter()
     return (
         <>
+            <NextSeo title={'Manufacturing - Ochoa - International Product Development, Design and Production'} description={'protafolioData.head.description'} />
             <Heading p={6} textAlign={'center'}>Our Web Services</Heading>
             <Heading pb={2} fontSize={'lg'} textAlign={'center'}>Always Included: Website Design, Web Hosting, SSL, Domain Name, SEO Compliance</Heading>
             <Text pb={6} textAlign={'center'}>Custom Features: Locales, CMS, Webmail, Custom API, Contact Forms, Shop, Auth, Uptime Monitor, etc.</Text>
@@ -311,5 +308,4 @@ const App = (props: FlexProps) => {
     )
 }
 
-
-export default App
+export default Development
