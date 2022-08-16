@@ -1,7 +1,11 @@
 User-agent: *
+Allow: /
 Disallow: /contact/
 
 User-agent: ia_archiver
+Disallow: /
+
+User-agent: dotbot
 Disallow: /
 
 Sitemap: https://ochoa.pro/sitemap.xml

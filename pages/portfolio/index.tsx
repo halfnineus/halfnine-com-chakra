@@ -11,7 +11,7 @@ import img6 from '../../public/img/portfolio/6.png'
 import opc from '../../public/img/portfolio/opc-min.png'
 import spade from '../../public/img/portfolio/spade-min.png'
 
-import portafoliodat from '../../assets/portfolio.json'
+import portfoliodat from '../../assets/portfolio.json'
 import { NextSeo } from "next-seo"
 
 const IndexPortfolio = () => {
@@ -36,7 +36,7 @@ const IndexPortfolio = () => {
     const { locale } = useRouter()
 
     return (
-        <>{portafoliodat.data.filter(p => p.locale === locale).map((protafolioData, i) => {
+        <>{portfoliodat.data.filter(p => p.locale === locale).map((protafolioData, i) => {
             return (
                 <>
                     <NextSeo title={protafolioData.head.title} description={protafolioData.head.description} />

@@ -182,8 +182,8 @@ const IndexPage = () => {
                 </Box>
                 <Box mt={10}>
                   <Stack
-                    spacing={{ base: 10, md: 0 }}
-                    display={{ md: "grid" }}
+                    spacing={{ base: 10, lg: 0 }}
+                    display={{ sm: "row", lg: "grid" }}
                     gridTemplateColumns={{ md: "repeat(4,1fr)" }}
                     gridColumnGap={{ md: 8 }}
                     gridRowGap={{ md: 10 }}

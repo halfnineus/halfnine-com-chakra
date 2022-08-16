@@ -30,14 +30,14 @@ export default function WithBackgroundImage() {
                     <>
                         <NextSeo title={manuData.head.title} description={manuData.head.description} />
                         <Flex
-                            px={{ base: 4, lg: 24 }}
+                            px={{ base: 4, lg: 10}}
                             pb={{ base: 4, lg: 6 }}
                             pt={6}
                             w="full"
                             justifyContent="center"
                             alignItems="center"
                         >
-                            <Box rounded={'20'} bg={mode('gray.50', 'gray.700')} shadow="lg" px={8} py={20} mx="auto">
+                            <Box rounded={'20'} bg={mode('gray.50', 'gray.700')} shadow="lg" px={8} py={10} mx="auto">
                                 <SimpleGrid alignItems="start" columns={{ base: 1, md: 2 }} spacingY={{ base: 10, md: 32 }} spacingX={{ base: 10, md: 24 }}>
                                     <Box>
                                         <Heading mb={4} textAlign={{ base: "center", sm: "left" }} lineHeight={{ md: "shorter" }}>

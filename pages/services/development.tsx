@@ -159,149 +159,156 @@ const Development: NextPage<Props> = () => {
     return (
         <>
             <NextSeo title={'Manufacturing - Ochoa - International Product Development, Design and Production'} description={'protafolioData.head.description'} />
-            <Heading p={6} textAlign={'center'}>Our Web Services</Heading>
-            <Heading pb={2} fontSize={'lg'} textAlign={'center'}>Always Included: Website Design, Web Hosting, SSL, Domain Name, SEO Compliance</Heading>
-            <Text pb={6} textAlign={'center'}>Custom Features: Locales, CMS, Webmail, Custom API, Contact Forms, Shop, Auth, Uptime Monitor, etc.</Text>
-            <SimpleGrid
-                columns={{ base: 1, lg: 3 }}
-                spacing={{ base: '8', lg: '0' }}
-                maxW="7xl"
-                mx="auto"
-                justifyItems="center"
-                alignItems="center"
-                py={3}
-            >
-                <PricingCard
-                    data={{
-                        price: '$100',
-                        name: 'Personal',
-                        features: [
-                            'Static Site',
-                            'Up to 4 Pages',
-                            'No Custom Features',
-                            'Business Hours support',
-                        ],
-                        fromprice: '$200',
-                    }}
-                    icon={FaUser}
-                    button={
-                        <ActionButton variant="outline" borderWidth="2px">
-                            Contact Us
-                        </ActionButton>
-                    }
-                />
+            <Box px={{ base: '6', lg: '10' }}>
+                <Heading p={6} textAlign={'center'}>Our Web Services</Heading>
+                <Heading pb={2} fontSize={'lg'} textAlign={'center'}>Always Included: Website Design, Web Hosting, SSL, Domain Name, SEO Compliance</Heading>
+                <Text pb={6} textAlign={'center'}>Custom Features: Locales, CMS, Webmail, Custom API, Contact Forms, Shop, Auth, Uptime Monitor, etc.</Text>
 
-                <PricingCard
-                    // isPopular
-                    zIndex={1}
-                    transform={{ lg: 'scale(1.05)' }}
-                    data={{
-                        price: '$500',
-                        name: 'Business',
-                        features: [
-                            'Static and Dynamic Site ',
-                            'Up to 24 Pages',
-                            '2 Custom Features',
-                            'Daytime Hours support',
-                        ],
-                        fromprice: '$2000',
-                    }}
-                    icon={BsFillBriefcaseFill}
-                    button={<ActionButton>Contact Us</ActionButton>}
-                />
-                <PricingCard
-                    data={{
-                        price: '$3000',
-                        name: 'Commerce',
-                        features: [
-                            'Static and Dynamic Site',
-                            'Unlimited-Pages',
-                            '4 Custom Features',
-                            '24/7 On-Call Support',
-                        ],
-                        fromprice: '$12000',
-                    }}
-                    icon={FaStore}
-                    button={
-                        <ActionButton variant="outline" borderWidth="2px">
-                            Contact Us
-                        </ActionButton>
-                    }
-                />
-            </SimpleGrid>
+                <SimpleGrid
+                    columns={{ base: 1, lg: 3 }}
+                    spacing={{ base: '8', lg: '0' }}
+                    maxW="7xl"
+                    mx="auto"
+                    justifyItems="center"
+                    alignItems="center"
+                    py={3}
+                >
+                    <PricingCard
+                        data={{
+                            price: '$100',
+                            name: 'Personal',
+                            features: [
+                                'Static Site',
+                                'Up to 4 Pages',
+                                'No Custom Features',
+                                'Business Hours support',
+                            ],
+                            fromprice: '$200',
+                        }}
+                        icon={FaUser}
+                        button={
+                            <ActionButton variant="outline" borderWidth="2px">
+                                Contact Us
+                            </ActionButton>
+                        }
+                    />
+
+                    <PricingCard
+                        // isPopular
+                        zIndex={1}
+                        transform={{ lg: 'scale(1.05)' }}
+                        data={{
+                            price: '$500',
+                            name: 'Business',
+                            features: [
+                                'Static and Dynamic Site ',
+                                'Up to 24 Pages',
+                                '2 Custom Features',
+                                'Daytime Hours support',
+                            ],
+                            fromprice: '$2000',
+                        }}
+                        icon={BsFillBriefcaseFill}
+                        button={<ActionButton>Contact Us</ActionButton>}
+                    />
+                    <PricingCard
+                        data={{
+                            price: '$3000',
+                            name: 'Commerce',
+                            features: [
+                                'Static and Dynamic Site',
+                                'Unlimited-Pages',
+                                '4 Custom Features',
+                                '24/7 On-Call Support',
+                            ],
+                            fromprice: '$12000',
+                        }}
+                        icon={FaStore}
+                        button={
+                            <ActionButton variant="outline" borderWidth="2px">
+                                Contact Us
+                            </ActionButton>
+                        }
+                    />
+                </SimpleGrid>
+            </Box>
 
             <Box minH={'2rem'} />
-            <Flex
-                px={{ base: '6', lg: '10' }}
-                w="full"
-                justifyContent="center"
-                alignItems="center"
-            >
-                <Box rounded={'20'} bg={mode('gray.50', 'gray.700')} shadow="lg" mx="auto">
-                    <SimpleGrid p={12} alignItems="start">
-                        <Flex w="auto">
-                            <Box>
-                                <HStack spacing={4}>
-                                    <Icon color={mode('blue.600', 'blue.200')} aria-hidden as={MdCorporateFare} fontSize="4xl" />
-                                    <Heading size="md" fontWeight="extrabold">
-                                        {'Enterprise'}
-                                    </Heading>
-                                </HStack>
-                                <Flex pb={4} align="flex-end" justify="start" fontWeight="extrabold" color={mode('blue.600', 'blue.200')}>
-                                    <Heading size="lg" fontWeight="inherit" lineHeight="0.9em">
-                                        {'Contact for Pricing'}
-                                    </Heading>
-                                </Flex>
-                                {/* <Flex gap={20}> */}
-                                <Stack width={{ base: "350px", lg: "auto" }}>
-                                    <SimpleGrid columns={{ base: 1, lg: 4 }} spacing="4" mb="4">
-                                        <List maxW="28ch">
-                                            <ListItem mr="6">
-                                                <ListIcon fontSize="xl" as={HiCheckCircle} marginEnd={2} color={mode('blue.600', 'blue.200')} />
-                                                {'Static and Dynamic Site'}
-                                            </ListItem>
-                                        </List>
-                                        <List maxW="28ch">
-                                            <ListItem mr="6">
-                                                <ListIcon fontSize="xl" as={HiCheckCircle} marginEnd={2} color={mode('blue.600', 'blue.200')} />
-                                                {'Unlimited Pages'}
-                                            </ListItem>
-                                        </List>
-                                        <List maxW="28ch" >
-                                            <ListItem mr="6">
-                                                <ListIcon fontSize="xl" as={HiCheckCircle} marginEnd={2} color={mode('blue.600', 'blue.200')} />
-                                                {'Unlimited Features'}
-                                            </ListItem>
-                                        </List>
-                                        <List maxW="28ch" >
-                                            <ListItem mr="6">
-                                                <ListIcon fontSize="xl" as={HiCheckCircle} marginEnd={2} color={mode('blue.600', 'blue.200')} />
-                                                {'24/7 On-Call Support'}
-                                            </ListItem>
-                                        </List>
-                                    </SimpleGrid>
-                                </Stack>
-                                {/* </Flex> */}
-                                <Button
-                                    colorScheme={'blue'}
-                                    size="lg"
-                                    w="full"
-                                    fontWeight="extrabold"
-                                    py={{ md: '8' }}
-                                    rounded={'lg'}
-                                    onClick={() => router.push('/contact')}
-                                >
-                                    {'Contact Us'}
-                                </Button>
-                            </Box>
+
+            <Box px={{ base: '6', lg: '10' }}>
+                <Flex
+                    // w="auto"
+                    justifyContent="center"
+                    alignItems="center"
+                >
+                    {/* <Box rounded={'20'} bg={mode('gray.50', 'gray.700')} shadow="lg" mx="auto">
+                        <SimpleGrid p={8} alignItems="start">
+                            <Flex w="auto"> */}
+                    <Box maxW={'1000px'} p={6} shadow={'lg'} bg={mode('gray.50', 'gray.700')} rounded={'20'}>
+                        <HStack spacing={4}>
+                            <Icon color={mode('blue.600', 'blue.200')} aria-hidden as={MdCorporateFare} fontSize="4xl" />
+                            <Heading size="md" fontWeight="extrabold">
+                                {'Enterprise'}
+                            </Heading>
+                        </HStack>
+                        <Flex pb={4} align="flex-end" justify="start" fontWeight="extrabold" color={mode('blue.600', 'blue.200')}>
+                            <Heading size="lg" fontWeight="inherit" lineHeight="0.9em">
+                                {'Contact for Pricing'}
+                            </Heading>
                         </Flex>
-                    </SimpleGrid>
-                </Box>
-            </Flex>
+                        <Stack width={{ base: "350px", lg: "auto" }}>
+                            <SimpleGrid columns={{ base: 1, lg: 4 }} spacing="4" mb="4">
+                                <List maxW="28ch">
+                                    <ListItem mr="6">
+                                        <ListIcon fontSize="xl" as={HiCheckCircle} marginEnd={2} color={mode('blue.600', 'blue.200')} />
+                                        {'Static and Dynamic Site'}
+                                    </ListItem>
+                                </List>
+                                <List maxW="28ch">
+                                    <ListItem mr="6">
+                                        <ListIcon fontSize="xl" as={HiCheckCircle} marginEnd={2} color={mode('blue.600', 'blue.200')} />
+                                        {'Unlimited Pages'}
+                                    </ListItem>
+                                </List>
+                                <List maxW="28ch" >
+                                    <ListItem mr="6">
+                                        <ListIcon fontSize="xl" as={HiCheckCircle} marginEnd={2} color={mode('blue.600', 'blue.200')} />
+                                        {'Unlimited Features'}
+                                    </ListItem>
+                                </List>
+                                <List maxW="28ch" >
+                                    <ListItem mr="6">
+                                        <ListIcon fontSize="xl" as={HiCheckCircle} marginEnd={2} color={mode('blue.600', 'blue.200')} />
+                                        {'24/7 On-Call Support'}
+                                    </ListItem>
+                                </List>
+                            </SimpleGrid>
+                        </Stack>
+                        <Button
+                            colorScheme={'blue'}
+                            size="lg"
+                            w="full"
+                            fontWeight="extrabold"
+                            py={{ md: '8' }}
+                            rounded={'lg'}
+                            onClick={() => router.push('/contact')}
+                        >
+                            {'Contact Us'}
+                        </Button>
+                    </Box>
+                </Flex>
+                {/* </SimpleGrid>
+                    </Box>
+                </Flex> */}
+            </Box>
+
             <Box minH={'5rem'} />
 
-            <Heading textAlign={'center'}>Our Other Services</Heading>
-            <Text pb={2} fontSize={'lg'} textAlign={'center'}>Sorry, Right now we are not offering our other services to the public.</Text>
+            <Box px={{ base: '6', lg: '10' }}>
+                <Heading textAlign={'center'}>Our Other Services</Heading>
+                <Text pb={2} fontSize={'lg'} textAlign={'center'}>Sorry, Right now we are not offering our other services to the public.</Text>
+            </Box>
+
 
             <Box minH={'5rem'} />
         </>
