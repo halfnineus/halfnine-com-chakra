@@ -121,7 +121,6 @@ const IndexPage = () => {
                   {indexData.block3.item1}<br />
                   {indexData.block3.item2}<br />
                   {indexData.block3.item3}<br />
-                  {indexData.block3.item4}<br />
                 </Text>
                 <Stack
                   direction={{ base: "column", sm: "row" }}
@@ -131,6 +130,7 @@ const IndexPage = () => {
                   <Button
                     colorScheme={'blue'}
                     rounded="md"
+                    onClick={()=> router.push('/services/development/')}
                   >
                     {indexData.block3.options}
                   </Button>
