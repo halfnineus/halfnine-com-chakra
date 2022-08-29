@@ -126,7 +126,7 @@ export const PricingCard = (props: PricingCardProps) => {
                 </Text>
             </Flex>
             <Heading textAlign={'center'} color={'gray.500'} fontSize="xl" mb="8">
-                {'from '}
+                {'Worth '}
                 <Text display={'inline'} textDecor={'line-through'}>
                     {fromprice}
                 </Text>
@@ -162,7 +162,7 @@ const Development: NextPage<Props> = () => {
             <Box px={{ base: '6', lg: '10' }}>
                 <Heading p={6} textAlign={'center'}>Our Web Services</Heading>
                 <Heading pb={2} fontSize={'lg'} textAlign={'center'}>Always Included: Website Design, Web Hosting, SSL, Domain Name, SEO Compliance</Heading>
-                <Text pb={6} textAlign={'center'}>Custom Features: Locales, CMS, Webmail, Custom API, Contact Forms, Shop, Auth, Uptime Monitor, etc.</Text>
+                <Text pb={6} textAlign={'center'}>Custom Features: Locales, Webmail, Custom API, Contact Forms, Auth, Uptime Monitor, etc.</Text>
 
                 <SimpleGrid
                     columns={{ base: 1, lg: 3 }}
@@ -179,8 +179,9 @@ const Development: NextPage<Props> = () => {
                             name: 'Personal',
                             features: [
                                 'Static Site',
+                                'Design and Hosting',
                                 'Up to 4 Pages',
-                                'No Custom Features',
+                                'Optional CMS and Shop',
                                 'Business Hours support',
                             ],
                             fromprice: '$200',
@@ -202,7 +203,9 @@ const Development: NextPage<Props> = () => {
                             name: 'Business',
                             features: [
                                 'Static and Dynamic Site ',
+                                'Design and Hosting',
                                 'Up to 24 Pages',
+                                'Optional CMS and Shop',
                                 '2 Custom Features',
                                 'Daytime Hours support',
                             ],
@@ -217,11 +220,13 @@ const Development: NextPage<Props> = () => {
                             name: 'Commerce',
                             features: [
                                 'Static and Dynamic Site',
+                                'Design and Hosting',
                                 'Unlimited-Pages',
-                                '4 Custom Features',
+                                'Optional CMS and Shop',
+                                '8 Custom Features',
                                 '24/7 On-Call Support',
                             ],
-                            fromprice: '$12000',
+                            fromprice: '$20000',
                         }}
                         icon={FaStore}
                         button={
