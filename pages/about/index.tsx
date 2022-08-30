@@ -75,7 +75,7 @@ const IndexAbout = () => {
         return (
           <>
             <NextSeo title={aboutData.head.title} description={aboutData.head.description} />
-            <Box as={Container} maxW="7xl" mt={14} p={4}>
+            <Box as={Container} maxW="7xl" mt={14} py={4} px={{ base: '6', lg: '10' }}>
               {/* <Grid templateColumns={{ base: 'repeat(1, 1fr)', sm: 'repeat(2, 1fr)', md: 'repeat(2, 1fr)', }} gap={4}>
                 <GridItem colSpan={1}>
                   <VStack alignItems="flex-start" spacing="20px">
