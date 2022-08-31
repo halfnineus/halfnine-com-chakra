@@ -147,7 +147,7 @@ const INDEX = () => {
                                                         </Button>
                                                     </Link>
                                                 </NextLink> */}
-                                                <NextLink href={'mailto:dan@ochoa.pro'} passHref>
+                                                {/* <NextLink href={'mailto:dan@ochoa.pro'} passHref>
                                                     <Link isExternal>
                                                         <Button
                                                             size="md"
@@ -162,7 +162,7 @@ const INDEX = () => {
                                                             dan@ochoa.pro
                                                         </Button>
                                                     </Link>
-                                                </NextLink>
+                                                </NextLink> */}
                                                 <NextLink href={'https://duckduckgo.com/?q=Orlando%2C+Florida&iaxm=maps'} passHref>
                                                     <Link isExternal>
                                                         <Button
