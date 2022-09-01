@@ -20,28 +20,49 @@ export default async function contactMail(req: any, res: any) {
   }
 
   require('dotenv').config()
-  let nodemailer = require('nodemailer')
 
-  const transporter = nodemailer.createTransport({
-    host: process.env.smtpserver,
-    port: process.env.smtpport,
-    auth: {
-      user: process.env.donotreplyemail,
-      pass: process.env.password,
-    },
-    secure: true,
-  });
-
-
-  const mailData = {
-    from: process.env.donotreplyemail,
+  const sgMail = require('@sendgrid/mail')
+  sgMail.setApiKey(process.env.SENDGRID_API_KEY)
+  const msg = {
     to: process.env.myemail,
+    from: process.env.donotreplyemail,
     subject: `Message From ${req.body.name}`,
     text: req.body.message + " | Sent from: " + req.body.email,
-    html: `<div>${req.body.message}</div><p>Sent from: ${req.body.email}</p>`
+    html: `<div>${req.body.message}</div><p>Sent from: ${req.body.email}</p>`,
   }
+  sgMail
+    .send(msg)
+    .then(() => {
+      console.log('Email sent')
+    })
+    .catch((error:any) => {
+      console.error(error)
+    })
 
-  transporter.sendMail(mailData)
+
+
+  // let nodemailer = require('nodemailer')
+
+  // const transporter = nodemailer.createTransport({
+  //   host: process.env.smtpserver,
+  //   port: process.env.smtpport,
+  //   auth: {
+  //     user: process.env.donotreplyemail,
+  //     pass: process.env.password,
+  //   },
+  //   secure: true,
+  // });
+
+
+  // const mailData = {
+  //   from: process.env.donotreplyemail,
+  //   to: process.env.myemail,
+  //   subject: `Message From ${req.body.name}`,
+  //   text: req.body.message + " | Sent from: " + req.body.email,
+  //   html: `<div>${req.body.message}</div><p>Sent from: ${req.body.email}</p>`
+  // }
+
+  //transporter.sendMail(mailData)
 
   // transporter.sendMail(mailData, function (err: any, info: any) {
   //   if (err) {
