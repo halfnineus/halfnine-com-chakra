@@ -1,7 +1,9 @@
 # Docker build img
-```docker build -t ochoadan/opc .```
+
+`docker build -t ochoadan/opc .`
 
 ## Built with Next.JS - The React Framework
+
 https://github.com/vercel/next.js
 
 <a href="https://github.com/vercel/next.js">
@@ -9,6 +11,7 @@ https://github.com/vercel/next.js
 </a>
 
 ## Written in TypeScript
+
 https://github.com/microsoft/TypeScript
 
 <a href="https://github.com/microsoft/TypeScript">
@@ -16,6 +19,7 @@ https://github.com/microsoft/TypeScript
 </a>
 
 ## User Interface - Chakra-UI
+
 https://github.com/chakra-ui/chakra-ui
 
 <a href="https://github.com/chakra-ui/chakra-ui">
@@ -23,6 +27,7 @@ https://github.com/chakra-ui/chakra-ui
 </a>
 
 ## Mail Handler - Nodemailer
+
 https://github.com/nodemailer/nodemailer
 
 <a href="https://github.com/nodemailer/nodemailer">
@@ -30,9 +35,10 @@ https://github.com/nodemailer/nodemailer
 </a>
 
 ## Seo Handler - Next-Seo
+
 https://github.com/garmeeh/next-seo
 
-## Extras - 
+## Extras -
 
 <a href="https://github.com/react-icons/react-icons">react-icons</a>
 
