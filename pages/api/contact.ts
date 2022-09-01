@@ -1,18 +1,18 @@
-import sqlite3 from 'sqlite3'
-import { open } from 'sqlite'
-import path from 'path'
+// import sqlite3 from 'sqlite3'
+// import { open } from 'sqlite'
+// import path from 'path'
 
 
 // you would have to import / invoke this in another file
 export default async function contactMail(req: any, res: any) {
 
-  open({
-    filename: path.resolve("./databases/emails.db"),
-    driver: sqlite3.Database
-  }).then((db) => {
-    db.exec('CREATE TABLE IF NOT EXISTS emaildb (col TEXT)')
-    db.exec('INSERT INTO emaildb VALUES ("test")')
-  })
+  // open({
+  //   filename: path.resolve("./databases/emails.db"),
+  //   driver: sqlite3.Database
+  // }).then((db) => {
+  //   db.exec('CREATE TABLE IF NOT EXISTS emaildb (col TEXT)')
+  //   db.exec('INSERT INTO emaildb VALUES ("test")')
+  // })
 
   if (req.method !== "POST") {
     res.status(405).send(`Hi, I'd say nice try... but it wasn't`); // Incorrect request method
