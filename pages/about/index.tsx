@@ -21,11 +21,6 @@ import { useRouter } from "next/router"
 
 import aboutdat from '../../assets/about.json'
 
-import img1 from './brands/1.png'
-import img2 from './brands/2.png'
-import img3 from './brands/3.png'
-import img4 from './brands/4.png'
-import img5 from './brands/5.png'
 
 interface FeatureProps {
   heading: string;
@@ -117,7 +112,7 @@ const IndexAbout = () => {
               </Grid>
               <Divider mt={16} mb={4} />
 
-              {/* 
+
               <Grid
                 templateColumns={{
                   base: 'repeat(1, 1fr)',
@@ -126,15 +121,15 @@ const IndexAbout = () => {
                 }}
                 gap={{ base: '8', sm: '12', md: '16' }}>
                 <Feature
-                  heading={'Lorem ipsum'}
+                  heading={'First Feature'}
                   text={'Short text describing one of you features/service'}
                 />
                 <Feature
-                  heading={'Lorem ipsum'}
+                  heading={'Second Feature'}
                   text={'Short text describing one of you features/service'}
                 />
                 <Feature
-                  heading={'Lorem ipsum'}
+                  heading={'Third Feature'}
                   text={'Short text describing one of you features/service'}
                 />
                 <Feature
@@ -142,21 +137,9 @@ const IndexAbout = () => {
                   text={'Short text describing one of you features/service'}
                 />
               </Grid>
-              <Divider mt={16} mb={16} /> */}
+              {/* <Divider mt={16} mb={16} /> */}
 
 
-            </Box>
-            <Box as="section" pt={'6'} pb={16} maxW={{ base: 'xl', md: '7xl' }} textAlign={{ md: 'center', sm: 'center', base: 'start' }} mx={"auto"} px={{ base: '6', md: '8' }}>
-              <Heading fontWeight="bold" maxW="xlg" mx="auto">
-                {`Made with`}
-              </Heading>
-              <SimpleGrid columns={{ base: 1, sm: 2, md: 3, lg: 5 }} mt="8" spacing={'6'}>
-                <BuiltWith tech={'Node.js'} img={img1.src} />
-                <BuiltWith tech={'React'} img={img2.src} />
-                <BuiltWith tech={'Next.js'} img={img3.src} />
-                <BuiltWith tech={'SQLite'} img={img4.src} />
-                <BuiltWith tech={'Nodemailer'} img={img5.src} />
-              </SimpleGrid>
             </Box>
           </>)
       })}

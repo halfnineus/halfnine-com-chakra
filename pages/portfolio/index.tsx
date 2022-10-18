@@ -59,11 +59,11 @@ const IndexPortfolio = () => {
                     </Box>
 
                     <Box minH={'5rem'} />
-                    <Box key={i} as="section" maxW={{ base: 'xl', md: '4xl' }} textAlign={'center'} mx={"auto"} px={{ base: '6', md: '8' }}>
+                    {/* <Box key={i} as="section" maxW={{ base: 'xl', md: '4xl' }} textAlign={'center'} mx={"auto"} px={{ base: '6', md: '8' }}>
                         <Heading textAlign={'center'} fontWeight="extrabold" maxW="xlg" mx="auto">
                             {"Our Current Projects"}
                         </Heading>
-                        {/* <Text pt={2} fontSize={'lg'} color={'gray.500'}>{protafolioData.block.h2}</Text> */}
+                        <Text pt={2} fontSize={'lg'} color={'gray.500'}>{protafolioData.block.h2}</Text>
                         <SimpleGrid pt={6} columns={{ base: 1, sm: 2, md: 2, lg: 2 }} spacing={'6'}>
                             <NextLink href={'https://opencontracts.xyz'} passHref>
                                 <Link isExternal>
@@ -91,7 +91,7 @@ const IndexPortfolio = () => {
                             </NextLink>
                         </SimpleGrid>
                     </Box>
-                    <Box minH={'5rem'} />
+                    <Box minH={'5rem'} /> */}
                 </>
 
             )

@@ -7,25 +7,25 @@
         "description": "Full-service product development with Ochoa, Providing services from software, hardware, and mechanical engineering. And electronics manufacturing."
       },
       "block1": {
-        "h1_1": "Agile Automation",
-        "h1_2": "Development & Manufacturing",
-        "txt": "Ochoa offers Agile Automation services and provides end-to-end solutions for product development, design and manufacturing through our experts and professionals.",
+        "h1_1": "-_-",
+        "h1_2": "-_-",
+        "txt": "-_-",
         "button": "Talk to an expert"
       },
       "block2": {
         "h2_1": "All your needs with",
         "h2_2": "customized technology",
-        "txt_1": "Don't know where to start? We find the simplest and most cost-effective solution for your needs, without sacrificing quality and performance.",
-        "txt_2": "We are here you, and those who need more.",
+        "txt_1": "-_-",
+        "txt_2": "-_-",
         "button": "Schedule a Meeting"
       },
       "block3": {
-        "h3_1": "Ready to consider options?",
-        "h3_2": "Contact us to see your options today!",
-        "item1": "Want a Simple Static Site with the Best Performance? We can manage it!",
-        "item2": "Need a Custom Web Application to interact with hardware | IoT? We can manage it!",
-        "item3": "Want your own custom-built CMS? We can manage it!",
-        "options": "See my options"
+        "h3_1": "We Focus On Helping You Avoid",
+        "h3_2": "The Industry's Most Common Problems",
+        "item1": "-_-",
+        "item2": "-_- ",
+        "item3": "-_-",
+        "options": "Contact Us"
       },
       "block4": {
         "h4": "Our Solutions.",
@@ -68,7 +68,7 @@
       "locale": "es",
       "head": {
         "title": "Desarrollo Internacional de Productos, Diseño y Producción - Ochoa",
-        "description": "Desarrollo de productos de servicio completo con Ochoa, brindando servicios de software, hardware e ingeniería mecánica. Y la fabricación de productos electrónicos."
+        "description": "Desarrollo de productos de servicio completo con Ochoa, brindando servicios de software, hardware e i`ngeniería mecánica. Y la fabricación de productos electrónicos."
       },
       "block1": {
         "h1_1": "Automatización Ágil",
@@ -86,9 +86,9 @@
       "block3": {
         "h3_1": "¿Listo para considerar opciones?",
         "h3_2": "¡Contáctenos para ver sus opciones hoy!",
-        "item1": "¿Quieres un sitio estático simple con el mejor rendimiento? ¡Podemos hacerlo!",
-        "item2": "Necesita una aplicación web personalizada para interactuar con el hardware | IoT? ¡Podemos hacerlo!",
-        "item3": "¿Quieres tu propio CMS personalizado? ¡Podemos hacerlo!",
+        "item1": "--||----||----||--",
+        "item2": "--||----||----||--",
+        "item3": "--||----||----||--",
         "options": "Ver mis opciones"
       },
       "block4": {
