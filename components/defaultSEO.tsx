@@ -10,7 +10,7 @@ const DefaultSEO = () => {
                     locale: 'en',
                     url: 'https://ochoa.pro/',
                     site_name: 'Ochoa',
-                    title: 'International Product Development, Design and Production - Ochoa',
+                    title: 'International Product Development, Design, and Production - Ochoa',
                     description: 'Full-service product development with Ochoa, Providing services from software, hardware and mechanical engineering. And electronics manufacturing.',
                     images: [
                         {

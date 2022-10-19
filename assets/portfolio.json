@@ -3,12 +3,12 @@
         {
             "locale": "en",
             "head": {
-                "title": "Product Showcase - Ochoa - International Product Development, Design and Production",
+                "title": "Product Showcase - Ochoa - International Product Development, Design, and Production",
                 "description": "We keep developing systems to automate simple and complicated industrial processes. Contact us to know more."
             },
             "block": {
                 "h1": "Hardware made for and used by Industry Leading Companies",
-                "h2": "Developed by us in Orlando and Manufactured by our partners in Hong Kong SAR.",
+                "h2": "Developed by us in Orlando, FL. and manufactured by our partners in Hong Kong, SAR.",
                 "h3": "Software, And more..."
             },
             "components": {
@@ -23,12 +23,12 @@
         {
             "locale": "es",
             "head": {
-                "title": "Exposition de Productos - Ochoa - Desarrollo Internacional de Productos, Diseño y Produccion",
+                "title": "Portafolio de Productos - Ochoa - Desarrollo Internacional de Productos, Diseño y Produccion",
                 "description": "Seguimos desarrollando sistemas para automatizar procesos industriales simples y complicados. Contáctanos para saber más."
             },
             "block": {
                 "h1": "Fabricado y utilizado para empresas líderes en la industria",
-                "h2": "Desarrollado por nosotros en Orlando y fabricado por nuestros socios en Hong Kong SAR.",
+                "h2": "Desarrollado por nosotros en Orlando Florida. y fabricado por nuestros socios en Hong Kong, SAR.",
                 "h3": "Software, y más..."
             },
             "components": {

@@ -3,33 +3,35 @@
     {
       "locale": "en",
       "head": {
-        "title": "International Product Development, Design and Production - Ochoa",
+        "title": "International Product Development, Design, and Production - Ochoa",
         "description": "Full-service product development with Ochoa, Providing services from software, hardware, and mechanical engineering. And electronics manufacturing."
       },
       "block1": {
-        "h1_1": "-_-",
-        "h1_2": "-_-",
-        "txt": "-_-",
+        "h1_1": "Agile Automation",
+        "h1_2": "Development & Manufacturing",
+        "txt": "Improve your products and services with a digital transformation powered by",
+        "txturl": "Agile Automation",
         "button": "Talk to an expert"
       },
       "block2": {
         "h2_1": "All your needs with",
         "h2_2": "customized technology",
-        "txt_1": "-_-",
-        "txt_2": "-_-",
-        "button": "Schedule a Meeting"
+        "txt_1": "With the right team, transforming ideas into working products becomes a reality.",
+        "txt_2": "Start your consultation today and let's make your ideal product.",
+        "button": "Email us"
       },
       "block3": {
         "h3_1": "We Focus On Helping You Avoid",
         "h3_2": "The Industry's Most Common Problems",
-        "item1": "-_-",
-        "item2": "-_- ",
-        "item3": "-_-",
-        "options": "Contact Us"
+        "item1": "Scalability - Ability to service changing volumes of service demand.",
+        "item2": "Adaptability - Being able to handle changes based on requirements and strategy.",
+        "item3": "Flexibility - Respond to earthquakes in the architecture seamlessly.",
+        "item4": "Goodbye to Over Engineering - As long as it works  it's ok right? We don't think so.",
+        "options": "Learn More"
       },
       "block4": {
         "h4": "Our Solutions.",
-        "txt": "Every area that we work on brings its own challenges and requires teams with assortment of specializations to turn ideas into solutions.",
+        "txt": "Every area that we work on brings  it's own challenges and requires teams with an assortment of specializations to turn ideas into solutions.",
         "item1": "Electronic Engineering",
         "item1d": "Reliable and innovative solutions that enable a digital transformation.",
         "item2": "Software Engineering",
@@ -44,7 +46,7 @@
       "block5": {
         "site": "ochoa.pro",
         "h5": "Technology transformation, migration, and implementation",
-        "txt": "We offer Industry solutions for companies who want to work with Technology that meets their specific needs, ideas and goals.",
+        "txt": "We offer Industry solutions for companies who want to work with Technology that meets their specific needs, ideas, and goals.",
         "item1": "Financial services",
         "item1d": "Customize experiences and modernize systems.",
         "item2": "Government",
@@ -73,23 +75,25 @@
       "block1": {
         "h1_1": "Automatización Ágil",
         "h1_2": "Desarrollo & Fabricación",
-        "txt": "Ochoa ofrece servicios de Automatización Ágil y brinda soluciones funcionales para el desarrollo, diseño y fabricación de productos a través de nuestros expertos y profesionales.",
-        "button": "Habla con un experto"
+        "txt": "Mejore sus productos y servicios con una transformación digital impulsada por",
+        "txturl": "Automatización Ágil",
+        "button": "Hablar con un experto"
       },
       "block2": {
         "h2_1": "Todas tus necesidades con",
         "h2_2": "tecnología customizada",
-        "txt_1": "¿No sabes por dónde empezar? Encontramos la solución más sencilla y rentable para sus necesidades, sin sacrificar la calidad y el rendimiento.",
-        "txt_2": "Estamos aquí para ustedes, y los que necesitan más.",
-        "button": "Programar una reunión"
+        "txt_1": "Con el equipo adecuado, la transformación de ideas en productos funcionales se convierte en una realidad.",
+        "txt_2": "Inicie su consulta hoy y hagamos su producto ideal.",
+        "button": "Envíanos un correo electrónico"
       },
       "block3": {
-        "h3_1": "¿Listo para considerar opciones?",
-        "h3_2": "¡Contáctenos para ver sus opciones hoy!",
-        "item1": "--||----||----||--",
-        "item2": "--||----||----||--",
-        "item3": "--||----||----||--",
-        "options": "Ver mis opciones"
+        "h3_1": "Nos enfocamos en ayudarte a evitar",
+        "h3_2": "Los problemas más comunes de la industria",
+        "item1": "Escalabilidad - servicio de capacidad que cambia los volúmenes de la demanda del servicio.",
+        "item2": "Adaptabilidad - Ser capaz de manejar los cambios en función de los requisitos y la estrategia.",
+        "item3": "Flexibilidad - responda a los terremotos en la arquitectura sin problemas.",
+        "item4": "No más Sobreingeniería - Mientras funcione, está bien, ¿no? No lo creemos.",
+        "options": "Mas Informacion."
       },
       "block4": {
         "h4": "Que es lo que hacemos.",
@@ -107,8 +111,8 @@
       },
       "block5": {
         "site": "ochoa.pro",
-        "h5": "Technology transformation, migration, and implementation",
-        "txt": "We offer Industry solutions for companies who want to work with Technology that meets their specific needs, ideas, and goals.",
+        "h5": "Transformación, migración e implementación de tecnología",
+        "txt": "Ofrecemos soluciones industriales para empresas que desean trabajar con tecnología que satisfaga sus necesidades, ideas y objetivos específicos.",
         "item1": "Servicios financieros",
         "item1d": "Personalice experiencias y modernice sistemas.",
         "item2": "Gobierno",

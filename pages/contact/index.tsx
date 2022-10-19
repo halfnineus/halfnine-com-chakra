@@ -19,13 +19,23 @@ import {
     useColorModeValue as mode,
     Link,
     useToast,
+    Modal,
+    ModalOverlay,
+    ModalContent,
+    ModalHeader,
+    ModalFooter,
+    ModalBody,
+    ModalCloseButton,
+    useDisclosure,
 } from '@chakra-ui/react';
 
+import { FiExternalLink } from 'react-icons/fi'
 import { MdEmail, MdLocationOn, MdOutlineEmail, } from 'react-icons/md';
 
 import { BsPerson } from 'react-icons/bs'
 import { useState } from "react"
 import { NextSeo } from "next-seo";
+import router from "next/router";
 
 const INDEX = () => {
     const [name, setName] = useState('');
@@ -87,12 +97,36 @@ const INDEX = () => {
         }
 
     }
+    const { isOpen, onOpen, onClose } = useDisclosure();
+
     return (
         <>
             <NextSeo
-                title={`Contact Us - ochoa.pro - International Product Development, Design and Production`}
-                description={`Contact Us about Product Development, Design and Production Related Inquiries.`}
+                title={`Contact Us - ochoa.pro - International Product Development, Design, and Production`}
+                description={`Contact Us about Product Development, Design, and Production Related Inquiries.`}
             />
+
+            <Modal isOpen={isOpen} onClose={onClose}>
+                <ModalOverlay />
+                <ModalContent>
+                    <ModalHeader>Email us</ModalHeader>
+                    <ModalCloseButton />
+                    <ModalBody>
+                        <Text fontWeight='bold' mb='1rem'>
+                            {/* <Lorem count={2} /> */}
+                            Dan Ochoa: dan@ochoa.pro
+                        </Text>
+                    </ModalBody>
+
+                    <ModalFooter>
+                        <Button colorScheme='blue' mr={3} onClick={onClose}>
+                            Close
+                        </Button>
+                        <Button onClick={() => router.push("mailto:dan@ochoa.pro")} variant='ghost' rightIcon={<FiExternalLink />}>Send Mail</Button>
+                    </ModalFooter>
+                </ModalContent>
+            </Modal>
+
             <Container maxW="full" mt={0} centerContent overflow="hidden" py='8'>
                 <Flex>
                     <Box
@@ -109,8 +143,8 @@ const INDEX = () => {
                                     <Box>
                                         <Heading pt={5} pb={2} px={5} color={mode('black', 'white')} fontSize={'4xl'}>Get In Touch</Heading>
                                         <Text py={2} px={5} mt={'auto'} color="gray.500">
-                                            Fill up the form to contact or<br />
-                                            use our contacts below:
+                                            Fill up the form below and<br />
+                                            we will contact you shortly:
                                         </Text>
                                         <Box pr={5} pl={'1'} py={5}>
                                             <VStack pl={0} spacing={2} alignItems="flex-start">
@@ -147,22 +181,19 @@ const INDEX = () => {
                                                         </Button>
                                                     </Link>
                                                 </NextLink> */}
-                                                {/* <NextLink href={'mailto:dan@ochoa.pro'} passHref>
-                                                    <Link isExternal>
-                                                        <Button
-                                                            size="md"
-                                                            height="auto"
-                                                            width="auto"
-                                                            minH={'10'}
-                                                            variant="ghost"
-                                                            color={mode('black', 'white')}
-                                                            _hover={mode({ color: 'blue.500', bg: 'blackAlpha.100' }, { color: 'blue.200', bg: 'whiteAlpha.100' })}
-                                                            leftIcon={<MdEmail color={mode('black', 'white')} size="20px" />}
-                                                        >
-                                                            dan@ochoa.pro
-                                                        </Button>
-                                                    </Link>
-                                                </NextLink> */}
+                                                <Button
+                                                    onClick={onOpen}
+                                                    size="md"
+                                                    height="auto"
+                                                    width="auto"
+                                                    minH={'10'}
+                                                    variant="ghost"
+                                                    color={mode('black', 'white')}
+                                                    _hover={mode({ color: 'blue.500', bg: 'blackAlpha.100' }, { color: 'blue.200', bg: 'whiteAlpha.100' })}
+                                                    leftIcon={<MdEmail color={mode('black', 'white')} size="20px" />}
+                                                >
+                                                    Email: Dan Ochoa
+                                                </Button>
                                                 <NextLink href={'https://duckduckgo.com/?q=Orlando%2C+Florida&iaxm=maps'} passHref>
                                                     <Link isExternal>
                                                         <Button

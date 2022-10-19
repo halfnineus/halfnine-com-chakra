@@ -1,7 +1,6 @@
 import {
   Box,
   Heading,
-  SimpleGrid,
   Stack,
   Text,
   useColorModeValue as mode,
@@ -16,7 +15,6 @@ import {
 } from '@chakra-ui/react';
 import { NextSeo } from 'next-seo';
 
-import Head from 'next/head'
 import { useRouter } from "next/router"
 
 import aboutdat from '../../assets/about.json'
@@ -30,9 +28,7 @@ interface FeatureProps {
 const Feature = ({ heading, text }: FeatureProps) => {
   return (
     <GridItem>
-      <chakra.h3 fontSize="xl" fontWeight="600">
-        {heading}
-      </chakra.h3>
+      <chakra.h3 fontSize="xl" fontWeight="600">{heading}</chakra.h3>
       <chakra.p>{text}</chakra.p>
     </GridItem>
   );
@@ -70,7 +66,7 @@ const IndexAbout = () => {
         return (
           <>
             <NextSeo title={aboutData.head.title} description={aboutData.head.description} />
-            <Box as={Container} maxW="7xl" mt={14} py={4} px={{ base: '6', lg: '10' }}>
+            <Box as={Container} maxW="7xl" mt={8} py={4} px={{ base: '6', lg: '10' }}>
               {/* <Grid templateColumns={{ base: 'repeat(1, 1fr)', sm: 'repeat(2, 1fr)', md: 'repeat(2, 1fr)', }} gap={4}>
                 <GridItem colSpan={1}>
                   <VStack alignItems="flex-start" spacing="20px">
@@ -86,7 +82,6 @@ const IndexAbout = () => {
 
               <Divider mt={16} mb={16} /> */}
 
-
               <Grid templateColumns={{ base: 'repeat(1, 1fr)', sm: 'repeat(2, 1fr)', md: 'repeat(2, 1fr)', }} gap={4}>
                 <GridItem display={{ base: 'flex', sm: 'none' }} colSpan={1}>
                   <VStack alignItems="flex-end" spacing="20px">
@@ -99,10 +94,6 @@ const IndexAbout = () => {
                   <Flex><Text>{aboutData.block2.i2}</Text></Flex>
                   <Divider mt={2} mb={2} />
                   <Flex><Text>{aboutData.block2.i3}</Text></Flex>
-                  {/* <Divider mt={2} mb={2} />
-                  <Flex><Text>{aboutData.block2.i4}</Text></Flex> */}
-                  {/* <Divider mt={2} mb={2} />
-                  <Flex><Text>{aboutData.block2.i5}</Text></Flex> */}
                 </GridItem>
                 <GridItem colSpan={1}>
                   <VStack display={{ base: 'none', sm: 'flex' }} alignItems="flex-end" spacing="20px">
@@ -112,7 +103,6 @@ const IndexAbout = () => {
               </Grid>
               <Divider mt={16} mb={4} />
 
-
               <Grid
                 templateColumns={{
                   base: 'repeat(1, 1fr)',
@@ -121,24 +111,24 @@ const IndexAbout = () => {
                 }}
                 gap={{ base: '8', sm: '12', md: '16' }}>
                 <Feature
-                  heading={'First Feature'}
-                  text={'Short text describing one of you features/service'}
+                  heading={'!!First Feature'}
+                  text={'!!Short text describing one of you features/service'}
                 />
                 <Feature
-                  heading={'Second Feature'}
-                  text={'Short text describing one of you features/service'}
+                  heading={'!!Second Feature'}
+                  text={'!!Short text describing one of you features/service'}
                 />
                 <Feature
-                  heading={'Third Feature'}
-                  text={'Short text describing one of you features/service'}
+                  heading={'!!Third Feature'}
+                  text={'!!Short text describing one of you features/service'}
                 />
                 <Feature
-                  heading={'Fourth Feature'}
-                  text={'Short text describing one of you features/service'}
+                  heading={'!!Fourth Feature'}
+                  text={'!!Short text describing one of you features/service'}
                 />
               </Grid>
-              {/* <Divider mt={16} mb={16} /> */}
 
+              {/* <Divider mt={16} mb={16} /> */}
 
             </Box>
           </>)
