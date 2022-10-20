@@ -178,7 +178,7 @@ const IndexPage = () => {
                   <Button
                     colorScheme={'blue'}
                     rounded="md"
-                    onClick={() => router.push('/services/development/')}
+                    onClick={() => router.push('/about/')}
                   >
                     {indexData.block3.options}
                   </Button>

@@ -3,9 +3,9 @@
         {
             "locale": "en",
             "components": {
-                "item1": "Portfolio",
-                "item2": "Development",
-                "item3": "Manufacturing",
+                "item1": "Development",
+                "item2": "Manufacturing",
+                "item3": "Portfolio",
                 "item4": "About",
                 "contact": "Contact Us"
             }
@@ -13,9 +13,9 @@
         {
             "locale": "es",
             "components": {
-                "item1": "Portafolio",
-                "item2": "Desarrollo",
-                "item3": "Fabricación",
+                "item1": "Desarrollo",
+                "item2": "Fabricación",
+                "item3": "Portafolio",
                 "item4": "Acerca De",
                 "contact": "Contáctanos"
             }

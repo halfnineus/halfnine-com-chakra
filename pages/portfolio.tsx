@@ -1,14 +1,14 @@
 import { Box, Heading, Image, SimpleGrid, useColorModeValue as mode, Text, Flex, Button, Stack, Link } from "@chakra-ui/react"
 import { useRouter } from "next/router"
 
-import img1 from '../../public/img/portfolio/1.png'
-import img2 from '../../public/img/portfolio/2.png'
-import img3 from '../../public/img/portfolio/3.png'
-import img4 from '../../public/img/portfolio/4.png'
-import img5 from '../../public/img/portfolio/5.png'
-import img6 from '../../public/img/portfolio/6.png'
+import img1 from '../public/img/portfolio/1.png'
+import img2 from '../public/img/portfolio/2.png'
+import img3 from '../public/img/portfolio/3.png'
+import img4 from '../public/img/portfolio/4.png'
+import img5 from '../public/img/portfolio/5.png'
+import img6 from '../public/img/portfolio/6.png'
 
-import portfoliodat from '../../assets/portfolio.json'
+import portfoliodat from '../assets/portfolio.json'
 
 import { NextSeo } from "next-seo"
 

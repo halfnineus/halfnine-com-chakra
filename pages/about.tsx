@@ -12,24 +12,62 @@ import {
   Divider,
   Grid,
   chakra,
+  Icon,
+  Center,
 } from '@chakra-ui/react';
 import { NextSeo } from 'next-seo';
 
 import { useRouter } from "next/router"
 
-import aboutdat from '../../assets/about.json'
+import aboutdat from '../assets/about.json'
+
+import { MdTouchApp, MdCheckCircleOutline, MdAvTimer } from 'react-icons/md'
 
 
 interface FeatureProps {
   heading: string;
   text: string;
+  color: string;
+  icon: any;
 }
 
-const Feature = ({ heading, text }: FeatureProps) => {
+const Feature = ({ heading, text, color, icon }: FeatureProps) => {
   return (
     <GridItem>
-      <chakra.h3 fontSize="xl" fontWeight="600">{heading}</chakra.h3>
-      <chakra.p>{text}</chakra.p>
+      <Flex
+        alignItems="center"
+        justifyContent="center"
+        w={8}
+        h={8}
+        mb={4}
+        rounded="full"
+        color={`${color}.600`}
+        _dark={{ color: `${color}.100` }}
+        bg={`${color}.100`}
+      >
+        <Icon
+          boxSize={5}
+          viewBox="0 0 20 20"
+          fill="currentColor"
+          aria-hidden="true"
+        >
+          {icon}
+        </Icon>
+      </Flex>
+
+      {/* <chakra.h3 fontSize="xl" fontWeight="600"> */}
+      <chakra.h3
+        fontSize={"lg"}
+        mb={2}
+        fontWeight="semibold"
+        lineHeight="shorter"
+        _light={{ color: "gray.900" }}
+      >
+        {heading}
+      </chakra.h3>
+      <chakra.p fontSize="md" color="gray.600" _dark={{ color: "gray.400" }}>
+        {text}
+      </chakra.p>
     </GridItem>
   );
 };
@@ -37,29 +75,6 @@ const Feature = ({ heading, text }: FeatureProps) => {
 
 const IndexAbout = () => {
   const { locale } = useRouter()
-  const BuiltWith = (children: any) => {
-    return (
-      <Box
-        maxW={'220px'}
-        w={'full'}
-        bg={mode('gray.50', 'gray.700')}
-        boxShadow={'md'}
-        rounded={'md'}
-        p={2}
-        overflow={'hidden'}
-        maxH={'auto'}
-      >
-        <Box h={'auto'} bg={mode('gray.100', 'gray.300')} mt={-2} mx={-2} mb={2} pos={'relative'}>
-          <Image userSelect={'none'} pointerEvents={'none'} alt={'img'} src={children.img} />
-        </Box>
-        <Stack>
-          <Heading color={mode('gray.700', 'white')} fontSize={'2xl'}>
-            {children.tech}
-          </Heading>
-        </Stack>
-      </Box>
-    )
-  }
   return (
     <>
       {aboutdat.data.filter(p => p.locale === locale).map((aboutData, i) => {
@@ -101,34 +116,60 @@ const IndexAbout = () => {
                   </VStack>
                 </GridItem>
               </Grid>
-              <Divider mt={16} mb={4} />
+
+              <Divider mt={16} mb={8} />
+
+              <Stack spacing={5} mb={4} as={Container} maxW={'3xl'} textAlign={'center'}>
+                <Heading fontSize={'3xl'}>{"Our Values"}</Heading>
+                {/* <Text color={mode('gray.600', 'gray.400')} fontSize={'xl'}>{"indexData.block4.txt"}</Text> */}
+              </Stack>
 
               <Grid
                 templateColumns={{
                   base: 'repeat(1, 1fr)',
                   sm: 'repeat(2, 1fr)',
-                  md: 'repeat(4, 1fr)',
+                  md: 'repeat(3, 1fr)',
                 }}
-                gap={{ base: '8', sm: '12', md: '16' }}>
+                gap={{ base: '8', sm: '12', md: '8' }}>
                 <Feature
-                  heading={'!!First Feature'}
-                  text={'!!Short text describing one of you features/service'}
+                  color="blue"
+                  heading={'Quality'}
+                  text={'Focus on expertise without overengineering.'}
+                  icon={<MdCheckCircleOutline size={20} />}
                 />
                 <Feature
-                  heading={'!!Second Feature'}
-                  text={'!!Short text describing one of you features/service'}
+                  color="yellow"
+                  heading={'Availability'}
+                  text={'Meet the demand with supply.'}
+                  icon={<MdAvTimer size={21} />}
                 />
                 <Feature
-                  heading={'!!Third Feature'}
-                  text={'!!Short text describing one of you features/service'}
+                  color="gray"
+                  heading={'Transparency'}
+                  text={'Access to every resource on any step of the process.'}
+                  icon={<MdTouchApp size={20} />}
                 />
                 <Feature
-                  heading={'!!Fourth Feature'}
-                  text={'!!Short text describing one of you features/service'}
+                  color="green"
+                  heading={'Value'}
+                  text={'Building the right teams to reach return on Investment.'}
+                  icon={''}
+                />
+                <Feature
+                  color="pink"
+                  heading={'Flexibility'}
+                  text={'Change your priorities without worries.'}
+                  icon={''}
+                />
+                <Feature
+                  color="purple"
+                  heading={'Talent'}
+                  text={'Not only the right team but the best for the job.'}
+                  icon={''}
                 />
               </Grid>
 
-              {/* <Divider mt={16} mb={16} /> */}
+              <Divider mt={16} mb={8} />
 
             </Box>
           </>)
