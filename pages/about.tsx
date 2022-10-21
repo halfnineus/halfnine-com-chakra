@@ -21,8 +21,8 @@ import { useRouter } from "next/router"
 
 import aboutdat from '../assets/about.json'
 
-import { MdTouchApp, MdCheckCircleOutline, MdAvTimer } from 'react-icons/md'
-
+import { MdTouchApp, MdCheckCircleOutline, MdAvTimer, MdMoney, MdOutlineStars } from 'react-icons/md'
+import { GiReturnArrow } from 'react-icons/gi'
 
 interface FeatureProps {
   heading: string;
@@ -37,8 +37,8 @@ const Feature = ({ heading, text, color, icon }: FeatureProps) => {
       <Flex
         alignItems="center"
         justifyContent="center"
-        w={8}
-        h={8}
+        w={12}
+        h={12}
         mb={4}
         rounded="full"
         color={`${color}.600`}
@@ -46,7 +46,7 @@ const Feature = ({ heading, text, color, icon }: FeatureProps) => {
         bg={`${color}.100`}
       >
         <Icon
-          boxSize={5}
+          boxSize={7}
           viewBox="0 0 20 20"
           fill="currentColor"
           aria-hidden="true"
@@ -130,7 +130,7 @@ const IndexAbout = () => {
                   sm: 'repeat(2, 1fr)',
                   md: 'repeat(3, 1fr)',
                 }}
-                gap={{ base: '8', sm: '12', md: '8' }}>
+                gap={{ base: '8', sm: '12', md: '10' }}>
                 <Feature
                   color="blue"
                   heading={'Quality'}
@@ -153,19 +153,19 @@ const IndexAbout = () => {
                   color="green"
                   heading={'Value'}
                   text={'Building the right teams to reach return on Investment.'}
-                  icon={''}
+                  icon={<MdMoney size={20} />}
                 />
                 <Feature
                   color="pink"
                   heading={'Flexibility'}
                   text={'Change your priorities without worries.'}
-                  icon={''}
+                  icon={<GiReturnArrow size={20} />}
                 />
                 <Feature
                   color="purple"
                   heading={'Talent'}
                   text={'Not only the right team but the best for the job.'}
-                  icon={''}
+                  icon={<MdOutlineStars size={20} />}
                 />
               </Grid>
 

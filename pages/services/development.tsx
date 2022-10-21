@@ -115,8 +115,7 @@ const Development = () => {
                         gridRowGap={{ md: 10 }}
                     >
                         <Feature title="Automation">
-                            !!Improve your conversion rates by monitoring exactly what's going
-                            on while your customers are in trial.{" "}
+                            {`!!Improve your conversion rates by monitoring exactly what's going on while your customers are in trial.`}{" "}
                         </Feature>
                         <Feature title="Cloud">
                             !!Manage all your online and offline sales in one place with a
