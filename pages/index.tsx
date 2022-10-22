@@ -1,20 +1,44 @@
 import React from 'react'
 import { useRouter } from "next/router"
 
-import { Box, Button, Container, Heading, HStack, Icon, SimpleGrid, Stack, Text, useColorModeValue as mode, VStack, Flex, Image, } from '@chakra-ui/react'
+import {
+  Box,
+  Button,
+  Container,
+  Heading,
+  HStack,
+  Icon,
+  SimpleGrid,
+  Stack,
+  Text,
+  useColorModeValue as mode,
+  VStack,
+  Flex,
+  Image,
+  useDisclosure,
+  Modal,
+  ModalOverlay,
+  ModalContent,
+  ModalHeader,
+  ModalFooter,
+  ModalBody,
+  ModalCloseButton,
+} from '@chakra-ui/react'
 
-import { CheckIcon } from '@chakra-ui/icons'
-import { AiOutlineShop, AiOutlineCalendar, AiOutlineFileProtect } from 'react-icons/ai'
-import { FaIndustry } from 'react-icons/fa'
-import { BsController } from 'react-icons/bs'
+
+import { AiOutlineShop, AiOutlineFileProtect } from 'react-icons/ai'
+import { MdOutlineHealing, MdOutlineMovie } from 'react-icons/md'
 import { RiGovernmentLine } from 'react-icons/ri'
 import { TbReportMoney } from 'react-icons/tb'
+import { BsController } from 'react-icons/bs'
+import { FaIndustry } from 'react-icons/fa'
+import { CheckIcon } from '@chakra-ui/icons'
+import { FiMail, FiExternalLink } from 'react-icons/fi'
 
 import ximg from '../public/img/index/x.jpg'
 import diagimg from '../public/img/index/diagram.jpg'
 import indexdat from '../assets/index.json'
 import { NextSeo } from 'next-seo'
-import { MdOutlineHealing, MdOutlineMovie } from 'react-icons/md'
 
 const IndexPage = () => {
   const { locale } = useRouter()
@@ -41,12 +65,35 @@ const IndexPage = () => {
       </Flex>
     )
   }
+  const { isOpen, onOpen, onClose } = useDisclosure();
   return (
     <>
       {indexdat.data.filter(p => p.locale === locale).map((indexData, i) => {
         return (
           <>
             <NextSeo title={indexData.head.title} description={indexData.head.description} />
+
+            <Modal isOpen={isOpen} onClose={onClose}>
+              <ModalOverlay />
+              <ModalContent>
+                <ModalHeader>Email us</ModalHeader>
+                <ModalCloseButton />
+                <ModalBody>
+                  <Text fontWeight='bold' mb='1rem'>
+                    {/* <Lorem count={2} /> */}
+                    Dan Ochoa: dan@ochoa.pro
+                  </Text>
+                </ModalBody>
+
+                <ModalFooter>
+                  <Button colorScheme='blue' mr={3} onClick={onClose}>
+                    Close
+                  </Button>
+                  <Button onClick={() => router.push("mailto:dan@ochoa.pro")} variant='ghost' rightIcon={<FiExternalLink />}>Send Mail</Button>
+                </ModalFooter>
+              </ModalContent>
+            </Modal>
+
             <Box key={i} as="section" pb={{ base: "none", lg: "12" }} pos="relative" px={{ base: '6', lg: '10' }}>
               <Box maxW={"100%"} mx="auto">
                 <Box maxW={{ lg: 'md', xl: 'xl' }} pt={{ base: '12', lg: '20' }} pb={{ base: '16', lg: '24' }}>
@@ -55,10 +102,10 @@ const IndexPage = () => {
                     <Box as="mark" color={mode('blue.600', 'blue.200')} bg="transparent">{indexData.block1.h1_2}</Box>
                   </Heading>
                   <Text mt={4} fontSize="xl" fontWeight="medium" color={mode('gray.600', 'gray.400')}>
-                    {indexData.block1.txt}
+                    {indexData.block1.txt} <Button userSelect={'text'} onClick={() => window.open("https://en.wikipedia.org/wiki/Agile_Automation")} fontSize="xl" fontWeight="medium" color={'blue.400'} variant={'link'}>{indexData.block1.txturl}</Button>.
                   </Text>
                   <Stack direction={{ base: 'column', sm: 'row' }} spacing="4" mt="8">
-                    <Button onClick={() => router.push('/contact/')} size="lg" colorScheme="blue" shadow="base" fontSize="md">
+                    <Button onClick={() => router.push('/contact/')} size="md" colorScheme="blue" shadow="base" fontSize="md">
                       {indexData.block1.button}
                     </Button>
                   </Stack>
@@ -96,7 +143,7 @@ const IndexPage = () => {
                   {indexData.block2.txt_1} <br />{indexData.block2.txt_2}
                 </Text>
                 <Stack direction={{ base: "column", sm: "row", }} spacing={2} justifyContent={{ sm: "left", md: "center", }}>
-                  <Button colorScheme="blue" size="lg" rightIcon={<AiOutlineCalendar />} onClick={() => router.push('/contact/')}>
+                  <Button colorScheme="blue" rightIcon={<FiMail />} onClick={onOpen}>
                     {indexData.block2.button}
                   </Button>
                 </Stack>
@@ -121,6 +168,8 @@ const IndexPage = () => {
                   {indexData.block3.item1}<br />
                   {indexData.block3.item2}<br />
                   {indexData.block3.item3}<br />
+                  {indexData.block3.item4}<br />
+                  {indexData.block3.item5}<br />
                 </Text>
                 <Stack
                   direction={{ base: "column", sm: "row" }}
@@ -130,7 +179,7 @@ const IndexPage = () => {
                   <Button
                     colorScheme={'blue'}
                     rounded="md"
-                    onClick={()=> router.push('/services/development/')}
+                    onClick={() => router.push('/about/')}
                   >
                     {indexData.block3.options}
                   </Button>
@@ -216,6 +265,7 @@ const IndexPage = () => {
             </Flex>
 
             <Box minH={'5rem'} />
+
           </>
         )
       })}

@@ -3,41 +3,37 @@
         {
             "locale": "en",
             "head": {
-                "title": "About - Ochoa - International Product Development, Design and Production",
+                "title": "About - Ochoa - International Product Development, Design, and Production",
                 "description": "Developing systems to automate simple and complicated industrial processes. Contact us to know more."
             },
             "block1": {
-                "heading": "About Us",
-                "i1": "Hi there, we are the Ochoa's, A family of engineers, immigrants starting a business in the United States, chasing the 'American Dream'.",
-                "i2": "We offer Agile Automation services and  provides end-to-end solutions for product Development, Design and Manufacturing."
+                "heading": "!!About Us",
+                "i1": "!!Hi there, we are the Ochoa's, A family of engineers, immigrants starting a business in the United States, chasing the 'American Dream'.",
+                "i2": "!!We offer Agile Automation services and  provides end-to-end solutions for product Development, Design and Manufacturing."
             },
             "block2": {
                 "heading": "Why Us",
-                "i1": "We want to make your project succeed because that means we succeed too.",
-                "i2": "Choosing Professional experience makes your project faster and more cost efficient.",
-                "i3": "Developing and Manufacturing becomes complex with scale. Making a scalable project is essential as your ability scale directly affects your ability to grows.",
-                "i4": "With our experience making software we must see it from the point of the investors, what do they want done what are the technologies resources needed, what are the better alternatives for functionality. And how can we build a team around the idea making it a cost-effective product without overspending on overthinking and over engineering.",
-                "i5": "Managing and organizing technological teams becomes a challenge if your knowledge on technology is not that big. Don't worry that's why we are here."
+                "i1": "Choose the Best - Our team is built with experience on the world's leading companies and technology.",
+                "i2": "Choose Security - Our team uses the leading technology and meets latest industry standards.",
+                "i3": "Choose You - You will be our sole focus while developing something."
             }
         },
         {
             "locale": "es",
             "head": {
-                "title": "About - Ochoa - International Product Development, Design and Production",
+                "title": "About - Ochoa - International Product Development, Design, and Production",
                 "description": "Developing systems to automate simple and complicated industrial processes. Contact us to know more."
             },
             "block1": {
-                "heading": "About Us",
-                "i1": "Hi there, we are the Ochoa's, A family of engineers, immigrants starting a business in the United States, chasing the American Dream.",
-                "i2": "We offer Agile Automation services and  provides end-to-end solutions for product Development, Design and Manufacturing."
+                "heading": "!!About Us",
+                "i1": "!!Hi there, we are the Ochoa's, A family of engineers, immigrants starting a business in the United States, chasing the American Dream.",
+                "i2": "!!We offer Agile Automation services and  provides end-to-end solutions for product Development, Design and Manufacturing."
             },
             "block2": {
-                "heading": "Why Us",
-                "i1": "We want to make your project succeed because that means we succeed too.",
-                "i2": "Choosing Professional experience makes your project faster and more cost efficient.",
-                "i3": "Developing and Manufacturing becomes complex with scale. Making a scalable project is essential as your ability scale directly affects your ability to grows.",
-                "i4": "With our experience making software we must see it from the point of the investors, what do they want done what are the technologies resources needed, what are the better alternatives for functionality. And how can we build a team around the idea making it a cost-effective product without overspending on overthinking and over engineering.",
-                "i5": "Managing and organizing technological teams becomes a challenge if your knowledge on technology is not that big. Don't worry that's why we are here."
+                "heading": "¿Por qué Nosotros?",
+                "i1": "Elige lo mejor - Nuestro equipo está hecho con experiencia en las empresas y tecnologías líder en el mundo.",
+                "i2": "Elige Seguridad - Nuestro equipo utiliza la tecnología moderna y cumple con todos los estándares de seguridad.",
+                "i3": "Elige a ti - Nuestro equipo es nuevo y tú serás nuestro único objetivo mientras desarrollamos algo."
             }
         }
     ]

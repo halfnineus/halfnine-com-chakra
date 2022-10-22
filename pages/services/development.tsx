@@ -1,323 +1,163 @@
+import React from "react";
+
 import {
+    chakra,
     Box,
-    BoxProps,
-    Heading,
-    SimpleGrid,
-    useColorModeValue as mode,
-    Text,
     Flex,
-    FlexProps,
     Icon,
-    List,
-    ListIcon,
-    ListItem,
-    VStack,
-    Button,
-    ButtonProps,
+    SimpleGrid,
     Stack,
-    HStack,
+    GridItem,
     Divider,
-    Spacer,
-} from '@chakra-ui/react'
-import { FaUser, FaStore } from 'react-icons/fa'
-import { BsFillBriefcaseFill } from 'react-icons/bs'
-import { HiCheckCircle } from 'react-icons/hi'
+    Container,
+    Heading,
+    Text,
+    useColorModeValue as mode,
+} from "@chakra-ui/react";
 
-import { NextSeo } from "next-seo";
-import { DevTerms } from "../../components/dev";
-import { useRouter } from 'next/router'
-import { MdCorporateFare } from 'react-icons/md'
-
-const ActionButton = (props: ButtonProps) => {
-    const router = useRouter()
-    return (
-        <Button
-            onClick={() => router.push('/contact/')}
-            colorScheme="blue"
-            size="lg"
-            w="full"
-            fontWeight="extrabold"
-            py={{ md: '8' }}
-            {...props}
-        />
-    )
-}
-
-export interface CardProps extends BoxProps {
-    isPopular?: boolean
-}
-const Card = (props: CardProps) => {
-    const { children, isPopular, ...rest } = props
-    return (
-        <Box
-            bg={mode('white', 'gray.700')}
-            position="relative"
-            px="6"
-            pb="6"
-            pt="16"
-            overflow="hidden"
-            shadow="lg"
-            maxW="md"
-            width="100%"
-            {...rest}
-        >
-            {isPopular && <CardBadge>Popular</CardBadge>}
-            {children}
-        </Box>
-    )
-}
-const CardBadge = (props: FlexProps) => {
-    const { children, ...flexProps } = props
-    return (
-        <Flex
-            bg={mode('blue.500', 'blue.200')}
-            position="absolute"
-            right={-20}
-            top={6}
-            width="240px"
-            transform="rotate(45deg)"
-            py={2}
-            justifyContent="center"
-            alignItems="center"
-            {...flexProps}
-        >
-            <Text
-                fontSize="xs"
-                textTransform="uppercase"
-                fontWeight="bold"
-                letterSpacing="wider"
-                color={mode('white', 'gray.800')}
-            >
-                {children}
-            </Text>
-        </Flex>
-    )
-}
-export interface PricingCardData {
-    features: string[]
-    name: string
-    price: string
-    fromprice: any
-}
-interface PricingCardProps extends CardProps {
-    data: PricingCardData
-    icon: React.ElementType
-    button: React.ReactElement
-}
-export const PricingCard = (props: PricingCardProps) => {
-    const { data, icon, button, ...rest } = props
-    const { features, price, name, fromprice } = data
-    const accentColor = mode('blue.600', 'blue.200')
-
-    return (
-        <Card bg={mode('gray.50', 'gray.700')} rounded={{ sm: 'xl' }} {...rest}>
-            <VStack spacing={6}>
-                <Icon aria-hidden as={icon} fontSize="4xl" color={accentColor} />
-                <Heading size="md" fontWeight="extrabold">
-                    {name}
-                </Heading>
-            </VStack>
-            <Flex align="flex-end" justify="center" fontWeight="extrabold" color={accentColor} mt="8" mb="2">
-                <Heading size="3xl" fontWeight="inherit" lineHeight="0.9em">
-                    {price}
-                </Heading>
-                <Text fontWeight="inherit" fontSize="2xl">
-                    / yr
-                </Text>
-            </Flex>
-            <Heading textAlign={'center'} color={'gray.500'} fontSize="xl" mb="8">
-                {'Worth '}
-                <Text display={'inline'} textDecor={'line-through'}>
-                    {fromprice}
-                </Text>
-                {'/ yr'}
-            </Heading>
-            <List spacing="4" mb="8" maxW="28ch" mx="auto">
-                {features.map((feature, index) => (
-                    <ListItem fontWeight="medium" key={index}>
-                        <ListIcon fontSize="xl" as={HiCheckCircle} marginEnd={2} color={accentColor} />
-                        {feature}
-                    </ListItem>
-                ))}
-            </List>
-            {button}
-        </Card>
-    )
-}
-
-
-
-
-import { NextPage } from 'next'
-
-interface Props {
-
-}
-
-const Development: NextPage<Props> = () => {
-    const router = useRouter()
-    return (
-        <>
-            <NextSeo title={'Manufacturing - Ochoa - International Product Development, Design and Production'} description={'protafolioData.head.description'} />
-            <Box px={{ base: '6', lg: '10' }}>
-                <Heading p={6} textAlign={'center'}>Our Web Services</Heading>
-                <Heading pb={2} fontSize={'lg'} textAlign={'center'}>Always Included: Website Design, Web Hosting, SSL, Domain Name, SEO Compliance</Heading>
-                <Text pb={6} textAlign={'center'}>Custom Features: Locales, Webmail, Custom API, Contact Forms, Auth, Uptime Monitor, etc.</Text>
-
-                <SimpleGrid
-                    columns={{ base: 1, lg: 3 }}
-                    spacing={{ base: '8', lg: '0' }}
-                    maxW="7xl"
-                    mx="auto"
-                    justifyItems="center"
-                    alignItems="center"
-                    py={3}
-                >
-                    <PricingCard
-                        data={{
-                            price: '$100',
-                            name: 'Personal',
-                            features: [
-                                'Static Site',
-                                'Design and Hosting',
-                                'Up to 4 Pages',
-                                'Optional CMS and Shop',
-                                'Business Hours support',
-                            ],
-                            fromprice: '$200',
-                        }}
-                        icon={FaUser}
-                        button={
-                            <ActionButton variant="outline" borderWidth="2px">
-                                Contact Us
-                            </ActionButton>
-                        }
-                    />
-
-                    <PricingCard
-                        // isPopular
-                        zIndex={1}
-                        transform={{ lg: 'scale(1.05)' }}
-                        data={{
-                            price: '$500',
-                            name: 'Business',
-                            features: [
-                                'Static and Dynamic Site ',
-                                'Design and Hosting',
-                                'Up to 24 Pages',
-                                'Optional CMS and Shop',
-                                '2 Custom Features',
-                                'Daytime Hours support',
-                            ],
-                            fromprice: '$2000',
-                        }}
-                        icon={BsFillBriefcaseFill}
-                        button={<ActionButton>Contact Us</ActionButton>}
-                    />
-                    <PricingCard
-                        data={{
-                            price: '$3000',
-                            name: 'Commerce',
-                            features: [
-                                'Static and Dynamic Site',
-                                'Design and Hosting',
-                                'Unlimited-Pages',
-                                'Optional CMS and Shop',
-                                '8 Custom Features',
-                                '24/7 On-Call Support',
-                            ],
-                            fromprice: '$20000',
-                        }}
-                        icon={FaStore}
-                        button={
-                            <ActionButton variant="outline" borderWidth="2px">
-                                Contact Us
-                            </ActionButton>
-                        }
-                    />
-                </SimpleGrid>
-            </Box>
-
-            <Box minH={'2rem'} />
-
-            <Box px={{ base: '6', lg: '10' }}>
-                <Flex
-                    // w="auto"
-                    justifyContent="center"
-                    alignItems="center"
-                >
-                    {/* <Box rounded={'20'} bg={mode('gray.50', 'gray.700')} shadow="lg" mx="auto">
-                        <SimpleGrid p={8} alignItems="start">
-                            <Flex w="auto"> */}
-                    <Box maxW={'1000px'} p={6} shadow={'lg'} bg={mode('gray.50', 'gray.700')} rounded={'20'}>
-                        <HStack spacing={4}>
-                            <Icon color={mode('blue.600', 'blue.200')} aria-hidden as={MdCorporateFare} fontSize="4xl" />
-                            <Heading size="md" fontWeight="extrabold">
-                                {'Enterprise'}
-                            </Heading>
-                        </HStack>
-                        <Flex pb={4} align="flex-end" justify="start" fontWeight="extrabold" color={mode('blue.600', 'blue.200')}>
-                            <Heading size="lg" fontWeight="inherit" lineHeight="0.9em">
-                                {'Contact for Pricing'}
-                            </Heading>
-                        </Flex>
-                        <Stack width={{ base: "350px", lg: "auto" }}>
-                            <SimpleGrid columns={{ base: 1, lg: 4 }} spacing="4" mb="4">
-                                <List maxW="28ch">
-                                    <ListItem mr="6">
-                                        <ListIcon fontSize="xl" as={HiCheckCircle} marginEnd={2} color={mode('blue.600', 'blue.200')} />
-                                        {'Static and Dynamic Site'}
-                                    </ListItem>
-                                </List>
-                                <List maxW="28ch">
-                                    <ListItem mr="6">
-                                        <ListIcon fontSize="xl" as={HiCheckCircle} marginEnd={2} color={mode('blue.600', 'blue.200')} />
-                                        {'Unlimited Pages'}
-                                    </ListItem>
-                                </List>
-                                <List maxW="28ch" >
-                                    <ListItem mr="6">
-                                        <ListIcon fontSize="xl" as={HiCheckCircle} marginEnd={2} color={mode('blue.600', 'blue.200')} />
-                                        {'Unlimited Features'}
-                                    </ListItem>
-                                </List>
-                                <List maxW="28ch" >
-                                    <ListItem mr="6">
-                                        <ListIcon fontSize="xl" as={HiCheckCircle} marginEnd={2} color={mode('blue.600', 'blue.200')} />
-                                        {'24/7 On-Call Support'}
-                                    </ListItem>
-                                </List>
-                            </SimpleGrid>
-                        </Stack>
-                        <Button
-                            colorScheme={'blue'}
-                            size="lg"
-                            w="full"
-                            fontWeight="extrabold"
-                            py={{ md: '8' }}
-                            rounded={'lg'}
-                            onClick={() => router.push('/contact')}
-                        >
-                            {'Contact Us'}
-                        </Button>
-                    </Box>
+const Development = () => {
+    const Feature = (props: any) => {
+        return (
+            <Flex>
+                <Flex shrink={0}>
+                    <Icon
+                        boxSize={5}
+                        mt={1}
+                        mr={2}
+                        color="brand.500"
+                        _dark={{ color: "brand.300" }}
+                        viewBox="0 0 20 20"
+                        fill="currentColor"
+                    >
+                        <path
+                            fillRule="evenodd"
+                            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                            clipRule="evenodd"
+                        ></path>
+                    </Icon>
                 </Flex>
-                {/* </SimpleGrid>
-                    </Box>
-                </Flex> */}
-            </Box>
+                <Box ml={4}>
+                    <chakra.dt
+                        fontSize="lg"
+                        fontWeight="bold"
+                        lineHeight="6"
+                        _light={{ color: "gray.900" }}
+                    >
+                        {props.title}
+                    </chakra.dt>
+                    <chakra.dd mt={2} color="gray.500" _dark={{ color: "gray.400" }}>
+                        {props.children}
+                    </chakra.dd>
+                </Box>
+            </Flex>
+        );
+    };
+    return (
+        // <Flex
+        //     bg="#edf3f8"
+        //     _dark={{ bg: "#3e3e3e" }}
+        //     p={20}
+        //     w="auto"
+        //     justifyContent="center"
+        //     alignItems="center"
+        // >
+        <Box
+            // shadow="xl"
+            // bg="white"
+            // _dark={{ bg: "gray.800" }}
+            px={{ base: '6', lg: '10' }}
+            py={8}
+            mx="auto"
+        >
+            <SimpleGrid
+                alignItems="center"
+                columns={{ base: 1, lg: 3 }}
+                spacingY={{ base: 10, lg: 32 }}
+                spacingX={{ base: 10, lg: 24 }}
+            >
+                <Box alignSelf="start">
+                    <chakra.h2
+                        _light={{ color: "brand.500" }}
+                        fontWeight="semibold"
+                        textTransform="uppercase"
+                        letterSpacing="wide"
+                    >
+                        Boosting your
+                    </chakra.h2>
+                    <chakra.h2
+                        mb={3}
+                        fontSize={{ base: "3xl", md: "4xl" }}
+                        fontWeight="extrabold"
+                        // textAlign={{ base: "center", sm: "left" }}
+                        _light={{ color: "black" }}
+                        lineHeight="shorter"
+                        letterSpacing="tight"
+                    >
+                        Digital transformation
+                    </chakra.h2>
+                    <chakra.p
+                        mb={6}
+                        fontSize={{ base: "lg", md: "xl" }}
+                        // textAlign={{ base: "center", sm: "left" }}
+                        color="gray.600"
+                        _dark={{ color: "gray.500" }}
+                    >
+                        !!Lorem ipsum dolor sit amet consect adipisicing elit. Possimus
+                        magnam voluptatum cupiditate veritatis in accusamus quisquam.
+                    </chakra.p>
+                </Box>
+                <GridItem colSpan={2}>
+                    <Stack
+                        spacing={{ base: 10, md: 0 }}
+                        display={{ md: "grid" }}
+                        gridTemplateColumns={{ md: "repeat(2,1fr)" }}
+                        gridColumnGap={{ md: 8 }}
+                        gridRowGap={{ md: 10 }}
+                    >
+                        <Feature title="Automation">
+                            {`!!Improve your conversion rates by monitoring exactly what's going on while your customers are in trial.`}{" "}
+                        </Feature>
+                        <Feature title="Cloud">
+                            !!Manage all your online and offline sales in one place with a
+                            single integration, simplifying reporting and reconciliation.
+                        </Feature>
+                        <Feature title="Internet of Things">
+                            {" "}
+                            !!Provide a seamless customer experience across channels, like
+                            reserving online and picking up in store.
+                        </Feature>
+                        <Feature title="Devops">
+                            {" "}
+                            !!Add in-person payments to your platform or marketplace. Using
+                            Terminal with Connect.{" "}
+                        </Feature>
+                        <Feature title="Artificial Intelligence">
+                            {" "}
+                            !!Handle your subscriptions and transactions efficiently with the
+                            clear overview in Dashboard. Fea
+                        </Feature>
+                        <Feature title="Bi-Modal IT">
+                            {" "}
+                            !!Love to code? Decide how you integrate Payments and build
+                            advanced and reliable products yourself from scratch.{" "}
+                        </Feature>
+                    </Stack>
+                </GridItem>
+            </SimpleGrid>
 
-            <Box minH={'5rem'} />
+            <Divider m={8} />
 
-            <Box px={{ base: '6', lg: '10' }}>
-                <Heading textAlign={'center'}>Our Other Services</Heading>
-                <Text pb={2} fontSize={'lg'} textAlign={'center'}>Sorry, Right now we are not offering our other services to the public.</Text>
-            </Box>
+            <Stack spacing={4} as={Container} maxW={'3xl'} textAlign={'center'}>
+                <Heading fontSize={'3xl'}>{"Why Agile?"}</Heading>
+                <Text fontSize={'xl'}>{"indexData.block4.txt"}</Text>
+            </Stack>
+
+            <Divider m={8} />
+
+        </Box>
 
 
-            <Box minH={'5rem'} />
-        </>
-    )
-}
-
-export default Development
+        // </Flex>
+    );
+};
+export default Development;

@@ -359,16 +359,16 @@ const MobileNavContext = (props: FlexProps) => {
               </Box>
             </Flex>
             <NavMenu animate={isOpen ? 'open' : 'closed'}>
-              <NavLink.Mobile href={'/portfolio'}>
+              <NavLink.Mobile href={'/services/development/'}>
                 {navigationData.components.item1}
               </NavLink.Mobile>
-              <NavLink.Mobile href={'/services/development/'}>
+              <NavLink.Mobile href={'/services/manufacturing/'}>
                 {navigationData.components.item2}
               </NavLink.Mobile>
               <NavLink.Mobile href={'/services/manufacturing/'}>
                 {navigationData.components.item3}
               </NavLink.Mobile>
-              <NavLink.Mobile href={'/about/'}>
+              <NavLink.Mobile href={'/portfolio/'}>
                 {navigationData.components.item4}
               </NavLink.Mobile>
             </NavMenu>
@@ -400,13 +400,13 @@ const DesktopNavContent = (props: FlexProps) => {
               </NextLink>
               <HStack as="ul" id="nav__primary-menu" aria-label="Main Menu" listStyleType="none">
                 <Box as="li">
-                  <NavLink.Desktop onClick={() => router.push("/portfolio/")}>{navigationData.components.item1}</NavLink.Desktop>
+                  <NavLink.Desktop onClick={() => router.push("/services/development/")}>{navigationData.components.item1}</NavLink.Desktop>
                 </Box>
                 <Box as="li">
-                  <NavLink.Desktop onClick={() => router.push("/services/development/")}>{navigationData.components.item2}</NavLink.Desktop>
+                  <NavLink.Desktop onClick={() => router.push("/services/manufacturing/")}>{navigationData.components.item2}</NavLink.Desktop>
                 </Box>
                 <Box as="li">
-                  <NavLink.Desktop onClick={() => router.push("/services/manufacturing/")}>{navigationData.components.item3}</NavLink.Desktop>
+                  <NavLink.Desktop onClick={() => router.push("/portfolio/")}>{navigationData.components.item3}</NavLink.Desktop>
                 </Box>
                 <Box as="li">
                   <NavLink.Desktop onClick={() => router.push("/about/")}>{navigationData.components.item4}</NavLink.Desktop>

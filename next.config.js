@@ -1,6 +1,6 @@
 module.exports = {
   reactStrictMode: true,
-  swcMinify: true,
+  // swcMinify: true,
   trailingSlash: true,
   output: 'standalone',
   i18n: {
