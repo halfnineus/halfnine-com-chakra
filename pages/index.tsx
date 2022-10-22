@@ -169,6 +169,7 @@ const IndexPage = () => {
                   {indexData.block3.item2}<br />
                   {indexData.block3.item3}<br />
                   {indexData.block3.item4}<br />
+                  {indexData.block3.item5}<br />
                 </Text>
                 <Stack
                   direction={{ base: "column", sm: "row" }}

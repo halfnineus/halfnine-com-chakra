@@ -54,46 +54,12 @@ const IndexPortfolio = () => {
                             <Feature img={img5.src} title={protafolioData.components.itemTitle5} />
                             <Feature img={img6.src} title={protafolioData.components.itemTitle6} />
                         </SimpleGrid>
-                        {/* <Heading textAlign={'center'} fontWeight="bold" maxW="xlg" pt={''} mx="auto">
+                        {/* <Heading textAlign={'center'} fontWeight="bold" fontSize={'xl'} maxW="lg" pt={'4'} mx="auto">
                             {protafolioData.block.h3}
                         </Heading> */}
                     </Box>
 
                     <Box minH={'4'} />
-
-                    {/* <Box key={i} as="section" maxW={{ base: 'xl', md: '4xl' }} textAlign={'center'} mx={"auto"} px={{ base: '6', md: '8' }}>
-                        <Heading textAlign={'center'} fontWeight="extrabold" maxW="xlg" mx="auto">
-                            {"Our Current Projects"}
-                        </Heading>
-                        <Text pt={2} fontSize={'lg'} color={'gray.500'}>{protafolioData.block.h2}</Text>
-                        <SimpleGrid pt={6} columns={{ base: 1, sm: 2, md: 2, lg: 2 }} spacing={'6'}>
-                            <NextLink href={'https://opencontracts.xyz'} passHref>
-                                <Link isExternal>
-                                    <Box maxW={'400px'} bg={mode('gray.50', 'gray.700')} boxShadow={'md'} rounded={'md'} p={6} overflow={'hidden'}>
-                                        <Box bg={'gray.100'} mt={-6} mx={-6} mb={6} pos={'relative'}>
-                                            <Image userSelect={'none'} pointerEvents={'none'} alt={'img'} src={opc.src} />
-                                        </Box>
-                                        <Heading _hover={{ color: 'gray.500' }} color={mode('gray.700', 'white')} fontSize={'2xl'}>
-                                            {'Open Contracts'}
-                                        </Heading>
-                                    </Box>
-                                </Link>
-                            </NextLink>
-                            <NextLink href={'https://agileautomation.dev'} passHref>
-                                <Link isExternal>
-                                    <Box maxW={'400px'} bg={mode('gray.50', 'gray.700')} boxShadow={'md'} rounded={'md'} p={6} overflow={'hidden'}>
-                                        <Box h={'auto'} bg={'gray.100'} mt={-6} mx={-6} mb={6} pos={'relative'}>
-                                            <Image userSelect={'none'} pointerEvents={'none'} alt={'img'} src={spade.src} />
-                                        </Box>
-                                        <Heading color={mode('gray.700', 'white')} fontSize={'2xl'}>
-                                            {'Spade Sensor'}
-                                        </Heading>
-                                    </Box>
-                                </Link>
-                            </NextLink>
-                        </SimpleGrid>
-                    </Box>
-                    <Box minH={'5rem'} /> */}
                 </>
 
             )

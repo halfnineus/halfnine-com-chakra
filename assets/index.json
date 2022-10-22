@@ -26,7 +26,8 @@
         "item1": "Scalability - Ability to service changing volumes of service demand.",
         "item2": "Adaptability - Being able to handle changes based on requirements and strategy.",
         "item3": "Flexibility - Respond to earthquakes in the architecture seamlessly.",
-        "item4": "Goodbye to Over Engineering - As long as it works  it's ok right? We don't think so.",
+        "item4": "Over Engineering - As long as it works  it's ok right? We don't think so.",
+        "item5": "Performance - This meeting could've been an Email.",
         "options": "Learn More"
       },
       "block4": {
@@ -92,7 +93,8 @@
         "item1": "Escalabilidad - servicio de capacidad que cambia los volúmenes de la demanda del servicio.",
         "item2": "Adaptabilidad - Ser capaz de manejar los cambios en función de los requisitos y la estrategia.",
         "item3": "Flexibilidad - responda a los terremotos en la arquitectura sin problemas.",
-        "item4": "No más Sobreingeniería - Mientras funcione, está bien, ¿no? No lo creemos.",
+        "item4": "Sobreingeniería - Mientras funcione, está bien, ¿no? No lo creemos.",
+        "item5": "Desempeño - Esta reunión podría haber sido un correo electrónico.",
         "options": "Mas Informacion."
       },
       "block4": {

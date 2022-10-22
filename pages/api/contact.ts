@@ -28,14 +28,14 @@ export default async function contactMail(req: any, res: any) {
     from: process.env.donotreplyemail,
     subject: `Message From ${req.body.name}`,
     text: req.body.message + " | Sent from: " + req.body.email,
-    html: `<div>${req.body.message}</div><p>Sent from: ${req.body.email}</p>`,
+    html: `<div>${req.body.message}</div><p>Email: ${req.body.email}</p><p>Phone: ${req.body.phone}</p><p>Company: ${req.body.company}</p>`,
   }
   sgMail
     .send(msg)
     .then(() => {
       console.log('Email sent')
     })
-    .catch((error:any) => {
+    .catch((error: any) => {
       console.error(error)
     })
 

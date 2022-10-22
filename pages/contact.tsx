@@ -8,6 +8,7 @@ import {
     Text,
     Button,
     VStack,
+    Stack,
     Wrap,
     WrapItem,
     FormControl,
@@ -19,27 +20,27 @@ import {
     useColorModeValue as mode,
     Link,
     useToast,
-    Modal,
-    ModalOverlay,
-    ModalContent,
-    ModalHeader,
-    ModalFooter,
-    ModalBody,
-    ModalCloseButton,
     useDisclosure,
+    HStack,
 } from '@chakra-ui/react';
 
-import { FiExternalLink } from 'react-icons/fi'
-import { MdEmail, MdLocationOn, MdOutlineEmail, } from 'react-icons/md';
+import { MdEmail, MdLocationOn, MdOutlineEmail, MdPhone, } from 'react-icons/md';
+import { BsPerson, BsBuilding } from 'react-icons/bs'
 
-import { BsPerson } from 'react-icons/bs'
+import diagimg from '../public/img/contact/bg.jpg'
+
 import { useState } from "react"
 import { NextSeo } from "next-seo";
 import router from "next/router";
 
+
 const INDEX = () => {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
+
+    const [company, setCompany] = useState('');
+    const [phone, setPhone] = useState('');
+
     const [message, setMessage] = useState('');
 
     const [submitted, setSubmitted] = useState(false)
@@ -50,7 +51,9 @@ const INDEX = () => {
     })
 
     const handleSubmit = (e: any) => {
-        if ((name === "") || (email === "") || (message === "")) {
+        var regex = /^([a-z0-9!#$%&'*+\-/=?^_`{|}~]+(?:\.[a-zA-Z0-9!#$%&'*+\-/=?^_`{|}~]+)*)@((?:[a-z0-9]+(?:[a-z-0-9-]*)\.)+[a-z]{2,})$/gi;
+
+        if ((name === "") || (!regex.test(email)) /* || (message === "")*/) {
             toast.closeAll();
             toast({
                 description: 'Something went wrong while submitting the form, Please try again later.',
@@ -62,7 +65,9 @@ const INDEX = () => {
             let data = {
                 name,
                 email,
-                message
+                message,
+                phone,
+                company,
             }
             setSubmitted(true)
             fetch('/api/contact', {
@@ -106,28 +111,48 @@ const INDEX = () => {
                 description={`Contact Us about Product Development, Design, and Production Related Inquiries.`}
             />
 
-            <Modal isOpen={isOpen} onClose={onClose}>
-                <ModalOverlay />
-                <ModalContent>
-                    <ModalHeader>Email us</ModalHeader>
-                    <ModalCloseButton />
-                    <ModalBody>
-                        <Text fontWeight='bold' mb='1rem'>
-                            {/* <Lorem count={2} /> */}
-                            Dan Ochoa: dan@ochoa.pro
+            <Flex
+                w={'full'}
+                h={48}
+                backgroundImage={diagimg.src}
+            >
+                <VStack
+                    w={'full'}
+                    justify={'center'}
+                    px={{ base: 4, md: 8 }}
+                    bgGradient={'linear(to-r, blackAlpha.700, blackAlpha.200)'}
+                >
+                    <Stack
+                        maxW={'3xl'}
+                        align={'flex-start'}
+                    // spacing={6}
+                    >
+                        <Heading
+                            color={'white'}
+                            fontWeight={700}
+                            // lineHeight={.6}
+                            fontSize={{ base: '3xl', md: '4xl' }}
+                        >
+                            Interested? We want to hear from you!
+                        </Heading>
+                        <Text
+                            color={'gray.100'}
+                            // fontWeight={700}
+                            // lineHeight={.6}
+                            fontSize={{ base: 'xl', md: '2xl' }}
+                        >
+                            Take the first step and reach out to us today.
                         </Text>
-                    </ModalBody>
+                    </Stack>
+                </VStack>
+            </Flex>
 
-                    <ModalFooter>
-                        <Button colorScheme='blue' mr={3} onClick={onClose}>
-                            Close
-                        </Button>
-                        <Button onClick={() => router.push("mailto:dan@ochoa.pro")} variant='ghost' rightIcon={<FiExternalLink />}>Send Mail</Button>
-                    </ModalFooter>
-                </ModalContent>
-            </Modal>
-
-            <Container maxW="full" mt={0} centerContent overflow="hidden" py='8'>
+            {/* <Container
+                maxW="full"
+                centerContent
+                overflow="hidden"
+                py='8'
+            >
                 <Flex>
                     <Box
                         bg={mode('gray.50', 'gray.700')}
@@ -147,8 +172,8 @@ const INDEX = () => {
                                             we will contact you shortly:
                                         </Text>
                                         <Box pr={5} pl={'1'} py={5}>
-                                            <VStack pl={0} spacing={2} alignItems="flex-start">
-                                                {/* <NextLink href={'tel:+1-123-456-7890'} passHref>
+                                            <VStack pl={0} spacing={2} alignItems="flex-start"> */}
+            {/* <NextLink href={'tel:+1-123-456-7890'} passHref>
                                                     <Link isExternal>
                                                         <Button
                                                             size="md"
@@ -164,7 +189,7 @@ const INDEX = () => {
                                                         </Button>
                                                     </Link>
                                                 </NextLink> */}
-                                                {/* <NextLink href={'mailto:rodolfo@ochoa.pro'} passHref>
+            {/* <NextLink href={'mailto:rodolfo@ochoa.pro'} passHref>
                                                     <Link isExternal>
                                                         <Button
                                                             alignContent={'start'}
@@ -181,7 +206,7 @@ const INDEX = () => {
                                                         </Button>
                                                     </Link>
                                                 </NextLink> */}
-                                                <Button
+            {/* <Button
                                                     onClick={onOpen}
                                                     size="md"
                                                     height="auto"
@@ -209,8 +234,8 @@ const INDEX = () => {
                                                             Orlando, Florida, USA
                                                         </Button>
                                                     </Link>
-                                                </NextLink>
-                                                {/* <NextLink href={'https://duckduckgo.com/?q=Hong+Kong+SAR+China&iaxm=maps'} passHref>
+                                                </NextLink> */}
+            {/* <NextLink href={'https://duckduckgo.com/?q=Hong+Kong+SAR+China&iaxm=maps'} passHref>
                                                     <Link isExternal>
                                                         <Button
                                                             size="md"
@@ -226,14 +251,14 @@ const INDEX = () => {
                                                         </Button>
                                                     </Link>
                                                 </NextLink> */}
-                                            </VStack>
+            {/* </VStack>
                                         </Box>
                                     </Box>
                                 </WrapItem>
                                 <WrapItem>
                                     <Box width="100%" bg={mode('gray.100', 'gray.600')} borderRadius='2xl'>
                                         <Box w={{ base: 'auto', sm: 'auto', md: 'auto', lg: 'auto', xl: '360px' }} m={8} color={mode('black', 'white')}>
-                                            <form /* action={'submit'} */ onSubmit={handleSubmit}>
+                                            <form /* action={'submit'} */ /* onSubmit={handleSubmit}>
                                                 <VStack spacing={5}>
                                                     <FormControl isRequired>
                                                         <FormLabel>Your Name</FormLabel>
@@ -305,7 +330,110 @@ const INDEX = () => {
                         </Box>
                     </Box>
                 </Flex>
+            </Container> */}
+            <Container py={'6'} maxW={'container.lg'}>
+
+                <form action={'submit'} onSubmit={handleSubmit}>
+                    <VStack spacing={5}>
+                        <HStack spacing={5} minW={'full'}>
+                            <FormControl isRequired>
+                                <FormLabel>Name</FormLabel>
+                                <InputGroup>
+                                    <InputLeftElement pointerEvents="none">
+                                        <BsPerson color="gray.800" />
+                                    </InputLeftElement>
+                                    <Input
+                                        name="name"
+                                        onChange={(e: any) => setName(e.target.value)}
+                                        type={'text'}
+                                        placeholder={'John Doe'}
+                                        isRequired
+                                    />
+                                </InputGroup>
+                            </FormControl>
+                            <FormControl isRequired id="mail">
+                                <FormLabel>Email</FormLabel>
+                                <InputGroup>
+                                    <InputLeftElement pointerEvents="none">
+                                        <MdOutlineEmail color="gray.800" />
+                                    </InputLeftElement>
+                                    <Input
+                                        defaultValue={email}
+                                        onChange={(e: any) => setEmail(e.target.value)}
+                                        placeholder={'Email'}
+                                        type={'email'}
+                                        isRequired
+                                    />
+                                </InputGroup>
+                            </FormControl>
+                        </HStack>
+                        <HStack spacing={5} minW={'full'}>
+                            <FormControl id="company">
+                                <FormLabel>Company Name</FormLabel>
+                                <InputGroup>
+                                    <InputLeftElement pointerEvents="none">
+                                        <BsBuilding color="gray.800" />
+                                    </InputLeftElement>
+                                    <Input
+                                        name="company"
+                                        onChange={(e: any) => setCompany(e.target.value)}
+                                        type={'company'}
+                                        placeholder={'Ochoa'}
+                                    />
+                                </InputGroup>
+                            </FormControl>
+                            <FormControl id="phone">
+                                <FormLabel>Phone Number</FormLabel>
+                                <InputGroup>
+                                    <InputLeftElement pointerEvents="none">
+                                        <MdPhone color="gray.800" />
+                                    </InputLeftElement>
+                                    <Input
+                                        // defaultValue={email}
+                                        name={"phone"}
+                                        onChange={(e: any) => setPhone(e.target.value)}
+                                        placeholder={'Phone Number'}
+                                        type={'phone'}
+                                    />
+                                </InputGroup>
+                            </FormControl>
+                        </HStack>
+                        <FormControl id="message">
+                            <FormLabel>Message</FormLabel>
+                            <Textarea
+                                minH={32}
+                                // defaultValue={message}
+                                onChange={(e: any) => setMessage(e.target.value)}
+                                placeholder={
+                                    'Message'
+                                    // 'For long messages please use any E-Mail provided on the contact list.'
+                                }
+                            />
+                        </FormControl>
+                        <FormControl>
+                            <Button
+                                bg={'blue.500'}
+                                color='white'
+                                type={'submit'}
+                                isLoading={submitted}
+                                loadingText={'Submitting'}
+                                _hover={{}}
+                                onClick={(e: any) => {
+                                    handleSubmit(e);
+                                    // if (inputEmail.isInvalid()) {
+                                    //     console.log("inputEmail is invalid")
+                                    //     //handleSubmit(e);
+                                    // }
+                                }}
+                            >
+                                Send Message
+                            </Button>
+                        </FormControl>
+                    </VStack>
+                </form>
+
             </Container>
+
         </>
     );
 }
