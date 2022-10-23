@@ -76,20 +76,20 @@ const IndexPage = () => {
             <Modal isOpen={isOpen} onClose={onClose}>
               <ModalOverlay />
               <ModalContent>
-                <ModalHeader>Email us</ModalHeader>
+                <ModalHeader>External Application</ModalHeader>
                 <ModalCloseButton />
                 <ModalBody>
-                  <Text fontWeight='bold' mb='1rem'>
+                  <Text fontWeight={'semibold'} mb='1rem'>
                     {/* <Lorem count={2} /> */}
-                    Dan Ochoa: dan@ochoa.pro
+                    You are about to email Dan Ochoa: dan@ochoa.pro
                   </Text>
                 </ModalBody>
 
                 <ModalFooter>
-                  <Button colorScheme='blue' mr={3} onClick={onClose}>
+                  <Button variant={'ghost'} mr={3} onClick={onClose}>
                     Close
                   </Button>
-                  <Button onClick={() => router.push("mailto:dan@ochoa.pro")} variant='ghost' rightIcon={<FiExternalLink />}>Send Mail</Button>
+                  <Button onClick={() => router.push("mailto:dan@ochoa.pro")} colorScheme='blue' variant='outline' rightIcon={<FiExternalLink />}>Send Mail</Button>
                 </ModalFooter>
               </ModalContent>
             </Modal>
