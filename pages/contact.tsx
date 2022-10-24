@@ -112,7 +112,6 @@ const INDEX = () => {
 
     }
     const { isOpen, onOpen, onClose } = useDisclosure();
-
     return (
         <>
             <NextSeo
@@ -128,15 +127,17 @@ const INDEX = () => {
                     <ModalBody>
                         <Text fontWeight={'semibold'} mb='1rem'>
                             {/* <Lorem count={2} /> */}
-                            You are about to email Dan Ochoa: dan@ochoa.pro
+                            {`You are about to email Dan Ochoa: `}
+                            <Button colorScheme="black" variant={'link'} userSelect={'text'} fontWeight={'semibold'} mb='1rem' display={'inline'} onClick={() => router.push("mailto:dan@ochoa.pro")}>
+                                {`dan@ochoa.pro`}
+                            </Button>
                         </Text>
                     </ModalBody>
-
                     <ModalFooter>
                         <Button variant={'ghost'} mr={3} onClick={onClose}>
                             Close
                         </Button>
-                        <Button onClick={() => router.push("mailto:dan@ochoa.pro")} colorScheme='blue' variant='outline' rightIcon={<FiExternalLink />}>Send Mail</Button>
+                        <Button onClick={/* onClose, */ () => router.push("mailto:dan@ochoa.pro")} colorScheme='blue' variant='outline' rightIcon={<FiExternalLink />}>Send Mail</Button>
                     </ModalFooter>
                 </ModalContent>
             </Modal>
@@ -150,7 +151,7 @@ const INDEX = () => {
                     w={'full'}
                     justify={'center'}
                     px={{ base: 4, md: 8 }}
-                    bgGradient={'linear(to-r, blackAlpha.800, blackAlpha.400)'}
+                    bgGradient={'linear(to-r, blackAlpha.700, blackAlpha.400)'}
                     textAlign='center'
                 >
                     <Stack
@@ -511,15 +512,13 @@ const INDEX = () => {
                     </form>
                 </Box>
 
-                <Divider mt={5} mb={5} />
+                {/* <Divider mt={5} mb={5} /> */}
+                <Flex pt={5} pb={2} align="center">
+                    <Divider />
+                    <Heading fontSize={{ base: 'xl', md: '2xl' }} px="4">Or</Heading>
+                    <Divider />
+                </Flex>
 
-                <Heading
-                    px={4}
-                    pb={2}
-                    fontSize={{ base: 'xl', md: '2xl' }}
-                >
-                    Or use our Contacts Below
-                </Heading>
                 <HStack>
                     <Button
                         onClick={onOpen}

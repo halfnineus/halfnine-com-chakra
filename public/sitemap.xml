@@ -20,15 +20,15 @@
     <xhtml:link href="https://ochoa.pro/es/about/" hreflang="es" rel="alternate" />
   </url>
   <url>
-    <loc>https://ochoa.pro/services/development/</loc>
-    <xhtml:link href="https://ochoa.pro/services/development/" hreflang="x-default" rel="alternate"/>
-    <xhtml:link href="https://ochoa.pro/en/services/development/" hreflang="en" rel="alternate" />
-    <xhtml:link href="https://ochoa.pro/es/services/development/" hreflang="es" rel="alternate" />
+    <loc>https://ochoa.pro/development/</loc>
+    <xhtml:link href="https://ochoa.pro/development/" hreflang="x-default" rel="alternate"/>
+    <xhtml:link href="https://ochoa.pro/en/development/" hreflang="en" rel="alternate" />
+    <xhtml:link href="https://ochoa.pro/es/development/" hreflang="es" rel="alternate" />
   </url>
-  <url>
+  <!-- <url>
     <loc>https://ochoa.pro/services/manufacturing/</loc>
     <xhtml:link href="https://ochoa.pro/services/manufacturing/" hreflang="x-default" rel="alternate"/>
     <xhtml:link href="https://ochoa.pro/en/services/manufacturing/" hreflang="en" rel="alternate" />
     <xhtml:link href="https://ochoa.pro/es/services/manufacturing/" hreflang="es" rel="alternate" />
-  </url>
+  </url> -->
 </urlset>

@@ -145,14 +145,7 @@ const Development = () => {
                 </GridItem>
             </SimpleGrid>
 
-            <Divider m={8} />
-
-            <Stack spacing={4} as={Container} maxW={'3xl'} textAlign={'center'}>
-                <Heading fontSize={'3xl'}>{"Why Agile?"}</Heading>
-                <Text fontSize={'xl'}>{"indexData.block4.txt"}</Text>
-            </Stack>
-
-            <Divider m={8} />
+            <Divider my={8} />
 
         </Box>
 

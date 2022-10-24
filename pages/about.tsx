@@ -17,12 +17,22 @@ import {
 } from '@chakra-ui/react';
 import { NextSeo } from 'next-seo';
 
-import { useRouter } from "next/router"
+import router, { useRouter } from "next/router"
 
 import aboutdat from '../assets/about.json'
 
 import { MdTouchApp, MdCheckCircleOutline, MdAvTimer, MdMoney, MdOutlineStars } from 'react-icons/md'
+
 import { GiReturnArrow } from 'react-icons/gi'
+import { AiOutlineShop, AiOutlineFileProtect } from 'react-icons/ai'
+import { MdOutlineHealing, MdOutlineMovie } from 'react-icons/md'
+import { RiGovernmentLine } from 'react-icons/ri'
+import { TbReportMoney } from 'react-icons/tb'
+import { BsController } from 'react-icons/bs'
+import { FaIndustry } from 'react-icons/fa'
+import { CheckIcon } from '@chakra-ui/icons'
+import { FiMail, FiExternalLink } from 'react-icons/fi'
+
 
 interface FeatureProps {
   heading: string;
@@ -42,7 +52,7 @@ const Feature = ({ heading, text, color, icon }: FeatureProps) => {
         mb={4}
         rounded="full"
         color={`${color}.600`}
-        _dark={{ color: `${color}.100` }}
+        _dark={{ color: `${color}.100`, bg: `${color}.600` }}
         bg={`${color}.100`}
       >
         <Icon
@@ -117,7 +127,7 @@ const IndexAbout = () => {
                 </GridItem>
               </Grid>
 
-              <Divider mt={16} mb={8} />
+              <Divider mt={12} mb={12} />
 
               <Stack spacing={5} mb={4} as={Container} maxW={'3xl'} textAlign={'center'}>
                 <Heading fontSize={'3xl'}>{"Our Values"}</Heading>
@@ -169,7 +179,9 @@ const IndexAbout = () => {
                 />
               </Grid>
 
-              <Divider mt={16} mb={8} />
+              <Divider mt={12} mb={12} />
+
+              {/* <Divider mt={10} mb={6} /> */}
 
             </Box>
           </>)

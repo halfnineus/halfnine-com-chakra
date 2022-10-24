@@ -105,7 +105,7 @@ const IndexPage = () => {
                     {indexData.block1.txt} <Button userSelect={'text'} onClick={() => window.open("https://en.wikipedia.org/wiki/Agile_Automation")} fontSize="xl" fontWeight="medium" color={'blue.400'} variant={'link'}>{indexData.block1.txturl}</Button>.
                   </Text>
                   <Stack direction={{ base: 'column', sm: 'row' }} spacing="4" mt="8">
-                    <Button onClick={() => router.push('/contact/')} size="md" colorScheme="blue" shadow="base" fontSize="md">
+                    <Button onClick={() => router.push('/services/')} size="md" colorScheme="blue" shadow="base" fontSize="md">
                       {indexData.block1.button}
                     </Button>
                   </Stack>
@@ -123,7 +123,7 @@ const IndexPage = () => {
               </Box>
             </Box>
 
-            <Box minH={'5rem'} />
+            <Box minH={'4rem'} />
 
             <Box px={{ base: '6', lg: '10' }} mx="auto">
               <Box w={{ base: "full", md: 11 / 12, xl: "full", }} mx="auto" textAlign={{ base: "left", md: "center", }}>
@@ -139,18 +139,18 @@ const IndexPage = () => {
                     {indexData.block2.h2_2}
                   </Text>{" "}
                 </Heading>
-                <Text px={{ base: 0, lg: 24, }} mb={6} fontSize={{ base: "lg", md: "xl", }} color={mode("gray.600", "gray.300")}>
+                <Text px={{ base: 0, lg: 24, }} mb={4} fontSize={{ base: "lg", md: "xl", }} color={mode("gray.600", "gray.300")}>
                   {indexData.block2.txt_1} <br />{indexData.block2.txt_2}
                 </Text>
-                <Stack direction={{ base: "column", sm: "row", }} spacing={2} justifyContent={{ sm: "left", md: "center", }}>
+                {/* <Stack direction={{ base: "column", sm: "row", }} spacing={2} justifyContent={{ sm: "left", md: "center", }}>
                   <Button colorScheme="blue" rightIcon={<FiMail />} onClick={onOpen}>
                     {indexData.block2.button}
                   </Button>
-                </Stack>
+                </Stack> */}
               </Box>
             </Box>
 
-            <Box minH={'5rem'} />
+            <Box minH={'4rem'} />
 
             <Flex direction={{ base: "column", md: "row" }} px={{ base: '6', lg: '10' }}>
               <Box w={{ base: "full", md: 11 / 12, xl: 9 / 12 }} mx="auto" pr={{ md: 20 }}>
@@ -179,7 +179,7 @@ const IndexPage = () => {
                   <Button
                     colorScheme={'blue'}
                     rounded="md"
-                    onClick={() => router.push('/about/')}
+                    onClick={() => router.push('/contact/')}
                   >
                     {indexData.block3.options}
                   </Button>
@@ -190,12 +190,9 @@ const IndexPage = () => {
               </Box>
             </Flex>
 
-            <Box minH={'5rem'} />
+            <Box minH={'4rem'} />
 
-
-
-
-            <Box px={{ base: '6', lg: '10' }}>
+            {/* <Box px={{ base: '6', lg: '10' }}>
               <Stack spacing={5} as={Container} maxW={'3xl'} textAlign={'center'}>
                 <Heading fontSize={'3xl'}>{indexData.block4.h4}</Heading>
                 <Text color={mode('gray.600', 'gray.400')} fontSize={'xl'}>{indexData.block4.txt}</Text>
@@ -213,10 +210,10 @@ const IndexPage = () => {
               </Container>
             </Box>
 
-            <Box minH={'5rem'} />
+            <Box minH={'5rem'} /> */}
 
 
-            <Flex px={{ base: '6', lg: '10' }} w="auto" justifyContent="center" alignItems="center">
+            {/* <Flex px={{ base: '6', lg: '10' }} w="auto" justifyContent="center" alignItems="center">
               <Box shadow="md" py={8} bg={mode('gray.50', 'gray.700')} rounded="xl" maxW="7xl" mx="auto" px={{ base: 4, lg: 8 }}>
                 <Box textAlign={{ lg: "center" }}>
                   <Text fontWeight="semibold" textTransform="uppercase" letterSpacing="wide" userSelect={'none'}>
@@ -264,7 +261,7 @@ const IndexPage = () => {
               </Box>
             </Flex>
 
-            <Box minH={'5rem'} />
+            <Box minH={'5rem'} /> */}
 
           </>
         )
