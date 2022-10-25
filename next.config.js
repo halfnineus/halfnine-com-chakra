@@ -1,7 +1,7 @@
 module.exports = {
   reactStrictMode: true,
   // swcMinify: true,
-  trailingSlash: true,
+  // trailingSlash: true,
   output: 'standalone',
   i18n: {
     locales: ["en", "es"],
@@ -12,7 +12,7 @@ module.exports = {
   // async redirects() {
   //   return [
   //     {
-  //       source: '/services/',
+  //       source: '/services',
   //       destination: '/',
   //       permanent: true,
   //     },

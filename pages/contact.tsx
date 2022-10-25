@@ -120,7 +120,7 @@ const INDEX = () => {
             />
 
             <Modal isOpen={isOpen} onClose={onClose}>
-                <ModalOverlay />
+                <ModalOverlay backdropFilter='blur(1px)' />
                 <ModalContent>
                     <ModalHeader>External Application</ModalHeader>
                     <ModalCloseButton />
@@ -390,7 +390,7 @@ const INDEX = () => {
                     // lineHeight={.6}
                     fontSize={{ base: 'md', md: 'lg' }}
                 >
-                    Develop or implement technology solutions for your business, with IT consulting & Digital transformation services.
+                    Develop technology solutions, IT consulting & Digital transformation services.
                 </Text>
 
                 <Divider mt={5} mb={5} />

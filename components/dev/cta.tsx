@@ -29,7 +29,7 @@ const CTA = (props: any) => {
                     {props.text}
                 </Text>
                 <Box display="inline-flex" rounded="md" shadow="md">
-                    <Button mt={2} rounded="md"  rightIcon={<BiMailSend />} colorScheme={'blue'} onClick={() => router.push('/contact/')}>
+                    <Button mt={2} rounded="md" rightIcon={<BiMailSend />} colorScheme={'blue'} onClick={() => router.push('/contact')}>
                         {props.buttontxt}
                     </Button>
                 </Box>

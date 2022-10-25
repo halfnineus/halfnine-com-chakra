@@ -3,32 +3,92 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://ochoa.pro/</loc>
-    <xhtml:link href="https://ochoa.pro/" hreflang="x-default" rel="alternate"/>
+    <xhtml:link href="https://ochoa.pro/" hreflang="x-default" rel="alternate" />
     <xhtml:link href="https://ochoa.pro/en/" hreflang="en" rel="alternate" />
     <xhtml:link href="https://ochoa.pro/es/" hreflang="es" rel="alternate" />
   </url>
-  <url>
+  <!-- <url>
     <loc>https://ochoa.pro/portfolio/</loc>
-    <xhtml:link href="https://ochoa.pro/portfolio/" hreflang="x-default" rel="alternate"/>
+    <xhtml:link href="https://ochoa.pro/portfolio/" hreflang="x-default" rel="alternate" />
     <xhtml:link href="https://ochoa.pro/en/portfolio/" hreflang="en" rel="alternate" />
     <xhtml:link href="https://ochoa.pro/es/portfolio/" hreflang="es" rel="alternate" />
-  </url>
-  <url>
-    <loc>https://ochoa.pro/about/</loc>
-    <xhtml:link href="https://ochoa.pro/about/" hreflang="x-default" rel="alternate"/>
-    <xhtml:link href="https://ochoa.pro/en/about/" hreflang="en" rel="alternate" />
-    <xhtml:link href="https://ochoa.pro/es/about/" hreflang="es" rel="alternate" />
-  </url>
-  <url>
-    <loc>https://ochoa.pro/development/</loc>
-    <xhtml:link href="https://ochoa.pro/development/" hreflang="x-default" rel="alternate"/>
-    <xhtml:link href="https://ochoa.pro/en/development/" hreflang="en" rel="alternate" />
-    <xhtml:link href="https://ochoa.pro/es/development/" hreflang="es" rel="alternate" />
-  </url>
-  <!-- <url>
-    <loc>https://ochoa.pro/services/manufacturing/</loc>
-    <xhtml:link href="https://ochoa.pro/services/manufacturing/" hreflang="x-default" rel="alternate"/>
-    <xhtml:link href="https://ochoa.pro/en/services/manufacturing/" hreflang="en" rel="alternate" />
-    <xhtml:link href="https://ochoa.pro/es/services/manufacturing/" hreflang="es" rel="alternate" />
   </url> -->
+  <url>
+    <loc>https://ochoa.pro/about</loc>
+    <xhtml:link href="https://ochoa.pro/about" hreflang="x-default" rel="alternate" />
+    <xhtml:link href="https://ochoa.pro/en/about" hreflang="en" rel="alternate" />
+    <xhtml:link href="https://ochoa.pro/es/about" hreflang="es" rel="alternate" />
+  </url>
+  <url>
+    <loc>https://ochoa.pro/services</loc>
+    <xhtml:link href="https://ochoa.pro/services" hreflang="x-default" rel="alternate" />
+    <xhtml:link href="https://ochoa.pro/en/services" hreflang="en" rel="alternate" />
+    <xhtml:link href="https://ochoa.pro/es/services" hreflang="es" rel="alternate" />
+  </url>
+  <url>
+    <loc>https://ochoa.pro/services/development</loc>
+    <xhtml:link href="https://ochoa.pro/services/development" hreflang="x-default" rel="alternate" />
+    <xhtml:link href="https://ochoa.pro/en/services/development" hreflang="en" rel="alternate" />
+    <xhtml:link href="https://ochoa.pro/es/services/development" hreflang="es" rel="alternate" />
+  </url>
+  <url>
+    <loc>https://ochoa.pro/services/digitalization</loc>
+    <xhtml:link href="https://ochoa.pro/services/digitalization" hreflang="x-default" rel="alternate" />
+    <xhtml:link href="https://ochoa.pro/en/services/digitalization" hreflang="en" rel="alternate" />
+    <xhtml:link href="https://ochoa.pro/es/services/digitalization" hreflang="es" rel="alternate" />
+  </url>
+  <url>
+    <loc>https://ochoa.pro/services/consultation</loc>
+    <xhtml:link href="https://ochoa.pro/services/consultation" hreflang="x-default" rel="alternate" />
+    <xhtml:link href="https://ochoa.pro/en/services/consultation" hreflang="en" rel="alternate" />
+    <xhtml:link href="https://ochoa.pro/es/services/consultation" hreflang="es" rel="alternate" />
+  </url>
+  <url>
+    <loc>https://ochoa.pro/industries/</loc>
+    <xhtml:link href="https://ochoa.pro/industries/" hreflang="x-default" rel="alternate" />
+    <xhtml:link href="https://ochoa.pro/en/industries/" hreflang="en" rel="alternate" />
+    <xhtml:link href="https://ochoa.pro/es/industries/" hreflang="es" rel="alternate" />
+  </url>
+  <url>
+    <loc>https://ochoa.pro/industries/mnp</loc>
+    <xhtml:link href="https://ochoa.pro/industries/mnp" hreflang="x-default" rel="alternate" />
+    <xhtml:link href="https://ochoa.pro/en/industries/mnp" hreflang="en" rel="alternate" />
+    <xhtml:link href="https://ochoa.pro/es/industries/mnp" hreflang="es" rel="alternate" />
+  </url>
+  <url>
+    <loc>https://ochoa.pro/industries/</loc>
+    <xhtml:link href="https://ochoa.pro/industries/mne" hreflang="x-default" rel="alternate" />
+    <xhtml:link href="https://ochoa.pro/en/industries/mne" hreflang="en" rel="alternate" />
+    <xhtml:link href="https://ochoa.pro/es/industries/mne" hreflang="es" rel="alternate" />
+  </url>
+  <url>
+    <loc>https://ochoa.pro/industries/</loc>
+    <xhtml:link href="https://ochoa.pro/industries/sns" hreflang="x-default" rel="alternate" />
+    <xhtml:link href="https://ochoa.pro/en/industries/sns" hreflang="en" rel="alternate" />
+    <xhtml:link href="https://ochoa.pro/es/industries/sns" hreflang="es" rel="alternate" />
+  </url>
+  <url>
+    <loc>https://ochoa.pro/our-approach</loc>
+    <xhtml:link href="https://ochoa.pro/our-approach" hreflang="x-default" rel="alternate" />
+    <xhtml:link href="https://ochoa.pro/en/our-approach" hreflang="en" rel="alternate" />
+    <xhtml:link href="https://ochoa.pro/es/our-approach" hreflang="es" rel="alternate" />
+  </url>
+  <url>
+    <loc>https://ochoa.pro/our-approach/agile</loc>
+    <xhtml:link href="https://ochoa.pro/our-approach/agile" hreflang="x-default" rel="alternate" />
+    <xhtml:link href="https://ochoa.pro/en/our-approach/agile" hreflang="en" rel="alternate" />
+    <xhtml:link href="https://ochoa.pro/es/our-approach/agile" hreflang="es" rel="alternate" />
+  </url>
+  <url>
+    <loc>https://ochoa.pro/our-approach/roi</loc>
+    <xhtml:link href="https://ochoa.pro/our-approach/roi" hreflang="x-default" rel="alternate" />
+    <xhtml:link href="https://ochoa.pro/en/our-approach/roi" hreflang="en" rel="alternate" />
+    <xhtml:link href="https://ochoa.pro/es/our-approach/roi" hreflang="es" rel="alternate" />
+  </url>
+  <url>
+    <loc>https://ochoa.pro/our-approach/pdaas</loc>
+    <xhtml:link href="https://ochoa.pro/our-approach/pdaas" hreflang="x-default" rel="alternate" />
+    <xhtml:link href="https://ochoa.pro/en/our-approach/pdaas" hreflang="en" rel="alternate" />
+    <xhtml:link href="https://ochoa.pro/es/our-approach/pdaas" hreflang="es" rel="alternate" />
+  </url>
 </urlset>

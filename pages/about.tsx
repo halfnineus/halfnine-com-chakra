@@ -14,6 +14,7 @@ import {
   chakra,
   Icon,
   Center,
+  Button,
 } from '@chakra-ui/react';
 import { NextSeo } from 'next-seo';
 
@@ -91,6 +92,8 @@ const IndexAbout = () => {
         return (
           <>
             <NextSeo title={aboutData.head.title} description={aboutData.head.description} />
+            <Text>{`Under Construction:`}</Text>
+            <Button onClick={() => router.push('/portfolio/')}>{`Go to Portfolio`}</Button>
             <Box as={Container} maxW="7xl" mt={8} py={4} px={{ base: '6', lg: '10' }}>
               {/* <Grid templateColumns={{ base: 'repeat(1, 1fr)', sm: 'repeat(2, 1fr)', md: 'repeat(2, 1fr)', }} gap={4}>
                 <GridItem colSpan={1}>

@@ -20,7 +20,7 @@ const MailModal = () => {
     return (
         <>
             <Modal isOpen={isOpen} onClose={onClose}>
-                <ModalOverlay />
+                <ModalOverlay backdropFilter='blur(1px)' />
                 <ModalContent>
                     <ModalHeader>Email us</ModalHeader>
                     <ModalCloseButton />

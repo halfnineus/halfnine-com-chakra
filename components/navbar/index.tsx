@@ -56,13 +56,13 @@ export default function WithSubnavigation() {
             <Flex
                 // bg={mode('white', 'gray.800')}
                 // color={mode('gray.600', 'white')}
+                // align={'center'}
                 minH={'60px'}
                 py={{ base: 2 }}
                 px={{ base: 4, md: 8 }}
                 borderBottom={1}
                 borderStyle={'solid'}
                 borderColor={mode('gray.200', 'gray.900')}
-                // align={'center'}
                 justify="space-between"
                 align="center"
             >
@@ -92,7 +92,12 @@ export default function WithSubnavigation() {
                 </Flex>
 
                 <HStack spacing="4">
-                    <Button display={{ base: 'none', sm: 'block' }} colorScheme={buttonvariant} fontWeight="bold" onClick={() => router.push('/contact/')}>
+                    <Button
+                        display={{ base: 'none', sm: 'block' }}
+                        colorScheme={buttonvariant}
+                        fontWeight="bold"
+                        onClick={() => router.push('/contact')}
+                    >
                         {"Contact Us"}
                     </Button>
                     <IconButton
@@ -118,7 +123,6 @@ export default function WithSubnavigation() {
 
 const DesktopNav = () => {
     const linkColor = mode('gray.600', 'gray.200');
-    // const linkHoverColor = mode('gray.800', 'white');
     const popoverContentBgColor = mode('white', 'gray.800');
 
     return (
@@ -132,15 +136,8 @@ const DesktopNav = () => {
                                 px="2"
                                 py="2"
                                 fontWeight="semibold"
-
-
                                 userSelect={'none'}
-
-                                // p={2}
-                                href={navItem.href ?? '#'}
-                                // fontSize={'sm'}
-                                // fontWeight={500}
-                                // color={linkColor}
+                                onClick={() => router.push(navItem.href)}
                                 _hover={{
                                     textDecoration: 'none',
                                     color: "blue.400",
@@ -152,12 +149,11 @@ const DesktopNav = () => {
 
                         {navItem.children && (
                             <PopoverContent
-                                // border={0}
+                                // minW={'sm'}
                                 boxShadow={'xl'}
                                 bg={popoverContentBgColor}
                                 p={2}
                                 rounded={'xl'}
-                                minW={'sm'}
                             >
                                 <Stack>
                                     {navItem.children.map((child) => (
@@ -229,7 +225,12 @@ const MobileNavItem = ({ label, children, href, mhref }: NavItem) => {
             <Flex
                 py={2}
                 as={Link}
-                href={mhref ?? '#'}
+                // href={mhref ?? '#'}
+                onClick={() => {
+                    router.push(mhref);
+                    // !!Ignore url undefined. 
+                    window.location.reload();
+                }}
                 justify={'space-between'}
                 align={'center'}
                 _hover={{
@@ -276,54 +277,101 @@ interface NavItem {
     subLabel?: string;
     children?: Array<NavItem>;
     href?: any;
-    mhref?: string;
+    mhref?: any;
 }
 
 const NAV_ITEMS: Array<NavItem> = [
     {
         label: 'Services',
-        href: '/services/',
+        href: '/services',
         children: [
             {
                 label: 'Development Services',
-                subLabel: '!!Trending Design to inspire you',
-                href: '/services/development/',
+                subLabel: 'Transform Ideas into Solutions',
+                href: '/services/development',
             },
             {
                 label: 'Digital Transformation',
-                subLabel: '!!Up-and-coming Designers',
-                href: '/services/digitalization/',
+                subLabel: 'Efficiency & Security Modernization',
+                href: '/services/digitalization',
             },
             {
                 label: 'Project Consultation',
-                subLabel: '!!Up-and-coming Designers',
-                href: '/services/consultation/',
+                subLabel: 'Change Is Hard - And Necessary',
+                href: '/services/consultation',
+            },
+            // {
+            //     label: 'And more...',
+            //     // subLabel: 'Made to fit your industry needs.',
+            //     href: '/our-approach/',
+            // },
+        ],
+    },
+    {
+        label: 'Industries',
+        href: '/industries',
+        children: [
+            {
+                label: 'Manufacturing & Production',
+                // subLabel: '!!Trending Design to inspire you',
+                href: '/industries/mnp',
+            },
+            {
+                label: 'Media & Entertainment',
+                // subLabel: '!!Up-and-coming Designers',
+                href: '/industries/mne',
+            },
+            {
+                label: 'Security & Safety',
+                // subLabel: '!!Up-and-coming Designers',
+                href: '/industries/sns',
+            },
+            {
+                label: 'And more...',
+                // subLabel: '!!Up-and-coming Designers',
+                href: '/industries/',
+            },
+        ],
+    },
+    {
+        label: 'Our Approach',
+        href: '/our-approach',
+        children: [
+            {
+                label: 'Agile',
+                subLabel: 'Client & Developoment strategy',
+                href: '/our-approach/agile',
+            },
+            {
+                label: 'ROI',
+                subLabel: 'Return on Investment',
+                href: '/our-approach/roi',
+            },
+            {
+                label: 'PDaaS',
+                subLabel: 'Product Development as a Service',
+                href: '/our-approach/pdaas',
+            },
+            // {
+            //     label: 'Built on Templates',
+            //     subLabel: 'Our working replicable formulas',
+            //     href: '/our-approach/pdaas',
+            // },
+            {
+                label: 'And more...',
+                // subLabel: '!!Up-and-coming Designers',
+                href: '/our-approach',
             },
         ],
     },
     // {
-    //     label: 'Find Work',
-    //     children: [
-    //         {
-    //             label: 'Job Board',
-    //             subLabel: 'Find your dream design job',
-    //             href: '#',
-    //         },
-    //         {
-    //             label: 'Freelance Projects',
-    //             subLabel: 'An exclusive list for contract work',
-    //             href: '#',
-    //         },
-    //     ],
+    //     label: 'Portfolio',
+    //     href: '/portfolio/',
+    //     mhref: '/portfolio/',
     // },
     {
-        label: 'Portfolio',
-        href: '/portfolio/',
-        mhref: '/portfolio/',
-    },
-    {
         label: 'About',
-        href: '/about/',
-        mhref: '/about/',
+        href: '/about',
+        mhref: '/about',
     },
 ];

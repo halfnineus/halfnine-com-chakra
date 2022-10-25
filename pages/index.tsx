@@ -65,7 +65,7 @@ const IndexPage = () => {
       </Flex>
     )
   }
-  const { isOpen, onOpen, onClose } = useDisclosure();
+  // const { isOpen, onOpen, onClose } = useDisclosure();
   return (
     <>
       {indexdat.data.filter(p => p.locale === locale).map((indexData, i) => {
@@ -73,14 +73,13 @@ const IndexPage = () => {
           <>
             <NextSeo title={indexData.head.title} description={indexData.head.description} />
 
-            <Modal isOpen={isOpen} onClose={onClose}>
-              <ModalOverlay />
+            {/* <Modal isOpen={isOpen} onClose={onClose}>
+              <ModalOverlay backdropFilter='blur(1px)' />
               <ModalContent>
                 <ModalHeader>External Application</ModalHeader>
                 <ModalCloseButton />
                 <ModalBody>
                   <Text fontWeight={'semibold'} mb='1rem'>
-                    {/* <Lorem count={2} /> */}
                     You are about to email Dan Ochoa: dan@ochoa.pro
                   </Text>
                 </ModalBody>
@@ -92,7 +91,7 @@ const IndexPage = () => {
                   <Button onClick={() => router.push("mailto:dan@ochoa.pro")} colorScheme='blue' variant='outline' rightIcon={<FiExternalLink />}>Send Mail</Button>
                 </ModalFooter>
               </ModalContent>
-            </Modal>
+            </Modal> */}
 
             <Box key={i} as="section" pb={{ base: "none", lg: "12" }} pos="relative" px={{ base: '6', lg: '10' }}>
               <Box maxW={"100%"} mx="auto">
@@ -102,10 +101,10 @@ const IndexPage = () => {
                     <Box as="mark" color={mode('blue.600', 'blue.200')} bg="transparent">{indexData.block1.h1_2}</Box>
                   </Heading>
                   <Text mt={4} fontSize="xl" fontWeight="medium" color={mode('gray.600', 'gray.400')}>
-                    {indexData.block1.txt} <Button userSelect={'text'} onClick={() => window.open("https://en.wikipedia.org/wiki/Agile_Automation")} fontSize="xl" fontWeight="medium" color={'blue.400'} variant={'link'}>{indexData.block1.txturl}</Button>.
+                    {indexData.block1.txt} <Button userSelect={'text'} onClick={() => router.push("/our-approach/agile")} fontSize="xl" fontWeight="medium" color={'blue.400'} variant={'link'}>{indexData.block1.txturl}</Button>.
                   </Text>
                   <Stack direction={{ base: 'column', sm: 'row' }} spacing="4" mt="8">
-                    <Button onClick={() => router.push('/services/')} size="md" colorScheme="blue" shadow="base" fontSize="md">
+                    <Button onClick={() => router.push('/contact')} size="md" colorScheme="blue" shadow="base" fontSize="md">
                       {indexData.block1.button}
                     </Button>
                   </Stack>
@@ -179,7 +178,7 @@ const IndexPage = () => {
                   <Button
                     colorScheme={'blue'}
                     rounded="md"
-                    onClick={() => router.push('/contact/')}
+                    onClick={() => router.push('/services')}
                   >
                     {indexData.block3.options}
                   </Button>
@@ -199,12 +198,12 @@ const IndexPage = () => {
               </Stack>
               <Container maxW={'6xl'} mt={10}>
                 <SimpleGrid columns={{ base: 1, md: 1, lg: 3 }} spacing={10}>
-                  <Feature title={indexData.block4.item1} href={'/services/development/'}>{indexData.block4.item1d}</Feature>
-                  <Feature title={indexData.block4.item2} href={'/services/development/'}>{indexData.block4.item2d}</Feature>
-                  <Feature title={indexData.block4.item3} href={'/services/development/'}>{indexData.block4.item3d}</Feature>
+                  <Feature title={indexData.block4.item1} href={'/services/development'}>{indexData.block4.item1d}</Feature>
+                  <Feature title={indexData.block4.item2} href={'/services/development'}>{indexData.block4.item2d}</Feature>
+                  <Feature title={indexData.block4.item3} href={'/services/development'}>{indexData.block4.item3d}</Feature>
                 </SimpleGrid>
                 <SimpleGrid columns={{ base: 1, md: 1, lg: 2 }} my={10} mx={{ md: 0, lg: 52 }} spacing={10}>
-                  <Feature title={indexData.block4.item4} href={'/services/development/'}>{indexData.block4.item4d}</Feature>
+                  <Feature title={indexData.block4.item4} href={'/services/development'}>{indexData.block4.item4d}</Feature>
                   <Feature title={indexData.block4.item5} href={'/services/manufacturing/'}>{indexData.block4.item5d}</Feature>
                 </SimpleGrid>
               </Container>
