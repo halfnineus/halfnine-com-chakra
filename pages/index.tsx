@@ -43,28 +43,6 @@ import { NextSeo } from 'next-seo'
 const IndexPage = () => {
   const { locale } = useRouter()
   const router = useRouter()
-  const Feature = (props: any) => {
-    return (
-      <HStack align={'top'}>
-        <Box color={'green.400'} px={2}><Icon as={CheckIcon} /></Box>
-        <VStack align={'start'}>
-          <Text fontWeight={600} onClick={() => router.push(props.href)} cursor={'pointer'} _hover={{ color: 'blue.500' }}>{props.title}</Text>
-          <Text color={mode('gray.600', 'gray.400')}>{props.children}</Text>
-        </VStack>
-      </HStack>
-    );
-  }
-  const Feature2 = (props: any) => {
-    return (
-      <Flex>
-        <Icon boxSize={12} fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true" color={mode('blue.600', 'blue.200')}>{props.icon}</Icon>
-        <Box ml={4}>
-          <Text fontSize="lg" fontWeight="semibold" lineHeight="6">{props.title}</Text>
-          <Text mt={2} color="gray.500">{props.children}</Text>
-        </Box>
-      </Flex>
-    )
-  }
   // const { isOpen, onOpen, onClose } = useDisclosure();
   return (
     <>
@@ -151,7 +129,7 @@ const IndexPage = () => {
 
             <Box minH={'4rem'} />
 
-            <Flex direction={{ base: "column", md: "row" }} px={{ base: '6', lg: '10' }}>
+            <Flex direction={{ base: "column", xl: "row" }} px={{ base: '6', lg: '10' }}>
               <Box w={{ base: "full", md: 11 / 12, xl: 9 / 12 }} mx="auto" pr={{ md: 20 }}>
                 <Heading as={'h3'} fontSize={{ base: "3xl", sm: "4xl" }} fontWeight="extrabold" lineHeight="shorter" _dark={{ color: "gray.100" }} mb={6}>
                   <Text display="block">{indexData.block3.h3_1}</Text>
@@ -184,7 +162,7 @@ const IndexPage = () => {
                   </Button>
                 </Stack>
               </Box>
-              <Box w={{ base: "full", md: 10 / 12 }} mx="auto" textAlign="center">
+              <Box w={{ base: "full", lg: 10 / 12 }} mx="auto" textAlign="center">
                 <Image pointerEvents={'none'} userSelect={'none'} w="full" rounded="3xl" border={'1px'} shadow="lg" src={diagimg.src} alt="Ready to consider options" />
               </Box>
             </Flex>

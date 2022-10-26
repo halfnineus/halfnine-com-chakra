@@ -50,7 +50,7 @@ const Featurex = (props: any) => {
         <Image userSelect={'none'} pointerEvents={'none'} alt={'img'} src={props.img} />
       </Box>
       {/* <Stack> */}
-      <Heading color={mode('gray.700', 'white')} fontSize={'2xl'}>
+      <Heading color={mode('gray.700', 'white')} fontSize={{ lg: 'xl', sm: 'lg' }}>
         {props.title}
       </Heading>
       {/* <Text color={'gray.500'}>
@@ -111,18 +111,19 @@ const IndexAbout = () => {
         return (
           <>
             <NextSeo title={aboutData.head.title} description={aboutData.head.description} />
+
             <Box as={Container} maxW="7xl" mt={8} py={4} px={{ base: '6', lg: '10' }}>
 
               <Grid templateColumns={{ base: 'repeat(1, 1fr)', sm: 'repeat(2, 1fr)', md: 'repeat(2, 1fr)', }} gap={4}>
                 <GridItem colSpan={1}>
                   <VStack alignItems="flex-start" spacing="20px">
-                    <Heading>{"About Us / Who we are"}</Heading>
+                    <Heading>{aboutData.block1.heading}</Heading>
                   </VStack>
                 </GridItem>
                 <GridItem>
-                  <Flex><Text>{"aboutData.block1.i1"}</Text></Flex>
+                  <Flex><Text>{aboutData.block1.i1}</Text></Flex>
                   <Divider mt={4} mb={4} />
-                  <Flex><Text>{"aboutData.block1.i2"}</Text></Flex>
+                  <Flex><Text>{aboutData.block1.i2}</Text></Flex>
                 </GridItem>
               </Grid>
 
@@ -202,12 +203,11 @@ const IndexAbout = () => {
 
               <Divider mt={12} mb={12} />
 
-              {/* <Divider mt={10} mb={6} /> */}
               <Box key={i} as="section" maxW={{ base: 'xl', md: '7xl' }} textAlign={'center'} mx={"auto"} px={{ base: '6', md: '8' }}>
                 <Heading textAlign={'center'} fontWeight="extrabold" maxW="xlg" mx="auto">
                   {"Hardware made for and used by Industry Leading Companies"}
                 </Heading>
-                <Text pt={2} fontSize={'lg'} color={'gray.500'}>{"Developed by us in Orlando, FL. and manufactured by our partners in Hong Kong, SAR."}</Text>
+                <Text pt={2} fontSize={'lg'} color={'gray.500'}>{"Developed by us in Orlando, FL. and manufactured in Hong Kong, SAR."}</Text>
                 <SimpleGrid pt={6} columns={{ base: 1, sm: 2, md: 2, lg: 3 }} spacing={'6'}>
                   <Featurex img={img1.src} title={"Production Automation Board"} />
                   <Featurex img={img2.src} title={"Production Automation Board"} />
@@ -216,12 +216,9 @@ const IndexAbout = () => {
                   <Featurex img={img5.src} title={"Production Automation Board"} />
                   <Featurex img={img6.src} title={"Production Automation Board"} />
                 </SimpleGrid>
-                {/* <Heading textAlign={'center'} fontWeight="bold" fontSize={'xl'} maxW="lg" pt={'4'} mx="auto">
-                            {protafolioData.block.h3}
-                        </Heading> */}
               </Box>
 
-              <Divider mt={12} mb={12} />
+              <Divider mt={8} mb={5} />
 
             </Box>
           </>)

@@ -30,7 +30,7 @@ import smlog from '../../public/img/smlog.png'
 import wsmlog from '../../public/img/wsmlog.png'
 
 import { FaMoon, FaSun } from 'react-icons/fa'
-import router from 'next/router';
+import router, { useRouter } from 'next/router';
 import NextLink from 'next/link'
 
 export default function WithSubnavigation() {
@@ -51,6 +51,8 @@ export default function WithSubnavigation() {
             fallback: 'md',
         },
     )
+    const { locale } = useRouter()
+
     return (
         <Box>
             <Flex
@@ -59,7 +61,7 @@ export default function WithSubnavigation() {
                 // align={'center'}
                 minH={'60px'}
                 py={{ base: 2 }}
-                px={{ base: 4, md: 8 }}
+                px={{ base: 4, lg: 8 }}
                 borderBottom={1}
                 borderStyle={'solid'}
                 borderColor={mode('gray.200', 'gray.900')}
@@ -92,16 +94,19 @@ export default function WithSubnavigation() {
                 </Flex>
 
                 <HStack spacing="4">
-                    <Button
-                        display={{ base: 'none', sm: 'block' }}
-                        colorScheme={buttonvariant}
-                        fontWeight="bold"
-                        onClick={() => router.push('/contact')}
-                    >
-                        {"Contact Us"}
-                    </Button>
+                    {ContactItem.filter(p => p.locale === locale).map((contactItem) => (
+                        <Button
+                            key={contactItem.label}
+                            display={{ base: 'none', sm: 'block' }}
+                            colorScheme={buttonvariant}
+                            fontWeight="bold"
+                            onClick={() => router.push('/contact')}
+                        >
+                            {contactItem.label}
+                        </Button>
+                    ))}
                     <IconButton
-                        display={{ base: 'none', md: 'flex' }}
+                        display={{ base: 'none', lg: 'flex' }}
                         size="md"
                         fontSize="lg"
                         aria-label={`Switch to ${text} mode`}
@@ -124,10 +129,11 @@ export default function WithSubnavigation() {
 const DesktopNav = () => {
     const linkColor = mode('gray.600', 'gray.200');
     const popoverContentBgColor = mode('white', 'gray.800');
+    const { locale } = useRouter()
 
     return (
         <Stack direction={'row'} spacing={4}>
-            {NAV_ITEMS.map((navItem) => (
+            {NAV_ITEMS.filter(p => p.locale === locale).map((navItem) => (
                 <Box key={navItem.label}>
                     <Popover trigger={'hover'} placement={'bottom-start'}>
                         <PopoverTrigger>
@@ -206,12 +212,13 @@ const DesktopSubNav = ({ label, href, subLabel }: NavItem) => {
 };
 
 const MobileNav = () => {
+    const { locale } = useRouter()
     return (
         <Stack
             bg={mode('white', 'gray.800')}
             p={4}
             display={{ md: 'none' }}>
-            {NAV_ITEMS.map((navItem) => (
+            {NAV_ITEMS.filter(p => p.locale === locale).map((navItem) => (
                 <MobileNavItem key={navItem.label} {...navItem} />
             ))}
         </Stack>
@@ -273,6 +280,7 @@ const MobileNavItem = ({ label, children, href, mhref }: NavItem) => {
 };
 
 interface NavItem {
+    locale?: string;
     label: string;
     subLabel?: string;
     children?: Array<NavItem>;
@@ -282,6 +290,7 @@ interface NavItem {
 
 const NAV_ITEMS: Array<NavItem> = [
     {
+        locale: "en",
         label: 'Services',
         href: '/services',
         children: [
@@ -292,54 +301,47 @@ const NAV_ITEMS: Array<NavItem> = [
             },
             {
                 label: 'Digital Transformation',
-                subLabel: 'Efficiency & Security Modernization',
+                subLabel: 'Efficiency in a Digital Approach',
                 href: '/services/digitalization',
             },
             {
                 label: 'Project Consultation',
                 subLabel: 'Change Is Hard - And Necessary',
                 href: '/services/consultation',
-            },
-            // {
-            //     label: 'And more...',
-            //     // subLabel: 'Made to fit your industry needs.',
-            //     href: '/our-approach/',
-            // },
+            }
         ],
     },
     {
+        locale: "en",
         label: 'Industries',
         href: '/industries',
         children: [
             {
                 label: 'Manufacturing & Production',
-                // subLabel: '!!Trending Design to inspire you',
                 href: '/industries/mnp',
             },
             {
                 label: 'Media & Entertainment',
-                // subLabel: '!!Up-and-coming Designers',
                 href: '/industries/mne',
             },
             {
                 label: 'Security & Safety',
-                // subLabel: '!!Up-and-coming Designers',
                 href: '/industries/sns',
             },
             {
                 label: 'And more...',
-                // subLabel: '!!Up-and-coming Designers',
-                href: '/industries/',
+                href: '/industries',
             },
         ],
     },
     {
+        locale: "en",
         label: 'Our Approach',
         href: '/our-approach',
         children: [
             {
                 label: 'Agile',
-                subLabel: 'Client & Developoment strategy',
+                subLabel: 'Client & Development strategy',
                 href: '/our-approach/agile',
             },
             {
@@ -351,27 +353,97 @@ const NAV_ITEMS: Array<NavItem> = [
                 label: 'PDaaS',
                 subLabel: 'Product Development as a Service',
                 href: '/our-approach/pdaas',
-            },
-            // {
-            //     label: 'Built on Templates',
-            //     subLabel: 'Our working replicable formulas',
-            //     href: '/our-approach/pdaas',
-            // },
-            {
-                label: 'And more...',
-                // subLabel: '!!Up-and-coming Designers',
-                href: '/our-approach',
-            },
+            }
         ],
     },
-    // {
-    //     label: 'Portfolio',
-    //     href: '/portfolio/',
-    //     mhref: '/portfolio/',
-    // },
     {
+        locale: "en",
         label: 'About',
         href: '/about',
         mhref: '/about',
     },
+    {
+        locale: "es",
+        label: 'Servicios',
+        href: '/services',
+        children: [
+            {
+                label: 'Servicios de desarrollo',
+                subLabel: 'Transforme ideas en soluciones',
+                href: '/services/development',
+            },
+            {
+                label: 'Transformación Digital',
+                subLabel: 'Eficiencia & Modernización de Seguridad',
+                href: '/services/digitalization',
+            },
+            {
+                label: 'Consulta de proyectos',
+                subLabel: 'El cambio es difícil - Y necesario',
+                href: '/services/consultation',
+            }
+        ],
+    },
+    {
+        locale: "es",
+        label: 'Industrias',
+        href: '/industries',
+        children: [
+            {
+                label: 'Fabricación & Producción',
+                href: '/industries/mnp',
+            },
+            {
+                label: 'Medios & Entretenimiento',
+                href: '/industries/mne',
+            },
+            {
+                label: 'Security & Protección',
+                href: '/industries/sns',
+            },
+            {
+                label: 'Y más...',
+                href: '/industries',
+            },
+        ],
+    },
+    {
+        locale: "es",
+        label: 'Nuestro enfoque',
+        href: '/our-approach',
+        children: [
+            {
+                label: 'Ágil',
+                subLabel: 'Cliente & Estrategia de desarrollo',
+                href: '/our-approach/agile',
+            },
+            {
+                label: 'ROI',
+                subLabel: 'Retorno de la inversión',
+                href: '/our-approach/roi',
+            },
+            {
+                label: 'PDaaS',
+                subLabel: 'Desarrollo de productos como servicio',
+                href: '/our-approach/pdaas',
+            }
+        ],
+    },
+    {
+        locale: "es",
+        label: 'Acerca De',
+        href: '/about',
+        mhref: '/about',
+    },
 ];
+
+const ContactItem = [
+    {
+        locale: "en",
+        label: 'Contact Us',
+    },
+    {
+        locale: "es",
+        label: 'Contáctanos',
+    },
+]

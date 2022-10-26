@@ -4,7 +4,15 @@ const DefaultSEO = () => {
     return (
         <>
             <DefaultSeo
-                robotsProps={{ noarchive: true }}
+                canonical='https://ochoa.pro/'
+                languageAlternates={[{
+                    hrefLang: 'es',
+                    href: 'https://ochoa.pro/es',
+                }]}
+                robotsProps={{
+                    noarchive: true,
+                    noimageindex: true,
+                }}
                 openGraph={{
                     type: 'website',
                     locale: 'en',

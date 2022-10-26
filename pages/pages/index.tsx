@@ -1,8 +1,9 @@
 const Index = () => {
     return (
         <>
-            {/* Redirects to root  */}
-            {/* Folder made SEO Purposes */}
+            {/* Redirects to Root  */}
+            {/* Folder & Pages Made SEO Purposes */}
+            {/* When Creating Page Make Sure To Add It Manually To Sitemap */}
         </>
     );
 }

@@ -3,13 +3,13 @@
         {
             "locale": "en",
             "head": {
-                "title": "About - Ochoa - International Product Development, Design, and Production",
+                "title": "About Us - Ochoa - International Product Development, Design, and Production",
                 "description": "Developing systems to automate simple and complicated industrial processes. Contact us to know more."
             },
             "block1": {
-                "heading": "!!About Us",
-                "i1": "!!Hi there, we are the Ochoa's, A family of engineers, immigrants starting a business in the United States, chasing the 'American Dream'.",
-                "i2": "!!We offer Agile Automation services and  provides end-to-end solutions for product Development, Design and Manufacturing."
+                "heading": "About Us / Who we are",
+                "i1": "A small family of engineers with experience in software and electronics development. From developing cloud infrastructures to full IoT devices with applications we are prepared to take almost any kind of challenge, using the technologies and methods mentioned in 'Our Approach'.",
+                "i2": "Right now, we are working as employees for other companies, however we are always interested in projects that will challenge our capabilities and willing to give it our undivided attention."
             },
             "block2": {
                 "heading": "Why Us",
@@ -21,13 +21,13 @@
         {
             "locale": "es",
             "head": {
-                "title": "About - Ochoa - International Product Development, Design, and Production",
+                "title": "About Us - Ochoa - International Product Development, Design, and Production",
                 "description": "Developing systems to automate simple and complicated industrial processes. Contact us to know more."
             },
             "block1": {
-                "heading": "!!About Us",
-                "i1": "!!Hi there, we are the Ochoa's, A family of engineers, immigrants starting a business in the United States, chasing the American Dream.",
-                "i2": "!!We offer Agile Automation services and  provides end-to-end solutions for product Development, Design and Manufacturing."
+                "heading": "Sobre nosotros / Quienes somos",
+                "i1": "Una pequeña familia de ingenieros con experiencia en desarrollo de software y electrónica. Desde el desarrollo de infraestructuras en la nube hasta dispositivos IoT completos con aplicaciones, estamos preparados para enfrentar casi cualquier tipo de desafío, utilizando las tecnologías y los métodos mencionados en 'Nuestro enfoque'.",
+                "i2": "En este momento, estamos trabajando como empleados para otras empresas, sin embargo, siempre estamos interesados en proyectos que desafíen nuestras capacidades y estamos dispuestos a prestarle toda nuestra atención."
             },
             "block2": {
                 "heading": "¿Por qué Nosotros?",
