@@ -9,13 +9,13 @@ module.exports = {
     // Langs to add
     //  "zh-Hans", "zh-Hant", "ru", "fr", "id", "de", "pt", "it", "ja", "hi", "ar", "bn"
   },
-  // async redirects() {
-  //   return [
-  //     {
-  //       source: '/services',
-  //       destination: '/',
-  //       permanent: true,
-  //     },
-  //   ];
-  // },
+  async redirects() {
+    return [
+      {
+        source: '/pages',
+        destination: '/',
+        permanent: true,
+      },
+    ];
+  },
 }
