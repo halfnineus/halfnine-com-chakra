@@ -32,7 +32,7 @@ const MailModal = () => {
                     </ModalBody>
 
                     <ModalFooter>
-                        <Button colorScheme='blue' mr={3} onClick={onClose}>
+                        <Button colorScheme={'brand'} mr={3} onClick={onClose}>
                             Close
                         </Button>
                         <Button onClick={() => router.push("mailto:dan@ochoa.pro")} variant='ghost' rightIcon={<FiExternalLink />}>Send Mail</Button>

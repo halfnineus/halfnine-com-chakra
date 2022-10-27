@@ -10,7 +10,7 @@ import { TbReportMoney } from "react-icons/tb";
 const Feature2 = (props: any) => {
     return (
         <Flex>
-            <Icon boxSize={12} fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true" color={mode('blue.600', 'blue.200')}>{props.icon}</Icon>
+            <Icon boxSize={12} fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true" color={mode('blue.600', 'blue.300')}>{props.icon}</Icon>
             <Box ml={4}>
                 <Text fontSize="lg" fontWeight="semibold" lineHeight="6">{props.title}</Text>
                 <Text mt={2} color="gray.500">{props.children}</Text>

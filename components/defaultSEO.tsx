@@ -9,17 +9,18 @@ const DefaultSEO = () => {
                     hrefLang: 'es',
                     href: 'https://ochoa.pro/es',
                 }]}
-                robotsProps={{
-                    noarchive: true,
-                    noimageindex: true,
-                }}
+                // Stops working on build
+                // robotsProps={{
+                //     noarchive: true,
+                //     noimageindex: true,
+                // }}
                 openGraph={{
                     type: 'website',
                     locale: 'en',
                     url: 'https://ochoa.pro/',
                     site_name: 'Ochoa',
-                    title: 'International Product Development, Design, and Production - Ochoa',
-                    description: 'Full-service product development with Ochoa, Providing services from software, hardware and mechanical engineering. And electronics manufacturing.',
+                    title: 'Agile Automation Development & Consulting - Ochoa',
+                    description: 'Improve your products and services with a digital transformation powered by Agile Automation.',
                     images: [
                         {
                             url: 'https://ochoa.pro/perma/metatag.jpg',

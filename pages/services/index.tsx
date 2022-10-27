@@ -85,7 +85,7 @@ const Index = () => {
                             </chakra.p>
                             <Button
                                 w={{ base: "full", sm: "auto" }}
-                                colorScheme="blue"
+                                colorScheme={'brand'}
                                 onClick={() => router.push("/services/development")}
                             >
                                 Learn More
@@ -155,7 +155,7 @@ const Index = () => {
                             </chakra.p>
                             <Button
                                 w={{ base: "full", sm: "auto" }}
-                                colorScheme="blue"
+                                colorScheme={'brand'}
                                 onClick={() => router.push("/services/digitalization")}
                             >
                                 Learn More
@@ -214,7 +214,7 @@ const Index = () => {
                             </chakra.p>
                             <Button
                                 w={{ base: "full", sm: "auto" }}
-                                colorScheme="blue"
+                                colorScheme={'brand'}
                                 onClick={() => router.push("/services/consultation")}
                             >
                                 Learn More

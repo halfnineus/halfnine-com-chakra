@@ -3,8 +3,8 @@
     {
       "locale": "en",
       "head": {
-        "title": "International Product Development, Design, and Production - Ochoa",
-        "description": "Full-service product development with Ochoa, Providing services from software, hardware, and mechanical engineering. And electronics manufacturing."
+        "title": "Agile Automation Development & Consulting - Ochoa",
+        "description": "Improve your products and services with a digital transformation powered by Agile Automation."
       },
       "block1": {
         "h1_1": "Agile Automation",
@@ -23,48 +23,12 @@
       "block3": {
         "h3_1": "We Focus On Helping You Avoid",
         "h3_2": "The Industry's Most Common Problems",
-        "item1": "Scalability - Ability to service changing volumes of service demand.",
-        "item2": "Adaptability - Being able to handle changes based on requirements and strategy.",
-        "item3": "Flexibility - Respond to earthquakes in the architecture seamlessly.",
-        "item4": "Over Engineering - As long as it works  it's ok right? We don't think so.",
-        "item5": "Performance - This meeting could've been an Email.",
+        "item1": "`dot`",
+        "item2": "`dot`",
+        "item3": "`dot`",
+        "item4": "Keep the security of y`dot`",
+        "item5": "Keep your Data and Information Secure`dot`",
         "options": "Learn More"
-      },
-      "block4": {
-        "h4": "Our Solutions.",
-        "txt": "Every area that we work on brings  it's own challenges and requires teams with an assortment of specializations to turn ideas into solutions.",
-        "item1": "Electronic Engineering",
-        "item1d": "Reliable and innovative solutions that enable a digital transformation.",
-        "item2": "Software Engineering",
-        "item2d": "Reliable product development and design on the latest technology.",
-        "item3": "Mechanical Engineering",
-        "item3d": "Take product ideas from concepts to working prototypes.",
-        "item4": "Product Design",
-        "item4d": "Innovative product design processes that bring ideas to life.",
-        "item5": "Electronics Manufacturing",
-        "item5d": "Electronics with quality that live up to the expectations of all customers."
-      },
-      "block5": {
-        "site": "ochoa.pro",
-        "h5": "Technology transformation, migration, and implementation",
-        "txt": "We offer Industry solutions for companies who want to work with Technology that meets their specific needs, ideas, and goals.",
-        "item1": "Financial services",
-        "item1d": "Customize experiences and modernize systems.",
-        "item2": "Government",
-        "item2d": "Implement remote access and cross-agency collaboration.",
-        "item3": "Healthcare",
-        "item3d": "Enhance engagement and improve insights.",
-        "item4": "Retail",
-        "item4d": "Personalize experiences and optimize supply chains.",
-        "item5": "Manufacturing",
-        "item5d": "Improve operational efficiencies and reduce costs.",
-        "item6": "Media and entertainment",
-        "item6d": "Create content faster and deliver anywhere.",
-        "item7": "Game development",
-        "item7d": "Build, scale, and operate games with custom hardware.",
-        "item8": "Security and Safety",
-        "item8d": "Build, Construct and Operate in safe environments.",
-        "bot": "And more..."
       }
     },
     {
@@ -90,48 +54,12 @@
       "block3": {
         "h3_1": "Nos enfocamos en ayudarte a evitar",
         "h3_2": "Los problemas más comunes de la industria",
-        "item1": "Escalabilidad - servicio de capacidad que cambia los volúmenes de la demanda del servicio.",
-        "item2": "Adaptabilidad - Ser capaz de manejar los cambios en función de los requisitos y la estrategia.",
-        "item3": "Flexibilidad - responda a los terremotos en la arquitectura sin problemas.",
-        "item4": "Sobreingeniería - Mientras funcione, está bien, ¿no? No lo creemos.",
-        "item5": "Desempeño - Esta reunión podría haber sido un correo electrónico.",
+        "item1": "!!Escalabilidad - servicio de capacidad que cambia los volúmenes de la demanda del servicio.",
+        "item2": "!!Adaptabilidad - Ser capaz de manejar los cambios en función de los requisitos y la estrategia.",
+        "item3": "!!Flexibilidad - responda a los terremotos en la arquitectura sin problemas.",
+        "item4": "!!Sobreingeniería - Mientras funcione, está bien, ¿no? No lo creemos.",
+        "item5": "!!Desempeño - Esta reunión podría haber sido un correo electrónico.",
         "options": "Mas Informacion."
-      },
-      "block4": {
-        "h4": "Que es lo que hacemos.",
-        "txt": "Cada área en la que trabajamos trae sus propios desafíos y requiere equipos y una variedad de especializaciones para convertir ideas en soluciones.",
-        "item1": "Ingeniería Electrónica",
-        "item1d": "Soluciones innovadoras de alta fiabilidad que permiten una transformación digital.",
-        "item2": "Ingeniería de software",
-        "item2d": "Desarrollo y diseño de productos altamente confiables con las últimas tecnologías.",
-        "item3": "Ingeniería Mecánica",
-        "item3d": "Lleve las ideas de productos de conceptos a prototipos que funcionan.",
-        "item4": "Diseño de producto",
-        "item4d": "Procesos innovadores de diseño de productos que dan vida a las ideas.",
-        "item5": "Fabricación de productos electrónicos",
-        "item5d": "Electrónica con calidad a la altura de las expectativas de todos los clientes."
-      },
-      "block5": {
-        "site": "ochoa.pro",
-        "h5": "Transformación, migración e implementación de tecnología",
-        "txt": "Ofrecemos soluciones industriales para empresas que desean trabajar con tecnología que satisfaga sus necesidades, ideas y objetivos específicos.",
-        "item1": "Servicios financieros",
-        "item1d": "Personalice experiencias y modernice sistemas.",
-        "item2": "Gobierno",
-        "item2d": "Implementar acceso remoto y colaboración entre agencias.",
-        "item3": "Salud",
-        "item3d": "Mejore las interacciones y la información.",
-        "item4": "Venta minorista",
-        "item4d": "Personalice experiencias y optimice cadenas de suministro.",
-        "item5": "Fabricación",
-        "item5d": "Mejore la eficiencia de operaciones y reduzca los costos.",
-        "item6": "Medios y entretenimiento",
-        "item6d": "Cree contenido rápido y en cualquier lugar.",
-        "item7": "Desarrollo de Juegos",
-        "item7d": "Cree, escale y opere juegos con hardware personalizado.",
-        "item8": "Seguridad y protección",
-        "item8d": "Construya, Edifique y Opere en entornos seguros.",
-        "bot": "Y más..."
       }
     }
   ]

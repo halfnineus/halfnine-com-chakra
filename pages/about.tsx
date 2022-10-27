@@ -17,7 +17,6 @@ import {
   Button,
   SimpleGrid,
 } from '@chakra-ui/react';
-import { NextSeo } from 'next-seo';
 
 import router, { useRouter } from "next/router"
 
@@ -34,6 +33,11 @@ import img4 from '../public/img/portfolio/4.png'
 import img5 from '../public/img/portfolio/5.png'
 import img6 from '../public/img/portfolio/6.png'
 
+import img1x from '../public/img/logo/1.png'
+import img2x from '../public/img/logo/2.png'
+import img3x from '../public/img/logo/3.png'
+import img4x from '../public/img/logo/4.png'
+import img5x from '../public/img/logo/5.png'
 
 interface FeatureProps {
   heading: string;
@@ -42,6 +46,29 @@ interface FeatureProps {
   icon: any;
 }
 
+const BuiltWith = (children: any) => {
+  return (
+    <Box
+      maxW={'220px'}
+      w={'full'}
+      bg={mode('gray.50', 'gray.700')}
+      boxShadow={'md'}
+      rounded={'md'}
+      p={2}
+      overflow={'hidden'}
+      maxH={'auto'}
+    >
+      <Box h={'auto'} /* bg={mode('gray.50', 'gray.300')} mt={-2} mx={-2} mb={2} */ m={-2} pos={'relative'}>
+        <Image userSelect={'none'} pointerEvents={'none'} alt={'img'} src={children.img} />
+      </Box>
+      {/* <Stack>
+        <Heading color={mode('gray.700', 'white')} fontSize={'2xl'}>
+          {children.tech}
+        </Heading>
+      </Stack> */}
+    </Box>
+  )
+}
 
 const Featurex = (props: any) => {
   return (
@@ -110,10 +137,8 @@ const IndexAbout = () => {
       {aboutdat.data.filter(p => p.locale === locale).map((aboutData, i) => {
         return (
           <>
-            <NextSeo title={aboutData.head.title} description={aboutData.head.description} />
-
+            {/* <Container maxW={'container.xl'}> */}
             <Box as={Container} maxW="7xl" mt={8} py={4} px={{ base: '6', lg: '10' }}>
-
               <Grid templateColumns={{ base: 'repeat(1, 1fr)', sm: 'repeat(2, 1fr)', md: 'repeat(2, 1fr)', }} gap={4}>
                 <GridItem colSpan={1}>
                   <VStack alignItems="flex-start" spacing="20px">
@@ -173,7 +198,7 @@ const IndexAbout = () => {
                   color="yellow"
                   heading={'Availability'}
                   text={'Meet the demand with supply.'}
-                  icon={<MdAvTimer size={21} />}
+                  icon={<MdAvTimer size={20} />}
                 />
                 <Feature
                   color="gray"
@@ -203,8 +228,8 @@ const IndexAbout = () => {
 
               <Divider mt={12} mb={12} />
 
-              <Box key={i} as="section" maxW={{ base: 'xl', md: '7xl' }} textAlign={'center'} mx={"auto"} px={{ base: '6', md: '8' }}>
-                <Heading textAlign={'center'} fontWeight="extrabold" maxW="xlg" mx="auto">
+              <Box key={i} as="section" maxW={{ base: 'xl', md: 'container.xl' }} textAlign={'center'} mx={"auto"} >
+                <Heading textAlign={'center'} fontWeight="bold" maxW="xlg" mx="auto">
                   {"Hardware made for and used by Industry Leading Companies"}
                 </Heading>
                 <Text pt={2} fontSize={'lg'} color={'gray.500'}>{"Developed by us in Orlando, FL. and manufactured in Hong Kong, SAR."}</Text>
@@ -218,9 +243,28 @@ const IndexAbout = () => {
                 </SimpleGrid>
               </Box>
 
+              <Divider mt={8} mb={8} />
+
+              <Heading textAlign={'center'} fontWeight="bold" maxW="xlg" mx="auto">
+                {"Be the first on our Our Clients List:"}
+              </Heading>
+              <SimpleGrid columns={{ base: 1, sm: 2, md: 3, lg: 5 }} mt="8" spacing={'6'}>
+                <BuiltWith img={img1x.src} />
+                <BuiltWith img={img2x.src} />
+                <BuiltWith img={img3x.src} />
+                <BuiltWith img={img4x.src} />
+                <BuiltWith img={img5x.src} />
+              </SimpleGrid>
+              <Stack pt={"8"} direction={{ base: "column", sm: "row", }} spacing={2} justifyContent={{ sm: "left", md: "center", }}>
+                <Button size={'lg'} colorScheme={'brand'}/* rightIcon={<FiMail />} */ onClick={() => router.push("/contact")}>
+                  {"Contact Us"}
+                </Button>
+              </Stack>
+
               <Divider mt={8} mb={5} />
 
             </Box>
+            {/* </Container> */}
           </>)
       })}
     </>

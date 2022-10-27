@@ -123,7 +123,7 @@ const INDEX = () => {
                         <Text fontWeight={'semibold'} mb='1rem'>
                             {/* <Lorem count={2} /> */}
                             {`You are about to email Dan Ochoa: `}
-                            <Button colorScheme="black" variant={'link'} userSelect={'text'} fontWeight={'semibold'} mb='1rem' display={'inline'} onClick={() => router.push("mailto:dan@ochoa.pro")}>
+                            <Button colorScheme={'brand'} variant={'link'} userSelect={'text'} fontWeight={'semibold'} mb='1rem' display={'inline'} onClick={() => router.push("mailto:dan@ochoa.pro")}>
                                 {`dan@ochoa.pro`}
                             </Button>
                         </Text>
@@ -132,7 +132,7 @@ const INDEX = () => {
                         <Button variant={'ghost'} mr={3} onClick={onClose}>
                             Close
                         </Button>
-                        <Button onClick={/* onClose, */ () => router.push("mailto:dan@ochoa.pro")} colorScheme='blue' variant='outline' rightIcon={<FiExternalLink />}>Send Mail</Button>
+                        <Button onClick={/* onClose, */ () => router.push("mailto:dan@ochoa.pro")} colorScheme={'brand'} variant='outline' rightIcon={<FiExternalLink />}>Send Mail</Button>
                     </ModalFooter>
                 </ModalContent>
             </Modal>
@@ -171,10 +171,10 @@ const INDEX = () => {
             </Flex>
             <Container pt={'5'} maxW={'container.lg'}>
 
-                <Heading fontSize={{ base: '2xl', md: '3xl' }}>
+                <Heading pl={4} fontSize={{ base: '2xl', md: '3xl' }}>
                     Lets make something awesome together.
                 </Heading>
-                <Text fontSize={{ base: 'md', md: 'lg' }}>
+                <Text pl={4} fontSize={{ base: 'md', md: 'lg' }}>
                     Develop technology solutions, IT consulting & Digital transformation services.
                 </Text>
 
@@ -272,8 +272,7 @@ const INDEX = () => {
                             </FormControl>
                             <FormControl>
                                 <Button
-                                    bg={'blue.500'}
-                                    color='white'
+                                    colorScheme={"brand"}
                                     type={'submit'}
                                     isLoading={submitted}
                                     loadingText={'Submitting'}

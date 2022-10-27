@@ -43,7 +43,7 @@ export default function WithSubnavigation() {
     const buttonvariant = useBreakpointValue(
         {
             sm: 'gray',
-            md: 'blue',
+            md: 'brand',
         },
         {
             // Breakpoint to use when mediaqueries cannot be used, such as in server-side rendering
@@ -178,14 +178,14 @@ const DesktopNav = () => {
 const DesktopSubNav = ({ label, href, subLabel }: NavItem) => {
     return (
         <Link
-            bg={"gray.50"}
+            bg={mode("gray.50", 'gray.900')}
             onClick={() => router.push(href)}
             // href={href}
             role={'group'}
             display={'block'}
             p={2}
             rounded={'md'}
-            _hover={{ bg: mode('blue.50', 'gray.900') }}>
+            _hover={{ bg: mode('blue.50', 'blue.900') }}>
             <Stack direction={'row'} align={'center'}>
                 <Box>
                     <Text

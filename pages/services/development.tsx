@@ -147,6 +147,11 @@ const Development = () => {
 
             <Divider my={8} />
 
+            <Text pl={8} fontWeight="semibold" textTransform="uppercase" letterSpacing="wide" userSelect={'none'}>
+                {"Under construction..."}
+            </Text>
+            <Divider my={8} />
+
         </Box>
 
 
