@@ -14,6 +14,10 @@ import {
   SimpleGrid,
   Icon,
   StackDivider,
+  Divider,
+  Grid,
+  GridItem,
+  VStack,
 } from '@chakra-ui/react'
 
 
@@ -30,20 +34,36 @@ import { ChevronRightIcon } from '@chakra-ui/icons'
 import { ReactElement } from 'react';
 import { NextSeo } from 'next-seo'
 
-interface FeatureProps {
+interface FeatureProps1 {
   title: string;
   text: string;
   icon: ReactElement;
 }
 
-interface FeaturePrope {
+interface FeatureProps2 {
   text: string;
   iconBg: string;
   icon?: ReactElement;
   refx: any;
 }
 
-const Featured = ({ text, icon, iconBg, refx }: FeaturePrope) => {
+interface FeatureProps3 {
+  heading: string;
+  text: string;
+}
+
+const Feature3 = ({ heading, text }: FeatureProps3) => {
+  return (
+    <GridItem>
+      <Heading as={'h3'} pb={'1'} fontSize="xl" fontWeight="600">
+        {heading}
+      </Heading>
+      <Text>{text}</Text>
+    </GridItem>
+  );
+};
+
+const Feature2 = ({ text, icon, iconBg, refx }: FeatureProps2) => {
   return (
     <Stack
       direction={'row'}
@@ -78,7 +98,7 @@ const Featured = ({ text, icon, iconBg, refx }: FeaturePrope) => {
   );
 };
 
-const Feature = ({ title, text, icon }: FeatureProps) => {
+const Feature1 = ({ title, text, icon }: FeatureProps1) => {
   return (
     <Stack>
       <Flex
@@ -177,21 +197,21 @@ const IndexPage = () => {
 
             <Box px={{ base: '6', lg: '10' }}>
               <SimpleGrid columns={{ base: 1, md: 3 }} spacing={10}>
-                <Feature
+                <Feature1
                   icon={<Icon as={FcServices} w={10} h={10} />}
                   title={'Usability'}
                   text={
                     "Applications can easily become very complex, changing the product or educating the user can become costly. Replicating the use of proven Technology Stacks and Frameworks allows us to deliver a simple experience to a complicated system."
                   }
                 />
-                <Feature
+                <Feature1
                   icon={<Icon as={FcApproval} w={10} h={10} />}
                   title={'Compliance'}
                   text={
                     "Here are some of the regulations you might face while developing an application: GDPR, CCPA, AICPA SOC 2, HIPAA, CCPA, PCI, ISO/IEC 27001. Not complying can lead to severe fines. It's our job to make sure the applications comply with all the necessary regulations."
                   }
                 />
-                <Feature
+                <Feature1
                   icon={<Icon as={FcLock} w={10} h={10} />}
                   title={'Security'}
                   text={
@@ -230,7 +250,7 @@ const IndexPage = () => {
                         borderColor={mode('gray.100', 'gray.700')}
                       />
                     }>
-                    <Featured
+                    <Feature2
                       refx={'/services/development'}
                       icon={
                         <Icon as={IoPeopleOutline} color={mode('blue.600', 'blue.300')} w={5} h={5} />
@@ -238,13 +258,13 @@ const IndexPage = () => {
                       iconBg={mode('blue.100', 'blue.900')}
                       text={'Development Services'}
                     />
-                    <Featured
+                    <Feature2
                       refx={'/services/digitalization'}
                       icon={<Icon as={IoRocketOutline} color={mode('green.600', 'green.300')} w={5} h={5} />}
                       iconBg={mode('green.100', 'green.900')}
                       text={'Digital Tranformation'}
                     />
-                    <Featured
+                    <Feature2
                       refx={'/services/consultation'}
                       icon={
                         <Icon as={IoBulbOutline} color={mode('orange.600', 'orange.300')} w={5} h={5} />
@@ -274,10 +294,64 @@ const IndexPage = () => {
 
             <Box minH={'5rem'} />
 
-            <Text pl={{ base: '6', lg: '8' }} fontWeight="semibold" textTransform="uppercase" letterSpacing="wide" userSelect={'none'}>
-              {"Page Is Still Under construction..."}
-            </Text>
-
+            <Box px={{ base: '6', lg: '10' }}>
+              {/* <Box as={Container} maxW="7xl" mt={14} p={4}> */}
+              <Grid
+                templateColumns={{
+                  base: 'repeat(1, 1fr)',
+                  sm: 'repeat(2, 1fr)',
+                  md: 'repeat(2, 1fr)',
+                }}
+                gap={4}>
+                <GridItem colSpan={1}>
+                  <VStack alignItems="flex-start" spacing="24px">
+                    <Heading as={'h2'} fontSize="3xl" fontWeight="700">
+                      Are you ready to Level Up?
+                    </Heading>
+                    <Button w={{ base: 'full', sm: '120px' }} colorScheme="brand" onClick={() => router.push('/contact')}>
+                      Contact Us
+                    </Button>
+                  </VStack>
+                </GridItem>
+                <GridItem>
+                  <Flex>
+                    <Text>
+                      {/*
+                        !! If you have an idea you want to discuss, reach out!
+                        !! From startups to enterprise level companies, we have helped organizations bring their digital goals to life.
+                      */}
+                      {`Taking business to the Next Level takes a lot of resources combined with trial and error, 
+                        Our experience in the field will take the risks to the minimun while maximizing the use of resources.`}
+                    </Text>
+                  </Flex>
+                </GridItem>
+              </Grid>
+              <Divider my={6} />
+              <Grid
+                templateColumns={{
+                  base: 'repeat(1, 1fr)',
+                  sm: 'repeat(2, 1fr)',
+                  md: 'repeat(4, 1fr)',
+                }}
+                gap={{ base: '8', sm: '12', md: '16' }}>
+                <Feature3
+                  heading={'Teamwork'}
+                  text={`Teamwork is the only way to achieve creativity and collaboration, and the only way to achieve something great.`}
+                />
+                <Feature3
+                  heading={'Innovation'}
+                  text={'Connecting knowledge with imagination we create value for a better purpose.'}
+                />
+                <Feature3
+                  heading={'Challenge'}
+                  text={'By speaking up we push the boundries of what is possible in any enviroment.'}
+                />
+                <Feature3
+                  heading={'Solutions'}
+                  text={'Finding the solution to problems gives value to the people and communities around us.'}
+                />
+              </Grid>
+            </Box>
             <Box minH={'5rem'} />
 
           </>
