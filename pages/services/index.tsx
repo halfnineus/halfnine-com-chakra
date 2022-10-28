@@ -12,6 +12,7 @@ import {
     Button,
     VStack,
 } from "@chakra-ui/react";
+import { NextSeo } from "next-seo";
 
 import router from "next/router";
 
@@ -46,6 +47,10 @@ const Feature = (props: any) => {
 const Index = () => {
     return (
         <>
+            <NextSeo
+                title=' Services | Development Services, Digital Transformation, Project Consultation.'
+                description='We assemble and lead teams with the skills and tools needed for building the products and tools that power your business.'
+            />
             <Container maxW="container.xl">
                 <Box
                     bg="white"
@@ -237,8 +242,8 @@ const Index = () => {
 
                 <Divider mt={8} mb={8} />
 
-                <Text pl={8} fontWeight="semibold" textTransform="uppercase" letterSpacing="wide" userSelect={'none'}>
-                    {"Under construction..."}
+                <Text pl={10} fontWeight="semibold" textTransform="uppercase" letterSpacing="wide" userSelect={'none'}>
+                    {"Page Is Still Under construction..."}
                     {/* 
                         Service - Modernization
                         Modernize your legacy systems improving Preformance and Security, Aligned with your Business Goals

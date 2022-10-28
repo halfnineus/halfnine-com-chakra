@@ -147,8 +147,8 @@ const Development = () => {
 
             <Divider my={8} />
 
-            <Text pl={8} fontWeight="semibold" textTransform="uppercase" letterSpacing="wide" userSelect={'none'}>
-                {"Under construction..."}
+            <Text fontWeight="semibold" textTransform="uppercase" letterSpacing="wide" userSelect={'none'}>
+                {"Page Is Still Under construction..."}
             </Text>
             <Divider my={8} />
 

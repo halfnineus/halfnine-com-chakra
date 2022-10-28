@@ -17,27 +17,27 @@ import {
   Button,
   SimpleGrid,
 } from '@chakra-ui/react';
-
 import router, { useRouter } from "next/router"
+import { NextSeo } from 'next-seo';
+
 
 import aboutdat from '../assets/about.json'
 
 import { MdTouchApp, MdCheckCircleOutline, MdAvTimer, MdMoney, MdOutlineStars } from 'react-icons/md'
-
 import { GiReturnArrow } from 'react-icons/gi'
 
-import img1 from '../public/img/portfolio/1.png'
-import img2 from '../public/img/portfolio/2.png'
-import img3 from '../public/img/portfolio/3.png'
-import img4 from '../public/img/portfolio/4.png'
-import img5 from '../public/img/portfolio/5.png'
-import img6 from '../public/img/portfolio/6.png'
+import img1 from '../public/img/about/portfolio1.png'
+import img2 from '../public/img/about/portfolio2.png'
+import img3 from '../public/img/about/portfolio3.png'
+import img4 from '../public/img/about/portfolio4.png'
+import img5 from '../public/img/about/portfolio5.png'
+import img6 from '../public/img/about/portfolio6.png'
+import img1x from '../public/img/about/logo1.png'
+import img2x from '../public/img/about/logo2.png'
+import img3x from '../public/img/about/logo3.png'
+import img4x from '../public/img/about/logo4.png'
+import img5x from '../public/img/about/logo5.png'
 
-import img1x from '../public/img/logo/1.png'
-import img2x from '../public/img/logo/2.png'
-import img3x from '../public/img/logo/3.png'
-import img4x from '../public/img/logo/4.png'
-import img5x from '../public/img/logo/5.png'
 
 interface FeatureProps {
   heading: string;
@@ -49,35 +49,37 @@ interface FeatureProps {
 const BuiltWith = (children: any) => {
   return (
     <Box
-      maxW={'220px'}
+      maxW={{ lg: '220px', base: 'full' }}
       w={'full'}
       bg={mode('gray.50', 'gray.700')}
-      boxShadow={'md'}
+      _hover={{ bg: mode("brand.50", "brand.800"), boxShadow: 'md', }}
+      cursor={'pointer'}
+      // boxShadow={'md'}
+      border='1px'
+      borderColor={mode('gray.400', 'gray.600')}
       rounded={'md'}
+      // boxShadow={'md'}
       p={2}
       overflow={'hidden'}
       maxH={'auto'}
     >
-      <Box h={'auto'} /* bg={mode('gray.50', 'gray.300')} mt={-2} mx={-2} mb={2} */ m={-2} pos={'relative'}>
-        <Image userSelect={'none'} pointerEvents={'none'} alt={'img'} src={children.img} />
-      </Box>
-      {/* <Stack>
-        <Heading color={mode('gray.700', 'white')} fontSize={'2xl'}>
-          {children.tech}
-        </Heading>
-      </Stack> */}
+      <Center>
+        <Box alignContent={'center'} h={'auto'} m={-2} pos={'relative'}>
+          <Image userSelect={'none'} pointerEvents={'none'} alt={'img'} src={children.img} />
+        </Box>
+      </Center>
     </Box>
   )
 }
 
 const Featurex = (props: any) => {
   return (
-    <Box w={'full'} bg={mode('gray.50', 'gray.700')} boxShadow={'md'} rounded={'md'} p={6} overflow={'hidden'}>
+    <Box border={'1px'} borderColor={mode('gray.400', 'gray.600')} w={'full'} bg={mode('gray.50', 'gray.700')} boxShadow={'sm'} rounded={'md'} p={6} overflow={'hidden'}>
       <Box h={'auto'} bg={'gray.100'} mt={-6} mx={-6} mb={6} pos={'relative'}>
         <Image userSelect={'none'} pointerEvents={'none'} alt={'img'} src={props.img} />
       </Box>
       {/* <Stack> */}
-      <Heading color={mode('gray.700', 'white')} fontSize={{ lg: 'xl', sm: 'lg' }}>
+      <Heading color={mode('gray.700', 'white')} fontSize={{ md: 'xl', sm: 'lg', base: 'xl' }}>
         {props.title}
       </Heading>
       {/* <Text color={'gray.500'}>
@@ -137,7 +139,10 @@ const IndexAbout = () => {
       {aboutdat.data.filter(p => p.locale === locale).map((aboutData, i) => {
         return (
           <>
-            {/* <Container maxW={'container.xl'}> */}
+            <NextSeo
+              title='About Us | Development Services & Consulting - All your needs with custom technology.'
+              description="About Us | Our team is built with experience on the world's leading companies and technology."
+            />
             <Box as={Container} maxW="7xl" mt={8} py={4} px={{ base: '6', lg: '10' }}>
               <Grid templateColumns={{ base: 'repeat(1, 1fr)', sm: 'repeat(2, 1fr)', md: 'repeat(2, 1fr)', }} gap={4}>
                 <GridItem colSpan={1}>
@@ -203,7 +208,7 @@ const IndexAbout = () => {
                 <Feature
                   color="gray"
                   heading={'Transparency'}
-                  text={'Access to every resource on any step of the process.'}
+                  text={'Access to every resource at any step of the process.'}
                   icon={<MdTouchApp size={20} />}
                 />
                 <Feature
@@ -221,7 +226,7 @@ const IndexAbout = () => {
                 <Feature
                   color="purple"
                   heading={'Talent'}
-                  text={'Not only the right team but the best for the job.'}
+                  text={'Not only the right team, but the best for the job.'}
                   icon={<MdOutlineStars size={20} />}
                 />
               </Grid>
@@ -230,7 +235,7 @@ const IndexAbout = () => {
 
               <Box key={i} as="section" maxW={{ base: 'xl', md: 'container.xl' }} textAlign={'center'} mx={"auto"} >
                 <Heading textAlign={'center'} fontWeight="bold" maxW="xlg" mx="auto">
-                  {"Hardware made for and used by Industry Leading Companies"}
+                  {"IoT Hardware made for and used by Industry Leading Companies"}
                 </Heading>
                 <Text pt={2} fontSize={'lg'} color={'gray.500'}>{"Developed by us in Orlando, FL. and manufactured in Hong Kong, SAR."}</Text>
                 <SimpleGrid pt={6} columns={{ base: 1, sm: 2, md: 2, lg: 3 }} spacing={'6'}>
@@ -246,7 +251,7 @@ const IndexAbout = () => {
               <Divider mt={8} mb={8} />
 
               <Heading textAlign={'center'} fontWeight="bold" maxW="xlg" mx="auto">
-                {"Be the first on our Our Clients List:"}
+                {"Be the first on Our Clients List:"}
               </Heading>
               <SimpleGrid columns={{ base: 1, sm: 2, md: 3, lg: 5 }} mt="8" spacing={'6'}>
                 <BuiltWith img={img1x.src} />

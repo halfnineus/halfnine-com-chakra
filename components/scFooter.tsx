@@ -30,9 +30,9 @@ export default function SCFooter() {
                         </NextLink>
                         <Text pl={{ sm: 'none', md: '16', lg: '20' }} pointerEvents={'none'}>{footerData.components.copyright}</Text>
                         <Stack direction={'row'} spacing={6}>
-                            <NextLink href={'/'} passHref><Link>{footerData.components.i1}</Link></NextLink>
-                            <NextLink href={'/about'} passHref><Link>{footerData.components.i2}</Link></NextLink>
-                            <NextLink href={'/contact'} passHref><Link>{footerData.components.i3}</Link></NextLink>
+                            <NextLink href={'/'} passHref><Link userSelect={'none'}>{footerData.components.i1}</Link></NextLink>
+                            <NextLink href={'/about'} passHref><Link userSelect={'none'}>{footerData.components.i2}</Link></NextLink>
+                            <NextLink href={'/contact'} passHref><Link userSelect={'none'}>{footerData.components.i3}</Link></NextLink>
                         </Stack>
                     </Flex>
                 </Flex>

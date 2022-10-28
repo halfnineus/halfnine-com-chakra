@@ -1,6 +1,5 @@
-import { Box, Button, chakra, Flex, Heading, HStack, Link, Stack, Text, useColorModeValue as mode } from '@chakra-ui/react';
+import { Box, Button, Flex, Heading, HStack, Stack, Text, useColorModeValue as mode } from '@chakra-ui/react';
 import { NextSeo } from 'next-seo';
-import Head from 'next/head';
 import { HiChevronRight } from 'react-icons/hi';
 
 export default function Custom404() {

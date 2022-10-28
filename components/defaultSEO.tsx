@@ -4,6 +4,7 @@ const DefaultSEO = () => {
     return (
         <>
             <DefaultSeo
+                defaultTitle="Agile Automation Development & Consulting | Ochoa"
                 canonical='https://ochoa.pro/'
                 languageAlternates={[{
                     hrefLang: 'es',

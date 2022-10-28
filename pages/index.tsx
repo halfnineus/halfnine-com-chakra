@@ -1,5 +1,5 @@
 import React from 'react'
-import { useRouter } from "next/router"
+import router, { Router, useRouter } from "next/router"
 
 import {
   Box,
@@ -13,21 +13,70 @@ import {
   Container,
   SimpleGrid,
   Icon,
-  chakra,
+  StackDivider,
 } from '@chakra-ui/react'
 
+
 import ximg from '../public/img/index/x.jpg'
+import iot from '../public/img/index/iot.jpg'
+
 import diagimg from '../public/img/index/diagram.jpg'
 import indexdat from '../assets/index.json'
-import { FcAssistant, FcSynchronize, FcInTransit } from 'react-icons/fc';
-import { FiExternalLink } from "react-icons/fi";
+
+import { FcApproval, FcServices, FcLock, } from 'react-icons/fc';
+import { IoPeopleOutline, IoRocketOutline, IoBulbOutline, } from 'react-icons/io5';
+import { ChevronRightIcon } from '@chakra-ui/icons'
 
 import { ReactElement } from 'react';
+import { NextSeo } from 'next-seo'
+
 interface FeatureProps {
   title: string;
   text: string;
   icon: ReactElement;
 }
+
+interface FeaturePrope {
+  text: string;
+  iconBg: string;
+  icon?: ReactElement;
+  refx: any;
+}
+
+const Featured = ({ text, icon, iconBg, refx }: FeaturePrope) => {
+  return (
+    <Stack
+      direction={'row'}
+      align={'center'}
+      p={2}
+      role={'group'}
+      rounded={'xl'}
+      _hover={{ bg: mode('blue.50', 'blue.900'), cursor: 'pointer' }}
+      onClick={() => router.push(refx)}
+    >
+      <Flex
+        w={8}
+        h={8}
+        align={'center'}
+        justify={'center'}
+        rounded={'full'}
+        bg={iconBg}>
+        {icon}
+      </Flex>
+      <Text _groupHover={{ color: 'blue.500' }} fontWeight={600}>{text}</Text>
+      <Flex
+        transition={'all .3s ease'}
+        transform={'translateX(-10px)'}
+        opacity={0}
+        _groupHover={{ opacity: '100%', transform: 'translateX(0)' }}
+        justify={'flex-end'}
+        align={'center'}
+        flex={1}>
+        <Icon color={'blue.400'} w={5} h={5} as={ChevronRightIcon} />
+      </Flex>
+    </Stack>
+  );
+};
 
 const Feature = ({ title, text, icon }: FeatureProps) => {
   return (
@@ -39,12 +88,12 @@ const Feature = ({ title, text, icon }: FeatureProps) => {
         justify={'center'}
         color={'white'}
         rounded={'full'}
-        bg={'gray.100'}
+        bg={mode('gray.100', 'gray.700')}
         mb={1}>
         {icon}
       </Flex>
       <Text fontWeight={600}>{title}</Text>
-      <Text color={'gray.600'}>{text}</Text>
+      <Text color={mode('gray.600', 'gray.400')}>{text}</Text>
     </Stack>
   );
 };
@@ -58,6 +107,10 @@ const IndexPage = () => {
       {indexdat.data.filter(p => p.locale === locale).map((indexData, i) => {
         return (
           <>
+            <NextSeo
+              title='Development Services & Consulting - All your needs with custom technology.'
+              description='Improve your products and services with a digital transformation powered by Agile Automation.'
+            />
             <Box key={i} as="section" pb={{ base: "none", lg: "12" }} pos="relative" px={{ base: '6', lg: '10' }}>
               <Box maxW={"100%"} mx="auto">
                 <Box maxW={{ lg: 'md', xl: 'xl' }} pt={{ base: '12', lg: '8' }} pb={{ base: '16', lg: '40' }}>
@@ -89,7 +142,7 @@ const IndexPage = () => {
 
             <Box minH={'5rem'} />
 
-            <Box px={{ base: '6', lg: '10' }} mx="auto">
+            <Box pb={2} px={{ base: '6', lg: '10' }} mx="auto">
               <Box w={{ base: "full", md: 11 / 12, xl: "full", }} mx="auto" textAlign={{ base: "left", md: "center", }}>
                 <Heading
                   mb={{ base: 4, md: 6 }}
@@ -99,49 +152,50 @@ const IndexPage = () => {
                   letterSpacing={{ base: "normal", md: "tight", }}
                 >
                   {indexData.block2.h2_1}{" "}
-                  <Text display={{ base: "block", lg: "inline", }} pr={{ md: "none", lg: 1 }} pb={{ base: 2, md: 3, lg: "none" }} bgClip="text" bgGradient="linear(to-r, green.400,blue.600)" fontWeight="extrabold">
+                  <Text
+                    display={{ base: "block", lg: "inline", }}
+                    pr={{ md: "none", lg: 1 }}
+                    pb={{ base: 2, md: 3, lg: "none" }}
+                    bgClip="text"
+                    bgGradient={mode("linear(to-r, green.400,blue.600)", "linear(to-r, blue.300,green.500)")}
+                    fontWeight="extrabold"
+                  >
                     {indexData.block2.h2_2}
                   </Text>{" "}
                 </Heading>
                 <Text px={{ base: 0, lg: 24, }} mb={4} fontSize={{ base: "lg", md: "xl", }} color={mode("gray.600", "gray.300")}>
                   {indexData.block2.txt_1} <br />{indexData.block2.txt_2}
                 </Text>
-                {/* <Stack direction={{ base: "column", sm: "row", }} spacing={2} justifyContent={{ sm: "left", md: "center", }}>
-                  <Button colorScheme={'brand'} rightIcon={<FiMail />} onClick={onOpen}>
-                    {indexData.block2.button}
-                  </Button>
-                </Stack> */}
               </Box>
             </Box>
-            {/* <Box px={{ base: '6', lg: '10' }} w={{ base: "full", lg: 2 / 4 }} mx="auto" textAlign="center"> */}
-            <Container maxW={'container.md'}>
-              <Image cursor={'pointer'} onClick={() => window.open("https://ochoa.pro/img/index/diagram.jpg")} userSelect={'none'} w="full" rounded="3xl" border={'1px'} shadow="lg" src={diagimg.src} alt="Ready to consider options" />
+            <Container px={{ base: '6', lg: '0' }} maxW={'container.md'}>
+              {/* Remove window.open on mobile using breakpoint values */}
+              <Image cursor={'pointer'} onClick={() => window.open("https://ochoa.pro/img/index/Basic-IoT-Enviroment.png")} userSelect={'none'} w="full" rounded="3xl" border={'1px'} _hover={{ shadow: 'lg', borderColor: 'blue.600' }} shadow="md" src={diagimg.src} alt="Ready to consider options" />
             </Container>
-            {/* </Box> */}
 
             <Box minH={'5rem'} />
 
             <Box px={{ base: '6', lg: '10' }}>
               <SimpleGrid columns={{ base: 1, md: 3 }} spacing={10}>
                 <Feature
-                  icon={<Icon as={FcAssistant} w={10} h={10} />}
-                  title={'Support'}
+                  icon={<Icon as={FcServices} w={10} h={10} />}
+                  title={'Usability'}
                   text={
-                    '!!Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore...'
+                    "Applications can easily become very complex, changing the product or educating the user can become costly. Replicating the use of proven Technology Stacks and Frameworks allows us to deliver a simple experience to a complicated system."
                   }
                 />
                 <Feature
-                  icon={<Icon as={FcSynchronize} w={10} h={10} />}
-                  title={'!!Unlimited'}
+                  icon={<Icon as={FcApproval} w={10} h={10} />}
+                  title={'Compliance'}
                   text={
-                    '!!Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore...'
+                    "Here are some of the regulations you might face while developing an application: GDPR, CCPA, AICPA SOC 2, HIPAA, CCPA, PCI, ISO/IEC 27001. Not complying can lead to severe fines. It's our job to make sure the applications comply with all the necessary regulations."
                   }
                 />
                 <Feature
-                  icon={<Icon as={FcInTransit} w={10} h={10} />}
-                  title={'Delivery'}
+                  icon={<Icon as={FcLock} w={10} h={10} />}
+                  title={'Security'}
                   text={
-                    '!!Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore...'
+                    "There are more than fifty vulnerabilities reported each day, Maintaining IT assets updated, Securing Accounts from Data Breaches and Protecting Users from Social Engineering. The right team with security-conscious developers is essential for any application."
                   }
                 />
               </SimpleGrid>
@@ -149,12 +203,83 @@ const IndexPage = () => {
 
             <Box minH={'5rem'} />
 
-
+            <Container maxW={'container.xl'}>
+              <SimpleGrid px={{ base: '2', xl: '10' }} columns={{ base: 1, md: 2 }} spacing={10}>
+                <Stack spacing={4}>
+                  {/* <Text
+                    textTransform={'uppercase'}
+                    color={'blue.400'}
+                    fontWeight={600}
+                    fontSize={'sm'}
+                    bg={mode('blue.50', 'blue.900')}
+                    p={2}
+                    alignSelf={'flex-start'}
+                    rounded={'md'}
+                  >
+                    Our Story
+                  </Text> */}
+                  <Heading pl={2} pt={8}>Lets create a story together</Heading>
+                  {/* <Heading>A digital Product design agency</Heading> */}
+                  <Text pl={2} color={'gray.500'} fontSize={'lg'}>
+                    Taking Businesses of all sizes to new lenghts with our experience developing and  implementing technologies.
+                  </Text>
+                  <Stack
+                    spacing={2}
+                    divider={
+                      <StackDivider
+                        borderColor={mode('gray.100', 'gray.700')}
+                      />
+                    }>
+                    <Featured
+                      refx={'/services/development'}
+                      icon={
+                        <Icon as={IoPeopleOutline} color={mode('blue.600', 'blue.300')} w={5} h={5} />
+                      }
+                      iconBg={mode('blue.100', 'blue.900')}
+                      text={'Development Services'}
+                    />
+                    <Featured
+                      refx={'/services/digitalization'}
+                      icon={<Icon as={IoRocketOutline} color={mode('green.600', 'green.300')} w={5} h={5} />}
+                      iconBg={mode('green.100', 'green.900')}
+                      text={'Digital Tranformation'}
+                    />
+                    <Featured
+                      refx={'/services/consultation'}
+                      icon={
+                        <Icon as={IoBulbOutline} color={mode('orange.600', 'orange.300')} w={5} h={5} />
+                      }
+                      iconBg={mode('orange.100', 'orange.900')}
+                      text={'Project Consultation'}
+                    />
+                  </Stack>
+                </Stack>
+                <Flex>
+                  <Image
+                    rounded={"2xl"}
+                    border='1px'
+                    borderColor={'gray.600'}
+                    // rounded={'xl'}
+                    alt={'feature image'}
+                    src={
+                      iot.src
+                    }
+                    objectFit={'cover'}
+                    userSelect={'none'}
+                    pointerEvents={'none'}
+                  />
+                </Flex>
+              </SimpleGrid>
+            </Container>
 
             <Box minH={'5rem'} />
 
+            <Text pl={{ base: '6', lg: '8' }} fontWeight="semibold" textTransform="uppercase" letterSpacing="wide" userSelect={'none'}>
+              {"Page Is Still Under construction..."}
+            </Text>
 
-            {/* <Box minH={'5rem'} /> */}
+            <Box minH={'5rem'} />
+
           </>
         )
       })}

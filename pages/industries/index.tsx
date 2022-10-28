@@ -71,8 +71,8 @@ const Index = () => {
             </Flex>
 
             <Divider mt={8} mb={8} />
-            <Text pl={8} fontWeight="semibold" textTransform="uppercase" letterSpacing="wide" userSelect={'none'}>
-                {"Under construction..."}
+            <Text pl={10} fontWeight="semibold" textTransform="uppercase" letterSpacing="wide" userSelect={'none'}>
+                {"Page Is Still Under construction..."}
             </Text>
             <Divider mt={8} mb={8} />
         </>

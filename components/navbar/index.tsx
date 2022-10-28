@@ -31,7 +31,6 @@ import wsmlog from '../../public/img/wsmlog.png'
 
 import { FaMoon, FaSun } from 'react-icons/fa'
 import router, { useRouter } from 'next/router';
-import NextLink from 'next/link'
 
 export default function WithSubnavigation() {
 
@@ -83,11 +82,9 @@ export default function WithSubnavigation() {
                 />
                 {/* </Flex> */}
                 <Flex flex={{ base: 1 }} justify={{ base: 'center', md: 'start' }}>
-                    <NextLink href={'/'} passHref>
-                        <Link display="flex" alignItems="center">
-                            <Image userSelect={'none'} ml={{ base: 0, sm: 14, md: 0 }} mr={{ base: 6, sm: 0 }} loading={"eager"} cursor={'pointer'} pointerEvents={'none'} width={'auto'} height={{ base: '8', md: '10' }} src={mode(smlog.src, wsmlog.src)} alt={'Ochoa'} />
-                        </Link>
-                    </NextLink>
+                    <Box alignItems="center" display="flex" onClick={() => router.push('/')} cursor={'pointer'} mr={{ base: 6, sm: 0 }}>
+                        <Image userSelect={'none'} ml={{ base: 0, sm: 14, md: 0 }} loading={"eager"} cursor={'pointer'} pointerEvents={'none'} width={'auto'} height={{ base: '8', md: '10' }} src={mode(smlog.src, wsmlog.src)} alt={'Ochoa'} />
+                    </Box>
                     <Flex display={{ base: 'none', md: 'flex' }} ml={10}>
                         <DesktopNav />
                     </Flex>
@@ -236,7 +233,7 @@ const MobileNavItem = ({ label, children, href, mhref }: NavItem) => {
                 onClick={() => {
                     router.push(mhref);
                     // !!Ignore url undefined. 
-                    window.location.reload();
+                    window.location.reload()
                 }}
                 justify={'space-between'}
                 align={'center'}

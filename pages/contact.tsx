@@ -1,5 +1,3 @@
-import NextLink from "next/link"
-
 import {
     Container,
     Flex,
@@ -110,10 +108,9 @@ const INDEX = () => {
     return (
         <>
             <NextSeo
-                title={`Contact Us - ochoa.pro - International Product Development, Design, and Production`}
-                description={`Contact Us about Product Development, Design, and Production Related Inquiries.`}
+                title={`Contact Us | Development Services & Consulting - All your needs with custom technology.`}
+                description={`Contact Us about developing technology solutions, IT consulting & Digital transformation Related Inquiries.`}
             />
-
             <Modal isOpen={isOpen} onClose={onClose}>
                 <ModalOverlay backdropFilter='blur(1px)' />
                 <ModalContent>
@@ -319,23 +316,20 @@ const INDEX = () => {
                     >
                         Call Us
                     </Button>
-                    <NextLink href={'https://duckduckgo.com/?q=Orlando%2C+Florida&iaxm=maps'} passHref>
-                        <Link isExternal>
-                            <Button
-                                isDisabled
-                                size="md"
-                                height="auto"
-                                width="auto"
-                                minH={'10'}
-                                variant="ghost"
-                                color={mode('black', 'white')}
-                                _hover={mode({ color: 'blue.500', bg: 'blackAlpha.100' }, { color: 'blue.200', bg: 'whiteAlpha.100' })}
-                                leftIcon={<MdLocationOn color={mode('black', 'white')} size="20px" />}
-                            >
-                                Orlando, Florida, USA
-                            </Button>
-                        </Link>
-                    </NextLink>
+                    <Button
+                        onClick={() => window.open('https://duckduckgo.com/?q=Orlando%2C+Florida&iaxm=maps')}
+                        isDisabled
+                        size="md"
+                        height="auto"
+                        width="auto"
+                        minH={'10'}
+                        variant="ghost"
+                        color={mode('black', 'white')}
+                        _hover={mode({ color: 'blue.500', bg: 'blackAlpha.100' }, { color: 'blue.200', bg: 'whiteAlpha.100' })}
+                        leftIcon={<MdLocationOn color={mode('black', 'white')} size="20px" />}
+                    >
+                        Orlando, Florida, USA
+                    </Button>
                 </HStack>
 
                 <Divider mt={5} mb={5} />
