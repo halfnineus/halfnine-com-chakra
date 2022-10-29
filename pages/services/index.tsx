@@ -1,3 +1,4 @@
+import { ChevronRightIcon } from "@chakra-ui/icons";
 import {
     Box,
     Container,
@@ -11,250 +12,139 @@ import {
     SimpleGrid,
     Button,
     VStack,
+    HStack,
 } from "@chakra-ui/react";
 import { NextSeo } from "next-seo";
 
-import router from "next/router";
+import indexdat from "../../assets/services/index.json"
+import router, { useRouter } from "next/router";
+import { IoBulbOutline, IoPeopleOutline, IoRocketOutline } from "react-icons/io5";
 
 const Feature = (props: any) => {
     return (
-        <Flex>
-            <Icon
-                boxSize={5}
-                mt={1}
-                mr={2}
-                color="brand.500"
-                _dark={{ color: "brand.300" }}
-                viewBox="0 0 20 20"
-                fill="currentColor"
-            >
-                <path
-                    fillRule="evenodd"
-                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                    clipRule="evenodd"
-                ></path>
-            </Icon>
-            <chakra.p
+        <Box
+            bg={mode('gray.50', 'gray.700')}
+            rounded={'xl'}
+            p={4}
+            cursor={'pointer'}
+            role={'group'}
+            _hover={{ bg: mode('brand.50', 'brand.700'), shadow: 'sm' }}
+            onClick={() => router.push(props.refx)}
+            border='1px'
+            borderColor={mode('gray.300', 'gray.600')}
+        >
+            <HStack>
+                <Icon
+                    boxSize={12}
+                    _light={{ color: "brand.700" }}
+                    mb={4}
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    aria-hidden="true"
+                    as={props.icon}
+                />
+                <Flex
+                    transition={'all .3s ease'}
+                    transform={'translateX(-10px)'}
+                    opacity={0}
+                    _groupHover={{ opacity: '100%', transform: 'translateX(0)' }}
+                    justify={'flex-end'}
+                    align={'center'}
+                    flex={1}>
+                    <Icon color={mode('brand.700', 'white')} w={12} h={12} as={ChevronRightIcon} />
+                </Flex>
+            </HStack>
+            <chakra.h3
+                mb={3}
                 fontSize="lg"
-                color="gray.700"
+                lineHeight="shorter"
+                fontWeight="bold"
+            // _groupHover={{ color: "brand.700" }}
+            >
+                {props.title}
+            </chakra.h3>
+            <chakra.p
+                lineHeight="tall"
+                color="gray.600"
                 _dark={{ color: "gray.400" }}
-                {...props}
-            />
-        </Flex>
+            >
+                {props.children}
+            </chakra.p>
+        </Box >
     );
 };
 
 const Index = () => {
+
+    const { locale } = useRouter()
+
     return (
         <>
-            <NextSeo
-                title=' Services | Development Services, Digital Transformation, Project Consultation.'
-                description='We assemble and lead teams with the skills and tools needed for building the products and tools that power your business.'
-            />
-            <Container maxW="container.xl">
-                <Box
-                    bg="white"
-                    _dark={{ bg: "gray.800" }}
-                    px={8}
-                    pt={4}
-                    pb={2}
-                    mx="auto"
-                >
-                    <SimpleGrid
-                        // bg={'gray.50'}
-                        alignItems="center"
-                        columns={{ base: 1, lg: 2 }}
-                        spacingY={{ base: 10, lg: 32 }}
-                        spacingX={{ base: 10, lg: 24 }}
-                    >
-                        <Box>
-                            <chakra.h2
-                                mb={3}
-                                fontSize={{ base: "3xl", md: "4xl" }}
-                                fontWeight="extrabold"
-                                textAlign={{ base: "center", sm: "left" }}
-                                _light={{ color: "black" }}
-                                lineHeight="shorter"
-                                letterSpacing="tight"
-                            >
-                                {"Development Services"}
-                            </chakra.h2>
-                            <chakra.p
-                                mb={6}
-                                fontSize={{ base: "lg", md: "xl" }}
-                                textAlign={{ base: "center", sm: "left" }}
-                                color="gray.600"
-                                _dark={{ color: "gray.500" }}
-                            >
-                                {`We assemble and lead teams with the skills and tools needed for building the products and tools that power your business.`}
-                            </chakra.p>
-                            <Button
-                                w={{ base: "full", sm: "auto" }}
-                                colorScheme={'brand'}
-                                onClick={() => router.push("/services/development")}
-                            >
-                                Learn More
-                            </Button>
-                        </Box>
-                        <VStack
-                            direction="column"
-                            flexGrow={1}
-                            spacing={5}
-                            alignItems="start"
+            {indexdat.data.filter(p => p.locale === locale).map((indexData, i) => {
+                return (
+                    <>
+                        <NextSeo
+                            title=' Services | Development Services, Digital Transformation, Project Consultation.'
+                            description='We assemble and lead teams with the skills and tools needed for building the products and tools that power your business.'
+                            canonical="https://ochoa.pro/services"
+                            languageAlternates={[
+                                {
+                                    hrefLang: 'es',
+                                    href: 'https://ochoa.pro/es/services',
+                                },
+                                {
+                                    hrefLang: 'en',
+                                    href: 'https://ochoa.pro/en/services',
+                                }
+                            ]}
+                        />
+                        <SimpleGrid
+                            columns={{ base: 1, /* md: 2,*/ lg: 3 }}
+                            spacing={8}
+                            px={{ base: '6', lg: '10' }}
+                            pt={{ base: '6', lg: '10' }}
+                            mx="auto"
+                            bg="white"
+                            _dark={{ bg: "gray.800" }}
                         >
-                            <Feature>!!Innovate</Feature>
-                            <Feature>!!Accelerate</Feature>
-                            <Feature>!!Differentiate</Feature>
-                            <Feature>!!Cultivate</Feature>
-                        </VStack>
-                    </SimpleGrid>
-                </Box>
-
-                <Divider mt={8} mb={8} />
-
-                <Box
-                    bg="white"
-                    _dark={{ bg: "gray.800" }}
-                    px={8}
-                    py={2}
-                    mx="auto"
-                >
-                    <SimpleGrid
-                        // bg={'gray.50'}
-                        alignItems="center"
-                        columns={{ base: 1, lg: 2 }}
-                        spacingY={{ base: 10, lg: 32 }}
-                        spacingX={{ base: 10, lg: 24 }}
-                    >
-                        <VStack
-                            display={{ base: "none", lg: "block" }}
-                            direction="column"
-                            flexGrow={1}
-                            spacing={5}
-                            alignItems="start"
-                        >
-                            <Feature>!!Enable Innovation</Feature>
-                            <Feature>!!Strengthen Consistency & Stability</Feature>
-                            <Feature>!!Empower Decision Making</Feature>
-                        </VStack>
-                        <Box>
-                            <chakra.h2
-                                mb={3}
-                                fontSize={{ base: "3xl", md: "4xl" }}
-                                fontWeight="extrabold"
-                                textAlign={{ base: "center", sm: "left" }}
-                                _light={{ color: "black" }}
-                                lineHeight="shorter"
-                                letterSpacing="tight"
+                            <Feature
+                                title="Development Services"
+                                icon={IoPeopleOutline}
+                                refx={'/services/development'}
                             >
-                                Digital Transformation
-                            </chakra.h2>
-                            <chakra.p
-                                mb={6}
-                                fontSize={{ base: "lg", md: "xl" }}
-                                textAlign={{ base: "center", sm: "left" }}
-                                color="gray.600"
-                                _dark={{ color: "gray.500" }}
-                            >
-                                {"Take a digital approach while selling your products & services, managing your organization and much more!"}
-                            </chakra.p>
-                            <Button
-                                w={{ base: "full", sm: "auto" }}
-                                colorScheme={'brand'}
-                                onClick={() => router.push("/services/digitalization")}
-                            >
-                                Learn More
-                            </Button>
-                        </Box>
-                        <VStack
-                            display={{ lg: "none", base: "block" }}
-                            direction="column"
-                            flexGrow={1}
-                            spacing={5}
-                            alignItems="start"
-                        >
-                            <Feature></Feature>
-                            <Feature></Feature>
-                            <Feature></Feature>
-                        </VStack>
-                    </SimpleGrid>
-                </Box>
+                                We assemble and lead teams with the skills and tools needed for building the products and tools that power your business.
+                            </Feature>
 
-                <Divider mt={8} mb={8} />
-
-                <Box
-                    bg="white"
-                    _dark={{ bg: "gray.800" }}
-                    px={8}
-                    py={2}
-                    mx="auto"
-                >
-                    <SimpleGrid
-                        // bg={'gray.50'}
-                        alignItems="center"
-                        columns={{ base: 1, lg: 2 }}
-                        spacingY={{ base: 10, lg: 32 }}
-                        spacingX={{ base: 10, lg: 24 }}
-                    >
-                        <Box>
-                            <chakra.h2
-                                mb={3}
-                                fontSize={{ base: "3xl", md: "4xl" }}
-                                fontWeight="extrabold"
-                                textAlign={{ base: "center", sm: "left" }}
-                                _light={{ color: "black" }}
-                                lineHeight="shorter"
-                                letterSpacing="tight"
+                            <Feature
+                                title="Digital Transformation"
+                                icon={IoRocketOutline}
+                                refx={'/services/digitalization'}
                             >
-                                Project Consultation
-                            </chakra.h2>
-                            <chakra.p
-                                mb={6}
-                                fontSize={{ base: "lg", md: "xl" }}
-                                textAlign={{ base: "center", sm: "left" }}
-                                color="gray.600"
-                                _dark={{ color: "gray.500" }}
-                            >
-                                {"Find the right options for your project from discovery to deployment of your idea, Satisfying your Requirements and your Customer's Needs."}
-                            </chakra.p>
-                            <Button
-                                w={{ base: "full", sm: "auto" }}
-                                colorScheme={'brand'}
-                                onClick={() => router.push("/services/consultation")}
-                            >
-                                Learn More
-                            </Button>
-                        </Box>
-                        <VStack
-                            direction="column"
-                            flexGrow={1}
-                            spacing={5}
-                            alignItems="start"
-                        >
-                            <Feature>!!Discover</Feature>
-                            <Feature>!!Define</Feature>
-                            <Feature>!!Design</Feature>
-                            <Feature>!!Develop</Feature>
-                            <Feature>!!Develop</Feature>
-                        </VStack>
-                    </SimpleGrid>
-                </Box>
+                                Take a digital approach while selling your products & services, managing your organization and much more!
+                            </Feature>
 
-                <Divider mt={8} mb={8} />
+                            <Feature
+                                title="Project Consultation"
+                                icon={IoBulbOutline}
+                                refx={'/services/consultation'}
+                            >
+                                Find the right options for your project from discovery to deployment of your idea, satisfying your Requirements and your Customer&apos;s Needs.
+                            </Feature>
+                        </SimpleGrid>
 
-                <Text pl={10} fontWeight="semibold" textTransform="uppercase" letterSpacing="wide" userSelect={'none'}>
-                    {"Page Is Still Under construction..."}
-                    {/* 
+                        <Box py={'3rem'} />
+
+                        <Text pl={10} fontWeight="semibold" textTransform="uppercase" letterSpacing="wide" userSelect={'none'}>
+                            {"Page Is Still Under construction..."}
+                            {/* 
                         Service - Modernization
                         Modernize your legacy systems improving Preformance and Security, Aligned with your Business Goals
                     */}
-                </Text>
-            </Container>
-
-            <Container maxW="container.xl">
-                <Divider mt={8} mb={8} />
-            </Container>
-
+                        </Text>
+                    </>
+                )
+            })}
         </>
     );
 }

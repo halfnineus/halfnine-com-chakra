@@ -142,6 +142,17 @@ const IndexAbout = () => {
             <NextSeo
               title='About Us | Development Services & Consulting - All your needs with custom technology.'
               description="About Us | Our team is built with experience on the world's leading companies and technology."
+              canonical="https://ochoa.pro/about"
+              languageAlternates={[
+                {
+                  hrefLang: 'es',
+                  href: 'https://ochoa.pro/es/about',
+                },
+                {
+                  hrefLang: 'en',
+                  href: 'https://ochoa.pro/en/about',
+                }
+              ]}
             />
             <Box as={Container} maxW="7xl" mt={8} py={4} px={{ base: '6', lg: '10' }}>
               <Grid templateColumns={{ base: 'repeat(1, 1fr)', sm: 'repeat(2, 1fr)', md: 'repeat(2, 1fr)', }} gap={4}>

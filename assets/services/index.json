@@ -1,0 +1,18 @@
+{
+    "data": [
+        {
+            "locale": "en",
+            "head": {
+                "title": "changeme",
+                "description": "changeme"
+            }
+        },
+        {
+            "locale": "es",
+            "head": {
+                "title": "changeme",
+                "description": "changeme"
+            }
+        }
+    ]
+}

@@ -33,6 +33,7 @@ import { ChevronRightIcon } from '@chakra-ui/icons'
 
 import { ReactElement } from 'react';
 import { NextSeo } from 'next-seo'
+import { LvlUp } from '../components'
 
 interface FeatureProps1 {
   title: string;
@@ -47,22 +48,6 @@ interface FeatureProps2 {
   refx: any;
 }
 
-interface FeatureProps3 {
-  heading: string;
-  text: string;
-}
-
-const Feature3 = ({ heading, text }: FeatureProps3) => {
-  return (
-    <GridItem>
-      <Heading as={'h3'} pb={'1'} fontSize="xl" fontWeight="600">
-        {heading}
-      </Heading>
-      <Text>{text}</Text>
-    </GridItem>
-  );
-};
-
 const Feature2 = ({ text, icon, iconBg, refx }: FeatureProps2) => {
   return (
     <Stack
@@ -73,6 +58,8 @@ const Feature2 = ({ text, icon, iconBg, refx }: FeatureProps2) => {
       rounded={'xl'}
       _hover={{ bg: mode('blue.50', 'blue.900'), cursor: 'pointer' }}
       onClick={() => router.push(refx)}
+      border={'1px'}
+      borderColor={mode('gray.100', 'gray.600')}
     >
       <Flex
         w={8}
@@ -86,7 +73,7 @@ const Feature2 = ({ text, icon, iconBg, refx }: FeatureProps2) => {
       <Text _groupHover={{ color: 'blue.500' }} fontWeight={600}>{text}</Text>
       <Flex
         transition={'all .3s ease'}
-        transform={'translateX(-10px)'}
+        transform={'translateX(-25px)'}
         opacity={0}
         _groupHover={{ opacity: '100%', transform: 'translateX(0)' }}
         justify={'flex-end'}
@@ -128,8 +115,20 @@ const IndexPage = () => {
         return (
           <>
             <NextSeo
-              title='Development Services & Consulting - All your needs with custom technology.'
+              // title='Development Services & Consulting - All your needs with custom technology.'
+              title='Development & Consulting Services, Your Digital Transformation | Ochoa'
               description='Improve your products and services with a digital transformation powered by Agile Automation.'
+              canonical="https://ochoa.pro"
+              languageAlternates={[
+                {
+                  hrefLang: 'es',
+                  href: 'https://ochoa.pro/es',
+                },
+                {
+                  hrefLang: 'en',
+                  href: 'https://ochoa.pro/en',
+                }
+              ]}
             />
             <Box key={i} as="section" pb={{ base: "none", lg: "12" }} pos="relative" px={{ base: '6', lg: '10' }}>
               <Box maxW={"100%"} mx="auto">
@@ -190,7 +189,19 @@ const IndexPage = () => {
             </Box>
             <Container px={{ base: '6', lg: '0' }} maxW={'container.md'}>
               {/* Remove window.open on mobile using breakpoint values */}
-              <Image cursor={'pointer'} onClick={() => window.open("https://ochoa.pro/img/index/Basic-IoT-Enviroment.png")} userSelect={'none'} w="full" rounded="3xl" border={'1px'} _hover={{ shadow: 'lg', borderColor: 'blue.600' }} shadow="md" src={diagimg.src} alt="Ready to consider options" />
+              <Image
+                cursor={'pointer'}
+                onClick={() => window.open("https://ochoa.pro/img/index/Basic-IoT-Enviroment.png")}
+                userSelect={'none'}
+                w="full"
+                rounded="3xl"
+                border={'1px'}
+                _hover={{ shadow: 'lg', borderColor: 'blue.500' }}
+                borderColor={mode('gray.400', 'gray.600')}
+                shadow="md"
+                src={diagimg.src}
+                alt="Ready to consider options"
+              />
             </Container>
 
             <Box minH={'5rem'} />
@@ -241,7 +252,7 @@ const IndexPage = () => {
                   <Heading pl={2} pt={8}>Lets create a story together</Heading>
                   {/* <Heading>A digital Product design agency</Heading> */}
                   <Text pl={2} color={'gray.500'} fontSize={'lg'}>
-                    Taking Businesses of all sizes to new lenghts with our experience developing and  implementing technologies.
+                    Connecting Technology with your goals taking what is possible on your Business to new lenghts.
                   </Text>
                   <Stack
                     spacing={2}
@@ -294,64 +305,7 @@ const IndexPage = () => {
 
             <Box minH={'5rem'} />
 
-            <Box px={{ base: '6', lg: '10' }}>
-              {/* <Box as={Container} maxW="7xl" mt={14} p={4}> */}
-              <Grid
-                templateColumns={{
-                  base: 'repeat(1, 1fr)',
-                  sm: 'repeat(2, 1fr)',
-                  md: 'repeat(2, 1fr)',
-                }}
-                gap={4}>
-                <GridItem colSpan={1}>
-                  <VStack alignItems="flex-start" spacing="24px">
-                    <Heading as={'h2'} fontSize="3xl" fontWeight="700">
-                      Are you ready to Level Up?
-                    </Heading>
-                    <Button w={{ base: 'full', sm: '120px' }} colorScheme="brand" onClick={() => router.push('/contact')}>
-                      Contact Us
-                    </Button>
-                  </VStack>
-                </GridItem>
-                <GridItem>
-                  <Flex>
-                    <Text>
-                      {/*
-                        !! If you have an idea you want to discuss, reach out!
-                        !! From startups to enterprise level companies, we have helped organizations bring their digital goals to life.
-                      */}
-                      {`Taking business to the Next Level takes a lot of resources combined with trial and error, 
-                        Our experience in the field will take the risks to the minimun while maximizing the use of resources.`}
-                    </Text>
-                  </Flex>
-                </GridItem>
-              </Grid>
-              <Divider my={6} />
-              <Grid
-                templateColumns={{
-                  base: 'repeat(1, 1fr)',
-                  sm: 'repeat(2, 1fr)',
-                  md: 'repeat(4, 1fr)',
-                }}
-                gap={{ base: '8', sm: '12', md: '16' }}>
-                <Feature3
-                  heading={'Teamwork'}
-                  text={`Teamwork is the only way to achieve creativity and collaboration, and the only way to achieve something great.`}
-                />
-                <Feature3
-                  heading={'Innovation'}
-                  text={'Connecting knowledge with imagination we create value for a better purpose.'}
-                />
-                <Feature3
-                  heading={'Challenge'}
-                  text={'By speaking up we push the boundries of what is possible in any enviroment.'}
-                />
-                <Feature3
-                  heading={'Solutions'}
-                  text={'Finding the solution to problems gives value to the people and communities around us.'}
-                />
-              </Grid>
-            </Box>
+            <LvlUp />
             <Box minH={'5rem'} />
 
           </>

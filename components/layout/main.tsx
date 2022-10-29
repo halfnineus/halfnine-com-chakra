@@ -1,4 +1,4 @@
-import { Navbar, SCFooter } from './index'
+import { Navbar, SCFooter } from '../index'
 
 const MainLayout = ({ children }: any) => {
     return (

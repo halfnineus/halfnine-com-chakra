@@ -10,10 +10,10 @@ import {
 
 import NextLink from 'next/link'
 
-import smlog from '../public/img/smlog.png'
-import wsmlog from '../public/img/wsmlog.png'
+import smlog from '../../public/img/smlog.png'
+import wsmlog from '../../public/img/wsmlog.png'
 
-import footdat from '../assets/components/footer.json'
+import footdat from '../../assets/components/footer.json'
 import { useRouter } from "next/router"
 export default function SCFooter() {
     const { locale } = useRouter()

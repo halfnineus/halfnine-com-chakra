@@ -1,10 +1,9 @@
 import type { AppProps } from 'next/app'
 import Head from 'next/head'
 import { ChakraProvider } from '@chakra-ui/react'
-import { MainLayout } from '../components'
+import { MainLayout, DefaultSEO, Theme } from '../components'
 import React from 'react'
-import DefaultSEO from '../components/defaultSEO'
-import theme from '../components/theme'
+
 // Analytics
 import { hotjar } from 'react-hotjar'
 import { useEffect } from 'react'
@@ -27,7 +26,7 @@ export default function MyApp({ Component, pageProps }: AppProps) {
   }, [router.events])
   // Analytics
   return (
-    <ChakraProvider theme={theme}>
+    <ChakraProvider theme={Theme}>
       <MainLayout>
         <DefaultSEO />
         <Head>

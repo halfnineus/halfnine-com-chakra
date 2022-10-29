@@ -17,7 +17,8 @@ import {
     HStack,
     Image,
     Spacer,
-    useBreakpointValue
+    useBreakpointValue,
+    Center
 } from '@chakra-ui/react';
 import {
     HamburgerIcon,
@@ -54,6 +55,11 @@ export default function WithSubnavigation() {
 
     return (
         <Box>
+            <Box textAlign={'center'} bg={'red.300'} minH={'40px'} display={{ base: 'block', sm: 'none' }}>
+                <Text fontWeight={'bold'}>
+                    There are several Errors with mobile Navigation<br />Use Desktop or Tablet for a better Experience.
+                </Text>
+            </Box>
             <Flex
                 // bg={mode('white', 'gray.800')}
                 // color={mode('gray.600', 'white')}
@@ -119,7 +125,7 @@ export default function WithSubnavigation() {
             <Collapse in={isOpen} animateOpacity>
                 <MobileNav />
             </Collapse>
-        </Box>
+        </Box >
     );
 }
 
@@ -325,10 +331,6 @@ const NAV_ITEMS: Array<NavItem> = [
                 label: 'Security & Safety',
                 href: '/industries/sns',
             },
-            {
-                label: 'And more...',
-                href: '/industries',
-            },
         ],
     },
     {
@@ -397,10 +399,6 @@ const NAV_ITEMS: Array<NavItem> = [
             {
                 label: 'Security & Protección',
                 href: '/industries/sns',
-            },
-            {
-                label: 'Y más...',
-                href: '/industries',
             },
         ],
     },
