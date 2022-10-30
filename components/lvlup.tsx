@@ -1,6 +1,6 @@
-import { Grid, GridItem, VStack, Heading, Button, Flex, Divider, Text, Box } from "@chakra-ui/react";
+import { Grid, GridItem, VStack, Heading, Button, Flex, Divider, Text, Box, Link } from "@chakra-ui/react";
 import router from "next/router";
-
+import NextLink from 'next/link'
 interface FeatureProps3 {
     heading: string;
     text: string;
@@ -34,9 +34,13 @@ const Lvlup = () => {
                             <Heading as={'h2'} fontSize="3xl" fontWeight="700">
                                 Are you ready to Level Up?
                             </Heading>
-                            <Button w={{ base: 'full', sm: '120px' }} colorScheme="brand" onClick={() => router.push('/contact')}>
-                                Contact Us
-                            </Button>
+                            <NextLink href={'/contact'} passHref>
+                                <Link>
+                                    <Button w={{ base: 'full', sm: '120px' }} colorScheme="brand" >
+                                        Contact Us
+                                    </Button>
+                                </Link>
+                            </NextLink>
                         </VStack>
                     </GridItem>
                     <GridItem>
@@ -77,7 +81,8 @@ const Lvlup = () => {
                         text={'Finding the solution to problems gives value to the people and communities around us.'}
                     />
                 </Grid>
-            </Box>        </>
+            </Box>
+        </>
     );
 }
 

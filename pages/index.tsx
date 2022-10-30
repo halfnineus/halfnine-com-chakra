@@ -18,6 +18,7 @@ import {
   Grid,
   GridItem,
   VStack,
+  Link,
 } from '@chakra-ui/react'
 
 
@@ -34,6 +35,7 @@ import { ChevronRightIcon } from '@chakra-ui/icons'
 import { ReactElement } from 'react';
 import { NextSeo } from 'next-seo'
 import { LvlUp } from '../components'
+import NextLink from 'next/link'
 
 interface FeatureProps1 {
   title: string;
@@ -50,38 +52,45 @@ interface FeatureProps2 {
 
 const Feature2 = ({ text, icon, iconBg, refx }: FeatureProps2) => {
   return (
-    <Stack
-      direction={'row'}
-      align={'center'}
-      p={2}
-      role={'group'}
-      rounded={'xl'}
-      _hover={{ bg: mode('blue.50', 'blue.900'), cursor: 'pointer' }}
-      onClick={() => router.push(refx)}
-      border={'1px'}
-      borderColor={mode('gray.100', 'gray.600')}
-    >
-      <Flex
-        w={8}
-        h={8}
-        align={'center'}
-        justify={'center'}
-        rounded={'full'}
-        bg={iconBg}>
-        {icon}
-      </Flex>
-      <Text _groupHover={{ color: 'blue.500' }} fontWeight={600}>{text}</Text>
-      <Flex
-        transition={'all .3s ease'}
-        transform={'translateX(-25px)'}
-        opacity={0}
-        _groupHover={{ opacity: '100%', transform: 'translateX(0)' }}
-        justify={'flex-end'}
-        align={'center'}
-        flex={1}>
-        <Icon color={'blue.400'} w={5} h={5} as={ChevronRightIcon} />
-      </Flex>
-    </Stack>
+    <>
+      <NextLink href={refx} passHref>
+        <Link _hover={{ textDecorationLine: 'none', textColor: 'blue.500' }}>
+          <Stack
+            role={'group'}
+            direction={'row'}
+            align={'center'}
+            p={2}
+            rounded={'xl'}
+            _hover={{ bg: mode('blue.50', 'blue.900'), cursor: 'pointer' }}
+            border={'1px'}
+            borderColor={mode('gray.100', 'gray.600')}
+          >
+            <Flex
+              w={8}
+              h={8}
+              align={'center'}
+              justify={'center'}
+              rounded={'full'}
+              bg={iconBg}>
+              {icon}
+            </Flex>
+            <Text fontWeight={600}>
+              {text}
+            </Text>
+            <Flex
+              transition={'all .3s ease'}
+              transform={'translateX(-25px)'}
+              opacity={0}
+              _groupHover={{ opacity: '100%', transform: 'translateX(0)' }}
+              justify={'flex-end'}
+              align={'center'}
+              flex={1}>
+              <Icon color={'blue.400'} w={5} h={5} as={ChevronRightIcon} />
+            </Flex>
+          </Stack>
+        </Link>
+      </NextLink>
+    </>
   );
 };
 
@@ -132,18 +141,36 @@ const IndexPage = () => {
             />
             <Box key={i} as="section" pb={{ base: "none", lg: "12" }} pos="relative" px={{ base: '6', lg: '10' }}>
               <Box maxW={"100%"} mx="auto">
-                <Box maxW={{ lg: 'md', xl: 'xl' }} pt={{ base: '12', lg: '8' }} pb={{ base: '16', lg: '40' }}>
+                <Box maxW={{ lg: 'md', xl: 'xl' }} pt={{ base: '6', lg: '8' }} pb={{ base: '16', lg: '40' }}>
                   <Heading as="h1" size="3xl" lineHeight="1" fontWeight="extrabold" letterSpacing="tight">
                     {indexData.block1.h1_1}{' '}
                     <Box as="mark" color={mode('blue.600', 'blue.300')} bg="transparent">{indexData.block1.h1_2}</Box>
                   </Heading>
                   <Text mt={4} fontSize="xl" fontWeight="medium" color={mode('gray.600', 'gray.400')}>
-                    {indexData.block1.txt} <Button userSelect={'text'} onClick={() => router.push("/our-approach/agile")} fontSize="xl" fontWeight="medium" color={'blue.400'} variant={'link'}>{indexData.block1.txturl}</Button>.
+                    {indexData.block1.txt}{" "}
+                    <NextLink href={"/our-approach/agile"} passHref><Link>
+                      <Button
+                        userSelect={'text'}
+                        fontSize="xl"
+                        fontWeight="medium"
+                        color={'blue.400'}
+                        variant={'link'}
+                      >
+                        {indexData.block1.txturl}
+                      </Button>
+                    </Link>
+                    </NextLink>
+                    .
+                    {/* <NextLink href={"/our-approach/agile"}></NextLink> */}
                   </Text>
+
                   <Stack direction={{ base: 'column', sm: 'row' }} spacing="4" mt="8">
-                    <Button onClick={() => router.push('/contact')} size="md" colorScheme={'brand'} shadow="base" fontSize="md">
-                      {indexData.block1.button}
-                    </Button>
+                    <NextLink href={"/contact"} passHref><Link>
+                      <Button size="md" colorScheme={'brand'} shadow="base" fontSize="md">
+                        {indexData.block1.button}
+                      </Button>
+                    </Link>
+                    </NextLink>
                   </Stack>
                 </Box>
               </Box>
@@ -158,6 +185,7 @@ const IndexPage = () => {
                 <Image userSelect={'none'} pointerEvents={'none'} height="100%" width="100%" objectFit="cover" src={ximg.src} alt="Base" />
               </Box>
             </Box>
+
 
             <Box minH={'5rem'} />
 
@@ -189,19 +217,22 @@ const IndexPage = () => {
             </Box>
             <Container px={{ base: '6', lg: '0' }} maxW={'container.md'}>
               {/* Remove window.open on mobile using breakpoint values */}
-              <Image
-                cursor={'pointer'}
-                onClick={() => window.open("https://ochoa.pro/img/index/Basic-IoT-Enviroment.png")}
-                userSelect={'none'}
-                w="full"
-                rounded="3xl"
-                border={'1px'}
-                _hover={{ shadow: 'lg', borderColor: 'blue.500' }}
-                borderColor={mode('gray.400', 'gray.600')}
-                shadow="md"
-                src={diagimg.src}
-                alt="Ready to consider options"
-              />
+              <NextLink href={'https://ochoa.pro/img/index/Basic-IoT-Enviroment.png'} passHref>
+                <Link isExternal>
+                  <Image
+                    // onClick={() => window.open("https://ochoa.pro/img/index/Basic-IoT-Enviroment.png")}
+                    userSelect={'none'}
+                    w="full"
+                    rounded="3xl"
+                    border={'1px'}
+                    _hover={{ shadow: 'lg', borderColor: 'blue.500' }}
+                    borderColor={mode('gray.400', 'gray.600')}
+                    shadow="md"
+                    src={diagimg.src}
+                    alt="Ready to consider options"
+                  />
+                </Link>
+              </NextLink>
             </Container>
 
             <Box minH={'5rem'} />

@@ -16,9 +16,7 @@ import {
     useColorMode,
     HStack,
     Image,
-    Spacer,
     useBreakpointValue,
-    Center
 } from '@chakra-ui/react';
 import {
     HamburgerIcon,
@@ -27,6 +25,7 @@ import {
     ChevronRightIcon,
 } from '@chakra-ui/icons';
 
+import NextLink from 'next/link'
 import smlog from '../../public/img/smlog.png'
 import wsmlog from '../../public/img/wsmlog.png'
 
@@ -55,11 +54,6 @@ export default function WithSubnavigation() {
 
     return (
         <Box>
-            <Box textAlign={'center'} bg={'red.300'} minH={'40px'} display={{ base: 'block', sm: 'none' }}>
-                <Text fontWeight={'bold'}>
-                    There are several Errors with mobile Navigation<br />Use Desktop or Tablet for a better Experience.
-                </Text>
-            </Box>
             <Flex
                 // bg={mode('white', 'gray.800')}
                 // color={mode('gray.600', 'white')}
@@ -88,9 +82,20 @@ export default function WithSubnavigation() {
                 />
                 {/* </Flex> */}
                 <Flex flex={{ base: 1 }} justify={{ base: 'center', md: 'start' }}>
-                    <Box alignItems="center" display="flex" onClick={() => router.push('/')} cursor={'pointer'} mr={{ base: 6, sm: 0 }}>
-                        <Image userSelect={'none'} ml={{ base: 0, sm: 14, md: 0 }} loading={"eager"} cursor={'pointer'} pointerEvents={'none'} width={'auto'} height={{ base: '8', md: '10' }} src={mode(smlog.src, wsmlog.src)} alt={'Ochoa'} />
-                    </Box>
+                    <NextLink href={'/'} passHref>
+                        <Link alignItems="center" display="flex" mr={{ base: 6, sm: 0 }}>
+                            <Image
+                                userSelect={'none'}
+                                ml={{ base: 0, sm: 14, md: 0 }}
+                                loading={"eager"}
+                                pointerEvents={'none'}
+                                width={'auto'}
+                                height={{ base: '8', md: '10' }}
+                                src={mode(smlog.src, wsmlog.src)}
+                                alt={'Ochoa Logo'}
+                            />
+                        </Link>
+                    </NextLink>
                     <Flex display={{ base: 'none', md: 'flex' }} ml={10}>
                         <DesktopNav />
                     </Flex>
@@ -98,15 +103,17 @@ export default function WithSubnavigation() {
 
                 <HStack spacing="4">
                     {ContactItem.filter(p => p.locale === locale).map((contactItem) => (
-                        <Button
-                            key={contactItem.label}
-                            display={{ base: 'none', sm: 'block' }}
-                            colorScheme={buttonvariant}
-                            fontWeight="bold"
-                            onClick={() => router.push('/contact')}
-                        >
-                            {contactItem.label}
-                        </Button>
+                        <NextLink key={contactItem.label} href={'/contact'} passHref>
+                            <Link _hover={{ textDecorationLine: 'none' }}>
+                                <Button
+                                    display={{ base: 'none', sm: 'block' }}
+                                    colorScheme={buttonvariant}
+                                    fontWeight="bold"
+                                >
+                                    {contactItem.label}
+                                </Button>
+                            </Link>
+                        </NextLink>
                     ))}
                     <IconButton
                         display={{ base: 'none', lg: 'flex' }}
@@ -140,20 +147,24 @@ const DesktopNav = () => {
                 <Box key={navItem.label}>
                     <Popover trigger={'hover'} placement={'bottom-start'}>
                         <PopoverTrigger>
-                            <Link
-                                display="inline-block"
-                                px="2"
-                                py="2"
-                                fontWeight="semibold"
-                                userSelect={'none'}
-                                onClick={() => router.push(navItem.href)}
-                                _hover={{
-                                    textDecoration: 'none',
-                                    color: "blue.400",
-                                }}
-                            >
-                                {navItem.label}
-                            </Link>
+                            <Box>
+                                <NextLink href={navItem.href ?? navItem.subhref} passHref>
+                                    <Link
+                                        display="inline-block"
+                                        px="2"
+                                        py="2"
+                                        fontWeight="semibold"
+                                        userSelect={'none'}
+                                        // onClick={() => router.push(navItem.href ?? navItem.subhref)} // !!
+                                        _hover={{
+                                            textDecoration: 'none',
+                                            color: "blue.400",
+                                        }}
+                                    >
+                                        {navItem.label}
+                                    </Link>
+                                </NextLink>
+                            </Box>
                         </PopoverTrigger>
 
                         {navItem.children && (
@@ -180,37 +191,37 @@ const DesktopNav = () => {
 
 const DesktopSubNav = ({ label, href, subLabel }: NavItem) => {
     return (
-        <Link
-            bg={mode("gray.50", 'gray.900')}
-            onClick={() => router.push(href)}
-            // href={href}
-            role={'group'}
-            display={'block'}
-            p={2}
-            rounded={'md'}
-            _hover={{ bg: mode('blue.50', 'blue.900') }}>
-            <Stack direction={'row'} align={'center'}>
-                <Box>
-                    <Text
+        <NextLink href={href} passHref>
+            <Link
+                bg={mode("gray.50", 'gray.900')}
+                role={'group'}
+                display={'block'}
+                p={2}
+                rounded={'md'}
+                _hover={{ bg: mode('blue.50', 'blue.900') }}>
+                <Stack direction={'row'} align={'center'}>
+                    <Box>
+                        <Text
+                            transition={'all .3s ease'}
+                            _groupHover={{ color: 'blue.400' }}
+                            fontWeight={500}>
+                            {label}
+                        </Text>
+                        <Text fontSize={'sm'}>{subLabel}</Text>
+                    </Box>
+                    <Flex
                         transition={'all .3s ease'}
-                        _groupHover={{ color: 'blue.400' }}
-                        fontWeight={500}>
-                        {label}
-                    </Text>
-                    <Text fontSize={'sm'}>{subLabel}</Text>
-                </Box>
-                <Flex
-                    transition={'all .3s ease'}
-                    transform={'translateX(-10px)'}
-                    opacity={0}
-                    _groupHover={{ opacity: '100%', transform: 'translateX(0)' }}
-                    justify={'flex-end'}
-                    align={'center'}
-                    flex={1}>
-                    <Icon color={'blue.400'} w={5} h={5} as={ChevronRightIcon} />
-                </Flex>
-            </Stack>
-        </Link>
+                        transform={'translateX(-10px)'}
+                        opacity={0}
+                        _groupHover={{ opacity: '100%', transform: 'translateX(0)' }}
+                        justify={'flex-end'}
+                        align={'center'}
+                        flex={1}>
+                        <Icon color={'blue.400'} w={5} h={5} as={ChevronRightIcon} />
+                    </Flex>
+                </Stack>
+            </Link>
+        </NextLink>
     );
 };
 
@@ -228,39 +239,38 @@ const MobileNav = () => {
     );
 };
 
-const MobileNavItem = ({ label, children, href, mhref }: NavItem) => {
+const MobileNavItem = ({ label, children, href, subhref }: NavItem) => {
     const { isOpen, onToggle } = useDisclosure();
     return (
         <Stack spacing={4} onClick={children && onToggle}>
-            <Flex
-                py={2}
-                as={Link}
-                // href={mhref ?? '#'}
-                onClick={() => {
-                    router.push(mhref);
-                    // !!Ignore url undefined. 
-                    window.location.reload()
-                }}
-                justify={'space-between'}
-                align={'center'}
-                _hover={{
-                    textDecoration: 'none',
-                }}>
-                <Text
-                    fontWeight={600}
-                    color={mode('gray.600', 'gray.200')}>
-                    {label}
-                </Text>
-                {children && (
-                    <Icon
-                        as={ChevronDownIcon}
-                        transition={'all .25s ease-in-out'}
-                        transform={isOpen ? 'rotate(180deg)' : ''}
-                        w={6}
-                        h={6}
-                    />
-                )}
-            </Flex>
+            <NextLink href={href ?? ''} passHref>
+                {/* !! I think its fixed, No need for '#'?*/}
+                <Link>
+                    <Flex
+                        py={2}
+                        justify={'space-between'}
+                        align={'center'}
+                        _hover={{
+                            textDecoration: 'none',
+                        }}
+                    >
+                        <Text
+                            fontWeight={600}
+                            color={mode('gray.600', 'gray.200')}>
+                            {label}
+                        </Text>
+                        {children && (
+                            <Icon
+                                as={ChevronDownIcon}
+                                transition={'all .25s ease-in-out'}
+                                transform={isOpen ? 'rotate(180deg)' : ''}
+                                w={6}
+                                h={6}
+                            />
+                        )}
+                    </Flex>
+                </Link>
+            </NextLink>
 
             <Collapse in={isOpen} animateOpacity style={{ marginTop: '0!important' }}>
                 <Stack
@@ -272,9 +282,12 @@ const MobileNavItem = ({ label, children, href, mhref }: NavItem) => {
                     align={'start'}>
                     {children &&
                         children.map((child) => (
-                            <Link key={child.label} py={2} href={child.href}>
-                                {child.label}
-                            </Link>
+                            // !!Edit Look
+                            <NextLink key={child.label} href={child.href} passHref>
+                                <Link py={2} onClick={() => window.location.reload()}>
+                                    {child.label}
+                                </Link>
+                            </NextLink>
                         ))}
                 </Stack>
             </Collapse>
@@ -288,14 +301,14 @@ interface NavItem {
     subLabel?: string;
     children?: Array<NavItem>;
     href?: any;
-    mhref?: any;
+    subhref?: any;
 }
 
 const NAV_ITEMS: Array<NavItem> = [
     {
         locale: "en",
         label: 'Services',
-        href: '/services',
+        subhref: '/services',
         children: [
             {
                 label: 'Development Services',
@@ -317,7 +330,7 @@ const NAV_ITEMS: Array<NavItem> = [
     {
         locale: "en",
         label: 'Industries',
-        href: '/industries',
+        subhref: '/industries',
         children: [
             {
                 label: 'Manufacturing & Production',
@@ -336,7 +349,7 @@ const NAV_ITEMS: Array<NavItem> = [
     {
         locale: "en",
         label: 'Our Approach',
-        href: '/our-approach',
+        subhref: '/our-approach',
         children: [
             {
                 label: 'Agile',
@@ -359,12 +372,11 @@ const NAV_ITEMS: Array<NavItem> = [
         locale: "en",
         label: 'About',
         href: '/about',
-        mhref: '/about',
     },
     {
         locale: "es",
         label: 'Servicios',
-        href: '/services',
+        subhref: '/services',
         children: [
             {
                 label: 'Servicios de desarrollo',
@@ -386,7 +398,7 @@ const NAV_ITEMS: Array<NavItem> = [
     {
         locale: "es",
         label: 'Industrias',
-        href: '/industries',
+        subhref: '/industries',
         children: [
             {
                 label: 'Fabricación & Producción',
@@ -405,7 +417,7 @@ const NAV_ITEMS: Array<NavItem> = [
     {
         locale: "es",
         label: 'Nuestro enfoque',
-        href: '/our-approach',
+        subhref: '/our-approach',
         children: [
             {
                 label: 'Ágil',
@@ -428,7 +440,6 @@ const NAV_ITEMS: Array<NavItem> = [
         locale: "es",
         label: 'Acerca De',
         href: '/about',
-        mhref: '/about',
     },
 ];
 

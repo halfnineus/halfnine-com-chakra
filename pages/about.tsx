@@ -154,7 +154,7 @@ const IndexAbout = () => {
                 }
               ]}
             />
-            <Box as={Container} maxW="7xl" mt={8} py={4} px={{ base: '6', lg: '10' }}>
+            <Container maxW="container.xl" pt={8} pb={4} px={{ base: '6', lg: '10' }}>
               <Grid templateColumns={{ base: 'repeat(1, 1fr)', sm: 'repeat(2, 1fr)', md: 'repeat(2, 1fr)', }} gap={4}>
                 <GridItem colSpan={1}>
                   <VStack alignItems="flex-start" spacing="20px">
@@ -278,9 +278,7 @@ const IndexAbout = () => {
               </Stack>
 
               <Divider mt={8} mb={5} />
-
-            </Box>
-            {/* </Container> */}
+            </Container>
           </>)
       })}
     </>
