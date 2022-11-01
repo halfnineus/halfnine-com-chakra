@@ -51,7 +51,7 @@ const Lvlup = () => {
                         !! From startups to enterprise level companies, we have helped organizations bring their digital goals to life.
                       */}
                                 {`Taking your business to the Next Level takes a lot of resources combined with trial and error, 
-                        Our experience in the field will take the risks to the minimun while maximizing the use of resources.`}
+                        Our experience in the field will take the risks to the minimum while maximizing the use of resources.`}
                             </Text>
                         </Flex>
                     </GridItem>
@@ -70,11 +70,11 @@ const Lvlup = () => {
                     />
                     <Feature3
                         heading={'Innovation'}
-                        text={'Connecting knowledge with imagination we create value for a better purpose.'}
+                        text={'Connecting knowledge with imagination, we create value for a better purpose.'}
                     />
                     <Feature3
                         heading={'Challenge'}
-                        text={'By speaking up we push the boundries of what is possible in any enviroment.'}
+                        text={'By speaking up, we push the boundaries of what is possible in any environment.'}
                     />
                     <Feature3
                         heading={'Solutions'}

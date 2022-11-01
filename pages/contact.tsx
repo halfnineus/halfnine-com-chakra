@@ -113,17 +113,13 @@ const INDEX = () => {
                 return (
                     <>
                         <NextSeo
-                            title={`Contact Us | Development Services & Consulting - All your needs with custom technology.`}
+                            title={"Contact Us - Automating all Things | Ochoa"}
                             description={`Contact Us about developing technology solutions, IT consulting & Digital transformation Related Inquiries.`}
                             canonical="https://ochoa.pro/contact"
                             languageAlternates={[
                                 {
                                     hrefLang: 'es',
                                     href: 'https://ochoa.pro/es/contact',
-                                },
-                                {
-                                    hrefLang: 'en',
-                                    href: 'https://ochoa.pro/en/contact',
                                 }
                             ]}
                         />

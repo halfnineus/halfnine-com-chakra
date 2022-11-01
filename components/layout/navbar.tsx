@@ -155,7 +155,6 @@ const DesktopNav = () => {
                                         py="2"
                                         fontWeight="semibold"
                                         userSelect={'none'}
-                                        // onClick={() => router.push(navItem.href ?? navItem.subhref)} // !!
                                         _hover={{
                                             textDecoration: 'none',
                                             color: "blue.400",
@@ -244,7 +243,6 @@ const MobileNavItem = ({ label, children, href, subhref }: NavItem) => {
     return (
         <Stack spacing={4} onClick={children && onToggle}>
             <NextLink href={href ?? ''} passHref>
-                {/* !! I think its fixed, No need for '#'?*/}
                 <Link>
                     <Flex
                         py={2}
@@ -282,9 +280,9 @@ const MobileNavItem = ({ label, children, href, subhref }: NavItem) => {
                     align={'start'}>
                     {children &&
                         children.map((child) => (
-                            // !!Edit Look
+                            // !!Edit Look & Find out how to toggle (onToggle) the Main Function 
                             <NextLink key={child.label} href={child.href} passHref>
-                                <Link py={2} onClick={() => window.location.reload()}>
+                                <Link py={2} onClick={onToggle}>
                                     {child.label}
                                 </Link>
                             </NextLink>

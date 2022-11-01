@@ -124,18 +124,13 @@ const IndexPage = () => {
         return (
           <>
             <NextSeo
-              // title='Development Services & Consulting - All your needs with custom technology.'
-              title='Development & Consulting Services, Your Digital Transformation | Ochoa'
+              title='Ochoa - Automating all Things | Development, Consulting & Digitalization'
               description='Improve your products and services with a digital transformation powered by Agile Automation.'
               canonical="https://ochoa.pro"
               languageAlternates={[
                 {
                   hrefLang: 'es',
                   href: 'https://ochoa.pro/es',
-                },
-                {
-                  hrefLang: 'en',
-                  href: 'https://ochoa.pro/en',
                 }
               ]}
             />
@@ -225,11 +220,11 @@ const IndexPage = () => {
                     w="full"
                     rounded="3xl"
                     border={'1px'}
-                    _hover={{ shadow: 'lg', borderColor: 'blue.500' }}
+                    _hover={{ shadow: 'md', borderColor: 'blue.500' }}
                     borderColor={mode('gray.400', 'gray.600')}
-                    shadow="md"
+                    // shadow="md"
                     src={diagimg.src}
-                    alt="Ready to consider options"
+                    alt="Basic IoT Enviroment"
                   />
                 </Link>
               </NextLink>
@@ -250,7 +245,7 @@ const IndexPage = () => {
                   icon={<Icon as={FcApproval} w={10} h={10} />}
                   title={'Compliance'}
                   text={
-                    "Here are some of the regulations you might face while developing an application: GDPR, CCPA, AICPA SOC 2, HIPAA, CCPA, PCI, ISO/IEC 27001. Not complying can lead to severe fines. It's our job to make sure the applications comply with all the necessary regulations."
+                    "Here are some of the regulations you might face while developing an application: GDPR, CCPA, AICPA SOC 2, HIPAA, CCPA, PCI, ISO/IEC 27001. Not complying can lead to severe fines. It's our job to make sure the technology complies with all the necessary regulations."
                   }
                 />
                 <Feature1
@@ -280,10 +275,10 @@ const IndexPage = () => {
                   >
                     Our Story
                   </Text> */}
-                  <Heading pl={2} pt={8}>Lets create a story together</Heading>
+                  <Heading pl={2} pt={8}>Let&#39;s create a story together</Heading>
                   {/* <Heading>A digital Product design agency</Heading> */}
                   <Text pl={2} color={'gray.500'} fontSize={'lg'}>
-                    Connecting Technology with your goals taking what is possible on your Business to new lenghts.
+                    Connecting Technology with your goals, taking what is possible on your Business to new lengths.
                   </Text>
                   <Stack
                     spacing={2}
@@ -304,7 +299,7 @@ const IndexPage = () => {
                       refx={'/services/digitalization'}
                       icon={<Icon as={IoRocketOutline} color={mode('green.600', 'green.300')} w={5} h={5} />}
                       iconBg={mode('green.100', 'green.900')}
-                      text={'Digital Tranformation'}
+                      text={'Digital Transformation'}
                     />
                     <Feature2
                       refx={'/services/consultation'}

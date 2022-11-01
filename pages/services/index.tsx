@@ -90,17 +90,13 @@ const Index = () => {
                 return (
                     <>
                         <NextSeo
-                            title=' Services | Development Services, Digital Transformation, Project Consultation.'
-                            description='We assemble and lead teams with the skills and tools needed for building the products and tools that power your business.'
+                            title='Our Services - Custom Development, Digital Transformation, Project Consultation.'
+                            description='!!'
                             canonical="https://ochoa.pro/services"
                             languageAlternates={[
                                 {
                                     hrefLang: 'es',
                                     href: 'https://ochoa.pro/es/services',
-                                },
-                                {
-                                    hrefLang: 'en',
-                                    href: 'https://ochoa.pro/en/services',
                                 }
                             ]}
                         />

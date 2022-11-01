@@ -100,17 +100,13 @@ const Index = () => {
                 return (
                     <>
                         <NextSeo
-                            title=' Services | Development Services, Digital Transformation, Project Consultation.'
-                            description='We assemble and lead teams with the skills and tools needed for building the products and tools that power your business.'
+                            title='!! - Automating all Things | Ochoa'
+                            description='!!We assemble and lead teams with the skills and tools needed for building the products and tools that power your business.'
                             canonical="https://ochoa.pro/industries"
                             languageAlternates={[
                                 {
                                     hrefLang: 'es',
                                     href: 'https://ochoa.pro/es/industries',
-                                },
-                                {
-                                    hrefLang: 'en',
-                                    href: 'https://ochoa.pro/en/industries',
                                 }
                             ]}
                         />
@@ -126,7 +122,7 @@ const Index = () => {
                             <Feature
                                 title="Manufacturing & Production"
                                 icon={IoHammerOutline}
-                                refx={'/services/development'}
+                                refx={'/industries/mnp'}
                             >
                                 Increase productivity, quality, efficiency and profit by Automating repetitive tasks.
                             </Feature>
@@ -134,7 +130,7 @@ const Index = () => {
                             <Feature
                                 title="Media & Entertainment"
                                 icon={IoVideocamOutline}
-                                refx={'/services/digitalization'}
+                                refx={'/industries/mne'}
                             >
                                 Change experiences forever by implementing and delivering a more immersive environment.
                             </Feature>
@@ -142,7 +138,7 @@ const Index = () => {
                             <Feature
                                 title="Security & Safety"
                                 icon={IoShieldCheckmarkOutline}
-                                refx={'/services/consultation'}
+                                refx={'/industries/sns'}
                             >
                                 Create and implement solutions to ease safety chores and tasks and focus on products & services.
                             </Feature>
@@ -154,11 +150,9 @@ const Index = () => {
 
                         <Box py={'3rem'} />
 
-                        <Divider mt={8} mb={8} />
                         <Text pl={10} fontWeight="semibold" textTransform="uppercase" letterSpacing="wide" userSelect={'none'}>
                             {"Page Is Still Under construction..."}
                         </Text>
-                        <Divider mt={8} mb={8} />
                     </>
                 )
             })}

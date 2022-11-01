@@ -16,9 +16,12 @@ import {
   Center,
   Button,
   SimpleGrid,
+  Link,
+  HStack,
 } from '@chakra-ui/react';
 import router, { useRouter } from "next/router"
 import { NextSeo } from 'next-seo';
+import NextLink from 'next/link';
 
 
 import aboutdat from '../assets/about.json'
@@ -37,6 +40,7 @@ import img2x from '../public/img/about/logo2.png'
 import img3x from '../public/img/about/logo3.png'
 import img4x from '../public/img/about/logo4.png'
 import img5x from '../public/img/about/logo5.png'
+
 
 
 interface FeatureProps {
@@ -93,40 +97,45 @@ const Featurex = (props: any) => {
 const Feature = ({ heading, text, color, icon }: FeatureProps) => {
   return (
     <GridItem>
-      <Flex
-        alignItems="center"
-        justifyContent="center"
-        w={12}
-        h={12}
-        mb={4}
-        rounded="full"
-        color={`${color}.600`}
-        _dark={{ color: `${color}.100`, bg: `${color}.600` }}
-        bg={`${color}.100`}
-      >
-        <Icon
-          boxSize={7}
-          viewBox="0 0 20 20"
-          fill="currentColor"
-          aria-hidden="true"
+      <HStack>
+        <Flex
+          alignItems="center"
+          justifyContent="center"
+          w={12}
+          h={12}
+          mb={4}
+          rounded="full"
+          color={`${color}.600`}
+          _dark={{ color: `${color}.100`, bg: `${color}.600` }}
+          bg={`${color}.100`}
         >
-          {icon}
-        </Icon>
-      </Flex>
+          <Icon
+            boxSize={7}
+            viewBox="0 0 20 20"
+            fill="currentColor"
+            aria-hidden="true"
+          >
+            {icon}
+          </Icon>
+        </Flex>
 
-      {/* <chakra.h3 fontSize="xl" fontWeight="600"> */}
-      <chakra.h3
-        fontSize={"lg"}
-        mb={2}
-        fontWeight="semibold"
-        lineHeight="shorter"
-        _light={{ color: "gray.900" }}
-      >
-        {heading}
-      </chakra.h3>
-      <chakra.p fontSize="md" color="gray.600" _dark={{ color: "gray.400" }}>
+        {/* <Heading fontSize="xl" fontWeight="600"> */}
+        <Heading
+          as={'h3'}
+          fontSize={"lg"}
+          mb={2}
+          fontWeight="semibold"
+          lineHeight="shorter"
+          _light={{ color: "gray.900" }}
+          pb={4}
+          pl={1}
+        >
+          {heading}
+        </Heading>
+      </HStack>
+      <Text fontSize="md" color="gray.600" _dark={{ color: "gray.400" }}>
         {text}
-      </chakra.p>
+      </Text>
     </GridItem>
   );
 };
@@ -140,17 +149,13 @@ const IndexAbout = () => {
         return (
           <>
             <NextSeo
-              title='About Us | Development Services & Consulting - All your needs with custom technology.'
-              description="About Us | Our team is built with experience on the world's leading companies and technology."
+              title='About Us | Development Services & Consulting - Automating all Things | Ochoa'
+              description="Our team is built with leading experience on some of the world's leading companies technologies."
               canonical="https://ochoa.pro/about"
               languageAlternates={[
                 {
                   hrefLang: 'es',
                   href: 'https://ochoa.pro/es/about',
-                },
-                {
-                  hrefLang: 'en',
-                  href: 'https://ochoa.pro/en/about',
                 }
               ]}
             />
@@ -272,9 +277,13 @@ const IndexAbout = () => {
                 <BuiltWith img={img5x.src} />
               </SimpleGrid>
               <Stack pt={"8"} direction={{ base: "column", sm: "row", }} spacing={2} justifyContent={{ sm: "left", md: "center", }}>
-                <Button size={'lg'} colorScheme={'brand'}/* rightIcon={<FiMail />} */ onClick={() => router.push("/contact")}>
-                  {"Contact Us"}
-                </Button>
+                <NextLink href={"/contact"} passHref>
+                  <Link>
+                    <Button size={'lg'} colorScheme={'brand'}/* rightIcon={<FiMail />} onClick={() => router.push("/contact")} */>
+                      {"Contact Us"}
+                    </Button>
+                  </Link>
+                </NextLink>
               </Stack>
 
               <Divider mt={8} mb={5} />

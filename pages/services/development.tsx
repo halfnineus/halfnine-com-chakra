@@ -1,5 +1,3 @@
-import React from "react";
-
 import {
     chakra,
     Box,
@@ -15,27 +13,32 @@ import {
     useColorModeValue as mode,
 } from "@chakra-ui/react";
 import { NextSeo } from "next-seo";
+import { CgCrown, CgTerminal, CgPen, CgSupport } from 'react-icons/cg'
 
 const Development = () => {
     const Feature = (props: any) => {
         return (
             <Flex>
                 <Flex shrink={0}>
-                    <Icon
-                        boxSize={5}
-                        mt={1}
-                        mr={2}
-                        color="brand.500"
-                        _dark={{ color: "brand.300" }}
-                        viewBox="0 0 20 20"
-                        fill="currentColor"
+                    <Flex
+                        alignItems="center"
+                        justifyContent="center"
+                        h={12}
+                        w={12}
+                        rounded="md"
+                        _light={{ bg: "brand.500" }}
+                        color="white"
                     >
-                        <path
-                            fillRule="evenodd"
-                            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                            clipRule="evenodd"
-                        ></path>
-                    </Icon>
+                        <Icon
+                            boxSize={6}
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor"
+                            aria-hidden="true"
+                            as={props.icon}
+                            color={'white'}
+                        />
+                    </Flex>
                 </Flex>
                 <Box ml={4}>
                     <chakra.dt
@@ -64,17 +67,13 @@ const Development = () => {
         // >
         <>
             <NextSeo
-                title=' Services | Development Services, Digital Transformation, Project Consultation.'
-                description='We assemble and lead teams with the skills and tools needed for building the products and tools that power your business.'
+                title='Outsource Custom Development Services - Automating all Things | Ochoa'
+                description='!!'
                 canonical="https://ochoa.pro/services/development"
                 languageAlternates={[
                     {
                         hrefLang: 'es',
                         href: 'https://ochoa.pro/es/services/development',
-                    },
-                    {
-                        hrefLang: 'en',
-                        href: 'https://ochoa.pro/en/services/development',
                     }
                 ]}
             />
@@ -90,7 +89,7 @@ const Development = () => {
                     alignItems="center"
                     columns={{ base: 1, lg: 3 }}
                     spacingY={{ base: 10, lg: 32 }}
-                    spacingX={{ base: 10, lg: 24 }}
+                    spacingX={{ base: 10, lg: 12 }}
                 >
                     <Box alignSelf="start">
                         <chakra.h2
@@ -99,7 +98,7 @@ const Development = () => {
                             textTransform="uppercase"
                             letterSpacing="wide"
                         >
-                            Boosting your
+                            Outsource
                         </chakra.h2>
                         <chakra.h2
                             mb={3}
@@ -110,7 +109,7 @@ const Development = () => {
                             lineHeight="shorter"
                             letterSpacing="tight"
                         >
-                            Digital transformation
+                            Custom Development Services
                         </chakra.h2>
                         <chakra.p
                             mb={6}
@@ -119,8 +118,8 @@ const Development = () => {
                             color="gray.600"
                             _dark={{ color: "gray.500" }}
                         >
-                            !!Lorem ipsum dolor sit amet consect adipisicing elit. Possimus
-                            magnam voluptatum cupiditate veritatis in accusamus quisquam.
+                            The method of Outsourcing Development allows you and your business to free time and focus on the big picture strategies.
+                            {/* !!Bring your software product idea to life, enhance existing product quality, reduce time-to-market, and decrease development costs with our turn-key software engineering services and outsourcing product development teams */}
                         </chakra.p>
                     </Box>
                     <GridItem colSpan={2}>
@@ -131,36 +130,31 @@ const Development = () => {
                             gridColumnGap={{ md: 8 }}
                             gridRowGap={{ md: 10 }}
                         >
-                            <Feature title="Automation">
-                                {`!!Improve your conversion rates by monitoring exactly what's going on while your customers are in trial.`}{" "}
+                            <Feature icon={CgCrown} title="Strategy & Features">
+                                Our team will help to outline the best strategies and features for your products and applications, Identifying challanges and key leverage points.
                             </Feature>
-                            <Feature title="Cloud">
-                                !!Manage all your online and offline sales in one place with a
-                                single integration, simplifying reporting and reconciliation.
+                            <Feature icon={CgPen} title="UX & Architecture">
+                                Our team will help you chose the right technologies to create a technology stack that fits the desired User Experiencie.
                             </Feature>
-                            <Feature title="Internet of Things">
-                                {" "}
-                                !!Provide a seamless customer experience across channels, like
-                                reserving online and picking up in store.
+                            <Feature icon={CgTerminal} title="Development & Testing">
+                                !!A balanced team of app developers, project managers, business analysts, and software testers creates perfectly functioning bespoke apps and integrates them into your ecosystem quickly and transparently, equipping it with new functionality with each new iteration.
+                                {/* Enabling you to fully control this process through transparency to achieve a succesful launch */}
                             </Feature>
-                            <Feature title="Devops">
-                                {" "}
-                                !!Add in-person payments to your platform or marketplace. Using
-                                Terminal with Connect.{" "}
-                            </Feature>
-                            <Feature title="Artificial Intelligence">
-                                {" "}
-                                !!Handle your subscriptions and transactions efficiently with the
-                                clear overview in Dashboard. Fea
-                            </Feature>
-                            <Feature title="Bi-Modal IT">
-                                {" "}
-                                !!Love to code? Decide how you integrate Payments and build
-                                advanced and reliable products yourself from scratch.{" "}
+                            <Feature icon={CgSupport} title="Support & Maintenance">
+                                !!After the app goes live, we arrange live app introductions and support, create exhaustive to-dos, text and video manuals and guides for your new software. We also provide application support & maintenance and continue adding new features as necessary.
+                                {/* By prioritizing collaboration and change we deliver the desired value. */}
                             </Feature>
                         </Stack>
                     </GridItem>
                 </SimpleGrid>
+                <Text py={8}>
+                    Outsourcing can provide Strategic advantage and Cost Cutting but you also have to be be aware of the challenges that are presented by not having talent in-house or maybe even in the same country.<br />
+                    How to mitigate risk? and, What is our approach to mitigating risk?<br />
+                    We also believe that Communication is key to mitigating risk, Being able to solve issues<br />
+                </Text>
+                <Text>
+                    Our Expertise: IoT, Cloud, Cross-platform, Native, Hybrid, Web.<br />
+                </Text>
 
                 <Divider my={8} />
 
@@ -176,4 +170,5 @@ const Development = () => {
         // </Flex>
     );
 };
+
 export default Development;

@@ -68,17 +68,13 @@ const Index = () => {
     return (
         <>
             <NextSeo
-                title=' Services | Development Services, Digital Transformation, Project Consultation.'
-                description='We assemble and lead teams with the skills and tools needed for building the products and tools that power your business.'
+                title='!! - Automating all Things | Ochoa'
+                description='!!We assemble and lead teams with the skills and tools needed for building the products and tools that power your business.'
                 canonical="https://ochoa.pro/our-approach"
                 languageAlternates={[
                     {
                         hrefLang: 'es',
                         href: 'https://ochoa.pro/es/our-approach',
-                    },
-                    {
-                        hrefLang: 'en',
-                        href: 'https://ochoa.pro/en/our-approach',
                     }
                 ]}
             />
@@ -94,7 +90,7 @@ const Index = () => {
                 <Feature
                     title="Agile Development"
                     icon={IoStopwatchOutline}
-                    refx={'/services/development'}
+                    refx={'/our-approach/agile'}
                 >
                     Ability to change priorities, bring support, and test the applications. Brings teams to well rewarded milestones.
                 </Feature>
@@ -102,7 +98,7 @@ const Index = () => {
                 <Feature
                     title="Return on Investment"
                     icon={IoCashOutline}
-                    refx={'/services/digitalization'}
+                    refx={'/our-approach/roi'}
                 >
                     We understand the importance for a project to make sense financially, therefore create a carefully planned priority list to create solutions.
                 </Feature>
@@ -110,7 +106,7 @@ const Index = () => {
                 <Feature
                     title="Product Development as a Service"
                     icon={IoTerminalOutline}
-                    refx={'/services/consultation'}
+                    refx={'/our-approach/pdaas'}
                 >
                     We love to make stuff, bringing challenges to our every day environments and solving problems is how we find meaning in improving our world.
                 </Feature>
