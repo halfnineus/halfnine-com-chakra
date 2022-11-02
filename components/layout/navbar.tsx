@@ -108,7 +108,8 @@ export default function WithSubnavigation() {
                                 <Button
                                     display={{ base: 'none', sm: 'block' }}
                                     colorScheme={buttonvariant}
-                                    fontWeight="bold"
+                                    // fontWeight="bold"
+                                    _focus={{ shadow: 'outline' }}
                                 >
                                     {contactItem.label}
                                 </Button>
@@ -280,7 +281,7 @@ const MobileNavItem = ({ label, children, href, subhref }: NavItem) => {
                     align={'start'}>
                     {children &&
                         children.map((child) => (
-                            // !!Edit Look & Find out how to toggle (onToggle) the Main Function 
+                            // !!changeme Edit Look & Find out how to toggle (onToggle) the Main Function 
                             <NextLink key={child.label} href={child.href} passHref>
                                 <Link py={2} onClick={onToggle}>
                                     {child.label}

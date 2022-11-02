@@ -13,7 +13,11 @@ import {
     useColorModeValue as mode,
 } from "@chakra-ui/react";
 import { NextSeo } from "next-seo";
-import { CgCrown, CgTerminal, CgPen, CgSupport } from 'react-icons/cg'
+import { CgTerminal, CgPen, CgSupport } from 'react-icons/cg'
+import { SiLichess } from 'react-icons/si'
+import { BsLifePreserver } from 'react-icons/bs'
+import { GiFountainPen } from 'react-icons/gi'
+import { BsTerminal } from 'react-icons/bs'
 
 const Development = () => {
     const Feature = (props: any) => {
@@ -26,18 +30,12 @@ const Development = () => {
                         h={12}
                         w={12}
                         rounded="md"
-                        _light={{ bg: "brand.500" }}
                         color="white"
+                        bg={mode("gray.100", "brand.700")}
                     >
-                        <Icon
-                            boxSize={6}
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            stroke="currentColor"
-                            aria-hidden="true"
-                            as={props.icon}
-                            color={'white'}
-                        />
+                        <Box color={mode("brand.600", "white")} fontSize="1.5rem">
+                            {props.icon}
+                        </Box>
                     </Flex>
                 </Flex>
                 <Box ml={4}>
@@ -68,7 +66,7 @@ const Development = () => {
         <>
             <NextSeo
                 title='Outsource Custom Development Services - Automating all Things | Ochoa'
-                description='!!'
+                description='!!changeme '
                 canonical="https://ochoa.pro/services/development"
                 languageAlternates={[
                     {
@@ -118,8 +116,8 @@ const Development = () => {
                             color="gray.600"
                             _dark={{ color: "gray.500" }}
                         >
-                            The method of Outsourcing Development allows you and your business to free time and focus on the big picture strategies.
-                            {/* !!Bring your software product idea to life, enhance existing product quality, reduce time-to-market, and decrease development costs with our turn-key software engineering services and outsourcing product development teams */}
+                            Following established methods for development allows us to deliver a valuable strategy for your objectives.
+                            {/* !!changeme Bring your software product idea to life, enhance existing product quality, reduce time-to-market, and decrease development costs with our turn-key software engineering services and outsourcing product development teams */}
                         </chakra.p>
                     </Box>
                     <GridItem colSpan={2}>
@@ -130,28 +128,28 @@ const Development = () => {
                             gridColumnGap={{ md: 8 }}
                             gridRowGap={{ md: 10 }}
                         >
-                            <Feature icon={CgCrown} title="Strategy & Features">
+                            <Feature icon={<SiLichess />} title="Strategy & Features">
                                 Our team will help to outline the best strategies and features for your products and applications, Identifying challanges and key leverage points.
                             </Feature>
-                            <Feature icon={CgPen} title="UX & Architecture">
+                            <Feature icon={<GiFountainPen />} title="UX & Architecture">
                                 Our team will help you chose the right technologies to create a technology stack that fits the desired User Experiencie.
                             </Feature>
-                            <Feature icon={CgTerminal} title="Development & Testing">
-                                !!A balanced team of app developers, project managers, business analysts, and software testers creates perfectly functioning bespoke apps and integrates them into your ecosystem quickly and transparently, equipping it with new functionality with each new iteration.
+                            <Feature icon={<BsTerminal />} title="Development & Testing">
+                                !!changeme A balanced team of app developers, project managers, business analysts,
+                                and software testers creates perfectly functioning bespoke apps and integrates them into your ecosystem
+                                quickly and transparently, equipping it with new functionality with each new iteration.
                                 {/* Enabling you to fully control this process through transparency to achieve a succesful launch */}
                             </Feature>
-                            <Feature icon={CgSupport} title="Support & Maintenance">
-                                !!After the app goes live, we arrange live app introductions and support, create exhaustive to-dos, text and video manuals and guides for your new software. We also provide application support & maintenance and continue adding new features as necessary.
+                            <Feature icon={<BsLifePreserver />} title="Support & Maintenance">
+                                !!changeme After the app goes live, we arrange live app introductions and support, create exhaustive to-dos,
+                                text and video manuals and guides for your new software. We also provide application support & maintenance
+                                and continue adding new features as necessary.
                                 {/* By prioritizing collaboration and change we deliver the desired value. */}
                             </Feature>
                         </Stack>
                     </GridItem>
                 </SimpleGrid>
-                <Text py={8}>
-                    Outsourcing can provide Strategic advantage and Cost Cutting but you also have to be be aware of the challenges that are presented by not having talent in-house or maybe even in the same country.<br />
-                    How to mitigate risk? and, What is our approach to mitigating risk?<br />
-                    We also believe that Communication is key to mitigating risk, Being able to solve issues<br />
-                </Text>
+
                 <Text>
                     Our Expertise: IoT, Cloud, Cross-platform, Native, Hybrid, Web.<br />
                 </Text>

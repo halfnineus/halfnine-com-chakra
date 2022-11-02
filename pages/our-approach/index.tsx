@@ -1,9 +1,10 @@
 import { ChevronRightIcon } from "@chakra-ui/icons";
-import { chakra, Flex, HStack, Icon, SimpleGrid, Box, useColorModeValue as mode, Text, Link, } from "@chakra-ui/react";
+import { chakra, Flex, HStack, Icon, SimpleGrid, Box, useColorModeValue as mode, Text, Link, Heading, Img, Stack, } from "@chakra-ui/react";
 import { NextSeo } from "next-seo";
 import NextLink from "next/link";
 
-import { IoStopwatchOutline, IoCashOutline, IoTerminalOutline } from "react-icons/io5";
+import { IoStopwatchOutline, IoCashOutline, IoTerminalOutline, IoTimerOutline } from "react-icons/io5";
+import { SiMattermost } from "react-icons/si";
 
 import { LvlUp } from "../../components";
 
@@ -21,16 +22,18 @@ const Feature = (props: any) => {
                     borderColor={mode('gray.300', 'gray.600')}
                 >
                     <HStack>
-                        <Icon
+                        <Box
                             boxSize={12}
                             _light={{ color: "brand.700" }}
                             mb={4}
                             fill="none"
-                            viewBox="0 0 24 24"
+                            // viewBox="0 0 24 24"
                             stroke="currentColor"
                             aria-hidden="true"
-                            as={props.icon}
-                        />
+                            fontSize="3rem"
+                        >
+                            {props.icon}
+                        </Box>
                         <Flex
                             transition={'all .3s ease'}
                             transform={'translateX(-10px)'}
@@ -68,8 +71,8 @@ const Index = () => {
     return (
         <>
             <NextSeo
-                title='!! - Automating all Things | Ochoa'
-                description='!!We assemble and lead teams with the skills and tools needed for building the products and tools that power your business.'
+                title='!!changeme  - Automating all Things | Ochoa'
+                description='!!changeme We assemble and lead teams with the skills and tools needed for building the products and tools that power your business.'
                 canonical="https://ochoa.pro/our-approach"
                 languageAlternates={[
                     {
@@ -89,7 +92,7 @@ const Index = () => {
             >
                 <Feature
                     title="Agile Development"
-                    icon={IoStopwatchOutline}
+                    icon={<IoTimerOutline />}
                     refx={'/our-approach/agile'}
                 >
                     Ability to change priorities, bring support, and test the applications. Brings teams to well rewarded milestones.
@@ -97,7 +100,7 @@ const Index = () => {
 
                 <Feature
                     title="Return on Investment"
-                    icon={IoCashOutline}
+                    icon={<IoCashOutline />}
                     refx={'/our-approach/roi'}
                 >
                     We understand the importance for a project to make sense financially, therefore create a carefully planned priority list to create solutions.
@@ -105,7 +108,7 @@ const Index = () => {
 
                 <Feature
                     title="Product Development as a Service"
-                    icon={IoTerminalOutline}
+                    icon={<IoTerminalOutline />}
                     refx={'/our-approach/pdaas'}
                 >
                     We love to make stuff, bringing challenges to our every day environments and solving problems is how we find meaning in improving our world.
@@ -114,13 +117,37 @@ const Index = () => {
 
             <Box py={'3rem'} />
 
-            <LvlUp />
+            <Box maxW={{ base: 'xl', md: 'container.xl' }} mx="auto" px={{ base: '6', md: '8' }}>
+                <SimpleGrid columns={{ base: 1, md: 2 }} spacing={{ base: '16', md: '8' }}>
+                    <Stack my={2}>
+                        <Heading>!!changeme Automating all Things Together</Heading>
+                        <Text maxW={'34rem'} pt={2} color={mode('gray.600', 'gray.400')} fontSize={'lg'}>
+                            !!changeme Outsourcing reduces costs by helping you avoid the industry&apos;s most common problems and
+                            freeing your time to focus on big picture strategies.
+                            Improve your consistency and reliability, allow faster delivery and infrastructure changes.
+                            Not having talent in-house or maybe even in the same country presents challenges, We believe that great communication is key to mitigating risk.
+                        </Text>
+                    </Stack>
+                    <Img
+                        border={'1px'}
+                        borderColor={mode('gray.400', 'gray.600')}
+                        rounded="2xl"
+                        objectFit="cover"
+                        userSelect={'none'}
+                        pointerEvents={'none'}
+                        w="full"
+                        h={{ sm: "64", md: "96", lg: "72", xl: "64" }}
+                        src={"srvcimg.src"}
+                        alt="Holding phone with app installed"
+                    />
+                </SimpleGrid>
+            </Box>
 
             <Box py={'3rem'} />
 
-            <Text pl={10} fontWeight="semibold" textTransform="uppercase" letterSpacing="wide" userSelect={'none'}>
-                {"Page Is Still Under construction..."}
-            </Text>
+            <LvlUp />
+
+            <Box py={'3rem'} />
         </>
     );
 }

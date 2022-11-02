@@ -16,6 +16,11 @@ module.exports = {
         destination: '/',
         permanent: true,
       },
+      {
+        source: '/submit',
+        destination: '/contact',
+        permanent: true,
+      },
     ];
   },
 }

@@ -1,5 +1,5 @@
 import React from 'react'
-import router, { Router, useRouter } from "next/router"
+import { useRouter } from "next/router"
 
 import {
   Box,
@@ -14,10 +14,6 @@ import {
   SimpleGrid,
   Icon,
   StackDivider,
-  Divider,
-  Grid,
-  GridItem,
-  VStack,
   Link,
 } from '@chakra-ui/react'
 
@@ -124,7 +120,7 @@ const IndexPage = () => {
         return (
           <>
             <NextSeo
-              title='Ochoa - Automating all Things | Development, Consulting & Digitalization'
+              title='Ochoa - Automating all Things | Agile Automation Development & Consulting'
               description='Improve your products and services with a digital transformation powered by Agile Automation.'
               canonical="https://ochoa.pro"
               languageAlternates={[
@@ -236,24 +232,20 @@ const IndexPage = () => {
               <SimpleGrid columns={{ base: 1, md: 3 }} spacing={10}>
                 <Feature1
                   icon={<Icon as={FcServices} w={10} h={10} />}
-                  title={'Usability'}
-                  text={
-                    "Applications can easily become very complex, changing the product or educating the user can become costly. Replicating the use of proven Technology Stacks and Frameworks allows us to deliver a simple experience to a complicated system."
-                  }
+                  title={indexData.block3.f1t}
+                  text={indexData.block3.f1b}
+
                 />
                 <Feature1
                   icon={<Icon as={FcApproval} w={10} h={10} />}
-                  title={'Compliance'}
-                  text={
-                    "Here are some of the regulations you might face while developing an application: GDPR, CCPA, AICPA SOC 2, HIPAA, CCPA, PCI, ISO/IEC 27001. Not complying can lead to severe fines. It's our job to make sure the technology complies with all the necessary regulations."
-                  }
+                  title={indexData.block3.f2t}
+                  text={indexData.block3.f2b}
+
                 />
                 <Feature1
                   icon={<Icon as={FcLock} w={10} h={10} />}
-                  title={'Security'}
-                  text={
-                    "There are more than fifty vulnerabilities reported each day, Maintaining IT assets updated, Securing Accounts from Data Breaches and Protecting Users from Social Engineering. The right team with security-conscious developers is essential for any application."
-                  }
+                  title={indexData.block3.f3t}
+                  text={indexData.block3.f3b}
                 />
               </SimpleGrid>
             </Box>
@@ -275,10 +267,10 @@ const IndexPage = () => {
                   >
                     Our Story
                   </Text> */}
-                  <Heading pl={2} pt={8}>Let&#39;s create a story together</Heading>
+                  <Heading pl={2} pt={8}>{indexData.block4.title}</Heading>
                   {/* <Heading>A digital Product design agency</Heading> */}
                   <Text pl={2} color={'gray.500'} fontSize={'lg'}>
-                    Connecting Technology with your goals, taking what is possible on your Business to new lengths.
+                    {indexData.block4.description}
                   </Text>
                   <Stack
                     spacing={2}
@@ -293,13 +285,13 @@ const IndexPage = () => {
                         <Icon as={IoPeopleOutline} color={mode('blue.600', 'blue.300')} w={5} h={5} />
                       }
                       iconBg={mode('blue.100', 'blue.900')}
-                      text={'Development Services'}
+                      text={indexData.block4.srvc1}
                     />
                     <Feature2
                       refx={'/services/digitalization'}
                       icon={<Icon as={IoRocketOutline} color={mode('green.600', 'green.300')} w={5} h={5} />}
                       iconBg={mode('green.100', 'green.900')}
-                      text={'Digital Transformation'}
+                      text={indexData.block4.srvc2}
                     />
                     <Feature2
                       refx={'/services/consultation'}
@@ -307,7 +299,7 @@ const IndexPage = () => {
                         <Icon as={IoBulbOutline} color={mode('orange.600', 'orange.300')} w={5} h={5} />
                       }
                       iconBg={mode('orange.100', 'orange.900')}
-                      text={'Project Consultation'}
+                      text={indexData.block4.srvc3}
                     />
                   </Stack>
                 </Stack>
@@ -318,9 +310,7 @@ const IndexPage = () => {
                     borderColor={'gray.600'}
                     // rounded={'xl'}
                     alt={'feature image'}
-                    src={
-                      iot.src
-                    }
+                    src={iot.src}
                     objectFit={'cover'}
                     userSelect={'none'}
                     pointerEvents={'none'}
@@ -332,6 +322,7 @@ const IndexPage = () => {
             <Box minH={'5rem'} />
 
             <LvlUp />
+
             <Box minH={'5rem'} />
 
           </>

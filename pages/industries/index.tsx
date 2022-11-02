@@ -10,28 +10,22 @@ import {
     SimpleGrid,
     HStack,
     Link,
+    Heading,
+    Img,
+    Stack,
 } from "@chakra-ui/react";
 import { NextSeo } from "next-seo";
 import NextLink from "next/link";
 
 import indexdat from "../../assets/services/index.json"
 import { useRouter } from "next/router";
-import { IoHammerOutline, IoVideocamOutline, IoShieldCheckmarkOutline } from "react-icons/io5";
+import { IoShieldCheckmarkOutline } from "react-icons/io5";
+import { MdOutlinePrecisionManufacturing } from "react-icons/md";
+import { BsCameraVideo } from "react-icons/bs";
 
 import { LvlUp } from "../../components";
 
-
-const Feature2 = (props: any) => {
-    return (
-        <Flex>
-            <Icon boxSize={12} fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true" color={mode('blue.600', 'blue.300')}>{props.icon}</Icon>
-            <Box ml={4}>
-                <Text fontSize="lg" fontWeight="semibold" lineHeight="6">{props.title}</Text>
-                <Text mt={2} color="gray.500">{props.children}</Text>
-            </Box>
-        </Flex>
-    )
-}
+import srvcimg from '../../public/img/index/industries.jpg'
 
 const Feature = (props: any) => {
     return (
@@ -47,16 +41,18 @@ const Feature = (props: any) => {
                     borderColor={mode('gray.300', 'gray.600')}
                 >
                     <HStack>
-                        <Icon
+                        <Box
                             boxSize={12}
                             _light={{ color: "brand.700" }}
                             mb={4}
                             fill="none"
-                            viewBox="0 0 24 24"
+                            // viewBox="0 0 24 24"
                             stroke="currentColor"
                             aria-hidden="true"
-                            as={props.icon}
-                        />
+                            fontSize="3rem"
+                        >
+                            {props.icon}
+                        </Box>
                         <Flex
                             transition={'all .3s ease'}
                             transform={'translateX(-10px)'}
@@ -69,11 +65,11 @@ const Feature = (props: any) => {
                         </Flex>
                     </HStack>
                     <chakra.h3
+                        // _groupHover={{ color: "brand.700" }}
                         mb={3}
                         fontSize="lg"
                         lineHeight="shorter"
                         fontWeight="bold"
-                    // _groupHover={{ color: "brand.700" }}
                     >
                         {props.title}
                     </chakra.h3>
@@ -100,8 +96,8 @@ const Index = () => {
                 return (
                     <>
                         <NextSeo
-                            title='!! - Automating all Things | Ochoa'
-                            description='!!We assemble and lead teams with the skills and tools needed for building the products and tools that power your business.'
+                            title='Industries We Serve - Automating all Things | Ochoa'
+                            description='!!changeme We assemble and lead teams with the skills and tools needed for building the products and tools that power your business.'
                             canonical="https://ochoa.pro/industries"
                             languageAlternates={[
                                 {
@@ -121,7 +117,7 @@ const Index = () => {
                         >
                             <Feature
                                 title="Manufacturing & Production"
-                                icon={IoHammerOutline}
+                                icon={<MdOutlinePrecisionManufacturing />}
                                 refx={'/industries/mnp'}
                             >
                                 Increase productivity, quality, efficiency and profit by Automating repetitive tasks.
@@ -129,7 +125,7 @@ const Index = () => {
 
                             <Feature
                                 title="Media & Entertainment"
-                                icon={IoVideocamOutline}
+                                icon={<BsCameraVideo />}
                                 refx={'/industries/mne'}
                             >
                                 Change experiences forever by implementing and delivering a more immersive environment.
@@ -137,7 +133,7 @@ const Index = () => {
 
                             <Feature
                                 title="Security & Safety"
-                                icon={IoShieldCheckmarkOutline}
+                                icon={<IoShieldCheckmarkOutline />}
                                 refx={'/industries/sns'}
                             >
                                 Create and implement solutions to ease safety chores and tasks and focus on products & services.
@@ -146,13 +142,36 @@ const Index = () => {
 
                         <Box py={'3rem'} />
 
+                        <Box maxW={{ base: 'xl', md: 'container.xl' }} mx="auto" px={{ base: '6', md: '8' }}>
+                            <SimpleGrid columns={{ base: 1, md: 2 }} spacing={{ base: '16', md: '8' }}>
+                                <Stack my={2}>
+                                    <Heading>!!changeme Automating all Things Together</Heading>
+                                    <Text maxW={'34rem'} pt={2} color={mode('gray.600', 'gray.400')} fontSize={'lg'}>
+                                        With Industry expertise in these three sectors: Manufacturing & Production, Media & Entretainment and Security & Safety,
+                                        We are able to create automated systems and products that comply or for compliance of any regulations.
+                                    </Text>
+                                </Stack>
+                                <Img
+                                    border={'1px'}
+                                    borderColor={mode('gray.400', 'gray.600')}
+                                    rounded="2xl"
+                                    objectFit="cover"
+                                    userSelect={'none'}
+                                    pointerEvents={'none'}
+                                    w="full"
+                                    h={{ sm: "64", md: "96", lg: "72", xl: "64" }}
+                                    src={srvcimg.src}
+                                    alt="Automation Support Center"
+                                />
+                            </SimpleGrid>
+                        </Box>
+
+                        <Box py={'3rem'} />
+
                         <LvlUp />
 
                         <Box py={'3rem'} />
 
-                        <Text pl={10} fontWeight="semibold" textTransform="uppercase" letterSpacing="wide" userSelect={'none'}>
-                            {"Page Is Still Under construction..."}
-                        </Text>
                     </>
                 )
             })}

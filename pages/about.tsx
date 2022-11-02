@@ -11,7 +11,6 @@ import {
   Flex,
   Divider,
   Grid,
-  chakra,
   Icon,
   Center,
   Button,
@@ -19,7 +18,7 @@ import {
   Link,
   HStack,
 } from '@chakra-ui/react';
-import router, { useRouter } from "next/router"
+import { useRouter } from "next/router"
 import { NextSeo } from 'next-seo';
 import NextLink from 'next/link';
 
@@ -56,16 +55,17 @@ const BuiltWith = (children: any) => {
       maxW={{ lg: '220px', base: 'full' }}
       w={'full'}
       bg={mode('gray.50', 'gray.700')}
-      _hover={{ bg: mode("brand.50", "brand.800"), boxShadow: 'md', }}
-      cursor={'pointer'}
+      _hover={{ /*bg: mode("brand.50", "brand.800"),*/ opacity: '0.9', boxShadow: 'sm', borderColor: mode('gray.100', 'gray.600') }}
+      // cursor={'pointer'}
       // boxShadow={'md'}
       border='1px'
-      borderColor={mode('gray.400', 'gray.600')}
+      borderColor={mode('gray.50', 'gray.600')}
       rounded={'md'}
       // boxShadow={'md'}
       p={2}
       overflow={'hidden'}
       maxH={'auto'}
+      opacity={0.6}
     >
       <Center>
         <Box alignContent={'center'} h={'auto'} m={-2} pos={'relative'}>
@@ -78,7 +78,7 @@ const BuiltWith = (children: any) => {
 
 const Featurex = (props: any) => {
   return (
-    <Box border={'1px'} borderColor={mode('gray.400', 'gray.600')} w={'full'} bg={mode('gray.50', 'gray.700')} boxShadow={'sm'} rounded={'md'} p={6} overflow={'hidden'}>
+    <Box border={'1px'} borderColor={mode('gray.200', 'gray.600')} w={'full'} bg={mode('gray.50', 'gray.700')} boxShadow={'sm'} rounded={'md'} p={6} overflow={'hidden'}>
       <Box h={'auto'} bg={'gray.100'} mt={-6} mx={-6} mb={6} pos={'relative'}>
         <Image userSelect={'none'} pointerEvents={'none'} alt={'img'} src={props.img} />
       </Box>
@@ -253,8 +253,8 @@ const IndexAbout = () => {
                 <Heading textAlign={'center'} fontWeight="bold" maxW="xlg" mx="auto">
                   {"IoT Hardware made for and used by Industry Leading Companies"}
                 </Heading>
-                <Text pt={2} fontSize={'lg'} color={'gray.500'}>{"Developed by us in Orlando, FL. and manufactured in Hong Kong, SAR."}</Text>
-                <SimpleGrid pt={6} columns={{ base: 1, sm: 2, md: 2, lg: 3 }} spacing={'6'}>
+                <Text pt={2} fontSize={'lg'} color={mode('gray.600', 'gray.400')}>{"Developed by us in Orlando, FL. and manufactured in Hong Kong, SAR."}</Text>
+                <SimpleGrid pt={6} columns={{ base: 1, sm: 2, md: 3, lg: 3 }} spacing={'6'}>
                   <Featurex img={img1.src} title={"Production Automation Board"} />
                   <Featurex img={img2.src} title={"Production Automation Board"} />
                   <Featurex img={img3.src} title={"Production Automation Board"} />
@@ -266,26 +266,36 @@ const IndexAbout = () => {
 
               <Divider mt={8} mb={8} />
 
-              <Heading textAlign={'center'} fontWeight="bold" maxW="xlg" mx="auto">
-                {"Be the first on Our Clients List:"}
-              </Heading>
-              <SimpleGrid columns={{ base: 1, sm: 2, md: 3, lg: 5 }} mt="8" spacing={'6'}>
+              <Box textAlign="center">
+                <Heading size="lg" mb="4">
+                  Be the first on Our Clients List:
+                </Heading>
+                {/* <Text maxW="2xl" mx="auto">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                  incididunt ut labore et dolore magna aliqua elit consectetur adipiscing.
+                </Text> */}
+              </Box>
+              <SimpleGrid
+                // opacity={0.8}
+                columns={{ base: 1, sm: 2, md: 3, lg: 5 }}
+                mt="8"
+                spacing={'6'}
+              >
                 <BuiltWith img={img1x.src} />
                 <BuiltWith img={img2x.src} />
                 <BuiltWith img={img3x.src} />
                 <BuiltWith img={img4x.src} />
                 <BuiltWith img={img5x.src} />
               </SimpleGrid>
-              <Stack pt={"8"} direction={{ base: "column", sm: "row", }} spacing={2} justifyContent={{ sm: "left", md: "center", }}>
-                <NextLink href={"/contact"} passHref>
-                  <Link>
+              <NextLink href={"/contact"} passHref>
+                <Link cursor={'inherit'} _hover={{ textDecorationLine: 'none' }}>
+                  <Stack pt={"8"} direction={{ base: "column", md: "row", }} spacing={2} justifyContent={{ sm: "left", md: "center", }}>
                     <Button size={'lg'} colorScheme={'brand'}/* rightIcon={<FiMail />} onClick={() => router.push("/contact")} */>
                       {"Contact Us"}
                     </Button>
-                  </Link>
-                </NextLink>
-              </Stack>
-
+                  </Stack>
+                </Link>
+              </NextLink>
               <Divider mt={8} mb={5} />
             </Container>
           </>)

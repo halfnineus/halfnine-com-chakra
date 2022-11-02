@@ -14,7 +14,6 @@ import {
     InputLeftElement,
     Textarea,
     useColorModeValue as mode,
-    Link,
     useToast,
     useDisclosure,
     HStack,
@@ -33,9 +32,10 @@ import { BsPerson, BsBuilding } from 'react-icons/bs'
 
 import diagimg from '../public/img/contact/bg.jpg'
 
+import router from 'next/router'
 import { useState } from "react"
 import { NextSeo } from "next-seo";
-import router, { useRouter } from "next/router";
+import { useRouter } from "next/router";
 import { FiExternalLink } from "react-icons/fi";
 
 import indexdat from "../assets/contact.json"

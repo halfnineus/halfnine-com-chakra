@@ -21,14 +21,19 @@
         "button": "Email us"
       },
       "block3": {
-        "h3_1": "We Focus On Helping You Avoid",
-        "h3_2": "The Industry's Most Common Problems",
-        "item1": "`dot`",
-        "item2": "`dot`",
-        "item3": "`dot`",
-        "item4": "Keep the security of y`dot`",
-        "item5": "Keep your Data and Information Secure`dot`",
-        "options": "Learn More"
+        "f1t": "Usability",
+        "f1b": "Applications can easily become very complex, changing the product or educating the user can become costly. Replicating the use of proven Technology Stacks and Frameworks allows us to deliver a simple experience to a complicated system.",
+        "f2t": "Compliance",
+        "f2b": "Here are some of the regulations you might face while developing an application: GDPR, CCPA, AICPA SOC 2, HIPAA, CCPA, PCI, ISO/IEC 27001. Not complying can lead to severe fines. It's our job to make sure the technology complies with all the necessary regulations.",
+        "f3t": "Security",
+        "f3b": "There are more than fifty vulnerabilities reported each day, Maintaining IT assets updated, Securing Accounts from Data Breaches and Protecting Users from Social Engineering. The right team with security-conscious developers is essential for any application."
+      },
+      "block4": {
+        "title": "Let's create a story together",
+        "description": "Connecting Technology with your goals, taking what is possible on your Business to new lengths.",
+        "srvc1": "Development Services",
+        "srvc2": "Digital Transformation",
+        "srvc3": "Project Consultation"
       }
     },
     {
@@ -52,14 +57,19 @@
         "button": "Envíanos un correo electrónico"
       },
       "block3": {
-        "h3_1": "Nos enfocamos en ayudarte a evitar",
-        "h3_2": "Los problemas más comunes de la industria",
-        "item1": "!!Escalabilidad - servicio de capacidad que cambia los volúmenes de la demanda del servicio.",
-        "item2": "!!Adaptabilidad - Ser capaz de manejar los cambios en función de los requisitos y la estrategia.",
-        "item3": "!!Flexibilidad - responda a los terremotos en la arquitectura sin problemas.",
-        "item4": "!!Sobreingeniería - Mientras funcione, está bien, ¿no? No lo creemos.",
-        "item5": "!!Desempeño - Esta reunión podría haber sido un correo electrónico.",
-        "options": "Mas Informacion."
+        "f1t": "Usabilidad",
+        "f1b": "Las aplicaciones pueden volverse muy complejas fácilmente, cambiar el producto o educar al usuario puede volverse costoso. Reproducir el uso de pilas y marcos tecnológicos probados nos permite ofrecer una experiencia simple a un sistema complicado.",
+        "f2t": "Cumplimiento",
+        "f2b": "Estas son algunas de las regulaciones que podría enfrentar al desarrollar una aplicación: GDPR, CCPA, AICPA SOC 2, HIPAA, CCPA, PCI, ISO/IEC 27001. El incumplimiento puede generar multas severas. Es nuestro trabajo asegurarnos de que la tecnología cumpla con todas las regulaciones necesarias.",
+        "f3t": "Seguridad",
+        "f3b": "Hay más de cincuenta vulnerabilidades reportadas cada día, manteniendo actualizados los activos de TI, asegurando las cuentas de las filtraciones de datos y protegiendo a los usuarios de la ingeniería social. El equipo adecuado con desarrolladores conscientes de la seguridad es esencial para cualquier aplicación."
+      },
+      "block4": {
+        "title": "Creemos una historia juntos",
+        "description": "Conectando la tecnología con sus objetivos, llevando lo que es posible en su negocio a nuevas longitudes.",
+        "srvc1": "Servicios de desarrollo",
+        "srvc2": "Transformación Digital",
+        "srvc3": "Consulta de proyectos"
       }
     }
   ]

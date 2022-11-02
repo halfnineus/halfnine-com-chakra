@@ -26,18 +26,12 @@ const Feature = (props: any) => {
                     h={12}
                     w={12}
                     rounded="md"
-                    _light={{ bg: "brand.500" }}
                     color="white"
+                    bg={mode("gray.100", "brand.700")}
                 >
-                    <Icon
-                        boxSize={6}
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                        aria-hidden="true"
-                        as={props.icon}
-                        color={'white'}
-                    />
+                    <Box color={mode("brand.600", "white")} fontSize="1.8rem">
+                        {props.icon}
+                    </Box>
                 </Flex>
             </Flex>
             <Box ml={4}>
@@ -62,7 +56,7 @@ const Consultation = () => {
         <>
             <NextSeo
                 title=' Optimize Applicable Technology Consulting - Automating all Things | Ochoa'
-                description='!!'
+                description='!!changeme '
                 canonical="https://ochoa.pro/services/consultation"
                 languageAlternates={[
                     {
@@ -112,7 +106,7 @@ const Consultation = () => {
                             color="gray.600"
                             _dark={{ color: "gray.500" }}
                         >
-                            !!Accelerate time-to-market, increase agility, and streamline software deployment, support, and maintenance with a reliable DevOps service provider by your side.
+                            !!changeme Accelerate time-to-market, increase agility, and streamline software deployment, support, and maintenance with a reliable DevOps service provider by your side.
                         </chakra.p>
                     </Box>
                     <GridItem colSpan={2}>
@@ -123,19 +117,19 @@ const Consultation = () => {
                             gridColumnGap={{ md: 8 }}
                             gridRowGap={{ md: 10 }}
                         >
-                            <Feature icon={CgCrown} title="!!Strategy & Features">
-                                !!Improve your conversion rates by monitoring exactly what&#39;s going on while your customers are in trial.
+                            <Feature icon={<CgCrown />} title="!!changeme Strategy & Features">
+                                !!changeme Improve your conversion rates by monitoring exactly what&#39;s going on while your customers are in trial.
                             </Feature>
-                            <Feature icon={CgPen} title="!!UX & Architecture">
-                                !!Manage all your online and offline sales in one place with a
+                            <Feature icon={<CgPen />} title="!!changeme UX & Architecture">
+                                !!changeme Manage all your online and offline sales in one place with a
                                 single integration, simplifying reporting and reconciliation.
                             </Feature>
-                            <Feature icon={CgTerminal} title="!!Development & Testing">
-                                !!Provide a seamless customer experience across channels, like
+                            <Feature icon={<CgTerminal />} title="!!changeme Development & Testing">
+                                !!changeme Provide a seamless customer experience across channels, like
                                 reserving online and picking up in store.
                             </Feature>
-                            <Feature icon={CgSupport} title="!!Support & Maintenance">
-                                !!Provide a seamless customer experience across channels, like
+                            <Feature icon={<CgSupport />} title="!!changeme Support & Maintenance">
+                                !!changeme Provide a seamless customer experience across channels, like
                                 reserving online and picking up in store.
                             </Feature>
                         </Stack>
@@ -147,6 +141,7 @@ const Consultation = () => {
                 <Text fontWeight="semibold" textTransform="uppercase" letterSpacing="wide" userSelect={'none'}>
                     {"Page Is Still Under construction..."}
                 </Text>
+
                 <Divider my={8} />
 
             </Box>
