@@ -102,7 +102,7 @@ const Digitalization = () => {
                             color="gray.600"
                             _dark={{ color: "gray.500" }}
                         >
-                            Transform your manually controlled enviroments into digitally automated systems
+                            Transform your manually controlled systems and enviroments into digitally automated technology.
                         </chakra.p>
                     </Box>
                     <GridItem colSpan={2}>
@@ -113,18 +113,18 @@ const Digitalization = () => {
                             gridColumnGap={{ md: 8 }}
                             gridRowGap={{ md: 10 }}
                         >
-                            <Feature icon={<CgCrown />} title="!!changeme Strategy & Features">
+                            <Feature icon={<CgCrown />} title="Strategy Transformation">
                                 !!changeme Improve your conversion rates by monitoring exactly what&#39;s going on while your customers are in trial.
                             </Feature>
-                            <Feature icon={<CgPen />} title="!!changeme UX & Architecture">
+                            <Feature icon={<CgPen />} title="Operations Realignment">
                                 !!changeme Manage all your online and offline sales in one place with a
                                 single integration, simplifying reporting and reconciliation.
                             </Feature>
-                            <Feature icon={<CgTerminal />} title="!!changeme Development & Testing">
+                            <Feature icon={<CgTerminal />} title="Sustainable Change">
                                 !!changeme Provide a seamless customer experience across channels, like
                                 reserving online and picking up in store.
                             </Feature>
-                            <Feature icon={<CgSupport />} title="!!changeme Support & Maintenance">
+                            <Feature icon={<CgSupport />} title="Change Management">
                                 !!changeme Provide a seamless customer experience across channels, like
                                 reserving online and picking up in store.
                             </Feature>

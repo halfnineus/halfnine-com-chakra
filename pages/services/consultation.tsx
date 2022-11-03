@@ -10,8 +10,7 @@ import {
     useColorModeValue as mode,
 } from "@chakra-ui/react";
 import { NextSeo } from "next-seo";
-import { CgCrown, CgTerminal, CgPen, CgSupport } from 'react-icons/cg'
-
+import { HiOutlineDocumentMagnifyingGlass, HiOutlineDocumentChartBar, HiOutlineBeaker, HiOutlineCheckBadge } from 'react-icons/hi2'
 
 const Feature = (props: any) => {
     return (
@@ -114,18 +113,18 @@ const Consultation = () => {
                             gridColumnGap={{ md: 8 }}
                             gridRowGap={{ md: 10 }}
                         >
-                            <Feature icon={<CgCrown />} title="!!changeme Strategy & Features">
+                            <Feature icon={<HiOutlineDocumentMagnifyingGlass />} title="Feasibility Study">
                                 !!changeme Improve your conversion rates by monitoring exactly what&#39;s going on while your customers are in trial.
                             </Feature>
-                            <Feature icon={<CgPen />} title="!!changeme UX & Architecture">
+                            <Feature icon={<HiOutlineDocumentChartBar />} title="Performance Assessment">
                                 !!changeme Manage all your online and offline sales in one place with a
                                 single integration, simplifying reporting and reconciliation.
                             </Feature>
-                            <Feature icon={<CgTerminal />} title="!!changeme Development & Testing">
+                            <Feature icon={<HiOutlineBeaker />} title="Research and Development">
                                 !!changeme Provide a seamless customer experience across channels, like
                                 reserving online and picking up in store.
                             </Feature>
-                            <Feature icon={<CgSupport />} title="!!changeme Support & Maintenance">
+                            <Feature icon={<HiOutlineCheckBadge />} title="Validation">
                                 !!changeme Provide a seamless customer experience across channels, like
                                 reserving online and picking up in store.
                             </Feature>

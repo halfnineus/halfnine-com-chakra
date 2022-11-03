@@ -31,6 +31,7 @@ import img1hw from '../../public/img/services/hardware1.png'
 import img2hw from '../../public/img/services/hardware2.png'
 import img3hw from '../../public/img/services/hardware3.png'
 import img4hw from '../../public/img/services/hardware4.png'
+import { LvlUp } from "../../components";
 
 const BuiltWith = (children: any) => {
     return (
@@ -53,7 +54,7 @@ const BuiltWith = (children: any) => {
         >
             <Center>
                 <Box alignContent={'center'} h={'auto'} m={-2} pos={'relative'}>
-                    <Image opacity={0.6} _groupHover={{ opacity: '0.9', }} userSelect={'none'} pointerEvents={'none'} alt={'img'} src={children.img} />
+                    <Image opacity={{ md: 0.6, base: 1 }} _groupHover={{ opacity: '0.9', }} userSelect={'none'} pointerEvents={'none'} alt={'img'} src={children.img} />
                     <Text fontWeight={'bold'} color={mode('gray.700', "gray.400")} textAlign={'center'}>{children.txt}</Text>
                 </Box>
             </Center>
@@ -164,14 +165,14 @@ const Development = () => {
                             gridRowGap={{ md: 10 }}
                         >
                             <Feature icon={<SiLichess />} title="Strategy & Features">
-                                Our team will help to outline the best strategies and features for your products and applications, Identifying challanges and key leverage points.
+                                Our team will help to outline the best strategies and features for your products and applications, identifying challenges and key leverage points.
                             </Feature>
                             <Feature icon={<GiFountainPen />} title="UX & Architecture">
-                                Our team will help you chose the right technologies to create a technology stack that fits the desired User Experiencie.
+                                Our team will help you chose the right technologies to create a technology stack that fits the desired User Experience.
                             </Feature>
                             <Feature icon={<BsTerminal />} title="Development & Testing">
-                                With the right team of developers, managers, analysts and testers
-                                we are able to create functioning technology while enabling you to fully control this process through transparency and achieving a succesful launch.
+                                With the right team of developers, managers, analysts, and testers
+                                we are able to create functioning technology while enabling you to fully control this process through transparency and achieving a successful launch.
                             </Feature>
                             <Feature icon={<BsLifePreserver />} title="Support & Maintenance">
                                 Providing a direct line to support requests and providing fast response to bugs and issues,
@@ -194,7 +195,7 @@ const Development = () => {
                 </Box>
 
                 <Center>
-                    <Stack direction={{ base: 'column', sm: 'column', lg: 'row' }} spacing={'32'}>
+                    <Stack direction={{ base: 'column', sm: 'column', md: 'column', lg: 'column', xl: 'row' }} spacing={'32'}>
                         <Box maxW={'container.xl'}>
                             <Box textAlign="center">
                                 <Heading fontSize={'2xl'} mb="4">
@@ -246,10 +247,13 @@ const Development = () => {
                     </Stack >
                 </Center>
 
-                <Divider my={8} />
+                <Divider mt={"3rem"} />
+
             </Box>
 
+            <LvlUp />
 
+            <Box p={"2rem"} />
         </>
         // </Flex>
     );
