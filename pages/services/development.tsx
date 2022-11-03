@@ -2,22 +2,65 @@ import {
     chakra,
     Box,
     Flex,
-    Icon,
     SimpleGrid,
     Stack,
     GridItem,
     Divider,
-    Container,
-    Heading,
     Text,
     useColorModeValue as mode,
+    Heading,
+    Center,
+    Image,
 } from "@chakra-ui/react";
 import { NextSeo } from "next-seo";
-import { CgTerminal, CgPen, CgSupport } from 'react-icons/cg'
+
 import { SiLichess } from 'react-icons/si'
 import { BsLifePreserver } from 'react-icons/bs'
 import { GiFountainPen } from 'react-icons/gi'
 import { BsTerminal } from 'react-icons/bs'
+
+import img1x from '../../public/img/services/cloud1.png'
+import img2x from '../../public/img/services/cloud2.png'
+import img3x from '../../public/img/services/cloud3.png'
+import img4x from '../../public/img/services/cloud4.png'
+import img1wf from '../../public/img/services/webframeworks1.png'
+import img2wf from '../../public/img/services/webframeworks2.png'
+import img3wf from '../../public/img/services/webframeworks3.png'
+import img4wf from '../../public/img/services/webframeworks4.png'
+import img1hw from '../../public/img/services/hardware1.png'
+import img2hw from '../../public/img/services/hardware2.png'
+import img3hw from '../../public/img/services/hardware3.png'
+import img4hw from '../../public/img/services/hardware4.png'
+
+const BuiltWith = (children: any) => {
+    return (
+        <Box
+            maxW={{ lg: '220px', base: 'full' }}
+            w={'full'}
+            bg={mode('gray.50', 'gray.700')}
+            _hover={{ /*bg: mode("brand.50", "brand.800"),*/ boxShadow: 'sm', borderColor: mode('gray.100', 'gray.600') }}
+            // cursor={'pointer'}
+            // boxShadow={'md'}
+            border='1px'
+            borderColor={mode('gray.50', 'gray.600')}
+            rounded={'md'}
+            // boxShadow={'md'}
+            p={2}
+            overflow={'hidden'}
+            maxH={'auto'}
+            role={'group'}
+        // cursor={'context-menu'}
+        >
+            <Center>
+                <Box alignContent={'center'} h={'auto'} m={-2} pos={'relative'}>
+                    <Image opacity={0.6} _groupHover={{ opacity: '0.9', }} userSelect={'none'} pointerEvents={'none'} alt={'img'} src={children.img} />
+                    <Text fontWeight={'bold'} color={mode('gray.700', "gray.400")} textAlign={'center'}>{children.txt}</Text>
+                </Box>
+            </Center>
+        </Box>
+    )
+}
+
 
 const Development = () => {
     const Feature = (props: any) => {
@@ -55,14 +98,6 @@ const Development = () => {
         );
     };
     return (
-        // <Flex
-        //     bg="#edf3f8"
-        //     _dark={{ bg: "#3e3e3e" }}
-        //     p={20}
-        //     w="auto"
-        //     justifyContent="center"
-        //     alignItems="center"
-        // >
         <>
             <NextSeo
                 title='Outsource Custom Development Services - Automating all Things | Ochoa'
@@ -135,32 +170,83 @@ const Development = () => {
                                 Our team will help you chose the right technologies to create a technology stack that fits the desired User Experiencie.
                             </Feature>
                             <Feature icon={<BsTerminal />} title="Development & Testing">
-                                !!changeme A balanced team of app developers, project managers, business analysts,
-                                and software testers creates perfectly functioning bespoke apps and integrates them into your ecosystem
-                                quickly and transparently, equipping it with new functionality with each new iteration.
-                                {/* Enabling you to fully control this process through transparency to achieve a succesful launch */}
+                                With the right team of developers, managers, analysts and testers
+                                we are able to create functioning technology while enabling you to fully control this process through transparency and achieving a succesful launch.
                             </Feature>
                             <Feature icon={<BsLifePreserver />} title="Support & Maintenance">
-                                !!changeme After the app goes live, we arrange live app introductions and support, create exhaustive to-dos,
-                                text and video manuals and guides for your new software. We also provide application support & maintenance
-                                and continue adding new features as necessary.
-                                {/* By prioritizing collaboration and change we deliver the desired value. */}
+                                Providing a direct line to support requests and providing fast response to bugs and issues,
+                                saves valuable time for any issues that may be presented.
                             </Feature>
                         </Stack>
                     </GridItem>
                 </SimpleGrid>
 
-                <Text>
-                    Our Expertise: IoT, Cloud, Cross-platform, Native, Hybrid, Web.<br />
-                </Text>
-
                 <Divider my={8} />
 
-                <Text fontWeight="semibold" textTransform="uppercase" letterSpacing="wide" userSelect={'none'}>
-                    {"Page Is Still Under construction..."}
-                </Text>
-                <Divider my={8} />
+                <Box pb={8} textAlign="center">
+                    <Heading size="lg" mb="4">
+                        Our Capabilities and Beyond:
+                    </Heading>
+                    <Text maxW="2xl" mx="auto">
+                        These technologies are industry standard when it comes to development capabilities.<br />
+                        We Study these, their updates and research the market for more emerging technologies.
+                    </Text>
+                </Box>
 
+                <Center>
+                    <Stack direction={{ base: 'column', sm: 'column', lg: 'row' }} spacing={'32'}>
+                        <Box maxW={'container.xl'}>
+                            <Box textAlign="center">
+                                <Heading fontSize={'2xl'} mb="4">
+                                    Cloud:
+                                </Heading>
+                            </Box>
+                            <SimpleGrid
+                                columns={{ base: 1, sm: 2, md: 2, lg: 2 }}
+                                spacing={'6'}
+                            >
+                                <BuiltWith img={img1x.src} txt={'Amazon Web Services'} />
+                                <BuiltWith img={img3x.src} txt={'Google Cloud'} />
+                                <BuiltWith img={img2x.src} txt={'Azure'} />
+                                <BuiltWith img={img4x.src} txt={'Vercel'} />
+                            </SimpleGrid>
+                        </Box>
+                        <Box maxW={'container.xl'}>
+                            <Box textAlign="center">
+                                <Heading fontSize={'2xl'} mb="4">
+                                    Web Frameworks:
+                                </Heading>
+                            </Box>
+                            <SimpleGrid
+                                columns={{ base: 1, sm: 2, md: 2, lg: 2 }}
+                                spacing={'6'}
+                            >
+                                <BuiltWith img={img1wf.src} txt={"Microsoft ASP.NET"} />
+                                <BuiltWith img={img2wf.src} txt={"Express.js"} />
+                                <BuiltWith img={img3wf.src} txt={"Next.js"} />
+                                <BuiltWith img={img4wf.src} txt={"Nuxt.js"} />
+                            </SimpleGrid>
+                        </Box>
+                        <Box maxW={'container.xl'}>
+                            <Box textAlign="center">
+                                <Heading fontSize={'2xl'} mb="4">
+                                    Hardware Development:
+                                </Heading>
+                            </Box>
+                            <SimpleGrid
+                                columns={{ base: 1, sm: 2, md: 2, lg: 2 }}
+                                spacing={'6'}
+                            >
+                                <BuiltWith img={img1hw.src} txt={'Raspberry Pi'} />
+                                <BuiltWith img={img2hw.src} txt={'Arduino'} />
+                                <BuiltWith img={img3hw.src} txt={'Odroid'} />
+                                <BuiltWith img={img4hw.src} txt={'Asus Tinker'} />
+                            </SimpleGrid>
+                        </Box>
+                    </Stack >
+                </Center>
+
+                <Divider my={8} />
             </Box>
 
 

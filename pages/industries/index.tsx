@@ -145,10 +145,10 @@ const Index = () => {
                         <Box maxW={{ base: 'xl', md: 'container.xl' }} mx="auto" px={{ base: '6', md: '8' }}>
                             <SimpleGrid columns={{ base: 1, md: 2 }} spacing={{ base: '16', md: '8' }}>
                                 <Stack my={2}>
-                                    <Heading>!!changeme Automating all Things Together</Heading>
+                                    <Heading>Revolutionizing Every Process Together</Heading>
                                     <Text maxW={'34rem'} pt={2} color={mode('gray.600', 'gray.400')} fontSize={'lg'}>
-                                        With Industry expertise in these three sectors: Manufacturing & Production, Media & Entretainment and Security & Safety,
-                                        We are able to create automated systems and products that comply or for compliance of any regulations.
+                                        {`With Experience Developing (Industrial Internet of Things), We are able to create automated systems and products that comply or for compliance of any regulations and `}
+                                        serve the sectors of Manufacturing & Production, Media & Entretainment and Security & Safety,
                                     </Text>
                                 </Stack>
                                 <Img
@@ -161,7 +161,7 @@ const Index = () => {
                                     w="full"
                                     h={{ sm: "64", md: "96", lg: "72", xl: "64" }}
                                     src={srvcimg.src}
-                                    alt="Automation Support Center"
+                                    alt="Farm Management Checklist"
                                 />
                             </SimpleGrid>
                         </Box>

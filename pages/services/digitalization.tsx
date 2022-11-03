@@ -2,13 +2,10 @@ import {
     chakra,
     Box,
     Flex,
-    Icon,
     SimpleGrid,
     Stack,
     GridItem,
     Divider,
-    Container,
-    Heading,
     Text,
     useColorModeValue as mode,
 } from "@chakra-ui/react";
@@ -28,7 +25,7 @@ const Feature = (props: any) => {
                     color="white"
                     bg={mode("gray.100", "brand.700")}
                 >
-                    <Box color={mode("brand.600", "white")} fontSize="1.8rem">
+                    <Box color={mode("brand.600", "white")} fontSize="1.5rem">
                         {props.icon}
                     </Box>
                 </Flex>

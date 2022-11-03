@@ -4,7 +4,7 @@ import { NextSeo } from "next-seo";
 import NextLink from "next/link";
 
 import { IoStopwatchOutline, IoCashOutline, IoTerminalOutline, IoTimerOutline } from "react-icons/io5";
-import { SiMattermost } from "react-icons/si";
+import srvcimg from '../../public/img/index/our-approach.jpg'
 
 import { LvlUp } from "../../components";
 
@@ -120,12 +120,11 @@ const Index = () => {
             <Box maxW={{ base: 'xl', md: 'container.xl' }} mx="auto" px={{ base: '6', md: '8' }}>
                 <SimpleGrid columns={{ base: 1, md: 2 }} spacing={{ base: '16', md: '8' }}>
                     <Stack my={2}>
-                        <Heading>!!changeme Automating all Things Together</Heading>
+                        <Heading>Finding Big Solutions Together</Heading>
                         <Text maxW={'34rem'} pt={2} color={mode('gray.600', 'gray.400')} fontSize={'lg'}>
-                            !!changeme Outsourcing reduces costs by helping you avoid the industry&apos;s most common problems and
-                            freeing your time to focus on big picture strategies.
-                            Improve your consistency and reliability, allow faster delivery and infrastructure changes.
-                            Not having talent in-house or maybe even in the same country presents challenges, We believe that great communication is key to mitigating risk.
+                            Our agile development strategies and solutions are focused on advancing innovation and driving powerful outcomes,
+                            Focus on clients and companies making a return on investment by mitigating risk and increasing client satisfaction,
+                            Developing products to help you focus on market research and other big picture strategies.
                         </Text>
                     </Stack>
                     <Img
@@ -137,8 +136,8 @@ const Index = () => {
                         pointerEvents={'none'}
                         w="full"
                         h={{ sm: "64", md: "96", lg: "72", xl: "64" }}
-                        src={"srvcimg.src"}
-                        alt="Holding phone with app installed"
+                        src={srvcimg.src}
+                        alt="Analytics Inspecting"
                     />
                 </SimpleGrid>
             </Box>

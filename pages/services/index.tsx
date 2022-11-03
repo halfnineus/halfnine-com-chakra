@@ -38,22 +38,11 @@ const Feature = (props: any) => {
                     borderColor={mode('gray.300', 'gray.600')}
                 >
                     <HStack>
-                        {/* <Icon
-                            boxSize={12}
-                            _light={{ color: "brand.700" }}
-                            mb={4}
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            stroke="currentColor"
-                            aria-hidden="true"
-                            as={props.icon}
-                        /> */}
                         <Box
                             boxSize={12}
                             _light={{ color: "brand.700" }}
                             mb={4}
                             fill="none"
-                            // viewBox="0 0 24 24"
                             stroke="currentColor"
                             aria-hidden="true"
                             fontSize="3rem"
@@ -152,7 +141,7 @@ const Index = () => {
                         <Box maxW={{ base: 'xl', md: 'container.xl' }} mx="auto" px={{ base: '6', md: '8' }}>
                             <SimpleGrid columns={{ base: 1, md: 2 }} spacing={{ base: '16', md: '8' }}>
                                 <Stack my={2}>
-                                    <Heading>Automating all Things Together</Heading>
+                                    <Heading>Automating All Things Together</Heading>
                                     <Text maxW={'34rem'} pt={2} color={mode('gray.600', 'gray.400')} fontSize={'lg'}>
                                         Outsourcing reduces costs by helping you avoid the industry&apos;s most common problems and
                                         freeing your time to focus on big picture strategies.
