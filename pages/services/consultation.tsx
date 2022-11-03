@@ -6,11 +6,11 @@ import {
     Stack,
     GridItem,
     Divider,
-    Text,
     useColorModeValue as mode,
 } from "@chakra-ui/react";
 import { NextSeo } from "next-seo";
 import { HiOutlineDocumentMagnifyingGlass, HiOutlineDocumentChartBar, HiOutlineBeaker, HiOutlineCheckBadge } from 'react-icons/hi2'
+import { LvlUp } from "../../components";
 
 const Feature = (props: any) => {
     return (
@@ -52,7 +52,7 @@ const Consultation = () => {
         <>
             <NextSeo
                 title=' Optimize Applicable Technology Consulting - Automating all Things | Ochoa'
-                description='!!changeme '
+                description={`Find the leading practices in development, increase your organization's agility to achieve powerful outcomes.`}
                 canonical="https://ochoa.pro/services/consultation"
                 languageAlternates={[
                     {
@@ -102,7 +102,7 @@ const Consultation = () => {
                             color="gray.600"
                             _dark={{ color: "gray.500" }}
                         >
-                            !!changeme Accelerate time-to-market, increase agility, and streamline software deployment, support, and maintenance with a reliable DevOps service provider by your side.
+                            Find the leading practices in development, increase your organization's agility to achieve powerful outcomes.
                         </chakra.p>
                     </Box>
                     <GridItem colSpan={2}>
@@ -114,19 +114,16 @@ const Consultation = () => {
                             gridRowGap={{ md: 10 }}
                         >
                             <Feature icon={<HiOutlineDocumentMagnifyingGlass />} title="Feasibility Study">
-                                !!changeme Improve your conversion rates by monitoring exactly what&#39;s going on while your customers are in trial.
+                                {`Is your project viable? Find out through our TELOS report, (Technical, Economic, Legal, Operational, Scheduling)`}
                             </Feature>
                             <Feature icon={<HiOutlineDocumentChartBar />} title="Performance Assessment">
-                                !!changeme Manage all your online and offline sales in one place with a
-                                single integration, simplifying reporting and reconciliation.
+                                Evaluate your organization employees and leaders on their Performance, Knowledge, and Skills
                             </Feature>
                             <Feature icon={<HiOutlineBeaker />} title="Research and Development">
-                                !!changeme Provide a seamless customer experience across channels, like
-                                reserving online and picking up in store.
+                                Research through industry experts the capabilities of your projects and take them to the next level.
                             </Feature>
                             <Feature icon={<HiOutlineCheckBadge />} title="Validation">
-                                !!changeme Provide a seamless customer experience across channels, like
-                                reserving online and picking up in store.
+                                Improve the reliably of your production and services with data gathered through information technology.
                             </Feature>
                         </Stack>
                     </GridItem>
@@ -134,13 +131,11 @@ const Consultation = () => {
 
                 <Divider my={8} />
 
-                <Text fontWeight="semibold" textTransform="uppercase" letterSpacing="wide" userSelect={'none'}>
-                    {"Page Is Still Under construction..."}
-                </Text>
-
-                <Divider my={8} />
-
             </Box>
+
+            <LvlUp />
+
+            <Box p={"2rem"} />
         </>
     );
 }

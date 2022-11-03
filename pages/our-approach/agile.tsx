@@ -18,7 +18,7 @@ const Agile = () => {
             <Text p={8} fontWeight="semibold" textTransform="uppercase" letterSpacing="wide" userSelect={'none'}>
                 {"Agile - Page Is Still Under construction..."}
             </Text>
-            <Text>
+            {/* <Text>
                 Based on: Agile Software Development<br />
                 Agile Automation<br />
                 Agile Architecture<br />
@@ -38,7 +38,7 @@ const Agile = () => {
                 Agile Tooling<br />
                 Agile Usability Engineering<br />
                 Agile Unified Process<br />
-            </Text>
+            </Text> */}
         </>
     );
 }

@@ -3,8 +3,7 @@ import { chakra, Flex, HStack, Icon, SimpleGrid, Box, useColorModeValue as mode,
 import { NextSeo } from "next-seo";
 import NextLink from "next/link";
 
-import { IoStopwatchOutline, IoCashOutline, IoTerminalOutline, IoTimerOutline } from "react-icons/io5";
-import srvcimg from '../../public/img/index/our-approach.jpg'
+import { IoCashOutline, IoTerminalOutline, IoTimerOutline } from "react-icons/io5";
 
 import { LvlUp } from "../../components";
 
@@ -99,7 +98,7 @@ const Index = () => {
                 </Feature>
 
                 <Feature
-                    title="Return on Investment"
+                    title="Quality and Risk Control / !!Return on Investment"
                     icon={<IoCashOutline />}
                     refx={'/our-approach/roi'}
                 >
@@ -136,7 +135,7 @@ const Index = () => {
                         pointerEvents={'none'}
                         w="full"
                         h={{ sm: "64", md: "96", lg: "72", xl: "64" }}
-                        src={srvcimg.src}
+                        src={'/img/index/our-approach.jpg'}
                         alt="Analytics Inspecting"
                     />
                 </SimpleGrid>

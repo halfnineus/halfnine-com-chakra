@@ -28,20 +28,6 @@ import aboutdat from '../assets/about.json'
 import { MdTouchApp, MdCheckCircleOutline, MdAvTimer, MdMoney, MdOutlineStars } from 'react-icons/md'
 import { GiReturnArrow } from 'react-icons/gi'
 
-import img1 from '../public/img/about/portfolio1.png'
-import img2 from '../public/img/about/portfolio2.png'
-import img3 from '../public/img/about/portfolio3.png'
-import img4 from '../public/img/about/portfolio4.png'
-import img5 from '../public/img/about/portfolio5.png'
-import img6 from '../public/img/about/portfolio6.png'
-import img1x from '../public/img/about/logo1.png'
-import img2x from '../public/img/about/logo2.png'
-import img3x from '../public/img/about/logo3.png'
-import img4x from '../public/img/about/logo4.png'
-import img5x from '../public/img/about/logo5.png'
-
-
-
 interface FeatureProps {
   heading: string;
   text: string;
@@ -55,7 +41,7 @@ const BuiltWith = (children: any) => {
       maxW={{ lg: '220px', base: 'full' }}
       w={'full'}
       bg={mode('gray.50', 'gray.700')}
-      _hover={{ /*bg: mode("brand.50", "brand.800"),*/ opacity: '0.9', boxShadow: 'sm', borderColor: mode('gray.100', 'gray.600') }}
+      _hover={{ /*bg: mode("brand.50", "brand.800"),*/ transform: 'scale(1.05)', opacity: '0.9', boxShadow: 'sm', borderColor: mode('gray.100', 'gray.600') }}
       // cursor={'pointer'}
       // boxShadow={'md'}
       border='1px'
@@ -255,12 +241,12 @@ const IndexAbout = () => {
                 </Heading>
                 <Text pt={2} fontSize={'lg'} color={mode('gray.600', 'gray.400')}>{"Developed by us in Orlando, FL. and manufactured in Hong Kong, SAR."}</Text>
                 <SimpleGrid pt={6} columns={{ base: 1, sm: 2, md: 3, lg: 3 }} spacing={'6'}>
-                  <Featurex img={img1.src} title={"Production Automation Board"} />
-                  <Featurex img={img2.src} title={"Production Automation Board"} />
-                  <Featurex img={img3.src} title={"Production Automation Board"} />
-                  <Featurex img={img4.src} title={"Production Automation Board"} />
-                  <Featurex img={img5.src} title={"Production Automation Board"} />
-                  <Featurex img={img6.src} title={"Production Automation Board"} />
+                  <Featurex img={'/img/about/portfolio1.png'} title={"Production Automation Board"} />
+                  <Featurex img={'/img/about/portfolio2.png'} title={"Production Automation Board"} />
+                  <Featurex img={'/img/about/portfolio3.png'} title={"Production Automation Board"} />
+                  <Featurex img={'/img/about/portfolio4.png'} title={"Production Automation Board"} />
+                  <Featurex img={'/img/about/portfolio5.png'} title={"Production Automation Board"} />
+                  <Featurex img={'/img/about/portfolio6.png'} title={"Production Automation Board"} />
                 </SimpleGrid>
               </Box>
 
@@ -281,11 +267,11 @@ const IndexAbout = () => {
                 mt="8"
                 spacing={'6'}
               >
-                <BuiltWith img={img1x.src} />
-                <BuiltWith img={img2x.src} />
-                <BuiltWith img={img3x.src} />
-                <BuiltWith img={img4x.src} />
-                <BuiltWith img={img5x.src} />
+                <BuiltWith img={'/img/about/logo3.png'} />
+                <BuiltWith img={'/img/about/logo5.png'} />
+                <BuiltWith img={'/img/about/logo1.png'} />
+                <BuiltWith img={'/img/about/logo4.png'} />
+                <BuiltWith img={'/img/about/logo2.png'} />
               </SimpleGrid>
               <NextLink href={"/contact"} passHref>
                 <Link cursor={'inherit'} _hover={{ textDecorationLine: 'none' }}>

@@ -22,8 +22,6 @@ import { IoBulbOutline, IoPeopleOutline, IoRocketOutline } from "react-icons/io5
 import indexdat from "../../assets/services/index.json"
 import { LvlUp } from "../../components";
 
-import srvcimg from '../../public/img/index/services.jpg'
-
 const Feature = (props: any) => {
     return (
         <NextLink href={props.refx} passHref>
@@ -93,7 +91,7 @@ const Index = () => {
                     <>
                         <NextSeo
                             title='Our Services - Custom Development, Digital Transformation, Project Consultation.'
-                            description='!!changeme '
+                            description='Reduce your costs by outsourcing and free your time to focus on big picture strategies.'
                             canonical="https://ochoa.pro/services"
                             languageAlternates={[
                                 {
@@ -158,7 +156,7 @@ const Index = () => {
                                     pointerEvents={'none'}
                                     w="full"
                                     h={{ sm: "64", md: "96", lg: "72", xl: "64" }}
-                                    src={srvcimg.src}
+                                    src={'/img/index/services.jpg'}
                                     alt="Automation Support Center"
                                 />
                             </SimpleGrid>

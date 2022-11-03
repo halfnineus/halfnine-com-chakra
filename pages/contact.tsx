@@ -30,8 +30,6 @@ import {
 import { MdCall, MdEmail, MdLocationOn, MdOutlineEmail, MdPhone, } from 'react-icons/md';
 import { BsPerson, BsBuilding } from 'react-icons/bs'
 
-import diagimg from '../public/img/contact/bg.jpg'
-
 import router from 'next/router'
 import { useState } from "react"
 import { NextSeo } from "next-seo";
@@ -149,7 +147,7 @@ const INDEX = () => {
                         <Flex
                             w={'full'}
                             h={48}
-                            backgroundImage={diagimg.src}
+                            backgroundImage={'/img/contact/bg.jpg'}
                         >
                             <VStack
                                 w={'full'}

@@ -17,11 +17,6 @@ import {
   Link,
 } from '@chakra-ui/react'
 
-
-import ximg from '../public/img/index/x.jpg'
-import iot from '../public/img/index/iot.jpg'
-
-import diagimg from '../public/img/index/diagram.jpg'
 import indexdat from '../assets/index.json'
 
 import { FcApproval, FcServices, FcLock, } from 'react-icons/fc';
@@ -173,7 +168,7 @@ const IndexPage = () => {
                 w={{ base: 'full', lg: '50%' }}
                 height={{ base: '96', lg: 'full' }}
                 sx={{ clipPath: { lg: 'polygon(8% 0%, 100% 0%, 100% 100%, 0% 100%)' }, }}>
-                <Image userSelect={'none'} pointerEvents={'none'} height="100%" width="100%" objectFit="cover" src={ximg.src} alt="Base" />
+                <Image userSelect={'none'} pointerEvents={'none'} height="100%" width="100%" objectFit="cover" src={'/img/index/x.jpg'} alt="Base" />
               </Box>
             </Box>
 
@@ -216,10 +211,10 @@ const IndexPage = () => {
                     w="full"
                     rounded="3xl"
                     border={'1px'}
-                    _hover={{ shadow: 'md', borderColor: 'blue.500' }}
+                    _hover={{ shadow: 'md', borderColor: 'blue.500', transform: 'scale(1.005)' }}
                     borderColor={mode('gray.400', 'gray.600')}
                     // shadow="md"
-                    src={diagimg.src}
+                    src={'/img/index/diagram.jpg'}
                     alt="Basic IoT Enviroment"
                   />
                 </Link>
@@ -310,7 +305,7 @@ const IndexPage = () => {
                     borderColor={'gray.600'}
                     // rounded={'xl'}
                     alt={'feature image'}
-                    src={iot.src}
+                    src={'/img/index/iot.jpg'}
                     objectFit={'cover'}
                     userSelect={'none'}
                     pointerEvents={'none'}

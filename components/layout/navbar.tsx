@@ -26,11 +26,8 @@ import {
 } from '@chakra-ui/icons';
 
 import NextLink from 'next/link'
-import smlog from '../../public/img/smlog.png'
-import wsmlog from '../../public/img/wsmlog.png'
-
 import { FaMoon, FaSun } from 'react-icons/fa'
-import router, { useRouter } from 'next/router';
+import { useRouter } from 'next/router';
 
 export default function WithSubnavigation() {
 
@@ -91,7 +88,7 @@ export default function WithSubnavigation() {
                                 pointerEvents={'none'}
                                 width={'auto'}
                                 height={{ base: '8', md: '10' }}
-                                src={mode(smlog.src, wsmlog.src)}
+                                src={mode('/img/smlog.png', '/img/wsmlog.png')}
                                 alt={'Ochoa Logo'}
                             />
                         </Link>
@@ -333,15 +330,15 @@ const NAV_ITEMS: Array<NavItem> = [
         children: [
             {
                 label: 'Manufacturing & Production',
-                href: '/industries/mnp',
+                href: '/industries/manufacturing-and-production',
             },
             {
                 label: 'Media & Entertainment',
-                href: '/industries/mne',
+                href: '/industries/media-and-entertainment',
             },
             {
                 label: 'Security & Safety',
-                href: '/industries/sns',
+                href: '/industries/security-and-safety',
             },
         ],
     },
@@ -357,8 +354,11 @@ const NAV_ITEMS: Array<NavItem> = [
             },
             {
                 label: 'ROI',
-                subLabel: 'Return on Investment',
+                // subLabel: 'Return on Investment',
+                subLabel: 'Quality and Risk Control',
                 href: '/our-approach/roi',
+                // quality-and-risk
+                // return-on-investment
             },
             {
                 label: 'PDaaS',
@@ -401,15 +401,15 @@ const NAV_ITEMS: Array<NavItem> = [
         children: [
             {
                 label: 'Fabricación & Producción',
-                href: '/industries/mnp',
+                href: '/industries/manufacturing-and-production',
             },
             {
                 label: 'Medios & Entretenimiento',
-                href: '/industries/mne',
+                href: '/industries/media-and-entertainment',
             },
             {
                 label: 'Security & Protección',
-                href: '/industries/sns',
+                href: '/industries/security-and-safety',
             },
         ],
     },

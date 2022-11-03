@@ -25,8 +25,6 @@ import { BsCameraVideo } from "react-icons/bs";
 
 import { LvlUp } from "../../components";
 
-import srvcimg from '../../public/img/index/industries.jpg'
-
 const Feature = (props: any) => {
     return (
         <NextLink href={props.refx} passHref>
@@ -118,7 +116,7 @@ const Index = () => {
                             <Feature
                                 title="Manufacturing & Production"
                                 icon={<MdOutlinePrecisionManufacturing />}
-                                refx={'/industries/mnp'}
+                                refx={'/industries/manufacturing-and-production'}
                             >
                                 Increase productivity, quality, efficiency and profit by Automating repetitive tasks.
                             </Feature>
@@ -126,7 +124,7 @@ const Index = () => {
                             <Feature
                                 title="Media & Entertainment"
                                 icon={<BsCameraVideo />}
-                                refx={'/industries/mne'}
+                                refx={'/industries/media-and-entertainment'}
                             >
                                 Change experiences forever by implementing and delivering a more immersive environment.
                             </Feature>
@@ -134,7 +132,7 @@ const Index = () => {
                             <Feature
                                 title="Security & Safety"
                                 icon={<IoShieldCheckmarkOutline />}
-                                refx={'/industries/sns'}
+                                refx={'/industries/security-and-safety'}
                             >
                                 Create and implement solutions to ease safety chores and tasks and focus on products & services.
                             </Feature>
@@ -160,7 +158,7 @@ const Index = () => {
                                     pointerEvents={'none'}
                                     w="full"
                                     h={{ sm: "64", md: "96", lg: "72", xl: "64" }}
-                                    src={srvcimg.src}
+                                    src={'/img/index/industries.jpg'}
                                     alt="Farm Management Checklist"
                                 />
                             </SimpleGrid>

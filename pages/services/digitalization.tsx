@@ -10,7 +10,11 @@ import {
     useColorModeValue as mode,
 } from "@chakra-ui/react";
 import { NextSeo } from "next-seo";
-import { CgCrown, CgTerminal, CgPen, CgSupport } from 'react-icons/cg'
+import { FaUserTag } from 'react-icons/fa'
+import { GiSettingsKnobs } from 'react-icons/gi'
+import { SiPinboard } from 'react-icons/si'
+import { BsSignpostSplit } from 'react-icons/bs'
+import { LvlUp } from "../../components";
 
 const Feature = (props: any) => {
     return (
@@ -52,7 +56,7 @@ const Digitalization = () => {
         <>
             <NextSeo
                 title='Organize Strategic Digital Transformation - Automating all Things | Ochoa'
-                description='!!changeme '
+                description='Transform your manually controlled systems and enviroments into digitally automated technology.'
                 canonical="https://ochoa.pro/services/digitalization"
                 languageAlternates={[
                     {
@@ -113,20 +117,17 @@ const Digitalization = () => {
                             gridColumnGap={{ md: 8 }}
                             gridRowGap={{ md: 10 }}
                         >
-                            <Feature icon={<CgCrown />} title="Strategy Transformation">
-                                !!changeme Improve your conversion rates by monitoring exactly what&#39;s going on while your customers are in trial.
+                            <Feature icon={<FaUserTag />} title="Workforce Capacity">
+                                Increase the capabilities of your workforce by implementing a new strategy through organizational change.
                             </Feature>
-                            <Feature icon={<CgPen />} title="Operations Realignment">
-                                !!changeme Manage all your online and offline sales in one place with a
-                                single integration, simplifying reporting and reconciliation.
+                            <Feature icon={<GiSettingsKnobs />} title="Operations Realignment">
+                                Find new leadership strategies and outgrow competitors through data and information technologies.
                             </Feature>
-                            <Feature icon={<CgTerminal />} title="Sustainable Change">
-                                !!changeme Provide a seamless customer experience across channels, like
-                                reserving online and picking up in store.
+                            <Feature icon={<BsSignpostSplit />} title="Sustainable Change">
+                                Focus on consisten results through invesiting in customer relationships and change.
                             </Feature>
-                            <Feature icon={<CgSupport />} title="Change Management">
-                                !!changeme Provide a seamless customer experience across channels, like
-                                reserving online and picking up in store.
+                            <Feature icon={<SiPinboard />} title="Strategy Transformation">
+                                Break barriers to change through new technology approaches to implement strategies.
                             </Feature>
                         </Stack>
                     </GridItem>
@@ -134,12 +135,11 @@ const Digitalization = () => {
 
                 <Divider my={8} />
 
-                <Text fontWeight="semibold" textTransform="uppercase" letterSpacing="wide" userSelect={'none'}>
-                    {"Page Is Still Under construction..."}
-                </Text>
-                <Divider my={8} />
-
             </Box>
+
+            <LvlUp />
+
+            <Box p={"2rem"} />
         </>
     );
 }

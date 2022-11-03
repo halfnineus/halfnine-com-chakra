@@ -1,25 +1,25 @@
 import { Text } from "@chakra-ui/react";
 import { NextSeo } from "next-seo";
 
-const Sns = () => {
+const Mne = () => {
     return (
         <>
             <NextSeo
                 title='!!changeme  - Automating all Things | Ochoa'
                 description='!!changeme We assemble and lead teams with the skills and tools needed for building the products and tools that power your business.'
-                canonical="https://ochoa.pro/industries/sns"
+                canonical="https://ochoa.pro/industries/media-and-entertainment"
                 languageAlternates={[
                     {
                         hrefLang: 'es',
-                        href: 'https://ochoa.pro/es/industries/sns',
+                        href: 'https://ochoa.pro/es/industries/media-and-entertainment',
                     }
                 ]}
             />
             <Text p={8} fontWeight="semibold" textTransform="uppercase" letterSpacing="wide" userSelect={'none'}>
-                {"Security & Safety - Page Is Still Under construction..."}
+                {"Media & Entertainment - Page Is Still Under construction..."}
             </Text>
         </>
     );
 }
 
-export default Sns;
+export default Mne;
