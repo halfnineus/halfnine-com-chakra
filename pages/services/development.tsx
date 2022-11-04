@@ -17,8 +17,6 @@ import { NextSeo } from "next-seo";
 import { SiLichess } from 'react-icons/si'
 import { BsTerminal, BsVectorPen, BsLifePreserver } from 'react-icons/bs'
 
-import { LvlUp } from "../../components";
-
 const BuiltWith = (children: any) => {
     return (
         <Box
@@ -138,7 +136,8 @@ const Development = () => {
                             color="gray.600"
                             _dark={{ color: "gray.500" }}
                         >
-                            Following established methods for development allows us to deliver a valuable strategy for your objectives.
+                            {/* {`With the use of our private templates we are able to deliver consistent results through stablished methods on diferent projects.`} */}
+                            Following established methods for development allows us to deliver a valuable strategy with consistent results.
                             {/* !!changeme Bring your software product idea to life, enhance existing product quality, reduce time-to-market, and decrease development costs with our turn-key software engineering services and outsourcing product development teams */}
                         </chakra.p>
                     </Box>
@@ -170,7 +169,7 @@ const Development = () => {
 
                 <Divider my={12} />
 
-                <Box pb={8} textAlign="center">
+                <Box pb={12} textAlign="center">
                     <Heading size="lg" mb="4">
                         Our Capabilities and Beyond:
                     </Heading>
@@ -181,7 +180,7 @@ const Development = () => {
                 </Box>
 
                 <Center>
-                    <Stack direction={{ base: 'column', sm: 'column', md: 'column', lg: 'column', xl: 'row' }} spacing={{ base: '12', xl: '20' }}>
+                    <Stack direction={{ base: 'column', sm: 'column', md: 'column', lg: 'column', xl: 'row' }} spacing={{ base: 12, sm: 12, md: 12, lg: 12, xl: 36 }}>
                         <Box maxW={'container.xl'}>
                             <Box textAlign="center">
                                 <Heading fontSize={'2xl'} mb="4">
@@ -190,7 +189,7 @@ const Development = () => {
                             </Box>
                             <SimpleGrid
                                 columns={{ base: 1, sm: 2, md: 2, lg: 2 }}
-                                spacing={'6'}
+                                spacing={{ base: '6', md: '8' }}
                             >
                                 <BuiltWith img={'/img/services/cloud1.png'} txt={'Amazon Web Services'} />
                                 <BuiltWith img={'/img/services/cloud3.png'} txt={'Google Cloud'} />
@@ -206,7 +205,7 @@ const Development = () => {
                             </Box>
                             <SimpleGrid
                                 columns={{ base: 1, sm: 2, md: 2, lg: 2 }}
-                                spacing={'6'}
+                                spacing={{ base: '6', md: '8' }}
                             >
                                 <BuiltWith img={'/img/services/webframeworks1.png'} txt={"Microsoft ASP.NET"} />
                                 <BuiltWith img={'/img/services/webframeworks2.png'} txt={"Express.js"} />
@@ -222,7 +221,7 @@ const Development = () => {
                             </Box>
                             <SimpleGrid
                                 columns={{ base: 1, sm: 2, md: 2, lg: 2 }}
-                                spacing={'6'}
+                                spacing={{ base: '6', md: '8' }}
                             >
                                 <BuiltWith img={'/img/services/hardware1.png'} txt={'Raspberry Pi'} />
                                 <BuiltWith img={'/img/services/hardware2.png'} txt={'Arduino'} />
@@ -232,12 +231,7 @@ const Development = () => {
                         </Box>
                     </Stack >
                 </Center>
-
-                <Divider mt={"4rem"} />
             </Box>
-
-            <LvlUp />
-
             <Box p={"2rem"} />
         </>
         // </Flex>

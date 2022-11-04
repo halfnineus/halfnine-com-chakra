@@ -342,7 +342,7 @@ const INDEX = () => {
                                 </Button>
                             </HStack>
 
-                            <Divider mt={5} mb={5} />
+                            <Divider mt={5} mb={8} />
 
                         </Container>
                     </>

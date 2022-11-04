@@ -14,7 +14,6 @@ import { FaUserTag } from 'react-icons/fa'
 import { GiSettingsKnobs } from 'react-icons/gi'
 import { SiPinboard } from 'react-icons/si'
 import { BsSignpostSplit } from 'react-icons/bs'
-import { LvlUp } from "../../components";
 
 const Feature = (props: any) => {
     return (
@@ -132,12 +131,7 @@ const Digitalization = () => {
                         </Stack>
                     </GridItem>
                 </SimpleGrid>
-
-                <Divider my={8} />
-
             </Box>
-
-            <LvlUp />
 
             <Box p={"2rem"} />
         </>

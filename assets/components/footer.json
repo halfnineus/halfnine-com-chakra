@@ -4,19 +4,33 @@
             "locale": "en",
             "components": {
                 "copyright": "© 2022 Ochoa - All rights reserved",
-                "i1": "Home",
-                "i2": "About",
-                "i3": "Contact"
-            }
+                "i1": "About",
+                "i2": "Privacy Policy",
+                "i3": "Sitemap"
+            },
+            "lvlup": {
+                "t1": "Ready to level up?",
+                "d1": "Taking your business to the Next Level takes a lot of resources combined with trial and error, Our experience in the field will take the risks to the minimum while maximizing the use of resources.",
+                "t2": "Fill our Contact Form or Email Us",
+                "b2": "Contact Us"
+            },
+            "lnr": "Language & region:"
         },
         {
             "locale": "es",
             "components": {
                 "copyright": "© 2022 Ochoa - Todos los derechos reservados",
-                "i1": "Inicio",
-                "i2": "Acerca De",
-                "i3": "Contáctanos"
-            }
+                "i1": "Acerca De",
+                "i2": "Política de privacidad",
+                "i3": "Mapa del sitio"
+            },
+            "lvlup": {
+                "t1": "¿Listo para subir de nivel?",
+                "d1": "Llevar su negocio al siguiente nivel requiere muchos recursos combinados con prueba y error. Nuestra experiencia en el campo reducirá los riesgos al mínimo y maximizará el uso de los recursos.",
+                "t2": "Complete el formulario",
+                "b2": "Contáctanos"
+            },
+            "lnr": "Lenguaje y region:"
         }
     ]
 }

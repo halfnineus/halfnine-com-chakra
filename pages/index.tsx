@@ -15,6 +15,7 @@ import {
   Icon,
   StackDivider,
   Link,
+  Center,
 } from '@chakra-ui/react'
 
 import indexdat from '../assets/index.json'
@@ -25,8 +26,11 @@ import { ChevronRightIcon } from '@chakra-ui/icons'
 
 import { ReactElement } from 'react';
 import { NextSeo } from 'next-seo'
-import { LvlUp } from '../components'
 import NextLink from 'next/link'
+import { AiOutlineSolution } from 'react-icons/ai';
+import { BiBrain } from 'react-icons/bi';
+import { FaRegHandshake } from 'react-icons/fa';
+import { GiLeapfrog } from 'react-icons/gi';
 
 interface FeatureProps1 {
   title: string;
@@ -84,6 +88,32 @@ const Feature2 = ({ text, icon, iconBg, refx }: FeatureProps2) => {
     </>
   );
 };
+
+interface FeatureiProps {
+  icon: React.ReactElement
+  title: string
+  children: React.ReactNode
+}
+
+
+export const Featurei = (props: FeatureiProps) => {
+  const { title, children, icon } = props
+  return (
+    <Box>
+      <Box color={mode("brand.700", "white")} fontSize="2.5rem">
+        {icon}
+      </Box>
+      <Stack mt="6">
+        <Text as="h3" fontSize="lg" fontWeight="bold">
+          {title}
+        </Text>
+        <Text pr="6" lineHeight="tall" color={mode("gray.600", "gray.400")}>
+          {children}
+        </Text>
+      </Stack>
+    </Box>
+  )
+}
 
 const Feature1 = ({ title, text, icon }: FeatureProps1) => {
   return (
@@ -196,16 +226,18 @@ const IndexPage = () => {
                     {indexData.block2.h2_2}
                   </Text>{" "}
                 </Heading>
-                <Text px={{ base: 0, lg: 24, }} mb={4} fontSize={{ base: "lg", md: "xl", }} color={mode("gray.600", "gray.300")}>
-                  {indexData.block2.txt_1} <br />{indexData.block2.txt_2}
+                <Text px={{ base: 0, lg: 24, }} mb={4} fontSize={{ base: "lg", md: "xl", }} color={mode("gray.700", "gray.300")}>
+                  {indexData.block2.txt_1}
                 </Text>
               </Box>
             </Box>
-            <Container px={{ base: '6', lg: '0' }} maxW={'container.md'}>
+            <Center px={{ base: '6', lg: '0' }}>
+              {/* <Container px={{ base: '6', lg: '0' }} maxW={'container.md'}> */}
               {/* Remove window.open on mobile using breakpoint values */}
-              <NextLink href={'https://ochoa.pro/img/index/Basic-IoT-Enviroment.png'} passHref>
+              <NextLink href={'https://ochoa.pro/img/index/Basic-IoT-Enviroment.png'} passHref legacyBehavior>
                 <Link isExternal>
                   <Image
+                    maxW={'container.md'}
                     // onClick={() => window.open("https://ochoa.pro/img/index/Basic-IoT-Enviroment.png")}
                     userSelect={'none'}
                     w="full"
@@ -219,7 +251,8 @@ const IndexPage = () => {
                   />
                 </Link>
               </NextLink>
-            </Container>
+            </Center>
+            {/* </Container> */}
 
             <Box minH={'5rem'} />
 
@@ -316,8 +349,28 @@ const IndexPage = () => {
 
             <Box minH={'5rem'} />
 
-            <LvlUp />
-
+            <Box px={{ base: '6', lg: '10' }}>
+              <Box mx="auto">
+                <SimpleGrid
+                  columns={{ base: 1, md: 2, lg: 4 }}
+                  spacing={{ base: '12', md: '8', lg: '2' }}
+                // mt={{ base: '12', md: '12' }}
+                >
+                  <Featurei icon={<FaRegHandshake />} title={indexData.features.f1t}>
+                    {indexData.features.f1d}
+                  </Featurei>
+                  <Featurei icon={<BiBrain />} title={indexData.features.f2t}>
+                    {indexData.features.f2d}
+                  </Featurei>
+                  <Featurei icon={<GiLeapfrog />} title={indexData.features.f3t}>
+                    {indexData.features.f3d}
+                  </Featurei>
+                  <Featurei icon={<AiOutlineSolution />} title={indexData.features.f4t}>
+                    {indexData.features.f4d}
+                  </Featurei>
+                </SimpleGrid>
+              </Box>
+            </Box>
             <Box minH={'5rem'} />
 
           </>

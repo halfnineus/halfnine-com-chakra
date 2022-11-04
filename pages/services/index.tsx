@@ -20,7 +20,6 @@ import NextLink from "next/link";
 import { IoBulbOutline, IoPeopleOutline, IoRocketOutline } from "react-icons/io5";
 
 import indexdat from "../../assets/services/index.json"
-import { LvlUp } from "../../components";
 
 const Feature = (props: any) => {
     return (
@@ -161,10 +160,6 @@ const Index = () => {
                                 />
                             </SimpleGrid>
                         </Box>
-
-                        <Box py={'3rem'} />
-
-                        <LvlUp />
 
                         <Box py={'3rem'} />
                     </>

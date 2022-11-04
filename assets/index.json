@@ -16,8 +16,7 @@
       "block2": {
         "h2_1": "All your needs with",
         "h2_2": "customized technology",
-        "txt_1": "With the right team, transforming ideas into working products becomes a reality.",
-        "txt_2": "Start your consultation today and let's make your ideal product.",
+        "txt_1": "Find the right team to turn your IoT and IIoT ideas into a reality.",
         "button": "Email us"
       },
       "block3": {
@@ -34,6 +33,16 @@
         "srvc1": "Development Services",
         "srvc2": "Digital Transformation",
         "srvc3": "Project Consultation"
+      },
+      "features": {
+        "f1t": "Teamwork",
+        "f1d": "Teamwork is the path to achieve creativity and collaboration, and also the path to achieve something great.",
+        "f2t": "Innovation",
+        "f2d": "Connecting knowledge with imagination, we create value for a better purpose.",
+        "f3t": "Challenge",
+        "f3d": "By speaking up, we push the boundaries of what is possible in any environment.",
+        "f4t": "Solutions",
+        "f4d": "Finding the solution to problems gives value to the people and communities around us. "
       }
     },
     {
@@ -52,8 +61,7 @@
       "block2": {
         "h2_1": "Todas tus necesidades con",
         "h2_2": "tecnología customizada",
-        "txt_1": "Con el equipo adecuado, la transformación de ideas en productos funcionales se convierte en una realidad.",
-        "txt_2": "Inicie su consulta hoy y hagamos su producto ideal.",
+        "txt_1": "Encuentre el equipo adecuado para hacer realidad sus ideas de IoT e IIoT.",
         "button": "Envíanos un correo electrónico"
       },
       "block3": {
@@ -70,6 +78,16 @@
         "srvc1": "Servicios de desarrollo",
         "srvc2": "Transformación Digital",
         "srvc3": "Consulta de proyectos"
+      },
+      "features": {
+        "f1t": "Colaboración",
+        "f1d": "El trabajo en equipo es el camino para lograr la creatividad, y también el camino para lograr algo grande.",
+        "f2t": "Innovación",
+        "f2d": "Conectando el conocimiento con la imaginación, creamos valor para un mejor propósito.",
+        "f3t": "Desafío",
+        "f3d": "Al hablar, ampliamos los límites de lo que es posible en cualquier entorno.",
+        "f4t": "Soluciones",
+        "f4d": "Encontrar la solución a los problemas da valor a las personas y comunidades que nos rodean."
       }
     }
   ]

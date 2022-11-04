@@ -10,7 +10,6 @@ import {
 } from "@chakra-ui/react";
 import { NextSeo } from "next-seo";
 import { HiOutlineDocumentMagnifyingGlass, HiOutlineDocumentChartBar, HiOutlineBeaker, HiOutlineCheckBadge } from 'react-icons/hi2'
-import { LvlUp } from "../../components";
 
 const Feature = (props: any) => {
     return (
@@ -102,7 +101,7 @@ const Consultation = () => {
                             color="gray.600"
                             _dark={{ color: "gray.500" }}
                         >
-                            Find the leading practices in development, increase your organization's agility to achieve powerful outcomes.
+                            {`Find the leading practices in development, increase your organization's agility to achieve powerful outcomes.`}
                         </chakra.p>
                     </Box>
                     <GridItem colSpan={2}>
@@ -128,12 +127,7 @@ const Consultation = () => {
                         </Stack>
                     </GridItem>
                 </SimpleGrid>
-
-                <Divider my={8} />
-
             </Box>
-
-            <LvlUp />
 
             <Box p={"2rem"} />
         </>

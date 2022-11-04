@@ -64,10 +64,6 @@ export default function WithSubnavigation() {
                 justify="space-between"
                 align="center"
             >
-                {/* <Flex
-                    flex={{ base: 1, md: 'auto' }}
-                    ml={{ base: -2 }}
-                    display={{ base: 'flex', md: 'none' }}> */}
                 <IconButton
                     display={{ base: 'flex', md: 'none' }}
                     onClick={onToggle}
@@ -77,7 +73,6 @@ export default function WithSubnavigation() {
                     variant={'ghost'}
                     aria-label={'Toggle Navigation'}
                 />
-                {/* </Flex> */}
                 <Flex flex={{ base: 1 }} justify={{ base: 'center', md: 'start' }}>
                     <NextLink href={'/'} passHref>
                         <Link alignItems="center" display="flex" mr={{ base: 6, sm: 0 }}>

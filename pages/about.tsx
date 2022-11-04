@@ -38,20 +38,20 @@ interface FeatureProps {
 const BuiltWith = (children: any) => {
   return (
     <Box
-      maxW={{ lg: '220px', base: 'full' }}
+      maxW={{ base: 'full', sm: '200px', md: '200px', lg: '200px', }}
       w={'full'}
       bg={mode('gray.50', 'gray.700')}
-      _hover={{ /*bg: mode("brand.50", "brand.800"),*/ transform: 'scale(1.05)', opacity: '0.9', boxShadow: 'sm', borderColor: mode('gray.100', 'gray.600') }}
+      _hover={{ /*bg: mode("brand.50", "brand.800"),*/ transform: 'scale(1.02)', opacity: '1', boxShadow: 'sm', borderColor: mode('gray.100', 'gray.600') }}
       // cursor={'pointer'}
       // boxShadow={'md'}
-      border='1px'
+      // border='1px'
       borderColor={mode('gray.50', 'gray.600')}
       rounded={'md'}
       // boxShadow={'md'}
       p={2}
       overflow={'hidden'}
       maxH={'auto'}
-      opacity={0.6}
+      opacity={0.8}
     >
       <Center>
         <Box alignContent={'center'} h={'auto'} m={-2} pos={'relative'}>
@@ -262,26 +262,17 @@ const IndexAbout = () => {
                 </Text> */}
               </Box>
               <SimpleGrid
-                // opacity={0.8}
+                // opacity={0.8}v
                 columns={{ base: 1, sm: 2, md: 3, lg: 5 }}
                 mt="8"
                 spacing={'6'}
               >
-                <BuiltWith img={'/img/about/logo3.png'} />
-                <BuiltWith img={'/img/about/logo5.png'} />
-                <BuiltWith img={'/img/about/logo1.png'} />
-                <BuiltWith img={'/img/about/logo4.png'} />
-                <BuiltWith img={'/img/about/logo2.png'} />
+                <BuiltWith img={'/img/about/logo.png'} />
+                <BuiltWith img={'/img/about/logo.png'} />
+                <BuiltWith img={'/img/about/logo.png'} />
+                <BuiltWith img={'/img/about/logo.png'} />
+                <BuiltWith img={'/img/about/logo.png'} />
               </SimpleGrid>
-              <NextLink href={"/contact"} passHref>
-                <Link cursor={'inherit'} _hover={{ textDecorationLine: 'none' }}>
-                  <Stack pt={"8"} direction={{ base: "column", md: "row", }} spacing={2} justifyContent={{ sm: "left", md: "center", }}>
-                    <Button size={'lg'} colorScheme={'brand'}/* rightIcon={<FiMail />} onClick={() => router.push("/contact")} */>
-                      {"Contact Us"}
-                    </Button>
-                  </Stack>
-                </Link>
-              </NextLink>
               <Divider mt={8} mb={5} />
             </Container>
           </>)

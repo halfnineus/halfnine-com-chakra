@@ -23,8 +23,6 @@ import { IoShieldCheckmarkOutline } from "react-icons/io5";
 import { MdOutlinePrecisionManufacturing } from "react-icons/md";
 import { BsCameraVideo } from "react-icons/bs";
 
-import { LvlUp } from "../../components";
-
 const Feature = (props: any) => {
     return (
         <NextLink href={props.refx} passHref>
@@ -165,11 +163,6 @@ const Index = () => {
                         </Box>
 
                         <Box py={'3rem'} />
-
-                        <LvlUp />
-
-                        <Box py={'3rem'} />
-
                     </>
                 )
             })}

@@ -5,8 +5,6 @@ import NextLink from "next/link";
 
 import { IoCashOutline, IoTerminalOutline, IoTimerOutline } from "react-icons/io5";
 
-import { LvlUp } from "../../components";
-
 const Feature = (props: any) => {
     return (
         <NextLink href={props.refx} passHref>
@@ -140,10 +138,6 @@ const Index = () => {
                     />
                 </SimpleGrid>
             </Box>
-
-            <Box py={'3rem'} />
-
-            <LvlUp />
 
             <Box py={'3rem'} />
         </>
