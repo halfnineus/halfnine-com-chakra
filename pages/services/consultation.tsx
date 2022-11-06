@@ -7,9 +7,11 @@ import {
     GridItem,
     Divider,
     useColorModeValue as mode,
+    Container,
 } from "@chakra-ui/react";
 import { NextSeo } from "next-seo";
 import { HiOutlineDocumentMagnifyingGlass, HiOutlineDocumentChartBar, HiOutlineBeaker, HiOutlineCheckBadge } from 'react-icons/hi2'
+import { Values } from "../../components";
 
 const Feature = (props: any) => {
     return (
@@ -64,8 +66,8 @@ const Consultation = () => {
                 // shadow="xl"
                 // bg="white"
                 // _dark={{ bg: "gray.800" }}
-                px={{ base: '6', lg: '10' }}
-                py={8}
+                px={{ base: '4', xl: '10' }}
+                pt={{ base: '4', xl: '8' }}
                 mx="auto"
             >
                 <SimpleGrid
@@ -127,6 +129,12 @@ const Consultation = () => {
                         </Stack>
                     </GridItem>
                 </SimpleGrid>
+
+
+                <Divider my={12} />
+                <Container maxW={'container.xl'} px={{ base: 0, xl: 0 }}>
+                    <Values />
+                </Container>
             </Box>
 
             <Box p={"2rem"} />

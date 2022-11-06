@@ -57,7 +57,7 @@ export default function WithSubnavigation() {
                 // align={'center'}
                 minH={'60px'}
                 py={{ base: 2 }}
-                px={{ base: 4, lg: 8 }}
+                px={{ base: 4, sm: 4, md: 4, lg: 4, xl: 8 }}
                 borderBottom={1}
                 borderStyle={'solid'}
                 borderColor={mode('gray.200', 'gray.900')}
@@ -93,22 +93,22 @@ export default function WithSubnavigation() {
                     </Flex>
                 </Flex>
 
-                <HStack spacing="4">
-                    {ContactItem.filter(p => p.locale === locale).map((contactItem) => (
-                        <NextLink key={contactItem.label} href={'/contact'} passHref>
-                            <Link _hover={{ textDecorationLine: 'none' }}>
-                                <Button
-                                    display={{ base: 'none', sm: 'block' }}
-                                    colorScheme={buttonvariant}
-                                    // fontWeight="bold"
-                                    _focus={{ shadow: 'outline' }}
-                                >
-                                    {contactItem.label}
-                                </Button>
-                            </Link>
-                        </NextLink>
-                    ))}
-                    <IconButton
+                {/* <HStack spacing="4"> */}
+                {ContactItem.filter(p => p.locale === locale).map((contactItem) => (
+                    <NextLink key={contactItem.label} href={'/contact'} passHref>
+                        <Link _hover={{ textDecorationLine: 'none' }}>
+                            <Button
+                                display={{ base: 'none', sm: 'block' }}
+                                colorScheme={buttonvariant}
+                                // fontWeight="bold"
+                                _focus={{ shadow: 'outline' }}
+                            >
+                                {contactItem.label}
+                            </Button>
+                        </Link>
+                    </NextLink>
+                ))}
+                {/* <IconButton
                         display={{ base: 'none', lg: 'flex' }}
                         size="md"
                         fontSize="lg"
@@ -118,8 +118,8 @@ export default function WithSubnavigation() {
                         ml={{ base: "0", md: "3" }}
                         onClick={toggleMode}
                         icon={<SwitchIcon />}
-                    />
-                </HStack>
+                    /> */}
+                {/* </HStack> */}
             </Flex>
 
             <Collapse in={isOpen} animateOpacity>

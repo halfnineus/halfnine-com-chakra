@@ -8,12 +8,14 @@ import {
     Divider,
     Text,
     useColorModeValue as mode,
+    Container,
 } from "@chakra-ui/react";
 import { NextSeo } from "next-seo";
 import { FaUserTag } from 'react-icons/fa'
 import { GiSettingsKnobs } from 'react-icons/gi'
 import { SiPinboard } from 'react-icons/si'
 import { BsSignpostSplit } from 'react-icons/bs'
+import { Values } from "../../components";
 
 const Feature = (props: any) => {
     return (
@@ -68,8 +70,8 @@ const Digitalization = () => {
                 // shadow="xl"
                 // bg="white"
                 // _dark={{ bg: "gray.800" }}
-                px={{ base: '6', lg: '10' }}
-                py={8}
+                px={{ base: '4', xl: '10' }}
+                pt={{ base: '4', xl: '8' }}
                 mx="auto"
             >
                 <SimpleGrid
@@ -131,6 +133,22 @@ const Digitalization = () => {
                         </Stack>
                     </GridItem>
                 </SimpleGrid>
+
+
+                <Divider my={12} />
+                <Text color={'gray.700'}>
+                    Digital transformation is a set of such measures taken to go in step with the times and connect with customers, partners, and employees on the level comfortable for them. After undergoing the digital transformation, businesses become more sophisticated, extending their reach to a multitude of new customers. Consequently, the business obtains a big push to grow and earn.
+
+                    <br /><br />We can help companies undergo digital transformation by developing custom software solutions as well as re-engineering and refactoring their existing products to better fit the current level of tech on the market.
+
+                    <br /><br />By implementing innovative digital solutions and employing data to make better decisions, our clients are able to reach more customers, increase their satisfaction with products and services, and help alleviate employee pains.
+                </Text>
+
+                <Divider my={12} />
+
+                <Container maxW={'container.xl'} px={0}>
+                    <Values />
+                </Container>
             </Box>
 
             <Box p={"2rem"} />

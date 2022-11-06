@@ -100,7 +100,7 @@ export const Featurei = (props: FeatureiProps) => {
   const { title, children, icon } = props
   return (
     <Box>
-      <Box color={mode("brand.700", "white")} fontSize="2.5rem">
+      <Box color={mode("brand.600", "white")} fontSize="2.5rem">
         {icon}
       </Box>
       <Stack mt="6">
@@ -155,7 +155,7 @@ const IndexPage = () => {
                 }
               ]}
             />
-            <Box key={i} as="section" pb={{ base: "none", lg: "12" }} pos="relative" px={{ base: '6', lg: '10' }}>
+            <Box key={i} as="section" pb={{ base: "none", lg: "12" }} pos="relative" px={{ base: '4', xl: '10' }}>
               <Box maxW={"100%"} mx="auto">
                 <Box maxW={{ lg: 'md', xl: 'xl' }} pt={{ base: '6', lg: '8' }} pb={{ base: '16', lg: '40' }}>
                   <Heading as="h1" size="3xl" lineHeight="1" fontWeight="extrabold" letterSpacing="tight">
@@ -205,7 +205,7 @@ const IndexPage = () => {
 
             <Box minH={'5rem'} />
 
-            <Box pb={2} px={{ base: '6', lg: '10' }} mx="auto">
+            <Box pb={2} px={{ base: '4', xl: '10' }} mx="auto">
               <Box w={{ base: "full", md: 11 / 12, xl: "full", }} mx="auto" textAlign={{ base: "left", md: "center", }}>
                 <Heading
                   mb={{ base: 4, md: 6 }}
@@ -230,8 +230,8 @@ const IndexPage = () => {
                   {indexData.block2.txt_1}
                 </Text>
               </Box>
-            </Box>
-            <Center px={{ base: '6', lg: '0' }}>
+            </Box >
+            <Center px={{ base: '4', lg: '0' }}>
               {/* <Container px={{ base: '6', lg: '0' }} maxW={'container.md'}> */}
               {/* Remove window.open on mobile using breakpoint values */}
               <NextLink href={'https://ochoa.pro/img/index/Basic-IoT-Enviroment.png'} passHref legacyBehavior>
@@ -256,7 +256,7 @@ const IndexPage = () => {
 
             <Box minH={'5rem'} />
 
-            <Box px={{ base: '6', lg: '10' }}>
+            <Box px={{ base: '4', xl: '10' }}>
               <SimpleGrid columns={{ base: 1, md: 3 }} spacing={10}>
                 <Feature1
                   icon={<Icon as={FcServices} w={10} h={10} />}
@@ -276,12 +276,12 @@ const IndexPage = () => {
                   text={indexData.block3.f3b}
                 />
               </SimpleGrid>
-            </Box>
+            </Box >
 
             <Box minH={'5rem'} />
 
-            <Container maxW={'container.xl'}>
-              <SimpleGrid px={{ base: '2', xl: '10' }} columns={{ base: 1, md: 2 }} spacing={10}>
+            <Container px={{ base: '4', xl: '10' }} maxW={'container.xl'}>
+              <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10}>
                 <Stack spacing={4}>
                   {/* <Text
                     textTransform={'uppercase'}
@@ -295,9 +295,9 @@ const IndexPage = () => {
                   >
                     Our Story
                   </Text> */}
-                  <Heading pl={2} pt={8}>{indexData.block4.title}</Heading>
+                  <Heading pl={{ xl: 2, md: 0 }} pt={8}>{indexData.block4.title}</Heading>
                   {/* <Heading>A digital Product design agency</Heading> */}
-                  <Text pl={2} color={'gray.500'} fontSize={'lg'}>
+                  <Text pl={{ xl: 2, md: 0 }} color={'gray.500'} fontSize={'lg'}>
                     {indexData.block4.description}
                   </Text>
                   <Stack
@@ -349,7 +349,7 @@ const IndexPage = () => {
 
             <Box minH={'5rem'} />
 
-            <Box px={{ base: '6', lg: '10' }}>
+            <Box px={{ base: '4', xl: '10' }}>
               <Box mx="auto">
                 <SimpleGrid
                   columns={{ base: 1, md: 2, lg: 4 }}
@@ -369,8 +369,8 @@ const IndexPage = () => {
                     {indexData.features.f4d}
                   </Featurei>
                 </SimpleGrid>
-              </Box>
-            </Box>
+              </Box >
+            </Box >
             <Box minH={'5rem'} />
 
           </>

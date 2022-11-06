@@ -147,7 +147,7 @@ export default function SCFooter() {
                             borderTop={'1px'}
                             borderColor={mode('gray.300', 'gray.600')}
                         >
-                            <Container maxW={'container.xl'}>
+                            <Container px={{ base: '4', xl: '0' }} maxW={'container.xl'}>
                                 <Flex
                                     direction={{ base: 'column', lg: 'row' }}
                                     justify="space-between"
@@ -202,7 +202,7 @@ export default function SCFooter() {
                                                 </Text>
                                             </Text>
                                         </Stack>
-                                        <HStack textAlign={'center'}>
+                                        <HStack textAlign={'center'} py={{ base: 2, md: 0 }}>
                                             <Text maxW={{ base: 'unset', lg: '800px' }} lineHeight="short" pr={2} pt={{ base: 4, sm: 4, md: 4, lg: 4 }} pb={4} fontWeight={'semibold'} fontSize={{ base: '14px', sm: '16px', md: '16px' }}>
                                                 {footerData.lvlup.t2}
                                             </Text>
@@ -230,45 +230,45 @@ export default function SCFooter() {
                                     </Box>
                                 </Flex>
                             </Container>
-                            <HStack pt={2} spacing={4} justify="center">
+                            <HStack pt={2} spacing={"3.5"} justify="center">
                                 <NextLink href={'https://www.linkedin.com/company/ochoapro/'} passHref legacyBehavior>
-                                    <Link _hover={{ transform: 'scale(1.05)' }} isExternal>
+                                    <Link transform={'scale(0.95)'} _hover={{ transform: 'scale(1)' }} isExternal>
                                         <Icon
                                             color="gray.800"
                                             _dark={{ color: "white" }}
-                                            h="32px"
-                                            w="32px"
+                                            h="34px"
+                                            w="34px"
                                             as={FaFacebookSquare}
                                         />
                                     </Link>
                                 </NextLink>
                                 <NextLink href={'https://www.linkedin.com/company/ochoapro/'} passHref legacyBehavior>
-                                    <Link _hover={{ transform: 'scale(1.05)' }} isExternal>
+                                    <Link transform={'scale(0.95)'} _hover={{ transform: 'scale(1)' }} isExternal>
                                         <Icon
                                             color="gray.800"
                                             _dark={{ color: "white" }}
-                                            h="32px"
-                                            w="32px"
+                                            h="34px"
+                                            w="34px"
                                             as={FaTwitterSquare}
                                         />
                                     </Link>
                                 </NextLink>
                                 <NextLink href={'https://www.linkedin.com/company/ochoapro/'} passHref legacyBehavior>
-                                    <Link _hover={{ transform: 'scale(1.05)' }} isExternal>
+                                    <Link transform={'scale(0.95)'} _hover={{ transform: 'scale(1)' }} isExternal>
                                         <Icon
                                             _dark={{ color: "white" }}
-                                            h="32px"
-                                            w="32px"
+                                            h="34px"
+                                            w="34px"
                                             as={FaYoutubeSquare}
                                         />
                                     </Link>
                                 </NextLink>
                                 <NextLink href={'https://www.linkedin.com/company/ochoapro/'} passHref legacyBehavior>
-                                    <Link _hover={{ transform: 'scale(1.05)' }} isExternal>
+                                    <Link transform={'scale(0.95)'} _hover={{ transform: 'scale(1)' }} isExternal>
                                         <Icon
                                             _dark={{ color: "white" }}
-                                            h="32px"
-                                            w="32px"
+                                            h="34px"
+                                            w="34px"
                                             as={FaLinkedin}
                                         />
                                     </Link>

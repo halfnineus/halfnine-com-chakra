@@ -102,8 +102,8 @@ const Index = () => {
                         <SimpleGrid
                             columns={{ base: 1, /* md: 2,*/ lg: 3 }}
                             spacing={8}
-                            px={{ base: '6', lg: '10' }}
-                            pt={{ base: '6', lg: '10' }}
+                            px={{ base: '4', xl: '10' }}
+                            pt={{ base: '6', xl: '10' }}
                             mx="auto"
                             bg="white"
                             _dark={{ bg: "gray.800" }}
@@ -135,7 +135,7 @@ const Index = () => {
 
                         <Box py={'3rem'} />
 
-                        <Box maxW={{ base: 'xl', md: 'container.xl' }} mx="auto" px={{ base: '6', md: '8' }}>
+                        <Box maxW={{ base: 'xl', md: 'container.xl' }} mx="auto" px={{ base: '4', xl: '10' }}>
                             <SimpleGrid columns={{ base: 1, md: 2 }} spacing={{ base: '16', md: '8' }}>
                                 <Stack my={2}>
                                     <Heading>Automating All Things Together</Heading>
