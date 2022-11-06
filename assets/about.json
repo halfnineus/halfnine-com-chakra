@@ -7,8 +7,8 @@
                 "description": "Developing systems to automate simple and complicated industrial processes. Contact us to know more."
             },
             "block1": {
-                "heading": "About Us / Who we are",
-                "i1": "Right now, we are working as employees for other companies, however we are always interested in projects that will challenge our capabilities and willing to give it our undivided attention.",
+                "heading": "About Us",
+                "i1": "We are a team of engineers working as employees for other companies, however we are always interested in projects that will challenge our capabilities and willing to give it our undivided attention.",
                 "i2": "With experience in software and electronics development. From developing cloud infrastructures to full IoT devices with applications, we are prepared to take almost any kind of challenge by replicating proven strategies and methods."
             },
             "block2": {
@@ -25,9 +25,9 @@
                 "description": "Developing systems to automate simple and complicated industrial processes. Contact us to know more."
             },
             "block1": {
-                "heading": "Sobre nosotros / Quienes somos",
-                "i1": "Una pequeña familia de ingenieros con experiencia en desarrollo de software y electrónica. Desde el desarrollo de infraestructuras en la nube hasta dispositivos IoT completos con aplicaciones, estamos preparados para enfrentar casi cualquier tipo de desafío, utilizando las tecnologías y los métodos mencionados en 'Nuestro enfoque'.",
-                "i2": "En este momento, estamos trabajando como empleados para otras empresas, sin embargo, siempre estamos interesados en proyectos que desafíen nuestras capacidades y estamos dispuestos a prestarle toda nuestra atención."
+                "heading": "Sobre nosotros",
+                "i1": "Somos un equipo de ingenieros que trabajan como empleados para otras empresas, sin embargo, siempre estamos interesados en proyectos que desafíen nuestras capacidades y estamos dispuestos a prestarle toda nuestra atención.",
+                "i2": "Con experiencia en desarrollo de software y electrónica, desde el desarrollo de infraestructuras en la nube a dispositivos IoT completos con aplicaciones, estamos preparados para enfrentar cualquier tipo de desafío replicando estrategias y métodos comprobados."
             },
             "block2": {
                 "heading": "¿Por qué Nosotros?",

@@ -8,14 +8,18 @@ import {
     Divider,
     Text,
     useColorModeValue as mode,
+    Heading,
+    Center,
+    Image,
     Container,
 } from "@chakra-ui/react";
 import { NextSeo } from "next-seo";
-import { FaUserTag } from 'react-icons/fa'
-import { GiSettingsKnobs } from 'react-icons/gi'
-import { SiPinboard } from 'react-icons/si'
-import { BsSignpostSplit } from 'react-icons/bs'
+
+import { SiLichess, SiPinboard } from 'react-icons/si'
+import { BsTerminal, BsVectorPen, BsLifePreserver, BsSignpostSplit } from 'react-icons/bs'
 import { Values } from "../../components";
+import { FaUserTag } from "react-icons/fa";
+import { GiSettingsKnobs } from "react-icons/gi";
 
 const Feature = (props: any) => {
     return (
@@ -52,7 +56,27 @@ const Feature = (props: any) => {
     );
 };
 
-const Digitalization = () => {
+const BuiltWith = (children: any) => {
+    return (
+
+        <Box
+            _hover={{ transform: 'scale(1)', }}
+            transform={{ base: 'scale(1)', sm: 'scale(0.97)', md: 'scale(0.97)' }}
+            alignContent={'center'}
+            h={'auto'}
+            role={'group'}
+            overflow={'hidden'}
+            rounded={'md'}
+        >
+            <Center>
+                <Image opacity={{ md: 0.90, base: 1 }} _groupHover={{ opacity: '1' }} userSelect={'none'} pointerEvents={'none'} alt={'img'} src={children.img} />
+            </Center>
+        </Box >
+    )
+}
+
+
+const Development = () => {
     return (
         <>
             <NextSeo
@@ -66,18 +90,11 @@ const Digitalization = () => {
                     }
                 ]}
             />
-            <Box
-                // shadow="xl"
-                // bg="white"
-                // _dark={{ bg: "gray.800" }}
-                px={{ base: '4', xl: '10' }}
-                pt={{ base: '4', xl: '8' }}
-                mx="auto"
-            >
+            <Container maxW={'container.xl'} px={{ base: '4', sm: '4', md: '4', lg: '4', xl: '0' }} pt={{ base: '4', xl: '4' }}>
                 <SimpleGrid
                     alignItems="center"
-                    columns={{ base: 1, lg: 3 }}
-                    spacingY={{ base: 10, lg: 32 }}
+                    columns={{ base: 1, lg: 2 }}
+                    spacingY={{ base: 10, lg: 6 }}
                     spacingX={{ base: 10, lg: 12 }}
                 >
                     <Box alignSelf="start">
@@ -87,23 +104,21 @@ const Digitalization = () => {
                             textTransform="uppercase"
                             letterSpacing="wide"
                         >
-                            Organize
+                            Strategize
                         </chakra.h2>
                         <chakra.h2
                             mb={3}
                             fontSize={{ base: "3xl", md: "4xl" }}
                             fontWeight="extrabold"
-                            // textAlign={{ base: "center", sm: "left" }}
                             _light={{ color: "black" }}
                             lineHeight="shorter"
                             letterSpacing="tight"
                         >
-                            Strategic Digital Transformation
+                            Digital Transformation
                         </chakra.h2>
                         <chakra.p
-                            mb={6}
+                            mb={2}
                             fontSize={{ base: "lg", md: "xl" }}
-                            // textAlign={{ base: "center", sm: "left" }}
                             color="gray.600"
                             _dark={{ color: "gray.500" }}
                         >
@@ -134,8 +149,8 @@ const Digitalization = () => {
                     </GridItem>
                 </SimpleGrid>
 
-
                 <Divider my={12} />
+
                 <Text color={'gray.700'}>
                     Digital transformation is a set of such measures taken to go in step with the times and connect with customers, partners, and employees on the level comfortable for them. After undergoing the digital transformation, businesses become more sophisticated, extending their reach to a multitude of new customers. Consequently, the business obtains a big push to grow and earn.
 
@@ -144,16 +159,16 @@ const Digitalization = () => {
                     <br /><br />By implementing innovative digital solutions and employing data to make better decisions, our clients are able to reach more customers, increase their satisfaction with products and services, and help alleviate employee pains.
                 </Text>
 
+
                 <Divider my={12} />
 
-                <Container maxW={'container.xl'} px={0}>
-                    <Values />
-                </Container>
-            </Box>
+                <Values />
 
-            <Box p={"2rem"} />
+                <Box p={"2rem"} />
+
+            </Container>
         </>
     );
-}
+};
 
-export default Digitalization;
+export default Development;

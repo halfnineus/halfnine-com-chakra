@@ -59,7 +59,7 @@ const BuiltWith = (children: any) => {
 
         <Box
             _hover={{ transform: 'scale(1)', }}
-            transform={{ base: 'scale(1)', sm: 'scale(0.95)', md: 'scale(0.95)' }}
+            transform={{ base: 'scale(1)', sm: 'scale(0.97)', md: 'scale(0.97)' }}
             alignContent={'center'}
             h={'auto'}
             role={'group'}
