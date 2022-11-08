@@ -75,9 +75,10 @@ export default function WithSubnavigation() {
                 />
                 <Flex flex={{ base: 1 }} justify={{ base: 'center', md: 'start' }}>
                     <NextLink href={'/'} passHref>
-                        <Link alignItems="center" display="flex" mr={{ base: 6, sm: 0 }}>
+                        <Link alignItems="center" display="flex">
                             <Image
                                 userSelect={'none'}
+                                // mr={{ base: 6, sm: 0 }}
                                 ml={{ base: 0, sm: 14, md: 0 }}
                                 loading={"eager"}
                                 pointerEvents={'none'}
@@ -88,6 +89,7 @@ export default function WithSubnavigation() {
                             />
                         </Link>
                     </NextLink>
+                    <Box ml={{ base: 6, sm: 0 }} ></Box>
                     <Flex display={{ base: 'none', md: 'flex' }} ml={10}>
                         <DesktopNav />
                     </Flex>
@@ -122,7 +124,7 @@ export default function WithSubnavigation() {
                 {/* </HStack> */}
             </Flex>
 
-            <Collapse in={isOpen} animateOpacity>
+            <Collapse onClick={onToggle} in={isOpen} animateOpacity>
                 <MobileNav />
             </Collapse>
         </Box >
@@ -139,40 +141,46 @@ const DesktopNav = () => {
             {NAV_ITEMS.filter(p => p.locale === locale).map((navItem) => (
                 <Box key={navItem.label}>
                     <Popover trigger={'hover'} placement={'bottom-start'}>
-                        <PopoverTrigger>
-                            <Box>
-                                <NextLink href={navItem.href ?? navItem.subhref} passHref>
-                                    <Link
-                                        display="inline-block"
-                                        px="2"
-                                        py="2"
-                                        fontWeight="semibold"
-                                        userSelect={'none'}
-                                        _hover={{
-                                            textDecoration: 'none',
-                                            color: "blue.400",
-                                        }}
-                                    >
-                                        {navItem.label}
-                                    </Link>
-                                </NextLink>
-                            </Box>
-                        </PopoverTrigger>
+                        {({ isOpen, onClose }) => (
+                            <>
+                                <PopoverTrigger >
+                                    <Box>
+                                        <NextLink href={navItem.href ?? navItem.subhref} passHref>
+                                            <Link
+                                                onClick={onClose}
+                                                display="inline-block"
+                                                px="2"
+                                                py="2"
+                                                fontWeight="semibold"
+                                                userSelect={'none'}
+                                                _hover={{
+                                                    textDecoration: 'none',
+                                                    color: "blue.400",
+                                                }}
+                                            >
+                                                {navItem.label}
+                                            </Link>
+                                        </NextLink>
+                                    </Box>
+                                </PopoverTrigger>
 
-                        {navItem.children && (
-                            <PopoverContent
-                                // minW={'sm'}
-                                boxShadow={'xl'}
-                                bg={popoverContentBgColor}
-                                p={2}
-                                rounded={'xl'}
-                            >
-                                <Stack>
-                                    {navItem.children.map((child) => (
-                                        <DesktopSubNav key={child.label} {...child} />
-                                    ))}
-                                </Stack>
-                            </PopoverContent>
+                                {navItem.children && (
+                                    <PopoverContent
+                                        // minW={'sm'}
+                                        boxShadow={'xl'}
+                                        bg={popoverContentBgColor}
+                                        p={2}
+                                        rounded={'xl'}
+                                        onClick={onClose}
+                                    >
+                                        <Stack>
+                                            {navItem.children.map((child) => (
+                                                <DesktopSubNav key={child.label} {...child} />
+                                            ))}
+                                        </Stack>
+                                    </PopoverContent>
+                                )}
+                            </>
                         )}
                     </Popover>
                 </Box>
@@ -190,7 +198,7 @@ const DesktopSubNav = ({ label, href, subLabel }: NavItem) => {
                 display={'block'}
                 p={2}
                 rounded={'md'}
-                _hover={{ bg: mode('blue.50', 'blue.900') }}>
+                _hover={{ bg: mode('gray.50', 'blue.900') }}>
                 <Stack direction={'row'} align={'center'}>
                     <Box>
                         <Text
@@ -222,10 +230,32 @@ const MobileNav = () => {
     return (
         <Stack
             bg={mode('white', 'gray.800')}
-            p={4}
+            px={4}
+            pt={2}
+            pb={4}
             display={{ md: 'none' }}>
             {NAV_ITEMS.filter(p => p.locale === locale).map((navItem) => (
                 <MobileNavItem key={navItem.label} {...navItem} />
+            ))}
+            {ContactItem.filter(p => p.locale === locale).map((contactItem) => (
+                <NextLink key={contactItem.label} href={'/contact'} passHref>
+                    <Link>
+                        <Flex
+                            pt={4}
+                            justify={'space-between'}
+                            align={'center'}
+                            _hover={{
+                                textDecoration: 'none',
+                            }}
+                        >
+                            <Text
+                                fontWeight={600}
+                                color={mode('gray.600', 'gray.200')}>
+                                {contactItem.label}
+                            </Text>
+                        </Flex>
+                    </Link>
+                </NextLink>
             ))}
         </Stack>
     );
@@ -235,7 +265,7 @@ const MobileNavItem = ({ label, children, href, subhref }: NavItem) => {
     const { isOpen, onToggle } = useDisclosure();
     return (
         <Stack spacing={4} onClick={children && onToggle}>
-            <NextLink href={href ?? ''} passHref>
+            <NextLink href={subhref ?? ''} passHref>
                 <Link>
                     <Flex
                         py={2}
@@ -250,7 +280,7 @@ const MobileNavItem = ({ label, children, href, subhref }: NavItem) => {
                             color={mode('gray.600', 'gray.200')}>
                             {label}
                         </Text>
-                        {children && (
+                        {/* {children && (
                             <Icon
                                 as={ChevronDownIcon}
                                 transition={'all .25s ease-in-out'}
@@ -258,11 +288,11 @@ const MobileNavItem = ({ label, children, href, subhref }: NavItem) => {
                                 w={6}
                                 h={6}
                             />
-                        )}
+                        )} */}
                     </Flex>
                 </Link>
             </NextLink>
-
+            {/* 
             <Collapse in={isOpen} animateOpacity style={{ marginTop: '0!important' }}>
                 <Stack
                     mt={2}
@@ -281,7 +311,7 @@ const MobileNavItem = ({ label, children, href, subhref }: NavItem) => {
                             </NextLink>
                         ))}
                 </Stack>
-            </Collapse>
+            </Collapse> */}
         </Stack>
     );
 };
@@ -366,6 +396,7 @@ const NAV_ITEMS: Array<NavItem> = [
         locale: "en",
         label: 'About',
         href: '/about',
+        subhref: '/about',
     },
     {
         locale: "es",
@@ -434,6 +465,7 @@ const NAV_ITEMS: Array<NavItem> = [
         locale: "es",
         label: 'Acerca De',
         href: '/about',
+        subhref: '/about',
     },
 ];
 

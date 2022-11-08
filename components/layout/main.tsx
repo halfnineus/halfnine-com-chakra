@@ -1,4 +1,4 @@
-import { Navbar, SCFooter } from '../index'
+import { Navbar, SCFooter, Cookies } from '../index'
 
 const MainLayout = ({ children }: any) => {
     return (
@@ -8,6 +8,7 @@ const MainLayout = ({ children }: any) => {
                 {children}
             </main>
             <SCFooter />
+            {/* <Cookies /> */}
         </>
     )
 }

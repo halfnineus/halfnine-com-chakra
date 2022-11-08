@@ -26,13 +26,13 @@ const Feature = (props: any) => {
         <NextLink href={props.refx} passHref>
             <Link _hover={{ textDecorationLine: 'none' }}>
                 <Box
-                    bg={mode('gray.50', 'gray.700')}
+                    bg={mode('white', 'gray.700')}
                     rounded={'xl'}
                     p={4}
                     role={'group'}
-                    _hover={{ bg: mode('brand.50', 'brand.700'), shadow: 'sm' }}
+                    _hover={{ borderColor: 'brand.100', shadow: 'sm' }}
                     border='1px'
-                    borderColor={mode('gray.300', 'gray.600')}
+                    borderColor={mode('gray.200', 'gray.600')}
                 >
                     <HStack>
                         <Box

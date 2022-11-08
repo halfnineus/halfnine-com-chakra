@@ -81,7 +81,7 @@ const Development = () => {
         <>
             <NextSeo
                 title='Organize Strategic Digital Transformation - Automating all Things | Ochoa'
-                description='Transform your manually controlled systems and enviroments into digitally automated technology.'
+                description='Transform your manually controlled systems and environments into digitally automated technology.'
                 canonical="https://ochoa.pro/services/digitalization"
                 languageAlternates={[
                     {
@@ -90,7 +90,7 @@ const Development = () => {
                     }
                 ]}
             />
-            <Container maxW={'container.xl'} px={{ base: '4', sm: '4', md: '4', lg: '4', xl: '0' }} pt={{ base: '4', xl: '4' }}>
+            <Container maxW={'container.xl'} px={{ base: 4, sm: 4, md: 4, lg: 4, xl: 0 }} pt={{ base: 4, xl: 4 }}>
                 <SimpleGrid
                     alignItems="center"
                     columns={{ base: 1, lg: 2 }}
@@ -122,7 +122,7 @@ const Development = () => {
                             color="gray.600"
                             _dark={{ color: "gray.500" }}
                         >
-                            Transform your manually controlled systems and enviroments into digitally automated technology.
+                            Transform your manually controlled systems and environments into digitally automated technology.
                         </chakra.p>
                     </Box>
                     <GridItem colSpan={2}>
@@ -140,7 +140,7 @@ const Development = () => {
                                 Find new leadership strategies and outgrow competitors through data and information technologies.
                             </Feature>
                             <Feature icon={<BsSignpostSplit />} title="Sustainable Change">
-                                Focus on consisten results through invesiting in customer relationships and change.
+                                Focus on consistent results through investing in customer relationships and change.
                             </Feature>
                             <Feature icon={<SiPinboard />} title="Strategy Transformation">
                                 Break barriers to change through new technology approaches to implement strategies.
@@ -151,14 +151,33 @@ const Development = () => {
 
                 <Divider my={12} />
 
-                <Text color={'gray.700'}>
-                    Digital transformation is a set of such measures taken to go in step with the times and connect with customers, partners, and employees on the level comfortable for them. After undergoing the digital transformation, businesses become more sophisticated, extending their reach to a multitude of new customers. Consequently, the business obtains a big push to grow and earn.
-
-                    <br /><br />We can help companies undergo digital transformation by developing custom software solutions as well as re-engineering and refactoring their existing products to better fit the current level of tech on the market.
-
-                    <br /><br />By implementing innovative digital solutions and employing data to make better decisions, our clients are able to reach more customers, increase their satisfaction with products and services, and help alleviate employee pains.
+                <Heading color={'gray.800'} size={'lg'}>
+                    Digital Transformation
+                </Heading>
+                <Text pb={'10'} color={'gray.700'}>
+                    {`Is the process of adopting digital technology in your organization through planning and executing a digital-first & customer-driven approach. This is done to find improvement opportunities such as efficiency, value, and innovation.`}
                 </Text>
-
+                <Heading pb={4} color={'gray.800'} size={'lg'}>
+                    {`Why a Digital Transformation works`}
+                </Heading>
+                <Heading fontWeight={'semibold'} color={'gray.800'} size={'md'}>
+                    {`Lead change`}
+                </Heading>
+                <Text pb={4} color={'gray.700'}>
+                    {`Stop managing change and start leading change in your industry with proven Distributed Agile Frameworks that improve your business model and prepare you for a more competitive future.`}
+                </Text>
+                <Heading fontWeight={'semibold'} pb={'2'} color={'gray.800'} size={'md'}>
+                    {`Accelerate Innovation`}
+                </Heading>
+                <Text pb={'4'} color={'gray.700'}>
+                    {`Start your innovation processes by saving valuable resources and time with digital and data solutions, helping you focus on your industry's goals.`}
+                </Text>
+                <Heading fontWeight={'semibold'} pb={'2'} color={'gray.800'} size={'md'}>
+                    {`Outpace Demands`}
+                </Heading>
+                <Text pb={'10'} color={'gray.700'}>
+                    {`It's hard to keep up with all the new methods and technologies, With our passion for IT we research the markets and make sure you don't fall back and maintain a flexible and scalable environment for change.`}
+                </Text>
 
                 <Divider my={12} />
 
