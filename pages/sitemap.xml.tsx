@@ -66,14 +66,14 @@ function generateSiteMap() {
       <xhtml:link href="https://ochoa.pro/es/our-approach/agile" hreflang="es" rel="alternate" />
     </url>
     <url>
-      <loc>https://ochoa.pro/our-approach/roi</loc>
-      <xhtml:link href="https://ochoa.pro/our-approach/roi" hreflang="x-default" rel="alternate" />
-      <xhtml:link href="https://ochoa.pro/es/our-approach/roi" hreflang="es" rel="alternate" />
+      <loc>https://ochoa.pro/our-approach/quality-assurance</loc>
+      <xhtml:link href="https://ochoa.pro/our-approach/quality-assurance" hreflang="x-default" rel="alternate" />
+      <xhtml:link href="https://ochoa.pro/es/our-approach/quality-assurance" hreflang="es" rel="alternate" />
     </url>
     <url>
-      <loc>https://ochoa.pro/our-approach/pdaas</loc>
-      <xhtml:link href="https://ochoa.pro/our-approach/pdaas" hreflang="x-default" rel="alternate" />
-      <xhtml:link href="https://ochoa.pro/es/our-approach/pdaas" hreflang="es" rel="alternate" />
+      <loc>https://ochoa.pro/our-approach/risk-control</loc>
+      <xhtml:link href="https://ochoa.pro/our-approach/risk-control" hreflang="x-default" rel="alternate" />
+      <xhtml:link href="https://ochoa.pro/es/our-approach/risk-control" hreflang="es" rel="alternate" />
     </url>
     <!-- pages -->
     <url>

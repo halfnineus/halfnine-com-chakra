@@ -93,7 +93,7 @@ const Index = () => {
                     <>
                         <NextSeo
                             title='Industries We Serve - Automating all Things | Ochoa'
-                            description='!!changeme We assemble and lead teams with the skills and tools needed for building the products and tools that power your business.'
+                            description={'Creating automated systems and products that comply or for compliance of any regulations and serve most industry sectors'}
                             canonical="https://ochoa.pro/industries"
                             languageAlternates={[
                                 {

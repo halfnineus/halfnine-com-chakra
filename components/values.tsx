@@ -100,7 +100,6 @@ const Values = () => {
                 <Feature
                     color="green"
                     heading={'Value'}
-                    // text={'!!changeme Reaching return on investment at the right cost.'}
                     text={'Building the right teams to reach return on Investment.'}
                     icon={<MdMoney size={20} />}
                 />

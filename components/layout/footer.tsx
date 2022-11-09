@@ -96,8 +96,8 @@ export const links: LinkGroup[] = [
         title: 'Our Approach',
         links: [
             { label: 'Agile', href: '/our-approach/agile' },
-            { label: 'ROI', href: '/our-approach/roi' },
-            { label: 'PDaaS', href: '/our-approach/pdaas' },
+            { label: 'Quality Assurance', href: '/our-approach/quality-assurance' },
+            { label: 'Risk Control', href: '/our-approach/risk-control' },
         ],
     },
     {
@@ -123,8 +123,8 @@ export const links: LinkGroup[] = [
         title: 'Nuestro enfoque',
         links: [
             { label: 'Ágil', href: '/our-approach/agile' },
-            { label: 'ROI', href: '/our-approach/roi' },
-            { label: 'PDaaS', href: '/our-approach/pdaas' },
+            { label: 'Aseguramiento de la calidad', href: '/our-approach/quality-assurance' },
+            { label: 'Control de Riesgo', href: '/our-approach/risk-control' },
         ],
     },
 ]
@@ -232,9 +232,9 @@ export default function SCFooter() {
                             </Container>
                             <HStack pt={2} spacing={"3.5"} justify="center">
                                 <NextLink href={'https://www.linkedin.com/company/ochoapro/'} passHref legacyBehavior>
-                                    <Link transform={'scale(0.95)'} _hover={{ transform: 'scale(1)' }} isExternal>
+                                    <Link transform={'scale(0.95)'} _hover={{ color: "#4267B2", transform: 'scale(1)' }} isExternal>
                                         <Icon
-                                            color="gray.800"
+                                            // color="gray.800"
                                             _dark={{ color: "white" }}
                                             h="34px"
                                             w="34px"
@@ -243,9 +243,9 @@ export default function SCFooter() {
                                     </Link>
                                 </NextLink>
                                 <NextLink href={'https://www.linkedin.com/company/ochoapro/'} passHref legacyBehavior>
-                                    <Link transform={'scale(0.95)'} _hover={{ transform: 'scale(1)' }} isExternal>
+                                    <Link transform={'scale(0.95)'} _hover={{ color: "#1DA1F2", transform: 'scale(1)' }} isExternal>
                                         <Icon
-                                            color="gray.800"
+                                            // color="gray.800"
                                             _dark={{ color: "white" }}
                                             h="34px"
                                             w="34px"
@@ -254,7 +254,7 @@ export default function SCFooter() {
                                     </Link>
                                 </NextLink>
                                 <NextLink href={'https://www.linkedin.com/company/ochoapro/'} passHref legacyBehavior>
-                                    <Link transform={'scale(0.95)'} _hover={{ transform: 'scale(1)' }} isExternal>
+                                    <Link transform={'scale(0.95)'} _hover={{ color: "#FF0000", transform: 'scale(1)' }} isExternal>
                                         <Icon
                                             _dark={{ color: "white" }}
                                             h="34px"
@@ -264,7 +264,7 @@ export default function SCFooter() {
                                     </Link>
                                 </NextLink>
                                 <NextLink href={'https://www.linkedin.com/company/ochoapro/'} passHref legacyBehavior>
-                                    <Link transform={'scale(0.95)'} _hover={{ transform: 'scale(1)' }} isExternal>
+                                    <Link transform={'scale(0.95)'} _hover={{ color: "#0077B5", transform: 'scale(1)' }} isExternal>
                                         <Icon
                                             _dark={{ color: "white" }}
                                             h="34px"

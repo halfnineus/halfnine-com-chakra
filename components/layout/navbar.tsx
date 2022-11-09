@@ -207,7 +207,7 @@ const DesktopSubNav = ({ label, href, subLabel }: NavItem) => {
                             fontWeight={500}>
                             {label}
                         </Text>
-                        <Text fontSize={'sm'}>{subLabel}</Text>
+                        {/* <Text fontSize={'sm'}>{subLabel}</Text> */}
                     </Box>
                     <Flex
                         transition={'all .3s ease'}
@@ -303,7 +303,7 @@ const MobileNavItem = ({ label, children, href, subhref }: NavItem) => {
                     align={'start'}>
                     {children &&
                         children.map((child) => (
-                            // !!changeme Edit Look & Find out how to toggle (onToggle) the Main Function 
+                            //  Edit Look & Find out how to toggle (onToggle) the Main Function 
                             <NextLink key={child.label} href={child.href} passHref>
                                 <Link py={2} onClick={onToggle}>
                                     {child.label}
@@ -374,22 +374,20 @@ const NAV_ITEMS: Array<NavItem> = [
         children: [
             {
                 label: 'Agile',
+                // Methodology & Mindset
                 subLabel: 'Client & Development strategy',
                 href: '/our-approach/agile',
             },
             {
-                label: 'ROI',
+                label: 'Quality Assurance',
                 // subLabel: 'Return on Investment',
-                subLabel: 'Quality and Risk Control',
-                href: '/our-approach/roi',
-                // quality-and-risk
-                // return-on-investment
+                href: '/our-approach/quality-assurance',
             },
             {
-                label: 'PDaaS',
-                subLabel: 'Product Development as a Service',
-                href: '/our-approach/pdaas',
-            }
+                label: 'Risk Control',
+                // subLabel: 'Return on Investment',
+                href: '/our-approach/risk-control',
+            },
         ],
     },
     {
@@ -450,14 +448,14 @@ const NAV_ITEMS: Array<NavItem> = [
                 href: '/our-approach/agile',
             },
             {
-                label: 'ROI',
+                label: 'Aseguramiento de la calidad',
                 subLabel: 'Retorno de la inversión',
-                href: '/our-approach/roi',
+                href: '/our-approach/quality-assurance',
             },
             {
-                label: 'PDaaS',
+                label: 'Control de Riesgo',
                 subLabel: 'Desarrollo de productos como servicio',
-                href: '/our-approach/pdaas',
+                href: '/our-approach/risk-control',
             }
         ],
     },

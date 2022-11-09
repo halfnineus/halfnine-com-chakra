@@ -145,8 +145,8 @@ const IndexPage = () => {
         return (
           <>
             <NextSeo
-              title='Ochoa - Automating all Things | Agile Automation Development & Consulting'
-              description='Improve your products and services with a digital transformation powered by Agile Automation.'
+              title={indexData.head.title}
+              description={indexData.head.description}
               canonical="https://ochoa.pro"
               languageAlternates={[
                 {
@@ -163,31 +163,17 @@ const IndexPage = () => {
                     <Box as="mark" color={mode('blue.600', 'blue.300')} bg="transparent">{indexData.block1.h1_2}</Box>
                   </Heading>
                   <Text mt={4} fontSize="xl" fontWeight="medium" color={mode('gray.600', 'gray.400')}>
-                    {indexData.block1.txt}{" "}
-                    <NextLink href={"/our-approach/agile"} passHref><Link>
-                      <Button
-                        userSelect={'text'}
-                        fontSize="xl"
-                        fontWeight="medium"
-                        color={'blue.400'}
-                        variant={'link'}
-                      >
-                        {indexData.block1.txturl}
-                      </Button>
-                    </Link>
-                    </NextLink>
-                    .
-                    {/* <NextLink href={"/our-approach/agile"}></NextLink> */}
+                    {indexData.block2.txt_1}
                   </Text>
-
-                  <Stack direction={{ base: 'column', sm: 'row' }} spacing="4" mt="8">
-                    <NextLink href={"/contact"} passHref><Link>
-                      <Button size="md" colorScheme={'brand'} shadow="base" fontSize="md">
+                  {/* <Stack direction={{ base: 'column', sm: 'row' }} spacing="4" mt="8"> */}
+                  <NextLink href={"/contact"} passHref>
+                    <Link>
+                      <Button mt={8} p={5} size="md" colorScheme={'brand'} shadow="base" fontSize="md">
                         {indexData.block1.button}
                       </Button>
                     </Link>
-                    </NextLink>
-                  </Stack>
+                  </NextLink>
+                  {/* </Stack> */}
                 </Box>
               </Box>
               <Box
@@ -226,8 +212,25 @@ const IndexPage = () => {
                     {indexData.block2.h2_2}
                   </Text>{" "}
                 </Heading>
-                <Text px={{ base: 0, lg: 24, }} mb={4} fontSize={{ base: "lg", md: "xl", }} color={mode("gray.700", "gray.300")}>
+                {/* <Text px={{ base: 0, lg: 24, }} mb={4} fontSize={{ base: "lg", md: "xl", }} color={mode("gray.700", "gray.300")}>
                   {indexData.block2.txt_1}
+                </Text> */}
+                <Text px={{ base: 0, lg: 24, }} mb={4} fontSize={{ base: "lg", md: "xl", }} color={mode("gray.700", "gray.300")}>
+                  {indexData.block1.txt}{" "}
+                  <NextLink href={"/our-approach/agile"} passHref><Link>
+                    <Button
+                      userSelect={'text'}
+                      fontSize="xl"
+                      fontWeight="medium"
+                      color={'blue.400'}
+                      variant={'link'}
+                    >
+                      {indexData.block1.txturl}
+                    </Button>
+                  </Link>
+                  </NextLink>
+                  .
+                  {/* <NextLink href={"/our-approach/agile"}></NextLink> */}
                 </Text>
               </Box>
             </Box >

@@ -96,19 +96,19 @@ const Index = () => {
                 </Feature>
 
                 <Feature
-                    title="Quality and Risk Control / !!Return on Investment"
+                    title="Quality Assurance"
                     icon={<IoCashOutline />}
-                    refx={'/our-approach/roi'}
+                    refx={'/our-approach/quality-assurance'}
                 >
-                    We understand the importance for a project to make sense financially, therefore create a carefully planned priority list to create solutions.
+                    !!We understand the importance for a project to make sense financially, therefore create a carefully planned priority list to create solutions.
                 </Feature>
 
                 <Feature
-                    title="Product Development as a Service"
+                    title="Risk Control"
                     icon={<IoTerminalOutline />}
-                    refx={'/our-approach/pdaas'}
+                    refx={'/our-approach/risk-control'}
                 >
-                    We love to make stuff, bringing challenges to our every day environments and solving problems is how we find meaning in improving our world.
+                    !!We love to make stuff, bringing challenges to our every day environments and solving problems is how we find meaning in improving our world.
                 </Feature>
             </SimpleGrid>
 

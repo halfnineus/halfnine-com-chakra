@@ -3,8 +3,8 @@
     {
       "locale": "en",
       "head": {
-        "title": "Agile Automation Development & Consulting - Ochoa",
-        "description": "Improve your products and services with a digital transformation powered by Agile Automation."
+        "title": "Ochoa - Automating all Things | Agile Automation Development & Consulting",
+        "description": "Find the right team for your Industrial IoT & Control Systems and turn your ideas into a reality."
       },
       "block1": {
         "h1_1": "Agile Automation",
@@ -16,7 +16,7 @@
       "block2": {
         "h2_1": "All your needs with",
         "h2_2": "customized technology",
-        "txt_1": "Find the right team to turn your IoT and IIoT ideas into a reality.",
+        "txt_1": "Find the right team for your Industrial IoT & Control Systems and turn your ideas into a reality.",
         "button": "Email us"
       },
       "block3": {
@@ -48,15 +48,15 @@
     {
       "locale": "es",
       "head": {
-        "title": "Desarrollo Internacional de Productos, Diseño y Producción - Ochoa",
-        "description": "Desarrollo de productos de servicio completo con Ochoa, brindando servicios de software, hardware e i`ngeniería mecánica. Y la fabricación de productos electrónicos."
+        "title": "Ochoa - Automatizando todas las cosas | Consultoría y desarrollo de automatización ágil",
+        "description": "Encuentre el equipo adecuado para su IoT Industrial y Sistemas de Control convirtiendo sus ideas en realidad."
       },
       "block1": {
         "h1_1": "Automatización Ágil",
         "h1_2": "Desarrollo & Fabricación",
         "txt": "Mejore sus productos y servicios con una transformación digital impulsada por",
         "txturl": "Automatización Ágil",
-        "button": "Hablar con un experto"
+        "button": "Hablar con un nosotros"
       },
       "block2": {
         "h2_1": "Todas tus necesidades con",
