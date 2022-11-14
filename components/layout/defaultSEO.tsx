@@ -6,10 +6,10 @@ const DefaultSEO = () => {
             <DefaultSeo
                 defaultTitle="Agile Automation Development & Consulting | Ochoa"
                 // Stops working on build
-                // robotsProps={{
-                //     noarchive: true,
-                //     noimageindex: true,
-                // }}
+                robotsProps={{
+                    noarchive: true,
+                    noimageindex: true,
+                }}
                 openGraph={{
                     type: 'website',
                     locale: 'en',

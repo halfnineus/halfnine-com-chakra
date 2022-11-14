@@ -18,6 +18,7 @@ const RiskControl = () => {
             <Text p={8} fontWeight="semibold" textTransform="uppercase" letterSpacing="wide" userSelect={'none'}>
                 {"Risk Control - Page Is Still Under construction..."}
             </Text>
+            {/* https://roiinstitute.net/roi-methodology/ */}
         </>
     );
 }

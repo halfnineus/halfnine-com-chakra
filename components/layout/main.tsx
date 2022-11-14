@@ -8,7 +8,7 @@ const MainLayout = ({ children }: any) => {
                 {children}
             </main>
             <SCFooter />
-            {/* <Cookies /> */}
+            <Cookies />
         </>
     )
 }

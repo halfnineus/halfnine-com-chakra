@@ -18,6 +18,7 @@ const Qualityassurance = () => {
             <Text p={8} fontWeight="semibold" textTransform="uppercase" letterSpacing="wide" userSelect={'none'}>
                 {"Quality Assurance - Page Is Still Under construction..."}
             </Text>
+            {/* https://www.softwaretestinghelp.com/software-quality-assurance/ */}
         </>
     );
 }

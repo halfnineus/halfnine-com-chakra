@@ -241,7 +241,6 @@ const IndexPage = () => {
                 <Link isExternal>
                   <Image
                     maxW={'container.md'}
-                    // onClick={() => window.open("https://ochoa.pro/img/index/Basic-IoT-Enviroment.png")}
                     userSelect={'none'}
                     w="full"
                     rounded="3xl"

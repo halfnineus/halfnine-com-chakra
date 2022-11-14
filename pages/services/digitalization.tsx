@@ -151,6 +151,13 @@ const Development = () => {
 
                 <Divider my={12} />
 
+                {/* https://www.oracle.com/cloud/digital-transformation/ */}
+                {/* https://www.accenture.com/us-en/insights/digital-transformation-index */}
+                {/* https://emeritus.org/blog/what-is-digital-transformation-definition-examples-strategies/ */}
+                {/* https://www2.deloitte.com/us/en/insights/topics/strategy/how-to-lead-digital-transformation.html */}
+                {/* https://www.bakertilly.com/insights/the-key-to-digital-transformation-is-not-managing-change */}
+
+
                 <Heading color={'gray.800'} size={'lg'}>
                     Digital Transformation
                 </Heading>

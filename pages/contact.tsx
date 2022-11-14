@@ -139,7 +139,7 @@ const INDEX = () => {
                                     <Button variant={'ghost'} mr={3} onClick={onClose}>
                                         Close
                                     </Button>
-                                    <Button onClick={/* onClose, */ () => router.push("mailto:dan@ochoa.pro")} colorScheme={'brand'} variant='outline' rightIcon={<FiExternalLink />}>Send Mail</Button>
+                                    <Button onClick={() => router.push("mailto:dan@ochoa.pro")} colorScheme={'brand'} variant='outline' rightIcon={<FiExternalLink />}>Send Mail</Button>
                                 </ModalFooter>
                             </ModalContent>
                         </Modal>
@@ -156,10 +156,7 @@ const INDEX = () => {
                                 bgGradient={'linear(to-r, blackAlpha.700, blackAlpha.400)'}
                                 textAlign='center'
                             >
-                                <Stack
-                                    maxW={'3xl'}
-                                // align={'flex-start'}
-                                >
+                                <Stack maxW={'3xl'}>
                                     <Heading
                                         color={'white'}
                                         fontWeight={700}
@@ -179,7 +176,7 @@ const INDEX = () => {
                         <Container pt={'5'} maxW={'container.lg'}>
 
                             <Heading pl={4} fontSize={{ base: '2xl', md: '3xl' }}>
-                                Lets make something awesome together.
+                                Lets build something awesome together.
                             </Heading>
                             <Text pl={4} fontSize={{ base: 'md', md: 'lg' }}>
                                 Develop technology solutions, IT consulting & Digital transformation services.
@@ -189,9 +186,7 @@ const INDEX = () => {
 
                             <Box
                                 bg={mode('gray.50', 'gray.700')}
-                                // color="white"
                                 borderRadius='xl'
-                                // m={{ sm: 4, md: 16, lg: 10 }}
                                 px={{ base: 5, sm: 5, md: 5, lg: 10 }}
                                 pb={{ base: 5, sm: 5, md: 5, lg: 10 }}
                                 pt={{ base: 4, sm: 4, md: 4, lg: 8 }}
@@ -256,7 +251,6 @@ const INDEX = () => {
                                                         <MdPhone color="gray.800" />
                                                     </InputLeftElement>
                                                     <Input
-                                                        // defaultValue={email}
                                                         name={"phone"}
                                                         onChange={(e: any) => setPhone(e.target.value)}
                                                         placeholder={'Phone Number'}
@@ -269,12 +263,8 @@ const INDEX = () => {
                                             <FormLabel>Message</FormLabel>
                                             <Textarea
                                                 minH={36}
-                                                // defaultValue={message}
                                                 onChange={(e: any) => setMessage(e.target.value)}
-                                                placeholder={
-                                                    'Message'
-                                                    // 'For long messages please use any E-Mail provided on the contact list.'
-                                                }
+                                                placeholder={'Message'}
                                             />
                                         </FormControl>
                                         <FormControl>

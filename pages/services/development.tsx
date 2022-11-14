@@ -89,15 +89,7 @@ const Development = () => {
                 ]}
             />
             <Container maxW={'container.xl'} px={{ base: '4', sm: '4', md: '4', lg: '4', xl: '0' }} pt={{ base: '4', xl: '4' }}>
-                {/* 
-                <Box
-                    // shadow="xl"
-                    // bg="white"
-                    // _dark={{ bg: "gray.800" }}
-                    px={{ base: '4', xl: '10' }}
-                    pt={{ base: '4', xl: '8' }}
-                    mx="auto"
-                > */}
+
                 <SimpleGrid
                     alignItems="center"
                     columns={{ base: 1, lg: 2 }}
@@ -219,10 +211,7 @@ const Development = () => {
                     {`Ensure information security`}
                 </Heading>
                 <Text pb={'1'} color={'gray.700'}>
-                    {`Choose the communications platforms and formats that will provide clear communication with the development team that outlines every aspect of the project.`}
-                </Text>
-                <Text pb={'1'} color={'gray.700'}>
-                    {`Reach a Non Disclosure Agreement with your vendor to be able to mantain your sensitive information and mantain property rights on your project.`}
+                    {`Reach a Non Disclosure Agreement with your vendor to be able to maintain your sensitive information and maintain property rights on your project.`}
                 </Text>
                 <Text color={'gray.700'}>
                     {`Revise your vendor's security measures for storing data. (such as IDS/IPS, DLP, SIEM, and others).`}
@@ -292,15 +281,12 @@ const Development = () => {
 
                 <Divider my={12} />
 
-                {/* <Container maxW={'container.xl'} px={{ base: 0, xl: 0 }}> */}
                 <Values />
 
                 <Box p={"2rem"} />
 
             </Container>
-            {/* </Box> */}
         </>
-        // </Flex>
     );
 };
 

@@ -116,7 +116,7 @@ const Index = () => {
                                 icon={<MdOutlinePrecisionManufacturing />}
                                 refx={'/industries/manufacturing-and-production'}
                             >
-                                Increase productivity, quality, efficiency and profit by Automating repetitive tasks.
+                                Increase productivity, quality, efficiency, and profit by automating repetitive tasks.
                             </Feature>
 
                             <Feature
@@ -144,7 +144,7 @@ const Index = () => {
                                     <Heading>Revolutionizing Every Process Together</Heading>
                                     <Text maxW={'34rem'} pt={2} color={mode('gray.600', 'gray.400')} fontSize={'lg'}>
                                         {`With Experience Developing (Industrial Internet of Things), We are able to create automated systems and products that comply or for compliance of any regulations and `}
-                                        serve the sectors of Manufacturing & Production, Media & Entretainment and Security & Safety,
+                                        serve the sectors of Manufacturing & Production, Media & Entertainment and Security & Safety,
                                     </Text>
                                 </Stack>
                                 <Img

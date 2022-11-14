@@ -119,9 +119,9 @@ const Index = () => {
                     <Stack my={2}>
                         <Heading>Finding Big Solutions Together</Heading>
                         <Text maxW={'34rem'} pt={2} color={mode('gray.600', 'gray.400')} fontSize={'lg'}>
-                            Our agile development strategies and solutions are focused on advancing innovation and driving powerful outcomes,
-                            Focus on clients and companies making a return on investment by mitigating risk and increasing client satisfaction,
-                            Developing products to help you focus on market research and other big picture strategies.
+                            Our agile development strategies and solutions are focused on advancing innovation and driving powerful outcomes.
+                            Focusing on clients and companies making a return on investment by mitigating risk and increasing client satisfaction,
+                            developing products to help you focus on market research and other big picture strategies.
                         </Text>
                     </Stack>
                     <Img

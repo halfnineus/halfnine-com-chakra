@@ -231,7 +231,7 @@ export default function SCFooter() {
                                 </Flex>
                             </Container>
                             <HStack pt={2} spacing={"3.5"} justify="center">
-                                <NextLink href={'https://www.linkedin.com/company/ochoapro/'} passHref legacyBehavior>
+                                <NextLink href={'https://www.facebook.com/ochoaiot'} passHref legacyBehavior>
                                     <Link transform={'scale(0.95)'} _hover={{ color: "#4267B2", transform: 'scale(1)' }} isExternal>
                                         <Icon
                                             // color="gray.800"
@@ -242,7 +242,7 @@ export default function SCFooter() {
                                         />
                                     </Link>
                                 </NextLink>
-                                <NextLink href={'https://www.linkedin.com/company/ochoapro/'} passHref legacyBehavior>
+                                <NextLink href={'https://twitter.com/ochoa_pro'} passHref legacyBehavior>
                                     <Link transform={'scale(0.95)'} _hover={{ color: "#1DA1F2", transform: 'scale(1)' }} isExternal>
                                         <Icon
                                             // color="gray.800"
@@ -253,7 +253,7 @@ export default function SCFooter() {
                                         />
                                     </Link>
                                 </NextLink>
-                                <NextLink href={'https://www.linkedin.com/company/ochoapro/'} passHref legacyBehavior>
+                                <NextLink href={'https://www.youtube.com/@ochoapro'} passHref legacyBehavior>
                                     <Link transform={'scale(0.95)'} _hover={{ color: "#FF0000", transform: 'scale(1)' }} isExternal>
                                         <Icon
                                             _dark={{ color: "white" }}
@@ -338,8 +338,8 @@ export default function SCFooter() {
                                             name="lang"
                                             defaultValue="English (US)"
                                         >
-                                            <option onClick={() => { router.push({ pathname, query }, asPath, { locale: 'en' }) }} value="English (US)">English (US)</option>
-                                            <option onClick={() => { router.push({ pathname, query }, asPath, { locale: 'es' }) }} value="Español (MX)">Español (MX)</option>
+                                            <option onSelect={() => { router.push({ pathname, query }, asPath, { locale: 'en' }) }} onClick={() => { router.push({ pathname, query }, asPath, { locale: 'en' }) }} value="English (US)">English (US)</option>
+                                            <option onSelect={() => { router.push({ pathname, query }, asPath, { locale: 'en' }) }} onClick={() => { router.push({ pathname, query }, asPath, { locale: 'es' }) }} value="Español (MX)">Español (MX)</option>
                                         </Select>
                                     </FormControl>
                                 </Flex>

@@ -16,8 +16,12 @@ const Agile = () => {
                 ]}
             />
             <Text p={8} fontWeight="semibold" textTransform="uppercase" letterSpacing="wide" userSelect={'none'}>
-                {"Agile - Page Is Still Under construction..."}
+                {"Redefining Agile - Page Is Still Under construction..."}
             </Text>
+            {/* https://duckduckgo.com/?q=%22redefining+agile%22&ia=web */}
+            {/* https://duckduckgo.com/?q=Agile+Automation&ia=places */}
+            {/* https://learn.microsoft.com/en-us/devops/plan/what-is-agile-development */}
+
             {/* <Text>
                 Based on: Agile Software Development<br />
                 Agile Automation<br />
