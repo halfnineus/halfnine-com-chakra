@@ -1,12 +1,13 @@
-import { Text } from "@chakra-ui/react";
+import { Heading, Text } from "@chakra-ui/react";
 import { NextSeo } from "next-seo";
 
 const Sns = () => {
     return (
         <>
             <NextSeo
-                title='!!changeme  - Automating all Things | Ochoa'
-                description='!!changeme We assemble and lead teams with the skills and tools needed for building the products and tools that power your business.'
+                title='Security and Safety Industries  - Automating all Things | Ochoa'
+                description='Create and implement solutions to automate safety chores and tasks and focus on products & services.'
+                // description='Create and implement solutions to ease safety chores and tasks and focus on products & services.'
                 canonical="https://ochoa.pro/industries/security-and-safety"
                 languageAlternates={[
                     {
@@ -15,9 +16,12 @@ const Sns = () => {
                     }
                 ]}
             />
-            <Text p={8} fontWeight="semibold" textTransform="uppercase" letterSpacing="wide" userSelect={'none'}>
+            {/* <Text p={8} fontWeight="semibold" textTransform="uppercase" letterSpacing="wide" userSelect={'none'}>
                 {"Security & Safety - Page Is Still Under construction..."}
-            </Text>
+            </Text> */}
+            <Heading>
+                Get ready to ensure things differently
+            </Heading>
         </>
     );
 }

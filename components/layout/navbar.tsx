@@ -140,10 +140,10 @@ const DesktopNav = () => {
         <Stack direction={'row'} spacing={4}>
             {NAV_ITEMS.filter(p => p.locale === locale).map((navItem) => (
                 <Box key={navItem.label}>
-                    <Popover trigger={'hover'} placement={'bottom-start'}>
+                    <Popover trigger={'hover'} placement={'bottom-start'} closeDelay={140} openDelay={60}>
                         {({ isOpen, onClose }) => (
                             <>
-                                <PopoverTrigger >
+                                <PopoverTrigger>
                                     <Box>
                                         <NextLink href={navItem.href ?? navItem.subhref} passHref>
                                             <Link
@@ -166,6 +166,7 @@ const DesktopNav = () => {
 
                                 {navItem.children && (
                                     <PopoverContent
+                                        // transition={'all .25s ease-in-out'}
                                         // minW={'sm'}
                                         boxShadow={'xl'}
                                         bg={popoverContentBgColor}
@@ -358,37 +359,39 @@ const NAV_ITEMS: Array<NavItem> = [
                 href: '/industries/manufacturing-and-production',
             },
             {
-                label: 'Media & Entertainment',
-                href: '/industries/media-and-entertainment',
-            },
-            {
                 label: 'Security & Safety',
                 href: '/industries/security-and-safety',
             },
         ],
     },
+    // {
+    //     locale: "en",
+    //     label: 'Our Approach',
+    //     subhref: '/our-approach',
+    //     children: [
+    //         {
+    //             label: 'Agile',
+    //             // Methodology & Mindset
+    //             subLabel: 'Client & Development strategy',
+    //             href: '/our-approach/agile',
+    //         },
+    //         {
+    //             label: 'Quality Assurance',
+    //             // subLabel: 'Return on Investment',
+    //             href: '/our-approach/quality-assurance',
+    //         },
+    //         {
+    //             label: 'Risk Control',
+    //             // subLabel: 'Return on Investment',
+    //             href: '/our-approach/risk-control',
+    //         },
+    //     ],
+    // },
     {
         locale: "en",
         label: 'Our Approach',
+        href: '/our-approach',
         subhref: '/our-approach',
-        children: [
-            {
-                label: 'Agile',
-                // Methodology & Mindset
-                subLabel: 'Client & Development strategy',
-                href: '/our-approach/agile',
-            },
-            {
-                label: 'Quality Assurance',
-                // subLabel: 'Return on Investment',
-                href: '/our-approach/quality-assurance',
-            },
-            {
-                label: 'Risk Control',
-                // subLabel: 'Return on Investment',
-                href: '/our-approach/risk-control',
-            },
-        ],
     },
     {
         locale: "en",
@@ -428,36 +431,38 @@ const NAV_ITEMS: Array<NavItem> = [
                 href: '/industries/manufacturing-and-production',
             },
             {
-                label: 'Medios & Entretenimiento',
-                href: '/industries/media-and-entertainment',
-            },
-            {
                 label: 'Security & Protección',
                 href: '/industries/security-and-safety',
             },
         ],
     },
+    // {
+    //     locale: "es",
+    //     label: 'Nuestro enfoque',
+    //     subhref: '/our-approach',
+    //     children: [
+    //         {
+    //             label: 'Ágil',
+    //             subLabel: 'Cliente & Estrategia de desarrollo',
+    //             href: '/our-approach/agile',
+    //         },
+    //         {
+    //             label: 'Aseguramiento de la calidad',
+    //             subLabel: 'Retorno de la inversión',
+    //             href: '/our-approach/quality-assurance',
+    //         },
+    //         {
+    //             label: 'Control de Riesgo',
+    //             subLabel: 'Desarrollo de productos como servicio',
+    //             href: '/our-approach/risk-control',
+    //         }
+    //     ],
+    // },
     {
         locale: "es",
         label: 'Nuestro enfoque',
+        href: '/our-approach',
         subhref: '/our-approach',
-        children: [
-            {
-                label: 'Ágil',
-                subLabel: 'Cliente & Estrategia de desarrollo',
-                href: '/our-approach/agile',
-            },
-            {
-                label: 'Aseguramiento de la calidad',
-                subLabel: 'Retorno de la inversión',
-                href: '/our-approach/quality-assurance',
-            },
-            {
-                label: 'Control de Riesgo',
-                subLabel: 'Desarrollo de productos como servicio',
-                href: '/our-approach/risk-control',
-            }
-        ],
     },
     {
         locale: "es",

@@ -129,9 +129,9 @@ const INDEX = () => {
                                 <ModalBody>
                                     <Text fontWeight={'semibold'} mb='1rem'>
                                         {/* <Lorem count={2} /> */}
-                                        {`You are about to email Dan Ochoa: `}
-                                        <Button colorScheme={'brand'} variant={'link'} userSelect={'text'} fontWeight={'semibold'} mb='1rem' display={'inline'} onClick={() => router.push("mailto:dan@ochoa.pro")}>
-                                            {`dan@ochoa.pro`}
+                                        {`You are about to email us at: `}
+                                        <Button colorScheme={'brand'} variant={'link'} userSelect={'text'} fontWeight={'semibold'} mb='1rem' display={'inline'} onClick={() => router.push("mailto:ochoapro@duck.com")}>
+                                            {`ochoapro@duck.com`}
                                         </Button>
                                     </Text>
                                 </ModalBody>
@@ -139,7 +139,7 @@ const INDEX = () => {
                                     <Button variant={'ghost'} mr={3} onClick={onClose}>
                                         Close
                                     </Button>
-                                    <Button onClick={() => router.push("mailto:dan@ochoa.pro")} colorScheme={'brand'} variant='outline' rightIcon={<FiExternalLink />}>Send Mail</Button>
+                                    <Button onClick={() => router.push("mailto:ochoapro@duck.com")} colorScheme={'brand'} variant='outline' rightIcon={<FiExternalLink />}>Send Mail</Button>
                                 </ModalFooter>
                             </ModalContent>
                         </Modal>

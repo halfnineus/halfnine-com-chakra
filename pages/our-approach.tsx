@@ -1,9 +1,41 @@
 import { ChevronRightIcon } from "@chakra-ui/icons";
-import { chakra, Flex, HStack, Icon, SimpleGrid, Box, useColorModeValue as mode, Text, Link, Heading, Img, Stack, } from "@chakra-ui/react";
+import { chakra, Flex, HStack, Icon, SimpleGrid, Box, useColorModeValue as mode, Text, Link, Heading, Img, Stack, Center } from "@chakra-ui/react";
 import { NextSeo } from "next-seo";
 import NextLink from "next/link";
 
 import { IoCashOutline, IoTerminalOutline, IoTimerOutline } from "react-icons/io5";
+
+{/* https://duckduckgo.com/?q=%22redefining+agile%22&ia=web */ }
+{/* https://duckduckgo.com/?q=Agile+Automation&ia=places */ }
+{/* https://learn.microsoft.com/en-us/devops/plan/what-is-agile-development */ }
+
+{/* <Text>
+    Based on: Agile Software Development<br />
+    Agile Automation<br />
+    Agile Architecture<br />
+    Agile Application<br />
+    Agile Business Intelligence<br />
+    Agile Contracts<br />
+    Agile Infrastructure<br />
+    Agile Learning<br />
+    Agile Leadership<br />
+    Agile Modeling<br />
+    Agile Management<br />
+    Agile Marketing<br />
+    Agile Manufacturing<br />
+    Agile Project Management<br />
+    Agile Retail<br />
+    Agile Testing<br />
+    Agile Tooling<br />
+    Agile Usability Engineering<br />
+    Agile Unified Process<br />
+</Text> */}
+
+{/* https://www.softwaretestinghelp.com/software-quality-assurance/ */ }
+
+{/* https://roiinstitute.net/roi-methodology/ */ }
+
+
 
 const Feature = (props: any) => {
     return (
@@ -14,51 +46,53 @@ const Feature = (props: any) => {
                     rounded={'xl'}
                     p={4}
                     role={'group'}
-                    _hover={{ borderColor: 'brand.100', shadow: 'sm' }}
+                    _hover={{ borderColor: 'gray.300' }}
                     border='1px'
-                    borderColor={mode('gray.200', 'gray.600')}
+                    borderColor={mode('gray.100', 'gray.600')}
                 >
                     <HStack>
                         <Box
                             boxSize={12}
-                            _light={{ color: "brand.700" }}
+                            _light={{ color: "brand.900" }}
                             mb={4}
                             fill="none"
-                            // viewBox="0 0 24 24"
                             stroke="currentColor"
                             aria-hidden="true"
                             fontSize="3rem"
                         >
                             {props.icon}
                         </Box>
+                        <Center>
+                            <Heading
+                                pl={2}
+                                as={'h3'}
+                                mb={3}
+                                fontSize="lg"
+                                lineHeight="shorter"
+                                fontWeight="bold"
+                            >
+                                {props.title}
+                            </Heading>
+                        </Center>
                         <Flex
                             transition={'all .3s ease'}
-                            transform={'translateX(-10px)'}
+                            transform={'translateX(-40px)'}
                             opacity={0}
                             _groupHover={{ opacity: '100%', transform: 'translateX(0)' }}
                             justify={'flex-end'}
                             align={'center'}
                             flex={1}>
-                            <Icon color={mode('brand.700', 'white')} w={12} h={12} as={ChevronRightIcon} />
+                            <Icon color={mode('brand.900', 'white')} w={12} h={12} as={ChevronRightIcon} />
                         </Flex>
                     </HStack>
-                    <chakra.h3
-                        mb={3}
-                        fontSize="lg"
-                        lineHeight="shorter"
-                        fontWeight="bold"
-                    // _groupHover={{ color: "brand.700" }}
-                    >
-                        {props.title}
-                    </chakra.h3>
-                    <chakra.p
+                    <Text
+                        as={'p'}
                         lineHeight="tall"
                         color="gray.600"
-                        _dark={{ color: "gray.400" }}
                     >
                         {props.children}
-                    </chakra.p>
-                </Box>
+                    </Text>
+                </Box >
             </Link>
         </NextLink>
     );
@@ -79,8 +113,9 @@ const Index = () => {
                 ]}
             />
             <SimpleGrid
-                columns={{ base: 1, /* md: 2,*/ lg: 3 }}
-                spacing={8}
+                maxW={'container.xl'}
+                columns={{ base: 1 }}
+                spacing={4}
                 px={{ base: '4', xl: '10' }}
                 pt={{ base: '6', xl: '10' }}
                 mx="auto"

@@ -12,6 +12,7 @@ import {
     Link,
     Heading,
     Img,
+    Center,
 } from "@chakra-ui/react";
 import { useRouter } from "next/router";
 import { NextSeo } from "next-seo";
@@ -30,14 +31,14 @@ const Feature = (props: any) => {
                     rounded={'xl'}
                     p={4}
                     role={'group'}
-                    _hover={{ borderColor: 'brand.100', shadow: 'sm' }}
+                    _hover={{ borderColor: 'gray.300' }}
                     border='1px'
-                    borderColor={mode('gray.200', 'gray.600')}
+                    borderColor={mode('gray.100', 'gray.600')}
                 >
                     <HStack>
                         <Box
                             boxSize={12}
-                            _light={{ color: "brand.700" }}
+                            _light={{ color: "brand.900" }}
                             mb={4}
                             fill="none"
                             stroke="currentColor"
@@ -46,33 +47,36 @@ const Feature = (props: any) => {
                         >
                             {props.icon}
                         </Box>
+                        <Center>
+                            <Heading
+                            pl={2}
+                                as={'h3'}
+                                mb={3}
+                                fontSize="lg"
+                                lineHeight="shorter"
+                                fontWeight="bold"
+                            >
+                                {props.title}
+                            </Heading>
+                        </Center>
                         <Flex
                             transition={'all .3s ease'}
-                            transform={'translateX(-10px)'}
+                            transform={'translateX(-40px)'}
                             opacity={0}
                             _groupHover={{ opacity: '100%', transform: 'translateX(0)' }}
                             justify={'flex-end'}
                             align={'center'}
                             flex={1}>
-                            <Icon color={mode('brand.700', 'white')} w={12} h={12} as={ChevronRightIcon} />
+                            <Icon color={mode('brand.900', 'white')} w={12} h={12} as={ChevronRightIcon} />
                         </Flex>
                     </HStack>
-                    <chakra.h3
-                        // _groupHover={{ color: "brand.700" }}
-                        mb={3}
-                        fontSize="lg"
-                        lineHeight="shorter"
-                        fontWeight="bold"
-                    >
-                        {props.title}
-                    </chakra.h3>
-                    <chakra.p
+                    <Text
+                        as={'p'}
                         lineHeight="tall"
                         color="gray.600"
-                        _dark={{ color: "gray.300" }}
                     >
                         {props.children}
-                    </chakra.p>
+                    </Text>
                 </Box >
             </Link>
         </NextLink>
@@ -100,8 +104,9 @@ const Index = () => {
                             ]}
                         />
                         <SimpleGrid
-                            columns={{ base: 1, /* md: 2,*/ lg: 3 }}
-                            spacing={8}
+                            maxW={'container.xl'}
+                            columns={{ base: 1 }}
+                            spacing={4}
                             px={{ base: '4', xl: '10' }}
                             pt={{ base: '6', xl: '10' }}
                             mx="auto"

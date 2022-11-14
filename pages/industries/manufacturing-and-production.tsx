@@ -1,12 +1,12 @@
-import { Text } from "@chakra-ui/react";
+import { Heading, Text } from "@chakra-ui/react";
 import { NextSeo } from "next-seo";
 
 const Mnp = () => {
     return (
         <>
             <NextSeo
-                title='!!changeme  - Automating all Things | Ochoa'
-                description='!!changeme We assemble and lead teams with the skills and tools needed for building the products and tools that power your business.'
+                title='Manufacturing and Production Industries - Automating all Things | Ochoa'
+                description='Increase your productivity, quality, efficiency, and profit by automating repetitive tasks.'
                 canonical="https://ochoa.pro/industries/manufacturing-and-production"
                 languageAlternates={[
                     {
@@ -15,9 +15,13 @@ const Mnp = () => {
                     }
                 ]}
             />
-            <Text p={8} fontWeight="semibold" textTransform="uppercase" letterSpacing="wide" userSelect={'none'}>
+            {/* <Text p={8} fontWeight="semibold" textTransform="uppercase" letterSpacing="wide" userSelect={'none'}>
                 {"Manufacturing & Production - Page Is Still Under construction..."}
-            </Text>
+            </Text> */}
+            <Heading>
+                Get ready to make things differently
+            </Heading>
+
         </>
     );
 }

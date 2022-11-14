@@ -6,13 +6,13 @@ import {
     Icon,
     Text,
     useColorModeValue as mode,
-    chakra,
     SimpleGrid,
     HStack,
     Link,
     Heading,
     Img,
     Stack,
+    Center,
 } from "@chakra-ui/react";
 import { NextSeo } from "next-seo";
 import NextLink from "next/link";
@@ -21,8 +21,8 @@ import indexdat from "../../assets/services/index.json"
 import { useRouter } from "next/router";
 import { IoShieldCheckmarkOutline } from "react-icons/io5";
 import { MdOutlinePrecisionManufacturing } from "react-icons/md";
-import { BsCameraVideo } from "react-icons/bs";
 
+// !! Energy and Logistics?
 const Feature = (props: any) => {
     return (
         <NextLink href={props.refx} passHref>
@@ -32,51 +32,53 @@ const Feature = (props: any) => {
                     rounded={'xl'}
                     p={4}
                     role={'group'}
-                    _hover={{ borderColor: 'brand.100', shadow: 'sm' }}
+                    _hover={{ borderColor: 'gray.300' }}
                     border='1px'
-                    borderColor={mode('gray.200', 'gray.600')}
+                    borderColor={mode('gray.100', 'gray.600')}
                 >
                     <HStack>
                         <Box
                             boxSize={12}
-                            _light={{ color: "brand.700" }}
+                            _light={{ color: "brand.900" }}
                             mb={4}
                             fill="none"
-                            // viewBox="0 0 24 24"
                             stroke="currentColor"
                             aria-hidden="true"
                             fontSize="3rem"
                         >
                             {props.icon}
                         </Box>
+                        <Center>
+                            <Heading
+                                pl={2}
+                                as={'h3'}
+                                mb={3}
+                                fontSize="lg"
+                                lineHeight="shorter"
+                                fontWeight="bold"
+                            >
+                                {props.title}
+                            </Heading>
+                        </Center>
                         <Flex
                             transition={'all .3s ease'}
-                            transform={'translateX(-10px)'}
+                            transform={'translateX(-40px)'}
                             opacity={0}
                             _groupHover={{ opacity: '100%', transform: 'translateX(0)' }}
                             justify={'flex-end'}
                             align={'center'}
                             flex={1}>
-                            <Icon color={mode('brand.700', 'white')} w={12} h={12} as={ChevronRightIcon} />
+                            <Icon color={mode('brand.900', 'white')} w={12} h={12} as={ChevronRightIcon} />
                         </Flex>
                     </HStack>
-                    <chakra.h3
-                        // _groupHover={{ color: "brand.700" }}
-                        mb={3}
-                        fontSize="lg"
-                        lineHeight="shorter"
-                        fontWeight="bold"
-                    >
-                        {props.title}
-                    </chakra.h3>
-                    <chakra.p
+                    <Text
+                        as={'p'}
                         lineHeight="tall"
                         color="gray.600"
-                        _dark={{ color: "gray.400" }}
                     >
                         {props.children}
-                    </chakra.p>
-                </Box>
+                    </Text>
+                </Box >
             </Link>
         </NextLink>
     );
@@ -103,8 +105,9 @@ const Index = () => {
                             ]}
                         />
                         <SimpleGrid
-                            columns={{ base: 1, /* md: 2,*/ lg: 3 }}
-                            spacing={8}
+                            maxW={'container.xl'}
+                            columns={{ base: 1 }}
+                            spacing={4}
                             px={{ base: '4', xl: '10' }}
                             pt={{ base: '6', xl: '10' }}
                             mx="auto"
@@ -118,15 +121,6 @@ const Index = () => {
                             >
                                 Increase productivity, quality, efficiency, and profit by automating repetitive tasks.
                             </Feature>
-
-                            <Feature
-                                title="Media & Entertainment"
-                                icon={<BsCameraVideo />}
-                                refx={'/industries/media-and-entertainment'}
-                            >
-                                Change experiences forever by implementing and delivering a more immersive environment.
-                            </Feature>
-
                             <Feature
                                 title="Security & Safety"
                                 icon={<IoShieldCheckmarkOutline />}

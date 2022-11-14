@@ -64,7 +64,7 @@ export const SocialButton = chakra('a', {
 
 export interface LinkGroup {
     locale: string
-    title: string
+    title?: string
     links: Array<{
         label: string
         href: string
@@ -87,17 +87,16 @@ export const links: LinkGroup[] = [
         title: 'Industries',
         links: [
             { label: 'Manufacturing & Production', href: '/industries/manufacturing-and-production' },
-            { label: 'Media & Entertainment', href: '/industries/media-and-entertainment' },
             { label: 'Security & Safety', href: '/industries/security-and-safety' },
         ],
     },
     {
         locale: "en",
-        title: 'Our Approach',
+        title: 'Quick Links',
         links: [
-            { label: 'Agile', href: '/our-approach/agile' },
-            { label: 'Quality Assurance', href: '/our-approach/quality-assurance' },
-            { label: 'Risk Control', href: '/our-approach/risk-control' },
+            { label: 'Our Approach', href: '/our-approach' },
+            { label: 'About', href: '/about' },
+            // { label: 'Risk Control', href: '/our-approach/risk-control' },
         ],
     },
     {
@@ -114,17 +113,16 @@ export const links: LinkGroup[] = [
         title: 'Industrias',
         links: [
             { label: 'Fabricación & Producción', href: '/industries/manufacturing-and-production' },
-            { label: 'Medios & Entretenimiento', href: '/industries/media-and-entertainment' },
             { label: 'Security & Protección', href: '/industries/security-and-safety' },
         ],
     },
     {
         locale: "es",
-        title: 'Nuestro enfoque',
+        title: 'Enlaces Rápidos',
         links: [
-            { label: 'Ágil', href: '/our-approach/agile' },
-            { label: 'Aseguramiento de la calidad', href: '/our-approach/quality-assurance' },
-            { label: 'Control de Riesgo', href: '/our-approach/risk-control' },
+            { label: 'Nuestro enfoque', href: '/our-approach' },
+            { label: 'Acerca De', href: '/about' },
+            // { label: 'Control de Riesgo', href: '/our-approach/risk-control' },
         ],
     },
 ]
@@ -306,23 +304,21 @@ export default function SCFooter() {
                                 >
                                     <Box id="bottom" mt={{ base: '4', lg: '0' }}>
                                         {footerData.components.copyright}
-                                        <NextLink href={'/about'} passHref>
+                                        {/* <NextLink href={'/about'} passHref legacyBehavior>
                                             <Link px={{ base: '4', lg: '8' }} isExternal>
                                                 {footerData.components.i1}
                                             </Link>
-                                        </NextLink>
+                                        </NextLink> */}
                                         <NextLink href={'/privacy'} passHref>
-                                            <Link pr={{ base: '4', lg: '8' }}>
+                                            <Link px={{ base: '4', lg: '8' }}>
                                                 {footerData.components.i2}
                                             </Link>
                                         </NextLink>
-                                        {/* <NextLink href={'/sitemap.xml'} passHref> */}
-                                        <Link href={'/sitemap.xml'} pr={{ base: '4', lg: '8' }} isExternal>
-                                            {/* <Text cursor={'pointer'} _hover={{ textDecorationLine: 'underline' }} ={() => window.open('/sitemap.xml')} onClick={() => window.open('/sitemap.xml')}> */}
-                                            {footerData.components.i3}
-                                            {/* </Text> */}
-                                        </Link>
-                                        {/* </NextLink> */}
+                                        <NextLink href={'https://ochoa.pro/sitemap.xml'} passHref legacyBehavior>
+                                            <Link pr={{ base: '4', lg: '8' }} isExternal>
+                                                {footerData.components.i3}
+                                            </Link>
+                                        </NextLink>
                                     </Box>
                                     <FormControl w="auto" display="flex" alignItems="center">
                                         <FormLabel mb="1" fontSize="sm" fontWeight="normal">
