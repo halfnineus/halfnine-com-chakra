@@ -16,11 +16,8 @@ const Sns = () => {
                     }
                 ]}
             />
-            {/* <Text p={8} fontWeight="semibold" textTransform="uppercase" letterSpacing="wide" userSelect={'none'}>
-                {"Security & Safety - Page Is Still Under construction..."}
-            </Text> */}
             <Heading>
-                Get ready to ensure things differently
+                {`Security & Safety - Get ready to ensure things differently`}
             </Heading>
         </>
     );

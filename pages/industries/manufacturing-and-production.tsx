@@ -15,11 +15,8 @@ const Mnp = () => {
                     }
                 ]}
             />
-            {/* <Text p={8} fontWeight="semibold" textTransform="uppercase" letterSpacing="wide" userSelect={'none'}>
-                {"Manufacturing & Production - Page Is Still Under construction..."}
-            </Text> */}
             <Heading>
-                Get ready to make things differently
+                {`Manufacturing & Production - Get ready to create things differently`}
             </Heading>
 
         </>

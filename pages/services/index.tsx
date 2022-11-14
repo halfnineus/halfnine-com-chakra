@@ -108,7 +108,7 @@ const Index = () => {
                             columns={{ base: 1 }}
                             spacing={4}
                             px={{ base: '4', xl: '10' }}
-                            pt={{ base: '6', xl: '10' }}
+                            pt={6}
                             mx="auto"
                             bg="white"
                             _dark={{ bg: "gray.800" }}
