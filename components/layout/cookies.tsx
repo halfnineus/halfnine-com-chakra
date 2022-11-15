@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { Box, Button, HStack, Icon, Link, Spacer, Text } from "@chakra-ui/react";
-import NextLink from "next/link";
+import { Box, Button, HStack, Icon, Spacer, Text } from "@chakra-ui/react";
+import Link from "next/link";
 import { setCookie, hasCookie } from 'cookies-next';
 import { BiCookie } from 'react-icons/bi'
 
@@ -82,24 +82,21 @@ function Consent() {
                 <Text fontWeight={'semibold'} fontSize={{ base: 'xs', sm: 'sm', md: "md" }} color={'yellow.500'}>
                     This website uses cookies to ensure you have the best experience possible.
                 </Text>
-                <NextLink
+                <Link
                     href={"http://cookiesandyou.com/"}
                     // href={"https://www.cloudflare.com/learning/privacy/what-are-cookies/"}
-                    passHref
-                    legacyBehavior
+                    target={'_blank'}
                 >
-                    <Link isExternal>
-                        <Button
-                            userSelect={'text'}
-                            fontSize={{ base: 'xs', sm: 'sm', md: "md" }}
-                            fontWeight="medium"
-                            color={'blue.400'}
-                            variant={'link'}
-                        >
-                            {"Learn More"}
-                        </Button>
-                    </Link>
-                </NextLink>
+                    <Button
+                        userSelect={'text'}
+                        fontSize={{ base: 'xs', sm: 'sm', md: "md" }}
+                        fontWeight="medium"
+                        color={'blue.400'}
+                        variant={'link'}
+                    >
+                        {"Learn More"}
+                    </Button>
+                </Link>
                 <Spacer />
                 <Button
                     onClick={() => {

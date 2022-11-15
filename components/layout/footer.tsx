@@ -2,7 +2,6 @@ import {
     Box,
     Flex,
     Image,
-    Link,
     Stack,
     Text,
     Container,
@@ -19,7 +18,7 @@ import {
     Button,
 } from '@chakra-ui/react';
 
-import NextLink from 'next/link'
+import Link from 'next/link'
 import { useRouter } from "next/router"
 import { BiRightArrowAlt } from 'react-icons/bi';
 
@@ -168,11 +167,11 @@ export default function SCFooter() {
                                                     </Text>
                                                     <Stack>
                                                         {group.links.map((link, idx) => (
-                                                            <NextLink key={idx} href={link.href} passHref>
-                                                                <Link>
+                                                            <Link key={idx} href={link.href}>
+                                                                <Text _hover={{ textDecorationLine: 'underline' }}>
                                                                     {link.label}
-                                                                </Link>
-                                                            </NextLink>
+                                                                </Text>
+                                                            </Link>
                                                         ))}
                                                     </Stack>
                                                 </Box>
@@ -181,10 +180,9 @@ export default function SCFooter() {
                                     </SimpleGrid>
                                     <Box maxW={'md'} paddingEnd="12">
                                         <Stack
-                                            spacing="10"
-                                            direction={{ base: 'column', lg: 'row' }}
-                                            align={{ base: 'flex-start', lg: 'center' }}
-                                            justify="space-between"
+                                            direction={{ base: 'column', lg: 'column' }}
+                                            align={{ base: 'flex-start', lg: 'flex-start' }}
+                                            justify={"start"}
                                             mr={{ base: 0, xl: 9 }}
                                         >
                                             <Text
@@ -194,83 +192,75 @@ export default function SCFooter() {
                                                 fontWeight={'semibold'}
                                                 pt={{ base: 8, sm: 8, md: 8, lg: 0 }}
                                             >
-                                                {footerData.lvlup.t1}<br />
-                                                <Text fontSize="sm" pt={2} fontWeight={'normal'}>
-                                                    {footerData.lvlup.d1}
-                                                </Text>
+                                                {footerData.lvlup.t1}
+                                            </Text>
+                                            <Text fontSize="sm" fontWeight={'normal'} lineHeight={'5'}>
+                                                {footerData.lvlup.d1}
                                             </Text>
                                         </Stack>
                                         <HStack textAlign={'center'} py={{ base: 2, md: 0 }}>
                                             <Text maxW={{ base: 'unset', lg: '800px' }} lineHeight="short" pr={2} pt={{ base: 4, sm: 4, md: 4, lg: 4 }} pb={4} fontWeight={'semibold'} fontSize={{ base: '14px', sm: '16px', md: '16px' }}>
                                                 {footerData.lvlup.t2}
                                             </Text>
-                                            <NextLink href={'/contact'} passHref>
-                                                <Link>
-                                                    <Button
-                                                        w={{ base: 'full', md: 'auto' }}
-                                                        minW="120px"
-                                                        colorScheme={'brand'}
-                                                        size={'sm'}
-                                                        // textTransform="uppercase"
-                                                        // fontWeight="bold"
-                                                        transition="all 0.2s"
-                                                        rounded="lg"
-                                                        outline={0}
-                                                        _focus={{ shadow: 'outline' }}
-                                                        _active={{ transform: 'translateY(2px)' }}
-                                                    >
-                                                        {footerData.lvlup.b2}
-                                                        <Box as={BiRightArrowAlt} ml="2" fontSize="lg" />
-                                                    </Button>
-                                                </Link>
-                                            </NextLink>
+                                            <Link href={'/contact'}>
+                                                <Button
+                                                    w={{ base: 'full', md: 'auto' }}
+                                                    minW="120px"
+                                                    colorScheme={'brand'}
+                                                    size={'sm'}
+                                                    // textTransform="uppercase"
+                                                    // fontWeight="bold"
+                                                    transition="all 0.2s"
+                                                    rounded="lg"
+                                                    outline={0}
+                                                    _focus={{ shadow: 'outline' }}
+                                                    _active={{ transform: 'translateY(2px)' }}
+                                                >
+                                                    {footerData.lvlup.b2}
+                                                    <Box as={BiRightArrowAlt} ml="2" fontSize="lg" />
+                                                </Button>
+                                            </Link>
                                         </HStack>
                                     </Box>
                                 </Flex>
                             </Container>
                             <HStack pt={2} spacing={"3.5"} justify="center">
-                                <NextLink href={'https://www.facebook.com/ochoaiot'} passHref legacyBehavior>
-                                    <Link transform={'scale(0.95)'} _hover={{ color: "#4267B2", transform: 'scale(1)' }} isExternal>
-                                        <Icon
-                                            // color="gray.800"
-                                            _dark={{ color: "white" }}
-                                            h="34px"
-                                            w="34px"
-                                            as={FaFacebookSquare}
-                                        />
-                                    </Link>
-                                </NextLink>
-                                <NextLink href={'https://twitter.com/ochoa_pro'} passHref legacyBehavior>
-                                    <Link transform={'scale(0.95)'} _hover={{ color: "#1DA1F2", transform: 'scale(1)' }} isExternal>
-                                        <Icon
-                                            // color="gray.800"
-                                            _dark={{ color: "white" }}
-                                            h="34px"
-                                            w="34px"
-                                            as={FaTwitterSquare}
-                                        />
-                                    </Link>
-                                </NextLink>
-                                <NextLink href={'https://www.youtube.com/@ochoapro'} passHref legacyBehavior>
-                                    <Link transform={'scale(0.95)'} _hover={{ color: "#FF0000", transform: 'scale(1)' }} isExternal>
-                                        <Icon
-                                            _dark={{ color: "white" }}
-                                            h="34px"
-                                            w="34px"
-                                            as={FaYoutubeSquare}
-                                        />
-                                    </Link>
-                                </NextLink>
-                                <NextLink href={'https://www.linkedin.com/company/ochoapro/'} passHref legacyBehavior>
-                                    <Link transform={'scale(0.95)'} _hover={{ color: "#0077B5", transform: 'scale(1)' }} isExternal>
-                                        <Icon
-                                            _dark={{ color: "white" }}
-                                            h="34px"
-                                            w="34px"
-                                            as={FaLinkedin}
-                                        />
-                                    </Link>
-                                </NextLink>
+                                <Link href={'https://www.facebook.com/ochoaiot'} target={'_blank'}>
+                                    <Icon
+                                        transform={'scale(0.95)'}
+                                        _hover={{ color: "#4267B2", transform: 'scale(1)' }}
+                                        h="34px"
+                                        w="34px"
+                                        as={FaFacebookSquare}
+                                    />
+                                </Link>
+                                <Link href={'https://twitter.com/ochoa_pro'}>
+                                    <Icon
+                                        transform={'scale(0.95)'}
+                                        _hover={{ color: "#1DA1F2", transform: 'scale(1)' }}
+                                        h="34px"
+                                        w="34px"
+                                        as={FaTwitterSquare}
+                                    />
+                                </Link>
+                                <Link href={'https://www.youtube.com/@ochoapro'} target={'_blank'}>
+                                    <Icon
+                                        transform={'scale(0.95)'}
+                                        _hover={{ color: "#FF0000", transform: 'scale(1)' }}
+                                        h="34px"
+                                        w="34px"
+                                        as={FaYoutubeSquare}
+                                    />
+                                </Link>
+                                <Link href={'https://www.linkedin.com/company/ochoapro/'} target={'_blank'}>
+                                    <Icon
+                                        transform={'scale(0.95)'}
+                                        _hover={{ color: "#0077B5", transform: 'scale(1)' }}
+                                        h="34px"
+                                        w="34px"
+                                        as={FaLinkedin}
+                                    />
+                                </Link>
                             </HStack>
                             <Flex
                                 py={2}
@@ -289,37 +279,28 @@ export default function SCFooter() {
                                     flexGrow: 1,
                                     ml: 5,
                                 }}>
-                                <NextLink href={'/'} passHref>
-                                    <Link>
-                                        <Image userSelect={'none'} alt={'Ochoa'} pointerEvents={'none'} width={'auto'} height={'10'} src={mode('/img/smlog.png', '/img/wsmlog.png')} />
-                                    </Link>
-                                </NextLink>
+                                <Link href={'/'}>
+                                    <Image userSelect={'none'} alt={'Ochoa'} pointerEvents={'none'} width={'auto'} height={'10'} src={mode('/img/smlog.png', '/img/wsmlog.png')} />
+                                </Link>
                             </Flex>
-                            <Container maxW={'container.xl'}>
+                            <Container px={{ base: '4', xl: '0' }} maxW={'container.xl'}>
                                 <Flex
                                     direction={{ base: 'column-reverse', lg: 'row' }}
                                     align={{ base: 'flex-start', lg: 'center' }}
                                     justify="space-between"
                                     fontSize="sm"
                                 >
-                                    <Box id="bottom" mt={{ base: '4', lg: '0' }}>
-                                        {footerData.components.copyright}
-                                        {/* <NextLink href={'/about'} passHref legacyBehavior>
-                                            <Link px={{ base: '4', lg: '8' }} isExternal>
-                                                {footerData.components.i1}
-                                            </Link>
-                                        </NextLink> */}
-                                        <NextLink href={'/privacy'} passHref>
-                                            <Link px={{ base: '4', lg: '8' }}>
-                                                {footerData.components.i2}
-                                            </Link>
-                                        </NextLink>
-                                        <NextLink href={'https://ochoa.pro/sitemap.xml'} passHref legacyBehavior>
-                                            <Link pr={{ base: '4', lg: '8' }} isExternal>
-                                                {footerData.components.i3}
-                                            </Link>
-                                        </NextLink>
-                                    </Box>
+                                    <Stack as={HStack} direction={'row'} spacing={{ base: '4', lg: '8' }} id="bottom" mt={{ base: '4', lg: '0' }}>
+                                        <Text>
+                                            {footerData.components.copyright}
+                                        </Text>
+                                        <Link href={'/privacy'}>
+                                            {footerData.components.i2}
+                                        </Link>
+                                        <Link href={'https://ochoa.pro/sitemap.xml'} target={'_blank'}>
+                                            {footerData.components.i3}
+                                        </Link>
+                                    </Stack>
                                     <FormControl w="auto" display="flex" alignItems="center">
                                         <FormLabel mb="1" fontSize="sm" fontWeight="normal">
                                             {footerData.lnr}

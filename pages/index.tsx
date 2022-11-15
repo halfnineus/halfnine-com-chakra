@@ -14,7 +14,6 @@ import {
   SimpleGrid,
   Icon,
   StackDivider,
-  Link,
   Center,
 } from '@chakra-ui/react'
 
@@ -26,7 +25,7 @@ import { ChevronRightIcon } from '@chakra-ui/icons'
 
 import { ReactElement } from 'react';
 import { NextSeo } from 'next-seo'
-import NextLink from 'next/link'
+import Link from 'next/link'
 import { AiOutlineSolution } from 'react-icons/ai';
 import { BiBrain } from 'react-icons/bi';
 import { FaRegHandshake } from 'react-icons/fa';
@@ -48,43 +47,41 @@ interface FeatureProps2 {
 const Feature2 = ({ text, icon, iconBg, refx }: FeatureProps2) => {
   return (
     <>
-      <NextLink href={refx} passHref>
-        <Link _hover={{ textDecorationLine: 'none', textColor: 'blue.500' }}>
-          <Stack
-            role={'group'}
-            direction={'row'}
+      <Link href={refx}>
+        <Stack
+          _hover={{ textColor: 'blue.500', bg: mode('blue.50', 'blue.900'), cursor: 'pointer' }}
+          role={'group'}
+          direction={'row'}
+          align={'center'}
+          p={2}
+          rounded={'xl'}
+          border={'1px'}
+          borderColor={mode('gray.100', 'gray.600')}
+        >
+          <Flex
+            w={8}
+            h={8}
             align={'center'}
-            p={2}
-            rounded={'xl'}
-            _hover={{ bg: mode('blue.50', 'blue.900'), cursor: 'pointer' }}
-            border={'1px'}
-            borderColor={mode('gray.100', 'gray.600')}
-          >
-            <Flex
-              w={8}
-              h={8}
-              align={'center'}
-              justify={'center'}
-              rounded={'full'}
-              bg={iconBg}>
-              {icon}
-            </Flex>
-            <Text fontWeight={600}>
-              {text}
-            </Text>
-            <Flex
-              transition={'all .3s ease'}
-              transform={'translateX(-25px)'}
-              opacity={0}
-              _groupHover={{ opacity: '100%', transform: 'translateX(0)' }}
-              justify={'flex-end'}
-              align={'center'}
-              flex={1}>
-              <Icon color={'blue.400'} w={5} h={5} as={ChevronRightIcon} />
-            </Flex>
-          </Stack>
-        </Link>
-      </NextLink>
+            justify={'center'}
+            rounded={'full'}
+            bg={iconBg}>
+            {icon}
+          </Flex>
+          <Text fontWeight={600}>
+            {text}
+          </Text>
+          <Flex
+            transition={'all .3s ease'}
+            transform={'translateX(-25px)'}
+            opacity={0}
+            _groupHover={{ opacity: '100%', transform: 'translateX(0)' }}
+            justify={'flex-end'}
+            align={'center'}
+            flex={1}>
+            <Icon color={'blue.400'} w={5} h={5} as={ChevronRightIcon} />
+          </Flex>
+        </Stack>
+      </Link>
     </>
   );
 };
@@ -166,13 +163,11 @@ const IndexPage = () => {
                     {indexData.block2.txt_1}
                   </Text>
                   {/* <Stack direction={{ base: 'column', sm: 'row' }} spacing="4" mt="8"> */}
-                  <NextLink href={"/contact"} passHref>
-                    <Link>
-                      <Button mt={8} p={5} size="md" colorScheme={'brand'} shadow="base" fontSize="md">
-                        {indexData.block1.button}
-                      </Button>
-                    </Link>
-                  </NextLink>
+                  <Link href={"/contact"}>
+                    <Button mt={8} p={5} size="md" colorScheme={'brand'} shadow="base" fontSize="md">
+                      {indexData.block1.button}
+                    </Button>
+                  </Link>
                   {/* </Stack> */}
                 </Box>
               </Box>
@@ -217,7 +212,7 @@ const IndexPage = () => {
                 </Text> */}
                 <Text px={{ base: 0, lg: 24, }} mb={4} fontSize={{ base: "lg", md: "xl", }} color={mode("gray.700", "gray.300")}>
                   {indexData.block1.txt}{" "}
-                  <NextLink href={"/our-approach/agile"} passHref><Link>
+                  <Link href={"/our-approach/agile"}>
                     <Button
                       userSelect={'text'}
                       fontSize="xl"
@@ -228,7 +223,6 @@ const IndexPage = () => {
                       {indexData.block1.txturl}
                     </Button>
                   </Link>
-                  </NextLink>
                   .
                   {/* <NextLink href={"/our-approach/agile"}></NextLink> */}
                 </Text>
@@ -237,22 +231,20 @@ const IndexPage = () => {
             <Center px={{ base: '4', lg: '0' }}>
               {/* <Container px={{ base: '6', lg: '0' }} maxW={'container.md'}> */}
               {/* Remove window.open on mobile using breakpoint values */}
-              <NextLink href={'https://ochoa.pro/img/index/Basic-IoT-Enviroment.png'} passHref legacyBehavior>
-                <Link isExternal>
-                  <Image
-                    maxW={'container.md'}
-                    userSelect={'none'}
-                    w="full"
-                    rounded="3xl"
-                    border={'1px'}
-                    _hover={{ shadow: 'md', borderColor: 'blue.500', transform: 'scale(1.005)' }}
-                    borderColor={mode('gray.400', 'gray.600')}
-                    // shadow="md"
-                    src={'/img/index/diagram.jpg'}
-                    alt="Basic IoT Enviroment"
-                  />
-                </Link>
-              </NextLink>
+              <Link href={'https://ochoa.pro/img/index/Basic-IoT-Enviroment.png'} target={'_blank'}>
+                <Image
+                  maxW={'container.md'}
+                  userSelect={'none'}
+                  w="full"
+                  rounded="3xl"
+                  border={'1px'}
+                  _hover={{ shadow: 'md', borderColor: 'blue.500', transform: 'scale(1.005)' }}
+                  borderColor={mode('gray.400', 'gray.600')}
+                  // shadow="md"
+                  src={'/img/index/diagram.jpg'}
+                  alt="Basic IoT Enviroment"
+                />
+              </Link>
             </Center>
             {/* </Container> */}
 

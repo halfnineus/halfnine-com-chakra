@@ -6,17 +6,15 @@ import {
     Stack,
     Text,
     useColorModeValue as mode,
-    chakra,
     SimpleGrid,
     HStack,
-    Link,
     Heading,
     Img,
     Center,
 } from "@chakra-ui/react";
 import { useRouter } from "next/router";
 import { NextSeo } from "next-seo";
-import NextLink from "next/link";
+import Link from "next/link";
 
 import { IoBulbOutline, IoPeopleOutline, IoRocketOutline } from "react-icons/io5";
 
@@ -24,62 +22,60 @@ import indexdat from "../../assets/services/index.json"
 
 const Feature = (props: any) => {
     return (
-        <NextLink href={props.refx} passHref>
-            <Link _hover={{ textDecorationLine: 'none' }}>
-                <Box
-                    bg={mode('white', 'gray.700')}
-                    rounded={'xl'}
-                    p={4}
-                    role={'group'}
-                    _hover={{ borderColor: 'gray.300' }}
-                    border='1px'
-                    borderColor={mode('gray.100', 'gray.600')}
-                >
-                    <HStack>
-                        <Box
-                            boxSize={12}
-                            _light={{ color: "brand.900" }}
-                            mb={4}
-                            fill="none"
-                            stroke="currentColor"
-                            aria-hidden="true"
-                            fontSize="3rem"
-                        >
-                            {props.icon}
-                        </Box>
-                        <Center>
-                            <Heading
-                            pl={2}
-                                as={'h3'}
-                                mb={3}
-                                fontSize="lg"
-                                lineHeight="shorter"
-                                fontWeight="bold"
-                            >
-                                {props.title}
-                            </Heading>
-                        </Center>
-                        <Flex
-                            transition={'all .3s ease'}
-                            transform={'translateX(-40px)'}
-                            opacity={0}
-                            _groupHover={{ opacity: '100%', transform: 'translateX(0)' }}
-                            justify={'flex-end'}
-                            align={'center'}
-                            flex={1}>
-                            <Icon color={mode('brand.900', 'white')} w={12} h={12} as={ChevronRightIcon} />
-                        </Flex>
-                    </HStack>
-                    <Text
-                        as={'p'}
-                        lineHeight="tall"
-                        color="gray.600"
+        <Link href={props.refx}>
+            <Box
+                _hover={{ borderColor: 'gray.300' }}
+                bg={mode('white', 'gray.700')}
+                rounded={'xl'}
+                p={4}
+                role={'group'}
+                border='1px'
+                borderColor={mode('gray.100', 'gray.600')}
+            >
+                <HStack>
+                    <Box
+                        boxSize={12}
+                        _light={{ color: "brand.900" }}
+                        mb={4}
+                        fill="none"
+                        stroke="currentColor"
+                        aria-hidden="true"
+                        fontSize="3rem"
                     >
-                        {props.children}
-                    </Text>
-                </Box >
-            </Link>
-        </NextLink>
+                        {props.icon}
+                    </Box>
+                    <Center>
+                        <Heading
+                            pl={2}
+                            as={'h3'}
+                            mb={3}
+                            fontSize="lg"
+                            lineHeight="shorter"
+                            fontWeight="bold"
+                        >
+                            {props.title}
+                        </Heading>
+                    </Center>
+                    <Flex
+                        transition={'all .3s ease'}
+                        transform={'translateX(-40px)'}
+                        opacity={0}
+                        _groupHover={{ opacity: '100%', transform: 'translateX(0)' }}
+                        justify={'flex-end'}
+                        align={'center'}
+                        flex={1}>
+                        <Icon color={mode('brand.900', 'white')} w={12} h={12} as={ChevronRightIcon} />
+                    </Flex>
+                </HStack>
+                <Text
+                    as={'p'}
+                    lineHeight="tall"
+                    color="gray.600"
+                >
+                    {props.children}
+                </Text>
+            </Box >
+        </Link>
     );
 };
 

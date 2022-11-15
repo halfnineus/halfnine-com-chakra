@@ -7,25 +7,22 @@ import {
     Stack,
     Collapse,
     Icon,
-    Link,
     Popover,
     PopoverTrigger,
     PopoverContent,
     useColorModeValue as mode,
     useDisclosure,
     useColorMode,
-    HStack,
     Image,
     useBreakpointValue,
 } from '@chakra-ui/react';
 import {
     HamburgerIcon,
     CloseIcon,
-    ChevronDownIcon,
     ChevronRightIcon,
 } from '@chakra-ui/icons';
 
-import NextLink from 'next/link'
+import Link from 'next/link'
 import { FaMoon, FaSun } from 'react-icons/fa'
 import { useRouter } from 'next/router';
 
@@ -74,21 +71,20 @@ export default function WithSubnavigation() {
                     aria-label={'Toggle Navigation'}
                 />
                 <Flex flex={{ base: 1 }} justify={{ base: 'center', md: 'start' }}>
-                    <NextLink href={'/'} passHref>
-                        <Link alignItems="center" display="flex">
-                            <Image
-                                userSelect={'none'}
-                                // mr={{ base: 6, sm: 0 }}
-                                ml={{ base: 0, sm: 14, md: 0 }}
-                                loading={"eager"}
-                                pointerEvents={'none'}
-                                width={'auto'}
-                                height={{ base: '8', md: '10' }}
-                                src={mode('/img/smlog.png', '/img/wsmlog.png')}
-                                alt={'Ochoa Logo'}
-                            />
-                        </Link>
-                    </NextLink>
+                    <Link href={'/'}>
+                        <Image
+                            // alignItems="center" display="flex"
+                            userSelect={'none'}
+                            // mr={{ base: 6, sm: 0 }}
+                            ml={{ base: 0, sm: 14, md: 0 }}
+                            loading={"eager"}
+                            pointerEvents={'none'}
+                            width={'auto'}
+                            height={{ base: '8', md: '10' }}
+                            src={mode('/img/smlog.png', '/img/wsmlog.png')}
+                            alt={'Ochoa Logo'}
+                        />
+                    </Link>
                     <Box ml={{ base: 6, sm: 0 }} ></Box>
                     <Flex display={{ base: 'none', md: 'flex' }} ml={10}>
                         <DesktopNav />
@@ -97,18 +93,16 @@ export default function WithSubnavigation() {
 
                 {/* <HStack spacing="4"> */}
                 {ContactItem.filter(p => p.locale === locale).map((contactItem) => (
-                    <NextLink key={contactItem.label} href={'/contact'} passHref>
-                        <Link _hover={{ textDecorationLine: 'none' }}>
-                            <Button
-                                display={{ base: 'none', sm: 'block' }}
-                                colorScheme={buttonvariant}
-                                // fontWeight="bold"
-                                _focus={{ shadow: 'outline' }}
-                            >
-                                {contactItem.label}
-                            </Button>
-                        </Link>
-                    </NextLink>
+                    <Link key={contactItem.label} href={'/contact'} >
+                        <Button
+                            display={{ base: 'none', sm: 'block' }}
+                            colorScheme={buttonvariant}
+                            // fontWeight="bold"
+                            _focus={{ shadow: 'outline' }}
+                        >
+                            {contactItem.label}
+                        </Button>
+                    </Link>
                 ))}
                 {/* <IconButton
                         display={{ base: 'none', lg: 'flex' }}
@@ -145,8 +139,8 @@ const DesktopNav = () => {
                             <>
                                 <PopoverTrigger>
                                     <Box>
-                                        <NextLink href={navItem.href ?? navItem.subhref} passHref>
-                                            <Link
+                                        <Link href={navItem.href ?? navItem.subhref}>
+                                            <Text
                                                 onClick={onClose}
                                                 display="inline-block"
                                                 px="2"
@@ -158,9 +152,10 @@ const DesktopNav = () => {
                                                     color: "blue.400",
                                                 }}
                                             >
+
                                                 {navItem.label}
-                                            </Link>
-                                        </NextLink>
+                                            </Text>
+                                        </Link>
                                     </Box>
                                 </PopoverTrigger>
 
@@ -192,37 +187,38 @@ const DesktopNav = () => {
 
 const DesktopSubNav = ({ label, href, subLabel }: NavItem) => {
     return (
-        <NextLink href={href} passHref>
-            <Link
+        <Link href={href}>
+            <Stack
                 bg={mode("gray.50", 'gray.900')}
                 role={'group'}
-                display={'block'}
+                //?? display={'block'}
                 p={2}
                 rounded={'md'}
-                _hover={{ bg: mode('gray.50', 'blue.900') }}>
-                <Stack direction={'row'} align={'center'}>
-                    <Box>
-                        <Text
-                            transition={'all .3s ease'}
-                            _groupHover={{ color: 'blue.400' }}
-                            fontWeight={500}>
-                            {label}
-                        </Text>
-                        {/* <Text fontSize={'sm'}>{subLabel}</Text> */}
-                    </Box>
-                    <Flex
+                _hover={{ bg: mode('gray.50', 'blue.900') }}
+                direction={'row'}
+                align={'center'}
+            >
+                <Box>
+                    <Text
                         transition={'all .3s ease'}
-                        transform={'translateX(-10px)'}
-                        opacity={0}
-                        _groupHover={{ opacity: '100%', transform: 'translateX(0)' }}
-                        justify={'flex-end'}
-                        align={'center'}
-                        flex={1}>
-                        <Icon color={'blue.400'} w={5} h={5} as={ChevronRightIcon} />
-                    </Flex>
-                </Stack>
-            </Link>
-        </NextLink>
+                        _groupHover={{ color: 'blue.400' }}
+                        fontWeight={500}>
+                        {label}
+                    </Text>
+                    {/* <Text fontSize={'sm'}>{subLabel}</Text> */}
+                </Box>
+                <Flex
+                    transition={'all .3s ease'}
+                    transform={'translateX(-10px)'}
+                    opacity={0}
+                    _groupHover={{ opacity: '100%', transform: 'translateX(0)' }}
+                    justify={'flex-end'}
+                    align={'center'}
+                    flex={1}>
+                    <Icon color={'blue.400'} w={5} h={5} as={ChevronRightIcon} />
+                </Flex>
+            </Stack>
+        </Link>
     );
 };
 
@@ -239,37 +235,9 @@ const MobileNav = () => {
                 <MobileNavItem key={navItem.label} {...navItem} />
             ))}
             {ContactItem.filter(p => p.locale === locale).map((contactItem) => (
-                <NextLink key={contactItem.label} href={'/contact'} passHref>
-                    <Link>
-                        <Flex
-                            pt={4}
-                            justify={'space-between'}
-                            align={'center'}
-                            _hover={{
-                                textDecoration: 'none',
-                            }}
-                        >
-                            <Text
-                                fontWeight={600}
-                                color={mode('gray.600', 'gray.200')}>
-                                {contactItem.label}
-                            </Text>
-                        </Flex>
-                    </Link>
-                </NextLink>
-            ))}
-        </Stack>
-    );
-};
-
-const MobileNavItem = ({ label, children, href, subhref }: NavItem) => {
-    const { isOpen, onToggle } = useDisclosure();
-    return (
-        <Stack spacing={4} onClick={children && onToggle}>
-            <NextLink href={subhref ?? ''} passHref>
-                <Link>
+                <Link key={contactItem.label} href={'/contact'}>
                     <Flex
-                        py={2}
+                        pt={4}
                         justify={'space-between'}
                         align={'center'}
                         _hover={{
@@ -279,9 +247,34 @@ const MobileNavItem = ({ label, children, href, subhref }: NavItem) => {
                         <Text
                             fontWeight={600}
                             color={mode('gray.600', 'gray.200')}>
-                            {label}
+                            {contactItem.label}
                         </Text>
-                        {/* {children && (
+                    </Flex>
+                </Link>
+            ))}
+        </Stack>
+    );
+};
+
+const MobileNavItem = ({ label, children, href, subhref }: NavItem) => {
+    const { isOpen, onToggle } = useDisclosure();
+    return (
+        <Stack spacing={4} onClick={children && onToggle}>
+            <Link href={subhref ?? ''}>
+                <Flex
+                    py={2}
+                    justify={'space-between'}
+                    align={'center'}
+                    _hover={{
+                        textDecoration: 'none',
+                    }}
+                >
+                    <Text
+                        fontWeight={600}
+                        color={mode('gray.600', 'gray.200')}>
+                        {label}
+                    </Text>
+                    {/* {children && (
                             <Icon
                                 as={ChevronDownIcon}
                                 transition={'all .25s ease-in-out'}
@@ -290,9 +283,8 @@ const MobileNavItem = ({ label, children, href, subhref }: NavItem) => {
                                 h={6}
                             />
                         )} */}
-                    </Flex>
-                </Link>
-            </NextLink>
+                </Flex>
+            </Link>
             {/* 
             <Collapse in={isOpen} animateOpacity style={{ marginTop: '0!important' }}>
                 <Stack

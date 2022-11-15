@@ -30,20 +30,20 @@ export default function MyApp({ Component, pageProps }: AppProps) {
     <ChakraProvider theme={Theme}>
       <MainLayout>
         <DefaultSEO />
-        <Script
-          async
-          src='https://www.googletagmanager.com/gtag/js?id=G-3ZJNEBJRM6'
-        />
-        <Script
-          dangerouslySetInnerHTML={{
-            __html: `
+        <Head>
+          <script
+            async
+            src='https://www.googletagmanager.com/gtag/js?id=G-3ZJNEBJRM6'
+          />
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
               window.dataLayer = window.dataLayer || [];
               function gtag(){dataLayer.push(arguments);}
               gtag('js', new Date());
               gtag('config', 'G-3ZJNEBJRM6');`
-          }}
-        />
-        <Head>
+            }}
+          />
           <meta charSet='utf-8' />
           <meta name='viewport' content='initial-scale=1.0, height=device-height, width=device-width' />
           <meta name="author" content="ochoa.pro" />
