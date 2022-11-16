@@ -42,7 +42,7 @@ const Feature = (props: any) => {
                     fontSize="lg"
                     fontWeight="bold"
                     lineHeight="6"
-                    _light={{ color: "gray.900" }}
+                    color={'gray.900'}
                 >
                     {props.title}
                 </chakra.dt>
@@ -88,7 +88,7 @@ const Development = () => {
                     }
                 ]}
             />
-            <Container maxW={'container.xl'} px={{ base: '4', sm: '4', md: '4', lg: '4', xl: '0' }} pt={{ base: '4', xl: '4' }}>
+            <Container maxW={'container.xl'} px={{ base: 4, sm: 4, md: 4, lg: 4, xl: 0 }} pt={{ base: 4, xl: 4 }}>
 
                 <SimpleGrid
                     alignItems="center"
@@ -98,7 +98,7 @@ const Development = () => {
                 >
                     <Box alignSelf="start">
                         <chakra.h2
-                            _light={{ color: "brand.500" }}
+                            color={'brand.500'}
                             fontWeight="semibold"
                             textTransform="uppercase"
                             letterSpacing="wide"
@@ -110,7 +110,7 @@ const Development = () => {
                             fontSize={{ base: "3xl", md: "4xl" }}
                             fontWeight="extrabold"
                             // textAlign={{ base: "center", sm: "left" }}
-                            _light={{ color: "black" }}
+                            color={'black'}
                             lineHeight="shorter"
                             letterSpacing="tight"
                         >
@@ -125,7 +125,7 @@ const Development = () => {
                         >
                             {/* {`With the use of our private templates we are able to deliver consistent results through stablished methods on diferent projects.`} */}
                             Following established methods for development allows us to deliver a valuable strategy with consistent results.
-                            {/* !!changeme Bring your software product idea to life, enhance existing product quality, reduce time-to-market, and decrease development costs with our turn-key software engineering services and outsourcing product development teams */}
+                            {/*  Bring your software product idea to life, enhance existing product quality, reduce time-to-market, and decrease development costs with our turn-key software engineering services and outsourcing product development teams */}
                         </chakra.p>
                     </Box>
                     <GridItem colSpan={2}>
@@ -159,55 +159,55 @@ const Development = () => {
                 <Heading color={'gray.800'} size={'lg'}>
                     IT Development Outsourcing
                 </Heading>
-                <Text pb={'10'} color={'gray.700'}>
+                <Text pb={10} color={'gray.700'}>
                     {`Means giving some or all the development processes to a third party while maintaining control over the project. This allows companies to overcome the lack of in-house IT resources and talent, while reducing development costs.`}
                 </Text>
-                <Heading pb={'4'} color={'gray.800'} size={'lg'}>
+                <Heading pb={4} color={'gray.800'} size={'lg'}>
                     Why outsourcing works
                 </Heading>
                 <Heading fontWeight={'semibold'} color={'gray.800'} size={'md'}>
                     {`Increase IT Quality`}
                 </Heading>
-                <Text pb={'4'} color={'gray.700'}>
+                <Text pb={4} color={'gray.700'}>
                     {`Choose IT professionals with thorough experience on your specific industry, and gain quick and easy access to expertise and the best practices, making sure the delivery is done in a timely manner with the best quality.`}
                 </Text>
-                <Heading fontWeight={'semibold'} pb={'2'} color={'gray.800'} size={'md'}>
+                <Heading fontWeight={'semibold'} pb={2} color={'gray.800'} size={'md'}>
                     {`Decrease Costs`}
                 </Heading>
-                <Text pb={'4'} color={'gray.700'}>
+                <Text pb={4} color={'gray.700'}>
                     {`Selecting a team of experts will significantly reduce trial and error, hiring, onboarding, and training in-house developers that will come at high cost.`}
                 </Text>
-                <Heading fontWeight={'semibold'} pb={'2'} color={'gray.800'} size={'md'}>
+                <Heading fontWeight={'semibold'} pb={2} color={'gray.800'} size={'md'}>
                     {`High Scalability`}
                 </Heading>
-                <Text pb={'10'} color={'gray.700'}>
+                <Text pb={10} color={'gray.700'}>
                     {`The ability to upscale and downscale your development team given your specific needs and requirements will guarantee that you only pay for the resources you truly need.`}
                 </Text>
-                <Heading pb={'4'} color={'gray.800'} size={'lg'}>
+                <Heading pb={4} color={'gray.800'} size={'lg'}>
                     {`How to Outsource IT Development in a Safe and Efficient way?`}
                 </Heading>
-                <Heading fontWeight={'semibold'} pb={'2'} color={'gray.800'} size={'md'}>
+                <Heading fontWeight={'semibold'} pb={2} color={'gray.800'} size={'md'}>
                     {`Test our expertise in practice`}
                 </Heading>
-                <Text pb={'4'} color={'gray.700'}>
+                <Text pb={4} color={'gray.700'}>
                     {`You can request a small project or proof of concept (PoC) to get an objective understanding of our competencies.`}
                 </Text>
-                <Heading fontWeight={'semibold'} pb={'2'} color={'gray.800'} size={'md'}>
+                <Heading fontWeight={'semibold'} pb={2} color={'gray.800'} size={'md'}>
                     {`Establish a Control on outcomes`}
                 </Heading>
                 <Text pb={'1'} color={'gray.700'}>
                     {`Request a service level agreement (SLA) with your IT vendor that establishes the expected timelines, quality requirements, and risk responsibilities.`}
                 </Text>
-                <Text pb={'4'} color={'gray.700'}>
+                <Text pb={4} color={'gray.700'}>
                     {`Choose a KPI system that allows you to monitor the health of the project without interrupting with the process.`}
                 </Text>
-                <Heading fontWeight={'semibold'} pb={'2'} color={'gray.800'} size={'md'}>
+                <Heading fontWeight={'semibold'} pb={2} color={'gray.800'} size={'md'}>
                     {`Set communication structures`}
                 </Heading>
-                <Text pb={'4'} color={'gray.700'}>
+                <Text pb={4} color={'gray.700'}>
                     {`Choose the communications platforms and formats that will provide clear communication with the development team that outlines every aspect of the project.`}
                 </Text>
-                <Heading fontWeight={'semibold'} pb={'2'} color={'gray.800'} size={'md'}>
+                <Heading fontWeight={'semibold'} pb={2} color={'gray.800'} size={'md'}>
                     {`Ensure information security`}
                 </Heading>
                 <Text pb={'1'} color={'gray.700'}>
@@ -233,7 +233,7 @@ const Development = () => {
                 </Box>
 
                 <Center>
-                    <Stack px={{ base: '0', lg: '4' }} direction={{ base: 'column', sm: 'column', md: 'column', lg: 'column', xl: 'row' }} spacing={{ base: 12, sm: 12, md: 12, lg: 12, xl: 32 }}>
+                    <Stack px={{ base: '0', lg: 4 }} direction={{ base: 'column', sm: 'column', md: 'column', lg: 'column', xl: 'row' }} spacing={{ base: 12, sm: 12, md: 12, lg: 12, xl: 32 }}>
                         <Box textAlign="center">
                             <Heading fontSize={'2xl'} mb="4">
                                 Cloud:

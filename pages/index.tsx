@@ -15,6 +15,7 @@ import {
   Icon,
   StackDivider,
   Center,
+  keyframes,
 } from '@chakra-ui/react'
 
 import indexdat from '../assets/index.json'
@@ -49,7 +50,7 @@ const Feature2 = ({ text, icon, iconBg, refx }: FeatureProps2) => {
     <>
       <Link href={refx}>
         <Stack
-          _hover={{ textColor: 'blue.500', bg: mode('blue.50', 'blue.900'), cursor: 'pointer' }}
+          _hover={{ textColor: 'blue.500', bg: mode('blue.50', 'blue.900'), borderColor: 'blue.50', cursor: 'pointer' }}
           role={'group'}
           direction={'row'}
           align={'center'}
@@ -136,6 +137,21 @@ const Feature1 = ({ title, text, icon }: FeatureProps1) => {
 const IndexPage = () => {
   const { locale } = useRouter()
   const router = useRouter()
+
+  // const bounce = keyframes`
+  //   0%   { background-color: #0BC5EA }
+  //   25%  { background-color: #48BB78 }
+  //   50%  { background-color: #9F7AEA }
+  //   75%  { background-color: #48BB78 }
+  //   100% { background-color: #0BC5EA }
+  // `
+  const bounce = keyframes`
+    0%   { background-color: #48BB78 }
+    33%  { background-color: #38B2AC }
+    66%  { background-color: #9F7AEA }
+    100% { background-color: #48BB78 }
+  `
+
   return (
     <>
       {indexdat.data.filter(p => p.locale === locale).map((indexData, i) => {
@@ -201,7 +217,9 @@ const IndexPage = () => {
                     pr={{ md: "none", lg: 1 }}
                     pb={{ base: 2, md: 3, lg: "none" }}
                     bgClip="text"
-                    bgGradient={mode("linear(to-r, green.400,blue.600)", "linear(to-r, blue.300,green.500)")}
+                    // bgGradient={"linear(to-r, green.400,blue.600)"}
+                    animation={`${bounce} 4s ease infinite`}
+                    bgImage={"linear-gradient(to right, #2b6cb0 32%, transparent)"}
                     fontWeight="extrabold"
                   >
                     {indexData.block2.h2_2}

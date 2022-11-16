@@ -125,7 +125,7 @@ export default function WithSubnavigation() {
     );
 }
 
-const DesktopNav = () => {
+const DesktopNav = (e: any) => {
     const linkColor = mode('gray.600', 'gray.200');
     const popoverContentBgColor = mode('white', 'gray.800');
     const { locale } = useRouter()
@@ -134,7 +134,7 @@ const DesktopNav = () => {
         <Stack direction={'row'} spacing={4}>
             {NAV_ITEMS.filter(p => p.locale === locale).map((navItem) => (
                 <Box key={navItem.label}>
-                    <Popover trigger={'hover'} placement={'bottom-start'} closeDelay={140} openDelay={60}>
+                    <Popover onClose={() => (document.activeElement as HTMLElement).blur()} trigger={'hover'} placement={'bottom-start'} closeDelay={160} openDelay={40}>
                         {({ isOpen, onClose }) => (
                             <>
                                 <PopoverTrigger>

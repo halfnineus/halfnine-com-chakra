@@ -24,18 +24,18 @@ const Feature = (props: any) => {
     return (
         <Link href={props.refx}>
             <Box
-                _hover={{ borderColor: 'gray.300' }}
-                bg={mode('white', 'gray.700')}
+                _hover={{ borderColor: 'gray.200', shadow: 'md' }}
+                shadow={'sm'}
                 rounded={'xl'}
                 p={4}
                 role={'group'}
                 border='1px'
-                borderColor={mode('gray.100', 'gray.600')}
+                borderColor={'gray.100'}
             >
                 <HStack>
                     <Box
                         boxSize={12}
-                        _light={{ color: "brand.900" }}
+                        color={'brand.600'}
                         mb={4}
                         fill="none"
                         stroke="currentColor"
@@ -52,19 +52,20 @@ const Feature = (props: any) => {
                             fontSize="lg"
                             lineHeight="shorter"
                             fontWeight="bold"
+                            _groupHover={{ color: 'brand.600' }}
                         >
                             {props.title}
                         </Heading>
                     </Center>
                     <Flex
                         transition={'all .3s ease'}
-                        transform={'translateX(-40px)'}
-                        opacity={0}
+                        transform={{ base: 'translateX(0)', sm: 'translateX(-40px)' }}
+                        opacity={{ base: '100%', sm: 0 }}
                         _groupHover={{ opacity: '100%', transform: 'translateX(0)' }}
                         justify={'flex-end'}
                         align={'center'}
                         flex={1}>
-                        <Icon color={mode('brand.900', 'white')} w={12} h={12} as={ChevronRightIcon} />
+                        <Icon color={'brand.600'} mb={2} w={12} h={12} as={ChevronRightIcon} />
                     </Flex>
                 </HStack>
                 <Text
@@ -99,45 +100,56 @@ const Index = () => {
                                 }
                             ]}
                         />
-                        <SimpleGrid
-                            maxW={'container.xl'}
-                            columns={{ base: 1 }}
-                            spacing={4}
-                            px={{ base: '4', xl: '10' }}
-                            pt={6}
-                            mx="auto"
-                            bg="white"
-                            _dark={{ bg: "gray.800" }}
-                        >
-                            <Feature
-                                title="Development Services"
-                                icon={<IoPeopleOutline />}
-                                refx={'/services/development'}
+
+                        <Box maxW={'container.xl'} px={{ base: '4', sm: '4', md: '4', lg: '4', xl: '0' }} pt={6} mx="auto">
+                            <SimpleGrid
+                                // maxW={'container.xl'}
+                                columns={{ base: 1 }}
+                                spacing={4}
+                                // px={{ base: '4', xl: '10' }}
+                                // pt={6}
+                                mx="auto"
+                                bg="white"
+                                _dark={{ bg: "gray.800" }}
                             >
-                                We assemble and lead teams with the skills and tools needed for building the products and tools that power your business.
-                            </Feature>
+                                <Feature
+                                    title="Development Services"
+                                    icon={<IoPeopleOutline />}
+                                    refx={'/services/development'}
+                                >
+                                    We assemble and lead teams with the skills and tools needed for building the products and tools that power your business.
+                                </Feature>
 
-                            <Feature
-                                title="Digital Transformation"
-                                icon={<IoRocketOutline />}
-                                refx={'/services/digitalization'}
-                            >
-                                Take a digital approach while selling your products & services, managing your organization and much more!
-                            </Feature>
+                                <Feature
+                                    title="Digital Transformation"
+                                    icon={<IoRocketOutline />}
+                                    refx={'/services/digitalization'}
+                                >
+                                    Take a digital approach while selling your products & services, managing your organization and much more!
+                                </Feature>
 
-                            <Feature
-                                title="Project Consultation"
-                                icon={<IoBulbOutline />}
-                                refx={'/services/consultation'}
-                            >
-                                Find the right options for your project from discovery to deployment of your idea, satisfying your Requirements and your Customer&apos;s Needs.
-                            </Feature>
-                        </SimpleGrid>
+                                <Feature
+                                    title="Project Consultation"
+                                    icon={<IoBulbOutline />}
+                                    refx={'/services/consultation'}
+                                >
+                                    Find the right options for your project from discovery to deployment of your idea, satisfying your Requirements and your Customer&apos;s Needs.
+                                </Feature>
+                            </SimpleGrid>
 
-                        <Box py={'3rem'} />
+                            <Box py={'3rem'} />
 
-                        <Box maxW={{ base: 'xl', md: 'container.xl' }} mx="auto" px={{ base: '4', xl: '10' }}>
-                            <SimpleGrid columns={{ base: 1, md: 2 }} spacing={{ base: '16', md: '8' }}>
+                            {/* <Stack my={2}> */}
+                            <Heading>Automating all Things Together</Heading>
+                            <Text letterSpacing={'tight'} pt={2} color={mode('gray.600', 'gray.400')} fontSize={'lg'}>
+                                Outsourcing reduces costs by helping you avoid the industry&apos;s most common problems and
+                                freeing your time to focus on big picture strategies.
+                                Improve your consistency and reliability, allow faster delivery and infrastructure changes.
+                                Not having talent in-house or maybe even in the same country presents challenges, We believe that great communication is key to mitigating risk.
+                            </Text>
+                            {/* </Stack> */}
+
+                            {/* <SimpleGrid columns={{ base: 1, md: 2 }} spacing={{ base: '16', md: '8' }}>
                                 <Stack my={2}>
                                     <Heading>Automating All Things Together</Heading>
                                     <Text maxW={'34rem'} pt={2} color={mode('gray.600', 'gray.400')} fontSize={'lg'}>
@@ -159,9 +171,8 @@ const Index = () => {
                                     src={'/img/index/services.jpg'}
                                     alt="Automation Support Center"
                                 />
-                            </SimpleGrid>
+                            </SimpleGrid> */}
                         </Box>
-
                         <Box py={'3rem'} />
                     </>
                 )

@@ -62,7 +62,8 @@ const IndexAbout = () => {
                 }
               ]}
             />
-            <Container maxW="container.xl" pt={6} pb={4} px={{ base: '4', xl: '10' }}>
+            {/* <Container maxW="container.xl" pt={6} pb={4} px={{ base: '4', xl: '10' }}> */}
+            <Box maxW={'container.xl'} px={{ base: '4', sm: '4', md: '4', lg: '4', xl: '0' }} pt={4} mx="auto">
               <Grid templateColumns={{ base: 'repeat(1, 1fr)', sm: 'repeat(2, 1fr)', md: 'repeat(2, 1fr)', }} gap={4}>
                 <GridItem colSpan={1}>
                   <VStack alignItems="flex-start" spacing="20px">
@@ -105,7 +106,7 @@ const IndexAbout = () => {
                   Be the first on Our Clients List:
                 </Heading>
                 {/* <Text maxW="2xl" mx="auto">
-                  !!Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                   incididunt ut labore et dolore magna aliqua elit consectetur adipiscing.
                 </Text> */}
               </Box>
@@ -121,7 +122,7 @@ const IndexAbout = () => {
                 <BuiltWith img={'/img/about/logo.png'} />
               </SimpleGrid>
               <Divider mt={8} mb={5} />
-            </Container>
+            </Box>
           </>)
       })}
     </>

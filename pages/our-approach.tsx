@@ -33,30 +33,12 @@ import { IoCashOutline, IoTerminalOutline, IoTimerOutline } from "react-icons/io
 
 {/* https://roiinstitute.net/roi-methodology/ */ }
 
-
-// Agile... Redefining Agile
-// Ability to change priorities, bring support, and test the applications. Brings teams to well rewarded milestones.
-
-// Quality Assurance
-
-// Risk Control
-
-// PDaaS
-
-// Quality Assurance
-
-// Risk Control
-
-// ROI
-
-// People Operations and Development Specialist People
-
 const Index = () => {
     return (
         <>
             <NextSeo
-                title='!!changeme  - Automating all Things | Ochoa'
-                description='!!changeme We assemble and lead teams with the skills and tools needed for building the products and tools that power your business.'
+                title='How we do Things - Automating all Things | Ochoa'
+                description='Find our agile development strategies and ways to find solutions that focus on advancing innovation and driving powerful outcomes.'
                 canonical="https://ochoa.pro/our-approach"
                 languageAlternates={[
                     {
@@ -65,18 +47,20 @@ const Index = () => {
                     }
                 ]}
             />
-            <Box py={'1rem'} />
-
-            <Box maxW={{ base: 'xl', md: 'container.xl' }} mx="auto" px={{ base: '4', xl: '10' }}>
-                <SimpleGrid columns={{ base: 1, md: 2 }} spacing={{ base: '16', md: '8' }}>
-                    <Stack my={2}>
-                        <Heading>Finding Big Solutions Together</Heading>
-                        <Text maxW={'34rem'} pt={2} color={mode('gray.600', 'gray.400')} fontSize={'lg'}>
-                            Our agile development strategies and solutions are focused on advancing innovation and driving powerful outcomes.
-                            Focusing on clients and companies making a return on investment by mitigating risk and increasing client satisfaction,
-                            developing products to help you focus on market research and other big picture strategies.
-                        </Text>
-                    </Stack>
+            {/* <Box py={'1rem'} /> */}
+            {/* <Container maxW={'container.xl'} px={{ base: '4', sm: '4', md: '4', lg: '4', xl: '0' }} pt={4}> */}
+            <Box maxW={'container.xl'} px={{ base: '4', sm: '4', md: '4', lg: '4', xl: '0' }} pt={4} mx="auto">
+                {/* <SimpleGrid columns={{ base: 1, md: 2 }} spacing={{ base: '16', md: '8' }}> */}
+                {/* <Stack my={2}> */}
+                <Heading>Redefining Agile</Heading>
+                {/* Finding Big Solutions Together */}
+                <Text letterSpacing={'tight'} pt={2} color={mode('gray.600', 'gray.400')} fontSize={'lg'}>
+                    Our combined agile development strategies and solutions are focused on advancing innovation and driving powerful outcomes.
+                    Focusing on clients and companies making a return on investment by mitigating risk,
+                    and developing products that help you focus on other big picture strategies.
+                </Text>
+                {/* </Stack> */}
+                {/*
                     <Img
                         border={'1px'}
                         borderColor={mode('gray.400', 'gray.600')}
@@ -88,11 +72,42 @@ const Index = () => {
                         h={{ sm: "64", md: "96", lg: "72", xl: "64" }}
                         src={'/img/index/our-approach.jpg'}
                         alt="Analytics Inspecting"
-                    />
-                </SimpleGrid>
-            </Box>
+                    /> */}
+                {/* </SimpleGrid> */}
 
-            <Box py={'3rem'} />
+                <Box py={'3rem'} />
+
+                <Heading color={'gray.800'}>
+                    {`Finding big Solutions Together`}
+                </Heading>
+                <Text letterSpacing={'wide'} size={'md'} pb={8} >
+                    {`These methodologies are used and implemented in more than half of the Fortune 500 company's projects, as well as several government organizations throughout the United States and other countries internationally.`}
+                </Text>
+
+                <Heading fontWeight={'semibold'} color={'gray.800'} size={'md'} pb={'4'}>
+                    {`PDaaS (Product Development as a Service)`}
+                </Heading>
+                <Heading fontWeight={'semibold'} color={'gray.800'} size={'md'}>
+                    {`Redefining Agile`}
+                </Heading>
+                <Text letterSpacing={'wide'} pb={'4'} color={'gray.700'}>
+                    {`Ability to change priorities, bring support, and test the applications. Brings teams to well rewarded milestones.`}
+                </Text>
+                <Heading fontWeight={'semibold'} color={'gray.800'} size={'md'} pb={'4'}>
+                    {`ROI (Return on Investment)`}
+                </Heading>
+                <Heading fontWeight={'semibold'} color={'gray.800'} size={'md'} pb={'4'}>
+                    {`Risk Control`}
+                </Heading>
+                <Heading fontWeight={'semibold'} color={'gray.800'} size={'md'} pb={'4'}>
+                    {`Quality Assurance`}
+                </Heading>
+                <Heading fontWeight={'semibold'} color={'gray.800'} size={'md'} pb={'4'}>
+                    {`ROI Methodology`}
+                </Heading>
+
+                <Box py={'3rem'} />
+            </Box>
         </>
     );
 }

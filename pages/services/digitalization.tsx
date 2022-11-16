@@ -44,7 +44,7 @@ const Feature = (props: any) => {
                     fontSize="lg"
                     fontWeight="bold"
                     lineHeight="6"
-                    _light={{ color: "gray.900" }}
+                    color={'gray.900'}
                 >
                     {props.title}
                 </chakra.dt>
@@ -99,7 +99,7 @@ const Development = () => {
                 >
                     <Box alignSelf="start">
                         <chakra.h2
-                            _light={{ color: "brand.500" }}
+                            color={'brand.500'}
                             fontWeight="semibold"
                             textTransform="uppercase"
                             letterSpacing="wide"
@@ -110,7 +110,7 @@ const Development = () => {
                             mb={3}
                             fontSize={{ base: "3xl", md: "4xl" }}
                             fontWeight="extrabold"
-                            _light={{ color: "black" }}
+                            color={'black'}
                             lineHeight="shorter"
                             letterSpacing="tight"
                         >

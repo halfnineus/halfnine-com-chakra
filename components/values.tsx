@@ -50,7 +50,7 @@ const Feature = ({ heading, text, color, icon }: FeatureProps) => {
                     mb={2}
                     fontWeight="semibold"
                     lineHeight="shorter"
-                    _light={{ color: "gray.900" }}
+                    color={'gray.900'}
                     pb={4}
                     pl={1}
                 >

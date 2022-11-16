@@ -15,8 +15,8 @@ const DefaultSEO = () => {
                     locale: 'en',
                     url: 'https://ochoa.pro/',
                     site_name: 'Ochoa',
-                    title: 'Agile Automation Development & Consulting - Ochoa',
-                    description: 'Improve your products and services with a digital transformation powered by Agile Automation.',
+                    title: 'Ochoa - Automating all Things | Agile Automation Development & Consulting',
+                    description: 'Find the right team for your Industrial IoT & Control Systems and turn your ideas into a reality.',
                     images: [
                         {
                             url: 'https://ochoa.pro/perma/metatag.jpg',

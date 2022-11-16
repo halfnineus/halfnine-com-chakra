@@ -156,7 +156,7 @@ export default function SCFooter() {
                                         w="full"
                                         maxW={{ base: 'unset', lg: '4xl' }}
                                         columns={{ base: 2, lg: 4 }}
-                                        spacing={{ base: '8', md: '12' }}
+                                        spacing={{ base: '8', md: '10' }}
                                         fontSize="sm"
                                     >
                                         {links.filter(p => p.locale === locale).map((group, idx) => (
@@ -168,7 +168,7 @@ export default function SCFooter() {
                                                     <Stack>
                                                         {group.links.map((link, idx) => (
                                                             <Link key={idx} href={link.href}>
-                                                                <Text _hover={{ textDecorationLine: 'underline' }}>
+                                                                <Text _hover={{ color: 'brand.400' }}>
                                                                     {link.label}
                                                                 </Text>
                                                             </Link>
@@ -234,7 +234,7 @@ export default function SCFooter() {
                                         as={FaFacebookSquare}
                                     />
                                 </Link>
-                                <Link href={'https://twitter.com/ochoa_pro'}>
+                                <Link href={'https://twitter.com/ochoa_pro'} target={'_blank'}>
                                     <Icon
                                         transform={'scale(0.95)'}
                                         _hover={{ color: "#1DA1F2", transform: 'scale(1)' }}
@@ -295,10 +295,14 @@ export default function SCFooter() {
                                             {footerData.components.copyright}
                                         </Text>
                                         <Link href={'/privacy'}>
-                                            {footerData.components.i2}
+                                            <Text _hover={{ color: "#1DA1F2" }}>
+                                                {footerData.components.i2}
+                                            </Text>
                                         </Link>
                                         <Link href={'https://ochoa.pro/sitemap.xml'} target={'_blank'}>
-                                            {footerData.components.i3}
+                                            <Text _hover={{ color: "#1DA1F2" }}>
+                                                {footerData.components.i3}
+                                            </Text>
                                         </Link>
                                     </Stack>
                                     <FormControl w="auto" display="flex" alignItems="center">

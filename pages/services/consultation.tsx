@@ -41,7 +41,7 @@ const Feature = (props: any) => {
                     fontSize="lg"
                     fontWeight="bold"
                     lineHeight="6"
-                    _light={{ color: "gray.900" }}
+                    color={'gray.900'}
                 >
                     {props.title}
                 </chakra.dt>
@@ -77,8 +77,8 @@ const Development = () => {
     return (
         <>
             <NextSeo
-                title='Organize Strategic Digital Transformation - Automating all Things | Ochoa'
-                description='Transform your manually controlled systems and enviroments into digitally automated technology.'
+                title='Realize Ideas with Technology Consulting - Automating all Things | Ochoa'
+                description={`Find the leading practices in development, increase your organization's agility to achieve powerful outcomes.`}
                 canonical="https://ochoa.pro/services/digitalization"
                 languageAlternates={[
                     {
@@ -87,7 +87,7 @@ const Development = () => {
                     }
                 ]}
             />
-            <Container maxW={'container.xl'} px={{ base: '4', sm: '4', md: '4', lg: '4', xl: '0' }} pt={{ base: '4', xl: '4' }}>
+            <Box maxW={'container.xl'} px={{ base: '4', sm: '4', md: '4', lg: '4', xl: '0' }} pt={4} mx="auto">
                 <SimpleGrid
                     alignItems="center"
                     columns={{ base: 1, lg: 2 }}
@@ -96,7 +96,7 @@ const Development = () => {
                 >
                     <Box alignSelf="start">
                         <chakra.h2
-                            _light={{ color: "brand.500" }}
+                            color={'brand.500'}
                             fontWeight="semibold"
                             textTransform="uppercase"
                             letterSpacing="wide"
@@ -107,7 +107,7 @@ const Development = () => {
                             mb={3}
                             fontSize={{ base: "3xl", md: "4xl" }}
                             fontWeight="extrabold"
-                            _light={{ color: "black" }}
+                            color={'black'}
                             lineHeight="shorter"
                             letterSpacing="tight"
                         >
@@ -154,6 +154,7 @@ const Development = () => {
                 <Text pb={'10'} color={'gray.700'}>
                     {`This service helps you improve the performance, scalability, and competitiveness of your products and services through the right implementation and usage of technology.`}
                 </Text>
+                {/* 
                 <Heading pb={'4'} color={'gray.800'} size={'lg'}>
                     {`Why consulting works`}
                 </Heading>
@@ -163,7 +164,6 @@ const Development = () => {
                 <Text pb={'4'} color={'gray.700'}>
                     {`This methodology is used and implemented in more than half of the Fortune 500 company's projects, as well as several government organizations throughout the United States and other countries internationally.`}
                 </Text>
-                {/* 
                 <Heading fontWeight={'semibold'} pb={'2'} color={'gray.800'} size={'md'}>
                     {`Decrease Costs`}
                 </Heading>
@@ -217,7 +217,7 @@ const Development = () => {
 
                 <Box p={"2rem"} />
 
-            </Container>
+            </Box>
         </>
     );
 };
