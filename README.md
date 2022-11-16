@@ -23,7 +23,7 @@ https://github.com/microsoft/TypeScript
 https://github.com/chakra-ui/chakra-ui
 
 <a href="https://github.com/chakra-ui/chakra-ui">
-<img src="https://raw.githubusercontent.com/chakra-ui/chakra-ui/main/logo/logo-colored@2x.png?raw=true" height="80"/>
+<img src="https://raw.githubusercontent.com/chakra-ui/chakra-ui/main/media/logo-colored@2x.png?raw=true" height="80"/>
 </a>
 
 ## Mail Handler - Nodemailer
