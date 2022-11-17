@@ -17,13 +17,13 @@ const theme = extendTheme({
             "900": "#1A365D"
         },
     },
-    // breakpoints: {
-    //     sm: '30em',
-    //     md: '48em',
-    //     lg: '62em',
-    //     xl: '80em',
-    //     '2xl': '96em',
-    // }
+    breakpoints: {
+        sm: '30em',
+        md: '48em',
+        lg: '62em',
+        // xl: '80em', // Original Breakpoint Value
+        xl: '84em',
+    }
 })
 
 export default theme

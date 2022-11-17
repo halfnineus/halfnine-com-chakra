@@ -1,4 +1,4 @@
-import { SimpleGrid, Box, useColorModeValue as mode, Text, Heading, Img, Stack } from "@chakra-ui/react";
+import { Box, Text, Heading, SimpleGrid, Image, Divider, Center } from "@chakra-ui/react";
 import { NextSeo } from "next-seo";
 
 import { IoCashOutline, IoTerminalOutline, IoTimerOutline } from "react-icons/io5";
@@ -8,7 +8,7 @@ import { IoCashOutline, IoTerminalOutline, IoTimerOutline } from "react-icons/io
 {/* https://learn.microsoft.com/en-us/devops/plan/what-is-agile-development */ }
 
 {/* <Text>
-    Based on: Agile Software Development<br />
+    smd on: Agile Software Development<br />
     Agile Automation<br />
     Agile Architecture<br />
     Agile Application<br />
@@ -48,17 +48,17 @@ const Index = () => {
                 ]}
             />
             {/* <Box py={'1rem'} /> */}
-            {/* <Container maxW={'container.xl'} px={{ base: '4', sm: '4', md: '4', lg: '4', xl: '0' }} pt={4}> */}
-            <Box maxW={'container.xl'} px={{ base: '4', sm: '4', md: '4', lg: '4', xl: '0' }} pt={4} mx="auto">
-                {/* <SimpleGrid columns={{ base: 1, md: 2 }} spacing={{ base: '16', md: '8' }}> */}
+            {/* <Container maxW={'container.xl'} px={{ sm: 4, sm: 4, md: 4, lg: 4, xl: '0' }} pt={4}> */}
+            <Box maxW={'container.xl'} px={{ base: 4, sm: 4, md: 4, lg: 4, xl: '0' }} pt={4} mx="auto">
+                {/* <SimpleGrid columns={{ sm: 1, md: 2 }} spacing={{ sm: '16', md: '8' }}> */}
                 {/* <Stack my={2}> */}
-                <Heading>Redefining Agile</Heading>
+                {/* <Heading>Redefining Agile</Heading> */}
                 {/* Finding Big Solutions Together */}
-                <Text letterSpacing={'tight'} pt={2} color={mode('gray.600', 'gray.400')} fontSize={'lg'}>
+                {/* <Text letterSpacing={'medium'} pt={2} color={'gray.800'} fontSize={'md'}>
                     Our combined agile development strategies and solutions are focused on advancing innovation and driving powerful outcomes.
                     Focusing on clients and companies making a return on investment by mitigating risk,
                     and developing products that help you focus on other big picture strategies.
-                </Text>
+                </Text> */}
                 {/* </Stack> */}
                 {/*
                     <Img
@@ -75,39 +75,292 @@ const Index = () => {
                     /> */}
                 {/* </SimpleGrid> */}
 
-                <Box py={'3rem'} />
-
-                <Heading color={'gray.800'}>
+                <Heading textAlign={{ sm: "center", md: "left" }} color={'black'}>
                     {`Finding big Solutions Together`}
                 </Heading>
-                <Text letterSpacing={'wide'} size={'md'} pb={8} >
+                <Text textAlign={{ sm: "center", md: "left" }} pt={2} color="gray.700" fontSize={'lg'}>
                     {`These methodologies are used and implemented in more than half of the Fortune 500 company's projects, as well as several government organizations throughout the United States and other countries internationally.`}
                 </Text>
 
-                <Heading fontWeight={'semibold'} color={'gray.800'} size={'md'} pb={'4'}>
-                    {`PDaaS (Product Development as a Service)`}
-                </Heading>
-                <Heading fontWeight={'semibold'} color={'gray.800'} size={'md'}>
-                    {`Redefining Agile`}
-                </Heading>
-                <Text letterSpacing={'wide'} pb={'4'} color={'gray.700'}>
-                    {`Ability to change priorities, bring support, and test the applications. Brings teams to well rewarded milestones.`}
-                </Text>
-                <Heading fontWeight={'semibold'} color={'gray.800'} size={'md'} pb={'4'}>
-                    {`ROI (Return on Investment)`}
-                </Heading>
-                <Heading fontWeight={'semibold'} color={'gray.800'} size={'md'} pb={'4'}>
-                    {`Risk Control`}
-                </Heading>
-                <Heading fontWeight={'semibold'} color={'gray.800'} size={'md'} pb={'4'}>
-                    {`Quality Assurance`}
-                </Heading>
-                <Heading fontWeight={'semibold'} color={'gray.800'} size={'md'} pb={'4'}>
-                    {`ROI Methodology`}
-                </Heading>
+                <Divider my={12} />
 
-                <Box py={'3rem'} />
+                <SimpleGrid
+                    columns={{ sm: 1, md: 2 }}
+                    spacingY={{ sm: 10, md: 32 }}
+                    spacingX={{ sm: 10, md: 24 }}
+                >
+                    <Box>
+                        <Heading
+                            mt={4}
+                            mb={4}
+                            as={'h2'}
+                            fontWeight="bold"
+                            textAlign={{ sm: "center", md: "left" }}
+                            color={"gray.800"}
+                        >
+                            Redefining Agile
+                        </Heading>
+                        <Text
+                            mb={5}
+                            textAlign={{ sm: "center", md: "left" }}
+                            color="gray.600"
+                            fontSize={'lg'}
+                        >
+                            Our combined Agile Development Strategies and Solutions are focused on driving powerful outcomes by providing the ability to change priorities bring support and test the applications. Helping you advance innovation in your industry and focus on other big picture strategies
+                        </Text>
+                    </Box>
+                    <Center>
+                        <Box
+                            w="full"
+                            overflow={'hidden'}
+                            rounded={'2xl'}
+                            border={'1px'}
+                            borderColor={'gray.100'}
+                        >
+                            <Image userSelect={'none'} pointerEvents={'none'} width={'full'} src={'/img/our-approach/redefining-agile.jpg'} />
+                        </Box>
+                    </Center>
+                </SimpleGrid>
+
+                <Divider my={12} />
+
+                <SimpleGrid
+                    columns={{ sm: 1, md: 2 }}
+                    spacingY={{ sm: 10, md: 32 }}
+                    spacingX={{ sm: 10, md: 24 }}
+                >
+                    <Box order={{ sm: "initial", md: 2 }}>
+                        <Heading
+                            mt={4}
+                            mb={4}
+                            as={'h2'}
+                            fontWeight="bold"
+                            textAlign={{ sm: "center", md: "left" }}
+                            color={"gray.800"}
+                        >
+                            {`Quality Assurance`}
+                        </Heading>
+                        <Text
+                            letterSpacing={1}
+                            mb={5}
+                            textAlign={{ sm: "center", md: "left" }}
+                            color="gray.600"
+                            fontSize={{ md: "lg" }}
+                        >
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ac auctor augue mauris augue. Sit amet porttitor eget dolor morbi non arcu risus quis. Laoreet sit amet cursus sit amet.
+                        </Text>
+                    </Box>
+                    <Center>
+                        <Box
+                            w="full"
+                            overflow={'hidden'}
+                            rounded={'2xl'}
+                            border={'1px'}
+                            borderColor={'gray.100'}
+                        >
+                            <Image userSelect={'none'} pointerEvents={'none'} width={'full'} src={'/img/our-approach/costumer-satisfaction.jpg'} />
+                        </Box>
+                    </Center>
+                </SimpleGrid>
+
+                <Divider my={12} />
+
+                <SimpleGrid
+                    columns={{ sm: 1, md: 2 }}
+                    spacingY={{ sm: 10, md: 32 }}
+                    spacingX={{ sm: 10, md: 24 }}
+                >
+                    <Box>
+                        <Heading
+                            mt={4}
+                            mb={4}
+                            as={'h2'}
+                            fontWeight="bold"
+                            textAlign={{ sm: "center", md: "left" }}
+                        >
+                            {`Risk Control`}
+                        </Heading>
+                        <Text
+                            letterSpacing={1}
+                            mb={5}
+                            textAlign={{ sm: "center", md: "left" }}
+                            color="gray.600"
+                            fontSize={{ md: "lg" }}
+                        >
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ac auctor augue mauris augue. Sit amet porttitor eget dolor morbi non arcu risus quis. Laoreet sit amet cursus sit amet.                         </Text>
+                    </Box>
+                    <Center>
+                        <Box
+                            w="full"
+                            overflow={'hidden'}
+                            rounded={'2xl'}
+                            border={'1px'}
+                            borderColor={'gray.100'}
+                        >
+                            <Image userSelect={'none'} pointerEvents={'none'} width={'full'} src={'/img/our-approach/risk-control.jpg'} />
+                        </Box>
+                    </Center>
+                </SimpleGrid>
+
+                <Divider my={12} />
+
+                <SimpleGrid
+                    columns={{ sm: 1, md: 2 }}
+                    spacingY={{ sm: 10, md: 32 }}
+                    spacingX={{ sm: 10, md: 24 }}
+                >
+                    <Box order={{ sm: "initial", md: 2 }}>
+                        <Heading
+                            mt={4}
+                            mb={4}
+                            as={'h2'}
+                            fontWeight="bold"
+                            textAlign={{ sm: "center", md: "left" }}
+                        >
+                            {`ROI (Return on Investment)`}
+                        </Heading>
+                        <Text
+                            letterSpacing={1}
+                            mb={5}
+                            textAlign={{ sm: "center", md: "left" }}
+                            color="gray.600"
+                            fontSize={{ md: "lg" }}
+                        >
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ac auctor augue mauris augue. Sit amet porttitor eget dolor morbi non arcu risus quis. Laoreet sit amet cursus sit amet.                         </Text>
+                    </Box>
+                    <Center>
+                        <Box
+                            w="full"
+                            overflow={'hidden'}
+                            rounded={'2xl'}
+                            border={'1px'}
+                            borderColor={'gray.100'}
+                        >
+                            <Image userSelect={'none'} pointerEvents={'none'} width={'full'} src={'/img/our-approach/return-on-investment.jpg'} />
+                        </Box>
+                    </Center>
+                </SimpleGrid>
+
+                <Divider my={12} />
+
+                <SimpleGrid
+                    columns={{ sm: 1, md: 2 }}
+                    spacingY={{ sm: 10, md: 32 }}
+                    spacingX={{ sm: 10, md: 24 }}
+                >
+                    <Box>
+                        <Heading
+                            mt={4}
+                            mb={4}
+                            as={'h2'}
+                            fontWeight="bold"
+                            textAlign={{ sm: "center", md: "left" }}
+                        >
+                            {`PDaaS (Product Development as a Service)`}
+                        </Heading>
+                        <Text
+                            letterSpacing={1}
+                            mb={5}
+                            textAlign={{ sm: "center", md: "left" }}
+                            color="gray.600"
+                            fontSize={{ md: "lg" }}
+                        >
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ac auctor augue mauris augue. Sit amet porttitor eget dolor morbi non arcu risus quis. Laoreet sit amet cursus sit amet.                         </Text>
+                    </Box>
+                    <Center>
+                        <Box
+                            w="full"
+                            overflow={'hidden'}
+                            rounded={'2xl'}
+                            border={'1px'}
+                            borderColor={'gray.100'}
+                        >
+                            <Image userSelect={'none'} pointerEvents={'none'} width={'full'} src={'/img/our-approach/product-development.jpg'} />
+                        </Box>
+                    </Center>
+                </SimpleGrid>
+
+                <Divider my={12} />
+
+                <SimpleGrid
+                    columns={{ sm: 1, md: 2 }}
+                    spacingY={{ sm: 10, md: 32 }}
+                    spacingX={{ sm: 10, md: 24 }}
+                >
+                    <Box order={{ sm: "initial", md: 2 }}>
+                        <Heading
+                            mt={4}
+                            mb={4}
+                            as={'h2'}
+                            fontWeight="bold"
+                            textAlign={{ sm: "center", md: "left" }}
+                        >
+                            {`CaaS (Consulting as a Service)`}
+                        </Heading>
+                        <Text
+                            letterSpacing={1}
+                            mb={5}
+                            textAlign={{ sm: "center", md: "left" }}
+                            color="gray.600"
+                            fontSize={{ md: "lg" }}
+                        >
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ac auctor augue mauris augue. Sit amet porttitor eget dolor morbi non arcu risus quis. Laoreet sit amet cursus sit amet.                         </Text>
+                    </Box>
+                    <Center>
+                        <Box
+                            w="full"
+                            overflow={'hidden'}
+                            rounded={'2xl'}
+                            border={'1px'}
+                            borderColor={'gray.100'}
+                        >
+                            <Image userSelect={'none'} pointerEvents={'none'} width={'full'} src={'/img/our-approach/consulting.jpg'} />
+                        </Box>
+                    </Center>
+                </SimpleGrid>
+
+                <Divider my={12} />
+
+                <SimpleGrid
+                    columns={{ sm: 1, md: 2 }}
+                    spacingY={{ sm: 10, md: 32 }}
+                    spacingX={{ sm: 10, md: 24 }}
+                >
+                    <Box>
+                        <Heading
+                            mt={4}
+                            mb={4}
+                            as={'h2'}
+                            fontWeight="bold"
+                            textAlign={{ sm: "center", md: "left" }}
+                        >
+                            {`DTaaS (Digital Transformation as a Service)`}
+                        </Heading>
+                        <Text
+                            letterSpacing={1}
+                            mb={5}
+                            textAlign={{ sm: "center", md: "left" }}
+                            color="gray.600"
+                            fontSize={{ md: "lg" }}
+                        >
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ac auctor augue mauris augue. Sit amet porttitor eget dolor morbi non arcu risus quis. Laoreet sit amet cursus sit amet.                         </Text>
+                    </Box>
+                    <Center>
+                        <Box
+                            w="full"
+                            overflow={'hidden'}
+                            rounded={'2xl'}
+                            border={'1px'}
+                            borderColor={'gray.100'}
+                        >
+                            <Image userSelect={'none'} pointerEvents={'none'} width={'full'} src={'/img/our-approach/digital-transformation.jpg'} />
+                        </Box>
+                    </Center>
+                </SimpleGrid>
             </Box>
+
+            <Box py={'3rem'} />
+
         </>
     );
 }

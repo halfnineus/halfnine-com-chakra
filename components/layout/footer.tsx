@@ -8,7 +8,6 @@ import {
     SimpleGrid,
     HStack,
     Icon,
-    useColorModeValue as mode,
     FormControl,
     FormLabel,
     Select,
@@ -137,18 +136,14 @@ export default function SCFooter() {
                     <>
                         <Box
                             key={i}
-                            bg={mode('white', 'gray.900')}
-                            color={mode('gray.700', 'gray.200')}
-                            margin={'auto'}
                             py={6}
                             borderTop={'1px'}
-                            borderColor={mode('gray.300', 'gray.600')}
+                            borderColor={'gray.200'}
                         >
                             <Container px={{ base: '4', xl: '0' }} maxW={'container.xl'}>
                                 <Flex
                                     direction={{ base: 'column', lg: 'row' }}
                                     justify="space-between"
-                                    // pb="4"
                                     align="flex-start"
                                     id="top"
                                 >
@@ -162,7 +157,7 @@ export default function SCFooter() {
                                         {links.filter(p => p.locale === locale).map((group, idx) => (
                                             <>
                                                 <Box key={idx}>
-                                                    <Text fontWeight="bold" mb="4">
+                                                    <Text fontWeight="bold" mb={4}>
                                                         {group.title}
                                                     </Text>
                                                     <Stack>
@@ -268,19 +263,19 @@ export default function SCFooter() {
                                 _before={{
                                     content: '""',
                                     borderBottom: '1px solid',
-                                    borderColor: mode('gray.200', 'gray.700'),
+                                    borderColor: 'gray.200',
                                     flexGrow: 1,
                                     mr: 5,
                                 }}
                                 _after={{
                                     content: '""',
                                     borderBottom: '1px solid',
-                                    borderColor: mode('gray.200', 'gray.700'),
+                                    borderColor: 'gray.200',
                                     flexGrow: 1,
                                     ml: 5,
                                 }}>
                                 <Link href={'/'}>
-                                    <Image userSelect={'none'} alt={'Ochoa'} pointerEvents={'none'} width={'auto'} height={'10'} src={mode('/img/smlog.png', '/img/wsmlog.png')} />
+                                    <Image userSelect={'none'} alt={'Ochoa'} pointerEvents={'none'} width={'auto'} height={'10'} src={'/img/smlog.png'} />
                                 </Link>
                             </Flex>
                             <Container px={{ base: '4', xl: '0' }} maxW={'container.xl'}>

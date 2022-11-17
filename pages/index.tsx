@@ -230,7 +230,7 @@ const IndexPage = () => {
                 </Text> */}
                 <Text px={{ base: 0, lg: 24, }} mb={4} fontSize={{ base: "lg", md: "xl", }} color={mode("gray.700", "gray.300")}>
                   {indexData.block1.txt}{" "}
-                  <Link href={"/our-approach/agile"}>
+                  <Link href={"/our-approach"}>
                     <Button
                       userSelect={'text'}
                       fontSize="xl"
@@ -251,6 +251,8 @@ const IndexPage = () => {
               {/* Remove window.open on mobile using breakpoint values */}
               <Link href={'https://ochoa.pro/img/index/Basic-IoT-Enviroment.png'} target={'_blank'}>
                 <Image
+                  // mx="auto"
+                  // px={{ base: '4', lg: '0' }}
                   maxW={'container.md'}
                   userSelect={'none'}
                   w="full"

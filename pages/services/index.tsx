@@ -110,7 +110,6 @@ const Index = () => {
                                 // pt={6}
                                 mx="auto"
                                 bg="white"
-                                _dark={{ bg: "gray.800" }}
                             >
                                 <Feature
                                     title="Development Services"

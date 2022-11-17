@@ -26,20 +26,18 @@ const BuiltWith = (children: any) => {
       maxW={{ base: 'full', sm: '200px', md: '200px', lg: '200px', }}
       w={'full'}
       bg={mode('white', 'gray.700')}
-      _hover={{ transform: 'scale(1.02)', opacity: '1', boxShadow: 'sm', bg: 'gray.50', borderColor: mode('gray.100', 'gray.600') }}
-      cursor={'pointer'}
-      borderColor={mode('gray.50', 'gray.600')}
+      // _hover={{ transform: 'scale(1.00)', opacity: '1' }}
+      // cursor={'pointer'}
+      // transform={'scale(0.98)'}
+      overflow={'hidden'}
       rounded={'md'}
       p={2}
-      overflow={'hidden'}
       maxH={'auto'}
       opacity={0.8}
     >
-      <Center>
-        <Box alignContent={'center'} h={'auto'} m={-2} pos={'relative'}>
-          <Image userSelect={'none'} pointerEvents={'none'} alt={'img'} src={children.img} />
-        </Box>
-      </Center>
+      <Box alignItems={'center'} alignContent={'center'} h={'auto'} m={-2} pos={'relative'}>
+        <Image userSelect={'none'} pointerEvents={'none'} alt={'Img_Logo'} src={children.img} />
+      </Box>
     </Box>
   )
 }
