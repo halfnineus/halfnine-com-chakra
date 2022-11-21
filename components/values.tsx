@@ -69,7 +69,6 @@ const Values = () => {
         <>
             <Stack spacing={5} mb={5} as={Container} maxW={'3xl'} textAlign={'center'}>
                 <Heading fontSize={'3xl'}>{"Our Values"}</Heading>
-                {/* <Text color={mode('gray.600', 'gray.400')} fontSize={'xl'}>{"indexData.block4.txt"}</Text> */}
             </Stack>
 
             <Grid

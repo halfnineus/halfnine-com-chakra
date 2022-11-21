@@ -30,9 +30,9 @@ const Feature = (props: any) => {
                     w={12}
                     rounded="md"
                     color="white"
-                    bg={mode("gray.100", "brand.700")}
+                    bg={"gray.100"}
                 >
-                    <Box color={mode("brand.600", "white")} fontSize="1.5rem">
+                    <Box color={mode("blue.600", "white")} fontSize="1.5rem">
                         {props.icon}
                     </Box>
                 </Flex>
@@ -98,7 +98,7 @@ const Development = () => {
                 >
                     <Box alignSelf="start">
                         <chakra.h2
-                            color={'brand.500'}
+                            color={'blue.500'}
                             fontWeight="semibold"
                             textTransform="uppercase"
                             letterSpacing="wide"

@@ -50,14 +50,14 @@ const Feature2 = ({ text, icon, iconBg, refx }: FeatureProps2) => {
     <>
       <Link href={refx}>
         <Stack
-          _hover={{ textColor: 'blue.500', bg: mode('blue.50', 'blue.900'), borderColor: 'blue.50', cursor: 'pointer' }}
+          _hover={{ textColor: 'blue.500', bg: 'blue.50', borderColor: 'blue.50', cursor: 'pointer' }}
           role={'group'}
           direction={'row'}
           align={'center'}
           p={2}
           rounded={'xl'}
           border={'1px'}
-          borderColor={mode('gray.100', 'gray.600')}
+          borderColor={'gray.100'}
         >
           <Flex
             w={8}
@@ -98,14 +98,14 @@ export const Featurei = (props: FeatureiProps) => {
   const { title, children, icon } = props
   return (
     <Box>
-      <Box color={mode("brand.600", "white")} fontSize="2.5rem">
+      <Box color={"blue.600"} fontSize="2.5rem">
         {icon}
       </Box>
       <Stack mt="6">
         <Text as="h3" fontSize="lg" fontWeight="bold">
           {title}
         </Text>
-        <Text pr="6" lineHeight="tall" color={mode("gray.600", "gray.400")}>
+        <Text pr="6" lineHeight="tall" color={"gray.600"}>
           {children}
         </Text>
       </Stack>
@@ -123,12 +123,12 @@ const Feature1 = ({ title, text, icon }: FeatureProps1) => {
         justify={'center'}
         color={'white'}
         rounded={'full'}
-        bg={mode('gray.100', 'gray.700')}
+        bg={'gray.100'}
         mb={1}>
         {icon}
       </Flex>
       <Text fontWeight={600}>{title}</Text>
-      <Text color={mode('gray.600', 'gray.400')}>{text}</Text>
+      <Text color={'gray.600'}>{text}</Text>
     </Stack>
   );
 };
@@ -138,20 +138,13 @@ const IndexPage = () => {
   const { locale } = useRouter()
   const router = useRouter()
 
-  // const bounce = keyframes`
-  //   0%   { background-color: #0BC5EA }
-  //   25%  { background-color: #48BB78 }
-  //   50%  { background-color: #9F7AEA }
-  //   75%  { background-color: #48BB78 }
-  //   100% { background-color: #0BC5EA }
-  // `
   const bounce = keyframes`
-    0%   { background-color: #48BB78 }
-    33%  { background-color: #38B2AC }
-    66%  { background-color: #9F7AEA }
-    100% { background-color: #48BB78 }
+    0%   { background-color: #0BC5EA }
+    25%  { background-color: #48BB78 }
+    50%  { background-color: #9F7AEA }
+    75%  { background-color: #48BB78 }
+    100% { background-color: #0BC5EA }
   `
-
   return (
     <>
       {indexdat.data.filter(p => p.locale === locale).map((indexData, i) => {
@@ -173,14 +166,14 @@ const IndexPage = () => {
                 <Box maxW={{ lg: 'md', xl: 'xl' }} pt={{ base: '6', lg: '8' }} pb={{ base: '16', lg: '40' }}>
                   <Heading as="h1" size="3xl" lineHeight="1" fontWeight="extrabold" letterSpacing="tight">
                     {indexData.block1.h1_1}{' '}
-                    <Box as="mark" color={mode('blue.600', 'blue.300')} bg="transparent">{indexData.block1.h1_2}</Box>
+                    <Box as="mark" color={'blue.600'} bg="transparent">{indexData.block1.h1_2}</Box>
                   </Heading>
-                  <Text mt={4} fontSize="xl" fontWeight="medium" color={mode('gray.600', 'gray.400')}>
+                  <Text mt={4} fontSize="xl" fontWeight="medium" color={'gray.600'}>
                     {indexData.block2.txt_1}
                   </Text>
                   {/* <Stack direction={{ base: 'column', sm: 'row' }} spacing="4" mt="8"> */}
                   <Link href={"/contact"}>
-                    <Button mt={8} p={5} size="md" colorScheme={'brand'} shadow="base" fontSize="md">
+                    <Button mt={8} p={5} size="md" colorScheme={'blue'} shadow="base" fontSize="md">
                       {indexData.block1.button}
                     </Button>
                   </Link>
@@ -213,22 +206,22 @@ const IndexPage = () => {
                 >
                   {indexData.block2.h2_1}{" "}
                   <Text
-                    display={{ base: "block", lg: "inline", }}
+                    bgClip="text"
+                    display={"inline-block"}
                     pr={{ md: "none", lg: 1 }}
                     pb={{ base: 2, md: 3, lg: "none" }}
-                    bgClip="text"
-                    // bgGradient={"linear(to-r, green.400,blue.600)"}
-                    animation={`${bounce} 4s ease infinite`}
+                    // bgGradient={"linear(to-r, green.400, blue.600)"}
+                    animation={`${bounce} 5s ease infinite`}
                     bgImage={"linear-gradient(to right, #2b6cb0 32%, transparent)"}
                     fontWeight="extrabold"
                   >
                     {indexData.block2.h2_2}
                   </Text>{" "}
                 </Heading>
-                {/* <Text px={{ base: 0, lg: 24, }} mb={4} fontSize={{ base: "lg", md: "xl", }} color={mode("gray.700", "gray.300")}>
+                {/* <Text px={{ base: 0, lg: 24, }} mb={4} fontSize={{ base: "lg", md: "xl", }} color={"gray.700"}>
                   {indexData.block2.txt_1}
                 </Text> */}
-                <Text px={{ base: 0, lg: 24, }} mb={4} fontSize={{ base: "lg", md: "xl", }} color={mode("gray.700", "gray.300")}>
+                <Text px={{ base: 0, lg: 24, }} mb={4} fontSize={{ base: "lg", md: "xl", }} color={"gray.700"}>
                   {indexData.block1.txt}{" "}
                   <Link href={"/our-approach"}>
                     <Button
@@ -302,7 +295,7 @@ const IndexPage = () => {
                     color={'blue.400'}
                     fontWeight={600}
                     fontSize={'sm'}
-                    bg={mode('blue.50', 'blue.900')}
+                    bg={'blue.50'}
                     p={2}
                     alignSelf={'flex-start'}
                     rounded={'md'}
@@ -310,7 +303,6 @@ const IndexPage = () => {
                     Our Story
                   </Text> */}
                   <Heading pl={{ xl: 2, md: 0 }} pt={8}>{indexData.block4.title}</Heading>
-                  {/* <Heading>A digital Product design agency</Heading> */}
                   <Text pl={{ xl: 2, md: 0 }} color={'gray.500'} fontSize={'lg'}>
                     {indexData.block4.description}
                   </Text>
@@ -318,29 +310,29 @@ const IndexPage = () => {
                     spacing={2}
                     divider={
                       <StackDivider
-                        borderColor={mode('gray.100', 'gray.700')}
+                        borderColor={'gray.100'}
                       />
                     }>
                     <Feature2
                       refx={'/services/development'}
                       icon={
-                        <Icon as={IoPeopleOutline} color={mode('blue.600', 'blue.300')} w={5} h={5} />
+                        <Icon as={IoPeopleOutline} color={'blue.600'} w={5} h={5} />
                       }
-                      iconBg={mode('blue.100', 'blue.900')}
+                      iconBg={'blue.100'}
                       text={indexData.block4.srvc1}
                     />
                     <Feature2
                       refx={'/services/digitalization'}
-                      icon={<Icon as={IoRocketOutline} color={mode('green.600', 'green.300')} w={5} h={5} />}
-                      iconBg={mode('green.100', 'green.900')}
+                      icon={<Icon as={IoRocketOutline} color={'green.600'} w={5} h={5} />}
+                      iconBg={'green.100'}
                       text={indexData.block4.srvc2}
                     />
                     <Feature2
                       refx={'/services/consultation'}
                       icon={
-                        <Icon as={IoBulbOutline} color={mode('orange.600', 'orange.300')} w={5} h={5} />
+                        <Icon as={IoBulbOutline} color={'orange.600'} w={5} h={5} />
                       }
-                      iconBg={mode('orange.100', 'orange.900')}
+                      iconBg={'orange.100'}
                       text={indexData.block4.srvc3}
                     />
                   </Stack>

@@ -11,10 +11,13 @@
             "lvlup": {
                 "t1": "Ready to level up?",
                 "d1": "Taking your business to the Next Level takes a lot of resources combined with trial and error, Our experience in the field will take the risks to the minimum while maximizing the use of resources.",
-                "t2": "Fill our Contact Form or Email Us",
+                "t2": "Fill out our form or email us",
                 "b2": "Contact Us"
             },
-            "lnr": "Language & region:"
+            "simpleform": {
+                "lnr": "Language & region:",
+                "valuedat": "English (US)"
+            }
         },
         {
             "locale": "es",
@@ -30,7 +33,10 @@
                 "t2": "Complete el formulario",
                 "b2": "Contáctanos"
             },
-            "lnr": "Lenguaje y region:"
+            "simpleform": {
+                "lnr": "Lenguaje y region:",
+                "valuedat": "Español (MX)"
+            }
         }
     ]
 }

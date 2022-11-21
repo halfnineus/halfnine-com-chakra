@@ -32,9 +32,9 @@ const Feature = (props: any) => {
                     w={12}
                     rounded="md"
                     color="white"
-                    bg={mode("gray.100", "brand.700")}
+                    bg={"gray.100"}
                 >
-                    <Box color={mode("brand.600", "white")} fontSize="1.5rem">
+                    <Box color={"blue.600"} fontSize="1.5rem">
                         {props.icon}
                     </Box>
                 </Flex>
@@ -99,7 +99,7 @@ const Development = () => {
                 >
                     <Box alignSelf="start">
                         <chakra.h2
-                            color={'brand.500'}
+                            color={'blue.500'}
                             fontWeight="semibold"
                             textTransform="uppercase"
                             letterSpacing="wide"
@@ -151,7 +151,7 @@ const Development = () => {
 
                 <Divider my={12} />
 
-                {/* https://www.oracle.com/cloud/digital-transformation/ */}
+                {/* #url https://www.oracle.com/cloud/digital-transformation/ */}
                 {/* https://www.accenture.com/us-en/insights/digital-transformation-index */}
                 {/* https://emeritus.org/blog/what-is-digital-transformation-definition-examples-strategies/ */}
                 {/* https://www2.deloitte.com/us/en/insights/topics/strategy/how-to-lead-digital-transformation.html */}
@@ -161,7 +161,7 @@ const Development = () => {
                 <Heading color={'gray.800'} size={'lg'}>
                     Digital Transformation
                 </Heading>
-                <Text pb={'10'} color={'gray.700'}>
+                <Text pb={10} color={'gray.700'}>
                     {`Is the process of adopting digital technology in your organization through planning and executing a digital-first & customer-driven approach. This is done to find improvement opportunities such as efficiency, value, and innovation.`}
                 </Text>
                 <Heading pb={4} color={'gray.800'} size={'lg'}>
@@ -173,16 +173,16 @@ const Development = () => {
                 <Text pb={4} color={'gray.700'}>
                     {`Stop managing change and start leading change in your industry with proven Distributed Agile Frameworks that improve your business model and prepare you for a more competitive future.`}
                 </Text>
-                <Heading fontWeight={'semibold'} pb={'2'} color={'gray.800'} size={'md'}>
+                <Heading fontWeight={'semibold'} pb={2} color={'gray.800'} size={'md'}>
                     {`Accelerate Innovation`}
                 </Heading>
-                <Text pb={'4'} color={'gray.700'}>
+                <Text pb={4} color={'gray.700'}>
                     {`Start your innovation processes by saving valuable resources and time with digital and data solutions, helping you focus on your industry's goals.`}
                 </Text>
-                <Heading fontWeight={'semibold'} pb={'2'} color={'gray.800'} size={'md'}>
+                <Heading fontWeight={'semibold'} pb={2} color={'gray.800'} size={'md'}>
                     {`Outpace Demands`}
                 </Heading>
-                <Text pb={'10'} color={'gray.700'}>
+                <Text pb={10} color={'gray.700'}>
                     {`It's hard to keep up with all the new methods and technologies, With our passion for IT we research the markets and make sure you don't fall back and maintain a flexible and scalable environment for change.`}
                 </Text>
 

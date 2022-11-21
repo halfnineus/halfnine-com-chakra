@@ -25,10 +25,6 @@ const BuiltWith = (children: any) => {
     <Box
       maxW={{ base: 'full', sm: '200px', md: '200px', lg: '200px', }}
       w={'full'}
-      bg={mode('white', 'gray.700')}
-      // _hover={{ transform: 'scale(1.00)', opacity: '1' }}
-      // cursor={'pointer'}
-      // transform={'scale(0.98)'}
       overflow={'hidden'}
       rounded={'md'}
       p={2}

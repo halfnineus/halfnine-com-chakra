@@ -20,7 +20,9 @@ import { useRouter } from "next/router";
 import { IoShieldCheckmarkOutline } from "react-icons/io5";
 import { MdOutlinePrecisionManufacturing } from "react-icons/md";
 
-// !!?? Energy and Logistics
+// #url https://incorporated.zone/type-of-industries/
+// ??Energy and Logistics  
+
 const Feature = (props: any) => {
     return (
         <Link href={props.refx}>
@@ -36,7 +38,7 @@ const Feature = (props: any) => {
                 <HStack>
                     <Box
                         boxSize={12}
-                        color={'brand.600'}
+                        color={'blue.600'}
                         mb={4}
                         fill="none"
                         stroke="currentColor"
@@ -53,7 +55,7 @@ const Feature = (props: any) => {
                             fontSize="lg"
                             lineHeight="shorter"
                             fontWeight="bold"
-                            _groupHover={{ color: 'brand.600' }}
+                            _groupHover={{ color: 'blue.600' }}
                         >
                             {props.title}
                         </Heading>
@@ -66,7 +68,7 @@ const Feature = (props: any) => {
                         justify={'flex-end'}
                         align={'center'}
                         flex={1}>
-                        <Icon color={'brand.600'} mb={2} w={12} h={12} as={ChevronRightIcon} />
+                        <Icon color={'blue.600'} mb={2} w={12} h={12} as={ChevronRightIcon} />
                     </Flex>
                 </HStack>
                 <Text
@@ -101,7 +103,7 @@ const Index = () => {
                                 }
                             ]}
                         />
-                        <Box maxW={'container.xl'} px={{ base: '4', sm: '4', md: '4', lg: '4', xl: '0' }} pt={6} mx="auto">
+                        <Box maxW={'container.xl'} px={{ base: '4', sm: '4', md: '4', lg: '4', xl: 0 }} pt={6} mx="auto">
                             <SimpleGrid
                                 // maxW={'container.xl'}
                                 columns={{ base: 1 }}

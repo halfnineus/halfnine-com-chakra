@@ -25,6 +25,8 @@ import {
     ModalFooter,
     ModalBody,
     ModalCloseButton,
+    Center,
+    SimpleGrid,
 } from '@chakra-ui/react';
 
 import { MdCall, MdEmail, MdLocationOn, MdOutlineEmail, MdPhone, } from 'react-icons/md';
@@ -37,6 +39,7 @@ import { useRouter } from "next/router";
 import { FiExternalLink } from "react-icons/fi";
 
 import indexdat from "../assets/contact.json"
+import Link from 'next/link';
 
 const INDEX = () => {
     const [name, setName] = useState('');
@@ -130,7 +133,7 @@ const INDEX = () => {
                                     <Text fontWeight={'semibold'} mb='1rem'>
                                         {/* <Lorem count={2} /> */}
                                         {`You are about to email us at: `}
-                                        <Button colorScheme={'brand'} variant={'link'} userSelect={'text'} fontWeight={'semibold'} mb='1rem' display={'inline'} onClick={() => router.push("mailto:ochoapro@duck.com")}>
+                                        <Button colorScheme={'blue'} variant={'link'} userSelect={'text'} fontWeight={'semibold'} mb='1rem' display={'inline'} onClick={() => router.push("mailto:ochoapro@duck.com")}>
                                             {`ochoapro@duck.com`}
                                         </Button>
                                     </Text>
@@ -139,7 +142,7 @@ const INDEX = () => {
                                     <Button variant={'ghost'} mr={3} onClick={onClose}>
                                         Close
                                     </Button>
-                                    <Button onClick={() => router.push("mailto:ochoapro@duck.com")} colorScheme={'brand'} variant='outline' rightIcon={<FiExternalLink />}>Send Mail</Button>
+                                    <Button onClick={() => router.push("mailto:ochoapro@duck.com")} colorScheme={'blue'} variant='outline' rightIcon={<FiExternalLink />}>Send Mail</Button>
                                 </ModalFooter>
                             </ModalContent>
                         </Modal>
@@ -153,7 +156,7 @@ const INDEX = () => {
                                 w={'full'}
                                 justify={'center'}
                                 px={{ base: 4, md: 8 }}
-                                bgGradient={'linear(to-r, blackAlpha.700, blackAlpha.400)'}
+                                bgGradient={'linear(to-r, blackAlpha.700, blackAlpha.300)'}
                                 textAlign='center'
                             >
                                 <Stack maxW={'3xl'}>
@@ -185,7 +188,7 @@ const INDEX = () => {
                             <Divider mt={5} mb={5} />
 
                             <Box
-                                bg={mode('gray.50', 'gray.700')}
+                                bg={'gray.50'}
                                 borderRadius='xl'
                                 px={{ base: 5, sm: 5, md: 5, lg: 10 }}
                                 pb={{ base: 5, sm: 5, md: 5, lg: 10 }}
@@ -197,7 +200,16 @@ const INDEX = () => {
                                 </Heading>
                                 <form action={'submit'} onSubmit={handleSubmit}>
                                     <VStack spacing={5}>
-                                        <HStack spacing={5} minW={'full'}>
+                                        {/* <HStack spacing={5} minW={'full'}> */}
+                                        <SimpleGrid
+                                            w="full"
+                                            // maxW={{ base: 'unset', lg: '4xl' }}
+                                            columns={{ base: 1, sm: 2 }}
+                                            // columns={2}
+                                            spacing={5}
+                                        // fontSize="sm"
+                                        >
+
                                             <FormControl isRequired>
                                                 <FormLabel>Name</FormLabel>
                                                 <InputGroup>
@@ -205,9 +217,9 @@ const INDEX = () => {
                                                         <BsPerson color="gray.800" />
                                                     </InputLeftElement>
                                                     <Input
-                                                        name="name"
-                                                        onChange={(e: any) => setName(e.target.value)}
                                                         type={'text'}
+                                                        name={"name"}
+                                                        onChange={(e: any) => setName(e.target.value)}
                                                         placeholder={'John Doe'}
                                                         isRequired
                                                     />
@@ -220,16 +232,16 @@ const INDEX = () => {
                                                         <MdOutlineEmail color="gray.800" />
                                                     </InputLeftElement>
                                                     <Input
+                                                        type={'email'}
                                                         defaultValue={email}
                                                         onChange={(e: any) => setEmail(e.target.value)}
                                                         placeholder={'Email'}
-                                                        type={'email'}
                                                         isRequired
                                                     />
                                                 </InputGroup>
                                             </FormControl>
-                                        </HStack>
-                                        <HStack spacing={5} minW={'full'}>
+                                            {/* </HStack> */}
+                                            {/* <HStack spacing={5} minW={'full'}> */}
                                             <FormControl id="company">
                                                 <FormLabel>Company Name</FormLabel>
                                                 <InputGroup>
@@ -237,9 +249,9 @@ const INDEX = () => {
                                                         <BsBuilding color="gray.800" />
                                                     </InputLeftElement>
                                                     <Input
-                                                        name="company"
-                                                        onChange={(e: any) => setCompany(e.target.value)}
                                                         type={'company'}
+                                                        name={"company"}
+                                                        onChange={(e: any) => setCompany(e.target.value)}
                                                         placeholder={'Ochoa'}
                                                     />
                                                 </InputGroup>
@@ -251,14 +263,15 @@ const INDEX = () => {
                                                         <MdPhone color="gray.800" />
                                                     </InputLeftElement>
                                                     <Input
+                                                        type={'tel'}
                                                         name={"phone"}
                                                         onChange={(e: any) => setPhone(e.target.value)}
                                                         placeholder={'Phone Number'}
-                                                        type={'phone'}
                                                     />
                                                 </InputGroup>
                                             </FormControl>
-                                        </HStack>
+                                        </SimpleGrid>
+                                        {/* </HStack> */}
                                         <FormControl id="message">
                                             <FormLabel>Message</FormLabel>
                                             <Textarea
@@ -269,7 +282,7 @@ const INDEX = () => {
                                         </FormControl>
                                         <FormControl>
                                             <Button
-                                                colorScheme={"brand"}
+                                                colorScheme={"blue"}
                                                 type={'submit'}
                                                 isLoading={submitted}
                                                 loadingText={'Submitting'}
@@ -289,7 +302,7 @@ const INDEX = () => {
                                 <Divider />
                             </Flex>
 
-                            <HStack>
+                            <Center>
                                 <Button
                                     onClick={onOpen}
                                     size="md"
@@ -297,9 +310,8 @@ const INDEX = () => {
                                     width="auto"
                                     minH={'10'}
                                     variant="ghost"
-                                    color={mode('black', 'white')}
-                                    _hover={mode({ color: 'blue.500', bg: 'blackAlpha.100' }, { color: 'blue.200', bg: 'whiteAlpha.100' })}
-                                    leftIcon={<MdEmail color={mode('black', 'white')} size="20px" />}
+                                    _hover={{ color: 'blue.500', bg: 'blackAlpha.100' }}
+                                    leftIcon={<MdEmail color={'black'} size="20px" />}
                                 >
                                     Email Us
                                 </Button>
@@ -310,27 +322,26 @@ const INDEX = () => {
                                     width="auto"
                                     minH={'10'}
                                     variant="ghost"
-                                    color={mode('black', 'white')}
-                                    _hover={mode({ color: 'blue.500', bg: 'blackAlpha.100' }, { color: 'blue.200', bg: 'whiteAlpha.100' })}
-                                    leftIcon={<MdCall />}
+                                    _hover={{ color: 'blue.500', bg: 'blackAlpha.100' }}
+                                    leftIcon={<MdCall color={'black'} size="20px" />}
                                 >
                                     Call Us
                                 </Button>
-                                <Button
-                                    onClick={() => window.open('https://duckduckgo.com/?q=Orlando%2C+Florida&iaxm=maps')}
-                                    isDisabled
-                                    size="md"
-                                    height="auto"
-                                    width="auto"
-                                    minH={'10'}
-                                    variant="ghost"
-                                    color={mode('black', 'white')}
-                                    _hover={mode({ color: 'blue.500', bg: 'blackAlpha.100' }, { color: 'blue.200', bg: 'whiteAlpha.100' })}
-                                    leftIcon={<MdLocationOn color={mode('black', 'white')} size="20px" />}
-                                >
-                                    Orlando, Florida, USA
-                                </Button>
-                            </HStack>
+                                <Link href={'https://duckduckgo.com/?q=Orlando%2C+Florida&iaxm=maps'} target={'_blank'}>
+                                    <Button
+                                        isDisabled
+                                        size="md"
+                                        height="auto"
+                                        width="auto"
+                                        minH={'10'}
+                                        variant="ghost"
+                                        _hover={{ color: 'blue.500', bg: 'blackAlpha.100' }}
+                                        leftIcon={<MdLocationOn color={'black'} size="20px" />}
+                                    >
+                                        Visit Us
+                                    </Button>
+                                </Link>
+                            </Center>
 
                             <Divider mt={5} mb={8} />
 

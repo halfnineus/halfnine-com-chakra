@@ -36,7 +36,7 @@ export default function WithSubnavigation() {
     const buttonvariant = useBreakpointValue(
         {
             sm: 'gray',
-            md: 'brand',
+            md: 'blue',
         },
         {
             // Breakpoint to use when mediaqueries cannot be used, such as in server-side rendering
@@ -111,7 +111,7 @@ export default function WithSubnavigation() {
                         aria-label={`Switch to ${text} mode`}
                         variant="ghost"
                         color="current"
-                        ml={{ base: "0", md: "3" }}
+                        ml={{ base: "0"0", md: "3" }}
                         onClick={toggleMode}
                         icon={<SwitchIcon />}
                     /> */}
@@ -125,7 +125,7 @@ export default function WithSubnavigation() {
     );
 }
 
-const DesktopNav = (e: any) => {
+const DesktopNav = (e: any,) => {
     const linkColor = mode('gray.600', 'gray.200');
     const popoverContentBgColor = mode('white', 'gray.800');
     const { locale } = useRouter()
@@ -135,7 +135,7 @@ const DesktopNav = (e: any) => {
             {NAV_ITEMS.filter(p => p.locale === locale).map((navItem) => (
                 <Box key={navItem.label}>
                     <Popover onClose={() => (document.activeElement as HTMLElement).blur()} trigger={'hover'} placement={'bottom-start'} closeDelay={160} openDelay={40}>
-                        {({ isOpen, onClose }) => (
+                        {({ onOpen, onClose }: any) => (
                             <>
                                 <PopoverTrigger>
                                     <Box>

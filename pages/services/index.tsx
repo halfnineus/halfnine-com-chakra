@@ -35,7 +35,7 @@ const Feature = (props: any) => {
                 <HStack>
                     <Box
                         boxSize={12}
-                        color={'brand.600'}
+                        color={'blue.600'}
                         mb={4}
                         fill="none"
                         stroke="currentColor"
@@ -52,7 +52,7 @@ const Feature = (props: any) => {
                             fontSize="lg"
                             lineHeight="shorter"
                             fontWeight="bold"
-                            _groupHover={{ color: 'brand.600' }}
+                            _groupHover={{ color: 'blue.600' }}
                         >
                             {props.title}
                         </Heading>
@@ -65,7 +65,7 @@ const Feature = (props: any) => {
                         justify={'flex-end'}
                         align={'center'}
                         flex={1}>
-                        <Icon color={'brand.600'} mb={2} w={12} h={12} as={ChevronRightIcon} />
+                        <Icon color={'blue.600'} mb={2} w={12} h={12} as={ChevronRightIcon} />
                     </Flex>
                 </HStack>
                 <Text

@@ -19,7 +19,7 @@ import {
 
 import Link from 'next/link'
 import { useRouter } from "next/router"
-import { BiRightArrowAlt } from 'react-icons/bi';
+import { RiMailSendLine } from 'react-icons/ri';
 
 import { FaFacebookSquare, FaLinkedin, FaTwitterSquare, FaYoutubeSquare } from "react-icons/fa";
 
@@ -163,7 +163,7 @@ export default function SCFooter() {
                                                     <Stack>
                                                         {group.links.map((link, idx) => (
                                                             <Link key={idx} href={link.href}>
-                                                                <Text _hover={{ color: 'brand.400' }}>
+                                                                <Text _hover={{ color: 'blue.400' }}>
                                                                     {link.label}
                                                                 </Text>
                                                             </Link>
@@ -201,7 +201,7 @@ export default function SCFooter() {
                                                 <Button
                                                     w={{ base: 'full', md: 'auto' }}
                                                     minW="120px"
-                                                    colorScheme={'brand'}
+                                                    colorScheme={'blue'}
                                                     size={'sm'}
                                                     // textTransform="uppercase"
                                                     // fontWeight="bold"
@@ -210,9 +210,10 @@ export default function SCFooter() {
                                                     outline={0}
                                                     _focus={{ shadow: 'outline' }}
                                                     _active={{ transform: 'translateY(2px)' }}
+                                                    rightIcon={<RiMailSendLine  size={14}/>}
                                                 >
                                                     {footerData.lvlup.b2}
-                                                    <Box as={BiRightArrowAlt} ml="2" fontSize="lg" />
+                                                    {/* <Box as={SiMinutemailer} ml="2" fontSize="md" /> */}
                                                 </Button>
                                             </Link>
                                         </HStack>
@@ -302,7 +303,7 @@ export default function SCFooter() {
                                     </Stack>
                                     <FormControl w="auto" display="flex" alignItems="center">
                                         <FormLabel mb="1" fontSize="sm" fontWeight="normal">
-                                            {footerData.lnr}
+                                            {footerData.simpleform.lnr}
                                         </FormLabel>
                                         <Select
                                             w="124px"
@@ -312,10 +313,10 @@ export default function SCFooter() {
                                             variant="unstyled"
                                             id="lang"
                                             name="lang"
-                                            defaultValue="English (US)"
+                                            defaultValue={footerData.simpleform.valuedat}
                                         >
-                                            <option onSelect={() => { router.push({ pathname, query }, asPath, { locale: 'en' }) }} onClick={() => { router.push({ pathname, query }, asPath, { locale: 'en' }) }} value="English (US)">English (US)</option>
-                                            <option onSelect={() => { router.push({ pathname, query }, asPath, { locale: 'en' }) }} onClick={() => { router.push({ pathname, query }, asPath, { locale: 'es' }) }} value="Español (MX)">Español (MX)</option>
+                                            <option onClick={() => { router.push({ pathname, query }, asPath, { locale: 'en' }) }} onBlur={() => { router.push({ pathname, query }, asPath, { locale: 'en' }) }} value="English (US)">{`English (US)`}</option>
+                                            <option onClick={() => { router.push({ pathname, query }, asPath, { locale: 'es' }) }} onBlur={() => { router.push({ pathname, query }, asPath, { locale: 'es' }) }} value="Español (MX)">{`Español (MX)`}</option>
                                         </Select>
                                     </FormControl>
                                 </Flex>

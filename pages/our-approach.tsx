@@ -1,8 +1,7 @@
 import { Box, Text, Heading, SimpleGrid, Image, Divider, Center } from "@chakra-ui/react";
 import { NextSeo } from "next-seo";
 
-import { IoCashOutline, IoTerminalOutline, IoTimerOutline } from "react-icons/io5";
-
+// #url
 {/* https://duckduckgo.com/?q=%22redefining+agile%22&ia=web */ }
 {/* https://duckduckgo.com/?q=Agile+Automation&ia=places */ }
 {/* https://learn.microsoft.com/en-us/devops/plan/what-is-agile-development */ }
@@ -48,8 +47,8 @@ const Index = () => {
                 ]}
             />
             {/* <Box py={'1rem'} /> */}
-            {/* <Container maxW={'container.xl'} px={{ sm: 4, sm: 4, md: 4, lg: 4, xl: '0' }} pt={4}> */}
-            <Box maxW={'container.xl'} px={{ base: 4, sm: 4, md: 4, lg: 4, xl: '0' }} pt={4} mx="auto">
+            {/* <Container maxW={'container.xl'} px={{ sm: 4, sm: 4, md: 4, lg: 4, xl: 0 }} pt={4}> */}
+            <Box maxW={'container.xl'} px={{ base: 4, sm: 4, md: 4, lg: 4, xl: 0 }} pt={4} mx="auto">
                 {/* <SimpleGrid columns={{ sm: 1, md: 2 }} spacing={{ sm: '16', md: '8' }}> */}
                 {/* <Stack my={2}> */}
                 {/* <Heading>Redefining Agile</Heading> */}
