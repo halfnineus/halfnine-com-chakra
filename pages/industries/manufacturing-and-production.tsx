@@ -41,16 +41,16 @@ const Mnp = () => {
                             </Heading>
                             <Link href={'/contact'}>
                                 <Button colorScheme="blue" size="md">
-                                    Let's Talk!
+                                    Let&apos;s Talk!
                                 </Button>
                             </Link>
                         </VStack>
                     </GridItem>
                     <GridItem>
                         <Text>
-                            Automation is allowing us to Manufacture and Produce "create" things in a much
+                            {`Automation is allowing us to Manufacture and Produce "create" things in a much
                             faster environment while reducing the costs of operation and to create new
-                            never-before-possible sources of revenue.
+                            never-before-possible sources of revenue.`}
                         </Text>
                     </GridItem>
                 </Grid>

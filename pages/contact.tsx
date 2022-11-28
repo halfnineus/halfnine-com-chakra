@@ -106,6 +106,8 @@ const INDEX = () => {
         }
     }
 
+
+
     const { locale } = useRouter()
     const { isOpen, onOpen, onClose } = useDisclosure();
     return (
@@ -124,29 +126,6 @@ const INDEX = () => {
                                 }
                             ]}
                         />
-                        <Modal isOpen={isOpen} onClose={onClose}>
-                            <ModalOverlay backdropFilter='blur(1px)' />
-                            <ModalContent>
-                                <ModalHeader>External Application</ModalHeader>
-                                <ModalCloseButton />
-                                <ModalBody>
-                                    <Text fontWeight={'semibold'} mb='1rem'>
-                                        {/* <Lorem count={2} /> */}
-                                        {`You are about to email us at: `}
-                                        <Button colorScheme={'blue'} variant={'link'} userSelect={'text'} fontWeight={'semibold'} mb='1rem' display={'inline'} onClick={() => router.push("mailto:ochoapro@duck.com")}>
-                                            {`ochoapro@duck.com`}
-                                        </Button>
-                                    </Text>
-                                </ModalBody>
-                                <ModalFooter>
-                                    <Button variant={'ghost'} mr={3} onClick={onClose}>
-                                        Close
-                                    </Button>
-                                    <Button onClick={() => router.push("mailto:ochoapro@duck.com")} colorScheme={'blue'} variant='outline' rightIcon={<FiExternalLink />}>Send Mail</Button>
-                                </ModalFooter>
-                            </ModalContent>
-                        </Modal>
-
                         <Flex
                             w={'full'}
                             h={48}
@@ -263,6 +242,7 @@ const INDEX = () => {
                                                         <MdPhone color="gray.800" />
                                                     </InputLeftElement>
                                                     <Input
+                                                        maxLength={20}
                                                         type={'tel'}
                                                         name={"phone"}
                                                         onChange={(e: any) => setPhone(e.target.value)}
@@ -303,30 +283,33 @@ const INDEX = () => {
                             </Flex>
 
                             <Center>
-                                <Button
-                                    onClick={onOpen}
-                                    size="md"
-                                    height="auto"
-                                    width="auto"
-                                    minH={'10'}
-                                    variant="ghost"
-                                    _hover={{ color: 'blue.500', bg: 'blackAlpha.100' }}
-                                    leftIcon={<MdEmail color={'black'} size="20px" />}
-                                >
-                                    Email Us
-                                </Button>
-                                <Button
-                                    isDisabled
-                                    size="md"
-                                    height="auto"
-                                    width="auto"
-                                    minH={'10'}
-                                    variant="ghost"
-                                    _hover={{ color: 'blue.500', bg: 'blackAlpha.100' }}
-                                    leftIcon={<MdCall color={'black'} size="20px" />}
-                                >
-                                    Call Us
-                                </Button>
+                                <Link href={`mailto:ochoapro@duck.com`}>
+                                    <Button
+                                        onClick={onOpen}
+                                        size="md"
+                                        height="auto"
+                                        width="auto"
+                                        minH={'10'}
+                                        variant="ghost"
+                                        _hover={{ color: 'blue.500', bg: 'blackAlpha.100' }}
+                                        leftIcon={<MdEmail color={'black'} size="20px" />}
+                                    >
+                                        Email Us
+                                    </Button>
+                                </Link>
+                                <Link href={`tel:+13213120362`}>
+                                    <Button
+                                        size="md"
+                                        height="auto"
+                                        width="auto"
+                                        minH={'10'}
+                                        variant="ghost"
+                                        _hover={{ color: 'blue.500', bg: 'blackAlpha.100' }}
+                                        leftIcon={<MdCall color={'black'} size="20px" />}
+                                    >
+                                        Call Us
+                                    </Button>
+                                </Link>
                                 <Link href={'https://duckduckgo.com/?q=Orlando%2C+Florida&iaxm=maps'} target={'_blank'}>
                                     <Button
                                         isDisabled

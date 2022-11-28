@@ -105,7 +105,7 @@ const Index = () => {
                             color="gray.600"
                             fontSize={'lg'}
                         >
-                            Our combined Agile Development Strategies and Solutions are focused on driving powerful outcomes by providing the ability to change priorities bring support and test the applications. Helping you advance innovation in your industry and focus on other big picture strategies
+                            Our combined Agile Development Strategies and Solutions are focused on driving powerful outcomes by providing the ability to change priorities, to bring support and test the applications. Helping you advance innovation in your industry and focus on other big picture strategies
                         </Text>
                     </Box>
                     <Center>
@@ -116,7 +116,7 @@ const Index = () => {
                             border={'1px'}
                             borderColor={'gray.100'}
                         >
-                            <Image userSelect={'none'} pointerEvents={'none'} width={'full'} src={'/img/our-approach/redefining-agile.jpg'} />
+                            <Image alt={"redefining-agile"} userSelect={'none'} pointerEvents={'none'} width={'full'} src={'/img/our-approach/redefining-agile.jpg'} />
                         </Box>
                     </Center>
                 </SimpleGrid>
@@ -157,7 +157,7 @@ const Index = () => {
                             border={'1px'}
                             borderColor={'gray.100'}
                         >
-                            <Image userSelect={'none'} pointerEvents={'none'} width={'full'} src={'/img/our-approach/costumer-satisfaction.jpg'} />
+                            <Image alt={"costumer-satisfaction"} userSelect={'none'} pointerEvents={'none'} width={'full'} src={'/img/our-approach/costumer-satisfaction.jpg'} />
                         </Box>
                     </Center>
                 </SimpleGrid>
@@ -196,7 +196,7 @@ const Index = () => {
                             border={'1px'}
                             borderColor={'gray.100'}
                         >
-                            <Image userSelect={'none'} pointerEvents={'none'} width={'full'} src={'/img/our-approach/risk-control.jpg'} />
+                            <Image alt={"risk-control"} userSelect={'none'} pointerEvents={'none'} width={'full'} src={'/img/our-approach/risk-control.jpg'} />
                         </Box>
                     </Center>
                 </SimpleGrid>
@@ -235,7 +235,7 @@ const Index = () => {
                             border={'1px'}
                             borderColor={'gray.100'}
                         >
-                            <Image userSelect={'none'} pointerEvents={'none'} width={'full'} src={'/img/our-approach/return-on-investment.jpg'} />
+                            <Image alt={"return-on-investment"} userSelect={'none'} pointerEvents={'none'} width={'full'} src={'/img/our-approach/return-on-investment.jpg'} />
                         </Box>
                     </Center>
                 </SimpleGrid>
@@ -274,7 +274,7 @@ const Index = () => {
                             border={'1px'}
                             borderColor={'gray.100'}
                         >
-                            <Image userSelect={'none'} pointerEvents={'none'} width={'full'} src={'/img/our-approach/product-development.jpg'} />
+                            <Image alt={"product-development"} userSelect={'none'} pointerEvents={'none'} width={'full'} src={'/img/our-approach/product-development.jpg'} />
                         </Box>
                     </Center>
                 </SimpleGrid>
@@ -313,7 +313,7 @@ const Index = () => {
                             border={'1px'}
                             borderColor={'gray.100'}
                         >
-                            <Image userSelect={'none'} pointerEvents={'none'} width={'full'} src={'/img/our-approach/consulting.jpg'} />
+                            <Image alt={"consulting"}  userSelect={'none'} pointerEvents={'none'} width={'full'} src={'/img/our-approach/consulting.jpg'} />
                         </Box>
                     </Center>
                 </SimpleGrid>
@@ -352,7 +352,7 @@ const Index = () => {
                             border={'1px'}
                             borderColor={'gray.100'}
                         >
-                            <Image userSelect={'none'} pointerEvents={'none'} width={'full'} src={'/img/our-approach/digital-transformation.jpg'} />
+                            <Image alt={"digital-transformation"} userSelect={'none'} pointerEvents={'none'} width={'full'} src={'/img/our-approach/digital-transformation.jpg'} />
                         </Box>
                     </Center>
                 </SimpleGrid>

@@ -20,7 +20,7 @@ export default function Custom404() {
                     Sorry about that
                 </Text>
                 <Text color={'gray.500'} mb={6}>
-                    The page you're looking for does not seem to be available
+                    The page you&apos;re looking for does not seem to be available
                 </Text>
 
                 <Link href={'/'}>
