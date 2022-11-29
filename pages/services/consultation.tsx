@@ -151,66 +151,51 @@ const Development = () => {
                 <Heading color={'gray.800'} size={'lg'}>
                     {`Information Technology Consulting`}
                 </Heading>
-                <Text pb={10} color={'gray.700'}>
+                <Text pb={4} color={'gray.700'}>
                     {`This service helps you improve the performance, scalability, and competitiveness of your products and services through the right implementation and usage of technology.`}
                 </Text>
-                {/* 
-                <Heading pb={4} color={'gray.800'} size={'lg'}>
-                    {`Why consulting works`}
+                <Heading fontWeight={'semibold'} pb={2} color={'gray.800'} size={'md'}>
+                    The Benefits of Industrial IoT & Control Systems Consulting Services
                 </Heading>
-                <Heading fontWeight={'semibold'} color={'gray.800'} size={'md'}>
-                    {`ROI Methodology`}
-                </Heading>
-                <Text pb={4} color={'gray.700'}>
-                    {`This methodology is used and implemented in more than half of the Fortune 500 company's projects, as well as several government organizations throughout the United States and other countries internationally.`}
+                <Flex
+                    w={'full'}
+                    h={48}
+                    mb={4}
+                    backgroundImage={'/img/services/index.jpg'}
+                />
+                <Text pb={6} color={'gray.700'}>
+                    The industrial Internet of Things (IIoT) and Industrial Control Systems (ICS) are quickly becoming the backbone of manufacturing. With the adoption of wireless sensors, networks, and cloud services growing rapidly, manufacturers are streamlining production processes to drive efficiency and profitability. At the same time, cybersecurity risks continue to grow for organizations that operate highly sensitive systems like manufacturing plants. So how do you know what you need when it comes to IoT or control systems consulting services? This blog post will answer that question and more. Let&#39;s dive in...
                 </Text>
                 <Heading fontWeight={'semibold'} pb={2} color={'gray.800'} size={'md'}>
-                    {`Decrease Costs`}
+                    What is IoT?
                 </Heading>
-                <Text pb={4} color={'gray.700'}>
-                    {`Selecting a team of experts will significantly reduce trial and error, hiring, onboarding, and training in-house developers that will come at high cost.`}
+                <Text pb={6} color={'gray.700'}>
+                    The Internet of Things (IoT) is an interconnection of different devices including sensors, machines, devices, etc. that share data over the internet. Today&#39;s industrial Internet of Things (IIoT) technologies allow companies to monitor, collect, and analyze data from a range of sensors used in manufacturing, logistics, maintenance, and other operations. These sensors can be installed anywhere from the manufacturing floor to supply chain transportation vehicles. The data collected from these sensors can be relayed over a wired or wireless network and stored in a cloud-based platform. Data from these sensors is used for process optimization and predictive maintenance. IIoT and connected devices can be programmed to send alerts about potential issues such as an impending equipment failure or low inventory levels. This allows businesses to fix problems before they become serious, saving time and money.
                 </Text>
                 <Heading fontWeight={'semibold'} pb={2} color={'gray.800'} size={'md'}>
-                    {`High Scalability`}
+                    How does IIoT benefit operations?
                 </Heading>
-                <Text pb={10} color={'gray.700'}>
-                    {`The ability to upscale and downscale your development team given your specific needs and requirements will guarantee that you only pay for the resources you truly need.`}
-                </Text>
-                <Heading pb={4} color={'gray.800'} size={'lg'}>
-                    {`How to Outsource IT Development in a Safe and Efficient way?`}
-                </Heading>
-                <Heading fontWeight={'semibold'} pb={2} color={'gray.800'} size={'md'}>
-                    {`Test our expertise in practice`}
-                </Heading>
-                <Text pb={4} color={'gray.700'}>
-                    {`You can request a small project or proof of concept (PoC) to get an objective understanding of our competencies.`}
+                <Text pb={6} color={'gray.700'}>
+                    The industrial Internet of Things (IIoT) is revolutionizing how organizations operate. The adoption of IIoT technologies is making it easier for manufacturers to embed operational excellence across their organizations. Here are a few ways IIoT can drive operational excellence: The Industrial Internet of Things (IIoT) is driving operational excellence across industries by enhancing operational visibility and operational control. IIoT technologies enable organizations to collect and analyze data from sensors, machines, and devices. This data is then stored in a cloud-based platform where it can be accessed through a dashboard. This data can be used for process optimization, predictive maintenance, and improving supply chain collaboration.
                 </Text>
                 <Heading fontWeight={'semibold'} pb={2} color={'gray.800'} size={'md'}>
-                    {`Establish a Control on outcomes`}
+                    When you might need control systems consulting services
                 </Heading>
-                <Text pb={1} color={'gray.700'}>
-                    {`Request a service level agreement (SLA) with your IT vendor that establishes the expected timelines, quality requirements, and risk responsibilities.`}
-                </Text>
-                <Text pb={4} color={'gray.700'}>
-                    {`Choose a KPI system that allows you to monitor the health of the project without interrupting with the process.`}
+                <Text pb={6} color={'gray.700'}>
+                    Depending on your current state and the goal of your operation, industrial control systems and/or IIoT consulting services may be necessary. If you operate a manufacturing plant and are looking to improve operational excellence, you may want to consider industrial control systems consulting services. Industries like food and beverage, oil and gas, mining, and others that have a need for highly sensitive operations may require additional security measures. For example, if your company operates a manufacturing or processing plant, you might want to consider industrial control systems to monitor and control production processes. This technology can help you optimize and control your entire production line. Moreover, it can improve collaboration between different departments within your organization. For example, engineers can use industrial control systems to remotely monitor and control equipment, such as HVAC systems, chillers, boilers, and other production line equipment. This can help reduce maintenance costs and downtime while increasing employee efficiency.
                 </Text>
                 <Heading fontWeight={'semibold'} pb={2} color={'gray.800'} size={'md'}>
-                    {`Set communication structures`}
+                    IIoT and SCADA cybersecurity risks
                 </Heading>
-                <Text pb={4} color={'gray.700'}>
-                    {`Choose the communications platforms and formats that will provide clear communication with the development team that outlines every aspect of the project.`}
+                <Text pb={6} color={'gray.700'}>
+                    The industrial Internet of Things (IIoT) and industrial control systems (ICS) are quickly becoming the backbone of manufacturing. With the adoption of wireless sensors, networks, and cloud services growing rapidly, manufacturers are streamlining production processes to drive efficiency and profitability. At the same time, cybersecurity risks continue to grow for organizations that operate highly sensitive systems like manufacturing plants. The potential for cyber attacks is particularly high when systems use supervisory control and data acquisition (SCADA) systems. The risk of a cyber attack is especially high if the system is not properly secured. The control systems used in SCADA systems were designed decades ago and are not designed to protect against modern cyber attacks. These systems are often not connected to the internet, which provides a bit of protection. However, the systems that have been wired to the internet have proved to be extremely vulnerable to cyber attacks.
                 </Text>
                 <Heading fontWeight={'semibold'} pb={2} color={'gray.800'} size={'md'}>
-                    {`Ensure information security`}
+                    Conclusion
                 </Heading>
-                <Text pb={1} color={'gray.700'}>
-                    {`Reach a Non Disclosure Agreement with your vendor to be able to maintain your sensitive information and maintain property rights on your project.`}
+                <Text pb={6} color={'gray.700'}>
+                    The industrial Internet of Things (IIoT) is revolutionizing how organizations operate. The adoption of IIoT technologies is making it easier for manufacturers to embed operational excellence across their organizations. Industrial control systems are one way manufacturers can improve operational excellence. However, the systems used in industrial control systems are not designed to protect against modern cyber attacks.
                 </Text>
-                <Text color={'gray.700'}>
-                    {`Revise your vendor's security measures for storing data. (such as IDS/IPS, DLP, SIEM, and others).`}
-                </Text> */}
-
-
                 <Divider my={12} />
 
                 <Values />

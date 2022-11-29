@@ -2,15 +2,12 @@ import {
   Box,
   Heading,
   Text,
-  useColorModeValue as mode,
   Image,
   GridItem,
-  Container,
   VStack,
   Flex,
   Divider,
   Grid,
-  Center,
   SimpleGrid,
 } from '@chakra-ui/react';
 import { useRouter } from "next/router"
@@ -104,7 +101,7 @@ const IndexAbout = () => {
                   incididunt ut labore et dolore magna aliqua elit consectetur adipiscing.
                 </Text> */}
               </Box>
-              <SimpleGrid
+              {/* <SimpleGrid
                 columns={{ base: 1, sm: 2, md: 3, lg: 5 }}
                 mt="8"
                 spacing={'6'}
@@ -114,7 +111,7 @@ const IndexAbout = () => {
                 <BuiltWith img={'/img/about/logo.png'} />
                 <BuiltWith img={'/img/about/logo.png'} />
                 <BuiltWith img={'/img/about/logo.png'} />
-              </SimpleGrid>
+              </SimpleGrid> */}
               <Divider mt={8} mb={5} />
             </Box>
           </>)

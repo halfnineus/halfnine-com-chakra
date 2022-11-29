@@ -13,10 +13,8 @@ import {
     InputGroup,
     InputLeftElement,
     Textarea,
-    useColorModeValue as mode,
     useToast,
     useDisclosure,
-    HStack,
     Divider,
     Modal,
     ModalOverlay,
@@ -32,7 +30,6 @@ import {
 import { MdCall, MdEmail, MdLocationOn, MdOutlineEmail, MdPhone, } from 'react-icons/md';
 import { BsPerson, BsBuilding } from 'react-icons/bs'
 
-import router from 'next/router'
 import { useState } from "react"
 import { NextSeo } from "next-seo";
 import { useRouter } from "next/router";
@@ -47,7 +44,6 @@ const INDEX = () => {
     const [company, setCompany] = useState('');
     const [phone, setPhone] = useState('');
     const [message, setMessage] = useState('');
-
     const [submitted, setSubmitted] = useState(false)
 
     const toast = useToast({
@@ -107,7 +103,10 @@ const INDEX = () => {
     }
 
 
-
+    const [refECV, setrefECV] = useState('');
+    const [prettierECV, setprettierECV] = useState('');
+    const [ecvReq, setecvReq] = useState('');
+    const [ecvTarget, setecvTarget] = useState('');
     const { locale } = useRouter()
     const { isOpen, onOpen, onClose } = useDisclosure();
     return (
@@ -126,6 +125,32 @@ const INDEX = () => {
                                 }
                             ]}
                         />
+                        <Modal isOpen={isOpen} onClose={onClose}>
+                            <ModalOverlay backdropFilter='blur(1px)' />
+                            <ModalContent>
+                                <ModalHeader>External Application</ModalHeader>
+                                <ModalCloseButton />
+                                <ModalBody>
+                                    <Text fontWeight={'semibold'} mb='1rem'>
+                                        {/* <Lorem count={2} /> */}
+                                        {ecvReq}
+                                        <Link href={refECV} target={ecvTarget}>
+                                            <Button colorScheme={'blue'} variant={'link'} userSelect={'text'} fontWeight={'semibold'} mb='1rem' display={'inline'}>
+                                                {prettierECV}
+                                            </Button>
+                                        </Link>
+                                    </Text>
+                                </ModalBody>
+                                <ModalFooter>
+                                    <Button variant={'ghost'} mr={3} onClick={onClose}>
+                                        Close
+                                    </Button>
+                                    <Link href={refECV} target={ecvTarget}>
+                                        <Button colorScheme={'blue'} variant='outline' rightIcon={<FiExternalLink />}>Open App</Button>
+                                    </Link>
+                                </ModalFooter>
+                            </ModalContent>
+                        </Modal>
                         <Flex
                             w={'full'}
                             h={48}
@@ -255,7 +280,7 @@ const INDEX = () => {
                                         <FormControl id="message">
                                             <FormLabel>Message</FormLabel>
                                             <Textarea
-                                                minH={36}
+                                                minH={{ base: 48, sm: 36, md: 36 }}
                                                 onChange={(e: any) => setMessage(e.target.value)}
                                                 placeholder={'Message'}
                                             />
@@ -283,47 +308,59 @@ const INDEX = () => {
                             </Flex>
 
                             <Center>
-                                <Link href={`mailto:ochoapro@duck.com`}>
-                                    <Button
-                                        onClick={onOpen}
-                                        size="md"
-                                        height="auto"
-                                        width="auto"
-                                        minH={'10'}
-                                        variant="ghost"
-                                        _hover={{ color: 'blue.500', bg: 'blackAlpha.100' }}
-                                        leftIcon={<MdEmail color={'black'} size="20px" />}
-                                    >
-                                        Email Us
-                                    </Button>
-                                </Link>
-                                <Link href={`tel:+13213120362`}>
-                                    <Button
-                                        size="md"
-                                        height="auto"
-                                        width="auto"
-                                        minH={'10'}
-                                        variant="ghost"
-                                        _hover={{ color: 'blue.500', bg: 'blackAlpha.100' }}
-                                        leftIcon={<MdCall color={'black'} size="20px" />}
-                                    >
-                                        Call Us
-                                    </Button>
-                                </Link>
-                                <Link href={'https://duckduckgo.com/?q=Orlando%2C+Florida&iaxm=maps'} target={'_blank'}>
-                                    <Button
-                                        isDisabled
-                                        size="md"
-                                        height="auto"
-                                        width="auto"
-                                        minH={'10'}
-                                        variant="ghost"
-                                        _hover={{ color: 'blue.500', bg: 'blackAlpha.100' }}
-                                        leftIcon={<MdLocationOn color={'black'} size="20px" />}
-                                    >
-                                        Visit Us
-                                    </Button>
-                                </Link>
+                                <Button
+                                    onClick={(e: any) => {
+                                        setrefECV("mailto:ochoapro@duck.com");
+                                        setprettierECV("ochoapro@duck.com");
+                                        setecvReq(`You are about to email us at: `);
+                                        setecvTarget(`_self`);
+                                        onOpen()
+                                    }}
+                                    size="md"
+                                    height="auto"
+                                    width="auto"
+                                    minH={'10'}
+                                    variant="ghost"
+                                    _hover={{ color: 'blue.500', bg: 'blackAlpha.100' }}
+                                    leftIcon={<MdEmail color={'black'} size="20px" />}
+                                >
+                                    Email Us
+                                </Button>
+                                <Button
+                                    onClick={(e: any) => {
+                                        setrefECV("tel:+13213120362");
+                                        setprettierECV("+1 (321) 312-0362");
+                                        setecvReq(`You are about to call us at: `);
+                                        setecvTarget(`_self`);
+                                        onOpen()
+                                    }}
+                                    size="md"
+                                    height="auto"
+                                    width="auto"
+                                    minH={'10'}
+                                    variant="ghost"
+                                    _hover={{ color: 'blue.500', bg: 'blackAlpha.100' }}
+                                    leftIcon={<MdCall color={'black'} size="20px" />}
+                                >
+                                    Call Us
+                                </Button>
+                                <Button
+                                    onClick={(e: any) => {
+                                        setrefECV("https://duckduckgo.com/?q=Orlando%2C+FL&iaxm=maps");
+                                        setprettierECV("duckduckgo.com");
+                                        setecvReq(`You are about to view maps at: `);
+                                        setecvTarget(`_blank`);
+                                        onOpen()
+                                    }} size="md"
+                                    height="auto"
+                                    width="auto"
+                                    minH={'10'}
+                                    variant="ghost"
+                                    _hover={{ color: 'blue.500', bg: 'blackAlpha.100' }}
+                                    leftIcon={<MdLocationOn color={'black'} size="20px" />}
+                                >
+                                    Visit Us
+                                </Button>
                             </Center>
 
                             <Divider mt={5} mb={8} />

@@ -56,13 +56,8 @@
     </url>
     <!-- pages -->
     <url>
-        <loc>https://ochoa.pro/pages/digital-transformation-services-in-orlando-florida</loc>
-        <xhtml:link href="https://ochoa.pro/pages/digital-transformation-services-in-orlando-florida" hreflang="x-default" rel="alternate" />
-        <xhtml:link href="https://ochoa.pro/es/pages/digital-transformation-services-in-orlando-florida" hreflang="es" rel="alternate" />
-    </url>
-    <url>
-        <loc>https://ochoa.pro/pages/iot-outsourcing-services-in-orlando-florida</loc>
-        <xhtml:link href="https://ochoa.pro/pages/iot-outsourcing-services-in-orlando-florida" hreflang="x-default" rel="alternate" />
-        <xhtml:link href="https://ochoa.pro/es/pages/iot-outsourcing-services-in-orlando-florida" hreflang="es" rel="alternate" />
+        <loc>https://ochoa.pro/pages/the-benefits-of-implementing-industrial-iot-and-control-systems</loc>
+        <xhtml:link href="https://ochoa.pro/pages/the-benefits-of-implementing-industrial-iot-and-control-systems" hreflang="x-default" rel="alternate" />
+        <!-- <xhtml:link href="https://ochoa.pro/es/pages/the-benefits-of-implementing-industrial-iot-and-control-systems" hreflang="es" rel="alternate" /> -->
     </url>
 </urlset>

@@ -1,3 +1,5 @@
+// Industrial IoT and Control Systems Automation Development and Consulting services
+
 import React from 'react'
 import { useRouter } from "next/router"
 
@@ -7,7 +9,6 @@ import {
   Heading,
   Stack,
   Text,
-  useColorModeValue as mode,
   Flex,
   Image,
   Container,
@@ -252,7 +253,7 @@ const IndexPage = () => {
                   rounded="3xl"
                   border={'1px'}
                   _hover={{ shadow: 'md', borderColor: 'blue.500', transform: 'scale(1.005)' }}
-                  borderColor={mode('gray.400', 'gray.600')}
+                  borderColor={'gray.400'}
                   // shadow="md"
                   src={'/img/index/diagram.jpg'}
                   alt="Basic IoT Enviroment"
