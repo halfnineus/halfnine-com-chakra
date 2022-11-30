@@ -423,7 +423,7 @@ const NAV_ITEMS: Array<NavItem> = [
                 href: '/industries/manufacturing-and-production',
             },
             {
-                label: 'Security & Protección',
+                label: 'Seguridad & Protección',
                 href: '/industries/security-and-safety',
             },
         ],

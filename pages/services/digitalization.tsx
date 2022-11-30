@@ -83,12 +83,12 @@ const Development = () => {
                 title='Organize Strategic Digital Transformation - Automating all Things | Ochoa'
                 description='Transform your manually controlled systems and environments into digitally automated technology.'
                 canonical="https://ochoa.pro/services/digitalization"
-                languageAlternates={[
-                    {
-                        hrefLang: 'es',
-                        href: 'https://ochoa.pro/es/services/digitalization',
-                    }
-                ]}
+                // languageAlternates={[
+                //     {
+                //         hrefLang: 'es',
+                //         href: 'https://ochoa.pro/es/services/digitalization',
+                //     }
+                // ]}
             />
             <Container maxW={'container.xl'} px={{ base: 4, sm: 4, md: 4, lg: 4, xl: 0 }} pt={{ base: 4, xl: 4 }}>
                 <SimpleGrid

@@ -2,6 +2,9 @@ module.exports = {
   reactStrictMode: true,
   // swcMinify: true,
   // trailingSlash: true,
+  images: {
+    domains: ['picsum.photos'],
+  },
   output: 'standalone',
   i18n: {
     locales: ["en", "es"],

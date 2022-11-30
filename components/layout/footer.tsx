@@ -111,7 +111,7 @@ export const links: LinkGroup[] = [
         title: 'Industrias',
         links: [
             { label: 'Fabricación & Producción', href: '/industries/manufacturing-and-production' },
-            { label: 'Security & Protección', href: '/industries/security-and-safety' },
+            { label: 'Seguridad & Protección', href: '/industries/security-and-safety' },
         ],
     },
     {

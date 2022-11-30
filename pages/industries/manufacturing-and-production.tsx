@@ -22,12 +22,12 @@ const Mnp = () => {
                 title='Manufacturing and Production Industries - Automating all Things | Ochoa'
                 description='Increase your productivity, quality, efficiency, and profit by automating repetitive tasks.'
                 canonical="https://ochoa.pro/industries/manufacturing-and-production"
-                languageAlternates={[
-                    {
-                        hrefLang: 'es',
-                        href: 'https://ochoa.pro/es/industries/manufacturing-and-production',
-                    }
-                ]}
+            // languageAlternates={[
+            //     {
+            //         hrefLang: 'es',
+            //         href: 'https://ochoa.pro/es/industries/manufacturing-and-production',
+            //     }
+            // ]}
             />
 
             <Box maxW={'container.xl'} px={{ base: 4, lg: 4, xl: 0 }} pt={4} mx="auto">
@@ -58,9 +58,7 @@ const Mnp = () => {
                         </Text>
                     </GridItem>
                 </Grid>
-
                 <Divider my={12} />
-
                 <Heading fontWeight={'semibold'} pb={2} color={'gray.800'} size={'md'}>
                     We Have the Manufacturing and Production Development Services that Can Help You Find the Balance of Automation and Human-Added Skills to Maximize Efficiency
                 </Heading>
@@ -76,7 +74,7 @@ const Mnp = () => {
                 <Heading fontWeight={'semibold'} pb={2} color={'gray.800'} size={'md'}>
                     What is Manufacturing Automation?
                 </Heading>
-                <Text pb={6} color={'gray.700'}>
+                <Text pb={10} color={'gray.700'}>
                     Manufacturing automation is the use of computer control and robotics for the production of goods. It is a way to increase production by more efficient use of resources, including reduced labour costs, reduction of defects, and increased consistency in production. Automation has been in use in industries for decades. It has evolved from a state of manual production line operations to computer-controlled systems to include robotics. Manufacturers use automation to manage the complexity of large-scale production while keeping production costs low. Automation can be used to control the operation of machines, to control the sequence of manufacturing operations, and to keep products moving along a production line.
                 </Text>
                 <Heading fontWeight={'semibold'} pb={2} color={'gray.800'} size={'md'}>
@@ -85,7 +83,7 @@ const Mnp = () => {
                 <Text pb={4} color={'gray.700'}>
                     Depending on the particular manufacturing processes in question, there are a variety of ways to achieve automation. Some of the most common types of manufacturing automation include:
                 </Text>
-                <UnorderedList pb={6}>
+                <UnorderedList pb={12} spacing={2}>
                     <ListItem>
                         <Text fontWeight={'semibold'} display={'inline-block'}>
                             Computer-controlled Production Systems:
@@ -125,8 +123,8 @@ const Mnp = () => {
                 <Text pb={4} color={'gray.700'}>
                     Automation can help manufacturers improve their quality and consistency. It&#39;s also suited to high-volume production. Manufacturers will often use automation to help with the following tasks:
                 </Text>
-                <UnorderedList pb={6}>
-                    <ListItem>
+                <UnorderedList pb={12} spacing={2}>
+                                        <ListItem>
                         <Text fontWeight={'semibold'} display={'inline-block'}>
                             Producing Innovative Products:
                         </Text>{" "}
@@ -157,7 +155,7 @@ const Mnp = () => {
                 <Text pb={4} color={'gray.700'}>
                     Manufacturers that use automation can expect to see a number of benefits, including:
                 </Text>
-                <UnorderedList pb={6}>
+                <UnorderedList pb={12} spacing={2}>
                     <ListItem>
                         <Text fontWeight={'semibold'} display={'inline-block'}>
                             Lower Production Costs:
@@ -205,7 +203,7 @@ const Mnp = () => {
                 <Text pb={4} color={'gray.700'}>
                     For the most part, automation has been responsible for the vast majority of manufacturing advancements since the Industrial Revolution. Although some might argue that we&#39;re currently in the midst of a fourth industrial revolution, where artificial intelligence and machine learning are becoming more prominent in the manufacturing world, the use of robots, AI and other forms of automation are still largely confined to repetitive, predictable and rule-based tasks. That said, there are a few examples of production operations where humans remain irreplaceable. These are areas where the creativity and intuition of human workers is key to producing high-quality goods. Here are three examples of manufacturing operations that can&#39;t be fully automated:
                 </Text>
-                <UnorderedList pb={6}>
+                <UnorderedList pb={12} spacing={2}>
                     <ListItem>
                         <Text fontWeight={'semibold'} display={'inline-block'}>
                             Quality Control:

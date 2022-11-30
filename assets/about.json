@@ -16,6 +16,9 @@
                 "i1": "Choose the Best - Our team is built with experience on the world's leading companies and technology.",
                 "i2": "Choose Security - Our team uses the leading technology and meets latest industry standards.",
                 "i3": "Choose You - You will be our sole focus while developing something."
+            },
+            "block3":{
+                "heading": "Read More…"
             }
         },
         {
@@ -34,6 +37,9 @@
                 "i1": "Elige lo mejor - Nuestro equipo está hecho con experiencia en las empresas y tecnologías líder en el mundo.",
                 "i2": "Elige Seguridad - Nuestro equipo utiliza la tecnología moderna y cumple con todos los estándares de seguridad.",
                 "i3": "Elige a ti - Nuestro equipo es nuevo y tú serás nuestro único objetivo mientras desarrollamos algo."
+            },
+            "block3":{
+                "heading": "Leer Más…"
             }
         }
     ]

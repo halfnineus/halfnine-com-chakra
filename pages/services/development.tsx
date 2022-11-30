@@ -81,12 +81,12 @@ const Development = () => {
                 title='Outsource Custom Development Services - Automating all Things | Ochoa'
                 description='Following established methods for development allows us to deliver a valuable strategy for your objectives.'
                 canonical="https://ochoa.pro/services/development"
-                languageAlternates={[
-                    {
-                        hrefLang: 'es',
-                        href: 'https://ochoa.pro/es/services/development',
-                    }
-                ]}
+                // languageAlternates={[
+                //     {
+                //         hrefLang: 'es',
+                //         href: 'https://ochoa.pro/es/services/development',
+                //     }
+                // ]}
             />
             <Container maxW={'container.xl'} px={{ base: 4, sm: 4, md: 4, lg: 4, xl: 0 }} pt={{ base: 4, xl: 4 }}>
 

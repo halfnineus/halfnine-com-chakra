@@ -92,12 +92,12 @@ const Index = () => {
                 title='How we do Things - Automating all Things | Ochoa'
                 description='Find our agile development strategies and ways to find solutions that focus on advancing innovation and driving powerful outcomes.'
                 canonical="https://ochoa.pro/our-approach"
-                languageAlternates={[
-                    {
-                        hrefLang: 'es',
-                        href: 'https://ochoa.pro/es/our-approach',
-                    }
-                ]}
+                // languageAlternates={[
+                //     {
+                //         hrefLang: 'es',
+                //         href: 'https://ochoa.pro/es/our-approach',
+                //     }
+                // ]}
             />
             {/* <Box py={'1rem'} /> */}
             {/* <Container maxW={'container.xl'} px={{ sm: 4, sm: 4, md: 4, lg: 4, xl: 0 }} pt={4}> */}

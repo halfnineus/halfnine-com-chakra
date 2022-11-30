@@ -111,11 +111,11 @@ const INDEX = () => {
     const { isOpen, onOpen, onClose } = useDisclosure();
     return (
         <>
-            {indexdat.data.filter(p => p.locale === locale).map((/* indexData, i*/) => {
+            {indexdat.data.filter(p => p.locale === locale).map((indexData, i) => {
                 return (
                     <>
                         <NextSeo
-                            title={"Contact Us - Automating all Things | Ochoa"}
+                            title={indexData.head.title}
                             description={`Contact Us about developing technology solutions, IT consulting & Digital transformation Related Inquiries.`}
                             canonical="https://ochoa.pro/contact"
                             languageAlternates={[
@@ -169,13 +169,13 @@ const INDEX = () => {
                                         fontWeight={700}
                                         fontSize={{ base: '3xl', md: '4xl' }}
                                     >
-                                        Interested? We want to hear from you!
+                                        {indexData.block1.heading}
                                     </Heading>
                                     <Text
                                         color={'gray.100'}
                                         fontSize={{ base: 'xl', md: '2xl' }}
                                     >
-                                        Take the first step and reach out to us today.
+                                        {indexData.block1.text}
                                     </Text>
                                 </Stack>
                             </VStack>
@@ -183,10 +183,10 @@ const INDEX = () => {
                         <Container pt={'5'} maxW={'container.lg'}>
 
                             <Heading pl={4} fontSize={{ base: '2xl', md: '3xl' }}>
-                                Lets build something awesome together.
+                                {indexData.block2.heading}
                             </Heading>
                             <Text pl={4} fontSize={{ base: 'md', md: 'lg' }}>
-                                Develop technology solutions, IT consulting & Digital transformation services.
+                                {indexData.block2.text}
                             </Text>
 
                             <Divider mt={5} mb={5} />
@@ -200,7 +200,7 @@ const INDEX = () => {
                                 boxShadow={'md'}
                             >
                                 <Heading pb={2} fontSize={{ base: '2xl', md: '3xl' }}>
-                                    Contact Us
+                                    {indexData.form.heading}
                                 </Heading>
                                 <form action={'submit'} onSubmit={handleSubmit}>
                                     <VStack spacing={5}>
@@ -215,7 +215,7 @@ const INDEX = () => {
                                         >
 
                                             <FormControl isRequired>
-                                                <FormLabel>Name</FormLabel>
+                                                <FormLabel>{indexData.form.name}</FormLabel>
                                                 <InputGroup>
                                                     <InputLeftElement pointerEvents="none">
                                                         <BsPerson color="gray.800" />
@@ -230,7 +230,7 @@ const INDEX = () => {
                                                 </InputGroup>
                                             </FormControl>
                                             <FormControl isRequired id="mail">
-                                                <FormLabel>Email</FormLabel>
+                                                <FormLabel>{indexData.form.email}</FormLabel>
                                                 <InputGroup>
                                                     <InputLeftElement pointerEvents="none">
                                                         <MdOutlineEmail color="gray.800" />
@@ -247,7 +247,7 @@ const INDEX = () => {
                                             {/* </HStack> */}
                                             {/* <HStack spacing={5} minW={'full'}> */}
                                             <FormControl id="company">
-                                                <FormLabel>Company Name</FormLabel>
+                                                <FormLabel>{indexData.form.companyname}</FormLabel>
                                                 <InputGroup>
                                                     <InputLeftElement pointerEvents="none">
                                                         <BsBuilding color="gray.800" />
@@ -261,7 +261,7 @@ const INDEX = () => {
                                                 </InputGroup>
                                             </FormControl>
                                             <FormControl id="phone">
-                                                <FormLabel>Phone Number</FormLabel>
+                                                <FormLabel>{indexData.form.number}</FormLabel>
                                                 <InputGroup>
                                                     <InputLeftElement pointerEvents="none">
                                                         <MdPhone color="gray.800" />
@@ -278,11 +278,11 @@ const INDEX = () => {
                                         </SimpleGrid>
                                         {/* </HStack> */}
                                         <FormControl id="message">
-                                            <FormLabel>Message</FormLabel>
+                                        <FormLabel>{indexData.form.message}</FormLabel>
                                             <Textarea
                                                 minH={{ base: 48, sm: 36, md: 36 }}
                                                 onChange={(e: any) => setMessage(e.target.value)}
-                                                placeholder={'Message'}
+                                                placeholder={indexData.form.message}
                                             />
                                         </FormControl>
                                         <FormControl>
@@ -294,7 +294,7 @@ const INDEX = () => {
                                                 _hover={{}}
                                                 onClick={(e: any) => { handleSubmit(e); }}
                                             >
-                                                Send Message
+                                                {indexData.form.submit}
                                             </Button>
                                         </FormControl>
                                     </VStack>

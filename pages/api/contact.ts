@@ -15,7 +15,7 @@ export default async function contactMail(req: any, res: any) {
   // })
 
   if (req.method !== "POST") {
-    res.status(405).send(`Hi, I'd say nice try... but it wasn't`); // Incorrect request method
+    res.status(405).send(`Hi, I'd say nice try… but it wasn't`); // Incorrect request method
     return
   }
 

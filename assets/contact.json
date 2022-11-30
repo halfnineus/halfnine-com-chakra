@@ -3,15 +3,49 @@
         {
             "locale": "en",
             "head": {
-                "title": "changeme",
-                "description": "changeme"
+                "title": "Contact Us - Automating all Things | Ochoa",
+                "description": "Contact Us about developing technology solutions, IT consulting & Digital transformation Related Inquiries."
+            },
+            "block1": {
+                "heading": "Interested? We want to hear from you!",
+                "text": "Take the first step and reach out to us today."
+            },
+            "block2": {
+                "heading": "Let's build something awesome together.",
+                "text": "Develop technology solutions, IT consulting & Digital transformation services."
+            },
+            "form": {
+                "heading": "Contact form",
+                "name": "Name",
+                "email": "Email",
+                "companyname": "Company Name",
+                "number": "Phone Number",
+                "message": "Message",
+                "submit": "Send Message"
             }
         },
         {
             "locale": "es",
             "head": {
-                "title": "changeme",
-                "description": "changeme"
+                "title": "Contáctenos - Automatizando todas las cosas | Ochoa",
+                "description": "Contáctenos sobre el desarrollo de soluciones tecnológicas, consultoría de TI y consultas relacionadas con la transformación digital."
+            },
+            "block1": {
+                "heading": "¿Interesado? ¡Queremos escuchar de ti!",
+                "text": "Da el primer paso y contáctanos hoy."
+            },
+            "block2": {
+                "heading": "Construyamos algo increíble juntos.",
+                "text": "Desarrolle soluciones tecnológicas, consultoría TI y servicios de transformación digital."
+            },
+            "form": {
+                "heading": "Formulario de contacto",
+                "name": "Nombre",
+                "email": "Correo Electrónico",
+                "companyname": "Nombre de la compañía",
+                "number": "Número telefónico",
+                "message": "Mensaje",
+                "submit": "Enviar mensaje"
             }
         }
     ]

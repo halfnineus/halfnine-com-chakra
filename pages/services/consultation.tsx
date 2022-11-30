@@ -80,12 +80,12 @@ const Development = () => {
                 title='Realize Ideas with Technology Consulting - Automating all Things | Ochoa'
                 description={`Find the leading practices in development, increase your organization's agility to achieve powerful outcomes.`}
                 canonical="https://ochoa.pro/services/digitalization"
-                languageAlternates={[
-                    {
-                        hrefLang: 'es',
-                        href: 'https://ochoa.pro/es/services/digitalization',
-                    }
-                ]}
+                // languageAlternates={[
+                //     {
+                //         hrefLang: 'es',
+                //         href: 'https://ochoa.pro/es/services/digitalization',
+                //     }
+                // ]}
             />
             <Box maxW={'container.xl'} px={{ base: '4', sm: '4', md: '4', lg: '4', xl: 0 }} pt={4} mx="auto">
                 <SimpleGrid
@@ -164,13 +164,13 @@ const Development = () => {
                     backgroundImage={'/img/services/index.jpg'}
                 />
                 <Text pb={6} color={'gray.700'}>
-                    The industrial Internet of Things (IIoT) and Industrial Control Systems (ICS) are quickly becoming the backbone of manufacturing. With the adoption of wireless sensors, networks, and cloud services growing rapidly, manufacturers are streamlining production processes to drive efficiency and profitability. At the same time, cybersecurity risks continue to grow for organizations that operate highly sensitive systems like manufacturing plants. So how do you know what you need when it comes to IoT or control systems consulting services? This blog post will answer that question and more. Let&#39;s dive in...
+                    The industrial Internet of Things (IIoT) and Industrial Control Systems (ICS) are quickly becoming the backbone of manufacturing. With the adoption of wireless sensors, networks, and cloud services growing rapidly, manufacturers are streamlining production processes to drive efficiency and profitability. At the same time, cybersecurity risks continue to grow for organizations that operate highly sensitive systems like manufacturing plants. So how do you know what you need when it comes to IoT or control systems consulting services? This blog post will answer that question and more. Let&#39;s dive in…
                 </Text>
                 <Heading fontWeight={'semibold'} pb={2} color={'gray.800'} size={'md'}>
                     What is IoT?
                 </Heading>
                 <Text pb={6} color={'gray.700'}>
-                    The Internet of Things (IoT) is an interconnection of different devices including sensors, machines, devices, etc. that share data over the internet. Today&#39;s industrial Internet of Things (IIoT) technologies allow companies to monitor, collect, and analyze data from a range of sensors used in manufacturing, logistics, maintenance, and other operations. These sensors can be installed anywhere from the manufacturing floor to supply chain transportation vehicles. The data collected from these sensors can be relayed over a wired or wireless network and stored in a cloud-based platform. Data from these sensors is used for process optimization and predictive maintenance. IIoT and connected devices can be programmed to send alerts about potential issues such as an impending equipment failure or low inventory levels. This allows businesses to fix problems before they become serious, saving time and money.
+                    Internet of Things (IoT) is an interconnection of different devices including sensors, machines, devices, etc. that share data over the internet. Today&#39;s industrial Internet of Things (IIoT) technologies allow companies to monitor, collect, and analyze data from a range of sensors used in manufacturing, logistics, maintenance, and other operations. These sensors can be installed anywhere from the manufacturing floor to supply chain transportation vehicles. The data collected from these sensors can be relayed over a wired or wireless network and stored in a cloud-based platform. Data from these sensors is used for process optimization and predictive maintenance. IIoT and connected devices can be programmed to send alerts about potential issues such as an impending equipment failure or low inventory levels. This allows businesses to fix problems before they become serious, saving time and money.
                 </Text>
                 <Heading fontWeight={'semibold'} pb={2} color={'gray.800'} size={'md'}>
                     How does IIoT benefit operations?

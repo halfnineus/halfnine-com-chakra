@@ -8,12 +8,12 @@ const Privacy = () => {
                 title={"Privacy Policies - Automating all Things | Ochoa"}
                 description={"Read more about our privacy practices, policies how we implement them and why."}
                 canonical="https://ochoa.pro/privacy"
-                languageAlternates={[
-                    {
-                        hrefLang: 'es',
-                        href: 'https://ochoa.pro/es/privacy',
-                    }
-                ]}
+                // languageAlternates={[
+                //     {
+                //         hrefLang: 'es',
+                //         href: 'https://ochoa.pro/es/privacy',
+                //     }
+                // ]}
             />
             <Box px={8} py={6}>
                 What Information Do We Collect on this Website?
