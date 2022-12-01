@@ -78,7 +78,7 @@ const Development = () => {
     return (
         <>
             <NextSeo
-                title='Outsource Custom Development Services - Automating all Things | Ochoa'
+                title='Development Services - Automating all Things | Ochoa'
                 description='Following established methods for development allows us to deliver a valuable strategy for your objectives.'
                 canonical="https://ochoa.pro/services/development"
                 // languageAlternates={[

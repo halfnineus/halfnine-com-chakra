@@ -25,7 +25,7 @@ const App = () => {
                     w={'full'}
                     h={80}
                     my={8}
-                    backgroundImage={'https://picsum.photos/id/693/1300/320'}
+                    backgroundImage={'https://images.pexels.com/photos/263194/pexels-photo-263194.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=320&w=1300'}
                     border={'2px'}
                     rounded={'lg'}
                     overflow={'hidden'}
@@ -37,7 +37,7 @@ const App = () => {
                         </Text>
                         <Spacer />
                         <Link href={'/contact'}>
-                            <Button  rightIcon={<MdOutlineContacts size={20} />}>Talk with Us!</Button>
+                            <Button rightIcon={<MdOutlineContacts size={20} />}>Talk with Us!</Button>
                         </Link>
                     </Box>
                 </Flex>
@@ -77,9 +77,10 @@ const App = () => {
                 <Heading fontWeight={'semibold'} pb={2} color={'gray.800'} size={'md'}>
                     Final Words: Bottom line
                 </Heading>
-                <Text pb={12} color={'gray.700'}>
+                <Text color={'gray.700'}>
                     The Industrial IoT is a growing technology that is transforming the way we do business. It is creating new business opportunities and unlocking the potential of control systems development. Industrial IoT and control systems development are complex, but they can be outsourced to help businesses achieve their goals faster and at lower costs. As a business leader, you should be aware of the benefits of Industrial IoT and how control systems outsourcing can help you achieve those results. Be sure to choose the right providers for your project, and be sure to review their credentials and references before you decide who to work with.
                 </Text>
+                <Box minH={'3rem'} />
             </Box>
         </>
     );

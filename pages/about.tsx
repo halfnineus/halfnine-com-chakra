@@ -174,21 +174,21 @@ const IndexAbout = () => {
                     text={'Internet of Things and Industrial Internet have ushered in a new era of industrial automation that has opened up new business opportunities and unlocked the potential of control system development.'}
                     page={'/pages/the-disruptive-technology-of-iot-and-its-impact-on-the-future'}
                     date={'Nov 28, 2022 · 12min read'}
-                    imgsrc={'https://picsum.photos/600/300?random=1'}
+                    imgsrc={'https://images.pexels.com/photos/2599244/pexels-photo-2599244.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=300&w=600'}
                   />
                   <FeatureBlog
                     title={'Unlocking The Potential of Industrial IoT'}
                     text={'Industrial IIoT is a network of devices that can exchange data through internet. It is an ecosystem where objects such as industrial machines are connected with sensors and software so that they can exchange data by the internet.'}
                     page={'/pages/the-benefits-of-implementing-industrial-iot-and-control-systems'}
                     date={'Nov 29, 2022 · 12min read'}
-                    imgsrc={'https://picsum.photos/600/300?random=2'}
+                    imgsrc={'https://images.pexels.com/photos/263194/pexels-photo-263194.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=300&w=600'}
                   />
                   <FeatureBlog
                     title={'Achieve the best IIoT and ICS results'}
                     text={'From predictive maintenance and asset tracking to automated process control and real-time data analytics, these technologies provide powerful tools for manufacturers to increase productivity.'}
                     page={'/pages/how-to-leverage-industrial-iot-and-control-systems-for-the-best-results'}
                     date={'Nov 30, 2022 · 12min read'}
-                    imgsrc={'https://picsum.photos/600/300?random=3'}
+                    imgsrc={'https://images.pexels.com/photos/256262/pexels-photo-256262.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=300&w=600'}
                   />
                   {/* </Grid> */}
                 </SimpleGrid>

@@ -77,7 +77,7 @@ const Development = () => {
     return (
         <>
             <NextSeo
-                title='Realize Ideas with Technology Consulting - Automating all Things | Ochoa'
+                title='Technology Consulting - Automating all Things | Ochoa'
                 description={`Find the leading practices in development, increase your organization's agility to achieve powerful outcomes.`}
                 canonical="https://ochoa.pro/services/digitalization"
                 // languageAlternates={[

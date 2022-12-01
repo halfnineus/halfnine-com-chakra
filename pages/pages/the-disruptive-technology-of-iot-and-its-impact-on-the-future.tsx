@@ -25,7 +25,7 @@ const App = () => {
                     w={'full'}
                     h={80}
                     my={8}
-                    backgroundImage={'https://picsum.photos/id/693/1300/320'}
+                    backgroundImage={'https://images.pexels.com/photos/2599244/pexels-photo-2599244.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=320&w=1300'}
                     border={'2px'}
                     rounded={'lg'}
                     // shadow={'md'}
@@ -72,9 +72,10 @@ const App = () => {
                 <Heading fontWeight={'semibold'} pb={2} color={'gray.800'} size={'md'}>
                     Conclusion
                 </Heading>
-                <Text pb={12} color={'gray.700'}>
+                <Text color={'gray.700'}>
                     Internet of Things has been around for a few years now, but it is poised to go mainstream in the near future, thanks to the advent of 5G cellular technology. IoT is considered a disruptive technology because it has the potential to change the way businesses operate.
                 </Text>
+                <Box minH={'3rem'} />
             </Box>
         </>
     );

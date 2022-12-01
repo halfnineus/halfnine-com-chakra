@@ -3,7 +3,7 @@ module.exports = {
   // swcMinify: true,
   // trailingSlash: true,
   images: {
-    domains: ['picsum.photos'],
+    domains: ['images.pexels.com'],
   },
   output: 'standalone',
   i18n: {

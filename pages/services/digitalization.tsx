@@ -80,7 +80,7 @@ const Development = () => {
     return (
         <>
             <NextSeo
-                title='Organize Strategic Digital Transformation - Automating all Things | Ochoa'
+                title='Digital Transformation - Automating all Things | Ochoa'
                 description='Transform your manually controlled systems and environments into digitally automated technology.'
                 canonical="https://ochoa.pro/services/digitalization"
                 // languageAlternates={[

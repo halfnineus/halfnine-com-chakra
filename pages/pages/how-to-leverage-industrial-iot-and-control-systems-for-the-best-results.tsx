@@ -25,7 +25,7 @@ const App = () => {
                     w={'full'}
                     h={80}
                     my={8}
-                    backgroundImage={'https://picsum.photos/id/693/1300/320'}
+                    backgroundImage={'https://images.pexels.com/photos/256262/pexels-photo-256262.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=320&w=1300'}
                     border={'2px'}
                     rounded={'lg'}
                     // shadow={'md'}
@@ -274,7 +274,7 @@ const App = () => {
                 <Heading fontWeight={'semibold'} pb={2} color={'gray.800'} size={'md'}>
                     Best Practices for Implementing IIoT and Control Systems
                 </Heading>
-                <UnorderedList pb={12}>
+                <UnorderedList>
                     <ListItem>
                         <Text fontWeight={'semibold'} display={'inline-block'}>
                             Industrial network design:
@@ -287,11 +287,12 @@ const App = () => {
                         <Text fontWeight={'semibold'} display={'inline-block'}>
                             Industrial sensor selection:
                         </Text>{" "}
-                        <Text pb={4} color={'gray.700'} display={'inline'}>
+                        <Text color={'gray.700'} display={'inline'}>
                             It’s important to consider the type of data you need, the environment you’ll be using the sensor in, and the accuracy you require. Once you have a better idea of what you need, you can begin narrowing down your choices to the best sensor for the job. With the right industrial sensor selection, you can ensure that your application is running optimally and safely.
                         </Text>
                     </ListItem>
                 </UnorderedList>
+                <Box minH={'3rem'} />
             </Box>
         </>
     );
