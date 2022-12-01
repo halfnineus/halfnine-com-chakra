@@ -191,7 +191,6 @@ const DesktopSubNav = ({ label, href, subLabel }: NavItem) => {
             <Stack
                 bg={mode("gray.50", 'gray.900')}
                 role={'group'}
-                //?? display={'block'}
                 p={2}
                 rounded={'md'}
                 _hover={{ bg: mode('gray.50', 'blue.900') }}

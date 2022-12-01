@@ -20,6 +20,11 @@ module.exports = {
         permanent: true,
       },
       {
+        source: '/pages/blog',
+        destination: '/',
+        permanent: true,
+      },
+      {
         source: '/submit',
         destination: '/contact',
         permanent: true,

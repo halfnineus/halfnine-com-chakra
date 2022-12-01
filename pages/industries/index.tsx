@@ -23,7 +23,6 @@ import { IoShieldCheckmarkOutline } from "react-icons/io5";
 import { MdOutlinePrecisionManufacturing } from "react-icons/md";
 
 // #url https://incorporated.zone/type-of-industries/
-// ??Energy and Logistics  
 
 const Feature = (props: any) => {
     return (

@@ -3,19 +3,15 @@ import { NextSeo } from "next-seo";
 import Link from "next/link";
 import { MdOutlineContacts } from 'react-icons/md'
 
+// ??
+
 const App = () => {
     return (
         <>
             <NextSeo
                 title={"Exploring the Key Differences Between Internet of Things and Industrial Internet of Things"}
                 description={"In this article, we'll explore the key differences between IoT and IIoT, and how these differences impact the way we use them."}
-                canonical="https://ochoa.pro/pages/blog/what-are-they-key-differences-between-iiot-and-iot"
-            //   languageAlternates={[
-            //     {
-            //       hrefLang: 'es',
-            //       href: 'https://ochoa.pro/es',
-            //     }
-            //   ]}
+                canonical="https://ochoa.pro/pages/blog/key-differences-between-iiot-and-iot"
             />
             <Box maxW={'container.xl'} px={{ base: '4', sm: '4', md: '4', lg: '4', xl: '0' }} py={6} mx="auto">
                 <Heading color={'gray.800'} size={'lg'}>

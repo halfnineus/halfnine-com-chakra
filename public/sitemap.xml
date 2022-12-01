@@ -3,80 +3,109 @@
     xmlns:xhtml="http://www.w3.org/1999/xhtml">
     <url>
         <loc>https://ochoa.pro</loc>
+        <!-- <lastmod>2022-12-01T17:09:22+00:00</lastmod> -->
+        <!-- <priority>1.00</priority> -->
         <xhtml:link href="https://ochoa.pro" hreflang="x-default" rel="alternate" />
+        <xhtml:link href="https://ochoa.pro" hreflang="en" rel="alternate" />
         <xhtml:link href="https://ochoa.pro/es" hreflang="es" rel="alternate" />
     </url>
     <url>
         <loc>https://ochoa.pro/about</loc>
         <xhtml:link href="https://ochoa.pro/about" hreflang="x-default" rel="alternate" />
+        <xhtml:link href="https://ochoa.pro/about" hreflang="en" rel="alternate" />
         <xhtml:link href="https://ochoa.pro/es/about" hreflang="es" rel="alternate" />
     </url>
     <!-- services -->
     <url>
         <loc>https://ochoa.pro/services</loc>
         <xhtml:link href="https://ochoa.pro/services" hreflang="x-default" rel="alternate" />
+        <xhtml:link href="https://ochoa.pro/services" hreflang="en" rel="alternate" />
         <xhtml:link href="https://ochoa.pro/es/services" hreflang="es" rel="alternate" />
     </url>
     <url>
         <loc>https://ochoa.pro/services/development</loc>
         <xhtml:link href="https://ochoa.pro/services/development" hreflang="x-default" rel="alternate" />
+        <xhtml:link href="https://ochoa.pro/services/development" hreflang="en" rel="alternate" />
         <xhtml:link href="https://ochoa.pro/es/services/development" hreflang="es" rel="alternate" />
     </url>
     <url>
         <loc>https://ochoa.pro/services/digitalization</loc>
         <xhtml:link href="https://ochoa.pro/services/digitalization" hreflang="x-default" rel="alternate" />
+        <xhtml:link href="https://ochoa.pro/services/digitalization" hreflang="en" rel="alternate" />
         <xhtml:link href="https://ochoa.pro/es/services/digitalization" hreflang="es" rel="alternate" />
     </url>
     <url>
         <loc>https://ochoa.pro/services/consultation</loc>
         <xhtml:link href="https://ochoa.pro/services/consultation" hreflang="x-default" rel="alternate" />
+        <xhtml:link href="https://ochoa.pro/services/consultation" hreflang="en" rel="alternate" />
         <xhtml:link href="https://ochoa.pro/es/services/consultation" hreflang="es" rel="alternate" />
     </url>
     <!-- industries -->
     <url>
         <loc>https://ochoa.pro/industries</loc>
         <xhtml:link href="https://ochoa.pro/industries" hreflang="x-default" rel="alternate" />
+        <xhtml:link href="https://ochoa.pro/industries" hreflang="en" rel="alternate" />
         <xhtml:link href="https://ochoa.pro/es/industries" hreflang="es" rel="alternate" />
     </url>
     <url>
         <loc>https://ochoa.pro/industries/manufacturing-and-production</loc>
         <xhtml:link href="https://ochoa.pro/industries/manufacturing-and-production" hreflang="x-default" rel="alternate" />
+        <xhtml:link href="https://ochoa.pro/industries/manufacturing-and-production" hreflang="en" rel="alternate" />
         <xhtml:link href="https://ochoa.pro/es/industries/manufacturing-and-production" hreflang="es" rel="alternate" />
     </url>
     <url>
         <loc>https://ochoa.pro/industries/security-and-safety</loc>
         <xhtml:link href="https://ochoa.pro/industries/security-and-safety" hreflang="x-default" rel="alternate" />
+        <xhtml:link href="https://ochoa.pro/industries/security-and-safety" hreflang="en" rel="alternate" />
         <xhtml:link href="https://ochoa.pro/es/industries/security-and-safety" hreflang="es" rel="alternate" />
     </url>
     <!-- our-approach -->
     <url>
         <loc>https://ochoa.pro/our-approach</loc>
         <xhtml:link href="https://ochoa.pro/our-approach" hreflang="x-default" rel="alternate" />
+        <xhtml:link href="https://ochoa.pro/our-approach" hreflang="en" rel="alternate" />
         <xhtml:link href="https://ochoa.pro/es/our-approach" hreflang="es" rel="alternate" />
     </url>
-    <!-- pages -->
+    <!-- pages ( The 3 in about ) -->
     <url>
         <loc>https://ochoa.pro/pages/the-benefits-of-implementing-industrial-iot-and-control-systems</loc>
         <xhtml:link href="https://ochoa.pro/pages/the-benefits-of-implementing-industrial-iot-and-control-systems" hreflang="x-default" rel="alternate" />
+        <xhtml:link href="https://ochoa.pro/pages/the-benefits-of-implementing-industrial-iot-and-control-systems" hreflang="en" rel="alternate" />
     </url>
     <url>
         <loc>https://ochoa.pro/pages/the-disruptive-technology-of-iot-and-its-impact-on-the-future</loc>
         <xhtml:link href="https://ochoa.pro/pages/the-disruptive-technology-of-iot-and-its-impact-on-the-future" hreflang="x-default" rel="alternate" />
+        <xhtml:link href="https://ochoa.pro/pages/the-disruptive-technology-of-iot-and-its-impact-on-the-future" hreflang="en" rel="alternate" />
     </url>
     <url>
         <loc>https://ochoa.pro/pages/how-to-leverage-industrial-iot-and-control-systems-for-the-best-results</loc>
         <xhtml:link href="https://ochoa.pro/pages/how-to-leverage-industrial-iot-and-control-systems-for-the-best-results" hreflang="x-default" rel="alternate" />
+        <xhtml:link href="https://ochoa.pro/pages/how-to-leverage-industrial-iot-and-control-systems-for-the-best-results" hreflang="en" rel="alternate" />
+    </url>
+    <!-- blog -->
+    <url>
+        <loc>https://ochoa.pro/pages/blog/key-differences-between-iiot-and-iot</loc>
+        <xhtml:link href="https://ochoa.pro/pages/blog/key-differences-between-iiot-and-iot" hreflang="x-default" rel="alternate" />
+        <xhtml:link href="https://ochoa.pro/pages/blog/key-differences-between-iiot-and-iot" hreflang="en" rel="alternate" />
     </url>
     <url>
-        <loc>https://ochoa.pro/pages/blog/what-are-they-key-differences-between-iiot-and-iot</loc>
-        <xhtml:link href="https://ochoa.pro/pages/blog/what-are-they-key-differences-between-iiot-and-iot" hreflang="x-default" rel="alternate" />
+        <loc>https://ochoa.pro/pages/blog/industrial-iot-the-pillar-of-smart-manufacturing</loc>
+        <xhtml:link href="https://ochoa.pro/pages/blog/industrial-iot-the-pillar-of-smart-manufacturing" hreflang="x-default" rel="alternate" />
+        <xhtml:link href="https://ochoa.pro/pages/blog/industrial-iot-the-pillar-of-smart-manufacturing" hreflang="en" rel="alternate" />
     </url>
     <url>
-        <loc>https://ochoa.pro/pages/blog/industrial-iot-the-pillar-of-smart-manufacturing-and-how-its-changing-the-industry</loc>
-        <xhtml:link href="https://ochoa.pro/pages/blog/industrial-iot-the-pillar-of-smart-manufacturing-and-how-its-changing-the-industry" hreflang="x-default" rel="alternate" />
+        <loc>https://ochoa.pro/pages/blog/ics/industrial-control-systems-cybersecurity-training-act</loc>
+        <xhtml:link href="https://ochoa.pro/pages/blog/ics/industrial-control-systems-cybersecurity-training-act" hreflang="x-default" rel="alternate" />
+        <xhtml:link href="https://ochoa.pro/pages/blog/ics/industrial-control-systems-cybersecurity-training-act" hreflang="en" rel="alternate" />
     </url>
     <url>
-        <loc>https://ochoa.pro/pages/blog/industrial-control-systems-cybersecurity-training-act</loc>
-        <xhtml:link href="https://ochoa.pro/pages/blog/industrial-control-systems-cybersecurity-training-act" hreflang="x-default" rel="alternate" />
+        <loc>https://ochoa.pro/pages/blog/ics/industrial-control-systems-cybersecurity-initiative</loc>
+        <xhtml:link href="https://ochoa.pro/pages/blog/ics/industrial-control-systems-cybersecurity-initiative" hreflang="x-default" rel="alternate" />
+        <xhtml:link href="https://ochoa.pro/pages/blog/ics/industrial-control-systems-cybersecurity-initiative" hreflang="en" rel="alternate" />
+    </url>
+    <url>
+        <loc>https://ochoa.pro/pages/blog/ics/industrial-control-systems-joint-working-group</loc>
+        <xhtml:link href="https://ochoa.pro/pages/blog/ics/industrial-control-systems-joint-working-group" hreflang="x-default" rel="alternate" />
+        <xhtml:link href="https://ochoa.pro/pages/blog/ics/industrial-control-systems-joint-working-group" hreflang="en" rel="alternate" />
     </url>
 </urlset>
