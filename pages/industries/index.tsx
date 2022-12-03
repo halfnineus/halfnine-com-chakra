@@ -95,11 +95,11 @@ const Index = () => {
                         <NextSeo
                             title=' Industrial IoT and Control Systems | How can my Industry benefit?'
                             description={`If you're not sure if you need Industrial IoT and Control Systems, we can help you figure that out. We create automated Industrial Internet of Things and Control Systems that comply or for compliance of any regulations.`}
-                            canonical="https://ochoa.pro/industries"
+                            canonical="https://www.zedir.com/industries"
                             // languageAlternates={[
                             //     {
                             //         hrefLang: 'es',
-                            //         href: 'https://ochoa.pro/es/industries',
+                            //         href: 'https://www.zedir.com/es/industries',
                             //     }
                             // ]}
                         />

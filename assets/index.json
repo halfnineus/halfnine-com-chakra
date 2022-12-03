@@ -3,14 +3,14 @@
     {
       "locale": "en",
       "head": {
-        "title": "Ochoa - Industrial IoT and Control Systems Automation Development and Consulting Services",
-        "description": "Looking for a reliable Industrial IoT and Control Systems company? Look no further! Agile Automation has you covered with the best development and consulting services around."
+        "title": "Zedir - Industrial IoT and Control Systems Automation Development and Consulting Services",
+        "description": "Looking for a reliable Industrial IoT and Control Systems company? Look no further! Industrial Automation has you covered with the best development and consulting services around."
       },
       "block1": {
-        "h1_1": "Agile Automation",
+        "h1_1": "Industrial Automation",
         "h1_2": "Development & Consulting",
         "txt": "Improve your products and services with a digital transformation powered by",
-        "txturl": "Agile Automation",
+        "txturl": "Industrial Automation",
         "button": "Let's Talk!"
       },
       "block2": {
@@ -48,14 +48,14 @@
     {
       "locale": "es",
       "head": {
-        "title": "Ochoa - Servicios de Consultoría y Desarrollo de Automatización de Sistemas de Control e IoT Industrial",
-        "description": "¿Está buscando una empresa confiable de sistemas de control e IoT industrial? ¡No busque más! Agile Automation lo tiene cubierto con los mejores servicios de desarrollo y consultoría."
+        "title": "Zedir - Servicios de Consultoría y Desarrollo de Automatización de Sistemas de Control e IoT Industrial",
+        "description": "¿Está buscando una empresa confiable de sistemas de control e IoT industrial? ¡No busque más! Industrial Automation lo tiene cubierto con los mejores servicios de desarrollo y consultoría."
       },
       "block1": {
-        "h1_1": "Automatización Ágil",
+        "h1_1": "Industrial Industrial",
         "h1_2": "Desarrollo & Fabricación",
         "txt": "Mejore sus productos y servicios con una transformación digital impulsada por",
-        "txturl": "Automatización Ágil",
+        "txturl": "Industrial Industrial",
         "button": "Hablar con un nosotros"
       },
       "block2": {

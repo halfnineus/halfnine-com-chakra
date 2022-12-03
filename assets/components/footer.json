@@ -3,7 +3,7 @@
         {
             "locale": "en",
             "components": {
-                "copyright": "© 2022 Ochoa - All rights reserved",
+                "copyright": "© 2022 Zedir - All rights reserved",
                 "i1": "About",
                 "i2": "Privacy Policy",
                 "i3": "Sitemap"
@@ -22,7 +22,7 @@
         {
             "locale": "es",
             "components": {
-                "copyright": "© 2022 Ochoa - Todos los derechos reservados",
+                "copyright": "© 2022 Zedir - Todos los derechos reservados",
                 "i1": "Acerca De",
                 "i2": "Política de privacidad",
                 "i3": "Mapa del sitio"

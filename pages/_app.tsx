@@ -14,7 +14,7 @@ import Script from 'next/script'
 export default function MyApp({ Component, pageProps }: AppProps) {
   // Analytics
   useEffect(() => {
-    hotjar.initialize(3220400, 6)
+    hotjar.initialize(3273893, 6)
   }, [])
   useEffect(() => {
     const handleRouteChange = (url: any) => {
@@ -33,7 +33,7 @@ export default function MyApp({ Component, pageProps }: AppProps) {
         <Head>
           <script
             async
-            src='https://www.googletagmanager.com/gtag/js?id=G-3ZJNEBJRM6'
+            src='https://www.googletagmanager.com/gtag/js?id=G-VEH18EPWTN'
           />
           <script
             dangerouslySetInnerHTML={{
@@ -41,12 +41,12 @@ export default function MyApp({ Component, pageProps }: AppProps) {
               window.dataLayer = window.dataLayer || [];
               function gtag(){dataLayer.push(arguments);}
               gtag('js', new Date());
-              gtag('config', 'G-3ZJNEBJRM6');`
+              gtag('config', 'G-VEH18EPWTN');`
             }}
           />
           <meta charSet='utf-8' />
           <meta name='viewport' content='initial-scale=1.0, height=device-height, width=device-width' />
-          <meta name="author" content="ochoa.pro" />
+          <meta name="author" content="zedir.com" />
           {/* <meta name="robots" content="index,follow,noarchive,noimageindex" /> */}
         </Head>
         <Component {...pageProps} />

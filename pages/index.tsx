@@ -154,11 +154,11 @@ const IndexPage = () => {
             <NextSeo
               title={indexData.head.title}
               description={indexData.head.description}
-              canonical="https://ochoa.pro"
+              canonical="https://www.zedir.com"
               languageAlternates={[
                 {
                   hrefLang: 'es',
-                  href: 'https://ochoa.pro/es',
+                  href: 'https://www.zedir.com/es',
                 }
               ]}
             />
@@ -243,7 +243,7 @@ const IndexPage = () => {
             <Center px={{ base: '4', lg: '0' }}>
               {/* <Container px={{ base: '6', lg: '0' }} maxW={'container.md'}> */}
               {/* Remove window.open on mobile using breakpoint values */}
-              <Link href={'https://ochoa.pro/img/index/Basic-IoT-Enviroment.png'} target={'_blank'}>
+              <Link href={'https://www.zedir.com/img/index/Basic-IoT-Enviroment.png'} target={'_blank'}>
                 <Image
                   // mx="auto"
                   // px={{ base: '4', lg: '0' }}

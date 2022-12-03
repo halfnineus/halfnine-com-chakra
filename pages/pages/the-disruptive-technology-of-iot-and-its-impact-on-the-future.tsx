@@ -9,11 +9,11 @@ const App = () => {
             <NextSeo
                 title={"The Disruptive Technology of IoT and Its Impact on the Future"}
                 description={"Internet of Things (IoT) is a network of devices that can exchange data through the internet. It is an ecosystem where everyday objects such as home appliances, car, and industrial machines are connected with sensors"}
-                canonical="https://ochoa.pro/pages/the-disruptive-technology-of-iot-and-its-impact-on-the-future"
+                canonical="https://www.zedir.com/pages/the-disruptive-technology-of-iot-and-its-impact-on-the-future"
             //   languageAlternates={[
             //     {
             //       hrefLang: 'es',
-            //       href: 'https://ochoa.pro/es',
+            //       href: 'https://www.zedir.com/es',
             //     }
             //   ]}
             />

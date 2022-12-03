@@ -9,7 +9,7 @@ const App = () => {
             <NextSeo
                 title={"The Industrial Control Systems Cybersecurity Training Act: What You Need To Know"}
                 description={"This article provides an overview of the Industrial Control Systems Cybersecurity Training Act and explains what it means for businesses and individuals responsible for managing and operating ICS."}
-                canonical="https://ochoa.pro/pages/blog/ics/industrial-control-systems-cybersecurity-training-act"
+                canonical="https://www.zedir.com/pages/blog/ics/industrial-control-systems-cybersecurity-training-act"
             />
             <Box maxW={'container.xl'} px={{ base: '4', sm: '4', md: '4', lg: '4', xl: '0' }} py={6} mx="auto">
                 <Heading color={'gray.800'} size={'lg'}>

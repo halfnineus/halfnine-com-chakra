@@ -9,7 +9,7 @@ const App = () => {
             <NextSeo
                 title={"The Industrial Control Systems Cybersecurity Initiative: A Guide for Businesses"}
                 description={"In this guide, you will learn about the Industrial Control Systems Cybersecurity Initiative (ICS-CERT) and how it can help protect your business's data and systems."}
-                canonical="https://ochoa.pro/pages/blog/ics/industrial-control-systems-cybersecurity-initiative"
+                canonical="https://www.zedir.com/pages/blog/ics/industrial-control-systems-cybersecurity-initiative"
             />
             <Box maxW={'container.xl'} px={{ base: '4', sm: '4', md: '4', lg: '4', xl: '0' }} py={6} mx="auto">
                 <Heading color={'gray.800'} size={'lg'}>
@@ -37,7 +37,7 @@ const App = () => {
                     </Box>
                 </Flex>
                 <Text pb={12} color={'gray.700'}>
-                    In today's digital world, it is imperative for businesses to stay informed and up-to-date on the latest security measures to protect their valuable data and systems. The Industrial Control Systems Cybersecurity Initiative (ICS-CERT) is a critical tool designed to help businesses stay secure and protect their systems from cyber threats. This guide will provide an overview of the ICS-CERT, its purpose and objectives, and how businesses can leverage its resources to stay secure. By understanding the ICS-CERT, businesses can ensure their industrial control systems are secure and protected from malicious actors.
+                    In today&#39;s digital world, it is imperative for businesses to stay informed and up-to-date on the latest security measures to protect their valuable data and systems. The Industrial Control Systems Cybersecurity Initiative (ICS-CERT) is a critical tool designed to help businesses stay secure and protect their systems from cyber threats. This guide will provide an overview of the ICS-CERT, its purpose and objectives, and how businesses can leverage its resources to stay secure. By understanding the ICS-CERT, businesses can ensure their industrial control systems are secure and protected from malicious actors.
                 </Text>
                 <Heading fontWeight={'semibold'} pb={2} color={'gray.800'} size={'md'}>
                     What is the Industrial Control Systems Cybersecurity Initiative (ICS-CERT)?

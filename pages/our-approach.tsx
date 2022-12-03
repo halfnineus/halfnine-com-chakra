@@ -9,7 +9,7 @@ import { Values } from "../components";
 
 {/* <Text>
     smd on: Agile Software Development<br />
-    Agile Automation<br />
+    Industrial Automation<br />
     Agile Architecture<br />
     Agile Application<br />
     Agile Business Intelligence<br />
@@ -89,13 +89,13 @@ const Index = () => {
     return (
         <>
             <NextSeo
-                title='How we do Things - Automating all Things | Ochoa'
+                title='How we do Things - Automating all Things | Zedir'
                 description='Find our agile development strategies and ways to find solutions that focus on advancing innovation and driving powerful outcomes.'
-                canonical="https://ochoa.pro/our-approach"
+                canonical="https://www.zedir.com/our-approach"
                 // languageAlternates={[
                 //     {
                 //         hrefLang: 'es',
-                //         href: 'https://ochoa.pro/es/our-approach',
+                //         href: 'https://www.zedir.com/es/our-approach',
                 //     }
                 // ]}
             />

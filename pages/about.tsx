@@ -114,13 +114,13 @@ const IndexAbout = () => {
         return (
           <>
             <NextSeo
-              title='About Us | Development Services & Consulting - Automating all Things | Ochoa'
+              title='About Us | Development Services & Consulting - Automating all Things | Zedir'
               description="Our team is built with leading experience on some of the world's leading companies technologies."
-              canonical="https://ochoa.pro/about"
+              canonical="https://www.zedir.com/about"
               languageAlternates={[
                 {
                   hrefLang: 'es',
-                  href: 'https://ochoa.pro/es/about',
+                  href: 'https://www.zedir.com/es/about',
                 }
               ]}
             />

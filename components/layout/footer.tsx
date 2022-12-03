@@ -210,7 +210,7 @@ export default function SCFooter() {
                                                     outline={0}
                                                     _focus={{ shadow: 'outline' }}
                                                     _active={{ transform: 'translateY(2px)' }}
-                                                    rightIcon={<RiMailSendLine  size={14}/>}
+                                                    rightIcon={<RiMailSendLine size={14} />}
                                                 >
                                                     {footerData.lvlup.b2}
                                                     {/* <Box as={SiMinutemailer} ml="2" fontSize="md" /> */}
@@ -221,7 +221,7 @@ export default function SCFooter() {
                                 </Flex>
                             </Container>
                             <HStack pt={2} spacing={"3.5"} justify="center">
-                                <Link href={'https://www.facebook.com/ochoaiot'} target={'_blank'}>
+                                <Link href={'https://www.facebook.com/zedircom'} target={'_blank'}>
                                     <Icon
                                         transform={'scale(0.95)'}
                                         _hover={{ color: "#4267B2", transform: 'scale(1)' }}
@@ -230,7 +230,7 @@ export default function SCFooter() {
                                         as={FaFacebookSquare}
                                     />
                                 </Link>
-                                <Link href={'https://twitter.com/ochoa_pro'} target={'_blank'}>
+                                <Link href={'https://twitter.com/zedircom'} target={'_blank'}>
                                     <Icon
                                         transform={'scale(0.95)'}
                                         _hover={{ color: "#1DA1F2", transform: 'scale(1)' }}
@@ -239,7 +239,7 @@ export default function SCFooter() {
                                         as={FaTwitterSquare}
                                     />
                                 </Link>
-                                <Link href={'https://www.youtube.com/@ochoapro'} target={'_blank'}>
+                                <Link href={'https://www.youtube.com/@zedircom'} target={'_blank'}>
                                     <Icon
                                         transform={'scale(0.95)'}
                                         _hover={{ color: "#FF0000", transform: 'scale(1)' }}
@@ -248,7 +248,7 @@ export default function SCFooter() {
                                         as={FaYoutubeSquare}
                                     />
                                 </Link>
-                                <Link href={'https://www.linkedin.com/company/ochoapro/'} target={'_blank'}>
+                                <Link href={'https://www.linkedin.com/company/zedir/'} target={'_blank'}>
                                     <Icon
                                         transform={'scale(0.95)'}
                                         _hover={{ color: "#0077B5", transform: 'scale(1)' }}
@@ -276,7 +276,16 @@ export default function SCFooter() {
                                     ml: 5,
                                 }}>
                                 <Link href={'/'}>
-                                    <Image userSelect={'none'} alt={'Ochoa'} pointerEvents={'none'} width={'auto'} height={'10'} src={'/img/smlog.png'} />
+                                    {/* <Image userSelect={'none'} alt={'Zedir'} pointerEvents={'none'} width={'auto'} height={'10'} src={'/img/smlog.png'} /> */}
+                                    <Icon fontSize={120} my={-10} viewBox='0 0 324 107'>
+                                        <path d="M102 82h37v-7h-26l26-38v-6h-34v8h23l-26 38Zm67 1c6 0 11-2 15-4l-3-6c-3 2-7 3-11 3-7 0-12-4-12-11h27v-4c0-11-6-19-17-19-10 0-19 8-19 21 0 12 9 20 20 20Zm-11-24c1-7 5-10 10-10 6 0 9 4 9 10Zm52 24c4 0 9-2 12-6l1 5h7V26h-9v21c-3-3-6-5-10-5-9 0-17 8-17 21s6 20 16 20Zm2-7c-6 0-9-5-9-14 0-8 5-13 10-13 2 0 5 1 8 4v18c-3 3-6 5-9 5Zm48-40c4 0 6-2 6-6s-2-7-6-7-7 3-7 7 3 6 7 6Zm-18 46h37v-7h-14V43h-23v7h14v25h-14Zm50 0h9V60c4-7 9-10 14-10l7 1 2-7c-2-2-4-2-7-2-7 0-13 4-17 10v-9h-8Z" />
+                                        <g clip-rule="evenodd">
+                                            <path d="m1 11 18 96-6-64 32-2-1-11L57 1 45 20z" />
+                                            <path d="m51 59 6-58-10 43-21 1 2 22-9 40 13-43z" />
+                                            <path d="m55 73 1-12-18 4v13l-19 29 24-30zm3-5 16-6 2-13-17 2zm7-20 12-1 2-12h-9L57 1l9 34z" />
+                                            <path d="m82 34 1-11-10-2L57 1l16 24-1 8z" />
+                                        </g>
+                                    </Icon>
                                 </Link>
                             </Flex>
                             <Container px={{ base: '4', xl: '0' }} maxW={'container.xl'}>
@@ -295,7 +304,7 @@ export default function SCFooter() {
                                                 {footerData.components.i2}
                                             </Text>
                                         </Link>
-                                        <Link href={'https://ochoa.pro/sitemap.xml'} target={'_blank'}>
+                                        <Link href={'https://www.zedir.com/sitemap.xml'} target={'_blank'}>
                                             <Text _hover={{ color: "#1DA1F2" }}>
                                                 {footerData.components.i3}
                                             </Text>

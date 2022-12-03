@@ -19,13 +19,13 @@ const Mnp = () => {
     return (
         <>
             <NextSeo
-                title='Manufacturing and Production Industries - Automating all Things | Ochoa'
+                title='Manufacturing and Production Industries - Automating all Things | Zedir'
                 description='Increase your productivity, quality, efficiency, and profit by automating repetitive tasks.'
-                canonical="https://ochoa.pro/industries/manufacturing-and-production"
+                canonical="https://www.zedir.com/industries/manufacturing-and-production"
             // languageAlternates={[
             //     {
             //         hrefLang: 'es',
-            //         href: 'https://ochoa.pro/es/industries/manufacturing-and-production',
+            //         href: 'https://www.zedir.com/es/industries/manufacturing-and-production',
             //     }
             // ]}
             />

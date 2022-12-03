@@ -16,14 +16,14 @@ const Sns = () => {
     return (
         <>
             <NextSeo
-                title='Security and Safety Industries  - Automating all Things | Ochoa'
+                title='Security and Safety Industries  - Automating all Things | Zedir'
                 description='Create and implement solutions to automate safety chores and tasks and focus on products & services.'
                 // description='Create and implement solutions to ease safety chores and tasks and focus on products & services.'
-                canonical="https://ochoa.pro/industries/security-and-safety"
+                canonical="https://www.zedir.com/industries/security-and-safety"
                 // languageAlternates={[
                 //     {
                 //         hrefLang: 'es',
-                //         href: 'https://ochoa.pro/es/industries/security-and-safety',
+                //         href: 'https://www.zedir.com/es/industries/security-and-safety',
                 //     }
                 // ]}
             />

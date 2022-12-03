@@ -66,4 +66,49 @@
         <xhtml:link href="https://www.zedir.com/industries/security-and-safety" hreflang="en" rel="alternate" />
         <xhtml:link href="https://www.zedir.com/es/industries/security-and-safety" hreflang="es" rel="alternate" />
     </url>
+      <url>
+        <loc>https://www.zedir.com/pages/the-benefits-of-implementing-industrial-iot-and-control-systems</loc>
+        <xhtml:link href="https://www.zedir.com/pages/the-benefits-of-implementing-industrial-iot-and-control-systems" hreflang="x-default" rel="alternate" />
+        <xhtml:link href="https://www.zedir.com/pages/the-benefits-of-implementing-industrial-iot-and-control-systems" hreflang="en" rel="alternate" />
+    </url>
+    <url>
+        <loc>https://www.zedir.com/pages/the-disruptive-technology-of-iot-and-its-impact-on-the-future</loc>
+        <xhtml:link href="https://www.zedir.com/pages/the-disruptive-technology-of-iot-and-its-impact-on-the-future" hreflang="x-default" rel="alternate" />
+        <xhtml:link href="https://www.zedir.com/pages/the-disruptive-technology-of-iot-and-its-impact-on-the-future" hreflang="en" rel="alternate" />
+    </url>
+    <url>
+        <loc>https://www.zedir.com/pages/how-to-leverage-industrial-iot-and-control-systems-for-the-best-results</loc>
+        <xhtml:link href="https://www.zedir.com/pages/how-to-leverage-industrial-iot-and-control-systems-for-the-best-results" hreflang="x-default" rel="alternate" />
+        <xhtml:link href="https://www.zedir.com/pages/how-to-leverage-industrial-iot-and-control-systems-for-the-best-results" hreflang="en" rel="alternate" />
+    </url>
+    <url>
+        <loc>https://www.zedir.com/pages/blog/key-differences-between-iiot-and-iot</loc>
+        <xhtml:link href="https://www.zedir.com/pages/blog/key-differences-between-iiot-and-iot" hreflang="x-default" rel="alternate" />
+        <xhtml:link href="https://www.zedir.com/pages/blog/key-differences-between-iiot-and-iot" hreflang="en" rel="alternate" />
+    </url>
+    <url>
+        <loc>https://www.zedir.com/pages/blog/industrial-iot-the-pillar-of-smart-manufacturing</loc>
+        <xhtml:link href="https://www.zedir.com/pages/blog/industrial-iot-the-pillar-of-smart-manufacturing" hreflang="x-default" rel="alternate" />
+        <xhtml:link href="https://www.zedir.com/pages/blog/industrial-iot-the-pillar-of-smart-manufacturing" hreflang="en" rel="alternate" />
+    </url>
+    <url>
+        <loc>https://www.zedir.com/pages/blog/ics/industrial-control-systems-cybersecurity-training-act</loc>
+        <xhtml:link href="https://www.zedir.com/pages/blog/ics/industrial-control-systems-cybersecurity-training-act" hreflang="x-default" rel="alternate" />
+        <xhtml:link href="https://www.zedir.com/pages/blog/ics/industrial-control-systems-cybersecurity-training-act" hreflang="en" rel="alternate" />
+    </url>
+    <url>
+        <loc>https://www.zedir.com/pages/blog/ics/industrial-control-systems-cybersecurity-initiative</loc>
+        <xhtml:link href="https://www.zedir.com/pages/blog/ics/industrial-control-systems-cybersecurity-initiative" hreflang="x-default" rel="alternate" />
+        <xhtml:link href="https://www.zedir.com/pages/blog/ics/industrial-control-systems-cybersecurity-initiative" hreflang="en" rel="alternate" />
+    </url>
+    <url>
+        <loc>https://www.zedir.com/pages/blog/ics/industrial-control-systems-joint-working-group</loc>
+        <xhtml:link href="https://www.zedir.com/pages/blog/ics/industrial-control-systems-joint-working-group" hreflang="x-default" rel="alternate" />
+        <xhtml:link href="https://www.zedir.com/pages/blog/ics/industrial-control-systems-joint-working-group" hreflang="en" rel="alternate" />
+    </url>
+    <url>
+        <loc>https://www.zedir.com/pages/blog/iiot/industrial-internet-of-things-challenges-opportunities-and-directions</loc>
+        <xhtml:link href="https://www.zedir.com/pages/blog/iiot/industrial-internet-of-things-challenges-opportunities-and-directions" hreflang="x-default" rel="alternate" />
+        <xhtml:link href="https://www.zedir.com/pages/blog/iiot/industrial-internet-of-things-challenges-opportunities-and-directions" hreflang="en" rel="alternate" />
+    </url> 
 </urlset>

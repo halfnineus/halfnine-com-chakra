@@ -9,7 +9,7 @@ const App = () => {
             <NextSeo
                 title={"The Benefits of Joining the Industrial Control Systems Joint Working Groups"}
                 description={"Learn about the benefits of joining the Industrial Control Systems Joint Working Groups, a unique organization that brings stakeholders from the public and private sectors together to collaborate on cybersecurity issues surrounding industrial control systems (ICS)."}
-                canonical="https://ochoa.pro/pages/blog/ics/industrial-control-systems-joint-working-group"
+                canonical="https://www.zedir.com/pages/blog/ics/industrial-control-systems-joint-working-group"
             />
             <Box maxW={'container.xl'} px={{ base: '4', sm: '4', md: '4', lg: '4', xl: '0' }} py={6} mx="auto">
                 <Heading color={'gray.800'} size={'lg'}>

@@ -11,7 +11,7 @@ const App = () => {
             <NextSeo
                 title={"Industrial IoT: The Pillar of Smart Manufacturing and How It's Changing the Industry"}
                 description={"Discover the four pillars of Industrial IoT and how it's changing the manufacturing industry for the better."}
-                canonical="https://ochoa.pro/pages/blog/industrial-iot-the-pillar-of-smart-manufacturing"
+                canonical="https://www.zedir.com/pages/blog/industrial-iot-the-pillar-of-smart-manufacturing"
             />
             <Box maxW={'container.xl'} px={{ base: '4', sm: '4', md: '4', lg: '4', xl: '0' }} py={6} mx="auto">
                 <Heading color={'gray.800'} size={'lg'}>

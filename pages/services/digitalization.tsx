@@ -80,13 +80,13 @@ const Development = () => {
     return (
         <>
             <NextSeo
-                title='Digital Transformation - Automating all Things | Ochoa'
+                title='Digital Transformation - Automating all Things | Zedir'
                 description='Transform your manually controlled systems and environments into digitally automated technology.'
-                canonical="https://ochoa.pro/services/digitalization"
+                canonical="https://www.zedir.com/services/digitalization"
                 // languageAlternates={[
                 //     {
                 //         hrefLang: 'es',
-                //         href: 'https://ochoa.pro/es/services/digitalization',
+                //         href: 'https://www.zedir.com/es/services/digitalization',
                 //     }
                 // ]}
             />

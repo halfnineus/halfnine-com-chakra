@@ -78,13 +78,13 @@ const Development = () => {
     return (
         <>
             <NextSeo
-                title='Development Services - Automating all Things | Ochoa'
+                title='Development Services - Automating all Things | Zedir'
                 description='Following established methods for development allows us to deliver a valuable strategy for your objectives.'
-                canonical="https://ochoa.pro/services/development"
+                canonical="https://www.zedir.com/services/development"
                 // languageAlternates={[
                 //     {
                 //         hrefLang: 'es',
-                //         href: 'https://ochoa.pro/es/services/development',
+                //         href: 'https://www.zedir.com/es/services/development',
                 //     }
                 // ]}
             />

@@ -9,11 +9,11 @@ const App = () => {
             <NextSeo
                 title={"How to Unlock the True Potential of Industrial IoT and Control Systems"}
                 description={"Learn how to unlock the true potential of Industrial IoT and Control Systems through outsourcing development."}
-                canonical="https://ochoa.pro/pages/the-benefits-of-implementing-industrial-iot-and-control-systems"
+                canonical="https://www.zedir.com/pages/the-benefits-of-implementing-industrial-iot-and-control-systems"
             //   languageAlternates={[
             //     {
             //       hrefLang: 'es',
-            //       href: 'https://ochoa.pro/es',
+            //       href: 'https://www.zedir.com/es',
             //     }
             //   ]}
             />

@@ -9,7 +9,7 @@ const App = () => {
             <NextSeo
                 title={""}
                 description={""}
-                canonical="https://ochoa.pro/pages/blog/"
+                canonical="https://www.zedir.com/pages/blog/"
             />
             <Box maxW={'container.xl'} px={{ base: '4', sm: '4', md: '4', lg: '4', xl: '0' }} py={6} mx="auto">
                 <Heading color={'gray.800'} size={'lg'}>

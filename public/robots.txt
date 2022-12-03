@@ -237,4 +237,4 @@ Allow: /
 #Directories
 Disallow: /contact
 
-Sitemap: https://ochoa.pro/sitemap.xml
+Sitemap: https://www.zedir.com/sitemap.xml

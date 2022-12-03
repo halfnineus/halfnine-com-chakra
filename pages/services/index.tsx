@@ -93,11 +93,11 @@ const Index = () => {
                         <NextSeo
                             title='Our Services - Custom Development, Digital Transformation, Project Consultation.'
                             description='Reduce your costs by outsourcing and free your time to focus on big picture strategies.'
-                            canonical="https://ochoa.pro/services"
+                            canonical="https://www.zedir.com/services"
                             // languageAlternates={[
                             //     {
                             //         hrefLang: 'es',
-                            //         href: 'https://ochoa.pro/es/services',
+                            //         href: 'https://www.zedir.com/es/services',
                             //     }
                             // ]}
                         />

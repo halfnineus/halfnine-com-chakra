@@ -9,11 +9,11 @@ const App = () => {
             <NextSeo
                 title={"Industrial IoT and Control Systems: How to Improve Efficiency and Maximize Performance"}
                 description={"In this article, we explore how industrial operations can leverage Industrial IoT (IIoT) and control systems to improve efficiency and maximize performance."}
-                canonical="https://ochoa.pro/pages/how-to-leverage-industrial-iot-and-control-systems-for-the-best-results"
+                canonical="https://www.zedir.com/pages/how-to-leverage-industrial-iot-and-control-systems-for-the-best-results"
             //   languageAlternates={[
             //     {
             //       hrefLang: 'es',
-            //       href: 'https://ochoa.pro/es',
+            //       href: 'https://www.zedir.com/es',
             //     }
             //   ]}
             />

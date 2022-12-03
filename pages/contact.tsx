@@ -117,11 +117,11 @@ const INDEX = () => {
                         <NextSeo
                             title={indexData.head.title}
                             description={`Contact Us about developing technology solutions, IT consulting & Digital transformation Related Inquiries.`}
-                            canonical="https://ochoa.pro/contact"
+                            canonical="https://www.zedir.com/contact"
                             languageAlternates={[
                                 {
                                     hrefLang: 'es',
-                                    href: 'https://ochoa.pro/es/contact',
+                                    href: 'https://www.zedir.com/es/contact',
                                 }
                             ]}
                         />
@@ -256,7 +256,7 @@ const INDEX = () => {
                                                         type={'company'}
                                                         name={"company"}
                                                         onChange={(e: any) => setCompany(e.target.value)}
-                                                        placeholder={'Ochoa'}
+                                                        placeholder={'Zedir'}
                                                     />
                                                 </InputGroup>
                                             </FormControl>
@@ -310,8 +310,8 @@ const INDEX = () => {
                             <Center>
                                 <Button
                                     onClick={(e: any) => {
-                                        setrefECV("mailto:ochoapro@duck.com");
-                                        setprettierECV("ochoapro@duck.com");
+                                        setrefECV("mailto:zedir@duck.com");
+                                        setprettierECV("zedir@duck.com");
                                         setecvReq(`You are about to email us at: `);
                                         setecvTarget(`_self`);
                                         onOpen()
