@@ -38,4 +38,16 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 
-/pages/dev/
+
+# dev
+/data.json
+/yarn.lock
+.idea
+.vscode
+
+# sitemap
+# /public/robots.txt
+# /public/sitemap.xml
+
+
+/pages/dev

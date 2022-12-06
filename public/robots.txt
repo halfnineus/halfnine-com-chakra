@@ -238,3 +238,4 @@ Allow: /
 Disallow: /contact
 
 Sitemap: https://www.zedir.com/sitemap.xml
+Sitemap: https://blog.zedir.com/sitemap.xml
