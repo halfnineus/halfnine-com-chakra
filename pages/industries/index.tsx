@@ -21,6 +21,7 @@ import indexdat from "../../assets/services/index.json"
 import { useRouter } from "next/router";
 import { IoShieldCheckmarkOutline } from "react-icons/io5";
 import { MdOutlinePrecisionManufacturing } from "react-icons/md";
+import { Contactimg } from "../../components";
 
 // #url https://incorporated.zone/type-of-industries/
 
@@ -96,14 +97,15 @@ const Index = () => {
                             title=' Industrial IoT and Control Systems | How can my Industry benefit?'
                             description={`If you're not sure if you need Industrial IoT and Control Systems, we can help you figure that out. We create automated Industrial Internet of Things and Control Systems that comply or for compliance of any regulations.`}
                             canonical="https://www.zedir.com/industries"
-                            // languageAlternates={[
-                            //     {
-                            //         hrefLang: 'es',
-                            //         href: 'https://www.zedir.com/es/industries',
-                            //     }
-                            // ]}
+                        // languageAlternates={[
+                        //     {
+                        //         hrefLang: 'es',
+                        //         href: 'https://www.zedir.com/es/industries',
+                        //     }
+                        // ]}
                         />
-                        <Box maxW={'container.xl'} px={{ base: '4', sm: '4', md: '4', lg: '4', xl: 0 }} pt={6} mx="auto">
+                        <Box maxW={'container.xl'} px={{ base: '4', sm: '4', md: '4', lg: '4', xl: 0 }} mx="auto">
+                            <Contactimg label={'Proven Replicable and Scalable Solutions'} pexelsrc={'236709/pexels-photo-236709.jpeg'} />
                             <SimpleGrid
                                 columns={{ base: 1 }}
                                 spacing={4}
@@ -140,12 +142,6 @@ const Index = () => {
                             <Text pb={12} color={'gray.700'}>
                                 Manufacturing has come a long way, but with new challenges. Industrial IoT is poised to revolutionize the manufacturing industry once again by introducing automated industrial processes. Even though this is an area of rapid growth and development, many manufacturers are still struggling to implement effective IoT solutions. There are multiple challenges that manufacturers need to address in order to take full advantage of IoT: regulations, security, and costs. This article explains how you can leverage automation for increased visibility and efficiency in your industrial environment. We explore the benefits of an automated IoT solution for your production facility, as well as practical steps you can take right now to realize the benefits of an automated manufacturing environment sooner rather than later. Read on to learn more.
                             </Text>
-                            <Flex
-                                w={'full'}
-                                h={48}
-                                mb={12}
-                                backgroundImage={'/img/industries/index.jpg'}
-                            />
                             <Heading fontWeight={'semibold'} pb={2} color={'gray.800'} size={'md'}>
                                 What is an Automated Industrial Internet of Things (AIoT) environment?
                             </Heading>

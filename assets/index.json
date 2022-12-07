@@ -3,20 +3,20 @@
     {
       "locale": "en",
       "head": {
-        "title": "Zedir - Industrial IoT and Control Systems Automation Development and Consulting Services",
-        "description": "Looking for a reliable Industrial IoT and Control Systems company? Look no further! Industrial Automation has you covered with the best development and consulting services around."
+        "title": "Zedir - Industrial Automation Development and Consulting",
+        "description": "Discover automation solutions for your industry through Internet of Things (IoT) and Control Systems."
       },
       "block1": {
         "h1_1": "Industrial Automation",
         "h1_2": "Development & Consulting",
-        "txt": "Improve your products and services with a digital transformation powered by",
-        "txturl": "Industrial Automation",
+        "txt_1": "Discover automation solutions for your industry through Internet of Things and Control Systems.",
         "button": "Let's Talk!"
       },
       "block2": {
-        "h2_1": "All your needs with",
-        "h2_2": "customized technology",
-        "txt_1": "Find the right team for your Industrial IoT & Control Systems and turn your ideas into a reality.",
+        "h2_1": "Transform your systems with",
+        "h2_2": "tailored technology",
+        "txt": "Improve your products and services with a the power of a digital transformation through",
+        "txturl": "Industrial Automation",
         "button": "Email us"
       },
       "block3": {
@@ -48,20 +48,20 @@
     {
       "locale": "es",
       "head": {
-        "title": "Zedir - Servicios de Consultoría y Desarrollo de Automatización de Sistemas de Control e IoT Industrial",
-        "description": "¿Está buscando una empresa confiable de sistemas de control e IoT industrial? ¡No busque más! Industrial Automation lo tiene cubierto con los mejores servicios de desarrollo y consultoría."
+        "title": "Zedir - Consultoría y Desarrollo de Automatización Industrial",
+        "description": "Descubra soluciones de automatización para su industria a través de Internet de las Cosas (IoT) y Sistemas de Control."
       },
       "block1": {
-        "h1_1": "Industrial Industrial",
-        "h1_2": "Desarrollo & Fabricación",
-        "txt": "Mejore sus productos y servicios con una transformación digital impulsada por",
-        "txturl": "Industrial Industrial",
+        "h1_1": "Automatización industrial",
+        "h1_2": "Desarrollo & Consultoría",
+        "txt_1": "Descubre soluciones de automatización para tu industria a través de Internet de las Cosas y Sistemas de Control.",
         "button": "Hablar con un nosotros"
       },
       "block2": {
-        "h2_1": "Todas tus necesidades con",
+        "h2_1": "Transforme sus sistemas con",
         "h2_2": "tecnología customizada",
-        "txt_1": "Encuentre el equipo adecuado para hacer realidad sus ideas de IoT e IIoT.",
+        "txt": "Mejore sus productos y servicios con una transformación digital impulsada por",
+        "txturl": "Industrial Industrial",
         "button": "Envíanos un correo electrónico"
       },
       "block3": {

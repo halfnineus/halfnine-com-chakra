@@ -163,34 +163,31 @@ const IndexAbout = () => {
               <Divider my={16} />
               <Heading pb={6} textAlign={'center'}>{aboutData.block3.heading}</Heading>
               <Center>
-                {/* <Grid templateColumns={{ base: 'repeat(1, 1fr)', sm: 'repeat(1, 1fr)', md: 'repeat(1, 1fr)', lg: 'repeat(3, 1fr)', xl: 'repeat(3, 1fr)', }} gap={6}> */}
                 <SimpleGrid
                   columns={{ base: 1, sm: 1, md: 1, lg: 3 }}
-                  // mt="16"
                   spacing={'6'}
                 >
                   <FeatureBlog
-                    title={'Why Is IoT Considered A Disruptive Technology'}
-                    text={'Internet of Things and Industrial Internet have ushered in a new era of industrial automation that has opened up new business opportunities and unlocked the potential of control system development.'}
-                    page={'/pages/the-disruptive-technology-of-iot-and-its-impact-on-the-future'}
-                    date={'Nov 28, 2022 · 12min read'}
-                    imgsrc={'https://images.pexels.com/photos/2599244/pexels-photo-2599244.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=300&w=600'}
+                    title={'Industrial Control Systems Cybersecurity Training Act'}
+                    text={'This is an overview of the Industrial Control Systems Cybersecurity Training Act and explains the meaning for businesses and individuals responsible for managing and operating ICS.'}
+                    page={'https://blog.zedir.com/posts/industrial-control-systems-cybersecurity-training-act'}
+                    date={'December 6, 2022 · 12min read'}
+                    imgsrc={'https://images.pexels.com/photos/39584/censorship-limitations-freedom-of-expression-restricted-39584.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=300&w=600'}
                   />
                   <FeatureBlog
-                    title={'Unlocking The Potential of Industrial IoT'}
-                    text={'Industrial IIoT is a network of devices that can exchange data through internet. It is an ecosystem where objects such as industrial machines are connected with sensors and software so that they can exchange data by the internet.'}
-                    page={'/pages/the-benefits-of-implementing-industrial-iot-and-control-systems'}
-                    date={'Nov 29, 2022 · 12min read'}
-                    imgsrc={'https://images.pexels.com/photos/263194/pexels-photo-263194.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=300&w=600'}
+                    title={'Industrial Control Systems Cybersecurity Initiative'}
+                    text={`In this guide, you will learn about the Industrial Control Systems Cybersecurity Initiative (ICS-CERT) and how it can help protect your business's data and systems.`}
+                    page={'https://blog.zedir.com/posts/industrial-control-systems-cybersecurity-initiative'}
+                    date={'December 6, 2022 · 12min read'}
+                    imgsrc={'https://images.pexels.com/photos/1990764/pexels-photo-1990764.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=300&w=600'}
                   />
                   <FeatureBlog
-                    title={'Achieve the best IIoT and ICS results'}
-                    text={'From predictive maintenance and asset tracking to automated process control and real-time data analytics, these technologies provide powerful tools for manufacturers to increase productivity.'}
-                    page={'/pages/how-to-leverage-industrial-iot-and-control-systems-for-the-best-results'}
-                    date={'Nov 30, 2022 · 12min read'}
-                    imgsrc={'https://images.pexels.com/photos/256262/pexels-photo-256262.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=300&w=600'}
+                    title={'Industrial Control Systems Joint Working Groups'}
+                    text={'Learn about the benefits of joining the Industrial Control Systems Joint Working Groups, a unique organization that brings stakeholders from the public and private sectors together.'}
+                    page={'https://blog.zedir.com/posts/industrial-control-systems-joint-working-group'}
+                    date={'December 6, 2022 · 12min read'}
+                    imgsrc={'https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=300&w=600'}
                   />
-                  {/* </Grid> */}
                 </SimpleGrid>
               </Center>
 

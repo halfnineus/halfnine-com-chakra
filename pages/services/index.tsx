@@ -13,6 +13,8 @@ import {
     Center,
     ListItem,
     UnorderedList,
+    Divider,
+    Button,
 } from "@chakra-ui/react";
 import { useRouter } from "next/router";
 import { NextSeo } from "next-seo";
@@ -21,65 +23,30 @@ import Link from "next/link";
 import { IoBulbOutline, IoPeopleOutline, IoRocketOutline } from "react-icons/io5";
 
 import indexdat from "../../assets/services/index.json"
+import { Contactimg } from "../../components";
 
 const Feature = (props: any) => {
     return (
-        <Link href={props.refx}>
-            <Box
-                _hover={{ boxShadow: 'md' }}
-                rounded={'xl'}
-                boxShadow={'sm'}
-                p={4}
-                role={'group'}
-                border='1px'
-                borderColor={'gray.100'}
-                transition={'all 0.1s ease-in-out'}
-            >
+        <>
+            <Box>
                 <HStack>
-                    <Box
-                        boxSize={12}
-                        color={'blue.600'}
-                        mb={4}
-                        fill="none"
-                        stroke="currentColor"
-                        aria-hidden="true"
-                        fontSize="3rem"
-                    >
+                    <Box color={'blue.600'} fontSize="3rem">
                         {props.icon}
                     </Box>
-                    <Center>
-                        <Heading
-                            pl={2}
-                            as={'h3'}
-                            mb={3}
-                            fontSize="lg"
-                            lineHeight="shorter"
-                            fontWeight="bold"
-                            _groupHover={{ color: 'blue.600' }}
-                        >
-                            {props.title}
-                        </Heading>
-                    </Center>
-                    <Flex
-                        transition={'all .3s ease'}
-                        transform={{ base: 'translateX(0)', sm: 'translateX(-40px)' }}
-                        opacity={{ base: '100%', sm: 0 }}
-                        _groupHover={{ opacity: '100%', transform: 'translateX(0)' }}
-                        justify={'flex-end'}
-                        align={'center'}
-                        flex={1}>
-                        <Icon color={'blue.600'} mb={2} w={12} h={12} as={ChevronRightIcon} />
-                    </Flex>
+                    <Heading pl={3} as={'h3'} fontSize="xl">
+                        {props.title}
+                    </Heading>
                 </HStack>
-                <Text
-                    as={'p'}
-                    lineHeight="tall"
-                    color="gray.600"
-                >
+                <Text pt={2} color="gray.600">
                     {props.children}
                 </Text>
-            </Box >
-        </Link>
+                <Link href={props.refx}>
+                    <Button mt={4} colorScheme={'blue'}>
+                        Learn More
+                    </Button>
+                </Link>
+            </Box>
+        </>
     );
 };
 
@@ -91,69 +58,91 @@ const Index = () => {
                 return (
                     <>
                         <NextSeo
-                            title='Our Services - Custom Development, Digital Transformation, Project Consultation.'
-                            description='Reduce your costs by outsourcing and free your time to focus on big picture strategies.'
+                            title='Industrial Automation Services with Guaranteed Excellence | Zedir.'
+                            description='The Zedir Company provides Guaranteed Excellence in Industrial Automation Services. With extensive experience in industrial automation, our team of dedicated engineers is ready to replicate proven methods and solutions for your business.'
+                            // The Zedir Company provides Guaranteed Excellence in Industrial Automation Services. With extensive experience in industrial automation, our team of dedicated engineers is ready to replicate proven methods and solutions for your business.
+                            // The Zedir Company provides Industrial Automation Services with Guaranteed Excellence. With extensive experience in industrial sectors, our team of dedicated engineers is ready to replicate proven methods and solutions.
+                            // The Zedir Company provides Industrial Automation Services with guaranteed excellence. We have a team of dedicated engineers with extensive experience in industrial sectors.
                             canonical="https://www.zedir.com/services"
-                            // languageAlternates={[
-                            //     {
-                            //         hrefLang: 'es',
-                            //         href: 'https://www.zedir.com/es/services',
-                            //     }
-                            // ]}
+                            languageAlternates={[
+                                {
+                                    hrefLang: 'es',
+                                    href: 'https://www.zedir.com/es/services',
+                                }
+                            ]}
                         />
 
-                        <Box maxW={'container.xl'} px={{ base: '4', sm: '4', md: '4', lg: '4', xl: '0' }} pt={6} mx="auto">
-                            <SimpleGrid
-                                columns={{ base: 1 }}
-                                spacing={4}
-                                mx="auto"
-                            >
-                                <Feature
-                                    title="Development Services"
-                                    icon={<IoPeopleOutline />}
-                                    refx={'/services/development'}
+                        <Box  maxW={'container.xl'} px={{ base: '4', sm: '4', md: '4', lg: '4', xl: '0' }} mx="auto" my={8}>
+                            <Contactimg label={'Industrial Automation Services | Excellence Guaranteed'} pexelsrc={'9223158/pexels-photo-9223158.jpeg'} />
+                            <Heading color={'gray.800'} as={'h1'} size={'lg'} pt={6} pb={2}>Automating all industries together</Heading>
+                            <Text pb={2} color={'gray.700'}>
+                                Industrial Automation Services from the Zedir Company guarantee excellence. Industrial Automation has the goals of connecting equipment together, developing technology, maximizing production, assuring safety, maximize the use of resources, and assuring quality. Our team of dedicated engineers has extensive experience in these industrial sectors and is ready to replicate proven methods and solutions.
+                            </Text>
+                            <Text pb={8} color={'gray.700'}>
+                                We strive to ensure that our solutions are cost-effective and tailored to the needs of our clients. We understand that each project is unique, so we take the time to understand the specific requirements of each customer. Furthermore, We then develop a solution that is tailored to their needs and guaranteed to provide the highest level of quality and reliability. Our team is available to provide ongoing support and maintenance, so you can have peace of mind knowing that your automation solution will be fully functional and reliable for years to come.
+                            </Text>
+                            <Box>
+                                <Heading pb={4} size={'lg'}>Our Industry Expertise</Heading>
+                                <SimpleGrid
+                                    columns={{ base: 1 }}
+                                    spacing={4}
+                                    mx="auto"
                                 >
-                                    We assemble and lead teams with the skills and tools needed for building the products and tools that power your business.
-                                </Feature>
-                                <Feature
-                                    title="Digital Transformation"
-                                    icon={<IoRocketOutline />}
-                                    refx={'/services/digitalization'}
-                                >
-                                    Take a digital approach while selling your products & services, managing your organization and much more!
-                                </Feature>
-                                <Feature
-                                    title="Project Consultation"
-                                    icon={<IoBulbOutline />}
-                                    refx={'/services/consultation'}
-                                >
-                                    Find the right options for your project from discovery to deployment of your idea, satisfying your Requirements and your Customer&apos;s Needs.
-                                </Feature>
-                            </SimpleGrid>
-                            <Box py={'2rem'} />
-                            <Heading pb={2}>Automating all Things Together</Heading>
-                            <Text pb={12} color={'gray.700'}>
+                                    <Feature
+                                        title="Firmware, Hardware, and Software Development"
+                                        icon={<IoPeopleOutline />}
+                                        refx={'/services/development'}
+                                    >
+                                        Zedir is being built by engineers. We understand the need for transparency, efficiency and more importantly, delivery. We have been focused on putting together a delivery management practice that enables you monitor progress and take decisions based on this information in a way that is fast, transparent, and efficient. We offer the agile industrial automation services to complement and improve your specific systems.
+                                    </Feature>
+                                    <Divider pt={2} />
+                                    <Feature
+                                        title="Industrial Digital Transformation"
+                                        icon={<IoRocketOutline />}
+                                        refx={'/services/digitalization'}
+                                    >
+                                        Improve your current processes and systems with a wide range of technologies, from providing Cloud Computing to process with efficiency changing levels of demand to providing a comprehensive set of data and information. With the goal to help transform your organization ability to maximize efficiency, increase production, and develop new techniques with technology.
+                                        {/* Industrial Digital Transformation Services guarantee excellence in industrial automation. Our team of experts utilizes their knowledge and experience in digital and industrial technologies to deliver solutions that are tailored to the specific needs of each client. Our services focus on helping clients maximize the efficiency and profitability of their operations by working with them to create a unique industrial automation strategy. We take the time to understand the client's specific needs and challenges, and then design a solution that will help them achieve their desired outcomes. Our services include the implementation of advanced technologies like robotics, machine learning, and the Internet of Things. We use the latest technologies to develop custom solutions that will help the client optimize their processes and reduce costs. We also provide ongoing support and maintenance to ensure the client's systems are running smoothly and efficiently. With our Industrial Digital Transformation Services, clients can be assured of excellence in industrial automation. */}
+                                        {/* Industrial Digital Transformation Services from [Company name] provide a comprehensive suite of services to help transform your organization digitally and achieve excellence. Our comprehensive approach to digital transformation includes industrial automation, process optimization, data analysis, and AI-driven decision-making. We can help you develop custom solutions that make your operations more efficient, reliable, and cost-effective. Our goal is to help you achieve your business objectives while meeting all safety and regulatory requirements. With our expertise in industrial automation, process optimization, and data analytics, we can ensure that your organization is well-equipped to handle the challenges of the digital age. We understand that each business is unique and therefore, our services are tailored to meet the specific needs of your organization. Our team of experts will work closely with you to make sure that your digital transformation projects are completed on time and with the highest quality. So, if you're looking for industrial digital transformation services that guarantee excellence, look no further than [Company name]. */}
+                                        {/* Industrial digital transformation services can help your business reach a higher level of success. Through the use of Industrial Automation, these services can help you maximize efficiency, increase production, and develop new products. By using the latest technologies, you can ensure the excellence of your services and meet the demands of the ever-changing manufacturing industry. With industrial digital transformation services, you can maximize your profitability by reducing operational costs and increasing your output. Your team can benefit from improved data accuracy and better communication, enabling them to make better informed decisions and increase the efficiency of their processes. With the help of experienced professionals, you can guarantee the highest level of excellence for your services. Industrial digital transformation services can help you remain competitive in the market and stay ahead of the curve. With their help, you can be sure that you are providing the best services possible and giving your customers a great experience. */}
+                                    </Feature>
+                                    <Divider pt={2} />
+                                    <Feature
+                                        title="Industrial Project Consultation"
+                                        icon={<IoBulbOutline />}
+                                        refx={'/services/consultation'}
+                                    >
+                                        {/* Are you looking for industrial project consultation services with guaranteed excellence? Look no further. Our team of experts offers comprehensive services for industrial automation projects, all tailored to your specific needs. We specialize in consulting on projects related to factory automation, process automation, and data analytics. We provide detailed plans and strategies to ensure your project runs smoothly and successfully. Our experienced professionals use the latest technologies and techniques to guarantee the highest quality results. We also provide ongoing support, so you can always be sure that you're getting the best service possible. We understand the importance of your industrial project and strive to give you the best experience possible. Be sure to take advantage of our industrial project consultation services and get the guaranteed excellence you deserve. */}
+                                        With the very high importance of high-quality industrial automation projects. We offer solutions to help you keep peace of mind on the excellence and quality of your proejcts. From feasibility study, system design review, project management, installation and commissioning, or maintenance. Our experienced team is committed to helping you get the most out of your industrial automation project.
+                                        {/* At Industrial Project Consultation Services, we understand the importance of high-quality industrial automation projects. That's why we offer the best in consultation services, with the goal of guaranteeing excellence. We have years of experience in industrial automation and can work with any project from the simplest to the most complex. We provide a range of services, including feasibility studies, system design, project management, installation and commissioning, and maintenance. Our experienced team is committed to helping you get the most out of your industrial automation project.
+                                        We understand that every project is unique, and our team will work with you to ensure that you have the right solution for your needs. We will provide detailed analysis, advice, and recommendations for your project. Our goal is to help you reduce costs, increase productivity, and maximize efficiency. We also offer ongoing support to ensure that your project is always running as it should.
+                                        At Industrial Project Consultation Services, we stand behind our services with a guarantee of excellence. We are confident that you will be satisfied with the results of your project. */}
+                                        {/* At Industrial Automation Consultants, we provide world-class industrial project consultation services with guaranteed excellence. Our team of experienced professionals is trained in the latest industrial automation technology and has extensive experience in managing complex projects across multiple industries. We have a proven track record of successful project delivery, with a focus on quality, safety and cost-efficiency. Our specialists use the latest tools and techniques to ensure that every project is completed on time and to the highest standards. We also offer comprehensive training for our clients so that they can stay up to date with the latest advancements in industrial automation. Our team is committed to delivering exceptional results each and every time. We guarantee excellence and customer satisfaction, no matter the size or complexity of the project. Contact us today to learn more about how we can help you achieve the best results for your next industrial automation project. */}
+                                    </Feature>
+                                </SimpleGrid>
+                            </Box>
+                            {/* <Text py={12} color={'gray.700'}>
                                 Outsourcing reduces costs by helping you avoid the industry&apos;s most common problems and
                                 freeing your time to focus on big picture strategies.
-                                Improve your consistency and reliability, allow faster delivery and infrastructure changes.
-                                {/* Not having talent in-house or maybe even in the same country presents challenges, We believe that great communication is key to mitigating risk. */}
+                                Improve your consistency and reliability, allow faster delivery and infrastructure changes. */}
+                            {/* Not having talent in-house or maybe even in the same country presents challenges, We believe that great communication is key to mitigating risk. */}
+                            <Heading fontWeight={'semibold'} color={'gray.800'} pt={12} pb={2} size={'md'}>
+                                How Outsourcing Can Help You Avoid Common Industry Problems and Focus on Big Picture Strategies
+                            </Heading>
+                            <Text pb={10} color={'gray.700'}>
+                                Outsourcing is a strategy that many businesses use to help cut costs, drive efficiency and unlock new streams of revenue. It also enables you to focus on the big picture of your business while someone else handles the day-to-day operations. But with so many different types of outsourcing options available, it can be difficult to know which one is right for your company. To help you figure it out, we&#39;ve listed some common problems that companies in the industry sector have and how outsourcing those tasks can relieve some of that stress.
                             </Text>
+                            {/* </Text>
                             <Heading fontWeight={'semibold'} color={'gray.800'} pb={2} size={'md'}>
                                 How Outsourcing Can Help You Avoid Common Industry Problems and Focus on Big Picture Strategies
                             </Heading>
                             <Text pb={10} color={'gray.700'}>
                                 Outsourcing is a strategy that many businesses use to help cut costs, drive efficiency and unlock new streams of revenue. It also enables you to focus on the big picture of your business while someone else handles the day-to-day operations. But with so many different types of outsourcing options available, it can be difficult to know which one is right for your company. To help you figure it out, we&#39;ve listed some common problems that companies in the industry sector have and how outsourcing those tasks can relieve some of that stress.
                             </Text>
-                            <Flex
-                                w={'full'}
-                                h={48}
-                                mb={10}
-                                backgroundImage={'/img/services/index.jpg'}
-                            />
                             <Heading fontWeight={'semibold'} pb={2} color={'gray.800'} size={'md'}>
                                 Common Industry Problems and the Outsourcing Solutions
                             </Heading>
-                            <Text pb={12} color={'gray.700'}>
+                            <Text pb={4} color={'gray.700'}>
                                 There are many issues that industries face over time that can make it difficult to grow and scale. These range from talent gaps to poor project management practices. Here&#39;s a look at the most common issues and how they can be addressed through outsourcing. The skills gap
                             </Text>
                             <UnorderedList pb={12} spacing={2}>
@@ -203,9 +192,8 @@ const Index = () => {
                             </Heading>
                             <Text color={'gray.700'}>
                                 Every industry is different, and every company is different, too. It&#39;s important to carefully consider the needs of your company before choosing whether or not to outsource. Outsourcing can bring a lot of benefits to companies, including access to new technologies, the ability to focus on core business, and access to expert help.
-                            </Text>
+                            </Text> */}
                         </Box>
-                        <Box py={'3rem'} />
                     </>
                 )
             })}

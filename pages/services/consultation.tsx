@@ -96,14 +96,6 @@ const Development = () => {
                 >
                     <Box alignSelf="start">
                         <chakra.h2
-                            color={'blue.500'}
-                            fontWeight="semibold"
-                            textTransform="uppercase"
-                            letterSpacing="wide"
-                        >
-                            Realize
-                        </chakra.h2>
-                        <chakra.h2
                             mb={3}
                             fontSize={{ base: "3xl", md: "4xl" }}
                             fontWeight="extrabold"
@@ -157,12 +149,6 @@ const Development = () => {
                 <Heading fontWeight={'semibold'} pb={2} color={'gray.800'} size={'md'}>
                     The Benefits of Industrial IoT & Control Systems Consulting Services
                 </Heading>
-                <Flex
-                    w={'full'}
-                    h={48}
-                    mb={4}
-                    backgroundImage={'/img/services/index.jpg'}
-                />
                 <Text pb={6} color={'gray.700'}>
                     The industrial Internet of Things (IIoT) and Industrial Control Systems (ICS) are quickly becoming the backbone of manufacturing. With the adoption of wireless sensors, networks, and cloud services growing rapidly, manufacturers are streamlining production processes to drive efficiency and profitability. At the same time, cybersecurity risks continue to grow for organizations that operate highly sensitive systems like manufacturing plants. So how do you know what you need when it comes to IoT or control systems consulting services? This blog post will answer that question and more. Let&#39;s dive in…
                 </Text>

@@ -164,13 +164,13 @@ const IndexPage = () => {
             />
             <Box key={i} as="section" pb={{ base: "none", lg: "12" }} pos="relative" px={{ base: '4', xl: '10' }}>
               <Box maxW={"100%"} mx="auto">
-                <Box maxW={{ lg: 'md', xl: 'xl' }} pt={{ base: '6', lg: '8' }} pb={{ base: '16', lg: '40' }}>
+                <Box maxW={{ lg: 'md', xl: '3xl' }} pt={{ base: '6', lg: '8' }} pb={{ base: '16', lg: '40' }}>
                   <Heading as="h1" size="3xl" lineHeight="1" fontWeight="extrabold" letterSpacing="tight">
                     {indexData.block1.h1_1}{' '}
                     <Box as="mark" color={'blue.600'} bg="transparent">{indexData.block1.h1_2}</Box>
                   </Heading>
-                  <Text mt={4} fontSize="xl" fontWeight="medium" color={'gray.600'}>
-                    {indexData.block2.txt_1}
+                  <Text maxW={{ lg: 'md', xl: '3xl' }} mt={4} fontSize="xl" fontWeight="medium" color={'gray.600'}>
+                    {indexData.block1.txt_1}
                   </Text>
                   {/* <Stack direction={{ base: 'column', sm: 'row' }} spacing="4" mt="8"> */}
                   <Link href={"/contact"}>
@@ -199,7 +199,7 @@ const IndexPage = () => {
             <Box pb={2} px={{ base: '4', xl: '10' }} mx="auto">
               <Box w={{ base: "full", md: 11 / 12, xl: "full", }} mx="auto" textAlign={{ base: "left", md: "center", }}>
                 <Heading
-                  mb={{ base: 4, md: 6 }}
+                  mb={2}
                   fontSize={{ base: "4xl", md: "6xl", }}
                   fontWeight="bold"
                   lineHeight="none"
@@ -208,7 +208,7 @@ const IndexPage = () => {
                   {indexData.block2.h2_1}{" "}
                   <Text
                     bgClip="text"
-                    display={"inline-block"}
+                    display={{base:'inline',md:"inline-block"}}
                     pr={{ md: "none", lg: 1 }}
                     pb={{ base: 2, md: 3, lg: "none" }}
                     // bgGradient={"linear(to-r, green.400, blue.600)"}
@@ -223,7 +223,7 @@ const IndexPage = () => {
                   {indexData.block2.txt_1}
                 </Text> */}
                 <Text px={{ base: 0, lg: 24, }} mb={4} fontSize={{ base: "lg", md: "xl", }} color={"gray.700"}>
-                  {indexData.block1.txt}{" "}
+                  {indexData.block2.txt}{" "}
                   <Link href={"/our-approach"}>
                     <Button
                       userSelect={'text'}
@@ -232,7 +232,7 @@ const IndexPage = () => {
                       color={'blue.400'}
                       variant={'link'}
                     >
-                      {indexData.block1.txturl}
+                      {indexData.block2.txturl}
                     </Button>
                   </Link>
                   .

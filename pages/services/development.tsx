@@ -98,14 +98,6 @@ const Development = () => {
                 >
                     <Box alignSelf="start">
                         <chakra.h2
-                            color={'blue.500'}
-                            fontWeight="semibold"
-                            textTransform="uppercase"
-                            letterSpacing="wide"
-                        >
-                            Outsource
-                        </chakra.h2>
-                        <chakra.h2
                             mb={3}
                             fontSize={{ base: "3xl", md: "4xl" }}
                             fontWeight="extrabold"
