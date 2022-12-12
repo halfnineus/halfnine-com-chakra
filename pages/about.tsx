@@ -191,31 +191,6 @@ const IndexAbout = () => {
                   />
                 </SimpleGrid>
               </Center>
-
-              {/* <Divider mt={8} mb={8} />
-              <Box textAlign="center">
-                <Heading size="lg" mb="4">
-                  Be the first on Our Clients List:
-                </Heading> */}
-              {/* <Text maxW="2xl" mx="auto">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                  incididunt ut labore et dolore magna aliqua elit consectetur adipiscing.
-                </Text> */}
-              {/* </Box> */}
-              {/* <SimpleGrid
-                columns={{ base: 1, sm: 2, md: 3, lg: 5 }}
-                mt="8"
-                spacing={'6'}
-              >
-                <BuiltWith img={'/img/about/logo.png'} />
-                <BuiltWith img={'/img/about/logo.png'} />
-                <BuiltWith img={'/img/about/logo.png'} />
-                <BuiltWith img={'/img/about/logo.png'} />
-                <BuiltWith img={'/img/about/logo.png'} />
-              </SimpleGrid> */}
-
-
-
               <Divider my={16} />
             </Box>
           </>)

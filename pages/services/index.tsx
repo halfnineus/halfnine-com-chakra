@@ -23,7 +23,7 @@ import Link from "next/link";
 import { IoBulbOutline, IoPeopleOutline, IoRocketOutline } from "react-icons/io5";
 
 import indexdat from "../../assets/services/index.json"
-import { Contactimg } from "../../components";
+import { BottomFeature, Contactimg } from "../../components";
 
 const Feature = (props: any) => {
     return (
@@ -72,12 +72,12 @@ const Index = () => {
                             <Text pb={2} color={'gray.700'}>
                                 Industrial Automation Services from the Zedir Company guarantee excellence. Industrial Automation has the goals of connecting equipment together, developing technology, maximizing production, assuring safety, maximize the use of resources, and assuring quality. Our team of dedicated engineers has extensive experience in these industrial sectors and is ready to replicate proven methods and solutions.
                             </Text>
-                            <Text pb={8} color={'gray.700'}>
+                            <Text pb={12} color={'gray.700'}>
                                 We strive to ensure that our solutions are cost-effective and tailored to the needs of our clients. We understand that each project is unique, so we take the time to understand the specific requirements of each customer. Furthermore, We then develop a solution that is tailored to their needs and guaranteed to provide the highest level of quality and reliability. Our team is available to provide ongoing support and maintenance, so you can have peace of mind knowing that your automation solution will be fully functional and reliable for years to come.
                             </Text>
                             <Box>
                                 <Heading size={'lg'}>Our Industry Expertise</Heading>
-                                <Divider mt={1} mb={2} />
+                                <Divider mt={2} mb={3} />
                                 <SimpleGrid
                                     columns={{ base: 1 }}
                                     spacing={4}
@@ -106,9 +106,11 @@ const Index = () => {
                                     >
                                         With the very high importance of high-quality industrial automation projects. We offer solutions to help you keep peace of mind on the excellence and quality of your proejcts. From feasibility study, system design review, project management, installation and commissioning, or maintenance. Our experienced team is committed to helping you get the most out of your industrial automation project.
                                     </Feature>
-                                    <Divider pt={2} />
+                                    {/* <Divider mt={6} mb={8} /> */}
                                 </SimpleGrid>
                             </Box>
+                            {/* <BottomFeature /> */}
+                            <Box height={'3rem'} />
                         </Box>
                     </>
                 )

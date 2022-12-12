@@ -48,43 +48,41 @@ interface FeatureProps2 {
 
 const Feature2 = ({ text, icon, iconBg, refx }: FeatureProps2) => {
   return (
-    <>
-      <Link href={refx}>
-        <Stack
-          _hover={{ textColor: 'blue.500', bg: 'blue.50', borderColor: 'blue.50', cursor: 'pointer' }}
-          role={'group'}
-          direction={'row'}
+    <Link href={refx}>
+      <Stack
+        _hover={{ textColor: 'blue.500', bg: 'blue.50', borderColor: 'blue.50', cursor: 'pointer' }}
+        role={'group'}
+        direction={'row'}
+        align={'center'}
+        p={2}
+        rounded={'xl'}
+        border={'1px'}
+        borderColor={'gray.100'}
+      >
+        <Flex
+          w={8}
+          h={8}
           align={'center'}
-          p={2}
-          rounded={'xl'}
-          border={'1px'}
-          borderColor={'gray.100'}
-        >
-          <Flex
-            w={8}
-            h={8}
-            align={'center'}
-            justify={'center'}
-            rounded={'full'}
-            bg={iconBg}>
-            {icon}
-          </Flex>
-          <Text fontWeight={600}>
-            {text}
-          </Text>
-          <Flex
-            transition={'all .3s ease'}
-            transform={'translateX(-25px)'}
-            opacity={0}
-            _groupHover={{ opacity: '100%', transform: 'translateX(0)' }}
-            justify={'flex-end'}
-            align={'center'}
-            flex={1}>
-            <Icon color={'blue.400'} w={5} h={5} as={ChevronRightIcon} />
-          </Flex>
-        </Stack>
-      </Link>
-    </>
+          justify={'center'}
+          rounded={'full'}
+          bg={iconBg}>
+          {icon}
+        </Flex>
+        <Text fontWeight={600}>
+          {text}
+        </Text>
+        <Flex
+          transition={'all .3s ease'}
+          transform={'translateX(-25px)'}
+          opacity={0}
+          _groupHover={{ opacity: '100%', transform: 'translateX(0)' }}
+          justify={'flex-end'}
+          align={'center'}
+          flex={1}>
+          <Icon color={'blue.400'} w={5} h={5} as={ChevronRightIcon} />
+        </Flex>
+      </Stack>
+    </Link>
   );
 };
 
@@ -94,9 +92,7 @@ interface FeatureiProps {
   children: React.ReactNode
 }
 
-
-export const Featurei = (props: FeatureiProps) => {
-  const { title, children, icon } = props
+export const Featurei = ({ title, children, icon }: FeatureiProps) => {
   return (
     <Box>
       <Box color={"blue.600"} fontSize="2.5rem">
@@ -134,11 +130,8 @@ const Feature1 = ({ title, text, icon }: FeatureProps1) => {
   );
 };
 
-
 const IndexPage = () => {
   const { locale } = useRouter()
-  const router = useRouter()
-
   const bounce = keyframes`
     0%   { background-color: #0BC5EA }
     25%  { background-color: #48BB78 }
@@ -162,23 +155,21 @@ const IndexPage = () => {
                 }
               ]}
             />
-            <Box key={i} as="section" pb={{ base: "none", lg: "12" }} pos="relative" px={{ base: '4', xl: '10' }}>
+            <Box as="section" pb={{ base: "none", lg: "12" }} pos="relative" px={{ base: '4', xl: '10' }}>
               <Box maxW={"100%"} mx="auto">
                 <Box maxW={{ md: 'full', lg: 'xl', xl: '3xl' }} pt={{ base: '6', lg: '8' }} pb={{ base: '16', lg: '40' }}>
                   <Heading as="h1" size="3xl" lineHeight="1" fontWeight="extrabold" letterSpacing="tight">
                     {indexData.block1.h1_1}{' '}
                     <Box as="mark" color={'blue.600'} bg="transparent">{indexData.block1.h1_2}</Box>
                   </Heading>
-                  <Text maxW={{  lg: 'md', xl: '3xl' }} mt={4} fontSize="xl" fontWeight="medium" color={'gray.600'}>
+                  <Text maxW={{ lg: 'md', xl: '3xl' }} mt={4} fontSize="xl" fontWeight="medium" color={'gray.600'}>
                     {indexData.block1.txt_1}
                   </Text>
-                  {/* <Stack direction={{ base: 'column', sm: 'row' }} spacing="4" mt="8"> */}
                   <Link href={"/contact"}>
-                    <Button mt={8} p={5} size="md" colorScheme={'blue'} shadow="base" fontSize="md">
+                    <Button mt={6} size="md" colorScheme={'blue'} shadow="base" fontSize="md">
                       {indexData.block1.button}
                     </Button>
                   </Link>
-                  {/* </Stack> */}
                 </Box>
               </Box>
               <Box
@@ -186,13 +177,12 @@ const IndexPage = () => {
                 insetY={{ lg: '0' }}
                 insetEnd={{ lg: '0' }}
                 bg={"gray.50"}
-                w={{ base: 'full', lg: '50%',xl: '42%' }}
+                w={{ base: 'full', lg: '50%', xl: '42%' }}
                 height={{ base: '96', lg: 'full' }}
                 sx={{ clipPath: { lg: 'polygon(8% 0%, 100% 0%, 100% 100%, 0% 100%)' }, }}>
                 <Image userSelect={'none'} pointerEvents={'none'} height="100%" width="100%" objectFit="cover" src={'/img/index/x.jpg'} alt="Base" />
               </Box>
             </Box>
-
 
             <Box minH={'5rem'} />
 
@@ -211,7 +201,6 @@ const IndexPage = () => {
                     display={'inline'}
                     pr={{ md: "none", lg: 1 }}
                     pb={{ base: 2, md: 3, lg: "none" }}
-                    // bgGradient={"linear(to-r, green.400, blue.600)"}
                     animation={`${bounce} 5s ease infinite`}
                     bgImage={"linear-gradient(to right, #2b6cb0 32%, transparent)"}
                     fontWeight="extrabold"
@@ -219,9 +208,6 @@ const IndexPage = () => {
                     {indexData.block2.h2_2}
                   </Text>{" "}
                 </Heading>
-                {/* <Text px={{ base: 0, lg: 24, }} mb={4} fontSize={{ base: "lg", md: "xl", }} color={"gray.700"}>
-                  {indexData.block2.txt_1}
-                </Text> */}
                 <Text px={{ base: 0, lg: 24, }} mb={4} fontSize={{ base: "lg", md: "xl", }} color={"gray.700"}>
                   {indexData.block2.txt}{" "}
                   <Link href={"/services"}>
@@ -236,17 +222,13 @@ const IndexPage = () => {
                     </Button>
                   </Link>
                   .
-                  {/* <NextLink href={"/our-approach/agile"}></NextLink> */}
                 </Text>
               </Box>
-            </Box >
+            </Box>
+
             <Center px={{ base: '4', lg: '0' }}>
-              {/* <Container px={{ base: '6', lg: '0' }} maxW={'container.md'}> */}
-              {/* Remove window.open on mobile using breakpoint values */}
               <Link href={'https://www.zedir.com/img/index/Basic-IoT-Enviroment.png'} target={'_blank'}>
                 <Image
-                  // mx="auto"
-                  // px={{ base: '4', lg: '0' }}
                   maxW={'container.md'}
                   userSelect={'none'}
                   w="full"
@@ -254,13 +236,11 @@ const IndexPage = () => {
                   border={'1px'}
                   _hover={{ shadow: 'md', borderColor: 'blue.500', transform: 'scale(1.005)' }}
                   borderColor={'gray.400'}
-                  // shadow="md"
                   src={'/img/index/diagram.jpg'}
                   alt="Basic IoT Enviroment"
                 />
               </Link>
             </Center>
-            {/* </Container> */}
 
             <Box minH={'5rem'} />
 
@@ -291,34 +271,16 @@ const IndexPage = () => {
             <Container px={{ base: '4', xl: '10' }} maxW={'container.xl'}>
               <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10}>
                 <Stack spacing={4}>
-                  {/* <Text
-                    textTransform={'uppercase'}
-                    color={'blue.400'}
-                    fontWeight={600}
-                    fontSize={'sm'}
-                    bg={'blue.50'}
-                    p={2}
-                    alignSelf={'flex-start'}
-                    rounded={'md'}
-                  >
-                    Our Story
-                  </Text> */}
                   <Heading pl={{ xl: 2, md: 0 }} pt={8}>{indexData.block4.title}</Heading>
                   <Text pl={{ xl: 2, md: 0 }} color={'gray.500'} fontSize={'lg'}>
                     {indexData.block4.description}
                   </Text>
                   <Stack
                     spacing={2}
-                    divider={
-                      <StackDivider
-                        borderColor={'gray.100'}
-                      />
-                    }>
+                    divider={<StackDivider borderColor={'gray.100'} />}>
                     <Feature2
                       refx={'/services/development'}
-                      icon={
-                        <Icon as={IoPeopleOutline} color={'blue.600'} w={5} h={5} />
-                      }
+                      icon={<Icon as={IoPeopleOutline} color={'blue.600'} w={5} h={5} />}
                       iconBg={'blue.100'}
                       text={indexData.block4.srvc1}
                     />
@@ -330,9 +292,7 @@ const IndexPage = () => {
                     />
                     <Feature2
                       refx={'/services/consultation'}
-                      icon={
-                        <Icon as={IoBulbOutline} color={'orange.600'} w={5} h={5} />
-                      }
+                      icon={<Icon as={IoBulbOutline} color={'orange.600'} w={5} h={5} />}
                       iconBg={'orange.100'}
                       text={indexData.block4.srvc3}
                     />
@@ -343,7 +303,6 @@ const IndexPage = () => {
                     rounded={"2xl"}
                     border='1px'
                     borderColor={'gray.600'}
-                    // rounded={'xl'}
                     alt={'feature image'}
                     src={'/img/index/iot.jpg'}
                     objectFit={'cover'}
@@ -361,7 +320,6 @@ const IndexPage = () => {
                 <SimpleGrid
                   columns={{ base: 1, md: 2, lg: 4 }}
                   spacing={{ base: '12', md: '8', lg: '2' }}
-                // mt={{ base: '12', md: '12' }}
                 >
                   <Featurei icon={<FaRegHandshake />} title={indexData.features.f1t}>
                     {indexData.features.f1d}
