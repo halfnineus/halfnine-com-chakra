@@ -84,8 +84,8 @@ export const links: LinkGroup[] = [
         locale: "en",
         title: 'Industries',
         links: [
-            { label: 'Manufacturing & Production', href: '/industries/manufacturing-and-production' },
-            { label: 'Security & Safety', href: '/industries/security-and-safety' },
+            { label: 'Manufacturing and Production', href: '/industries/manufacturing-and-production' },
+            { label: 'Security and Safety', href: '/industries/security-and-safety' },
         ],
     },
     {

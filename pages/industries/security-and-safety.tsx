@@ -18,7 +18,6 @@ const Sns = () => {
             <NextSeo
                 title='Security and Safety Industries  - Automating all Things | Zedir'
                 description='Create and implement solutions to automate safety chores and tasks and focus on products & services.'
-                // description='Create and implement solutions to ease safety chores and tasks and focus on products & services.'
                 canonical="https://www.zedir.com/industries/security-and-safety"
                 // languageAlternates={[
                 //     {
@@ -30,7 +29,7 @@ const Sns = () => {
             <Box maxW={'container.xl'} px={{ base: 4, lg: 4, xl: 0 }} pt={4} mx="auto">
                 {/* <Box as={Container} maxW="7xl> */}
                 {/* <Heading>
-                {`Security & Safety - Get ready to ensure things differently`}
+                {`Security and Safety - Get ready to ensure things differently`}
             </Heading> */}
                 <Grid
                     templateColumns={{
@@ -42,7 +41,7 @@ const Sns = () => {
                     <GridItem colSpan={1}>
                         <VStack alignItems="flex-start" spacing="20px">
                             <Heading as={'h2'} fontSize="3xl" fontWeight="700">
-                                Security & Safety
+                                Security and Safety
                             </Heading>
                             <Link href={'/contact'}>
                                 <Button colorScheme="blue" size="md">
@@ -66,12 +65,6 @@ const Sns = () => {
                 <Text pb={10} color={'gray.700'}>
                     In today&#39;s digital world, businesses are faced with the constant challenge of innovating and staying ahead of their competition. The industrial internet of things &#40;IIoT&#41; and control system development services are two new technologies that can help businesses meet this challenge. These strategies have been shown to have numerous benefits for businesses in a variety of industries, including security monitoring and food safety. Read on to learn more about these strategies and how they could help your business grow.
                 </Text>
-                <Flex
-                    w={'full'}
-                    h={48}
-                    mb={10}
-                    backgroundImage={'/img/industries/security-and-safety.jpg'}
-                />
                 <Heading fontWeight={'semibold'} pb={2} color={'gray.800'} size={'md'}>
                     What is Industrial IoT?
                 </Heading>

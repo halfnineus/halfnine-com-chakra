@@ -41,7 +41,7 @@ const Mnp = () => {
                     <GridItem colSpan={1}>
                         <VStack alignItems="flex-start" spacing="20px">
                             <Heading as={'h2'} fontSize="3xl" fontWeight="700">
-                                Manufacturing & Production
+                                Manufacturing and Production
                             </Heading>
                             <Link href={'/contact'}>
                                 <Button colorScheme="blue" size="md">
@@ -65,12 +65,6 @@ const Mnp = () => {
                 <Text pb={10} color={'gray.700'}>
                     Manufacturing and production are essential components of any business. However, there comes a point when a company needs to reassess its strategy for optimization. Whether you&#39;re in the process of developing new products or services, or looking for ways to improve efficiency in your manufacturing processes, our manufacturing and production development services can help you find the balance between automation and human-added skills that will result in increased productivity. We know how challenging it can be to find that sweet spot between technology and human skills. This article explains why automation is necessary but not sufficient for maximizing efficiency; provides examples of different types of automation; describes the many benefits of implementing knowledgeable machines; and lists some examples of production operations where humans remain irreplaceable.
                 </Text>
-                <Flex
-                    w={'full'}
-                    h={48}
-                    mb={10}
-                    backgroundImage={'/img/industries/manufacturing-and-production.jpg'}
-                />
                 <Heading fontWeight={'semibold'} pb={2} color={'gray.800'} size={'md'}>
                     What is Manufacturing Automation?
                 </Heading>

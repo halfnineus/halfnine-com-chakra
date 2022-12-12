@@ -164,12 +164,12 @@ const IndexPage = () => {
             />
             <Box key={i} as="section" pb={{ base: "none", lg: "12" }} pos="relative" px={{ base: '4', xl: '10' }}>
               <Box maxW={"100%"} mx="auto">
-                <Box maxW={{ lg: 'md', xl: '3xl' }} pt={{ base: '6', lg: '8' }} pb={{ base: '16', lg: '40' }}>
+                <Box maxW={{ md: 'full', lg: 'xl', xl: '3xl' }} pt={{ base: '6', lg: '8' }} pb={{ base: '16', lg: '40' }}>
                   <Heading as="h1" size="3xl" lineHeight="1" fontWeight="extrabold" letterSpacing="tight">
                     {indexData.block1.h1_1}{' '}
                     <Box as="mark" color={'blue.600'} bg="transparent">{indexData.block1.h1_2}</Box>
                   </Heading>
-                  <Text maxW={{ lg: 'md', xl: '3xl' }} mt={4} fontSize="xl" fontWeight="medium" color={'gray.600'}>
+                  <Text maxW={{  lg: 'md', xl: '3xl' }} mt={4} fontSize="xl" fontWeight="medium" color={'gray.600'}>
                     {indexData.block1.txt_1}
                   </Text>
                   {/* <Stack direction={{ base: 'column', sm: 'row' }} spacing="4" mt="8"> */}
@@ -186,7 +186,7 @@ const IndexPage = () => {
                 insetY={{ lg: '0' }}
                 insetEnd={{ lg: '0' }}
                 bg={"gray.50"}
-                w={{ base: 'full', lg: '50%' }}
+                w={{ base: 'full', lg: '50%',xl: '42%' }}
                 height={{ base: '96', lg: 'full' }}
                 sx={{ clipPath: { lg: 'polygon(8% 0%, 100% 0%, 100% 100%, 0% 100%)' }, }}>
                 <Image userSelect={'none'} pointerEvents={'none'} height="100%" width="100%" objectFit="cover" src={'/img/index/x.jpg'} alt="Base" />
@@ -208,7 +208,7 @@ const IndexPage = () => {
                   {indexData.block2.h2_1}{" "}
                   <Text
                     bgClip="text"
-                    display={{base:'inline',md:"inline-block"}}
+                    display={'inline'}
                     pr={{ md: "none", lg: 1 }}
                     pb={{ base: 2, md: 3, lg: "none" }}
                     // bgGradient={"linear(to-r, green.400, blue.600)"}
@@ -224,7 +224,7 @@ const IndexPage = () => {
                 </Text> */}
                 <Text px={{ base: 0, lg: 24, }} mb={4} fontSize={{ base: "lg", md: "xl", }} color={"gray.700"}>
                   {indexData.block2.txt}{" "}
-                  <Link href={"/our-approach"}>
+                  <Link href={"/services"}>
                     <Button
                       userSelect={'text'}
                       fontSize="xl"

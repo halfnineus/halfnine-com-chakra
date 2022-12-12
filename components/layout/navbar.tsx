@@ -355,11 +355,11 @@ const NAV_ITEMS: Array<NavItem> = [
         subhref: '/industries',
         children: [
             {
-                label: 'Manufacturing & Production',
+                label: 'Manufacturing and Production',
                 href: '/industries/manufacturing-and-production',
             },
             {
-                label: 'Security & Safety',
+                label: 'Security and Safety',
                 href: '/industries/security-and-safety',
             },
         ],
@@ -427,11 +427,11 @@ const NAV_ITEMS: Array<NavItem> = [
         subhref: '/industries',
         children: [
             {
-                label: 'Fabricación & Producción',
+                label: 'Fabricación y Producción',
                 href: '/industries/manufacturing-and-production',
             },
             {
-                label: 'Seguridad & Protección',
+                label: 'Seguridad y Protección',
                 href: '/industries/security-and-safety',
             },
         ],

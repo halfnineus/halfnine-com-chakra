@@ -1,3 +1,8 @@
+Sitemap: https://www.zedir.com/sitemap.xml
+
+User-agent: *
+Disallow: /contact
+
 # Begin block Bad-Robots from robots.txt
 User-agent: asterias
 Disallow: /
@@ -229,12 +234,3 @@ User-agent: mj12bot
 Disallow: /
 User-agent: dotbot
 Disallow: /
-
-# Allow
-
-User-agent: *
-Allow: /
-#Directories
-Disallow: /contact
-
-Sitemap: https://www.zedir.com/sitemap.xml

@@ -137,6 +137,7 @@ const IndexAbout = () => {
                   <Flex><Text>{aboutData.block1.i2}</Text></Flex>
                 </GridItem>
               </Grid>
+              {/* We understand that the industrial automation process is ever-evolving, and we strive to stay ahead of the curve by continually learning and adapting to the latest technologies. */}
 
               <Divider my={16} />
 
@@ -168,18 +169,18 @@ const IndexAbout = () => {
                   spacing={'6'}
                 >
                   <FeatureBlog
-                    title={'Industrial Control Systems Cybersecurity Training Act'}
-                    text={'This is an overview of the Industrial Control Systems Cybersecurity Training Act and explains the meaning for businesses and individuals responsible for managing and operating ICS.'}
-                    page={'https://blog.zedir.com/posts/industrial-control-systems-cybersecurity-training-act'}
-                    date={'December 6, 2022 · 12min read'}
-                    imgsrc={'https://images.pexels.com/photos/39584/censorship-limitations-freedom-of-expression-restricted-39584.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=300&w=600'}
-                  />
-                  <FeatureBlog
                     title={'Industrial Control Systems Cybersecurity Initiative'}
                     text={`In this guide, you will learn about the Industrial Control Systems Cybersecurity Initiative (ICS-CERT) and how it can help protect your business's data and systems.`}
                     page={'https://blog.zedir.com/posts/industrial-control-systems-cybersecurity-initiative'}
                     date={'December 6, 2022 · 12min read'}
                     imgsrc={'https://images.pexels.com/photos/1990764/pexels-photo-1990764.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=300&w=600'}
+                  />
+                  <FeatureBlog
+                    title={'Industrial Control Systems Cybersecurity Training Act'}
+                    text={'This is an overview of the Industrial Control Systems Cybersecurity Training Act and explains the meaning for businesses and individuals responsible for managing and operating ICS.'}
+                    page={'https://blog.zedir.com/posts/industrial-control-systems-cybersecurity-training-act'}
+                    date={'December 6, 2022 · 12min read'}
+                    imgsrc={'https://images.pexels.com/photos/39584/censorship-limitations-freedom-of-expression-restricted-39584.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=300&w=600'}
                   />
                   <FeatureBlog
                     title={'Industrial Control Systems Joint Working Groups'}
