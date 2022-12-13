@@ -14,7 +14,6 @@ const Contactimg = (children: any) => {
                         backgroundImage={`https://images.pexels.com/photos/${children.pexelsrc}?auto=compress&cs=tinysrgb&fit=crop&h=320&w=1300`}
                         border={'2px'}
                         rounded={'lg'}
-                        // shadow={'md'}
                         overflow={'hidden'}
                         borderColor={'gray.600'}
                     >

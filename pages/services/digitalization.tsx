@@ -83,40 +83,33 @@ const Development = () => {
                 title='Digital Transformation - Automating all Things | Zedir'
                 description='Transform your manually controlled systems and environments into digitally automated technology.'
                 canonical="https://www.zedir.com/services/digitalization"
-                // languageAlternates={[
-                //     {
-                //         hrefLang: 'es',
-                //         href: 'https://www.zedir.com/es/services/digitalization',
-                //     }
-                // ]}
+            // languageAlternates={[
+            //     {
+            //         hrefLang: 'es',
+            //         href: 'https://www.zedir.com/es/services/digitalization',
+            //     }
+            // ]}
             />
             <Container maxW={'container.xl'} px={{ base: 4, sm: 4, md: 4, lg: 4, xl: 0 }} pt={{ base: 4, xl: 4 }}>
+                <Box pb={6} alignSelf="start">
+                    <Heading
+                        mb={2}
+                        fontSize={{ base: "3xl", md: "4xl" }}
+                        fontWeight="extrabold"
+                        letterSpacing="tight"
+                    >
+                        Digital Transformation Services
+                    </Heading>
+                    <Text fontSize={{ base: "lg", md: "xl" }} color="gray.600">
+                        Our focus: Internet of Things and Control Systems for Industrial Applications
+                    </Text>
+                </Box>
                 <SimpleGrid
                     alignItems="center"
                     columns={{ base: 1, lg: 2 }}
                     spacingY={{ base: 10, lg: 6 }}
                     spacingX={{ base: 10, lg: 12 }}
                 >
-                    <Box alignSelf="start">
-                        <chakra.h2
-                            mb={3}
-                            fontSize={{ base: "3xl", md: "4xl" }}
-                            fontWeight="extrabold"
-                            color={'black'}
-                            lineHeight="shorter"
-                            letterSpacing="tight"
-                        >
-                            Digital Transformation
-                        </chakra.h2>
-                        <chakra.p
-                            mb={2}
-                            fontSize={{ base: "lg", md: "xl" }}
-                            color="gray.600"
-                            _dark={{ color: "gray.500" }}
-                        >
-                            Transform your manually controlled systems and environments into digitally automated technology.
-                        </chakra.p>
-                    </Box>
                     <GridItem colSpan={2}>
                         <Stack
                             spacing={{ base: 10, md: 0 }}
@@ -140,42 +133,9 @@ const Development = () => {
                         </Stack>
                     </GridItem>
                 </SimpleGrid>
-
-                <Divider my={12} />
-
-                {/* #url https://www.oracle.com/cloud/digital-transformation/ */}
-                {/* https://www.accenture.com/us-en/insights/digital-transformation-index */}
-                {/* https://emeritus.org/blog/what-is-digital-transformation-definition-examples-strategies/ */}
-                {/* https://www2.deloitte.com/us/en/insights/topics/strategy/how-to-lead-digital-transformation.html */}
-                {/* https://www.bakertilly.com/insights/the-key-to-digital-transformation-is-not-managing-change */}
-
-
-                <Heading color={'gray.800'} size={'lg'}>
-                    Digital Transformation
-                </Heading>
-                <Text pb={10} color={'gray.700'}>
-                    {`Is the process of adopting digital technology in your organization through planning and executing a digital-first & customer-driven approach. This is done to find improvement opportunities such as efficiency, value, and innovation.`}
-                </Text>
-                <Heading pb={4} color={'gray.800'} size={'lg'}>
-                    {`Why a Digital Transformation works`}
-                </Heading>
-                <Heading fontWeight={'semibold'} color={'gray.800'} size={'md'}>
-                    {`Lead change`}
-                </Heading>
-                <Text pb={4} color={'gray.700'}>
-                    {`Stop managing change and start leading change in your industry with proven Distributed Agile Frameworks that improve your business model and prepare you for a more competitive future.`}
-                </Text>
-                <Heading fontWeight={'semibold'} pb={2} color={'gray.800'} size={'md'}>
-                    {`Accelerate Innovation`}
-                </Heading>
-                <Text pb={4} color={'gray.700'}>
-                    {`Start your innovation processes by saving valuable resources and time with digital and data solutions, helping you focus on your industry's goals.`}
-                </Text>
-                <Heading fontWeight={'semibold'} pb={2} color={'gray.800'} size={'md'}>
-                    {`Outpace Demands`}
-                </Heading>
-                <Text pb={10} color={'gray.700'}>
-                    {`It's hard to keep up with all the new methods and technologies, With our passion for IT we research the markets and make sure you don't fall back and maintain a flexible and scalable environment for change.`}
+                <Text textAlign={'center'} my={6} fontSize={{ base: "lg", md: "xl" }} color="gray.500">
+                    Transform your manually controlled systems and environments into digitally automated technology.
+                    {/* {`With the use of these established methods we are able to create a valuable strategy that delivers consistent results on diferent projects.`} */}
                 </Text>
 
                 <Divider my={12} />
