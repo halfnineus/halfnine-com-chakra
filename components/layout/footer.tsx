@@ -21,7 +21,7 @@ import Link from 'next/link'
 import { useRouter } from "next/router"
 import { RiMailSendLine } from 'react-icons/ri';
 
-import { FaFacebookSquare, FaLinkedin, FaTwitterSquare, FaYoutubeSquare } from "react-icons/fa";
+import { FaFacebookSquare, FaLinkedin, FaTwitterSquare } from "react-icons/fa";
 
 import footdat from '../../assets/components/footer.json'
 
@@ -237,15 +237,6 @@ export default function SCFooter() {
                                         h="34px"
                                         w="34px"
                                         as={FaTwitterSquare}
-                                    />
-                                </Link>
-                                <Link href={'https://www.youtube.com/@zedircom'} target={'_blank'}>
-                                    <Icon
-                                        transform={'scale(0.95)'}
-                                        _hover={{ color: "#FF0000", transform: 'scale(1)' }}
-                                        h="34px"
-                                        w="34px"
-                                        as={FaYoutubeSquare}
                                     />
                                 </Link>
                                 <Link href={'https://www.linkedin.com/company/zedir/'} target={'_blank'}>

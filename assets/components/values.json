@@ -1,0 +1,40 @@
+{
+    "data": [
+        {
+            "locale": "en",
+            "heading": {
+                "title": "Our Values",
+                "item1": "Quality",
+                "item1d": "Focus on expertise without overengineering.",
+                "item2": "Availability",
+                "item2d": "Meet the demand with supply.",
+                "item3": "Transparency",
+                "item3d": "Access to every resource at any step of the process.",
+                "item4": "Value",
+                "item4d": "Building the right teams to reach return on Investment.",
+                "item5": "Flexibility",
+                "item5d": "Change your priorities without worries.",
+                "item6": "Talent",
+                "item6d": "Not only the right team, but the best for the job."
+            }
+        },
+        {
+            "locale": "es",
+            "heading": {
+                "title": "Nuestros valores",
+                "item1": "Calidad",
+                "item1d": "Concéntrese en la experiencia sin sobreingeniería.",
+                "item2": "Disponibilidad",
+                "item2d": "Satisfacer la demanda con la oferta.",
+                "item3": "Transparencia",
+                "item3d": "Acceso a todos los recursos en cualquier paso del proceso.",
+                "item4": "Valor",
+                "item4d": "Construyendo los equipos adecuados para alcanzar el retorno de la inversión.",
+                "item5": "Flexibilidad",
+                "item5d": "Cambia tus prioridades sin preocupaciones.",
+                "item6": "Talento",
+                "item6d": "No solo el equipo adecuado, sino el mejor para el trabajo."
+            }
+        }
+    ]
+}

@@ -3,7 +3,6 @@ import {
   Box,
   Heading,
   Text,
-  // Image,
   GridItem,
   VStack,
   Flex,
@@ -12,7 +11,6 @@ import {
   SimpleGrid,
   Avatar,
   Stack,
-  useColorModeValue,
   Center,
 } from '@chakra-ui/react';
 import { useRouter } from "next/router"
@@ -22,28 +20,9 @@ import { NextSeo } from 'next-seo';
 import aboutdat from '../assets/about.json'
 import Link from 'next/link';
 
-
-const BuiltWith = (children: any) => {
-  return (
-    <Box
-      maxW={{ base: 'full', sm: '200px', md: '200px', lg: '200px', }}
-      w={'full'}
-      overflow={'hidden'}
-      rounded={'md'}
-      p={2}
-      maxH={'auto'}
-      opacity={0.8}
-    >
-      <Box alignItems={'center'} alignContent={'center'} h={'auto'} m={-2} pos={'relative'}>
-        {/* <Image userSelect={'none'} pointerEvents={'none'} alt={'Img_Logo'} src={children.img} /> */}
-      </Box>
-    </Box>
-  )
-}
-
 const FeatureBlog = (children: any) => {
   return (
-    <Link href={children.page} target={'_blank'}>
+    <Link href={children.page}>
       <Box
         _hover={{ transform: 'scale(1.02)', boxShadow: "xl" }}
         transition={'all 0.1s ease-in-out'}
@@ -137,7 +116,6 @@ const IndexAbout = () => {
                   <Flex><Text>{aboutData.block1.i2}</Text></Flex>
                 </GridItem>
               </Grid>
-              {/* We understand that the industrial automation process is ever-evolving, and we strive to stay ahead of the curve by continually learning and adapting to the latest technologies. */}
 
               <Divider my={16} />
 

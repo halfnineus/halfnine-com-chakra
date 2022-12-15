@@ -1,0 +1,44 @@
+{
+    "data": [
+        {
+            "locale": "en",
+            "head": {
+                "title": "Digital Transformation - Automating all Things | Zedir",
+                "description": "Transform your manually controlled systems and environments into digitally automated technology."
+            },
+            "Block1": {
+                "Heading": "Digital Transformation Services",
+                "Text": "Our focus: Internet of Things and Control Systems for Industrial Applications.",
+                "SubText": "Transform your manually controlled systems and environments into digitally automated technology.",
+                "t1": "Workforce Capacity",
+                "d1": "Increase the capabilities of your workforce by implementing a new strategy through organizational change.",
+                "t2": "Operations Realignment",
+                "d2": "Find new leadership strategies and outgrow competitors through data and information technologies.",
+                "t3": "Sustainable Change",
+                "d3": "Focus on consistent results through investing in customer relationships and change.",
+                "t4": "Strategy Transformation",
+                "d4": "Break barriers to change through new technology approaches to implement strategies."
+            }
+        },
+        {
+            "locale": "es",
+            "head": {
+                "title": "Transformación Digital - Automatizando de todas las cosas | Zedir",
+                "description": "Transforme sus sistemas y entornos controlados manualmente en tecnología automatizada digitalmente."
+            },
+            "Block1": {
+                "Heading": "Servicios de Transformación Digital",
+                "Text": "Nuestro enfoque: Internet de las Cosas y Sistemas de Control para Aplicaciones Industriales.",
+                "SubText": "Transforme sus sistemas y entornos controlados manualmente en tecnología automatizada digitalmente.",
+                "t1": "Capacidad de la fuerza laboral",
+                "d1": "Aumente las capacidades de su fuerza laboral implementando una nueva estrategia a través del cambio organizacional.",
+                "t2": "Realineación de operaciones",
+                "d2": "Encuentre nuevas estrategias de liderazgo y supere a los competidores a través de datos y tecnologías de la información.",
+                "t3": "Cambio Sostenible",
+                "d3": "Concéntrese en resultados consistentes a través de la inversión en las relaciones con los clientes y el cambio.",
+                "t4": "Transformación de la estrategia",
+                "d4": "Rompa las barreras al cambio a través de nuevos enfoques tecnológicos para implementar estrategias."
+            }
+        }
+    ]
+}

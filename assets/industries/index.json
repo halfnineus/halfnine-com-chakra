@@ -1,0 +1,42 @@
+{
+    "data": [
+        {
+            "locale": "en",
+            "head": {
+                "title": "Industries We Serve | Zedir",
+                "description": "With expertise in the Manufacturing, Food, Production, and other industries, we offer a range of automation and control systems solutions specifically tailored for your industry."
+            },
+            "img": "Proven Replicable And Scalable Solutions",
+            "block1": {
+                "heading": "Automating every process together",
+                "text1": "Industrial Automation Services from the Zedir Company guarantee excellence. Industrial Automation has the goals of connecting equipment together, developing technology, maximizing production, assuring safety, maximize the use of resources, and assuring quality. Our team of dedicated engineers has extensive experience in these industrial sectors and is ready to replicate proven methods and solutions."
+            },
+            "block2": {
+                "heading": "Our Industry Expertise",
+                "item1": "Manufacturing and Production",
+                "item1d": "By using technology to automate repetitive tasks in the production process, you are able to provide the highest level of quality without sacrificing efficiency, This meaning less time wasted in production and more time for quality control. Resulting in better products, faster production times, and lower costs. Industrial Automation can be used to optimize any process.",
+                "item2": "Security and Safety",
+                "item2d": "It's advanced technology that helps streamline processes, reduce wasteful residue, recycle valuable resources, and improve safety. While enabling organizations to comply with regulations in their processes and systems. With easy-to-use tools and intuitive user interfaces, Industrial Automation helps manufacturers implement solutions that ease safety chores, producers to focus on products and services."
+            }
+        },
+        {
+            "locale": "es",
+            "head": {
+                "title": "Industrias a las que servimos | Zedir",
+                "description": "Con experiencia en las industrias de fabricación, alimentos, producción y otras, ofrecemos una gama de soluciones de sistemas de automatización y control diseñadas específicamente para su industria."
+            },
+            "img": "Soluciones comprobadas, replicables y escalables",
+            "block1": {
+                "heading": "Automatizando todos los procesos juntos",
+                "text1": "Los Servicios de Automatización Industrial de la Empresa Zedir garantizan la excelencia. La automatización industrial tiene los objetivos de conectar equipos, desarrollar tecnología, maximizar la producción, garantizar la seguridad, maximizar el uso de recursos y garantizar la calidad. Nuestro equipo de ingenieros dedicados tiene una amplia experiencia en estos sectores industriales y está listo para replicar métodos y soluciones probados."
+            },
+            "block2": {
+                "heading": "Our Industry Expertise",
+                "item1": "Manufactura y producción",
+                "item1d": "Mediante el uso de tecnología para automatizar tareas repetitivas en el proceso de producción, puede proporcionar el más alto nivel de calidad sin sacrificar la eficiencia. Esto significa menos tiempo perdido en la producción y más tiempo para el control de calidad. Dando como resultado mejores productos, tiempos de producción más rápidos y costos más bajos. La Automatización Industrial se puede utilizar para optimizar cualquier proceso.",
+                "item2": "Seguridad y protección",
+                "item2d": "Es la tecnología avanzada lo que nos ayuda a agilizar los procesos, reducir el desperdicio de residuos, reciclar recursos valiosos y mejorar la seguridad. Al mismo tiempo que permite a las organizaciones cumplir con la normativa en sus procesos y sistemas. Con herramientas fáciles de usar e interfaces de usuario intuitivas, Industrial Automation ayuda a los fabricantes a implementar soluciones que facilitan las tareas de seguridad para que los productores se centren en productos y servicios."
+            }
+        }
+    ]
+}

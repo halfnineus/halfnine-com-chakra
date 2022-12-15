@@ -3,15 +3,45 @@
         {
             "locale": "en",
             "head": {
-                "title": "changeme",
-                "description": "changeme"
+                "title": "Industrial Automation Services with Guaranteed Excellence | Zedir",
+                "description": "Providing Guaranteed Excellence in Industrial Automation Services. With extensive experience in industrial automation, our team of dedicated engineers is ready to replicate proven methods and solutions for your business."
+            },
+            "img": "Industrial Automation Services | Excellence Guaranteed",
+            "block1": {
+                "heading": "Automating all industries together",
+                "text1": "Industrial Automation Services from the Zedir Company guarantee excellence. Industrial Automation has the goals of connecting equipment together, developing technology, maximizing production, assuring safety, maximize the use of resources, and assuring quality. Our team of dedicated engineers has extensive experience in these industrial sectors and is ready to replicate proven methods and solutions.",
+                "text2": "We strive to ensure that our solutions are cost-effective and tailored to the needs of our clients. We understand that each project is unique, so we take the time to understand the specific requirements of each customer. Furthermore, We then develop a solution that is tailored to their needs and guaranteed to provide the highest level of quality and reliability. Our team is available to provide ongoing support and maintenance, so you can have peace of mind knowing that your automation solution will be fully functional and reliable for years to come."
+            },
+            "block2": {
+                "heading": "Our Industry Expertise",
+                "item1": "Firmware, Hardware, and Software Development",
+                "item1d": "Zedir is being built by engineers. We understand the need for transparency, efficiency and more importantly, delivery. We have been focused on putting together a delivery management practice that enables you to monitor progress and take decisions based on this information in a way that is fast, transparent, and efficient. Furthermore, we offer the agile industrial automation services to complement and improve your specific systems.",
+                "item2": "Industrial Digital Transformation",
+                "item2d": "Improve your current processes and systems with a wide range of technologies, from providing Cloud Computing to process with efficiency to changing levels of demand to providing a comprehensive set of data and information. With the goal to help transform your organization ability to maximize efficiency, increase production, and develop new techniques with technology.",
+                "item3": "Industrial Project Consultation",
+                "item3d": "With the very high importance of high-quality industrial automation projects. We offer solutions to help you keep peace of mind on the excellence and quality of your projects. From feasibility study, system design review, project management, installation and commissioning, or maintenance. Our experienced team is committed to helping you get the most out of your industrial automation project."
             }
         },
         {
             "locale": "es",
             "head": {
-                "title": "changeme",
-                "description": "changeme"
+                "title": "Servicios de Automatización Industrial con Excelencia Garantizada | Zedir",
+                "description": "Brindando Excelencia Garantizada en Servicios de Automatización Industrial. Con una amplia experiencia en automatización industrial, nuestro equipo de ingenieros dedicados está listo para replicar métodos y soluciones probados para su negocio."
+            },
+            "img": "Servicios de Automatización Industrial | Excelencia garantizada",
+            "block1": {
+                "heading": "Automatizando todas las industrias juntos",
+                "text1": "Los Servicios de Automatización Industrial de la Empresa Zedir garantizan la excelencia. La automatización industrial tiene los objetivos de conectar equipos, desarrollar tecnología, maximizar la producción, garantizar la seguridad, maximizar el uso de recursos y garantizar la calidad. Nuestro equipo de ingenieros dedicados tiene una amplia experiencia en estos sectores industriales y está listo para replicar métodos y soluciones probados.",
+                "text2": "Nos esforzamos por garantizar que nuestras soluciones sean rentables y se adapten a las necesidades de nuestros clientes. Entendemos que cada proyecto es único, por lo que nos tomamos el tiempo para comprender los requisitos específicos de cada cliente. Además, luego desarrollamos una solución que se adapta a sus necesidades y garantiza el más alto nivel de calidad y confiabilidad. Nuestro equipo está disponible para brindar soporte y mantenimiento continuos, por lo que puede tener la tranquilidad de saber que su solución de automatización será completamente funcional y confiable en los años venideros."
+            },
+            "block2": {
+                "heading": "Nuestra experiencia en la industria",
+                "item1": "Desarrollo de firmware, hardware y software",
+                "item1d": "Zedir está siendo construido por ingenieros. Entendemos la necesidad de transparencia, eficiencia y, lo que es más fundamental, entrega. Nos hemos centrado en generar una práctica de gestión de entrega que le permita monitorear el progreso y tomar decisiones basadas en esta información de una manera rápida, transparente y eficiente. Además, ofrecemos servicios ágiles de automatización industrial para complementar y mejorar sus sistemas específicos.",
+                "item2": "Transformación Digital Industrial",
+                "item2d": "Mejore sus procesos y sistemas actuales con una amplia gama de tecnologías, desde proporcionar Cloud Computing para procesar con eficiencia hasta cambiar los niveles de demanda y proporcionar un conjunto completo de datos e información. Con el objetivo de ayudar a transformar la capacidad de su organización para maximizar la eficiencia, aumentar la producción y desarrollar nuevas técnicas con tecnología.",
+                "item3": "Consultoría de Proyectos Industriales",
+                "item3d": "Con la altísima importancia de los proyectos de automatización industrial de alta calidad. Ofrecemos soluciones para ayudarlo a estar tranquilo sobre la excelencia y la calidad de sus proyectos. Desde estudio de viabilidad, revisión del diseño del sistema, gestión de proyectos, instalación y puesta en marcha, o mantenimiento. Nuestro experimentado equipo está comprometido a ayudarlo a aprovechar al máximo su proyecto de automatización industrial."
             }
         }
     ]

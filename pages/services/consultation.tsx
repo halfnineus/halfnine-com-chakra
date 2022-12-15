@@ -7,11 +7,7 @@ import {
     GridItem,
     Divider,
     Text,
-    useColorModeValue as mode,
     Heading,
-    Center,
-    Image,
-    Container,
 } from "@chakra-ui/react";
 import { NextSeo } from "next-seo";
 
@@ -53,77 +49,86 @@ const Feature = (props: any) => {
     );
 };
 
-const Development = () => {
+import indexdat from '../../assets/services/consultation.json'
+import { useRouter } from "next/router";
+
+const Consultation = () => {
+    const { locale } = useRouter()
     return (
         <>
-            <NextSeo
-                title='Technology Consulting - Automating all Things | Zedir'
-                description={`Find the leading practices in development, increase your organization's agility to achieve powerful outcomes.`}
-                canonical="https://www.zedir.com/services/digitalization"
-            // languageAlternates={[
-            //     {
-            //         hrefLang: 'es',
-            //         href: 'https://www.zedir.com/es/services/digitalization',
-            //     }
-            // ]}
-            />
-            <Box maxW={'container.xl'} px={{ base: '4', sm: '4', md: '4', lg: '4', xl: 0 }} pt={4} mx="auto">
-                <Box pb={6} alignSelf="start">
-                    <Heading
-                        mb={2}
-                        fontSize={{ base: "3xl", md: "4xl" }}
-                        fontWeight="extrabold"
-                        letterSpacing="tight"
-                    >
-                        Technology Consulting Services
-                    </Heading>
-                    <Text fontSize={{ base: "lg", md: "xl" }} color="gray.600">
-                        Our focus: Internet of Things and Control Systems for Industrial Applications
-                    </Text>
-                </Box>
-                <SimpleGrid
-                    alignItems="center"
-                    columns={{ base: 1, lg: 2 }}
-                    spacingY={{ base: 10, lg: 6 }}
-                    spacingX={{ base: 10, lg: 12 }}
-                >
-                    <GridItem colSpan={2}>
-                        <Stack
-                            spacing={{ base: 10, md: 0 }}
-                            display={{ md: "grid" }}
-                            gridTemplateColumns={{ md: "repeat(2,1fr)" }}
-                            gridColumnGap={{ md: 8 }}
-                            gridRowGap={{ md: 10 }}
-                        >
-                            <Feature icon={<HiOutlineDocumentMagnifyingGlass />} title="Feasibility Study">
-                                {`Is your project viable? Find out through our TELOS report, (Technical, Economic, Legal, Operational, Scheduling)`}
-                            </Feature>
-                            <Feature icon={<HiOutlineDocumentChartBar />} title="Performance Assessment">
-                                Evaluate your organization employees and leaders on their Performance, Knowledge, and Skills
-                            </Feature>
-                            <Feature icon={<HiOutlineBeaker />} title="Research and Development">
-                                Research through industry experts the capabilities of your projects and take them to the next level.
-                            </Feature>
-                            <Feature icon={<HiOutlineCheckBadge />} title="Validation">
-                                Improve how reliable is your production and services with data gathered through information technology.
-                            </Feature>
-                        </Stack>
-                    </GridItem>
-                </SimpleGrid>
-                <Text textAlign={'center'} my={6} fontSize={{ base: "lg", md: "xl" }} color="gray.500">
-                    {`Find the leading practices in development, increase your organization's agility to achieve powerful outcomes.`}
-                    {/* {`With the use of these established methods we are able to create a valuable strategy that delivers consistent results on diferent projects.`} */}
-                </Text>
+            {indexdat.data.filter(p => p.locale === locale).map((indexData, i) => {
+                return (
+                    <>
+                        <NextSeo
+                            title={indexData.head.title}
+                            description={indexData.head.description}
+                            canonical="https://www.zedir.com/services/consultation"
+                            languageAlternates={[
+                                {
+                                    hrefLang: 'es',
+                                    href: 'https://www.zedir.com/es/services/consultation',
+                                }
+                            ]}
+                        />
+                        <Box maxW={'container.xl'} px={{ base: '4', sm: '4', md: '4', lg: '4', xl: 0 }} pt={4} mx="auto">
+                            <Box pb={6} alignSelf="start">
+                                <Heading
+                                    mb={2}
+                                    fontSize={{ base: "3xl", md: "4xl" }}
+                                    fontWeight="extrabold"
+                                    letterSpacing="tight"
+                                >
+                                    {indexData.Block1.Heading}
+                                </Heading>
+                                <Text fontSize={{ base: "lg", md: "xl" }} color="gray.600">
+                                    {indexData.Block1.Text}
+                                </Text>
+                            </Box>
+                            <SimpleGrid
+                                alignItems="center"
+                                columns={{ base: 1, lg: 2 }}
+                                spacingY={{ base: 10, lg: 6 }}
+                                spacingX={{ base: 10, lg: 12 }}
+                            >
+                                <GridItem colSpan={2}>
+                                    <Stack
+                                        spacing={{ base: 10, md: 0 }}
+                                        display={{ md: "grid" }}
+                                        gridTemplateColumns={{ md: "repeat(2,1fr)" }}
+                                        gridColumnGap={{ md: 8 }}
+                                        gridRowGap={{ md: 10 }}
+                                    >
+                                        <Feature icon={<HiOutlineDocumentMagnifyingGlass />} title={indexData.Block1.t1}>
+                                            {indexData.Block1.d1}
+                                        </Feature>
+                                        <Feature icon={<HiOutlineDocumentChartBar />} title={indexData.Block1.t2}>
+                                            {indexData.Block1.d2}
+                                        </Feature>
+                                        <Feature icon={<HiOutlineBeaker />} title={indexData.Block1.t3}>
+                                            {indexData.Block1.d3}
+                                        </Feature>
+                                        <Feature icon={<HiOutlineCheckBadge />} title={indexData.Block1.t4}>
+                                            {indexData.Block1.d4}
+                                        </Feature>
+                                    </Stack>
+                                </GridItem>
+                            </SimpleGrid>
+                            <Text textAlign={'center'} my={6} fontSize={{ base: "lg", md: "xl" }} color="gray.500">
+                                {indexData.Block1.SubText}
+                            </Text>
 
-                <Divider my={12} />
+                            <Divider my={12} />
 
-                <Values />
+                            <Values />
 
-                <Box p={"2rem"} />
+                            <Box p={"2rem"} />
 
-            </Box>
+                        </Box>
+                    </>
+                )
+            })}
         </>
     );
 };
 
-export default Development;
+export default Consultation;

@@ -12,6 +12,7 @@ import {
 
 import { MdTouchApp, MdCheckCircleOutline, MdAvTimer, MdMoney, MdOutlineStars } from 'react-icons/md'
 import { GiReturnArrow } from 'react-icons/gi'
+import { useRouter } from 'next/router';
 
 interface FeatureProps {
     heading: string;
@@ -64,58 +65,65 @@ const Feature = ({ heading, text, color, icon }: FeatureProps) => {
     );
 };
 
+import indexdat from '../assets/components/values.json'
+
 const Values = () => {
+    const { locale } = useRouter()
     return (
         <>
-            <Stack spacing={5} mb={5} as={Container} maxW={'3xl'} textAlign={'center'}>
-                <Heading fontSize={'3xl'}>{"Our Values"}</Heading>
-            </Stack>
-
-            <Grid
-                templateColumns={{
-                    base: 'repeat(1, 1fr)',
-                    sm: 'repeat(2, 1fr)',
-                    md: 'repeat(3, 1fr)',
-                }}
-                gap={{ base: '8', sm: '12', md: '10' }}>
-                <Feature
-                    color="blue"
-                    heading={'Quality'}
-                    text={'Focus on expertise without overengineering.'}
-                    icon={<MdCheckCircleOutline size={20} />}
-                />
-                <Feature
-                    color="yellow"
-                    heading={'Availability'}
-                    text={'Meet the demand with supply.'}
-                    icon={<MdAvTimer size={20} />}
-                />
-                <Feature
-                    color="gray"
-                    heading={'Transparency'}
-                    text={'Access to every resource at any step of the process.'}
-                    icon={<MdTouchApp size={20} />}
-                />
-                <Feature
-                    color="green"
-                    heading={'Value'}
-                    text={'Building the right teams to reach return on Investment.'}
-                    icon={<MdMoney size={20} />}
-                />
-                <Feature
-                    color="pink"
-                    heading={'Flexibility'}
-                    text={'Change your priorities without worries.'}
-                    icon={<GiReturnArrow size={20} />}
-                />
-                <Feature
-                    color="purple"
-                    heading={'Talent'}
-                    text={'Not only the right team, but the best for the job.'}
-                    icon={<MdOutlineStars size={20} />}
-                />
-            </Grid>
-
+            {indexdat.data.filter(p => p.locale === locale).map((indexData, i) => {
+                return (
+                    <>
+                        <Stack spacing={5} mb={5} as={Container} maxW={'3xl'} textAlign={'center'}>
+                            <Heading fontSize={'3xl'} key={indexData.heading.title}>{indexData.heading.title}</Heading>
+                        </Stack>
+                        <Grid
+                            templateColumns={{
+                                base: 'repeat(1, 1fr)',
+                                sm: 'repeat(2, 1fr)',
+                                md: 'repeat(3, 1fr)',
+                            }}
+                            gap={{ base: '8', sm: '12', md: '10' }}>
+                            <Feature
+                                color="blue"
+                                heading={indexData.heading.item1}
+                                text={indexData.heading.item1d}
+                                icon={<MdCheckCircleOutline size={20} />}
+                                />
+                            <Feature
+                                color="yellow"
+                                heading={indexData.heading.item2}
+                                text={indexData.heading.item2d}
+                                icon={<MdAvTimer size={20} />}
+                                />
+                            <Feature
+                                color="gray"
+                                heading={indexData.heading.item3}
+                                text={indexData.heading.item3d}
+                                icon={<MdTouchApp size={20} />}
+                                />
+                            <Feature
+                                color="green"
+                                heading={indexData.heading.item4}
+                                text={indexData.heading.item4d}
+                                icon={<MdMoney size={20} />}
+                                />
+                            <Feature
+                                color="pink"
+                                heading={indexData.heading.item5}
+                                text={indexData.heading.item5d}
+                                icon={<GiReturnArrow size={20} />}
+                                />
+                            <Feature
+                                color="purple"
+                                heading={indexData.heading.item6}
+                                text={indexData.heading.item6d}
+                                icon={<MdOutlineStars size={20} />}
+                                />
+                        </Grid>
+                    </>
+                )
+            })}
         </>
     );
 }

@@ -18,6 +18,7 @@ import {
     TabPanel,
     TabPanels,
     Icon,
+    Grid,
 } from "@chakra-ui/react";
 import { NextSeo } from "next-seo";
 
@@ -62,176 +63,194 @@ const Feature = (props: any) => {
     );
 };
 
+import indexdat from '../../assets/services/development.json'
+import { useRouter } from "next/router";
 
 
 const Development = () => {
+    const { locale } = useRouter()
     return (
         <>
-            <NextSeo
-                title='Development Services - Automating all Things | Zedir'
-                description='Following established methods for development allows us to deliver a valuable strategy for your objectives.'
-                canonical="https://www.zedir.com/services/development"
-            // languageAlternates={[
-            //     {
-            //         hrefLang: 'es',
-            //         href: 'https://www.zedir.com/es/services/development',
-            //     }
-            // ]}
-            />
-            <Container maxW={'container.xl'} px={{ base: 4, sm: 4, md: 4, lg: 4, xl: 0 }} pt={{ base: 4, xl: 4 }}>
+            {indexdat.data.filter(p => p.locale === locale).map((indexData, i) => {
+                return (
+                    <>
+                        <NextSeo
+                            title={indexData.head.title}
+                            description={indexData.head.description}
+                            canonical="https://www.zedir.com/services/development"
+                            languageAlternates={[
+                                {
+                                    hrefLang: 'es',
+                                    href: 'https://www.zedir.com/es/services/development',
+                                }
+                            ]}
+                        />
+                        <Box maxW={'container.xl'} px={{ base: '4', sm: '4', md: '4', lg: '4', xl: 0 }} pt={4} mx="auto">
+                            <Box pb={6} alignSelf="start">
+                                <Heading
+                                    mb={2}
+                                    fontSize={{ base: "3xl", md: "4xl" }}
+                                    fontWeight="extrabold"
+                                    letterSpacing="tight"
+                                >
+                                    {indexData.Block1.Heading}
+                                </Heading>
+                                <Text fontSize={{ base: "lg", md: "xl" }} color="gray.600">
+                                    {indexData.Block1.Text}
+                                </Text>
+                            </Box>
+                            <SimpleGrid
+                                alignItems="center"
+                                columns={{ base: 1, lg: 2 }}
+                                spacingY={{ base: 10, lg: 6 }}
+                                spacingX={{ base: 10, lg: 12 }}
+                            >
+                                <GridItem colSpan={2}>
+                                    <Stack
+                                        spacing={{ base: 10, md: 0 }}
+                                        display={{ md: "grid" }}
+                                        gridTemplateColumns={{ md: "repeat(2,1fr)" }}
+                                        gridColumnGap={{ md: 8 }}
+                                        gridRowGap={{ md: 10 }}
+                                    >
+                                        <Feature icon={<SiLichess />} title={indexData.Block1.t1}>
+                                            {indexData.Block1.d1}
+                                        </Feature>
+                                        <Feature icon={<BsVectorPen />} title={indexData.Block1.t2}>
+                                            {indexData.Block1.d2}
+                                        </Feature>
+                                        <Feature icon={<BsTerminal />} title={indexData.Block1.t3}>
+                                            {indexData.Block1.d3}
+                                        </Feature>
+                                        <Feature icon={<BsLifePreserver />} title={indexData.Block1.t4}>
+                                            {indexData.Block1.d4}
+                                        </Feature>
+                                    </Stack>
+                                </GridItem>
+                            </SimpleGrid>
+                            <Text textAlign={'center'} my={6} fontSize={{ base: "lg", md: "xl" }} color="gray.500">
+                                {indexData.Block1.SubText}
+                            </Text>
 
-                <Box pb={6} alignSelf="start">
-                    <Heading
-                        mb={2}
-                        fontSize={{ base: "3xl", md: "4xl" }}
-                        fontWeight="extrabold"
-                        letterSpacing="tight"
-                    >
-                        Development Services
-                    </Heading>
-                    <Text fontSize={{ base: "lg", md: "xl" }} color="gray.600">
-                        Our focus: Internet of Things and Control Systems for Industrial Applications
-                    </Text>
-                </Box>
-                <SimpleGrid
-                    alignItems="center"
-                    columns={{ base: 1, lg: 2 }}
-                    spacingY={{ base: 10, lg: 6 }}
-                    spacingX={{ base: 10, lg: 12 }}
-                >
-                    <GridItem colSpan={2}>
-                        <Stack
-                            spacing={{ base: 10, md: 0 }}
-                            display={{ md: "grid" }}
-                            gridTemplateColumns={{ md: "repeat(2,1fr)" }}
-                            gridColumnGap={{ md: 8 }}
-                            gridRowGap={{ md: 10 }}
-                        >
-                            <Feature icon={<SiLichess />} title="Strategy & Features">
-                                Our team will help to outline the best strategies and features for your products and applications, identifying challenges and key leverage points.
-                            </Feature>
-                            <Feature icon={<BsVectorPen />} title="UX & Architecture">
-                                Our team will help you chose the right technologies to create a technology stack that fits the desired User Experience.
-                            </Feature>
-                            <Feature icon={<BsTerminal />} title="Development & Testing">
-                                With the right team of developers, managers, analysts, and testers
-                                we are able to create functioning technology while enabling you to fully control this process through transparency and achieving a successful launch.
-                            </Feature>
-                            <Feature icon={<BsLifePreserver />} title="Support & Maintenance">
-                                Providing a direct line to support requests and providing fast response to bugs and issues,
-                                saves valuable time for any issues that may be presented.
-                            </Feature>
-                        </Stack>
-                    </GridItem>
-                </SimpleGrid>
-                <Text textAlign={'center'} my={6} fontSize={{ base: "lg", md: "xl" }} color="gray.500">
-                    {`With the use of these established methods we are able to create a valuable strategy that delivers consistent results on diferent projects.`}
-                </Text>
+                            <Divider my={12} />
 
-                <Divider my={12} />
-
-                <Box pb={6} textAlign="center">
-                    <Heading size="lg" mb="4">
-                        Our Technology Stack for a Long-Lasting IT Evolution
-                    </Heading>
-                    <Text maxW="3xl" mx="auto">
-                        We are able to employ the latest or the always evolving, classic, and most trusted technologies having expertise in replicating proven strategies and methods.
-                    </Text>
-                </Box>
-                <Tabs isFitted size={'lg'} orientation="horizontal">
-                    <TabList>
-                        <Tab>Cloud</Tab>
-                        <Tab>Web Frameworks</Tab>
-                        <Tab>Hardware/Firmware</Tab>
-                    </TabList>
-                    <TabPanels>
-                        <TabPanel>
-                            <Center>
-                                <Stack spacing={16} direction={'row'}>
-                                    <Box textAlign={'center'}>
-                                        <Icon as={SiAmazonaws} boxSize={24} />
-                                        <Text fontWeight={'semibold'}>Amazon Web Services</Text>
-                                    </Box>
-                                    <Box textAlign={'center'}>
-                                        <Icon as={SiMicrosoftazure} boxSize={24} />
-                                        <Text fontWeight={'semibold'}>Microsoft Azure</Text>
-                                    </Box>
-                                    <Box textAlign={'center'}>
-                                        <Icon as={SiGooglecloud} boxSize={24} />
-                                        <Text fontWeight={'semibold'}>Google Cloud</Text>
-                                    </Box>
-                                    <Box textAlign={'center'}>
-                                        <Icon as={SiVercel} boxSize={24} />
-                                        <Text fontWeight={'semibold'}>Vercel Cloud</Text>
-                                    </Box>
-                                    <Box textAlign={'center'}>
-                                        <Icon as={MdOutlineMore} boxSize={24} />
-                                        <Text fontWeight={'semibold'}>And more...</Text>
-                                    </Box>
-                                </Stack>
-                            </Center>
-                        </TabPanel>
-                        <TabPanel>
-                            <Center>
-                                <Stack spacing={16} direction={'row'}>
-                                    <Box textAlign={'center'}>
-                                        <Icon as={SiDotnet} boxSize={24} />
-                                        <Text fontWeight={'semibold'}>Microsoft .NET</Text>
-                                    </Box>
-                                    <Box textAlign={'center'}>
-                                        <Icon as={SiNextdotjs} boxSize={24} />
-                                        <Text fontWeight={'semibold'}>Next.js</Text>
-                                    </Box>
-                                    <Box textAlign={'center'}>
-                                        <Icon as={SiExpress} boxSize={24} />
-                                        <Text fontWeight={'semibold'}>Express.js</Text>
-                                    </Box>
-                                    <Box textAlign={'center'}>
-                                        <Icon as={SiNuxtdotjs} boxSize={24} />
-                                        <Text fontWeight={'semibold'}>Nuxt.js</Text>
-                                    </Box>
-                                    <Box textAlign={'center'}>
-                                        <Icon as={MdOutlineMore} boxSize={24} />
-                                        <Text fontWeight={'semibold'}>And more...</Text>
-                                    </Box>
-                                </Stack>
-                            </Center>
-                        </TabPanel>
-                        <TabPanel>
-                            <Center>
-                                <Stack spacing={16} direction={'row'}>
-                                    <Box textAlign={'center'}>
-                                        <Icon as={SiRaspberrypi} boxSize={24} />
-                                        <Text fontWeight={'semibold'}>Raspberry PI</Text>
-                                    </Box>
-                                    <Box textAlign={'center'}>
-                                        <Icon as={SiArduino} boxSize={24} />
-                                        <Text fontWeight={'semibold'}>Arduino</Text>
-                                    </Box>
-                                    <Box textAlign={'center'}>
-                                        <Icon as={BiCustomize} boxSize={24} />
-                                        <Text fontWeight={'semibold'}>Custom Hardware</Text>
-                                    </Box>
-                                    <Box textAlign={'center'}>
-                                        <Icon as={MdOutlineMore} boxSize={24} />
-                                        <Text fontWeight={'semibold'}>And more...</Text>
-                                    </Box>
-                                </Stack>
-                            </Center>
-
-                        </TabPanel>
-                    </TabPanels>
-                </Tabs>
+                            <Box pb={6} textAlign="center">
+                                <Heading size="lg" mb="4">
+                                    {indexData.Block2.Heading}
+                                </Heading>
+                                <Text maxW="3xl" mx="auto">
+                                    {indexData.Block2.Text}
+                                </Text>
+                            </Box>
+                            {/* <Tabs isFitted size={'lg'} orientation={{ sm: "vertical", md: "horizontal" }}> */}
+                            <Tabs isFitted size={'lg'} orientation={"horizontal"}>
+                                <TabList>
+                                    <Tab>{indexData.Block2.t1}</Tab>
+                                    <Tab>{indexData.Block2.t2}</Tab>
+                                    <Tab>{indexData.Block2.t3}</Tab>
+                                </TabList>
+                                <TabPanels>
+                                    <TabPanel>
+                                        <Grid
+                                            templateColumns={{
+                                                md: 'repeat(5, 1fr)',
+                                                sm: 'repeat(3, 2fr)',
+                                                base: 'repeat(2, 2fr)',
+                                            }}
+                                        >
+                                            <Box textAlign={'center'}>
+                                                <Icon as={SiAmazonaws} boxSize={24} />
+                                                <Text fontWeight={'semibold'}>Amazon Web Services</Text>
+                                            </Box>
+                                            <Box textAlign={'center'}>
+                                                <Icon as={SiMicrosoftazure} boxSize={24} />
+                                                <Text fontWeight={'semibold'}>Microsoft Azure</Text>
+                                            </Box>
+                                            <Box textAlign={'center'}>
+                                                <Icon as={SiGooglecloud} boxSize={24} />
+                                                <Text fontWeight={'semibold'}>Google Cloud</Text>
+                                            </Box>
+                                            <Box textAlign={'center'}>
+                                                <Icon as={SiVercel} boxSize={24} />
+                                                <Text fontWeight={'semibold'}>Vercel Cloud</Text>
+                                            </Box>
+                                            <Box textAlign={'center'}>
+                                                <Icon as={MdOutlineMore} boxSize={24} />
+                                                <Text fontWeight={'semibold'}>And more…</Text>
+                                            </Box>
+                                        </Grid>
+                                    </TabPanel>
+                                    <TabPanel>
+                                        <Grid
+                                            templateColumns={{
+                                                md: 'repeat(5, 1fr)',
+                                                sm: 'repeat(3, 2fr)',
+                                                base: 'repeat(2, 2fr)',
+                                            }}
+                                        >
+                                            <Box textAlign={'center'}>
+                                                <Icon as={SiDotnet} boxSize={24} />
+                                                <Text fontWeight={'semibold'}>Microsoft .NET</Text>
+                                            </Box>
+                                            <Box textAlign={'center'}>
+                                                <Icon as={SiNextdotjs} boxSize={24} />
+                                                <Text fontWeight={'semibold'}>Next.js</Text>
+                                            </Box>
+                                            <Box textAlign={'center'}>
+                                                <Icon as={SiExpress} boxSize={24} />
+                                                <Text fontWeight={'semibold'}>Express.js</Text>
+                                            </Box>
+                                            <Box textAlign={'center'}>
+                                                <Icon as={SiNuxtdotjs} boxSize={24} />
+                                                <Text fontWeight={'semibold'}>Nuxt.js</Text>
+                                            </Box>
+                                            <Box textAlign={'center'}>
+                                                <Icon as={MdOutlineMore} boxSize={24} />
+                                                <Text fontWeight={'semibold'}>And more...</Text>
+                                            </Box>
+                                        </Grid>
+                                    </TabPanel>
+                                    <TabPanel>
+                                        <Grid
+                                            templateColumns={{
+                                                md: 'repeat(4, 1fr)',
+                                                sm: 'repeat(2, 2fr)',
+                                                base: 'repeat(2, 2fr)',
+                                            }}
+                                        >
+                                            <Box textAlign={'center'}>
+                                                <Icon as={SiRaspberrypi} boxSize={24} />
+                                                <Text fontWeight={'semibold'}>Raspberry PI</Text>
+                                            </Box>
+                                            <Box textAlign={'center'}>
+                                                <Icon as={SiArduino} boxSize={24} />
+                                                <Text fontWeight={'semibold'}>Arduino</Text>
+                                            </Box>
+                                            <Box textAlign={'center'}>
+                                                <Icon as={BiCustomize} boxSize={24} />
+                                                <Text fontWeight={'semibold'}>Custom Hardware</Text>
+                                            </Box>
+                                            <Box textAlign={'center'}>
+                                                <Icon as={MdOutlineMore} boxSize={24} />
+                                                <Text fontWeight={'semibold'}>And more...</Text>
+                                            </Box>
+                                        </Grid>
+                                    </TabPanel>
+                                </TabPanels>
+                            </Tabs>
 
 
 
-                <Divider my={12} />
+                            <Divider my={12} />
 
-                <Values />
+                            <Values />
 
-                <Box p={"2rem"} />
+                            <Box p={"2rem"} />
 
-            </Container>
+                        </Box>
+                    </>
+                )
+            })}
         </>
     );
 };

@@ -310,11 +310,11 @@ const INDEX = () => {
                             <Center>
                                 <Button
                                     onClick={(e: any) => {
-                                        setrefECV("mailto:zedir@duck.com");
-                                        setprettierECV("zedir@duck.com");
+                                        setrefECV("mailto:contact@zedir.com");
+                                        setprettierECV("contact@zedir.com");
                                         setecvReq(`You are about to email us at: `);
                                         setecvTarget(`_self`);
-                                        onOpen()
+                                        onOpen()    
                                     }}
                                     size="md"
                                     height="auto"
