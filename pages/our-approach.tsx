@@ -1,6 +1,8 @@
 import { Box, Text, Heading, SimpleGrid, Image, Divider, Center, Img, Stack } from "@chakra-ui/react";
 import { NextSeo } from "next-seo";
 import { Values } from "../components";
+import indexdat from '../assets/index.json'
+import { useRouter } from "next/router";
 
 // #url
 {/* https://duckduckgo.com/?q=%22redefining+agile%22&ia=web */ }
@@ -86,70 +88,28 @@ const Feature = ({ heading, text, imgsrc, ordera }: FeatureProps) => {
 
 
 const Index = () => {
+    const { locale } = useRouter()
     return (
         <>
-            <NextSeo
-                title='How we do Things - Automating all Things | Zedir'
-                description='Find our agile development strategies and ways to find solutions that focus on advancing innovation and driving powerful outcomes.'
-                canonical="https://www.zedir.com/our-approach"
-            // languageAlternates={[
-            //     {
-            //         hrefLang: 'es',
-            //         href: 'https://www.zedir.com/es/our-approach',
-            //     }
-            // ]}
-            />
-            <Box maxW={'container.xl'} px={{ base: 4, sm: 4, md: 4, lg: 4, xl: 0 }} pt={4} mx="auto">
-                {/* <Heading>Redefining Agile</Heading> */}
-                <Heading textAlign={{ sm: "center", md: "left" }} color={'black'}>
-                    {`Finding big Solutions Together`}
-                </Heading>
-                <Text textAlign={{ sm: "center", md: "left" }} pt={2} color="gray.700" fontSize={'lg'}>
-                    {`These methodologies are used and implemented in more than half of the Fortune 500 company's projects, as well as several government organizations throughout the United States and other countries internationally.`}
-                </Text>
-
-                <Divider my={12} />
-
-                <Feature
-                    heading="Redefining Agile"
-                    text="Our Agile Development Strategies and Solutions are focused on providing the ability to switch priorities, support test applications, and advance industry innovation in order to drive significant outcomes. Allowing you to focus on other big picture strategies."
-                    imgsrc="/img/our-approach/redefining-agile.jpg"
-                    ordera="initial"
-                />
-                <Divider my={12} />
-                <Feature
-                    heading="Quality Assurance"
-                    text="The Quality assurance methods we apply are essential for ensuring safety and reliability innovation with the emergence of complex connected devices. The purpose of this process should automate regular testing, as well as security audits to identify any potential risks.  By working together to find big solutions, organizations can develop solutions to meet their safety, reliability, and security needs."
-                    imgsrc="/img/our-approach/costumer-satisfaction.jpg"
-                    ordera="2"
-                />
-                <Divider my={12} />
-                <Feature
-                    heading="Risk Control"
-                    text="By introducing controls such as robust authentication, access control, and data privacy protocols, businesses can ensure their investments are secure. Additionally, they can use data analytics to monitor usage and detect anomalies in activity. This can provide an early warning system and act as a deterrent against malicious actors. By investing in these security measures, companies can protect their investments, maintain a competitive edge, and remain in compliance with relevant regulations."
-                    imgsrc="/img/our-approach/risk-control.jpg"
-                    ordera="initial"
-                />
-                <Divider my={12} />
-                <Feature
-                    heading={`ROI (Return on Investment)`}
-                    text="Businesses can improve their productivity and efficiency, allowing them to beat out their competitors and maximize returns on investment. Data-driven insights can help companies make better decisions, and identify areas of improvement. So whether your goal is to increase efficiency, reduce costs, or stay ahead of the competition, investing in industrial IoT and control systems can give you the edge you need."
-                    imgsrc="/img/our-approach/return-on-investment.jpg"
-                    ordera="2"
-                />
-                <Divider my={12} />
-                <Feature
-                    heading={`CaaS (Consulting as a Service)`}
-                    text="This type of consulting helps businesses make educated and informed decisions when investing in Industrial IoT and Control Systems. By leveraging the expertise of experienced professionals, businesses can save time and money by making the right investments in the right areas. The service is designed to provide comprehensive analysis and advice on the best solutions for the business, taking into account the current and future needs of the organization."
-                    imgsrc="/img/our-approach/consulting.jpg"
-                    ordera="initial"
-                />
-                {/* <Divider my={12} />
-                <Values /> */}
-            </Box>
-
-            <Box py={'3rem'} />
-
+            {indexdat.data.filter(p => p.locale === locale).map((indexData, i) => {
+                return (
+                    <>
+                        <NextSeo
+                            title='How we do Things - Automating all Things | Zedir'
+                            description='Find our agile development strategies and ways to find solutions that focus on advancing innovation and driving powerful outcomes.'
+                            canonical="https://www.zedir.com/our-approach"
+                            languageAlternates={[
+                                {
+                                    hrefLang: 'es',
+                                    href: 'https://www.zedir.com/es/our-approach',
+                                }
+                            ]}
+                        />
+                        <Box maxW={'container.xl'} px={{ base: 4, sm: 4, md: 4, lg: 4, xl: 0 }} pt={4} mx="auto">
+                        </Box>
+                    </>
+                )
+            })}
         </>
     );
 }
