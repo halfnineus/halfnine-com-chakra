@@ -180,192 +180,190 @@ const INDEX = () => {
                                 </Stack>
                             </VStack>
                         </Flex>
-                        <Container pt={'5'} maxW={'container.lg'}>
 
-                            <Heading pl={4} fontSize={{ base: '2xl', md: '3xl' }}>
-                                {indexData.block2.heading}
+                        <Heading pt={'5'} fontSize={{ base: '2xl', md: '3xl' }}>
+                            {indexData.block2.heading}
+                        </Heading>
+                        <Text fontSize={{ base: 'md', md: 'lg' }}>
+                            {indexData.block2.text}
+                        </Text>
+
+                        <Divider mt={5} mb={5} />
+
+                        <Box
+                            bg={'gray.50'}
+                            borderRadius='xl'
+                            px={{ base: 5, sm: 5, md: 5, lg: 10 }}
+                            pb={{ base: 5, sm: 5, md: 5, lg: 10 }}
+                            pt={{ base: 4, sm: 4, md: 4, lg: 8 }}
+                            boxShadow={'md'}
+                        >
+                            <Heading pb={2} fontSize={{ base: '2xl', md: '3xl' }}>
+                                {indexData.form.heading}
                             </Heading>
-                            <Text pl={4} fontSize={{ base: 'md', md: 'lg' }}>
-                                {indexData.block2.text}
-                            </Text>
+                            <form action={'submit'} onSubmit={handleSubmit}>
+                                <VStack spacing={5}>
+                                    {/* <HStack spacing={5} minW={'full'}> */}
+                                    <SimpleGrid
+                                        w="full"
+                                        // maxW={{ base: 'unset', lg: '4xl' }}
+                                        columns={{ base: 1, sm: 2 }}
+                                        // columns={2}
+                                        spacing={5}
+                                    // fontSize="sm"
+                                    >
 
-                            <Divider mt={5} mb={5} />
-
-                            <Box
-                                bg={'gray.50'}
-                                borderRadius='xl'
-                                px={{ base: 5, sm: 5, md: 5, lg: 10 }}
-                                pb={{ base: 5, sm: 5, md: 5, lg: 10 }}
-                                pt={{ base: 4, sm: 4, md: 4, lg: 8 }}
-                                boxShadow={'md'}
-                            >
-                                <Heading pb={2} fontSize={{ base: '2xl', md: '3xl' }}>
-                                    {indexData.form.heading}
-                                </Heading>
-                                <form action={'submit'} onSubmit={handleSubmit}>
-                                    <VStack spacing={5}>
-                                        {/* <HStack spacing={5} minW={'full'}> */}
-                                        <SimpleGrid
-                                            w="full"
-                                            // maxW={{ base: 'unset', lg: '4xl' }}
-                                            columns={{ base: 1, sm: 2 }}
-                                            // columns={2}
-                                            spacing={5}
-                                        // fontSize="sm"
-                                        >
-
-                                            <FormControl isRequired>
-                                                <FormLabel>{indexData.form.name}</FormLabel>
-                                                <InputGroup>
-                                                    <InputLeftElement pointerEvents="none">
-                                                        <BsPerson color="gray.800" />
-                                                    </InputLeftElement>
-                                                    <Input
-                                                        type={'text'}
-                                                        name={"name"}
-                                                        onChange={(e: any) => setName(e.target.value)}
-                                                        placeholder={'John Doe'}
-                                                        isRequired
-                                                    />
-                                                </InputGroup>
-                                            </FormControl>
-                                            <FormControl isRequired id="mail">
-                                                <FormLabel>{indexData.form.email}</FormLabel>
-                                                <InputGroup>
-                                                    <InputLeftElement pointerEvents="none">
-                                                        <MdOutlineEmail color="gray.800" />
-                                                    </InputLeftElement>
-                                                    <Input
-                                                        type={'email'}
-                                                        defaultValue={email}
-                                                        onChange={(e: any) => setEmail(e.target.value)}
-                                                        placeholder={'Email'}
-                                                        isRequired
-                                                    />
-                                                </InputGroup>
-                                            </FormControl>
-                                            {/* </HStack> */}
-                                            {/* <HStack spacing={5} minW={'full'}> */}
-                                            <FormControl id="company">
-                                                <FormLabel>{indexData.form.companyname}</FormLabel>
-                                                <InputGroup>
-                                                    <InputLeftElement pointerEvents="none">
-                                                        <BsBuilding color="gray.800" />
-                                                    </InputLeftElement>
-                                                    <Input
-                                                        type={'company'}
-                                                        name={"company"}
-                                                        onChange={(e: any) => setCompany(e.target.value)}
-                                                        placeholder={'Zedir'}
-                                                    />
-                                                </InputGroup>
-                                            </FormControl>
-                                            <FormControl id="phone">
-                                                <FormLabel>{indexData.form.number}</FormLabel>
-                                                <InputGroup>
-                                                    <InputLeftElement pointerEvents="none">
-                                                        <MdPhone color="gray.800" />
-                                                    </InputLeftElement>
-                                                    <Input
-                                                        maxLength={20}
-                                                        type={'tel'}
-                                                        name={"phone"}
-                                                        onChange={(e: any) => setPhone(e.target.value)}
-                                                        placeholder={'Phone Number'}
-                                                    />
-                                                </InputGroup>
-                                            </FormControl>
-                                        </SimpleGrid>
+                                        <FormControl isRequired>
+                                            <FormLabel>{indexData.form.name}</FormLabel>
+                                            <InputGroup>
+                                                <InputLeftElement pointerEvents="none">
+                                                    <BsPerson color="gray.800" />
+                                                </InputLeftElement>
+                                                <Input
+                                                    type={'text'}
+                                                    name={"name"}
+                                                    onChange={(e: any) => setName(e.target.value)}
+                                                    placeholder={'John Doe'}
+                                                    isRequired
+                                                />
+                                            </InputGroup>
+                                        </FormControl>
+                                        <FormControl isRequired id="mail">
+                                            <FormLabel>{indexData.form.email}</FormLabel>
+                                            <InputGroup>
+                                                <InputLeftElement pointerEvents="none">
+                                                    <MdOutlineEmail color="gray.800" />
+                                                </InputLeftElement>
+                                                <Input
+                                                    type={'email'}
+                                                    defaultValue={email}
+                                                    onChange={(e: any) => setEmail(e.target.value)}
+                                                    placeholder={'Email'}
+                                                    isRequired
+                                                />
+                                            </InputGroup>
+                                        </FormControl>
                                         {/* </HStack> */}
-                                        <FormControl id="message">
+                                        {/* <HStack spacing={5} minW={'full'}> */}
+                                        <FormControl id="company">
+                                            <FormLabel>{indexData.form.companyname}</FormLabel>
+                                            <InputGroup>
+                                                <InputLeftElement pointerEvents="none">
+                                                    <BsBuilding color="gray.800" />
+                                                </InputLeftElement>
+                                                <Input
+                                                    type={'company'}
+                                                    name={"company"}
+                                                    onChange={(e: any) => setCompany(e.target.value)}
+                                                    placeholder={'Zedir'}
+                                                />
+                                            </InputGroup>
+                                        </FormControl>
+                                        <FormControl id="phone">
+                                            <FormLabel>{indexData.form.number}</FormLabel>
+                                            <InputGroup>
+                                                <InputLeftElement pointerEvents="none">
+                                                    <MdPhone color="gray.800" />
+                                                </InputLeftElement>
+                                                <Input
+                                                    maxLength={20}
+                                                    type={'tel'}
+                                                    name={"phone"}
+                                                    onChange={(e: any) => setPhone(e.target.value)}
+                                                    placeholder={'Phone Number'}
+                                                />
+                                            </InputGroup>
+                                        </FormControl>
+                                    </SimpleGrid>
+                                    {/* </HStack> */}
+                                    <FormControl id="message">
                                         <FormLabel>{indexData.form.message}</FormLabel>
-                                            <Textarea
-                                                minH={{ base: 48, sm: 36, md: 36 }}
-                                                onChange={(e: any) => setMessage(e.target.value)}
-                                                placeholder={indexData.form.message}
-                                            />
-                                        </FormControl>
-                                        <FormControl>
-                                            <Button
-                                                colorScheme={"blue"}
-                                                type={'submit'}
-                                                isLoading={submitted}
-                                                loadingText={'Submitting'}
-                                                _hover={{}}
-                                                onClick={(e: any) => { handleSubmit(e); }}
-                                            >
-                                                {indexData.form.submit}
-                                            </Button>
-                                        </FormControl>
-                                    </VStack>
-                                </form>
-                            </Box>
+                                        <Textarea
+                                            minH={{ base: 48, sm: 36, md: 36 }}
+                                            onChange={(e: any) => setMessage(e.target.value)}
+                                            placeholder={indexData.form.message}
+                                        />
+                                    </FormControl>
+                                    <FormControl>
+                                        <Button
+                                            colorScheme={"blue"}
+                                            type={'submit'}
+                                            isLoading={submitted}
+                                            loadingText={'Submitting'}
+                                            _hover={{}}
+                                            onClick={(e: any) => { handleSubmit(e); }}
+                                        >
+                                            {indexData.form.submit}
+                                        </Button>
+                                    </FormControl>
+                                </VStack>
+                            </form>
+                        </Box>
 
-                            <Flex pt={5} pb={2} align="center">
-                                <Divider />
-                                <Heading fontSize={{ base: 'xl', md: '2xl' }} px="4">Or</Heading>
-                                <Divider />
-                            </Flex>
+                        <Flex pt={5} pb={2} align="center">
+                            <Divider />
+                            <Heading fontSize={{ base: 'xl', md: '2xl' }} px="4">Or</Heading>
+                            <Divider />
+                        </Flex>
 
-                            <Center>
-                                <Button
-                                    onClick={(e: any) => {
-                                        setrefECV("mailto:contact@zedir.com");
-                                        setprettierECV("contact@zedir.com");
-                                        setecvReq(`You are about to email us at: `);
-                                        setecvTarget(`_self`);
-                                        onOpen()    
-                                    }}
-                                    size="md"
-                                    height="auto"
-                                    width="auto"
-                                    minH={'10'}
-                                    variant="ghost"
-                                    _hover={{ color: 'blue.500', bg: 'blackAlpha.100' }}
-                                    leftIcon={<MdEmail color={'black'} size="20px" />}
-                                >
-                                    Email Us
-                                </Button>
-                                <Button
-                                    onClick={(e: any) => {
-                                        setrefECV("tel:+13213120362");
-                                        setprettierECV("+1 (321) 312-0362");
-                                        setecvReq(`You are about to call us at: `);
-                                        setecvTarget(`_self`);
-                                        onOpen()
-                                    }}
-                                    size="md"
-                                    height="auto"
-                                    width="auto"
-                                    minH={'10'}
-                                    variant="ghost"
-                                    _hover={{ color: 'blue.500', bg: 'blackAlpha.100' }}
-                                    leftIcon={<MdCall color={'black'} size="20px" />}
-                                >
-                                    Call Us
-                                </Button>
-                                <Button
-                                    onClick={(e: any) => {
-                                        setrefECV("https://duckduckgo.com/?q=Orlando%2C+FL&iaxm=maps");
-                                        setprettierECV("duckduckgo.com");
-                                        setecvReq(`You are about to view maps at: `);
-                                        setecvTarget(`_blank`);
-                                        onOpen()
-                                    }} size="md"
-                                    height="auto"
-                                    width="auto"
-                                    minH={'10'}
-                                    variant="ghost"
-                                    _hover={{ color: 'blue.500', bg: 'blackAlpha.100' }}
-                                    leftIcon={<MdLocationOn color={'black'} size="20px" />}
-                                >
-                                    Visit Us
-                                </Button>
-                            </Center>
+                        <Center>
+                            <Button
+                                onClick={(e: any) => {
+                                    setrefECV("mailto:contact@zedir.com");
+                                    setprettierECV("contact@zedir.com");
+                                    setecvReq(`You are about to email us at: `);
+                                    setecvTarget(`_self`);
+                                    onOpen()
+                                }}
+                                size="md"
+                                height="auto"
+                                width="auto"
+                                minH={'10'}
+                                variant="ghost"
+                                _hover={{ color: 'blue.500', bg: 'blackAlpha.100' }}
+                                leftIcon={<MdEmail color={'black'} size="20px" />}
+                            >
+                                Email Us
+                            </Button>
+                            <Button
+                                onClick={(e: any) => {
+                                    setrefECV("tel:+13213120362");
+                                    setprettierECV("+1 (321) 312-0362");
+                                    setecvReq(`You are about to call us at: `);
+                                    setecvTarget(`_self`);
+                                    onOpen()
+                                }}
+                                size="md"
+                                height="auto"
+                                width="auto"
+                                minH={'10'}
+                                variant="ghost"
+                                _hover={{ color: 'blue.500', bg: 'blackAlpha.100' }}
+                                leftIcon={<MdCall color={'black'} size="20px" />}
+                            >
+                                Call Us
+                            </Button>
+                            <Button
+                                onClick={(e: any) => {
+                                    setrefECV("https://duckduckgo.com/?q=Orlando%2C+FL&iaxm=maps");
+                                    setprettierECV("duckduckgo.com");
+                                    setecvReq(`You are about to view maps at: `);
+                                    setecvTarget(`_blank`);
+                                    onOpen()
+                                }} size="md"
+                                height="auto"
+                                width="auto"
+                                minH={'10'}
+                                variant="ghost"
+                                _hover={{ color: 'blue.500', bg: 'blackAlpha.100' }}
+                                leftIcon={<MdLocationOn color={'black'} size="20px" />}
+                            >
+                                Visit Us
+                            </Button>
+                        </Center>
 
-                            <Divider mt={5} mb={8} />
+                        <Divider mt={5} mb={8} />
 
-                        </Container>
                     </>
                 )
             })}
