@@ -3,13 +3,13 @@
     {
       "locale": "en",
       "head": {
-        "title": "Zedir - Industrial Automation Development and Consulting",
+        "title": "Zedir - Customized Automation Solutions for Efficient Industrial Processes",
         "description": "Discover automation solutions for your industry through Internet of Things (IoT) and Control Systems."
       },
       "block1": {
         "h1_1": "Industrial Automation",
         "h1_2": "Development & Consulting",
-        "txt_1": "Discover automation solutions for your industry through Internet of Things and Control Systems.",
+        "txt_1": "Customized Automation Solutions for Efficient Industrial Processes.",
         "button": "Let's Talk!"
       },
       "block2": {
@@ -48,13 +48,13 @@
     {
       "locale": "es",
       "head": {
-        "title": "Zedir - Consultoría y Desarrollo de Automatización Industrial",
+        "title": "Zedir - Soluciones de Automatización Personalizadas para Procesos Industriales Eficientes",
         "description": "Descubra soluciones de automatización para su industria a través de Internet de las Cosas (IoT) y Sistemas de Control."
       },
       "block1": {
         "h1_1": "Automatización industrial",
         "h1_2": "Desarrollo & Consultoría",
-        "txt_1": "Descubre soluciones de automatización para tu industria a través de Internet de las Cosas y Sistemas de Control.",
+        "txt_1": "Soluciones de Automatización Personalizadas para Procesos Industriales Eficientes.",
         "button": "Hablar con un nosotros"
       },
       "block2": {
