@@ -21,28 +21,28 @@
       },
       "block3": {
         "f1t": "Usability",
-        "f1b": "Applications can easily become very complex, changing the product or educating the user can become costly. Replicating the use of proven Technology Stacks and Frameworks allows us to deliver a simple experience to a complicated system.",
+        "f1b": "Applications can quickly become very complex, and modifying them or educating users can be costly. However, replicating the use of proven technology stacks and frameworks enables us to deliver a simple experience for a complicated system.",
         "f2t": "Compliance",
-        "f2b": "Here are some of the regulations you might face while developing an application: GDPR, CCPA, AICPA SOC 2, HIPAA, CCPA, PCI, ISO/IEC 27001. Not complying can lead to severe fines. It's our job to make sure the technology complies with all the necessary regulations.",
+        "f2b": "When developing an application, there are several regulations that you may need to comply with, (GDPR, CCPA, AICPA SOC 2, HIPAA, CCPA, PCI, ISO/IEC 27001, etc... ). Failure to comply with these regulations can result in severe fines. We ensure that technology complies with all necessary regulations.",
         "f3t": "Security",
-        "f3b": "There are more than fifty vulnerabilities reported each day, Maintaining IT assets updated, Securing Accounts from Data Breaches and Protecting Users from Social Engineering. The right team with security-conscious developers is essential for any application."
+        "f3b": "More than fifty vulnerabilities are reported every day. Therefore, it's crucial to keep IT assets updated, secure accounts from data breaches, and protect users from social engineering. Having a security-conscious team of developers is essential for any application."
       },
       "block4": {
-        "title": "Let's create a story together",
-        "description": "Connecting Technology with your goals, taking what is possible on your Business to new lengths.",
+        "title": "Unleash Your True Potential!",
+        "description": "Connect technology with your goals, and take your business to new heights by exploring what is possible.",
         "srvc1": "Development Services",
         "srvc2": "Digital Transformation",
         "srvc3": "Project Consultation"
       },
       "features": {
         "f1t": "Teamwork",
-        "f1d": "Teamwork is the path to achieve creativity and collaboration, and also the path to achieve something great.",
+        "f1d": "Collaborating with a shared vision creates a foundation for creativity, efficiency and outstanding results.",
         "f2t": "Innovation",
-        "f2d": "Connecting knowledge with imagination, we create value for a better purpose.",
+        "f2d": "Expertise and imagination are leveraged to create valuable solutions that improve processes and reduce costs.",
         "f3t": "Challenge",
-        "f3d": "By speaking up, we push the boundaries of what is possible in any environment.",
+        "f3d": "We embrace challenges and push the limits to create breakthroughs in efficiency and productivity.",
         "f4t": "Solutions",
-        "f4d": "Finding the solution to problems gives value to the people and communities around us."
+        "f4d": "Our customized automation solutions solve problems, add value, and positively impact people and communities."
       }
     },
     {
@@ -66,28 +66,28 @@
       },
       "block3": {
         "f1t": "Usabilidad",
-        "f1b": "Las aplicaciones pueden volverse muy complejas fácilmente, cambiar el producto o educar al usuario puede volverse costoso. Reproducir el uso de pilas y marcos tecnológicos probados nos permite ofrecer una experiencia simple a un sistema complicado.",
+        "f1b": "Las aplicaciones pueden volverse muy complejas rápidamente, y modificarlas o educar a los usuarios puede resultar costoso. Sin embargo, replicar el uso de pilas y marcos de tecnología probados nos permite ofrecer una experiencia simple para un sistema complicado.",
         "f2t": "Cumplimiento",
-        "f2b": "Estas son algunas de las regulaciones que podría enfrentar al desarrollar una aplicación: GDPR, CCPA, AICPA SOC 2, HIPAA, CCPA, PCI, ISO/IEC 27001. El incumplimiento puede generar multas severas. Es nuestro trabajo asegurarnos de que la tecnología cumpla con todas las regulaciones necesarias.",
+        "f2b": "A la hora de desarrollar una aplicación, existen varias normativas que es posible que deba cumplir (GDPR, CCPA, AICPA SOC 2, HIPAA, CCPA, PCI, ISO/IEC 27001, etc...). El incumplimiento de estas normas puede resultar en multas severas. Nos aseguramos de que la tecnología cumpla con todas las normativas necesarias.",
         "f3t": "Seguridad",
-        "f3b": "Hay más de cincuenta vulnerabilidades reportadas cada día, manteniendo actualizados los activos de TI, asegurando las cuentas de las filtraciones de datos y protegiendo a los usuarios de la ingeniería social. El equipo adecuado con desarrolladores conscientes de la seguridad es esencial para cualquier aplicación."
+        "f3b": "Cada día se reportan más de cincuenta vulnerabilidades. Por lo tanto, es crucial mantener actualizados los activos de TI, asegurar las cuentas contra filtraciones de datos y proteger a los usuarios de la ingeniería social. Tener un equipo de desarrolladores consciente de la seguridad es esencial para cualquier aplicación."
       },
       "block4": {
-        "title": "Creemos una historia juntos",
-        "description": "Conectando la tecnología con sus objetivos, llevando lo que es posible en su negocio a nuevas longitudes.",
+        "title": "¡Libera tu verdadero potencial!",
+        "description": "Conecte la tecnología con sus objetivos y lleve su negocio a nuevas alturas explorando lo que es posible.",
         "srvc1": "Servicios de desarrollo",
         "srvc2": "Transformación Digital",
         "srvc3": "Consulta de proyectos"
       },
       "features": {
         "f1t": "Colaboración",
-        "f1d": "El trabajo en equipo es el camino para lograr la creatividad, y también el camino para lograr algo grande.",
+        "f1d": "Colaborar con una visión compartida crea una base para la creatividad, la eficiencia y los resultados sobresalientes.",
         "f2t": "Innovación",
-        "f2d": "Conectando el conocimiento con la imaginación, creamos valor para un mejor propósito.",
+        "f2d": "Nuestra experiencia e imaginación se aprovechan para crear soluciones valiosas que mejoran procesos y reducen costos.",
         "f3t": "Desafío",
-        "f3d": "Al hablar, ampliamos los límites de lo que es posible en cualquier entorno.",
+        "f3d": "Aceptamos los desafíos y empujamos los límites para crear avances en eficiencia y productividad.",
         "f4t": "Soluciones",
-        "f4d": "Encontrar la solución a los problemas da valor a las personas y comunidades que nos rodean."
+        "f4d": "Nuestras soluciones de automatización personalizadas resuelven problemas, agregan valor e impactan positivamente a las personas y las comunidades."
       }
     }
   ]

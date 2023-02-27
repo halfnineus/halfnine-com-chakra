@@ -6,9 +6,9 @@ const MainLayout = ({ children }: any) => {
         <>
             <Navbar />
             <main>
-                <Box maxW={'container.xl'} px={{ base: '4', sm: '4', md: '4', lg: '4', xl: 0 }} pt={4} mx="auto">
+                {/* <Box maxW={'container.xl'} px={{ base: '4', sm: '4', md: '4', lg: '4', xl: 0 }} pt={4} mx="auto"> */}
                     {children}
-                </Box>
+                {/* </Box> */}
             </main>
             <SCFooter />
             <Cookies />
