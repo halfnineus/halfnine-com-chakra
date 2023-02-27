@@ -28,75 +28,27 @@ function Consent() {
         return null;
     }
     return (
-        // <Box
-        //     className={`absolute bottom-3 w-[90%] left-3 p-3 rounded-md bg-slate-200 ${consent ? 'hidden' : ''}`}
-        //     width={'full'}
-        //     bg={'gray.900'}
-        //     minH={'60px'}
-        //     bottom={0}
-        //     position={'fixed'}
-        //     opacity={'.92'}
-        //     px={4}
-        //     pt={2}
-        // >
-        //     This Site use cookie, please accept them if you want
-        //     <div className="flex align-middle justify-between">
-        //         <Button
-        //             onClick={(e) => {
-        //                 closeP();
-        //             }}
-        //         >
-        //             Close
-        //         </Button>
-        //         <Button
-        //             onClick={(e) => denyCookie()}
-        //             className="p-2 bg-red-400 rounded-md"
-        //         >
-        //             Deny All
-        //         </Button>
-        //         <Button
-        //             onClick={() => {
-        //                 acceptCookie();
-        //             }}
-        //             className="p-2 bg-green-400 rounded-md"
-        //         >
-        //             Accept All
-        //         </Button>
-        //     </div>
-        // </Box>
         <Box
-            className={`absolute bottom-3 w-[90%] left-3 p-3 rounded-md bg-slate-200 ${consent ? 'hidden' : ''}`}
-            width={'full'}
-            bg={'gray.900'}
-            // minH={'60px'}
-            bottom={0}
+            bg={'gray.200'}
+            minH={'60px'}
             position={'fixed'}
-            opacity={'.92'}
+            bottom={2}
+            left={0}
+            right={0}
+            // opacity={'.98'}
             px={4}
             py={2}
+            rounded={'xl'}
+            maxW={'72rem'}
+            mx={'auto'}
         >
             <HStack>
-                <Box color={'yellow.500'} fontSize="1.5rem" pr={1}>
+                <Box color={'blue.500'} fontSize="1.5rem" pr={1}>
                     <BiCookie />
                 </Box>
-                <Text fontWeight={'semibold'} fontSize={{ base: 'xs', sm: 'sm', md: "md" }} color={'yellow.500'}>
-                    This website uses cookies to ensure you have the best experience possible.
+                <Text fontWeight={'semibold'} fontSize={{ base: 'xs', sm: 'sm', md: "md" }} color={'blue.500'}>
+                    {'We collect cookies to analyze our website traffic and performance, we never collect any personal data.'}
                 </Text>
-                <Link
-                    href={"http://cookiesandyou.com/"}
-                    // href={"https://www.cloudflare.com/learning/privacy/what-are-cookies/"}
-                    target={'_blank'}
-                >
-                    <Button
-                        userSelect={'text'}
-                        fontSize={{ base: 'xs', sm: 'sm', md: "md" }}
-                        fontWeight="medium"
-                        color={'blue.400'}
-                        variant={'link'}
-                    >
-                        {"Learn More"}
-                    </Button>
-                </Link>
                 <Spacer />
                 <Button
                     onClick={() => {
@@ -104,11 +56,11 @@ function Consent() {
                     }}
                     fontWeight={'bold'}
                     fontSize={{ base: 'xs', sm: 'sm', md: "md" }}
-                    colorScheme={'yellow'}
+                    colorScheme={'blue'}
                     px={{ base: 4, sm: 6, md: 12 }}
                     mr={{ base: 0, xl: 12 }}
                 >
-                    Got It!
+                    I Agree
                 </Button>
             </HStack>
         </Box>

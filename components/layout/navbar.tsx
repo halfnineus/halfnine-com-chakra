@@ -69,7 +69,7 @@ export default function WithSubnavigation() {
                 />
                 <Flex flex={{ base: 1 }} justify={{ base: 'center', md: 'start' }}>
                     <Link href={'/'}>
-                        <Icon ml={{ base: 0, md: -6 }} mr={{ base: 5, sm: -3 }} fontSize={{ base: 120, md: 180 }} my={{ base: -8, md: -20 }} pb={{ base: 3, md: 2 }} viewBox='0 0 200 33.528'>
+                        <Icon ml={{ base: 0, md: -6 }} mr={{ base: 5, sm: -3 }} fontSize={{ base: 120, md: 180 }} maxH={16} my={{ base: -8, md: -20 }} pb={{ base: 3, md: 2 }} viewBox='0 0 200 33.528'>
                             <path d="M56.18 42.267v2.744H30.575l5.08-8.89h-3.15v-1.778h4.166l3.15-5.538H18.435v-1.778h22.403l5.537-9.652H30.22v-5.74h26.01l-1.32 2.337H32.861v.965H54.35l-6.807 12.09h1.372v1.778h-2.388l-3.15 5.538h19.61v1.778H42.361l-1.83 3.302H56.18v1.422h-8.026v1.422zM91.13 42.47v2.54H66.746V23.168H61.97v-1.778h4.776v-9.906H91.13v5.638H72.334v.864H67v.965h5.334v2.439H92.45v1.778H72.334v2.387h18.135v5.588H72.334v8.331H91.13v1.83H78.328v1.168zM145.232 27.891H133.09v.356q0 3.505-1.168 6.553t-3.404 5.334q-1.066 1.168-2.438 2.083-1.32.863-2.845 1.524-1.524.558-4.165.914-2.642.356-6.706.356h-5.994V33.123h3.25v-.762h-3.25V11.483h5.79q7.52 0 10.72 1.32 3.098 1.27 5.334 3.607l.152.153H112.72v.61q-.407-.052-.762-.052v22.403q7.06.051 9.194-.914 2.185-1.016 3.556-2.54 1.423-1.575 2.134-3.607.711-2.032.711-4.216v-.356h-12.801v-1.778h12.598q-.203-1.016-.559-2.032-.762-1.981-2.184-3.505-.711-.711-1.626-1.372-.914-.66-1.93-1.067-.61-.203-1.677-.406h10.008q1.473 1.829 2.388 4.013.914 2.083 1.168 4.37h12.294z" /><path d="M151.683 45.01h-5.74V31.854h-8.789v-1.778h8.789V11.483h5.74zM198.622 31.65h-5.74l-.05.051 5.892 13.31h-5.639L187.6 33.784h-10.211V45.01h-5.639V30.939h15.291v-.965h-15.29v-8.23h-13.97v-1.778h13.97v-8.483h14.985q2.49 0 4.521.914 2.083.864 3.556 2.388 1.474 1.473 2.286 3.505.864 1.981.864 4.216 0 2.642-1.32 5.131-.61 1.22-1.576 2.235h3.556zm-10.363-9.906h-10.871v6.401h9.398q1.22 0 2.184-.457 1.016-.508 1.728-1.27.762-.762 1.117-1.778.407-1.016.407-2.134 0-2.54-1.575-3.962-1.524-1.473-3.861-1.473h-9.398v2.895h10.871z" />
                         </Icon>
                     </Link>
@@ -116,7 +116,7 @@ const DesktopNav = (e: any,) => {
                                                 onClick={onClose}
                                                 display="inline-block"
                                                 px="2"
-                                                py="2"
+                                                my="2"
                                                 fontWeight="semibold"
                                                 userSelect={'none'}
                                                 _hover={{
@@ -124,7 +124,6 @@ const DesktopNav = (e: any,) => {
                                                     color: "blue.400",
                                                 }}
                                             >
-
                                                 {navItem.label}
                                             </Text>
                                         </Link>
@@ -132,7 +131,6 @@ const DesktopNav = (e: any,) => {
                                 </PopoverTrigger>
                                 {navItem.children && (
                                     <PopoverContent
-
                                         // transition={'all .25s ease-in-out'}
                                         // minW={'sm'}
                                         boxShadow={'xl'}
@@ -295,7 +293,7 @@ const NAV_ITEMS: Array<NavItem> = [
             {
                 label: 'Development Services',
                 subLabel: 'Transform Ideas into Solutions',
-                href: '/services/development',
+                href: '/services#development',
             },
             {
                 label: 'Digital Transformation',
@@ -344,7 +342,7 @@ const NAV_ITEMS: Array<NavItem> = [
             {
                 label: 'Servicios de desarrollo',
                 subLabel: 'Transforme ideas en soluciones',
-                href: '/services/development',
+                href: '/services#development',
             },
             {
                 label: 'Transformación Digital',

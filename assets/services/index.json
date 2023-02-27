@@ -8,18 +8,37 @@
             },
             "img": "Industrial Automation Services | Excellence Guaranteed",
             "block1": {
-                "heading": "Automating all industries together",
-                "text1": "Industrial Automation Services from the Zedir Company guarantee excellence. Industrial Automation has the goals of connecting equipment together, developing technology, maximizing production, assuring safety, maximize the use of resources, and assuring quality. Our team of dedicated engineers has extensive experience in these industrial sectors and is ready to replicate proven methods and solutions.",
-                "text2": "We strive to ensure that our solutions are cost-effective and tailored to the needs of our clients. We understand that each project is unique, so we take the time to understand the specific requirements of each customer. Furthermore, We then develop a solution that is tailored to their needs and guaranteed to provide the highest level of quality and reliability. Our team is available to provide ongoing support and maintenance, so you can have peace of mind knowing that your automation solution will be fully functional and reliable for years to come."
+                "heading": "Industrial Automation Services",
+                "text1": "Zedir Company's Industrial Automation Services guarantee excellence by connecting equipment, maximizing production, assuring safety, and optimizing the use of resources, resulting in significant return on investment (ROI). Our dedicated team of experienced engineers has extensive knowledge in the industrial sector and can replicate proven methods and solutions to achieve the best outcomes. We prioritize cost-effectiveness and tailor our solutions to meet the specific needs of each customer. By understanding the unique requirements of each project, we develop solutions that ensure the highest level of quality and reliability. Our commitment to ongoing support and maintenance ensures that your automation solution will remain fully functional and reliable for years to come."
             },
             "block2": {
                 "heading": "Our Industry Expertise",
-                "item1": "Firmware, Hardware, and Software Development",
-                "item1d": "Zedir is being built by engineers. We understand the need for transparency, efficiency and more importantly, delivery. We have been focused on putting together a delivery management practice that enables you to monitor progress and take decisions based on this information in a way that is fast, transparent, and efficient. Furthermore, we offer the agile industrial automation services to complement and improve your specific systems.",
-                "item2": "Industrial Digital Transformation",
+                "item1": "Hardware, and Software Development",
+                "item1d": "Our focus is on developing a delivery management system that allows for fast, transparent, and efficient monitoring of progress, enabling informed decision-making. We also provide agile industrial automation services to enhance your systems based on your unique requirements. Our priority is delivering with transparency and efficiency.",
+                "item2": "Digital Transformation",
                 "item2d": "Improve your current processes and systems with a wide range of technologies, from providing Cloud Computing to process with efficiency to changing levels of demand to providing a comprehensive set of data and information. With the goal to help transform your organization ability to maximize efficiency, increase production, and develop new techniques with technology.",
-                "item3": "Industrial Project Consultation",
+                "item3": "Project Consultation",
                 "item3d": "With the very high importance of high-quality industrial automation projects. We offer solutions to help you keep peace of mind on the excellence and quality of your projects. From feasibility study, system design review, project management, installation and commissioning, or maintenance. Our experienced team is committed to helping you get the most out of your industrial automation project."
+            },
+            "block3": {
+                "Heading": "Development Services",
+                "Text": "Our focus: Internet of Things and Control Systems for Industrial Applications.",
+                "SubText": "Through the use of these established methods, we are able to create a valuable strategy that delivers consistent results on different projects.",
+                "t1": "Strategy & Features",
+                "d1": "Our team will help to outline the best strategies and features for your products and applications, identifying challenges and key leverage points.",
+                "t2": "UX & Architecture",
+                "d2": "Our team will help you choose the right technologies to create a technology stack that fits the desired User Experience.",
+                "t3": "Development & Testing",
+                "d3": "With the right team of developers, managers, analysts, and testers we are able to create functioning technology while enabling you to fully control this process through transparency and achieving a successful launch.",
+                "t4": "Support & Maintenance",
+                "d4": "Providing a direct line to support requests and providing fast response to bugs and issues, saves valuable time for any issues that may be presented."
+            },
+            "block4": {
+                "Heading": "Our Technology Stack for a Long-Lasting IT Evolution",
+                "Text": "We are able to employ the latest or the always evolving, classic, and most trusted technologies having expertise in replicating proven strategies and methods.",
+                "t1": "Cloud",
+                "t2": "Web Frameworks",
+                "t3": "Hardware | Firmware"
             }
         },
         {
@@ -31,8 +50,7 @@
             "img": "Servicios de Automatización Industrial | Excelencia garantizada",
             "block1": {
                 "heading": "Automatizando todas las industrias juntos",
-                "text1": "Los Servicios de Automatización Industrial de la Empresa Zedir garantizan la excelencia. La automatización industrial tiene los objetivos de conectar equipos, desarrollar tecnología, maximizar la producción, garantizar la seguridad, maximizar el uso de recursos y garantizar la calidad. Nuestro equipo de ingenieros dedicados tiene una amplia experiencia en estos sectores industriales y está listo para replicar métodos y soluciones probados.",
-                "text2": "Nos esforzamos por garantizar que nuestras soluciones sean rentables y se adapten a las necesidades de nuestros clientes. Entendemos que cada proyecto es único, por lo que nos tomamos el tiempo para comprender los requisitos específicos de cada cliente. Además, luego desarrollamos una solución que se adapta a sus necesidades y garantiza el más alto nivel de calidad y confiabilidad. Nuestro equipo está disponible para brindar soporte y mantenimiento continuos, por lo que puede tener la tranquilidad de saber que su solución de automatización será completamente funcional y confiable en los años venideros."
+                "text1": "Los Servicios de Automatización Industrial de la Empresa Zedir garantizan la excelencia. La automatización industrial tiene los objetivos de conectar equipos, desarrollar tecnología, maximizar la producción, garantizar la seguridad, maximizar el uso de recursos y garantizar la calidad. Nuestro equipo de ingenieros dedicados tiene una amplia experiencia en estos sectores industriales y está listo para replicar métodos y soluciones probados."
             },
             "block2": {
                 "heading": "Nuestra experiencia en la industria",
@@ -42,6 +60,26 @@
                 "item2d": "Mejore sus procesos y sistemas actuales con una amplia gama de tecnologías, desde proporcionar Cloud Computing para procesar con eficiencia hasta cambiar los niveles de demanda y proporcionar un conjunto completo de datos e información. Con el objetivo de ayudar a transformar la capacidad de su organización para maximizar la eficiencia, aumentar la producción y desarrollar nuevas técnicas con tecnología.",
                 "item3": "Consultoría de Proyectos Industriales",
                 "item3d": "Con la altísima importancia de los proyectos de automatización industrial de alta calidad. Ofrecemos soluciones para ayudarlo a estar tranquilo sobre la excelencia y la calidad de sus proyectos. Desde estudio de viabilidad, revisión del diseño del sistema, gestión de proyectos, instalación y puesta en marcha, o mantenimiento. Nuestro experimentado equipo está comprometido a ayudarlo a aprovechar al máximo su proyecto de automatización industrial."
+            },
+            "block3": {
+                "Heading": "Servicios de desarrollo",
+                "Text": "Nuestro enfoque: Internet de las cosas y los sistemas de control para aplicaciones industriales.",
+                "SubText": "Mediante el uso de estos métodos establecidos, podemos crear una estrategia valiosa que ofrece resultados consistentes en diferentes proyectos.",
+                "t1": "Estrategia y características",
+                "d1": "Nuestro equipo ayudará a describir las mejores estrategias y características para sus productos y aplicaciones, identificando desafíos y puntos de apalancamiento clave.",
+                "t2": "UX y arquitectura",
+                "d2": "Nuestro equipo lo ayudará a elegir las tecnologías adecuadas para crear una pila de tecnología que se ajuste a la experiencia del usuario deseada.",
+                "t3": "Desarrollo y pruebas",
+                "d3": "Con el equipo adecuado de desarrolladores, gerentes, analistas y probadores, podemos crear tecnología de funcionamiento al tiempo que le permite controlar completamente este proceso a través de la transparencia y lograr un lanzamiento exitoso.",
+                "t4": "Soporte y mantenimiento",
+                "d4": "Proporcionar una línea directa para admitir solicitudes y proporcionar una respuesta rápida a errores y problemas, ahorra un tiempo valioso para cualquier problema que pueda presentarse."
+            },
+            "block4": {
+                "Heading": "Nuestra pila tecnológica para una evolución de TI duradera",
+                "Text": "Podemos emplear las tecnologías más recientes o siempre en evolución, clásica y más confiable que tienen experiencia en replicar estrategias y métodos probados.",
+                "t1": "Nube",
+                "t2": "Framework Web",
+                "t3": "Hardware | Firmware"
             }
         }
     ]
