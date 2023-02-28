@@ -6,23 +6,21 @@
                 "title": "Industrial Automation Services with Guaranteed Excellence | Zedir",
                 "description": "Providing Guaranteed Excellence in Industrial Automation Services. With extensive experience in industrial automation, our team of dedicated engineers is ready to replicate proven methods and solutions for your business."
             },
-            "img": "Industrial Automation Services | Excellence Guaranteed",
+            "img": "Industrial Automation Services",
             "block1": {
                 "heading": "Industrial Automation Services",
-                "text1": "Zedir Company's Industrial Automation Services guarantee excellence by connecting equipment, maximizing production, assuring safety, and optimizing the use of resources, resulting in significant return on investment (ROI). Our dedicated team of experienced engineers has extensive knowledge in the industrial sector and can replicate proven methods and solutions to achieve the best outcomes. We prioritize cost-effectiveness and tailor our solutions to meet the specific needs of each customer. By understanding the unique requirements of each project, we develop solutions that ensure the highest level of quality and reliability. Our commitment to ongoing support and maintenance ensures that your automation solution will remain fully functional and reliable for years to come."
+                "text1": "Zedir's Industrial Automation Services guarantee excellence by connecting equipment, maximizing production, assuring safety, and optimizing the use of resources, resulting in significant return on investment (ROI). Our dedicated team of experienced engineers has extensive knowledge in the industrial sector and can replicate proven methods and solutions to achieve the best outcomes. We prioritize cost-effectiveness and tailor our solutions to meet the specific needs of each customer. By understanding the unique requirements of each project, we develop solutions that ensure the highest level of quality and reliability. Our commitment to ongoing support and maintenance ensures that your automation solution will remain fully functional and reliable for years to come."
             },
             "block2": {
-                "heading": "Our Industry Expertise",
                 "item1": "Hardware, and Software Development",
                 "item1d": "Our focus is on developing a delivery management system that allows for fast, transparent, and efficient monitoring of progress, enabling informed decision-making. We also provide agile industrial automation services to enhance your systems based on your unique requirements. Our priority is delivering with transparency and efficiency.",
                 "item2": "Digital Transformation",
-                "item2d": "Improve your current processes and systems with a wide range of technologies, from providing Cloud Computing to process with efficiency to changing levels of demand to providing a comprehensive set of data and information. With the goal to help transform your organization ability to maximize efficiency, increase production, and develop new techniques with technology.",
+                "item2d": "Improve your processes and systems with technologies that offer efficient and adaptable processing with information optimization and data gathering. Transform your organization's efficiency, production, and innovation with technology.",
                 "item3": "Project Consultation",
-                "item3d": "With the very high importance of high-quality industrial automation projects. We offer solutions to help you keep peace of mind on the excellence and quality of your projects. From feasibility study, system design review, project management, installation and commissioning, or maintenance. Our experienced team is committed to helping you get the most out of your industrial automation project."
+                "item3d": "We offer solutions to help you keep peace of mind on the excellence and quality of your projects. With solutions that ensure high-quality covering feasibility, system design, project management, installation and commissioning, and maintenance. Our experienced team helps you maximize your potential in your project."
             },
             "block3": {
                 "Heading": "Development Services",
-                "Text": "Our focus: Internet of Things and Control Systems for Industrial Applications.",
                 "SubText": "Through the use of these established methods, we are able to create a valuable strategy that delivers consistent results on different projects.",
                 "t1": "Strategy & Features",
                 "d1": "Our team will help to outline the best strategies and features for your products and applications, identifying challenges and key leverage points.",
@@ -39,6 +37,30 @@
                 "t1": "Cloud",
                 "t2": "Web Frameworks",
                 "t3": "Hardware | Firmware"
+            },
+            "block5": {
+                "Heading": "Consulting Services",
+                "SubText": "Find the leading practices in development, increase your organization's agility to achieve powerful outcomes.",
+                "t1": "Feasibility Study",
+                "d1": "Is your project viable? Find out through our TELOS report, (Technical, Economic, Legal, Operational, Scheduling)",
+                "t2": "Performance Assessment",
+                "d2": "Evaluate your organization employees and leaders on their Performance, Knowledge, and Skills",
+                "t3": "Research and Development",
+                "d3": "Research through industry experts the capabilities of your projects and take them to the next level.",
+                "t4": "Validation",
+                "d4": "Improve how reliable is your production and services with data gathered through information technology."
+            },
+            "block6": {
+                "Heading": "Digital Transformation Services",
+                "SubText": "Transform your manually controlled systems and environments into digitally automated technology.",
+                "t1": "Workforce Capacity",
+                "d1": "Increase the capabilities of your workforce by implementing a new strategy through organizational change.",
+                "t2": "Operations Realignment",
+                "d2": "Find new leadership strategies and outgrow competitors through data and information technologies.",
+                "t3": "Sustainable Change",
+                "d3": "Focus on consistent results through investing in customer relationships and change.",
+                "t4": "Strategy Transformation",
+                "d4": "Break barriers to change through new technology approaches to implement strategies."
             }
         },
         {
@@ -53,17 +75,15 @@
                 "text1": "Los Servicios de Automatización Industrial de la Empresa Zedir garantizan la excelencia. La automatización industrial tiene los objetivos de conectar equipos, desarrollar tecnología, maximizar la producción, garantizar la seguridad, maximizar el uso de recursos y garantizar la calidad. Nuestro equipo de ingenieros dedicados tiene una amplia experiencia en estos sectores industriales y está listo para replicar métodos y soluciones probados."
             },
             "block2": {
-                "heading": "Nuestra experiencia en la industria",
                 "item1": "Desarrollo de firmware, hardware y software",
                 "item1d": "Zedir está siendo construido por ingenieros. Entendemos la necesidad de transparencia, eficiencia y, lo que es más fundamental, entrega. Nos hemos centrado en generar una práctica de gestión de entrega que le permita monitorear el progreso y tomar decisiones basadas en esta información de una manera rápida, transparente y eficiente. Además, ofrecemos servicios ágiles de automatización industrial para complementar y mejorar sus sistemas específicos.",
                 "item2": "Transformación Digital Industrial",
-                "item2d": "Mejore sus procesos y sistemas actuales con una amplia gama de tecnologías, desde proporcionar Cloud Computing para procesar con eficiencia hasta cambiar los niveles de demanda y proporcionar un conjunto completo de datos e información. Con el objetivo de ayudar a transformar la capacidad de su organización para maximizar la eficiencia, aumentar la producción y desarrollar nuevas técnicas con tecnología.",
+                "item2d": "Mejore sus procesos y sistemas con tecnologías que ofrecen procesamiento y servicios de datos e información eficientes y adaptables. Transforme la eficiencia, la producción y la innovación de su organización con tecnología.",
                 "item3": "Consultoría de Proyectos Industriales",
                 "item3d": "Con la altísima importancia de los proyectos de automatización industrial de alta calidad. Ofrecemos soluciones para ayudarlo a estar tranquilo sobre la excelencia y la calidad de sus proyectos. Desde estudio de viabilidad, revisión del diseño del sistema, gestión de proyectos, instalación y puesta en marcha, o mantenimiento. Nuestro experimentado equipo está comprometido a ayudarlo a aprovechar al máximo su proyecto de automatización industrial."
             },
             "block3": {
                 "Heading": "Servicios de desarrollo",
-                "Text": "Nuestro enfoque: Internet de las cosas y los sistemas de control para aplicaciones industriales.",
                 "SubText": "Mediante el uso de estos métodos establecidos, podemos crear una estrategia valiosa que ofrece resultados consistentes en diferentes proyectos.",
                 "t1": "Estrategia y características",
                 "d1": "Nuestro equipo ayudará a describir las mejores estrategias y características para sus productos y aplicaciones, identificando desafíos y puntos de apalancamiento clave.",
@@ -80,6 +100,30 @@
                 "t1": "Nube",
                 "t2": "Framework Web",
                 "t3": "Hardware | Firmware"
+            },
+            "block5": {
+                "Heading": "Consultoría Tecnológica",
+                "SubText": "Encuentre las prácticas líderes en desarrollo, aumente la agilidad de su organización para lograr resultados poderosos",
+                "t1": "Estudio de factibilidad",
+                "d1": "¿Es viable tu proyecto? Descúbrelo a través de nuestro informe TELOS, (Técnico, Económico, Legal, Operacional, Programación)",
+                "t2": "Evaluación del desempeño",
+                "d2": "Evalúa a los empleados y líderes de tu organización en su Desempeño, Conocimiento y Habilidades",
+                "t3": "Investigación y desarrollo",
+                "d3": "Investiga a través de expertos de la industria las capacidades de tus proyectos y llévalos al siguiente nivel.",
+                "t4": "Validación",
+                "d4": "Mejore la confiabilidad de su producción y servicios con datos recopilados a través de la tecnología de la información"
+            },
+            "block6": {
+                "Heading": "Servicios de Transformación Digital",
+                "SubText": "Transforme sus sistemas y entornos controlados manualmente en tecnología automatizada digitalmente.",
+                "t1": "Capacidad de la fuerza laboral",
+                "d1": "Aumente las capacidades de su fuerza laboral implementando una nueva estrategia a través del cambio organizacional.",
+                "t2": "Realineación de operaciones",
+                "d2": "Encuentre nuevas estrategias de liderazgo y supere a los competidores a través de datos y tecnologías de la información.",
+                "t3": "Cambio Sostenible",
+                "d3": "Concéntrese en resultados consistentes a través de la inversión en las relaciones con los clientes y el cambio.",
+                "t4": "Transformación de la estrategia",
+                "d4": "Rompa las barreras al cambio a través de nuevos enfoques tecnológicos para implementar estrategias."
             }
         }
     ]

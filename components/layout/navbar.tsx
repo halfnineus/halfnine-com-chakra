@@ -161,7 +161,8 @@ const DesktopSubNav = ({ label, href, subLabel }: NavItem) => {
             <Stack
                 bg={mode("gray.50", 'gray.900')}
                 role={'group'}
-                p={2}
+                py={2}
+                px={3}
                 rounded={'md'}
                 _hover={{ bg: mode('gray.50', 'blue.900') }}
                 direction={'row'}
@@ -178,9 +179,9 @@ const DesktopSubNav = ({ label, href, subLabel }: NavItem) => {
                 </Box>
                 <Flex
                     transition={'all .3s ease'}
-                    transform={'translateX(-10px)'}
+                    transform={'translateX(-12px)'}
                     opacity={0}
-                    _groupHover={{ opacity: '100%', transform: 'translateX(0)' }}
+                    _groupHover={{ opacity: '100%', transform: 'translateX(4px)' }}
                     justify={'flex-end'}
                     align={'center'}
                     flex={1}>
@@ -298,12 +299,12 @@ const NAV_ITEMS: Array<NavItem> = [
             {
                 label: 'Digital Transformation',
                 subLabel: 'Efficiency in a Digital Approach',
-                href: '/services/digitalization',
+                href: '/services#digitalization',
             },
             {
                 label: 'Project Consultation',
                 subLabel: 'Change Is Hard - And Necessary',
-                href: '/services/consultation',
+                href: '/services#consultation',
             }
         ],
     },
@@ -314,11 +315,11 @@ const NAV_ITEMS: Array<NavItem> = [
         children: [
             {
                 label: 'Manufacturing and Production',
-                href: '/industries/manufacturing-and-production',
+                href: '/industries#manufacturing-and-production',
             },
             {
                 label: 'Security and Safety',
-                href: '/industries/security-and-safety',
+                href: '/industries#security-and-safety',
             },
         ],
     },
@@ -347,12 +348,12 @@ const NAV_ITEMS: Array<NavItem> = [
             {
                 label: 'Transformación Digital',
                 subLabel: 'Eficiencia & Modernización de Seguridad',
-                href: '/services/digitalization',
+                href: '/services#digitalization',
             },
             {
                 label: 'Consulta de proyectos',
                 subLabel: 'El cambio es difícil - Y necesario',
-                href: '/services/consultation',
+                href: '/services#consultation',
             }
         ],
     },
@@ -363,11 +364,11 @@ const NAV_ITEMS: Array<NavItem> = [
         children: [
             {
                 label: 'Fabricación y Producción',
-                href: '/industries/manufacturing-and-production',
+                href: '/industries#manufacturing-and-production',
             },
             {
                 label: 'Seguridad y Protección',
-                href: '/industries/security-and-safety',
+                href: '/industries#security-and-safety',
             },
         ],
     },

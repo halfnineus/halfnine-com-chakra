@@ -36,13 +36,13 @@
       },
       "features": {
         "f1t": "Teamwork",
-        "f1d": "Collaborating with a shared vision creates a foundation for creativity, efficiency and outstanding results.",
+        "f1d": "Collaborating with a shared vision builds a foundation for creativity, efficiency, and outstanding results in teamwork.",
         "f2t": "Innovation",
-        "f2d": "Expertise and imagination are leveraged to create valuable solutions that improve processes and reduce costs.",
+        "f2d": "Expertise and imagination are leveraged to innovate valuable solutions that optimize processes and lower costs.",
         "f3t": "Challenge",
-        "f3d": "We embrace challenges and push the limits to create breakthroughs in efficiency and productivity.",
+        "f3d": "We welcome challenges and push boundaries to achieve efficiency and productivity breakthroughs.",
         "f4t": "Solutions",
-        "f4d": "Our customized automation solutions solve problems, add value, and positively impact people and communities."
+        "f4d": "Our automation solutions address issues, create value, and have a positive impact on individuals and communities."
       }
     },
     {
@@ -81,7 +81,7 @@
       },
       "features": {
         "f1t": "Colaboración",
-        "f1d": "Colaborar con una visión compartida crea una base para la creatividad, la eficiencia y los resultados sobresalientes.",
+        "f1d": "Colaborar con una visión compartida crea una base para la creatividad, eficiencia y resultados sobresalientes.",
         "f2t": "Innovación",
         "f2d": "Nuestra experiencia e imaginación se aprovechan para crear soluciones valiosas que mejoran procesos y reducen costos.",
         "f3t": "Desafío",

@@ -32,9 +32,11 @@ import Link from 'next/link'
 import { AiOutlineSolution } from 'react-icons/ai';
 import { BiBrain } from 'react-icons/bi';
 import { FaRegHandshake } from 'react-icons/fa';
-import { GiLeapfrog } from 'react-icons/gi';
+import { GiConqueror, GiLeapfrog } from 'react-icons/gi';
 import { AiOutlineSetting } from 'react-icons/ai';
 import { MdOutlineContactSupport } from 'react-icons/md';
+import { RiLightbulbFlashLine, RiTeamFill } from 'react-icons/ri';
+import { HiOutlinePuzzlePiece } from 'react-icons/hi2';
 
 interface FeatureProps1 {
   title: string;
@@ -72,7 +74,7 @@ const Feature2 = ({ text, icon, iconBg, refx }: FeatureProps2) => {
           bg={iconBg}>
           {icon}
         </Flex>
-        <Text fontWeight={600}>
+        <Text pl={2} fontWeight={600}>
           {text}
         </Text>
         <Flex
@@ -98,17 +100,19 @@ interface FeatureiProps {
 export const Featurei = ({ title, children, icon }: FeatureiProps) => {
   return (
     <Box>
-      <Box color={"blue.600"} fontSize="2.8rem">
-        {icon}
-      </Box>
-      <Stack mt="4">
-        <Text as="h3" fontSize="lg" fontWeight="bold">
-          {title}
-        </Text>
-        <Text pr="6" lineHeight="tall" color={"gray.600"}>
-          {children}
-        </Text>
-      </Stack>
+      <Flex>
+        <Box color={"blue.600"} fontSize="2.8rem">
+          {icon}
+        </Box>
+        <Center>
+          <Text pl={5} as="h3" fontSize="lg" fontWeight="bold">
+            {title}
+          </Text>
+        </Center>
+      </Flex>
+      <Text px={16} pt={3} lineHeight="tall" color={"gray.600"}>
+        {children}
+      </Text>
     </Box>
   )
 }
@@ -116,16 +120,21 @@ export const Featurei = ({ title, children, icon }: FeatureiProps) => {
 const Feature1 = ({ title, text, icon }: FeatureProps1) => {
   return (
     <Box>
-      <Center
-        w={16}
-        h={16}
-        rounded={'full'}
-        bg={'gray.100'}
-        mb={2}>
-        {icon}
-      </Center>
-      <Text mb={2} fontWeight={600}>{title}</Text>
-      <Text color={'gray.600'}>{text}</Text>
+      <Flex>
+        <Center
+          w={16}
+          h={16}
+          rounded={'full'}
+          bg={'gray.50'}
+          mb={2}
+        >
+          {icon}
+        </Center>
+        <Center>
+          <Text pl={4} display={'inline'} mb={2} fontWeight={600}>{title}</Text>
+        </Center>
+      </Flex>
+      <Text mx={20} color={'gray.600'}>{text}</Text>
     </Box>
   );
 };
@@ -260,7 +269,7 @@ const IndexPage = () => {
             </Box>
 
             <Box maxW={'container.xl'} px={{ base: '4', sm: '4', md: '4', lg: '4', xl: 0 }} mx="auto" py={28}>
-              <SimpleGrid columns={{ base: 1, md: 3 }} spacing={10}>
+              <SimpleGrid columns={1} spacing={10}>
                 <Feature1
                   icon={<Icon as={FcServices} w={10} h={10} />}
                   title={indexData.block3.f1t}
@@ -299,13 +308,13 @@ const IndexPage = () => {
                         text={indexData.block4.srvc1}
                       />
                       <Feature2
-                        refx={'/services/digitalization'}
+                        refx={'/services#digitalization'}
                         icon={<Icon as={IoRocketOutline} color={'green.600'} w={5} h={5} />}
                         iconBg={'green.100'}
                         text={indexData.block4.srvc2}
                       />
                       <Feature2
-                        refx={'/services/consultation'}
+                        refx={'/services#consultation'}
                         icon={<Icon as={IoBulbOutline} color={'orange.600'} w={5} h={5} />}
                         iconBg={'orange.100'}
                         text={indexData.block4.srvc3}
@@ -330,19 +339,19 @@ const IndexPage = () => {
 
             <Box maxW={'container.xl'} px={{ base: '4', sm: '4', md: '4', lg: '4', xl: 0 }} mx="auto" py={28}>
               <SimpleGrid
-                columns={{ base: 1, md: 2, lg: 4 }}
-                spacing={{ base: '12', md: '8', lg: '2' }}
+                columns={{ base: 1, md: 2, lg: 2 }}
+                spacing={16}
               >
-                <Featurei icon={<FaRegHandshake />} title={indexData.features.f1t}>
+                <Featurei icon={<RiTeamFill />} title={indexData.features.f1t}>
                   {indexData.features.f1d}
                 </Featurei>
-                <Featurei icon={<BiBrain />} title={indexData.features.f2t}>
+                <Featurei icon={<RiLightbulbFlashLine />} title={indexData.features.f2t}>
                   {indexData.features.f2d}
                 </Featurei>
-                <Featurei icon={<GiLeapfrog />} title={indexData.features.f3t}>
+                <Featurei icon={<GiConqueror />} title={indexData.features.f3t}>
                   {indexData.features.f3d}
                 </Featurei>
-                <Featurei icon={<AiOutlineSolution />} title={indexData.features.f4t}>
+                <Featurei icon={<HiOutlinePuzzlePiece />} title={indexData.features.f4t}>
                   {indexData.features.f4d}
                 </Featurei>
               </SimpleGrid>

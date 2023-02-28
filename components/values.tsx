@@ -33,7 +33,6 @@ const Feature = ({ heading, text, color, icon }: FeatureProps) => {
                     mb={4}
                     rounded="full"
                     color={`${color}.600`}
-                    _dark={{ color: `${color}.100`, bg: `${color}.600` }}
                     bg={`${color}.100`}
                 >
                     <Icon
@@ -58,7 +57,7 @@ const Feature = ({ heading, text, color, icon }: FeatureProps) => {
                     {heading}
                 </Heading>
             </HStack>
-            <Text fontSize="md" color="gray.600" _dark={{ color: "gray.400" }}>
+            <Text fontSize="md" color="gray.600">
                 {text}
             </Text>
         </GridItem>

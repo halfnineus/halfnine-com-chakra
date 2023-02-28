@@ -60,16 +60,16 @@ export const links: LinkGroup[] = [
         title: 'Services',
         links: [
             { label: 'Development Services', href: '/services#development' },
-            { label: 'Digital Transformation', href: '/services/digitalization' },
-            { label: 'Project Consultation', href: '/services/consultation' },
+            { label: 'Digital Transformation', href: '/services#digitalization' },
+            { label: 'Project Consultation', href: '/services#consultation' },
         ],
     },
     {
         locale: "en",
         title: 'Industries',
         links: [
-            { label: 'Manufacturing and Production', href: '/industries/manufacturing-and-production' },
-            { label: 'Security and Safety', href: '/industries/security-and-safety' },
+            { label: 'Manufacturing and Production', href: '/industries#manufacturing-and-production' },
+            { label: 'Security and Safety', href: '/industries#security-and-safety' },
         ],
     },
     {
@@ -86,16 +86,16 @@ export const links: LinkGroup[] = [
         title: 'Servicios',
         links: [
             { label: 'Servicios de desarrollo', href: '/services#development' },
-            { label: 'Transformación Digital', href: '/services/digitalization' },
-            { label: 'Consulta de proyectos', href: '/services/consultation' },
+            { label: 'Transformación Digital', href: '/services#digitalization' },
+            { label: 'Consulta de proyectos', href: '/services#consultation' },
         ],
     },
     {
         locale: "es",
         title: 'Industrias',
         links: [
-            { label: 'Fabricación & Producción', href: '/industries/manufacturing-and-production' },
-            { label: 'Seguridad & Protección', href: '/industries/security-and-safety' },
+            { label: 'Fabricación & Producción', href: '/industries#manufacturing-and-production' },
+            { label: 'Seguridad & Protección', href: '/industries#security-and-safety' },
         ],
     },
     {
