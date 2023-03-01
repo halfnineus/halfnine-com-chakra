@@ -1,4 +1,4 @@
-import { Box, Text, Heading, SimpleGrid, Image, Divider, Center, Img, Stack, List, ListItem } from "@chakra-ui/react";
+import { Box, Text, Heading,  List, ListItem } from "@chakra-ui/react";
 import { NextSeo } from "next-seo";
 import { Values } from "../../components";
 import indexdat from '../../assets/index.json'
@@ -13,7 +13,7 @@ const Index = () => {
                 return (
                     <>
                         <NextSeo
-                            title='How we do Things - Automating all Things | Zedir'
+                            title='Delivery Model | Zedir'
                             description='Find our agile development strategies and ways to find solutions that focus on advancing innovation and driving powerful outcomes.'
                             canonical="https://www.zedir.com/our-approach"
                             languageAlternates={[
@@ -25,16 +25,14 @@ const Index = () => {
                         />
                         <Box maxW={'container.xl'} px={{ base: '4', sm: '4', md: '4', lg: '4', xl: 0 }} mx="auto" py={12}>
                             <Box
-                                // borderWidth="1px"
-                                borderRadius="lg"
-                                // boxShadow="lg"
+                                borderRadius="xl"
                                 p={4}
                                 bg={"gray.50"}
                             >
-                                <Heading as="h1" mb={4}>
+                                <Heading as="h1" mb={3}>
                                     Discover
                                 </Heading>
-                                <List spacing={3} mb={6}>
+                                <List spacing={3}>
                                     <ListItem>
                                         <Text fontWeight="bold" display={'inline'}>{"Market Research"}{`: `}</Text>
                                         <Text display={'inline'}>{"This involves gathering and analyzing information about the market and industry trends to identify potential opportunities and challenges for implementing a customized automation solution."}</Text>
@@ -57,10 +55,10 @@ const Index = () => {
                                     </ListItem>
                                 </List>
 
-                                <Heading as="h1" mb={4}>
+                                <Heading as="h1" mb={3} mt={8}>
                                     Define
                                 </Heading>
-                                <List spacing={3} mb={6}>
+                                <List spacing={3}>
                                     <ListItem>
                                         <Text fontWeight="bold" display={'inline'}>{"System Architecture"}{`: `}</Text>
                                         <Text display={'inline'}>{"This involves designing the overall system structure and components that will be used to develop the automation solution."}</Text>
@@ -83,10 +81,10 @@ const Index = () => {
                                     </ListItem>
                                 </List>
 
-                                <Heading as="h1" mb={4}>
+                                <Heading as="h1" mb={3} mt={8}>
                                     Develop
                                 </Heading>
-                                <List spacing={3} mb={6}>
+                                <List spacing={3}>
                                     <ListItem>
                                         <Text fontWeight="bold" display={'inline'}>{"Hardware Design"}{`: `}</Text>
                                         <Text display={'inline'}>{"This involves designing the hardware components that will be used to implement the automation solution, such as sensors, controllers, and actuators."}</Text>
@@ -109,10 +107,10 @@ const Index = () => {
                                     </ListItem>
                                 </List>
 
-                                <Heading as="h1" mb={4}>
+                                <Heading as="h1" mb={3} mt={8}>
                                     Deliver
                                 </Heading>
-                                <List spacing={3} mb={6}>
+                                <List spacing={3}>
                                     <ListItem>
                                         <Text fontWeight="bold" display={'inline'}>{"Deployment & Installation"}{`: `}</Text>
                                         <Text display={'inline'}>{"This involves deploying and installing the automation solution in the target environment."}</Text>

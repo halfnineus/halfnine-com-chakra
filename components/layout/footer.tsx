@@ -59,52 +59,36 @@ export const links: LinkGroup[] = [
         locale: "en",
         title: 'Services',
         links: [
-            { label: 'Development Services', href: '/services#development' },
+            { label: 'Development', href: '/services#development' },
             { label: 'Digital Transformation', href: '/services#digitalization' },
             { label: 'Project Consultation', href: '/services#consultation' },
         ],
     },
     {
         locale: "en",
-        title: 'Industries',
-        links: [
-            { label: 'Manufacturing and Production', href: '/industries#manufacturing-and-production' },
-            { label: 'Security and Safety', href: '/industries#security-and-safety' },
-        ],
-    },
-    {
-        locale: "en",
         title: 'Quick Links',
         links: [
+            { label: 'Industries', href: '/industries' },
             { label: 'Our Approach', href: '/our-approach' },
             { label: 'About', href: '/about' },
-            // { label: 'Risk Control', href: '/our-approach/risk-control' },
         ],
     },
     {
         locale: "es",
         title: 'Servicios',
         links: [
-            { label: 'Servicios de desarrollo', href: '/services#development' },
+            { label: 'Desarrollo', href: '/services#development' },
             { label: 'Transformación Digital', href: '/services#digitalization' },
             { label: 'Consulta de proyectos', href: '/services#consultation' },
         ],
     },
     {
         locale: "es",
-        title: 'Industrias',
-        links: [
-            { label: 'Fabricación & Producción', href: '/industries#manufacturing-and-production' },
-            { label: 'Seguridad & Protección', href: '/industries#security-and-safety' },
-        ],
-    },
-    {
-        locale: "es",
         title: 'Enlaces Rápidos',
         links: [
+            { label: 'Industrias', href: '/industries' },
             { label: 'Nuestro enfoque', href: '/our-approach' },
             { label: 'Acerca De', href: '/about' },
-            // { label: 'Control de Riesgo', href: '/our-approach/risk-control' },
         ],
     },
 ]

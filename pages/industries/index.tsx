@@ -4,60 +4,42 @@ import {
     SimpleGrid,
     HStack,
     Heading,
-    Button,
-    Divider,
-    Grid,
-    GridItem,
 } from "@chakra-ui/react";
 import { NextSeo } from "next-seo";
-import Link from "next/link";
 
 import { useRouter } from "next/router";
-import { IoShieldCheckmarkOutline } from "react-icons/io5";
+import {  IoTrainOutline } from "react-icons/io5";
 import { MdOutlinePrecisionManufacturing } from "react-icons/md";
+import { TbBuildingFactory, TbBuildingFactory2 } from "react-icons/tb";
+import { GoLock } from "react-icons/go";
+import { CiMedicalCross } from "react-icons/ci";
 
 import indexdat from "../../assets/industries/index.json"
 import { Contactimg } from "../../components";
+import { GiAntiAircraftGun, GiChemicalDrop, GiDefenseSatellite, GiFarmer, GiOilPump, GiPillDrop, GiRolledCloth, GiSodaCan } from "react-icons/gi";
 
 const Feature = (props: any) => {
     return (
         <Box>
             <HStack>
                 <Box color={'blue.600'} fontSize="3rem">
-                    {props.icon}
+                    {props?.icon}
                 </Box>
-                <Heading pl={3} as={'h3'} fontSize="xl">
+                <Heading pl={2} as={'h3'} fontSize="xl">
                     {props.title}
                 </Heading>
             </HStack>
-            <Text pt={2} color="gray.600">
-                {props.children}
+            <Text mx={16} pb={2} color="gray.600">
+                {props.text}
             </Text>
-            <Link href={props.refx}>
+            {/* <Link href={props.refx}>
                 <Button mt={4} colorScheme={'blue'}>
                     Learn More
                 </Button>
-            </Link>
+            </Link> */}
         </Box>
     );
 };
-
-interface FeaturedeProps {
-    heading: string;
-    text: string;
-}
-
-const Featurede = ({ heading, text }: FeaturedeProps) => {
-    return (
-        <GridItem>
-            <Heading pb={1} as={'h3'} fontSize="xl" fontWeight="600">
-                {heading}
-            </Heading>
-            <Text>{text}</Text>
-        </GridItem>
-    );
-};
-
 
 const Index = () => {
     const { locale } = useRouter()
@@ -77,80 +59,89 @@ const Index = () => {
                                 }
                             ]}
                         />
-                        <Box maxW={'container.xl'} px={{ base: '4', sm: '4', md: '4', lg: '4', xl: 0 }} mx="auto" my={8}>
-                            <Contactimg label={indexData.img} pexelsrc={'5532658/pexels-photo-5532658.jpeg'} />
+                        <Box maxW={'container.xl'} px={{ base: '4', sm: '4', md: '4', lg: '4', xl: 0 }} mx="auto">
+                            <Contactimg label={indexData.img} pexelsrc={'/img/xtra/pexels-photo-5532658.jpg'} />
                             <Text pt={6} px={2} color={'gray.700'}>
                                 {indexData.block1.text1}
                             </Text>
-                            <Divider my={20} maxW={"container.xl"} mx={'auto'} />
-                            <Box>
-                                <SimpleGrid
-                                    columns={{ base: 1 }}
-                                    spacing={4}
-                                    mx="auto"
-                                >
-                                    <Feature
-                                        title={indexData.block2.item1}
-                                        icon={<MdOutlinePrecisionManufacturing />}
-                                        refx={'/industries#manufacturing-and-production'}
-                                    >
-                                        {indexData.block2.item1d}
-                                    </Feature>
-                                    <Divider pt={2} />
-                                    <Feature
-                                        title={indexData.block2.item2}
-                                        icon={<IoShieldCheckmarkOutline />}
-                                        refx={'/industries#security-and-safety'}
-                                    >
-                                        {indexData.block2.item2d}
-                                    </Feature>
-                                </SimpleGrid>
-                            </Box>
-                        </Box>
-
-                        <Box maxW={'container.xl'} px={{ base: '4', sm: '4', md: '4', lg: '4', xl: 0 }} py={20} mx="auto">
-                            <Grid
-                                templateColumns={{
-                                    base: 'repeat(1, 1fr)',
-                                    sm: 'repeat(2, 1fr)',
-                                    md: 'repeat(2, 1fr)',
-                                    lg: 'repeat(4, 1fr)',
-                                }}
-                                gap={{ base: '8', sm: '12', md: '16' }}
+                            <SimpleGrid
+                                columns={{ base: 1 }}
+                                spacing={12}
+                                mx="auto"
+                                my={20}
                             >
-                                <Featurede
-                                    heading={'Assembly lines'}
-                                    text={'Robotics has made assembly lines work on a mass scale by automating repetitive tasks.'}
+                                <Feature
+                                    icon={<TbBuildingFactory2 />}
+                                    title={indexData.block2.item1}
+                                    text={indexData.block2.item1d}
                                 />
-                                <Featurede
-                                    heading={'Energy'}
-                                    text={'Data Analytics prevents and predicts maintenance on energy production, making it more reliable.'}
+                                <Feature
+                                    icon={<MdOutlinePrecisionManufacturing />}
+                                    title={'Assembly lines'}
+                                    text={'Robotics has revolutionized assembly line production by streamlining and automating repetitive tasks such as picking, placing, and packaging. This has led to increased productivity, improved accuracy, and reduced errors in mass production industries such as automotive, electronics, and food processing.'}
                                 />
-                                <Featurede
-                                    heading={'Farming'}
-                                    text={'Technology has made Vertical Farming Possible by automating the farming process.'}
+                                <Feature
+                                    icon={<TbBuildingFactory />}
+                                    title={'Energy production'}
+                                    text={'With the help of Data Analytics, energy companies identify potential failures and predict maintenance needs to prevent costly downtime and enhance the reliability of energy production. For example, wind turbines equipped with sensors collect real-time data on wind speed and direction, allowing operators to adjust blade angles for optimal energy output.'}
                                 />
-                                <Featurede
-                                    heading={'This Site'}
-                                    text={'Frameworks have made this site fast by automating the repetitive code used in production.'}
+                                <Feature
+                                    icon={<GiFarmer />}
+                                    title={'Farming'}
+                                    text={'Technology has enabled Vertical Farming, a method of growing crops indoors using artificial lighting, automated irrigation systems, and controlled environments. This approach not only reduces the need for pesticides and herbicides but also eliminates the impact of weather conditions on crop yields. By automating the farming process, farmers optimize production, reduce waste, and deliver fresh produce year-round in urban areas.'}
                                 />
-                                <Featurede
-                                    heading={'Prevention'}
-                                    text={'IoT devices allow us to create a contact-less experience with our clients.'}
+                                <Feature
+                                    icon={<GiPillDrop />}
+                                    title={'Pharmaceuticals'}
+                                    text={'Automation in pharmaceutical manufacturing leads to higher production capacity, improved quality control, and reduced costs. For example, robotic systems automate drug dispensing and packaging, ensuring accuracy and minimizing the risk of contamination.'}
                                 />
-                                <Featurede
-                                    heading={'Monitoring'}
-                                    text={'Artificial Intelligence improved the monitoring business by creating alerts based on behavior.'}
+                                <Feature
+                                    icon={<GiDefenseSatellite />}
+                                    title={'Aerospace'}
+                                    text={'Industrial automation has revolutionized aerospace manufacturing by enabling precise, repeatable, and efficient assembly of complex parts and structures. For instance, robotic arms perform tasks such as drilling, riveting, and welding, reducing errors and improving safety in the assembly process.'}
                                 />
-                                <Featurede
-                                    heading={'Reliability'}
-                                    text={'Backup and disaster recovery helps critical services to always function in the times we need them the most.'}
+                                <Feature
+                                    icon={<GiRolledCloth />}
+                                    title={'Textiles'}
+                                    text={'Automation in textile manufacturing helps optimize production, reduce waste, and enhance product quality. For example, computer-controlled cutting machines precisely cut fabrics according to specific designs, while robotic sewing machines perform intricate stitching patterns with speed and accuracy.'}
                                 />
-                                <Featurede
-                                    heading={'Inspecting'}
-                                    text={'Big Data allows us to predict and measure maintenance, making infrastructure more reliable.'}
+                                <Feature
+                                    icon={<GiChemicalDrop />}
+                                    title={'Chemicals'}
+                                    text={'Industrial automation helps chemical manufacturers reduce production costs, increase efficiency, and improve safety. For instance, automated mixing and blending systems ensure precise control of chemical composition, while robotic arms handle hazardous materials and perform repetitive tasks such as filling and packaging.'}
                                 />
-                            </Grid>
+                                <Feature
+                                    icon={<GiSodaCan />}
+                                    title={'Food & Beverage'}
+                                    text={'Automation in the food and beverage industry improves food safety, increase production efficiency, and enhance product quality. For example, automated filling and packaging systems improve accuracy and reduce waste in the production process, while robotic arms handle food ingredients and perform tasks such as slicing and packaging.'}
+                                />
+                                <Feature
+                                    icon={<GoLock />}
+                                    title={indexData.block2.item2}
+                                    text={indexData.block2.item2d}
+                                />
+                                <Feature
+                                    icon={<GiAntiAircraftGun />}
+                                    title={'Defense'}
+                                    text={'Advanced automation systems enhance the security and safety of military operations. For example, unmanned aerial vehicles (UAVs) equipped with cameras and sensors gather intelligence, perform surveillance, and detect threats in hostile environments, reducing the need for human intervention in dangerous situations.'}
+                                />
+                                <Feature
+                                    icon={<CiMedicalCross />}
+                                    title={'Healthcare'}
+                                    text={'Automation in healthcare improves patient safety, reduce medical errors, and increase efficiency. For instance, automated medication dispensing systems ensure accurate dosages and reduce the risk of medication errors, while robotic surgery systems enable precise and minimally invasive surgeries.'}
+                                />
+                                <Feature
+                                    icon={<GiOilPump />}
+                                    title={'Oil and Gas'}
+                                    text={'Industrial automation in the oil and gas industry helps reduce accidents and enhance operational safety. For example, remote monitoring systems detect potential equipment failures, leaks, and other safety hazards in real-time, enabling operators to take corrective actions before accidents occur.'}
+                                />
+                                <Feature
+                                    icon={<IoTrainOutline />}
+                                    title={'Transportation'}
+                                    text={'Automation in the transportation industry improves safety, reduce traffic congestion, and enhance energy efficiency. For instance, automated traffic management systems optimize traffic flow and reduce the risk of accidents, while self-driving vehicles reduce human error and improve road safety.'}
+                                />
+
+                            </SimpleGrid>
                         </Box>
                     </>
                 )

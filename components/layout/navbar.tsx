@@ -292,7 +292,7 @@ const NAV_ITEMS: Array<NavItem> = [
         subhref: '/services',
         children: [
             {
-                label: 'Development Services',
+                label: 'Development',
                 subLabel: 'Transform Ideas into Solutions',
                 href: '/services#development',
             },
@@ -312,16 +312,16 @@ const NAV_ITEMS: Array<NavItem> = [
         locale: "en",
         label: 'Industries',
         subhref: '/industries',
-        children: [
-            {
-                label: 'Manufacturing and Production',
-                href: '/industries#manufacturing-and-production',
-            },
-            {
-                label: 'Security and Safety',
-                href: '/industries#security-and-safety',
-            },
-        ],
+        // children: [
+        //     {
+        //         label: 'Manufacturing & Production',
+        //         href: '/industries#manufacturing-and-production',
+        //     },
+        //     {
+        //         label: 'Security & Safety',
+        //         href: '/industries#security-and-safety',
+        //     },
+        // ],
     },
     {
         locale: "en",
@@ -341,7 +341,7 @@ const NAV_ITEMS: Array<NavItem> = [
         subhref: '/services',
         children: [
             {
-                label: 'Servicios de desarrollo',
+                label: 'Desarrollo',
                 subLabel: 'Transforme ideas en soluciones',
                 href: '/services#development',
             },
@@ -361,16 +361,16 @@ const NAV_ITEMS: Array<NavItem> = [
         locale: "es",
         label: 'Industrias',
         subhref: '/industries',
-        children: [
-            {
-                label: 'Fabricación y Producción',
-                href: '/industries#manufacturing-and-production',
-            },
-            {
-                label: 'Seguridad y Protección',
-                href: '/industries#security-and-safety',
-            },
-        ],
+        // children: [
+        //     {
+        //         label: 'Fabricación y Producción',
+        //         href: '/industries#manufacturing-and-production',
+        //     },
+        //     {
+        //         label: 'Seguridad y Protección',
+        //         href: '/industries#security-and-safety',
+        //     },
+        // ],
     },
     {
         locale: "es",

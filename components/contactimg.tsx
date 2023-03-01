@@ -9,14 +9,12 @@ const Contactimg = (children: any) => {
             {NAV_ITEMS.filter(p => p.locale === locale).map((navItem) => (
                 <>
                     <Flex
-                        mt={8}
+                        mt={6}
                         w={'full'}
                         h={80}
-                        backgroundImage={`https://images.pexels.com/photos/${children.pexelsrc}?auto=compress&cs=tinysrgb&fit=crop&h=320&w=1300`}
-                        border={'1px'}
-                        rounded={'lg'}
+                        backgroundImage={children.pexelsrc}
+                        rounded={'xl'}
                         overflow={'hidden'}
-                        borderColor={'gray.400'}
                     >
                         <Box placeSelf={'end'} alignItems={'center'} bg={'blackAlpha.600'} height={16} width={'full'} display={'inherit'} px={6}>
                             <Text fontWeight={'bold'} fontSize={{ base: 'md', md: 'xl', lg: '2xl', xl: '3xl' }} color={'white'} opacity={'1'}>

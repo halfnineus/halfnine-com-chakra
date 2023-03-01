@@ -111,7 +111,7 @@ const Index = () => {
                             ]}
                         />
                         <Box textAlign={'justify'} maxW={'container.xl'} px={{ base: '4', sm: '4', md: '4', lg: '4', xl: '0' }} mx="auto">
-                            <Contactimg label={indexData.img} pexelsrc={'8439083/pexels-photo-8439083.jpeg'} />
+                            <Contactimg label={indexData.img} pexelsrc={'/img/xtra/pexels-photo-8439083.jpg'} />
                             {/* <Heading color={'gray.800'} as={'h1'} size={'lg'} pt={6} pb={2}>{indexData.block1.heading}</Heading> */}
                             <Text pt={6} px={2} color={'gray.700'}>
                                 {indexData.block1.text1}
