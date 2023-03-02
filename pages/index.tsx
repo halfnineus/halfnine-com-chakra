@@ -11,7 +11,6 @@ import {
   Text,
   Flex,
   Image,
-  Container,
   SimpleGrid,
   Icon,
   StackDivider,
@@ -29,10 +28,7 @@ import { ChevronRightIcon } from '@chakra-ui/icons'
 import { ReactElement } from 'react';
 import { NextSeo } from 'next-seo'
 import Link from 'next/link'
-import { AiOutlineSolution } from 'react-icons/ai';
-import { BiBrain } from 'react-icons/bi';
-import { FaRegHandshake } from 'react-icons/fa';
-import { GiConqueror, GiLeapfrog } from 'react-icons/gi';
+import { GiConqueror } from 'react-icons/gi';
 import { AiOutlineSetting } from 'react-icons/ai';
 import { MdOutlineContactSupport } from 'react-icons/md';
 import { RiLightbulbFlashLine, RiTeamFill } from 'react-icons/ri';

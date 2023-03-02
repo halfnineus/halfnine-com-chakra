@@ -8,7 +8,7 @@ import {
 import { NextSeo } from "next-seo";
 
 import { useRouter } from "next/router";
-import {  IoTrainOutline } from "react-icons/io5";
+import { IoTrainOutline } from "react-icons/io5";
 import { MdOutlinePrecisionManufacturing } from "react-icons/md";
 import { TbBuildingFactory, TbBuildingFactory2 } from "react-icons/tb";
 import { GoLock } from "react-icons/go";
@@ -29,14 +29,9 @@ const Feature = (props: any) => {
                     {props.title}
                 </Heading>
             </HStack>
-            <Text mx={16} pb={2} color="gray.600">
+            <Text textAlign={'justify'} ml={16} pb={2} color="gray.600">
                 {props.text}
             </Text>
-            {/* <Link href={props.refx}>
-                <Button mt={4} colorScheme={'blue'}>
-                    Learn More
-                </Button>
-            </Link> */}
         </Box>
     );
 };
@@ -61,8 +56,9 @@ const Index = () => {
                         />
                         <Box maxW={'container.xl'} px={{ base: '4', sm: '4', md: '4', lg: '4', xl: 0 }} mx="auto">
                             <Contactimg label={indexData.img} pexelsrc={'/img/xtra/pexels-photo-5532658.jpg'} />
-                            <Text pt={6} px={2} color={'gray.700'}>
+                            <Text textAlign={'justify'} pt={6} color={'gray.700'} px={1}>
                                 {indexData.block1.text1}
+                                {/* Case Studies */}
                             </Text>
                             <SimpleGrid
                                 columns={{ base: 1 }}

@@ -3,16 +3,15 @@
         {
             "locale": "en",
             "head": {
-                "title": "About Us - Zedir - International Product Development, Design, and Production",
+                "title": "About - Zedir",
                 "description": "Developing systems to automate simple and complicated industrial processes. Contact us to know more."
             },
             "block1": {
-                "heading": "About Us",
-                "i1": "We are a team of engineers working as employees for other companies, however we are always interested in projects that will challenge our capabilities and willing to give it our undivided attention.",
-                "i2": "With experience in software and electronics development. From developing cloud infrastructures to full IoT devices with applications, we are prepared to take almost any kind of challenge by replicating proven strategies and methods."
+                "heading": "Who we Are",
+                "i1": "We are a group of dedicated engineers with a passion for pushing boundaries. Working for industry-leading companies, we aim to deliver the same level of excellence to our clients. Our expertise spans various industries and technologies. We tackle challenges with proven strategies and methods to deliver exceptional results. With our undivided attention and commitment to excellence, we are ready for any challenge. If you would like to know more about us, please contact us."
             },
             "block2": {
-                "heading": "Why Us",
+                "heading": "Why Choose Us",
                 "i1": "Choose the Best - Our team is built with experience on the world's leading companies and technology.",
                 "i2": "Choose Security - Our team uses the leading technology and meets latest industry standards.",
                 "i3": "Choose You - You will be our sole focus while developing something."
@@ -24,16 +23,15 @@
         {
             "locale": "es",
             "head": {
-                "title": "About Us - Zedir - International Product Development, Design, and Production",
+                "title": "About - Zedir",
                 "description": "Developing systems to automate simple and complicated industrial processes. Contact us to know more."
             },
             "block1": {
-                "heading": "Sobre nosotros",
-                "i1": "Somos un equipo de ingenieros que trabajan como empleados para otras empresas, sin embargo, siempre estamos interesados en proyectos que desafíen nuestras capacidades y estamos dispuestos a prestarle toda nuestra atención.",
-                "i2": "Con experiencia en desarrollo de software y electrónica, desde el desarrollo de infraestructuras en la nube a dispositivos IoT completos con aplicaciones, estamos preparados para enfrentar cualquier tipo de desafío replicando estrategias y métodos comprobados."
+                "heading": "Quienes somos",
+                "i1": "Somos un equipo de ingenieros que trabajan como empleados para otras empresas, sin embargo, siempre estamos interesados en proyectos que desafíen nuestras capacidades y estamos dispuestos a prestarle toda nuestra atención."
             },
             "block2": {
-                "heading": "¿Por qué Nosotros?",
+                "heading": "¿Por qué elegirnos?",
                 "i1": "Elige lo mejor - Nuestro equipo está hecho con experiencia en las empresas y tecnologías líder en el mundo.",
                 "i2": "Elige Seguridad - Nuestro equipo utiliza la tecnología moderna y cumple con todos los estándares de seguridad.",
                 "i3": "Elige a ti - Nuestro equipo es nuevo y tú serás nuestro único objetivo mientras desarrollamos algo."

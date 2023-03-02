@@ -21,7 +21,6 @@
             },
             "block3": {
                 "Heading": "Development Services",
-                "SubText": "Through the use of these established methods, we are able to create a valuable strategy that delivers consistent results on different projects.",
                 "t1": "Strategy & Features",
                 "d1": "Our team will help to outline the best strategies and features for your products and applications, identifying challenges and key leverage points.",
                 "t2": "UX & Architecture",
@@ -40,7 +39,6 @@
             },
             "block5": {
                 "Heading": "Consulting Services",
-                "SubText": "Find the leading practices in development, increase your organization's agility to achieve powerful outcomes.",
                 "t1": "Feasibility Study",
                 "d1": "Is your project viable? Find out through our TELOS report, (Technical, Economic, Legal, Operational, Scheduling)",
                 "t2": "Performance Assessment",
@@ -52,7 +50,6 @@
             },
             "block6": {
                 "Heading": "Digital Transformation Services",
-                "SubText": "Transform your manually controlled systems and environments into digitally automated technology.",
                 "t1": "Workforce Capacity",
                 "d1": "Increase the capabilities of your workforce by implementing a new strategy through organizational change.",
                 "t2": "Operations Realignment",
@@ -84,7 +81,6 @@
             },
             "block3": {
                 "Heading": "Servicios de desarrollo",
-                "SubText": "Mediante el uso de estos métodos establecidos, podemos crear una estrategia valiosa que ofrece resultados consistentes en diferentes proyectos.",
                 "t1": "Estrategia y características",
                 "d1": "Nuestro equipo ayudará a describir las mejores estrategias y características para sus productos y aplicaciones, identificando desafíos y puntos de apalancamiento clave.",
                 "t2": "UX y arquitectura",
@@ -103,7 +99,6 @@
             },
             "block5": {
                 "Heading": "Consultoría Tecnológica",
-                "SubText": "Encuentre las prácticas líderes en desarrollo, aumente la agilidad de su organización para lograr resultados poderosos",
                 "t1": "Estudio de factibilidad",
                 "d1": "¿Es viable tu proyecto? Descúbrelo a través de nuestro informe TELOS, (Técnico, Económico, Legal, Operacional, Programación)",
                 "t2": "Evaluación del desempeño",
@@ -115,7 +110,6 @@
             },
             "block6": {
                 "Heading": "Servicios de Transformación Digital",
-                "SubText": "Transforme sus sistemas y entornos controlados manualmente en tecnología automatizada digitalmente.",
                 "t1": "Capacidad de la fuerza laboral",
                 "d1": "Aumente las capacidades de su fuerza laboral implementando una nueva estrategia a través del cambio organizacional.",
                 "t2": "Realineación de operaciones",

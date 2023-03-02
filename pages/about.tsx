@@ -12,6 +12,8 @@ import {
   Avatar,
   Stack,
   Center,
+  chakra,
+  Icon,
 } from '@chakra-ui/react';
 import { useRouter } from "next/router"
 import { NextSeo } from 'next-seo';
@@ -19,6 +21,44 @@ import { NextSeo } from 'next-seo';
 
 import aboutdat from '../assets/about.json'
 import Link from 'next/link';
+import { BsFillFileEarmarkBarGraphFill, BsRecordCircle } from 'react-icons/bs';
+import { MdSupportAgent } from 'react-icons/md';
+import { SiCommonworkflowlanguage } from 'react-icons/si';
+import { RiOrganizationChart } from 'react-icons/ri';
+
+
+const Feature = (props: any) => {
+  return (
+    <Flex>
+      <Flex shrink={0}>
+        <Icon
+          boxSize={10}
+          // mt={1}
+          // mr={2}
+          color="blue.500"
+          viewBox="0 0 20 20"
+          fill="currentColor"
+        >
+          {props.icco}
+        </Icon>
+      </Flex>
+      <Box ml={4}>
+        <chakra.dt
+          fontSize="lg"
+          fontWeight="bold"
+          lineHeight="6"
+          color="gray.900"
+        >
+          {props.title}
+        </chakra.dt>
+        <chakra.dd mt={2} color="gray.600">
+          {props.children}
+        </chakra.dd>
+      </Box>
+    </Flex>
+  );
+};
+
 
 const FeatureBlog = (children: any) => {
   return (
@@ -103,43 +143,75 @@ const IndexAbout = () => {
                 }
               ]}
             />
-            <Box maxW={'container.xl'} px={{ base: '4', sm: '4', md: '4', lg: '4', xl: '0' }} py={12} mx="auto">
-              <Grid templateColumns={{ base: 'repeat(1, 1fr)', sm: 'repeat(2, 1fr)', md: 'repeat(2, 1fr)', }} gap={4}>
-                <GridItem colSpan={1}>
-                  <VStack alignItems="flex-start" spacing="20px">
-                    <Heading>{aboutData.block1.heading}</Heading>
-                  </VStack>
-                </GridItem>
-                <GridItem>
-                  <Flex><Text>{aboutData.block1.i1}</Text></Flex>
-                  <Divider mt={4} mb={4} />
-                  <Flex><Text>{aboutData.block1.i2}</Text></Flex>
-                </GridItem>
-              </Grid>
+            <Box maxW={'container.xl'} px={{ base: '4', sm: '4', md: '4', lg: '4', xl: '0' }} mx="auto">
+              <Box pt={4} pb={20}>
+                <Heading letterSpacing="tight" fontWeight="bold" pb={2}>{aboutData.block1.heading}</Heading>
+                <Text textAlign={'justify'}>{aboutData.block1.i1}</Text>
+              </Box>
 
-              <Divider my={16} />
+              <SimpleGrid
+                py={20}
+                alignItems="center"
+                columns={{ base: 1, lg: 3 }}
+                spacingY={{ base: 10, lg: 32 }}
+                spacingX={{ base: 10, lg: 24 }}
+              >
+                <Box alignSelf="start">
+                  {/* <chakra.h2
+                    color="blue.500"
+                    fontWeight="semibold"
+                    textTransform="uppercase"
+                    letterSpacing="wide"
+                  >
+                    {aboutData.block2.heading}
+                  </chakra.h2> */}
+                  <Heading
+                    mb={3}
+                    fontWeight="bold"
+                    // lineHeight="shorter"
+                    letterSpacing="tight"
+                  >
+                    {aboutData.block2.heading}
+                  </Heading>
+                  {/* <chakra.p
+                    mb={6}
+                    fontSize={{ base: "lg", md: "xl" }}
+                    textAlign={{ base: "center", sm: "left" }}
+                    color="gray.600"
+                  >
+                    Lorem ipsum dolor sit amet consect adipisicing elit. Possimus
+                    magnam voluptatum cupiditate veritatis in accusamus quisquam.
+                  </chakra.p> */}
+                </Box>
+                <GridItem colSpan={2}>
+                  <Stack
+                    spacing={{ base: 10, md: 0 }}
+                    display={{ md: "grid" }}
+                    gridTemplateColumns={{ md: "repeat(2,1fr)" }}
+                    gridColumnGap={{ md: 8 }}
+                    gridRowGap={{ md: 10 }}
+                  >
+                    <Feature icco={<BsRecordCircle />} title="Visible Live Progress">
+                      Our team works hard to ensure that you see progress throughout every single day. This helps you stay informed and confident that your project is on track.
+                    </Feature>
+                    <Feature icco={<BsFillFileEarmarkBarGraphFill />} title="Weekly status meetings">
+                      We believe in regular communication and transparency. That&apos;s why we hold weekly status meetings with our clients to keep them informed about the progress of their projects.
+                    </Feature>
+                    <Feature icco={<MdSupportAgent />} title="Free support forever">
+                      Unlike most companies that make most of their money from providing support, we offer this for free because we guarantee what we develop will work as desired and intended.
+                      {/* Our commitment to our clients doesn&apos;t end when the project is completed. We offer free support forever to ensure that you always have access to the help you need. */}
+                    </Feature>
+                    <Feature icco={<RiOrganizationChart />} title="Concern for Workflows">
+                      We understand the importance of smooth and efficient workflows. That&apos;s why we take extra care to ensure that our solutions integrate seamlessly into your existing processes.
+                    </Feature>
+                  </Stack>
+                </GridItem>
+              </SimpleGrid>
 
-              <Grid templateColumns={{ base: 'repeat(1, 1fr)', sm: 'repeat(2, 1fr)', md: 'repeat(2, 1fr)', }} gap={4}>
-                <GridItem display={{ base: 'flex', sm: 'none' }} colSpan={1}>
-                  <VStack alignItems="flex-end" spacing="20px">
-                    <Heading>{aboutData.block2.heading}</Heading>
-                  </VStack>
-                </GridItem>
-                <GridItem>
-                  <Flex><Text>{aboutData.block2.i1}</Text></Flex>
-                  <Divider mt={2} mb={2} />
-                  <Flex><Text>{aboutData.block2.i2}</Text></Flex>
-                  <Divider mt={2} mb={2} />
-                  <Flex><Text>{aboutData.block2.i3}</Text></Flex>
-                </GridItem>
-                <GridItem colSpan={1}>
-                  <VStack display={{ base: 'none', sm: 'flex' }} alignItems="flex-end" spacing="20px">
-                    <Heading>{aboutData.block2.heading}</Heading>
-                  </VStack>
-                </GridItem>
-              </Grid>
 
-              <Divider my={16} />
+
+
+              {/* <Divider my={16} />
               <Heading pb={6} textAlign={'center'}>{aboutData.block3.heading}</Heading>
               <Center>
                 <SimpleGrid
@@ -168,7 +240,7 @@ const IndexAbout = () => {
                     imgsrc={'https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=300&w=600'}
                   />
                 </SimpleGrid>
-              </Center>
+              </Center> */}
             </Box>
           </>)
       })}

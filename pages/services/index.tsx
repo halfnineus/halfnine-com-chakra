@@ -113,7 +113,7 @@ const Index = () => {
                         <Box textAlign={'justify'} maxW={'container.xl'} px={{ base: '4', sm: '4', md: '4', lg: '4', xl: '0' }} mx="auto">
                             <Contactimg label={indexData.img} pexelsrc={'/img/xtra/pexels-photo-8439083.jpg'} />
                             {/* <Heading color={'gray.800'} as={'h1'} size={'lg'} pt={6} pb={2}>{indexData.block1.heading}</Heading> */}
-                            <Text pt={6} px={2} color={'gray.700'}>
+                            <Text pt={6} px={1} color={'gray.700'}>
                                 {indexData.block1.text1}
                             </Text>
                             {/* <Text pb={12} color={'gray.700'}>
@@ -197,10 +197,6 @@ const Index = () => {
                                     </Stack>
                                 </GridItem>
                             </SimpleGrid>
-                            <Text textAlign={'center'} my={6} fontSize={{ base: "lg", md: "xl" }} color="gray.500">
-                                {indexData.block3.SubText}
-                            </Text>
-
                             <Box pt={6} textAlign="center">
                                 <Heading size="lg" mb="4">
                                     {indexData.block4.Heading}
@@ -362,16 +358,12 @@ const Index = () => {
                                     </Stack>
                                 </GridItem>
                             </SimpleGrid>
-                            <Text textAlign={'center'} my={6} fontSize={{ base: "lg", md: "xl" }} color="gray.500">
-                                {indexData.block6.SubText}
-                            </Text>
                         </Box>
 
 
+
+
                         <Divider my={20} maxW={"container.xl"} mx={'auto'} />
-
-
-
 
 
 
@@ -418,9 +410,6 @@ const Index = () => {
                                     </Stack>
                                 </GridItem>
                             </SimpleGrid>
-                            <Text textAlign={'center'} my={6} fontSize={{ base: "lg", md: "xl" }} color="gray.500">
-                                {indexData.block5.SubText}
-                            </Text>
                         </Box>
 
                         <Divider my={20} maxW={"container.xl"} mx={'auto'} />
