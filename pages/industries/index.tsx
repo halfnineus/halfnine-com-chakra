@@ -73,68 +73,68 @@ const Index = () => {
                                 />
                                 <Feature
                                     icon={<MdOutlinePrecisionManufacturing />}
-                                    title={'Assembly lines'}
-                                    text={'Robotics has revolutionized assembly line production by streamlining and automating repetitive tasks such as picking, placing, and packaging. This has led to increased productivity, improved accuracy, and reduced errors in mass production industries such as automotive, electronics, and food processing.'}
-                                />
+                                    title={indexData.block2.item2}
+                                    text={indexData.block2.item2d}
+                                    />
                                 <Feature
                                     icon={<TbBuildingFactory />}
-                                    title={'Energy production'}
-                                    text={'With the help of Data Analytics, energy companies identify potential failures and predict maintenance needs to prevent costly downtime and enhance the reliability of energy production. For example, wind turbines equipped with sensors collect real-time data on wind speed and direction, allowing operators to adjust blade angles for optimal energy output.'}
+                                    title={indexData.block2.item3}
+                                    text={indexData.block2.item3d}
                                 />
                                 <Feature
                                     icon={<GiFarmer />}
-                                    title={'Farming'}
-                                    text={'Technology has enabled Vertical Farming, a method of growing crops indoors using artificial lighting, automated irrigation systems, and controlled environments. This approach not only reduces the need for pesticides and herbicides but also eliminates the impact of weather conditions on crop yields. By automating the farming process, farmers optimize production, reduce waste, and deliver fresh produce year-round in urban areas.'}
-                                />
+                                    title={indexData.block2.item4}
+                                    text={indexData.block2.item4d}
+                                    />
                                 <Feature
                                     icon={<GiPillDrop />}
-                                    title={'Pharmaceuticals'}
-                                    text={'Automation in pharmaceutical manufacturing leads to higher production capacity, improved quality control, and reduced costs. For example, robotic systems automate drug dispensing and packaging, ensuring accuracy and minimizing the risk of contamination.'}
-                                />
+                                    title={indexData.block2.item5}
+                                    text={indexData.block2.item5d}
+                                    />
                                 <Feature
                                     icon={<GiDefenseSatellite />}
-                                    title={'Aerospace'}
-                                    text={'Industrial automation has revolutionized aerospace manufacturing by enabling precise, repeatable, and efficient assembly of complex parts and structures. For instance, robotic arms perform tasks such as drilling, riveting, and welding, reducing errors and improving safety in the assembly process.'}
-                                />
+                                    title={indexData.block2.item6}
+                                    text={indexData.block2.item6d}
+                                    />
                                 <Feature
                                     icon={<GiRolledCloth />}
-                                    title={'Textiles'}
-                                    text={'Automation in textile manufacturing helps optimize production, reduce waste, and enhance product quality. For example, computer-controlled cutting machines precisely cut fabrics according to specific designs, while robotic sewing machines perform intricate stitching patterns with speed and accuracy.'}
-                                />
+                                    title={indexData.block2.item7}
+                                    text={indexData.block2.item7d}
+                                    />
                                 <Feature
                                     icon={<GiChemicalDrop />}
-                                    title={'Chemicals'}
-                                    text={'Industrial automation helps chemical manufacturers reduce production costs, increase efficiency, and improve safety. For instance, automated mixing and blending systems ensure precise control of chemical composition, while robotic arms handle hazardous materials and perform repetitive tasks such as filling and packaging.'}
-                                />
+                                    title={indexData.block2.item8}
+                                    text={indexData.block2.item8d}
+                                    />
                                 <Feature
                                     icon={<GiSodaCan />}
-                                    title={'Food & Beverage'}
-                                    text={'Automation in the food and beverage industry improves food safety, increase production efficiency, and enhance product quality. For example, automated filling and packaging systems improve accuracy and reduce waste in the production process, while robotic arms handle food ingredients and perform tasks such as slicing and packaging.'}
+                                    title={indexData.block2.item9}
+                                    text={indexData.block2.item9d}
                                 />
                                 <Feature
                                     icon={<GoLock />}
-                                    title={indexData.block2.item2}
-                                    text={indexData.block2.item2d}
-                                />
+                                    title={indexData.block2.item10}
+                                    text={indexData.block2.item10d}
+                                    />
                                 <Feature
                                     icon={<GiAntiAircraftGun />}
-                                    title={'Defense'}
-                                    text={'Advanced automation systems enhance the security and safety of military operations. For example, unmanned aerial vehicles (UAVs) equipped with cameras and sensors gather intelligence, perform surveillance, and detect threats in hostile environments, reducing the need for human intervention in dangerous situations.'}
-                                />
+                                    title={indexData.block2.item11}
+                                    text={indexData.block2.item11d}
+                                    />
                                 <Feature
                                     icon={<CiMedicalCross />}
-                                    title={'Healthcare'}
-                                    text={'Automation in healthcare improves patient safety, reduce medical errors, and increase efficiency. For instance, automated medication dispensing systems ensure accurate dosages and reduce the risk of medication errors, while robotic surgery systems enable precise and minimally invasive surgeries.'}
-                                />
+                                    title={indexData.block2.item12}
+                                    text={indexData.block2.item12d}
+                                    />
                                 <Feature
                                     icon={<GiOilPump />}
-                                    title={'Oil and Gas'}
-                                    text={'Industrial automation in the oil and gas industry helps reduce accidents and enhance operational safety. For example, remote monitoring systems detect potential equipment failures, leaks, and other safety hazards in real-time, enabling operators to take corrective actions before accidents occur.'}
-                                />
+                                    title={indexData.block2.item13}
+                                    text={indexData.block2.item13d}
+                                    />
                                 <Feature
                                     icon={<IoTrainOutline />}
-                                    title={'Transportation'}
-                                    text={'Automation in the transportation industry improves safety, reduce traffic congestion, and enhance energy efficiency. For instance, automated traffic management systems optimize traffic flow and reduce the risk of accidents, while self-driving vehicles reduce human error and improve road safety.'}
+                                    title={indexData.block2.item14}
+                                    text={indexData.block2.item14d}
                                 />
 
                             </SimpleGrid>

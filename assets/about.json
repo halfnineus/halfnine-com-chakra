@@ -11,10 +11,15 @@
                 "i1": "We are a group of dedicated engineers with a passion for pushing boundaries. Working for industry-leading companies, we aim to deliver the same level of excellence to our clients. Our expertise spans various industries and technologies. We tackle challenges with proven strategies and methods to deliver exceptional results. With our undivided attention and commitment to excellence, we are ready for any challenge. If you would like to know more about us, please contact us."
             },
             "block2": {
-                "heading": "Why Choose Us",
-                "i1": "Choose the Best - Our team is built with experience on the world's leading companies and technology.",
-                "i2": "Choose Security - Our team uses the leading technology and meets latest industry standards.",
-                "i3": "Choose You - You will be our sole focus while developing something."
+                "heading": "Why Choose Us?",
+                "txt1": "Visible Live Progress",
+                "txt1d": "Our team works hard to ensure that you see progress throughout every single day. This helps you stay informed and confident that your project is on track.",
+                "txt2": "Weekly status meetings",
+                "txt2d": "We believe in regular communication and transparency. That's why we hold weekly status meetings with our clients to keep them informed about the progress of their projects.",
+                "txt3": "Free support forever",
+                "txt3d": "Unlike most companies that make most of their money from providing support, we offer this for free because we guarantee what we develop will work as desired and intended.",
+                "txt4": "Concern for Workflows",
+                "txt4d": "We understand the importance of smooth and efficient workflows. That's why we take extra care to ensure that our solutions integrate seamlessly into your existing processes."
             },
             "block3":{
                 "heading": "The Blog"
@@ -28,13 +33,18 @@
             },
             "block1": {
                 "heading": "Quienes somos",
-                "i1": "Somos un equipo de ingenieros que trabajan como empleados para otras empresas, sin embargo, siempre estamos interesados en proyectos que desafíen nuestras capacidades y estamos dispuestos a prestarle toda nuestra atención."
+                "i1": "Somos un grupo de ingenieros dedicados con pasión por superar los límites. Trabajando para empresas líderes en la industria, nuestro objetivo es ofrecer el mismo nivel de excelencia a nuestros clientes. Nuestra experiencia abarca diversas industrias y tecnologías. Abordamos los desafíos con estrategias y métodos comprobados para brindar resultados excepcionales. Con toda nuestra atención y compromiso con la excelencia, estamos listos para cualquier desafío. Si desea saber más sobre nosotros, póngase en contacto con nosotros."
             },
             "block2": {
                 "heading": "¿Por qué elegirnos?",
-                "i1": "Elige lo mejor - Nuestro equipo está hecho con experiencia en las empresas y tecnologías líder en el mundo.",
-                "i2": "Elige Seguridad - Nuestro equipo utiliza la tecnología moderna y cumple con todos los estándares de seguridad.",
-                "i3": "Elige a ti - Nuestro equipo es nuevo y tú serás nuestro único objetivo mientras desarrollamos algo."
+                "txt1": "Progreso visible en vivo",
+                "txt1d": "Nuestro equipo trabaja arduamente para garantizar que vea el progreso todos los días. Esto lo ayuda a mantenerse informado y seguro de que su proyecto va por buen camino.",
+                "txt2": "Reuniones de estado semanales",
+                "txt2d": "Creemos en la comunicación periódica y la transparencia. Es por eso que realizamos reuniones de estado semanales con nuestros clientes para mantenerlos informados sobre el avance de sus proyectos.",
+                "txt3": "Soporte gratuito para siempre",
+                "txt3d": "La mayoría de las empresas que obtienen la mayor parte de sus ingresos cobrando por soporte, lo ofrecemos de forma gratuita porque garantizamos que lo que desarrollamos funcionará según lo deseado y previsto.",
+                "txt4": "Flujos de trabajo",
+                "txt4d": "Entendemos la importancia de flujos de trabajo fluidos y eficientes. Es por eso que nos aseguramos de que nuestras soluciones se integren a la perfección en sus procesos existentes."
             },
             "block3":{
                 "heading": "El blog"

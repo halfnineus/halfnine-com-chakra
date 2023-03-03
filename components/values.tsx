@@ -57,7 +57,7 @@ const Feature = ({ heading, text, color, icon }: FeatureProps) => {
                     {heading}
                 </Heading>
             </HStack>
-            <Text fontSize="md" color="gray.600">
+            <Text mt={-4} pl={16} ml={-1} fontSize="md" color="gray.600">
                 {text}
             </Text>
         </GridItem>
@@ -82,7 +82,7 @@ const Values = () => {
                                 sm: 'repeat(2, 1fr)',
                                 md: 'repeat(3, 1fr)',
                             }}
-                            gap={{ base: '8', sm: '12', md: '10' }}>
+                            gap={{ base: '8', sm: '12', md: '16' }}>
                             <Feature
                                 color="blue"
                                 heading={indexData.heading.item1}

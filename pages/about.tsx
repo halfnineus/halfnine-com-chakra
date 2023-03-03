@@ -148,70 +148,64 @@ const IndexAbout = () => {
                 <Heading letterSpacing="tight" fontWeight="bold" pb={2}>{aboutData.block1.heading}</Heading>
                 <Text textAlign={'justify'}>{aboutData.block1.i1}</Text>
               </Box>
+            </Box>
 
-              <SimpleGrid
-                py={20}
-                alignItems="center"
-                columns={{ base: 1, lg: 3 }}
-                spacingY={{ base: 10, lg: 32 }}
-                spacingX={{ base: 10, lg: 24 }}
-              >
-                <Box alignSelf="start">
-                  {/* <chakra.h2
-                    color="blue.500"
-                    fontWeight="semibold"
-                    textTransform="uppercase"
-                    letterSpacing="wide"
-                  >
-                    {aboutData.block2.heading}
-                  </chakra.h2> */}
-                  <Heading
-                    mb={3}
-                    fontWeight="bold"
-                    // lineHeight="shorter"
-                    letterSpacing="tight"
-                  >
-                    {aboutData.block2.heading}
-                  </Heading>
-                  {/* <chakra.p
+            <Box bg={'gray.50'}>
+              <Box maxW={'container.xl'} px={{ base: '4', sm: '4', md: '4', lg: '4', xl: '0' }} mx="auto">
+                <SimpleGrid
+                  py={20}
+                  alignItems="center"
+                  columns={{ base: 1, lg: 3 }}
+                  spacingY={{ base: 10, lg: 32 }}
+                  spacingX={{ base: 10, lg: 24 }}
+                >
+                  <Box alignSelf="start">
+                    <Heading
+                      mb={3}
+                      fontWeight="bold"
+                      // lineHeight="shorter"
+                      letterSpacing="tight"
+                    >
+                      {aboutData.block2.heading}
+                    </Heading>
+                    {/* <chakra.p
                     mb={6}
                     fontSize={{ base: "lg", md: "xl" }}
                     textAlign={{ base: "center", sm: "left" }}
                     color="gray.600"
-                  >
+                    >
                     Lorem ipsum dolor sit amet consect adipisicing elit. Possimus
                     magnam voluptatum cupiditate veritatis in accusamus quisquam.
                   </chakra.p> */}
-                </Box>
-                <GridItem colSpan={2}>
-                  <Stack
-                    spacing={{ base: 10, md: 0 }}
-                    display={{ md: "grid" }}
-                    gridTemplateColumns={{ md: "repeat(2,1fr)" }}
-                    gridColumnGap={{ md: 8 }}
-                    gridRowGap={{ md: 10 }}
-                  >
-                    <Feature icco={<BsRecordCircle />} title="Visible Live Progress">
-                      Our team works hard to ensure that you see progress throughout every single day. This helps you stay informed and confident that your project is on track.
-                    </Feature>
-                    <Feature icco={<BsFillFileEarmarkBarGraphFill />} title="Weekly status meetings">
-                      We believe in regular communication and transparency. That&apos;s why we hold weekly status meetings with our clients to keep them informed about the progress of their projects.
-                    </Feature>
-                    <Feature icco={<MdSupportAgent />} title="Free support forever">
-                      Unlike most companies that make most of their money from providing support, we offer this for free because we guarantee what we develop will work as desired and intended.
-                      {/* Our commitment to our clients doesn&apos;t end when the project is completed. We offer free support forever to ensure that you always have access to the help you need. */}
-                    </Feature>
-                    <Feature icco={<RiOrganizationChart />} title="Concern for Workflows">
-                      We understand the importance of smooth and efficient workflows. That&apos;s why we take extra care to ensure that our solutions integrate seamlessly into your existing processes.
-                    </Feature>
-                  </Stack>
-                </GridItem>
-              </SimpleGrid>
+                  </Box>
+                  <GridItem colSpan={2}>
+                    <Stack
+                      spacing={{ base: 10, md: 0 }}
+                      display={{ md: "grid" }}
+                      gridTemplateColumns={{ md: "repeat(2,1fr)" }}
+                      gridColumnGap={{ md: 8 }}
+                      gridRowGap={{ md: 10 }}
+                    >
+                      <Feature icco={<BsRecordCircle />} title={aboutData.block2.txt1}>
+                        {aboutData.block2.txt1d}
+                      </Feature>
+                      <Feature icco={<BsFillFileEarmarkBarGraphFill />} title={aboutData.block2.txt2}>
+                        {aboutData.block2.txt2d}
+                      </Feature>
+                      <Feature icco={<MdSupportAgent />} title={aboutData.block2.txt3}>
+                        {aboutData.block2.txt3d}
+                      </Feature>
+                      <Feature icco={<RiOrganizationChart />} title={aboutData.block2.txt4}>
+                        {aboutData.block2.txt4d}
+                      </Feature>
+                    </Stack>
+                  </GridItem>
+                </SimpleGrid>
+              </Box>
+            </Box>
 
 
-
-
-              {/* <Divider my={16} />
+            <Box maxW={'container.xl'} px={{ base: '4', sm: '4', md: '4', lg: '4', xl: '0' }} mx="auto" my={20}>
               <Heading pb={6} textAlign={'center'}>{aboutData.block3.heading}</Heading>
               <Center>
                 <SimpleGrid
@@ -240,7 +234,7 @@ const IndexAbout = () => {
                     imgsrc={'https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=300&w=600'}
                   />
                 </SimpleGrid>
-              </Center> */}
+              </Center>
             </Box>
           </>)
       })}

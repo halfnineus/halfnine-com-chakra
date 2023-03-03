@@ -197,14 +197,13 @@ const Index = () => {
                                     </Stack>
                                 </GridItem>
                             </SimpleGrid>
-                            <Box pt={6} textAlign="center">
+                            <Box pt={16} textAlign="center">
                                 <Heading size="lg" mb="4">
                                     {indexData.block4.Heading}
                                 </Heading>
-                                <Text maxW="3xl" mx="auto">
+                                <Text pb={8} maxW="3xl" mx="auto">
                                     {indexData.block4.Text}
                                 </Text>
-                                {/* <Tabs isFitted size={'lg'} orientation={{ sm: "vertical", md: "horizontal" }}> */}
                                 <Tabs isFitted size={'lg'} orientation={"horizontal"}>
                                     <TabList>
                                         <Tab>{indexData.block4.t1}</Tab>
@@ -326,7 +325,7 @@ const Index = () => {
                                     fontWeight="extrabold"
                                     letterSpacing="tight"
                                 >
-                                    {indexData.block6.Heading}
+                                    {indexData.block5.Heading}
                                 </Heading>
                             </Box>
                             <SimpleGrid
@@ -343,17 +342,17 @@ const Index = () => {
                                         gridColumnGap={{ md: 8 }}
                                         gridRowGap={{ md: 10 }}
                                     >
-                                        <Feature2 icon={<FaUserTag />} title={indexData.block6.t1}>
-                                            {indexData.block6.d1}
+                                        <Feature2 icon={<FaUserTag />} title={indexData.block5.t1}>
+                                            {indexData.block5.d1}
                                         </Feature2>
-                                        <Feature2 icon={<GiSettingsKnobs />} title={indexData.block6.t2}>
-                                            {indexData.block6.d2}
+                                        <Feature2 icon={<GiSettingsKnobs />} title={indexData.block5.t2}>
+                                            {indexData.block5.d2}
                                         </Feature2>
-                                        <Feature2 icon={<BsSignpostSplit />} title={indexData.block6.t3}>
-                                            {indexData.block6.d3}
+                                        <Feature2 icon={<BsSignpostSplit />} title={indexData.block5.t3}>
+                                            {indexData.block5.d3}
                                         </Feature2>
-                                        <Feature2 icon={<BsPinAngle />} title={indexData.block6.t4}>
-                                            {indexData.block6.d4}
+                                        <Feature2 icon={<BsPinAngle />} title={indexData.block5.t4}>
+                                            {indexData.block5.d4}
                                         </Feature2>
                                     </Stack>
                                 </GridItem>
@@ -378,7 +377,7 @@ const Index = () => {
                                     fontWeight="extrabold"
                                     letterSpacing="tight"
                                 >
-                                    {indexData.block5.Heading}
+                                    {indexData.block6.Heading}
                                 </Heading>
                             </Box>
                             <SimpleGrid
@@ -395,17 +394,17 @@ const Index = () => {
                                         gridColumnGap={{ md: 8 }}
                                         gridRowGap={{ md: 10 }}
                                     >
-                                        <Feature2 icon={<HiOutlineDocumentMagnifyingGlass />} title={indexData.block5.t1}>
-                                            {indexData.block5.d1}
+                                        <Feature2 icon={<HiOutlineDocumentMagnifyingGlass />} title={indexData.block6.t1}>
+                                            {indexData.block6.d1}
                                         </Feature2>
-                                        <Feature2 icon={<HiOutlineDocumentChartBar />} title={indexData.block5.t2}>
-                                            {indexData.block5.d2}
+                                        <Feature2 icon={<HiOutlineDocumentChartBar />} title={indexData.block6.t2}>
+                                            {indexData.block6.d2}
                                         </Feature2>
-                                        <Feature2 icon={<HiOutlineBeaker />} title={indexData.block5.t3}>
-                                            {indexData.block5.d3}
+                                        <Feature2 icon={<HiOutlineBeaker />} title={indexData.block6.t3}>
+                                            {indexData.block6.d3}
                                         </Feature2>
-                                        <Feature2 icon={<HiOutlineCheckBadge />} title={indexData.block5.t4}>
-                                            {indexData.block5.d4}
+                                        <Feature2 icon={<HiOutlineCheckBadge />} title={indexData.block6.t4}>
+                                            {indexData.block6.d4}
                                         </Feature2>
                                     </Stack>
                                 </GridItem>

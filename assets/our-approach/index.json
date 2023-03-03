@@ -1,0 +1,122 @@
+{
+    "data": [
+        {
+            "locale": "en",
+            "head": {
+                "title": "Delivery Model | Zedir",
+                "description": ""
+            },
+            "block1": {
+                "heading": "Discover",
+                "text1": "Market Research",
+                "text1d": "This involves gathering and analyzing information about the market and industry trends to identify potential opportunities and challenges for implementing a customized automation solution.",
+                "text2": "User Needs Assessment",
+                "text2d": "This process involves gathering input from stakeholders to identify their needs and requirements for the automation solution.",
+                "text3": "Competitive Analysis",
+                "text3d": "This involves analyzing the competition to identify their strengths and weaknesses and determine how the customized automation solution can differentiate from others.",
+                "text4": "Technology Assessment",
+                "text4d": "This involves evaluating various technologies and tools that can be used to develop the customized automation solution.",
+                "text5": "Feasibility Study",
+                "text5d": "This involves assessing the feasibility of implementing the customized automation solution, including factors such as costs, timelines, and resource availability."
+            },
+            "block2": {
+                "heading": "Define",
+                "text1": "System Architecture",
+                "text1d": "This involves designing the overall system structure and components that will be used to develop the automation solution.",
+                "text2": "Functional Requirements",
+                "text2d": "This involves identifying the specific features and functions that the automation solution should provide to meet the user needs.",
+                "text3": "Non-Functional Requirements",
+                "text3d": "This involves identifying the system requirements related to factors such as performance, security, reliability, and usability.",
+                "text4": "Performance Metrics",
+                "text4d": "This involves defining the key performance indicators that will be used to measure the effectiveness of the automation solution.",
+                "text5": "Technical Standards",
+                "text5d": "This involves establishing the technical standards and protocols that will be used to develop and integrate the automation solution."
+            },
+            "block3": {
+                "heading": "Develop",
+                "text1": "Hardware Design",
+                "text1d": "This involves designing the hardware components that will be used to implement the automation solution, such as sensors, controllers, and actuators.",
+                "text2": "Software Development",
+                "text2d": "This involves developing the software components that will be used to implement the automation solution, such as programming logic and user interfaces.",
+                "text3": "Testing & Validation",
+                "text3d": "This involves testing and validating the automation solution to ensure that it meets the defined requirements and performance metrics.",
+                "text4": "Integration & Interoperability",
+                "text4d": "This involves integrating the automation solution with existing systems and ensuring that it can communicate and work effectively with other systems.",
+                "text5": "Security & Compliance",
+                "text5d": "This involves implementing security measures and ensuring that the automation solution complies with relevant regulations and standards."
+            },
+            "block4": {
+                "heading": "Deliver",
+                "text1": "Deployment & Installation",
+                "text1d": "This involves deploying and installing the automation solution in the target environment.",
+                "text2": "Maintenance & Support",
+                "text2d": "This involves providing ongoing maintenance and support for the automation solution to ensure that it continues to operate effectively.",
+                "text3": "Training & Documentation",
+                "text3d": "This involves providing training and documentation to users and stakeholders to ensure that they can effectively use and maintain the automation solution.",
+                "text4": "Continuous Improvement",
+                "text4d": "This involves continuously monitoring and improving the automation solution to optimize its performance and effectiveness.",
+                "text5": "Scalability & Future-proofing",
+                "text5d": "This involves designing the automation solution to be scalable and adaptable to changing needs and technologies in the future."
+            }
+        },
+        {
+            "locale": "es",
+            "head": {
+                "title": "Modelo del processo | Zedir",
+                "description": ""
+            },
+            "block1": {
+                "heading": "Descubrir",
+                "text1": "Investigación de mercado",
+                "text1d": "Esto implica recopilar y analizar información sobre el mercado y las tendencias de la industria para identificar posibles oportunidades y desafíos para implementar una solución de automatización personalizada.",
+                "text2": "Evaluación de las necesidades del usuario",
+                "text2d": "Este proceso implica recopilar información de las partes interesadas para identificar sus necesidades y requisitos para la solución de automatización.",
+                "text3": "Análisis competitivo",
+                "text3d": "Esto implica analizar a la competencia para identificar sus fortalezas y debilidades y determinar cómo la solución de automatización personalizada puede diferenciarse de otras.",
+                "text4": "Evaluación de tecnología",
+                "text4d": "Esto implica evaluar diversas tecnologías y herramientas que se pueden utilizar para desarrollar la solución de automatización personalizada.",
+                "text5": "Estudio de factibilidad",
+                "text5d": "Esto implica evaluar la viabilidad de implementar la solución de automatización personalizada, incluidos factores como costos, plazos y disponibilidad de recursos."
+            },
+            "block2": {
+                "heading": "Definir",
+                "text1": "Arquitectura del sistema",
+                "text1d": "Esto implica diseñar la estructura general del sistema y los componentes que se utilizarán para desarrollar la solución de automatización.",
+                "text2": "Requerimientos funcionales",
+                "text2d": "Esto implica identificar las características y funciones específicas que la solución de automatización debe proporcionar para satisfacer las necesidades del usuario.",
+                "text3": "Requerimientos no funcionales",
+                "text3d": "Esto implica identificar los requisitos del sistema relacionados con factores como el rendimiento, la seguridad, la confiabilidad y la facilidad de uso.",
+                "text4": "Métricas de rendimiento",
+                "text4d": "Esto implica definir los indicadores clave de rendimiento que se utilizarán para medir la eficacia de la solución de automatización.",
+                "text5": "Estándares técnicos",
+                "text5d": "Esto implica establecer los estándares y protocolos técnicos que se utilizarán para desarrollar e integrar la solución de automatización."
+            },
+            "block3": {
+                "heading": "Desarrollar",
+                "text1": "Diseño de hardware",
+                "text1d": "Esto implica diseñar los componentes de hardware que se utilizarán para implementar la solución de automatización, como sensores, controladores y actuadores.",
+                "text2": "Desarrollo de software",
+                "text2d": "Esto implica desarrollar los componentes de software que se utilizarán para implementar la solución de automatización, como la lógica de programación y las interfaces de usuario.",
+                "text3": "Pruebas y Validación",
+                "text3d": "Esto implica probar y validar la solución de automatización para garantizar que cumpla con los requisitos definidos y las métricas de rendimiento.",
+                "text4": "Integración e Interoperabilidad",
+                "text4d": "Esto implica integrar la solución de automatización con los sistemas existentes y garantizar que pueda comunicarse y funcionar de manera efectiva con otros sistemas.",
+                "text5": "Seguridad y Cumplimiento",
+                "text5d": "Esto implica implementar medidas de seguridad y garantizar que la solución de automatización cumpla con las normas y estándares pertinentes."
+            },
+            "block4": {
+                "heading": "Entregar",
+                "text1": "Despliegue e Instalación",
+                "text1d": "Esto implica implementar e instalar la solución de automatización en el entorno de destino.",
+                "text2": "Mantenimiento y soporte",
+                "text2d": "Esto implica brindar mantenimiento y soporte continuos a la solución de automatización para garantizar que continúe funcionando de manera efectiva.",
+                "text3": "Formación y Documentación",
+                "text3d": "Esto implica brindar capacitación y documentación a los usuarios y partes interesadas para garantizar que puedan usar y mantener la solución de automatización de manera efectiva.",
+                "text4": "Mejora continua",
+                "text4d": "Esto implica monitorear y mejorar continuamente la solución de automatización para optimizar su rendimiento y efectividad.",
+                "text5": "Escalabilidad y preparación para el futuro",
+                "text5d": "Esto implica diseñar la solución de automatización para que sea escalable y adaptable a las necesidades y tecnologías cambiantes en el futuro."
+            }
+        }
+    ]
+}

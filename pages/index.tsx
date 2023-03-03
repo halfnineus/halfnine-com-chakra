@@ -162,9 +162,9 @@ const IndexPage = () => {
             />
             {/*
             <Box maxW={'container.xl'} px={{ base: '4', sm: '4', md: '4', lg: '4', xl: 0 }} pt={4} mx="auto">
-            </Box> 
-            */}
-            <Box maxW={'container.xl'} as="section" pt={16} pb={8} pos="relative" mx="auto">
+            </Box>
+          */}
+            <Box maxW={'container.xl'} as="section" pt={{ base: 0, md: 16 }} pb={{ base: 0, md: 8 }} pos="relative" mx="auto">
               <Box maxW={{ md: 'full', lg: 'xl', xl: '2xl' }} pt={{ base: '6', lg: '8' }} pb={{ base: '16', lg: '36' }} px={{ base: '4', sm: '4', md: '4', lg: '4', xl: 0 }}>
                 <Heading as="h1" size="3xl" lineHeight="1" fontWeight="extrabold" letterSpacing="tight">
                   {indexData.block1.h1_1}{' '}
@@ -209,7 +209,7 @@ const IndexPage = () => {
 
             <Box minH={'8rem'} />
 
-            <Box mx="auto" textAlign={{ base: "left", md: "center", }} bg={'gray.50'} py={28}>
+            <Box mx="auto" textAlign={{ base: "left", md: "center", }} bg={'gray.50'} py={{ base: 16, md: 28 }}>
               <Box px={{ base: '4', sm: '4', md: '4', lg: '4', xl: 0 }}>
                 <Heading
                   mb={2}
@@ -264,7 +264,7 @@ const IndexPage = () => {
               </Box>
             </Box>
 
-            <Box maxW={'container.xl'} px={{ base: '4', sm: '4', md: '4', lg: '4', xl: 0 }} mx="auto" py={28}>
+            <Box maxW={'container.xl'} px={{ base: '4', sm: '4', md: '4', lg: '4', xl: 0 }} mx="auto" py={{ base: 16, md: 28 }}>
               <SimpleGrid columns={1} spacing={10}>
                 <Feature1
                   icon={<Icon as={FcServices} w={10} h={10} />}
@@ -286,7 +286,7 @@ const IndexPage = () => {
               </SimpleGrid>
             </Box>
 
-            <Box bg={'gray.50'} py={28}>
+            <Box bg={'gray.50'} py={{ base: 16, md: 28 }}>
               <Box maxW={'container.xl'} px={{ base: '4', sm: '4', md: '4', lg: '4', xl: 0 }} mx="auto">
                 <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10}>
                   <Stack spacing={4}>
@@ -333,7 +333,7 @@ const IndexPage = () => {
               </Box>
             </Box>
 
-            <Box maxW={'container.xl'} px={{ base: '4', sm: '4', md: '4', lg: '4', xl: 0 }} mx="auto" py={28}>
+            <Box maxW={'container.xl'} px={{ base: '4', sm: '4', md: '4', lg: '4', xl: 0 }} mx="auto" py={{ base: 16, md: 28 }}>
               <SimpleGrid
                 columns={{ base: 1, md: 2, lg: 2 }}
                 spacing={16}

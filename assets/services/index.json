@@ -22,42 +22,42 @@
             "block3": {
                 "Heading": "Development Services",
                 "t1": "Strategy & Features",
-                "d1": "Our team will help to outline the best strategies and features for your products and applications, identifying challenges and key leverage points.",
+                "d1": "We help you identify the best strategies and features for your products and applications. By analyzing your needs and challenges, we can determine key leverage points and create a plan for success.",
                 "t2": "UX & Architecture",
-                "d2": "Our team will help you choose the right technologies to create a technology stack that fits the desired User Experience.",
+                "d2": "Our expert team will assist you in selecting the appropriate technologies to build a customized technology stack that perfectly aligns with your desired User Experience.",
                 "t3": "Development & Testing",
-                "d3": "With the right team of developers, managers, analysts, and testers we are able to create functioning technology while enabling you to fully control this process through transparency and achieving a successful launch.",
+                "d3": "Our transparent process allows you to maintain control over the development and testing stages, ensuring a successful launch of functioning technology.",
                 "t4": "Support & Maintenance",
-                "d4": "Providing a direct line to support requests and providing fast response to bugs and issues, saves valuable time for any issues that may be presented."
+                "d4": "We help with support and maintenance by offering a direct support line to address any bugs or issues promptly. This efficient response system saves valuable time and ensures uninterrupted operations."
             },
             "block4": {
                 "Heading": "Our Technology Stack for a Long-Lasting IT Evolution",
-                "Text": "We are able to employ the latest or the always evolving, classic, and most trusted technologies having expertise in replicating proven strategies and methods.",
+                "Text": "We have the expertise to employ the latest, constantly evolving or the classic, and most trusted technologies, and use them to replicate proven strategies and methods.",
                 "t1": "Cloud",
                 "t2": "Web Frameworks",
                 "t3": "Hardware | Firmware"
             },
             "block5": {
-                "Heading": "Consulting Services",
-                "t1": "Feasibility Study",
-                "d1": "Is your project viable? Find out through our TELOS report, (Technical, Economic, Legal, Operational, Scheduling)",
-                "t2": "Performance Assessment",
-                "d2": "Evaluate your organization employees and leaders on their Performance, Knowledge, and Skills",
-                "t3": "Research and Development",
-                "d3": "Research through industry experts the capabilities of your projects and take them to the next level.",
-                "t4": "Validation",
-                "d4": "Improve how reliable is your production and services with data gathered through information technology."
-            },
-            "block6": {
                 "Heading": "Digital Transformation Services",
                 "t1": "Workforce Capacity",
-                "d1": "Increase the capabilities of your workforce by implementing a new strategy through organizational change.",
+                "d1": "Enhancing your workforce capacity by facilitating organizational change and implementing new strategies. Empowering your team to provide better results with improved performance and productivity.",
                 "t2": "Operations Realignment",
-                "d2": "Find new leadership strategies and outgrow competitors through data and information technologies.",
+                "d2": "Achieving operations realignment and outgrowing competitors by leveraging data and information technologies. Enabling effective leadership strategies for success.",
                 "t3": "Sustainable Change",
-                "d3": "Focus on consistent results through investing in customer relationships and change.",
+                "d3": "To achieve sustainable change, we prioritize customer relationships and embracing change by delivering reliable results.",
                 "t4": "Strategy Transformation",
-                "d4": "Break barriers to change through new technology approaches to implement strategies."
+                "d4": "Breaking down barriers brings change by adopting new technologies and approaches to implement strategies."
+            },
+            "block6": {
+                "Heading": "Consulting Services",
+                "t1": "Feasibility Study",
+                "d1": "Make sure your project is feasible. Let us help you find out through a TELOS report, which assesses Technical, Economic, Legal, Operational, and Scheduling factors.",
+                "t2": "Performance Assessment",
+                "d2": "Evaluating your organization's employees and leaders on their performance, knowledge, and skills. We help identify areas for improvement and provide recommendations to enhance productivity and efficiency.",
+                "t3": "Research & Development",
+                "d3": "Helping enhance your projects by conducting thorough research and tapping into the expertise of industry professionals. Our research will take your capabilities to the next level.",
+                "t4": "Validation",
+                "d4": "Enhancing the reliability of your production and services by utilizing information technology to gather data for validation and analysis, optimizing processes for increased efficiency and profitability. "
             }
         },
         {
@@ -66,58 +66,58 @@
                 "title": "Servicios de Automatización Industrial con Excelencia Garantizada | Zedir",
                 "description": "Brindando Excelencia Garantizada en Servicios de Automatización Industrial. Con una amplia experiencia en automatización industrial, nuestro equipo de ingenieros dedicados está listo para replicar métodos y soluciones probados para su negocio."
             },
-            "img": "Servicios de Automatización Industrial | Excelencia garantizada",
+            "img": "Servicios de Automatización Industrial",
             "block1": {
                 "heading": "Automatizando todas las industrias juntos",
-                "text1": "Los Servicios de Automatización Industrial de la Empresa Zedir garantizan la excelencia. La automatización industrial tiene los objetivos de conectar equipos, desarrollar tecnología, maximizar la producción, garantizar la seguridad, maximizar el uso de recursos y garantizar la calidad. Nuestro equipo de ingenieros dedicados tiene una amplia experiencia en estos sectores industriales y está listo para replicar métodos y soluciones probados."
+                "text1": "Los Servicios de Automatización Industrial de Zedir garantizan la excelencia conectando equipos, maximizando la producción, asegurando la seguridad y optimizando el uso de los recursos, lo que resulta en un importante retorno de la inversión (ROI). Nuestro equipo dedicado de ingenieros experimentados tiene un amplio conocimiento en el sector industrial y puede replicar métodos y soluciones probados para lograr los mejores resultados. Priorizamos la rentabilidad y adaptamos nuestras soluciones para satisfacer las necesidades específicas de cada cliente. Al comprender los requisitos únicos de cada proyecto, desarrollamos soluciones que garantizan el más alto nivel de calidad y confiabilidad. Nuestro compromiso con el soporte y el mantenimiento continuos garantiza que su solución de automatización seguirá siendo completamente funcional y confiable en los años venideros."
             },
             "block2": {
-                "item1": "Desarrollo de firmware, hardware y software",
-                "item1d": "Zedir está siendo construido por ingenieros. Entendemos la necesidad de transparencia, eficiencia y, lo que es más fundamental, entrega. Nos hemos centrado en generar una práctica de gestión de entrega que le permita monitorear el progreso y tomar decisiones basadas en esta información de una manera rápida, transparente y eficiente. Además, ofrecemos servicios ágiles de automatización industrial para complementar y mejorar sus sistemas específicos.",
-                "item2": "Transformación Digital Industrial",
-                "item2d": "Mejore sus procesos y sistemas con tecnologías que ofrecen procesamiento y servicios de datos e información eficientes y adaptables. Transforme la eficiencia, la producción y la innovación de su organización con tecnología.",
-                "item3": "Consultoría de Proyectos Industriales",
-                "item3d": "Con la altísima importancia de los proyectos de automatización industrial de alta calidad. Ofrecemos soluciones para ayudarlo a estar tranquilo sobre la excelencia y la calidad de sus proyectos. Desde estudio de viabilidad, revisión del diseño del sistema, gestión de proyectos, instalación y puesta en marcha, o mantenimiento. Nuestro experimentado equipo está comprometido a ayudarlo a aprovechar al máximo su proyecto de automatización industrial."
+                "item1": "Desarrollo de Hardware y Software",
+                "item1d": "Nuestro enfoque es desarrollar un sistema de gestión de entrega que permita un seguimiento rápido, transparente y eficiente del progreso, lo que permite una toma de decisiones informada. También proporcionamos servicios ágiles de automatización industrial para mejorar sus sistemas en función de sus requisitos únicos. Nuestra prioridad es entregar con transparencia y eficiencia.",
+                "item2": "Transformación Digital",
+                "item2d": "Mejore sus procesos y sistemas con tecnologías que ofrecen procesamiento eficiente y adaptable con optimización de información y recopilación de datos. Transforme la eficiencia, la producción y la innovación de su organización con la tecnología.",
+                "item3": "Consultoría de Proyectos",
+                "item3d": "Ofrecemos soluciones para ayudarlo a estar tranquilo sobre la excelencia y la calidad de sus proyectos. Con soluciones que aseguran cobertura de alta calidad, factibilidad, diseño de sistemas, gestión de proyectos, instalación y puesta en marcha, y mantenimiento. Nuestro experimentado equipo le ayuda a maximizar su potencial en su proyecto."
             },
             "block3": {
                 "Heading": "Servicios de desarrollo",
                 "t1": "Estrategia y características",
-                "d1": "Nuestro equipo ayudará a describir las mejores estrategias y características para sus productos y aplicaciones, identificando desafíos y puntos de apalancamiento clave.",
+                "d1": "Le ayudamos a identificar las mejores estrategias y características para sus productos y aplicaciones. Al analizar sus necesidades y desafíos, podemos determinar los puntos clave de apalancamiento y crear un plan para el éxito.",
                 "t2": "UX y arquitectura",
-                "d2": "Nuestro equipo lo ayudará a elegir las tecnologías adecuadas para crear una pila de tecnología que se ajuste a la experiencia del usuario deseada.",
+                "d2": "Nuestro equipo de expertos lo ayudará a seleccionar las tecnologías apropiadas para crear una pila de tecnología personalizada que se alinee perfectamente con su experiencia de usuario deseada.",
                 "t3": "Desarrollo y pruebas",
-                "d3": "Con el equipo adecuado de desarrolladores, gerentes, analistas y probadores, podemos crear tecnología de funcionamiento al tiempo que le permite controlar completamente este proceso a través de la transparencia y lograr un lanzamiento exitoso.",
+                "d3": "Nuestro proceso transparente le permite mantener el control sobre las etapas de desarrollo y prueba, lo que garantiza un lanzamiento exitoso de la tecnología en funcionamiento.",
                 "t4": "Soporte y mantenimiento",
-                "d4": "Proporcionar una línea directa para admitir solicitudes y proporcionar una respuesta rápida a errores y problemas, ahorra un tiempo valioso para cualquier problema que pueda presentarse."
+                "d4": "Ayudamos con el soporte y el mantenimiento al ofrecer una línea de soporte directo para abordar cualquier error o problema de inmediato. Este eficiente sistema de respuesta ahorra un tiempo valioso y garantiza operaciones ininterrumpidas."
             },
             "block4": {
-                "Heading": "Nuestra pila tecnológica para una evolución de TI duradera",
-                "Text": "Podemos emplear las tecnologías más recientes o siempre en evolución, clásica y más confiable que tienen experiencia en replicar estrategias y métodos probados.",
+                "Heading": "Nuestro Stack de tecnología para una evolución de TI duradera",
+                "Text": "Tenemos la experiencia para emplear las tecnologías más recientes, en constante evolución o las clásicas y más confiables, y las usamos para replicar estrategias y métodos probados.",
                 "t1": "Nube",
                 "t2": "Framework Web",
                 "t3": "Hardware | Firmware"
             },
             "block5": {
-                "Heading": "Consultoría Tecnológica",
-                "t1": "Estudio de factibilidad",
-                "d1": "¿Es viable tu proyecto? Descúbrelo a través de nuestro informe TELOS, (Técnico, Económico, Legal, Operacional, Programación)",
-                "t2": "Evaluación del desempeño",
-                "d2": "Evalúa a los empleados y líderes de tu organización en su Desempeño, Conocimiento y Habilidades",
-                "t3": "Investigación y desarrollo",
-                "d3": "Investiga a través de expertos de la industria las capacidades de tus proyectos y llévalos al siguiente nivel.",
-                "t4": "Validación",
-                "d4": "Mejore la confiabilidad de su producción y servicios con datos recopilados a través de la tecnología de la información"
-            },
-            "block6": {
                 "Heading": "Servicios de Transformación Digital",
                 "t1": "Capacidad de la fuerza laboral",
-                "d1": "Aumente las capacidades de su fuerza laboral implementando una nueva estrategia a través del cambio organizacional.",
+                "d1": "Mejorando su fuerza laboral facilitando el cambio organizacional e implementando nuevas estrategias. Empoderando a su equipo para que brinde mejores resultados con un mejor rendimiento y productividad.",
                 "t2": "Realineación de operaciones",
-                "d2": "Encuentre nuevas estrategias de liderazgo y supere a los competidores a través de datos y tecnologías de la información.",
+                "d2": "Logrando superar a los competidores mediante el aprovechamiento de las tecnologías de datos e información. Habilitación de estrategias de liderazgo efectivas para el éxito.",
                 "t3": "Cambio Sostenible",
                 "d3": "Concéntrese en resultados consistentes a través de la inversión en las relaciones con los clientes y el cambio.",
                 "t4": "Transformación de la estrategia",
-                "d4": "Rompa las barreras al cambio a través de nuevos enfoques tecnológicos para implementar estrategias."
+                "d4": "Derribando barreras trae cambios al adoptar nuevas tecnologías y enfoques para implementar estrategias."
+            },
+            "block6": {
+                "Heading": "Consultoría Tecnológica",
+                "t1": "Estudio de factibilidad",
+                "d1": "Asegúrate de que tu proyecto sea factible. Permítanos ayudarlo a averiguarlo a través de un informe TELOS, que evalúa los factores técnicos, económicos, legales, operativos y de programación.",
+                "t2": "Evaluación del desempeño",
+                "d2": "Evaluar a los empleados y líderes de su organización en su desempeño, conocimiento y habilidades. Ayudamos a identificar áreas de mejora y brindamos recomendaciones para mejorar la productividad y la eficiencia.",
+                "t3": "Investigación y desarrollo",
+                "d3": "Mejorar sus proyectos realizando una investigación exhaustiva y aprovechando la experiencia de los profesionales de la industria. Nuestra investigación llevará sus capacidades al siguiente nivel.",
+                "t4": "Validación",
+                "d4": "Mejorar la confiabilidad de su producción y servicios mediante el uso de tecnología de la información para recopilar datos para validación y análisis, optimizando procesos para aumentar la eficiencia y la rentabilidad."
             }
         }
     ]
