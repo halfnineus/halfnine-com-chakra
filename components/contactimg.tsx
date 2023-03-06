@@ -8,7 +8,7 @@ const Contactimg = (children: any) => {
         <>
             {NAV_ITEMS.filter(p => p.locale === locale).map((navItem) => (
                 <>
-                    <Flex direction="column" mt={6} w={"full"} /* h={80} */ rounded={"2xl"} overflow={'hidden'}>
+                    <Flex direction="column" mt={6} w={"full"} /* h={80} */ rounded={'xl'} overflow={'hidden'}>
                         <Box position="relative">
                             <Image src={children.pexelsrc} w={'full'} maxH={80} alt="Background Image" objectFit="cover" />
                             <Box

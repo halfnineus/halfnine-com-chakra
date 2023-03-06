@@ -6,7 +6,7 @@ import indexdat from '../../assets/our-approach/index.json'
 
 const MyBox = (props: any) => {
     return (
-        <Box background={'blackAlpha.50'} borderRadius="xl" overflow="hidden">
+        <Box background={'gray.50'} borderRadius="xl" overflow="hidden">
             <Box pos="relative">
                 <Image objectFit="cover" src={props.pexelimg} alt="image description" />
                 <Box pos="absolute" bottom={0} w="100%" bg="blackAlpha.500">

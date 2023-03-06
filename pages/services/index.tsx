@@ -35,26 +35,33 @@ import { HiOutlineDocumentMagnifyingGlass, HiOutlineDocumentChartBar, HiOutlineB
 import { FaUserTag } from "react-icons/fa";
 import { GiSettingsKnobs } from "react-icons/gi";
 
+
 const Feature = (props: any) => {
+    const { locale } = useRouter();
+    const filteredData = indexdat.data.filter((p) => p.locale === locale);
     return (
-        <Box>
-            <HStack>
-                <Box color={'blue.600'} fontSize="3rem">
-                    {props.icon}
+        <>
+            {filteredData.map((indexData) => (
+                <Box key={props.title}>
+                    <HStack>
+                        <Box color={'blue.600'} fontSize="3rem">
+                            {props.icon}
+                        </Box>
+                        <Heading pl={3} as={'h3'} fontSize="xl">
+                            {props.title}
+                        </Heading>
+                    </HStack>
+                    <Text pt={2} color="gray.600">
+                        {props.children}
+                    </Text>
+                    <Link href={props.refx}>
+                        <Button mt={4} colorScheme={'blue'}>
+                            {indexData.lm}
+                        </Button>
+                    </Link>
                 </Box>
-                <Heading pl={3} as={'h3'} fontSize="xl">
-                    {props.title}
-                </Heading>
-            </HStack>
-            <Text pt={2} color="gray.600">
-                {props.children}
-            </Text>
-            <Link href={props.refx}>
-                <Button mt={4} colorScheme={'blue'}>
-                    Learn More
-                </Button>
-            </Link>
-        </Box>
+            ))}
+        </>
     );
 };
 
@@ -67,7 +74,7 @@ const Feature2 = (props: any) => {
                     justifyContent="center"
                     h={12}
                     w={12}
-                    rounded="md"
+                    rounded="xl"
                     color="white"
                     bg={"gray.100"}
                 >
@@ -93,71 +100,68 @@ const Feature2 = (props: any) => {
 };
 
 const Index = () => {
-    const { locale } = useRouter()
+    const { locale } = useRouter();
+    const filteredData = indexdat.data.filter((p) => p.locale === locale);
     return (
         <>
-            {indexdat.data.filter(p => p.locale === locale).map((indexData, i) => {
-                return (
-                    <>
-                        <NextSeo
-                            title={indexData.head.title}
-                            description={indexData.head.description}
-                            canonical="https://www.zedir.com/services"
-                            languageAlternates={[
-                                {
-                                    hrefLang: 'es',
-                                    href: 'https://www.zedir.com/es/services',
-                                }
-                            ]}
-                        />
-                        <Box textAlign={'justify'} maxW={'container.xl'} px={{ base: '4', sm: '4', md: '4', lg: '4', xl: '0' }} mx="auto">
-                            <Contactimg label={indexData.img} pexelsrc={'/img/xtra/pexels-photo-8439083.jpg'} />
-                            {/* <Heading color={'gray.800'} as={'h1'} size={'lg'} pt={6} pb={2}>{indexData.block1.heading}</Heading> */}
-                            <Text pt={6} px={1} color={'gray.700'}>
-                                {indexData.block1.text1}
-                            </Text>
-                            {/* <Text pb={12} color={'gray.700'}>
+            {filteredData.map((indexData) => (
+                <>
+                    <NextSeo
+                        title={indexData.head.title}
+                        description={indexData.head.description}
+                        canonical="https://www.zedir.com/services"
+                        languageAlternates={[
+                            {
+                                hrefLang: 'es',
+                                href: 'https://www.zedir.com/es/services',
+                            }
+                        ]}
+                    />
+                    <Box textAlign={'justify'} maxW={'container.xl'} px={{ base: '4', sm: '4', md: '4', lg: '4', xl: '0' }} mx="auto">
+                        <Contactimg label={indexData.img} pexelsrc={'/img/xtra/pexels-photo-8439083.jpg'} />
+                        {/* <Heading color={'gray.800'} as={'h1'} size={'lg'} pt={6} pb={2}>{indexData.block1.heading}</Heading> */}
+                        <Text pt={6} px={1} color={'gray.700'}>
+                            {indexData.block1.text1}
+                        </Text>
+                        {/* <Text pb={12} color={'gray.700'}>
                                 {indexData.block1.text2}
                             </Text> */}
-                            <Divider my={20} maxW={"container.xl"} mx={'auto'} />
-                            <Box>
-                                <SimpleGrid
-                                    columns={{ base: 1 }}
-                                    spacing={4}
-                                    mx="auto"
+                        <Box py={20}>
+                            <SimpleGrid
+                                columns={{ base: 1 }}
+                                spacing={4}
+                                mx="auto"
+                            >
+                                <Feature
+                                    title={indexData.block2.item1}
+                                    icon={<BsTerminal />}
+                                    refx={'/services#development'}
                                 >
-                                    <Feature
-                                        title={indexData.block2.item1}
-                                        icon={<BsTerminal />}
-                                        refx={'/services#development'}
-                                    >
-                                        {indexData.block2.item1d}
-                                    </Feature>
-                                    <Divider pt={2} />
-                                    <Feature
-                                        title={indexData.block2.item2}
-                                        icon={<MdOutlineTransform />}
-                                        refx={'/services#digitalization'}
-                                    >
-                                        {indexData.block2.item2d}
-                                    </Feature>
-                                    <Divider pt={2} />
-                                    <Feature
-                                        title={indexData.block2.item3}
-                                        icon={<HiOutlineDocumentMagnifyingGlass />}
-                                        refx={'/services#consultation'}
-                                    >
-                                        {indexData.block2.item3d}
-                                    </Feature>
-                                </SimpleGrid>
-                            </Box>
-                            <Box height={'3rem'} />
+                                    {indexData.block2.item1d}
+                                </Feature>
+                                <Divider pt={2} />
+                                <Feature
+                                    title={indexData.block2.item2}
+                                    icon={<MdOutlineTransform />}
+                                    refx={'/services#digitalization'}
+                                >
+                                    {indexData.block2.item2d}
+                                </Feature>
+                                <Divider pt={2} />
+                                <Feature
+                                    title={indexData.block2.item3}
+                                    icon={<HiOutlineDocumentMagnifyingGlass />}
+                                    refx={'/services#consultation'}
+                                >
+                                    {indexData.block2.item3d}
+                                </Feature>
+                            </SimpleGrid>
                         </Box>
+                        <Box height={'3rem'} />
+                    </Box>
 
-
-                        <Divider my={20} maxW={"container.xl"} mx={'auto'} />
-
-                        <Box maxW={'container.xl'} px={{ base: '4', sm: '4', md: '4', lg: '4', xl: 0 }} pt={4} mx="auto" id="development">
+                    <Box bg={"gray.50"}>
+                        <Box maxW={'container.xl'} px={{ base: '4', sm: '4', md: '4', lg: '4', xl: 0 }} py={20} mx="auto" id="development">
                             <Box pb={6} alignSelf="start">
                                 <Heading
                                     mb={2}
@@ -204,7 +208,7 @@ const Index = () => {
                                 <Text pb={8} maxW="3xl" mx="auto">
                                     {indexData.block4.Text}
                                 </Text>
-                                <Tabs isFitted size={'lg'} orientation={"horizontal"}>
+                                <Tabs bg={'white'} rounded={'xl'} px={4} py={2} isFitted size={'lg'} orientation={"horizontal"}>
                                     <TabList>
                                         <Tab>{indexData.block4.t1}</Tab>
                                         <Tab>{indexData.block4.t2}</Tab>
@@ -301,75 +305,52 @@ const Index = () => {
                                 </Tabs>
                             </Box>
                         </Box>
+                    </Box>
 
-
-
-
-
-
-
-
-
-
-
-
-
-                        <Divider my={20} maxW={"container.xl"} mx={'auto'} />
-
-
-                        <Box maxW={'container.xl'} px={{ base: '4', sm: '4', md: '4', lg: '4', xl: 0 }} pt={4} mx="auto" id={"digitalization"}>
-                            <Box pb={6} alignSelf="start">
-                                <Heading
-                                    mb={2}
-                                    fontSize={{ base: "3xl", md: "4xl" }}
-                                    fontWeight="extrabold"
-                                    letterSpacing="tight"
-                                >
-                                    {indexData.block5.Heading}
-                                </Heading>
-                            </Box>
-                            <SimpleGrid
-                                alignItems="center"
-                                columns={{ base: 1, lg: 2 }}
-                                spacingY={{ base: 10, lg: 6 }}
-                                spacingX={{ base: 10, lg: 12 }}
+                    <Box maxW={'container.xl'} px={{ base: '4', sm: '4', md: '4', lg: '4', xl: 0 }} py={20} mx="auto" id={"digitalization"}>
+                        <Box pb={6} alignSelf="start">
+                            <Heading
+                                mb={2}
+                                fontSize={{ base: "3xl", md: "4xl" }}
+                                fontWeight="extrabold"
+                                letterSpacing="tight"
                             >
-                                <GridItem colSpan={2}>
-                                    <Stack
-                                        spacing={{ base: 10, md: 0 }}
-                                        display={{ md: "grid" }}
-                                        gridTemplateColumns={{ md: "repeat(2,1fr)" }}
-                                        gridColumnGap={{ md: 8 }}
-                                        gridRowGap={{ md: 10 }}
-                                    >
-                                        <Feature2 icon={<FaUserTag />} title={indexData.block5.t1}>
-                                            {indexData.block5.d1}
-                                        </Feature2>
-                                        <Feature2 icon={<GiSettingsKnobs />} title={indexData.block5.t2}>
-                                            {indexData.block5.d2}
-                                        </Feature2>
-                                        <Feature2 icon={<BsSignpostSplit />} title={indexData.block5.t3}>
-                                            {indexData.block5.d3}
-                                        </Feature2>
-                                        <Feature2 icon={<BsPinAngle />} title={indexData.block5.t4}>
-                                            {indexData.block5.d4}
-                                        </Feature2>
-                                    </Stack>
-                                </GridItem>
-                            </SimpleGrid>
+                                {indexData.block5.Heading}
+                            </Heading>
                         </Box>
+                        <SimpleGrid
+                            alignItems="center"
+                            columns={{ base: 1, lg: 2 }}
+                            spacingY={{ base: 10, lg: 6 }}
+                            spacingX={{ base: 10, lg: 12 }}
+                        >
+                            <GridItem colSpan={2}>
+                                <Stack
+                                    spacing={{ base: 10, md: 0 }}
+                                    display={{ md: "grid" }}
+                                    gridTemplateColumns={{ md: "repeat(2,1fr)" }}
+                                    gridColumnGap={{ md: 8 }}
+                                    gridRowGap={{ md: 10 }}
+                                >
+                                    <Feature2 icon={<FaUserTag />} title={indexData.block5.t1}>
+                                        {indexData.block5.d1}
+                                    </Feature2>
+                                    <Feature2 icon={<GiSettingsKnobs />} title={indexData.block5.t2}>
+                                        {indexData.block5.d2}
+                                    </Feature2>
+                                    <Feature2 icon={<BsSignpostSplit />} title={indexData.block5.t3}>
+                                        {indexData.block5.d3}
+                                    </Feature2>
+                                    <Feature2 icon={<BsPinAngle />} title={indexData.block5.t4}>
+                                        {indexData.block5.d4}
+                                    </Feature2>
+                                </Stack>
+                            </GridItem>
+                        </SimpleGrid>
+                    </Box>
 
-
-
-
-                        <Divider my={20} maxW={"container.xl"} mx={'auto'} />
-
-
-
-
-
-
-                        <Box maxW={'container.xl'} px={{ base: '4', sm: '4', md: '4', lg: '4', xl: 0 }} pt={4} mx="auto" id="consultation">
+                    <Box bg={'gray.50'}>
+                        <Box maxW={'container.xl'} px={{ base: '4', sm: '4', md: '4', lg: '4', xl: 0 }} py={20} mx="auto" id="consultation">
                             <Box pb={6} alignSelf="start">
                                 <Heading
                                     mb={2}
@@ -410,18 +391,15 @@ const Index = () => {
                                 </GridItem>
                             </SimpleGrid>
                         </Box>
+                    </Box>
 
-                        <Divider my={20} maxW={"container.xl"} mx={'auto'} />
+                    <Box maxW={'container.xl'} px={{ base: '4', sm: '4', md: '4', lg: '4', xl: 0 }} py={20} mx="auto">
+                        <Values />
+                    </Box>
 
-                        <Box maxW={'container.xl'} px={{ base: '4', sm: '4', md: '4', lg: '4', xl: 0 }} pb={20} mx="auto">
-                            <Values />
-                        </Box>
-
-                        <Box p={"rem"} />
-
-                    </>
-                )
-            })}
+                    <Box p={"rem"} />
+                </>
+            ))}
         </>
     );
 }

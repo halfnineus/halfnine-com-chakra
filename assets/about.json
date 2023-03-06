@@ -14,9 +14,9 @@
                 "heading": "Why Choose Us?",
                 "txt1": "Visible Live Progress",
                 "txt1d": "Our team works hard to ensure that you see progress throughout every single day. This helps you stay informed and confident that your project is on track.",
-                "txt2": "Weekly status meetings",
+                "txt2": "Weekly Status Meetings",
                 "txt2d": "We believe in regular communication and transparency. That's why we hold weekly status meetings with our clients to keep them informed about the progress of their projects.",
-                "txt3": "Free support forever",
+                "txt3": "Free Support Forever",
                 "txt3d": "Unlike most companies that make most of their money from providing support, we offer this for free because we guarantee what we develop will work as desired and intended.",
                 "txt4": "Concern for Workflows",
                 "txt4d": "We understand the importance of smooth and efficient workflows. That's why we take extra care to ensure that our solutions integrate seamlessly into your existing processes."
@@ -47,7 +47,7 @@
                 "txt4d": "Entendemos la importancia de flujos de trabajo fluidos y eficientes. Es por eso que nos aseguramos de que nuestras soluciones se integren a la perfección en sus procesos existentes."
             },
             "block3":{
-                "heading": "El blog"
+                "heading": "El blog (Inglés)"
             }
         }
     ]

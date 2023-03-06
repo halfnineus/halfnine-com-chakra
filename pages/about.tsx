@@ -67,17 +67,17 @@ const FeatureBlog = (children: any) => {
         _hover={{ transform: 'scale(1.02)', boxShadow: "xl" }}
         transition={'all 0.1s ease-in-out'}
         role={'group'}
-        maxW={'445px'}
+        maxW={'400px'}
         w={'full'}
         h={'full'}
         bg={'white'}
         boxShadow={'md'}
-        rounded={'md'}
+        rounded={'xl'}
         p={6}
         overflow={'hidden'}
       >
         <Box
-          h={'210px'}
+          h={'200px'}
           bg={'gray.100'}
           mt={-6}
           mx={-6}
@@ -108,14 +108,9 @@ const FeatureBlog = (children: any) => {
             {children.text}
           </Text>
         </Stack>
-        <Stack mt={6} direction={'row'} spacing={4} align={'center'}>
-          <Avatar
-            src={'/img/stickman.jpg'}
-            name={'Dan Ochoa'}
-          />
+        <Stack mt={2} direction={'row'} spacing={4} align={'center'}>
           <Stack direction={'column'} spacing={0} fontSize={'sm'}>
-            <Text fontWeight={600}>Dan Ochoa</Text>
-            <Text color={'gray.500'}>{children.date}</Text>
+            <Text color={'gray.500'}>{`Created on: `}{children.date}</Text>
           </Stack>
         </Stack>
       </Box>
@@ -206,32 +201,32 @@ const IndexAbout = () => {
 
 
             <Box maxW={'container.xl'} px={{ base: '4', sm: '4', md: '4', lg: '4', xl: '0' }} mx="auto" my={20}>
-              <Heading pb={6} textAlign={'center'}>{aboutData.block3.heading}</Heading>
+              <Heading pb={8} textAlign={'center'}>{aboutData.block3.heading}</Heading>
               <Center>
                 <SimpleGrid
                   columns={{ base: 1, sm: 1, md: 1, lg: 3 }}
-                  spacing={'6'}
+                  spacing={{ md: 6, lg: 6, xl: 16 }}
                 >
                   <FeatureBlog
-                    title={'Industrial Control Systems Cybersecurity Initiative'}
-                    text={`In this guide, you will learn about the Industrial Control Systems Cybersecurity Initiative (ICS-CERT) and how it can help protect your business's data and systems.`}
-                    page={'https://blog.zedir.com/posts/industrial-control-systems-cybersecurity-initiative'}
-                    date={'December 6, 2022 · 12min read'}
-                    imgsrc={'https://images.pexels.com/photos/1990764/pexels-photo-1990764.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=300&w=600'}
+                    title={'Industrial Automation Wiring and Grounding...'}
+                    text={`Industrial automation wiring is a complex task that requires thorough knowledge of the various codes and regulations that...`}
+                    page={'https://blog.zedir.com/posts/industrial-automation-wiring-and-grounding-guidelines'}
+                    date={'March 6, 2023'}
+                    imgsrc={'https://images.pexels.com/photos/2881232/pexels-photo-2881232.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=300&w=600'}
                   />
                   <FeatureBlog
-                    title={'Industrial Control Systems Cybersecurity Training Act'}
-                    text={'This is an overview of the Industrial Control Systems Cybersecurity Training Act and explains the meaning for businesses and individuals responsible for managing and operating ICS.'}
-                    page={'https://blog.zedir.com/posts/industrial-control-systems-cybersecurity-training-act'}
-                    date={'December 6, 2022 · 12min read'}
-                    imgsrc={'https://images.pexels.com/photos/39584/censorship-limitations-freedom-of-expression-restricted-39584.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=300&w=600'}
+                    title={'Industrial Automation for Dummies'}
+                    text={'Industrial automation is a system design activity related to creating a control system that will achieve a specific goal. Industrial...'}
+                    page={'https://blog.zedir.com/posts/industrial-automation-for-dummies'}
+                    date={'March 5, 2023'}
+                    imgsrc={'https://images.pexels.com/photos/8175930/pexels-photo-8175930.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=300&w=600'}
                   />
                   <FeatureBlog
-                    title={'Industrial Control Systems Joint Working Groups'}
-                    text={'Learn about the benefits of joining the Industrial Control Systems Joint Working Groups, a unique organization that brings stakeholders from the public and private sectors together.'}
-                    page={'https://blog.zedir.com/posts/industrial-control-systems-joint-working-group'}
-                    date={'December 6, 2022 · 12min read'}
-                    imgsrc={'https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=300&w=600'}
+                    title={'How AI is affecting Industrial Automated...'}
+                    text={'Artificial Intelligence (AI) is a technology that can automatically learn from data, identify patterns and make predictions to...'}
+                    page={'https://blog.zedir.com/posts/how-ai-is-affecting-industrial-automated-processes'}
+                    date={'March 5, 2023'}
+                    imgsrc={'https://images.pexels.com/photos/8386434/pexels-photo-8386434.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=300&w=600'}
                   />
                 </SimpleGrid>
               </Center>

@@ -178,12 +178,12 @@ const IndexPage = () => {
                     href={"/our-approach"}
                   // target={'_blank'}
                   >
-                    <Button mt={6} size="md" variant={'outline'} colorScheme={'blue'} shadow="base" fontSize="md" leftIcon={<AiOutlineSetting size={20} />}>
+                    <Button rounded={'xl'} mt={6} size="md" variant={'outline'} colorScheme={'blue'} shadow="base" fontSize="md" leftIcon={<AiOutlineSetting size={20} />}>
                       {"The Process"}
                     </Button>
                   </Link>
                   <Link href={"/contact"}>
-                    <Button mt={6} size="md" colorScheme={'blue'} shadow="base" fontSize="md" leftIcon={<MdOutlineContactSupport size={20} />}>
+                    <Button rounded={'xl'} mt={6} size="md" colorScheme={'blue'} shadow="base" fontSize="md" leftIcon={<MdOutlineContactSupport size={20} />}>
                       {indexData.block1.button}
                     </Button>
                   </Link>
@@ -249,6 +249,7 @@ const IndexPage = () => {
                 <Center px={{ base: '4', lg: '0' }}>
                   <Link href={'https://www.zedir.com/img/index/Basic-IoT-Enviroment.png'} target={'_blank'}>
                     <Image
+                    
                       maxW={'container.md'}
                       userSelect={'none'}
                       w="full"

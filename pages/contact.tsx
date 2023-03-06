@@ -128,11 +128,10 @@ const INDEX = () => {
                         <Modal isOpen={isOpen} onClose={onClose}>
                             <ModalOverlay backdropFilter='blur(1px)' />
                             <ModalContent>
-                                <ModalHeader>External Application</ModalHeader>
+                                <ModalHeader>{indexData.modal.modaltitle}</ModalHeader>
                                 <ModalCloseButton />
                                 <ModalBody>
                                     <Text fontWeight={'semibold'} mb='1rem'>
-                                        {/* <Lorem count={2} /> */}
                                         {ecvReq}
                                         <Link href={refECV} target={ecvTarget}>
                                             <Button colorScheme={'blue'} variant={'link'} userSelect={'text'} fontWeight={'semibold'} mb='1rem' display={'inline'}>
@@ -143,10 +142,10 @@ const INDEX = () => {
                                 </ModalBody>
                                 <ModalFooter>
                                     <Button variant={'ghost'} mr={3} onClick={onClose}>
-                                        Close
+                                        {indexData.modal.close}
                                     </Button>
                                     <Link href={refECV} target={ecvTarget}>
-                                        <Button colorScheme={'blue'} variant='outline' rightIcon={<FiExternalLink />}>Open App</Button>
+                                        <Button colorScheme={'blue'} variant='outline' rightIcon={<FiExternalLink />}>{indexData.modal.open}</Button>
                                     </Link>
                                 </ModalFooter>
                             </ModalContent>
@@ -312,9 +311,9 @@ const INDEX = () => {
                             <Center mb={6}>
                                 <Button
                                     onClick={(e: any) => {
-                                        setrefECV("mailto:contact@zedir.com");
-                                        setprettierECV("contact@zedir.com");
-                                        setecvReq(`You are about to email us at: `);
+                                        setrefECV(indexData.mailblock.mref);
+                                        setprettierECV(indexData.mailblock.visiblemref);
+                                        setecvReq(indexData.mailblock.req);
                                         setecvTarget(`_self`);
                                         onOpen()
                                     }}
@@ -326,13 +325,13 @@ const INDEX = () => {
                                     _hover={{ color: 'blue.500', bg: 'blackAlpha.100' }}
                                     leftIcon={<MdEmail color={'black'} size="24px" />}
                                 >
-                                    Email Us
+                                    {indexData.mailblock.title}
                                 </Button>
                                 <Button
                                     onClick={(e: any) => {
                                         setrefECV("tel:+13213120362");
                                         setprettierECV("+1 (321) 312-0362");
-                                        setecvReq(`You are about to call us at: `);
+                                        setecvReq(indexData.callblock.req);
                                         setecvTarget(`_self`);
                                         onOpen()
                                     }}
@@ -344,13 +343,13 @@ const INDEX = () => {
                                     _hover={{ color: 'blue.500', bg: 'blackAlpha.100' }}
                                     leftIcon={<MdCall color={'black'} size="24px" />}
                                 >
-                                    Call Us
+                                    {indexData.callblock.title}
                                 </Button>
                                 <Button
                                     onClick={(e: any) => {
                                         setrefECV("https://duckduckgo.com/?q=Orlando%2C+FL&iaxm=maps");
                                         setprettierECV("duckduckgo.com");
-                                        setecvReq(`You are about to view maps at: `);
+                                        setecvReq(indexData.mapblock.req);
                                         setecvTarget(`_blank`);
                                         onOpen()
                                     }}
@@ -362,7 +361,7 @@ const INDEX = () => {
                                     _hover={{ color: 'blue.500', bg: 'blackAlpha.100' }}
                                     leftIcon={<MdLocationOn color={'black'} size="24px" />}
                                 >
-                                    Visit Us
+                                    {indexData.mapblock.title}
                                 </Button>
                             </Center>
                         </Box>

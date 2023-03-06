@@ -174,7 +174,6 @@ export default function SCFooter() {
                                                     // textTransform="uppercase"
                                                     // fontWeight="bold"
                                                     transition="all 0.2s"
-                                                    rounded="lg"
                                                     outline={0}
                                                     _focus={{ shadow: 'outline' }}
                                                     _active={{ transform: 'translateY(2px)' }}

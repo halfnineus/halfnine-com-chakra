@@ -58,7 +58,6 @@ function Consent() {
                     fontSize={{ base: 'xs', sm: 'sm', md: "md" }}
                     colorScheme={'blue'}
                     px={{ base: 4, sm: 6, md: 12 }}
-                    mr={{ base: 0, xl: 12 }}
                 >
                     I Agree
                 </Button>

@@ -6,6 +6,11 @@
                 "title": "Contact Us - Automating all Things | Zedir",
                 "description": "Contact Us about developing technology solutions, IT consulting & Digital transformation Related Inquiries."
             },
+            "modal": {
+                "modaltitle": "External Application",
+                "close": "Close",
+                "open": "Open App"
+            },
             "block1": {
                 "heading": "Interested? We want to hear from you!",
                 "text": "Take the first step and reach out to us today."
@@ -22,6 +27,20 @@
                 "number": "Phone Number",
                 "message": "Message",
                 "submit": "Send Message"
+            },
+            "mailblock": {
+                "title": "Email Us",
+                "mref": "mailto:contact@zedir.com",
+                "visiblemref": "contact@zedir.com",
+                "req": "You are about to email us at: "
+            },
+            "callblock": {
+                "title": "Call Us",
+                "req": "You are about to call us at: "
+            },
+            "mapblock": {
+                "title": "Visit Us",
+                "req": "You are about to open maps at: "
             }
         },
         {
@@ -29,6 +48,11 @@
             "head": {
                 "title": "Contáctenos - Automatizando todas las cosas | Zedir",
                 "description": "Contáctenos sobre el desarrollo de soluciones tecnológicas, consultoría de TI y consultas relacionadas con la transformación digital."
+            },
+            "modal": {
+                "modaltitle": "Aplicación Externa",
+                "close": "Cerrar",
+                "open": "Abrir App"
             },
             "block1": {
                 "heading": "¿Interesado? ¡Queremos escuchar de ti!",
@@ -46,6 +70,20 @@
                 "number": "Número telefónico",
                 "message": "Mensaje",
                 "submit": "Enviar mensaje"
+            },
+            "mailblock": {
+                "title": "Correo Electrónico",
+                "mref": "mailto:contacto@zedir.com",
+                "visiblemref": "contacto@zedir.com",
+                "req": "Envíanos un correo a: "
+            },
+            "callblock": {
+                "title": "Márcanos",
+                "req": "Márcanos al siguiente número: "
+            },
+            "mapblock": {
+                "title": "Visítanos",
+                "req": "Abre mapas al siguiente link: "
             }
         }
     ]
