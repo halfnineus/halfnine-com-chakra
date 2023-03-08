@@ -128,8 +128,8 @@ const IndexAbout = () => {
         return (
           <>
             <NextSeo
-              title='About Us | Development Services & Consulting - Automating all Things | Zedir'
-              description="Our team is built with leading experience on some of the world's leading companies technologies."
+              title={aboutData.head.title}
+              description={aboutData.head.description}
               canonical="https://www.zedir.com/about"
               languageAlternates={[
                 {
@@ -205,7 +205,7 @@ const IndexAbout = () => {
               <Center>
                 <SimpleGrid
                   columns={{ base: 1, sm: 1, md: 1, lg: 3 }}
-                  spacing={{ md: 6, lg: 6, xl: 16 }}
+                  spacing={{ base: 6, md: 6, lg: 6, xl: 16 }}
                 >
                   <FeatureBlog
                     title={'Industrial Automation Wiring and Grounding...'}

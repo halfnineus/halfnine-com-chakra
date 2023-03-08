@@ -3,7 +3,7 @@
         {
             "locale": "en",
             "head": {
-                "title": "Contact Us - Automating all Things | Zedir",
+                "title": "Contact Us - Zedir",
                 "description": "Contact Us about developing technology solutions, IT consulting & Digital transformation Related Inquiries."
             },
             "modal": {
@@ -46,7 +46,7 @@
         {
             "locale": "es",
             "head": {
-                "title": "Contáctenos - Automatizando todas las cosas | Zedir",
+                "title": "Contáctenos - Zedir",
                 "description": "Contáctenos sobre el desarrollo de soluciones tecnológicas, consultoría de TI y consultas relacionadas con la transformación digital."
             },
             "modal": {
