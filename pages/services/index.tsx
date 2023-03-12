@@ -201,7 +201,16 @@ const Index = () => {
                                     </Stack>
                                 </GridItem>
                             </SimpleGrid>
-                            <Box rounded={'xl'} bg={'white'} mt={12} pt={4} textAlign="center">
+                            <Box
+                                textAlign="center"
+                                border={'2px'}
+                                borderColor={'gray.200'}
+                                // boxShadow={'md'}
+                                rounded={'xl'}
+                                bg={'white'}
+                                mt={12}
+                                pt={4}
+                            >
                                 <Heading size="lg" mb="4">
                                     {indexData.block4.Heading}
                                 </Heading>
@@ -305,7 +314,7 @@ const Index = () => {
                                 </Tabs>
                             </Box>
                         </Box>
-                    </Box>
+                    </Box >
 
                     <Box maxW={'container.xl'} px={{ base: '4', sm: '4', md: '4', lg: '4', xl: 0 }} py={20} mx="auto" id={"digitalization"}>
                         <Box pb={6} alignSelf="start">
@@ -399,7 +408,8 @@ const Index = () => {
 
                     <Box p={"rem"} />
                 </>
-            ))}
+            ))
+            }
         </>
     );
 }

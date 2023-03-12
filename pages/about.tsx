@@ -208,25 +208,25 @@ const IndexAbout = () => {
                   spacing={{ base: 6, md: 6, lg: 6, xl: 16 }}
                 >
                   <FeatureBlog
-                    title={'Industrial Automation Wiring and Grounding...'}
-                    text={`Industrial automation wiring is a complex task that requires thorough knowledge of the various codes and regulations that...`}
-                    page={'https://blog.zedir.com/posts/industrial-automation-wiring-and-grounding-guidelines'}
-                    date={'March 6, 2023'}
-                    imgsrc={'https://images.pexels.com/photos/2881232/pexels-photo-2881232.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=300&w=600'}
+                    title={'IoT Based Smart Solutions: Security Challenges...'}
+                    text={`IoT security requires secure coding, firmware updates, digital certificates and authentication controls. Every aspect is...`}
+                    page={'https://blog.zedir.com/posts/iot-based-smart-solutions-security-challenges-and-requirements'}
+                    date={'March 11, 2023'}
+                    imgsrc={'https://images.pexels.com/photos/60504/security-protection-anti-virus-software-60504.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=300&w=600'}
                   />
                   <FeatureBlog
-                    title={'Industrial Automation for Dummies'}
-                    text={'Industrial automation is a system design activity related to creating a control system that will achieve a specific goal. Industrial...'}
-                    page={'https://blog.zedir.com/posts/industrial-automation-for-dummies'}
-                    date={'March 5, 2023'}
-                    imgsrc={'https://images.pexels.com/photos/8175930/pexels-photo-8175930.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=300&w=600'}
+                    title={'IIoT solutions for safety and security'}
+                    text={'IIoT can revolutionize business by improving operations and reducing costs. It’s important that new solutions work with...'}
+                    page={'https://blog.zedir.com/posts/industrial-internet-of-things-iiot-solutions-for-safety-and-security'}
+                    date={'March 10, 2023'}
+                    imgsrc={'https://images.pexels.com/photos/279810/pexels-photo-279810.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=300&w=600'}
                   />
                   <FeatureBlog
-                    title={'How AI is affecting Industrial Automated...'}
-                    text={'Artificial Intelligence (AI) is a technology that can automatically learn from data, identify patterns and make predictions to...'}
-                    page={'https://blog.zedir.com/posts/how-ai-is-affecting-industrial-automated-processes'}
-                    date={'March 5, 2023'}
-                    imgsrc={'https://images.pexels.com/photos/8386434/pexels-photo-8386434.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=300&w=600'}
+                    title={'How does Low-Code Technology accelerate...'}
+                    text={`Low-code development automates repetitive tasks and focuses on business logic for fast software building. It's easier to...`}
+                    page={'https://blog.zedir.com/posts/how-does-low-code-technology-accelerate-digital-transformation'}
+                    date={'March 9, 2023'}
+                    imgsrc={'https://images.pexels.com/photos/965345/pexels-photo-965345.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=300&w=600'}
                   />
                 </SimpleGrid>
               </Center>

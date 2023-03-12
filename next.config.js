@@ -1,11 +1,15 @@
-module.exports = {
+const withBundleAnalyzer = require('@next/bundle-analyzer')({
+  enabled: process.env.ANALYZE === 'true',
+})
+
+module.exports = withBundleAnalyzer({
   reactStrictMode: true,
   // swcMinify: true,
   // trailingSlash: true,
+  output: 'standalone',
   images: {
     domains: ['images.pexels.com'],
   },
-  output: 'standalone',
   i18n: {
     locales: ["en", "es"],
     defaultLocale: "en",
@@ -32,3 +36,4 @@ module.exports = {
     ];
   },
 }
+)
