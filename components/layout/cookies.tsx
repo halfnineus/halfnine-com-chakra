@@ -12,7 +12,7 @@ function Consent() {
 
     const acceptCookie = () => {
         setConsent(true);
-        setCookie('localConsent', 'true', { maxAge: 60 * 60 * 24 * 365 });
+        setCookie('localConsent', 'true', { maxAge: 60 * 60 * 24 * 365, domain: '.zedir.com' });
         console.log('accepring cookies');
     };
     const closeP = () => {
@@ -21,7 +21,7 @@ function Consent() {
     };
     const denyCookie = () => {
         setConsent(true);
-        setCookie('localConsent', 'false', { maxAge: 60 * 60 * 24 * 365 });
+        setCookie('localConsent', 'true', { maxAge: 60 * 60 * 24 * 365, domain: '.zedir.com' });
         console.log('denying cookie');
     };
     if (consent === true) {
