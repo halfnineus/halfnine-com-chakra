@@ -43,17 +43,17 @@ const Feature = (props: any) => {
         </Icon>
       </Flex>
       <Box ml={4}>
-        <chakra.dt
+        <Text
           fontSize="lg"
           fontWeight="bold"
           lineHeight="6"
           color="gray.900"
         >
           {props.title}
-        </chakra.dt>
-        <chakra.dd mt={2} color="gray.600">
+        </Text>
+        <Text mt={2} color="gray.600">
           {props.children}
-        </chakra.dd>
+        </Text>
       </Box>
     </Flex>
   );
@@ -99,12 +99,17 @@ const FeatureBlog = (children: any) => {
             Blog
           </Text>
           <Heading
+            as={'h4'}
+            overflow={'hidden'}
+            textOverflow={'ellipsis'}
+            noOfLines={2}
             color={'gray.700'}
             fontSize={'2xl'}
+            pb={1}
             fontFamily={'body'}>
             {children.title}
           </Heading>
-          <Text color={'gray.500'}>
+          <Text overflow={'hidden'} textOverflow={'ellipsis'} noOfLines={2} color={'gray.500'}>
             {children.text}
           </Text>
         </Stack>
@@ -208,22 +213,22 @@ const IndexAbout = () => {
                   spacing={{ base: 6, md: 6, lg: 6, xl: 16 }}
                 >
                   <FeatureBlog
-                    title={'IoT Based Smart Solutions: Security Challenges...'}
-                    text={`IoT security requires secure coding, firmware updates, digital certificates and authentication controls. Every aspect is...`}
-                    page={'https://blog.zedir.com/posts/iot-based-smart-solutions-security-challenges-and-requirements'}
-                    date={'March 11, 2023'}
-                    imgsrc={'https://images.pexels.com/photos/60504/security-protection-anti-virus-software-60504.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=300&w=600'}
-                  />
-                  <FeatureBlog
-                    title={'IIoT solutions for safety and security'}
-                    text={'IIoT can revolutionize business by improving operations and reducing costs. It’s important that new solutions work with...'}
-                    page={'https://blog.zedir.com/posts/industrial-internet-of-things-iiot-solutions-for-safety-and-security'}
-                    date={'March 10, 2023'}
+                    title={`Unlocking the Potential of Industrial IoT: The Most Common Applications`}
+                    text={`IIoT is transforming industries, optimizing operations, reducing costs, and improving productivity. Its potential is enormous and not limited.`}
+                    page={'https://blog.zedir.com/posts/unlocking-the-potential-of-industrial-iot-the-most-common-applications'}
+                    date={'March 13, 2023'}
                     imgsrc={'https://images.pexels.com/photos/279810/pexels-photo-279810.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=300&w=600'}
                   />
                   <FeatureBlog
-                    title={'How does Low-Code Technology accelerate...'}
-                    text={`Low-code development automates repetitive tasks and focuses on business logic for fast software building. It's easier to...`}
+                    title={`Is Industrial Automation A Good Career?`}
+                    text={`Industrial automation uses technology to control industrial processes, increasing efficiency, reducing costs, and improving safety in many industries.`}
+                    page={'https://blog.zedir.com/posts/is-industrial-automation-a-good-career'}
+                    date={'March 12, 2023'}
+                    imgsrc={'https://images.pexels.com/photos/326576/pexels-photo-326576.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=300&w=600'}
+                  />
+                  <FeatureBlog
+                    title={'How does Low-Code Technology accelerate Digital Transformation'}
+                    text={`Low-code development automates repetitive tasks and focuses on business logic for fast software building. It's easier to use than traditional approaches.`}
                     page={'https://blog.zedir.com/posts/how-does-low-code-technology-accelerate-digital-transformation'}
                     date={'March 9, 2023'}
                     imgsrc={'https://images.pexels.com/photos/965345/pexels-photo-965345.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=300&w=600'}

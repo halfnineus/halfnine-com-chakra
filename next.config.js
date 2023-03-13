@@ -19,19 +19,39 @@ module.exports = withBundleAnalyzer({
   async redirects() {
     return [
       {
-        source: '/pages',
-        destination: '/',
-        permanent: true,
+        source: '/en(/:path*)?',
+        destination: '/:path*',
+        permanent: false
+      },  
+      {
+        source: '/services/:path*',
+        destination: '/services/:path*',
+        permanent: false
       },
       {
-        source: '/pages/blog',
-        destination: '/',
-        permanent: true,
+        source: '/industries/:path*',
+        destination: '/industries/:path*',
+        permanent: false
+      },            
+        // {
+        //   source: '/es/:path*',
+        //   destination: '/es-MX/:path*',
+        //   permanent: false
+        // },      
+      {
+        source: '/pages/:slug',
+        destination: 'https://blog.zedir.com/posts/:slug',
+        permanent: false,
+      },
+      {
+        source: '/pages/blog/:slug',
+        destination: 'https://blog.zedir.com/posts/:slug',
+        permanent: false,
       },
       {
         source: '/submit',
         destination: '/contact',
-        permanent: true,
+        permanent: false,
       },
     ];
   },
