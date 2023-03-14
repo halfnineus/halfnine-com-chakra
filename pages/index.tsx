@@ -159,6 +159,11 @@ const IndexPage = () => {
                   href: 'https://www.zedir.com/es',
                 }
               ]}
+              openGraph={{
+                url: `https://www.zedir.com/`,
+                title: indexData.head.title,
+                description: indexData.head.description
+            }}
             />
             {/*
             <Box maxW={'container.xl'} px={{ base: '4', sm: '4', md: '4', lg: '4', xl: 0 }} pt={4} mx="auto">
@@ -249,7 +254,7 @@ const IndexPage = () => {
                 <Center px={{ base: '4', lg: '0' }}>
                   <Link href={'https://www.zedir.com/img/index/Basic-IoT-Enviroment.png'} target={'_blank'}>
                     <Image
-                    
+
                       maxW={'container.md'}
                       userSelect={'none'}
                       w="full"

@@ -3,18 +3,18 @@
     {
       "locale": "en",
       "head": {
-        "title": "Zedir - Customized Automation Solutions for Efficient Industrial Processes",
+        "title": "Zedir - Tailored Automation Solutions for Efficient Industrial Processes",
         "description": "Discover automation solutions for your industry through Internet of Things (IoT) and Control Systems."
       },
       "block1": {
         "h1_1": "Industrial Automation",
         "h1_2": "Development & Consulting",
-        "txt_1": "Customized Automation Solutions for Efficient Industrial Processes.",
+        "txt_1": "Tailored Automation Solutions for Efficient Industrial Processes.",
         "button": "Let's Talk!"
       },
       "block2": {
         "h2_1": "Transform your systems with",
-        "h2_2": "tailored technology",
+        "h2_2": "customized technology",
         "txt": "Improve your products and services with the power of a digital transformation through",
         "txturl": "Industrial Automation",
         "button": "Email us"
@@ -48,7 +48,7 @@
     {
       "locale": "es",
       "head": {
-        "title": "Zedir - Soluciones de Automatización Personalizadas para Procesos Industriales Eficientes",
+        "title": "Zedir - Soluciones de Automatización Personalizadas para Procesos Industriales",
         "description": "Descubra soluciones de automatización para su industria a través de Internet de las Cosas (IoT) y Sistemas de Control."
       },
       "block1": {

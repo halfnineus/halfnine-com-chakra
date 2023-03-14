@@ -116,7 +116,7 @@ const INDEX = () => {
                     <>
                         <NextSeo
                             title={indexData.head.title}
-                            description={`Contact Us about developing technology solutions, IT consulting & Digital transformation Related Inquiries.`}
+                            description={indexData.head.description}
                             canonical="https://www.zedir.com/contact"
                             languageAlternates={[
                                 {
@@ -124,6 +124,11 @@ const INDEX = () => {
                                     href: 'https://www.zedir.com/es/contact',
                                 }
                             ]}
+                            openGraph={{
+                                url: `https://www.zedir.com/contact`,
+                                title: indexData.head.title,
+                                description: indexData.head.description
+                            }}
                         />
                         <Modal isOpen={isOpen} onClose={onClose}>
                             <ModalOverlay backdropFilter='blur(1px)' />

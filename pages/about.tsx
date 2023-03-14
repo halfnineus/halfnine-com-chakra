@@ -86,7 +86,7 @@ const FeatureBlog = (children: any) => {
           <Image
             src={children.imgsrc}
             layout={'fill'}
-            alt={''}
+            alt={'background'}
           />
         </Box>
         <Stack>
@@ -142,10 +142,15 @@ const IndexAbout = () => {
                   href: 'https://www.zedir.com/es/about',
                 }
               ]}
+              openGraph={{
+                url: `https://www.zedir.com/about`,
+                title: aboutData.head.title,
+                description: aboutData.head.description
+              }}
             />
             <Box maxW={'container.xl'} px={{ base: '4', sm: '4', md: '4', lg: '4', xl: '0' }} mx="auto">
               <Box pt={4} pb={20}>
-                <Heading letterSpacing="tight" fontWeight="bold" pb={2}>{aboutData.block1.heading}</Heading>
+                <Heading as={'h1'} letterSpacing="tight" fontWeight="bold" pb={2}>{aboutData.block1.heading}</Heading>
                 <Text textAlign={'justify'}>{aboutData.block1.i1}</Text>
               </Box>
             </Box>

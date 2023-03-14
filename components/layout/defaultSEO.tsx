@@ -4,7 +4,7 @@ const DefaultSEO = () => {
     return (
         <>
             <DefaultSeo
-                defaultTitle="Industrial Automation Development & Consulting | Zedir"
+                defaultTitle="Zedir - Tailored Automation Solutions for Efficient Industrial Processes"
                 // Stops working on build
                 robotsProps={{
                     noarchive: true,
@@ -13,10 +13,10 @@ const DefaultSEO = () => {
                 openGraph={{
                     type: 'website',
                     locale: 'en',
-                    url: 'https://www.zedir.com/',
+                    url: process.env.SITE_URL || 'https://www.zedir.com/',
                     site_name: 'Zedir',
-                    title: 'Zedir - Automating all Things | Industrial Automation Development & Consulting',
-                    description: 'Find the right team for your Industrial IoT & Control Systems and turn your ideas into a reality.',
+                    title: 'Zedir - Tailored Automation Solutions for Efficient Industrial Processes',
+                    description: 'Improve your products and services with the power of a digital transformation through Industrial Automation.',
                     images: [
                         {
                             url: 'https://www.zedir.com/perma/metatag.jpg',
@@ -26,6 +26,11 @@ const DefaultSEO = () => {
                             type: 'image/jpeg'
                         },
                     ]
+                }}
+                twitter={{
+                    handle: '@zedircom',
+                    site: '@zedircom',
+                    cardType: 'summary_large_image',
                 }}
             />
         </>

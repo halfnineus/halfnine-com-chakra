@@ -30,6 +30,7 @@ const Contactimg = (children: any) => {
                                     fontSize={{ base: 'md', md: 'xl', lg: '2xl', xl: '3xl' }}
                                     color={'white'}
                                     opacity={'1'}
+                                    as={'h1'}
                                 >
                                     {children.label || navItem.label}
                                 </Text>

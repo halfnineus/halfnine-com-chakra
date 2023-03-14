@@ -53,6 +53,11 @@ const Index = () => {
                                     href: 'https://www.zedir.com/es/industries',
                                 }
                             ]}
+                            openGraph={{
+                                url: `https://www.zedir.com/industries`,
+                                title: indexData.head.title,
+                                description: indexData.head.description
+                            }}
                         />
                         <Box maxW={'container.xl'} px={{ base: '4', sm: '4', md: '4', lg: '4', xl: 0 }} mx="auto">
                             <Contactimg label={indexData.img} pexelsrc={'/img/xtra/pexels-photo-5532658.jpg'} />

@@ -86,7 +86,7 @@ const Feature2 = (props: any) => {
             <Box ml={4}>
                 <Text
                     fontSize="lg"
-                    fontWeight="bold"
+                    fontWeight="semibold"
                     lineHeight="6"
                 >
                     {props.title}
@@ -116,6 +116,11 @@ const Index = () => {
                                 href: 'https://www.zedir.com/es/services',
                             }
                         ]}
+                        openGraph={{
+                            url: `https://www.zedir.com/services`,
+                            title: indexData.head.title,
+                            description: indexData.head.description
+                        }}
                     />
                     <Box textAlign={'justify'} maxW={'container.xl'} px={{ base: '4', sm: '4', md: '4', lg: '4', xl: '0' }} mx="auto">
                         <Contactimg label={indexData.img} pexelsrc={'/img/xtra/pexels-photo-8439083.jpg'} />
@@ -166,7 +171,7 @@ const Index = () => {
                                 <Heading
                                     mb={2}
                                     fontSize={{ base: "3xl", md: "4xl" }}
-                                    fontWeight="extrabold"
+                                    fontWeight="bold"
                                     letterSpacing="tight"
                                 >
                                     {indexData.block3.Heading}
@@ -219,9 +224,9 @@ const Index = () => {
                                 </Text>
                                 <Tabs px={4} py={2} isFitted size={'lg'} orientation={"horizontal"}>
                                     <TabList>
-                                        <Tab>{indexData.block4.t1}</Tab>
-                                        <Tab>{indexData.block4.t2}</Tab>
-                                        <Tab>{indexData.block4.t3}</Tab>
+                                        <Tab fontWeight="semibold">{indexData.block4.t1}</Tab>
+                                        <Tab fontWeight="semibold">{indexData.block4.t2}</Tab>
+                                        <Tab fontWeight="semibold">{indexData.block4.t3}</Tab>
                                     </TabList>
                                     <TabPanels>
                                         <TabPanel>
@@ -321,7 +326,7 @@ const Index = () => {
                             <Heading
                                 mb={2}
                                 fontSize={{ base: "3xl", md: "4xl" }}
-                                fontWeight="extrabold"
+                                fontWeight="bold"
                                 letterSpacing="tight"
                             >
                                 {indexData.block5.Heading}
@@ -364,7 +369,7 @@ const Index = () => {
                                 <Heading
                                     mb={2}
                                     fontSize={{ base: "3xl", md: "4xl" }}
-                                    fontWeight="extrabold"
+                                    fontWeight="bold"
                                     letterSpacing="tight"
                                 >
                                     {indexData.block6.Heading}

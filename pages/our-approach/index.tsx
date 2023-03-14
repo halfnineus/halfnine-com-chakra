@@ -1,4 +1,4 @@
-import { Box, Text, List, ListItem, Image, SimpleGrid } from "@chakra-ui/react";
+import { Box, Text, List, ListItem, Image, SimpleGrid, Heading } from "@chakra-ui/react";
 import { NextSeo } from "next-seo";
 import { useRouter } from "next/router";
 import indexdat from '../../assets/our-approach/index.json'
@@ -25,8 +25,8 @@ const MyBox = (props: any) => {
 const MyFeature = (props: any) => {
     return (
         <ListItem>
-            <Text fontWeight="bold" display={'inline'}>{props.txt}{`: `}</Text>
-            <Text display={'inline'}>{props.txtd}</Text>
+            <Text  fontWeight="bold" display={'inline'}>{props.txt}{`: `}</Text>
+            <Text  display={'inline'}>{props.txtd}</Text>
         </ListItem>
     );
 };
@@ -48,7 +48,18 @@ const Index = () => {
                                     href: 'https://www.zedir.com/es/our-approach',
                                 }
                             ]}
+                            openGraph={{
+                                url: `https://www.zedir.com/our-approach`,
+                                title: indexData.head.title,
+                                description: indexData.head.description
+                            }}
                         />
+                        <Box maxW={'container.xl'} px={{ base: '4', sm: '4', md: '4', lg: '4', xl: '0' }} mx="auto">
+                            <Box pt={4} pb={12}>
+                                <Heading as={"h1"} letterSpacing="tight" fontWeight="bold" pb={2}>{indexData.title.h1}</Heading>
+                                <Text textAlign={'justify'}>{indexData.title.desc}</Text>
+                            </Box>
+                        </Box>
                         <Box maxW={'container.xl'} px={{ base: '4', sm: '4', md: '4', lg: '4', xl: 0 }} mx="auto" mt={6} mb={20}>
                             <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10}>
                                 <MyBox pexelimg={"/img/xtra/pexels-photo-4800260.jpg"} mainTitle={indexData.block1.heading}>
