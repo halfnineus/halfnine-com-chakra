@@ -70,6 +70,7 @@ export const links: LinkGroup[] = [
         links: [
             { label: 'Industries', href: '/industries' },
             { label: 'Our Approach', href: '/our-approach' },
+            { label: 'Blog', href: 'https://blog.zedir.com' },
             { label: 'About', href: '/about' },
         ],
     },
@@ -88,6 +89,7 @@ export const links: LinkGroup[] = [
         links: [
             { label: 'Industrias', href: '/industries' },
             { label: 'Nuestro enfoque', href: '/our-approach' },
+            { label: 'Blog', href: 'https://blog.zedir.com' },
             { label: 'Acerca De', href: '/about' },
         ],
     },
@@ -121,6 +123,7 @@ export default function SCFooter() {
                                         columns={{ base: 2, lg: 4 }}
                                         spacing={{ base: '8', md: '10' }}
                                         fontSize="sm"
+                                        mb={8}
                                     >
                                         {links.filter(p => p.locale === locale).map((group, idx) => (
                                             <>

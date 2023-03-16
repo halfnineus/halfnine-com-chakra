@@ -4,9 +4,6 @@ module.exports = {
     generateRobotsTxt: false,
     autoLastmod: false,
     changefreq: 'monthly',
-    robotsTxtOptions: {
-        additionalSitemaps: [`https://blog.zedir.com/blog-sitemap.xml`],
-    },
     alternateRefs: [
         {
             href: 'https://www.zedir.com/es/',

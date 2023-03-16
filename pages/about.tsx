@@ -220,21 +220,21 @@ const IndexAbout = () => {
                   <FeatureBlog
                     title={`Unlocking the Potential of Industrial IoT: The Most Common Applications`}
                     text={`IIoT is transforming industries, optimizing operations, reducing costs, and improving productivity. Its potential is enormous and not limited.`}
-                    page={'https://blog.zedir.com/posts/unlocking-the-potential-of-industrial-iot-the-most-common-applications'}
+                    page={'https://blog.zedir.com/internet-of-things/unlocking-the-potential-of-industrial-iot-common-applications'}
                     date={'March 13, 2023'}
                     imgsrc={'https://images.pexels.com/photos/279810/pexels-photo-279810.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=300&w=600'}
                   />
                   <FeatureBlog
                     title={`Is Industrial Automation A Good Career?`}
                     text={`Industrial automation uses technology to control industrial processes, increasing efficiency, reducing costs, and improving safety in many industries.`}
-                    page={'https://blog.zedir.com/posts/is-industrial-automation-a-good-career'}
+                    page={'https://blog.zedir.com/industrial-automation/is-industrial-automation-a-good-career'}
                     date={'March 12, 2023'}
                     imgsrc={'https://images.pexels.com/photos/326576/pexels-photo-326576.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=300&w=600'}
                   />
                   <FeatureBlog
                     title={'How does Low-Code Technology accelerate Digital Transformation'}
                     text={`Low-code development automates repetitive tasks and focuses on business logic for fast software building. It's easier to use than traditional approaches.`}
-                    page={'https://blog.zedir.com/posts/how-does-low-code-technology-accelerate-digital-transformation'}
+                    page={'https://blog.zedir.com/digital-transformation/how-does-lowcode-technology-accelerate-digital-transformation'}
                     date={'March 9, 2023'}
                     imgsrc={'https://images.pexels.com/photos/965345/pexels-photo-965345.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=300&w=600'}
                   />

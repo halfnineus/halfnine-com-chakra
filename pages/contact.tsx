@@ -175,6 +175,7 @@ const INDEX = () => {
                                             color={'white'}
                                             fontWeight={700}
                                             fontSize={{ base: '3xl', md: '4xl' }}
+                                            as={'h1'}
                                         >
                                             {indexData.block1.heading}
                                         </Heading>
