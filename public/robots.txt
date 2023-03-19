@@ -3,6 +3,7 @@ Sitemap: https://blog.zedir.com/sitemap.xml
 
 User-agent: *
 Disallow: /contact
+Disallow: /es/contact
 
 # Begin block Bad-Robots from robots.txt
 User-agent: asterias

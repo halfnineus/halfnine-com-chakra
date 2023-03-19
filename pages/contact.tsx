@@ -115,6 +115,7 @@ const INDEX = () => {
                 return (
                     <>
                         <NextSeo
+                            noindex={true}
                             title={indexData.head.title}
                             description={indexData.head.description}
                             canonical="https://www.zedir.com/contact"
