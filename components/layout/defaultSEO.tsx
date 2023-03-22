@@ -4,7 +4,7 @@ const DefaultSEO = () => {
     return (
         <>
             <DefaultSeo
-                defaultTitle="Zedir - Tailored Automation Solutions for Efficient Industrial Processes"
+                defaultTitle="HalfNine - Tailored Automation Solutions for Efficient Industrial Processes"
                 // Stops working on build
                 robotsProps={{
                     noarchive: true,
@@ -13,13 +13,13 @@ const DefaultSEO = () => {
                 openGraph={{
                     type: 'website',
                     locale: 'en',
-                    url: process.env.SITE_URL || 'https://www.zedir.com/',
-                    site_name: 'Zedir',
-                    title: 'Zedir - Tailored Automation Solutions for Efficient Industrial Processes',
+                    url: process.env.SITE_URL || 'https://www.halfnine.com/',
+                    site_name: 'HalfNine',
+                    title: 'HalfNine - Tailored Automation Solutions for Efficient Industrial Processes',
                     description: 'Improve your products and services with the power of a digital transformation through Industrial Automation.',
                     images: [
                         {
-                            url: 'https://www.zedir.com/perma/metatag.jpg',
+                            url: 'https://www.halfnine.com/perma/metatag.jpg',
                             width: 1200,
                             height: 628,
                             alt: 'OG Image Alt',
@@ -28,8 +28,8 @@ const DefaultSEO = () => {
                     ]
                 }}
                 twitter={{
-                    handle: '@zedircom',
-                    site: '@zedircom',
+                    handle: '@halfninecom',
+                    site: '@halfninecom',
                     cardType: 'summary_large_image',
                 }}
             />

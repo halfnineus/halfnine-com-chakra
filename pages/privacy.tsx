@@ -6,18 +6,18 @@ const Privacy = () => {
     return (
         <>
             <NextSeo
-                title={"Privacy Policies - Automating all Things | Zedir"}
+                title={"Privacy Policies - Automating all Things | HalfNine"}
                 description={"Read more about our privacy practices and policies and how we implement them to ensure the protection of your personal data."}
-                canonical="https://www.zedir.com/privacy"
+                canonical="https://www.halfnine.com/privacy"
                 // languageAlternates={[
                 //     {
                 //         hrefLang: 'es',
-                //         href: 'https://www.zedir.com/es/privacy',
+                //         href: 'https://www.halfnine.com/es/privacy',
                 //     }
                 // ]}
                 openGraph={{
-                    url: `https://www.zedir.com/privacy`,
-                    title: "Privacy Policies - Automating all Things | Zedir",
+                    url: `https://www.halfnine.com/privacy`,
+                    title: "Privacy Policies - Automating all Things | HalfNine",
                     description: "Read more about our privacy practices and policies and how we implement them to ensure the protection of your personal data."
                 }}
             />

@@ -3,7 +3,7 @@
         {
             "locale": "en",
             "head": {
-                "title": "Contact Us - Zedir",
+                "title": "Contact Us - HalfNine",
                 "description": "Contact Us about developing technology solutions, IT consulting & Digital transformation Related Inquiries."
             },
             "modal": {
@@ -30,8 +30,8 @@
             },
             "mailblock": {
                 "title": "Email Us",
-                "mref": "mailto:contact@zedir.com",
-                "visiblemref": "contact@zedir.com",
+                "mref": "mailto:contact@halfnine.com",
+                "visiblemref": "contact@halfnine.com",
                 "req": "You are about to email us at: "
             },
             "callblock": {
@@ -46,7 +46,7 @@
         {
             "locale": "es",
             "head": {
-                "title": "Contáctenos - Zedir",
+                "title": "Contáctenos - HalfNine",
                 "description": "Contáctenos sobre el desarrollo de soluciones tecnológicas, consultoría de TI y consultas relacionadas con la transformación digital."
             },
             "modal": {
@@ -73,8 +73,8 @@
             },
             "mailblock": {
                 "title": "Correo Electrónico",
-                "mref": "mailto:contacto@zedir.com",
-                "visiblemref": "contacto@zedir.com",
+                "mref": "mailto:contacto@halfnine.com",
+                "visiblemref": "contacto@halfnine.com",
                 "req": "Envíanos un correo a: "
             },
             "callblock": {

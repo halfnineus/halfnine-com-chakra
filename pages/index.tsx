@@ -152,15 +152,15 @@ const IndexPage = () => {
             <NextSeo
               title={indexData.head.title}
               description={indexData.head.description}
-              canonical="https://www.zedir.com"
+              canonical="https://www.halfnine.com"
               languageAlternates={[
                 {
                   hrefLang: 'es',
-                  href: 'https://www.zedir.com/es',
+                  href: 'https://www.halfnine.com/es',
                 }
               ]}
               openGraph={{
-                url: `https://www.zedir.com/`,
+                url: `https://www.halfnine.com/`,
                 title: indexData.head.title,
                 description: indexData.head.description
             }}
@@ -252,7 +252,7 @@ const IndexPage = () => {
                   .
                 </Text>
                 <Center px={{ base: '4', lg: '0' }}>
-                  <Link href={'https://www.zedir.com/img/index/Basic-IoT-Enviroment.png'} target={'_blank'}>
+                  <Link href={'https://www.halfnine.com/img/index/Basic-IoT-Enviroment.png'} target={'_blank'}>
                     <Image
 
                       maxW={'container.md'}

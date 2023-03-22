@@ -8,7 +8,7 @@ const MyBox = (props: any) => {
     return (
         <Box background={'gray.50'} borderRadius="xl" overflow="hidden">
             <Box pos="relative">
-                <Image objectFit="cover" src={props.pexelimg} alt="image description" />
+                <Image minH={'140px'} objectFit="cover" src={props.pexelimg} alt="image description" />
                 <Box pos="absolute" bottom={0} w="100%" bg="blackAlpha.500">
                     <Text fontSize={'2xl'} color="white" fontWeight="bold" px={6} py={1}>
                         {props.mainTitle}
@@ -41,15 +41,15 @@ const Index = () => {
                         <NextSeo
                             title={indexData.head.title}
                             description={indexData.head.description}
-                            canonical="https://www.zedir.com/our-approach"
+                            canonical="https://www.halfnine.com/our-approach"
                             languageAlternates={[
                                 {
                                     hrefLang: 'es',
-                                    href: 'https://www.zedir.com/es/our-approach',
+                                    href: 'https://www.halfnine.com/es/our-approach',
                                 }
                             ]}
                             openGraph={{
-                                url: `https://www.zedir.com/our-approach`,
+                                url: `https://www.halfnine.com/our-approach`,
                                 title: indexData.head.title,
                                 description: indexData.head.description
                             }}

@@ -46,7 +46,7 @@ export default function MyApp({ Component, pageProps }: AppProps) {
           />
           <meta charSet='utf-8' />
           <meta name='viewport' content='initial-scale=1.0, height=device-height, width=device-width' />
-          <meta name="author" content="zedir.com" />
+          <meta name="author" content="halfnine.com" />
           {/* <meta name="robots" content="index,follow,noarchive,noimageindex" /> */}
         </Head>
         <Component {...pageProps} />

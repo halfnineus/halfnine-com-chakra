@@ -12,8 +12,6 @@ import {
     PopoverContent,
     useColorModeValue as mode,
     useDisclosure,
-    useColorMode,
-    Image,
     useBreakpointValue,
 } from '@chakra-ui/react';
 import {
@@ -23,15 +21,9 @@ import {
 } from '@chakra-ui/icons';
 
 import Link from 'next/link'
-import { FaMoon, FaSun } from 'react-icons/fa'
 import { useRouter } from 'next/router';
 
 export default function WithSubnavigation() {
-
-    const { toggleColorMode: toggleMode } = useColorMode();
-    const text = mode("dark", "light");
-    const SwitchIcon = mode(FaMoon, FaSun);
-
     const { isOpen, onToggle } = useDisclosure();
     const buttonvariant = useBreakpointValue(
         {
@@ -39,8 +31,6 @@ export default function WithSubnavigation() {
             md: 'blue',
         },
         {
-            // Breakpoint to use when mediaqueries cannot be used, such as in server-side rendering
-            // (Defaults to 'base')
             fallback: 'md',
         },
     )
@@ -51,9 +41,6 @@ export default function WithSubnavigation() {
             <Flex
                 maxW={'container.xl'}
                 minH={{ base: '60px', md: '80px' }}
-                // py={{ base: 2 }}
-                // px={{ base: 4, sm: 4, md: 4, lg: 4, xl: 8 }}
-                // justify="space-between"
                 align="center"
                 mx={'auto'}
                 px={{ base: '4', sm: '4', md: '4', lg: '4', xl: 0 }}
@@ -69,12 +56,12 @@ export default function WithSubnavigation() {
                 />
                 <Flex flex={{ base: 1 }} justify={{ base: 'center', md: 'start' }}>
                     <Link href={'/'}>
-                        <Icon ml={{ base: 0, md: -7 }} mr={{ base: 5, sm: -3 }} fontSize={{ base: 120, md: 180 }} maxH={16} my={{ base: -8, md: -20 }} pb={{ base: 5, md: 2 }} viewBox='0 0 200 33.528'>
-                            <path d="M56.18 42.267v2.744H30.575l5.08-8.89h-3.15v-1.778h4.166l3.15-5.538H18.435v-1.778h22.403l5.537-9.652H30.22v-5.74h26.01l-1.32 2.337H32.861v.965H54.35l-6.807 12.09h1.372v1.778h-2.388l-3.15 5.538h19.61v1.778H42.361l-1.83 3.302H56.18v1.422h-8.026v1.422zM91.13 42.47v2.54H66.746V23.168H61.97v-1.778h4.776v-9.906H91.13v5.638H72.334v.864H67v.965h5.334v2.439H92.45v1.778H72.334v2.387h18.135v5.588H72.334v8.331H91.13v1.83H78.328v1.168zM145.232 27.891H133.09v.356q0 3.505-1.168 6.553t-3.404 5.334q-1.066 1.168-2.438 2.083-1.32.863-2.845 1.524-1.524.558-4.165.914-2.642.356-6.706.356h-5.994V33.123h3.25v-.762h-3.25V11.483h5.79q7.52 0 10.72 1.32 3.098 1.27 5.334 3.607l.152.153H112.72v.61q-.407-.052-.762-.052v22.403q7.06.051 9.194-.914 2.185-1.016 3.556-2.54 1.423-1.575 2.134-3.607.711-2.032.711-4.216v-.356h-12.801v-1.778h12.598q-.203-1.016-.559-2.032-.762-1.981-2.184-3.505-.711-.711-1.626-1.372-.914-.66-1.93-1.067-.61-.203-1.677-.406h10.008q1.473 1.829 2.388 4.013.914 2.083 1.168 4.37h12.294z" /><path d="M151.683 45.01h-5.74V31.854h-8.789v-1.778h8.789V11.483h5.74zM198.622 31.65h-5.74l-.05.051 5.892 13.31h-5.639L187.6 33.784h-10.211V45.01h-5.639V30.939h15.291v-.965h-15.29v-8.23h-13.97v-1.778h13.97v-8.483h14.985q2.49 0 4.521.914 2.083.864 3.556 2.388 1.474 1.473 2.286 3.505.864 1.981.864 4.216 0 2.642-1.32 5.131-.61 1.22-1.576 2.235h3.556zm-10.363-9.906h-10.871v6.401h9.398q1.22 0 2.184-.457 1.016-.508 1.728-1.27.762-.762 1.117-1.778.407-1.016.407-2.134 0-2.54-1.575-3.962-1.524-1.473-3.861-1.473h-9.398v2.895h10.871z" />
+                        <Icon fontSize={{ base: 120, md: 180 }} maxH={'40px'} viewBox='0 0 1912 280'>
+                            <path fill="#231f20" d="M54 0v116h134V0h54v280h-54V164H54v116H0V0h54ZM274 280 383 0h55l112 280h-56l-22-57H351l-21 57h-56Zm94-104h86L410 63l-42 113Zm226 104-25-62V0h54v230h133v50H594ZM996 0v50H845v66h135v48H845v116h-54V0h205ZM1086 0l136 198V0h52v280h-52L1085 82v198h-52V0h53ZM1322 280V0h54v280h-54ZM1476 0l136 198V0h52v280h-52L1475 82v198h-52V0h53ZM1711 230V0h201v50h-147v66h131v48h-131v66h147v50h-172l-29-50Z" />
                         </Icon>
                     </Link>
                     <Box ml={{ base: 6, sm: 0 }} ></Box>
-                    <Flex display={{ base: 'none', md: 'flex' }} ml={16}>
+                    <Flex display={{ base: 'none', md: 'flex' }} ml={12}>
                         <DesktopNav />
                     </Flex>
                 </Flex>
@@ -98,7 +85,6 @@ export default function WithSubnavigation() {
 }
 
 const DesktopNav = (e: any,) => {
-    const linkColor = mode('gray.600', 'gray.200');
     const popoverContentBgColor = mode('white', 'gray.800');
     const { locale } = useRouter()
 
@@ -131,8 +117,6 @@ const DesktopNav = (e: any,) => {
                                 </PopoverTrigger>
                                 {navItem.children && (
                                     <PopoverContent
-                                        // transition={'all .25s ease-in-out'}
-                                        // minW={'sm'}
                                         boxShadow={'xl'}
                                         bg={popoverContentBgColor}
                                         p={2}
@@ -175,7 +159,6 @@ const DesktopSubNav = ({ label, href, subLabel }: NavItem) => {
                         fontWeight={500}>
                         {label}
                     </Text>
-                    {/* <Text fontSize={'sm'}>{subLabel}</Text> */}
                 </Box>
                 <Flex
                     transition={'all .3s ease'}
@@ -244,34 +227,8 @@ const MobileNavItem = ({ label, children, href, subhref }: NavItem) => {
                         color={mode('gray.600', 'gray.200')}>
                         {label}
                     </Text>
-                    {/* {children && (
-                            <Icon
-                                as={ChevronDownIcon}
-                                transition={'all .25s ease-in-out'}
-                                transform={isOpen ? 'rotate(180deg)' : ''}
-                                w={6}
-                                h={6}
-                            />
-                        )} */}
                 </Flex>
             </Link>
-            {/* <Collapse in={isOpen} animateOpacity style={{ marginTop: '0!important' }}>
-                <Stack
-                    mt={2}
-                    pl={4}
-                    borderLeft={1}
-                    borderStyle={'solid'}
-                    borderColor={mode('gray.200', 'gray.700')}
-                    align={'start'}>
-                    {children &&
-                        children.map((child) => (
-                            //  Edit Look & Find out how to toggle (onToggle) the Main Function 
-                            <Link py={2} onClick={onToggle} href={child.href}>
-                                {child.label}
-                            </Link>
-                        ))}
-                </Stack>
-            </Collapse> */}
         </Stack>
     );
 };
@@ -312,16 +269,6 @@ const NAV_ITEMS: Array<NavItem> = [
         locale: "en",
         label: 'Industries',
         subhref: '/industries',
-        // children: [
-        //     {
-        //         label: 'Manufacturing & Production',
-        //         href: '/industries#manufacturing-and-production',
-        //     },
-        //     {
-        //         label: 'Security & Safety',
-        //         href: '/industries#security-and-safety',
-        //     },
-        // ],
     },
     {
         locale: "en",
@@ -361,16 +308,6 @@ const NAV_ITEMS: Array<NavItem> = [
         locale: "es",
         label: 'Industrias',
         subhref: '/industries',
-        // children: [
-        //     {
-        //         label: 'Fabricación y Producción',
-        //         href: '/industries#manufacturing-and-production',
-        //     },
-        //     {
-        //         label: 'Seguridad y Protección',
-        //         href: '/industries#security-and-safety',
-        //     },
-        // ],
     },
     {
         locale: "es",

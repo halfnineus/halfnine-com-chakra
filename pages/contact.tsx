@@ -118,15 +118,15 @@ const INDEX = () => {
                             noindex={true}
                             title={indexData.head.title}
                             description={indexData.head.description}
-                            canonical="https://www.zedir.com/contact"
+                            canonical="https://www.halfnine.com/contact"
                             languageAlternates={[
                                 {
                                     hrefLang: 'es',
-                                    href: 'https://www.zedir.com/es/contact',
+                                    href: 'https://www.halfnine.com/es/contact',
                                 }
                             ]}
                             openGraph={{
-                                url: `https://www.zedir.com/contact`,
+                                url: `https://www.halfnine.com/contact`,
                                 title: indexData.head.title,
                                 description: indexData.head.description
                             }}
@@ -264,7 +264,7 @@ const INDEX = () => {
                                                         type={'company'}
                                                         name={"company"}
                                                         onChange={(e: any) => setCompany(e.target.value)}
-                                                        placeholder={'Zedir'}
+                                                        placeholder={'HalfNine'}
                                                     />
                                                 </InputGroup>
                                             </FormControl>

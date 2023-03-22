@@ -4,26 +4,20 @@ import {
   Heading,
   Text,
   GridItem,
-  VStack,
   Flex,
-  Divider,
-  Grid,
   SimpleGrid,
-  Avatar,
   Stack,
   Center,
-  chakra,
   Icon,
-} from '@chakra-ui/react';
+} from '@chakra-ui/react'
 import { useRouter } from "next/router"
-import { NextSeo } from 'next-seo';
+import { NextSeo } from 'next-seo'
 
 
 import aboutdat from '../assets/about.json'
-import Link from 'next/link';
-import { BsFillFileEarmarkBarGraphFill, BsRecordCircle } from 'react-icons/bs';
-import { MdSupportAgent } from 'react-icons/md';
-import { SiCommonworkflowlanguage } from 'react-icons/si';
+import Link from 'next/link'
+import { BsFillFileEarmarkBarGraphFill, BsRecordCircle } from 'react-icons/bs'
+import { MdSupportAgent } from 'react-icons/md'
 import { RiOrganizationChart } from 'react-icons/ri';
 
 
@@ -33,8 +27,6 @@ const Feature = (props: any) => {
       <Flex shrink={0}>
         <Icon
           boxSize={10}
-          // mt={1}
-          // mr={2}
           color="blue.500"
           viewBox="0 0 20 20"
           fill="currentColor"
@@ -124,7 +116,6 @@ const FeatureBlog = (children: any) => {
   );
 }
 
-
 const IndexAbout = () => {
   const { locale } = useRouter()
   return (
@@ -135,15 +126,15 @@ const IndexAbout = () => {
             <NextSeo
               title={aboutData.head.title}
               description={aboutData.head.description}
-              canonical="https://www.zedir.com/about"
+              canonical="https://www.halfnine.com/about"
               languageAlternates={[
                 {
                   hrefLang: 'es',
-                  href: 'https://www.zedir.com/es/about',
+                  href: 'https://www.halfnine.com/es/about',
                 }
               ]}
               openGraph={{
-                url: `https://www.zedir.com/about`,
+                url: `https://www.halfnine.com/about`,
                 title: aboutData.head.title,
                 description: aboutData.head.description
               }}
@@ -154,7 +145,6 @@ const IndexAbout = () => {
                 <Text textAlign={'justify'}>{aboutData.block1.i1}</Text>
               </Box>
             </Box>
-
             <Box bg={'gray.50'}>
               <Box maxW={'container.xl'} px={{ base: '4', sm: '4', md: '4', lg: '4', xl: '0' }} mx="auto">
                 <SimpleGrid
@@ -168,20 +158,18 @@ const IndexAbout = () => {
                     <Heading
                       mb={3}
                       fontWeight="bold"
-                      // lineHeight="shorter"
                       letterSpacing="tight"
                     >
                       {aboutData.block2.heading}
                     </Heading>
-                    {/* <chakra.p
-                    mb={6}
-                    fontSize={{ base: "lg", md: "xl" }}
-                    textAlign={{ base: "center", sm: "left" }}
-                    color="gray.600"
+                    <Text
+                      mb={6}
+                      fontSize={{ base: "md", md: "lg" }}
+                      textAlign={{ base: "center", sm: "left" }}
+                      color="gray.600"
                     >
-                    Lorem ipsum dolor sit amet consect adipisicing elit. Possimus
-                    magnam voluptatum cupiditate veritatis in accusamus quisquam.
-                  </chakra.p> */}
+                      {aboutData.block2.whyus}
+                    </Text>
                   </Box>
                   <GridItem colSpan={2}>
                     <Stack
@@ -208,8 +196,6 @@ const IndexAbout = () => {
                 </SimpleGrid>
               </Box>
             </Box>
-
-
             <Box maxW={'container.xl'} px={{ base: '4', sm: '4', md: '4', lg: '4', xl: '0' }} mx="auto" my={20}>
               <Heading pb={8} textAlign={'center'}>{aboutData.block3.heading}</Heading>
               <Center>
@@ -218,25 +204,25 @@ const IndexAbout = () => {
                   spacing={{ base: 6, md: 6, lg: 6, xl: 16 }}
                 >
                   <FeatureBlog
-                    title={`Unlocking the Potential of Industrial IoT: The Most Common Applications`}
-                    text={`IIoT is transforming industries, optimizing operations, reducing costs, and improving productivity. Its potential is enormous and not limited.`}
-                    page={'https://blog.zedir.com/internet-of-things/unlocking-the-potential-of-industrial-iot-common-applications'}
-                    date={'March 13, 2023'}
-                    imgsrc={'https://images.pexels.com/photos/279810/pexels-photo-279810.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=300&w=600'}
+                    title={`The Mechanics Behind Industrial Robots`}
+                    text={`Industrial robots have transformed manufacturing, improved efficiency, and accuracy. This article covers types, components, programming, etc.`}
+                    page={'https://blog.halfnine.com/industrial-robots/the-mechanics-behind-industrial-robots'}
+                    date={'March 19, 2023'}
+                    imgsrc={'https://images.pexels.com/photos/414579/pexels-photo-414579.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=300&w=600'}
                   />
                   <FeatureBlog
-                    title={`Is Industrial Automation A Good Career?`}
-                    text={`Industrial automation uses technology to control industrial processes, increasing efficiency, reducing costs, and improving safety in many industries.`}
-                    page={'https://blog.zedir.com/industrial-automation/is-industrial-automation-a-good-career'}
-                    date={'March 12, 2023'}
-                    imgsrc={'https://images.pexels.com/photos/326576/pexels-photo-326576.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=300&w=600'}
+                    title={`Designing an Effective Control Panel: A Beginner's Guide`}
+                    text={`Industrial control panels automate processes by distributing power, sensing inputs, executing logic, commanding outputs & allowing user interaction.`}
+                    page={'https://blog.halfnine.com/control-systems/designing-an-effective-control-panel-a-beginners-guide'}
+                    date={'March 18, 2023'}
+                    imgsrc={'https://images.pexels.com/photos/7663142/pexels-photo-7663142.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=300&w=600'}
                   />
                   <FeatureBlog
-                    title={'How does Low-Code Technology accelerate Digital Transformation'}
-                    text={`Low-code development automates repetitive tasks and focuses on business logic for fast software building. It's easier to use than traditional approaches.`}
-                    page={'https://blog.zedir.com/digital-transformation/how-does-lowcode-technology-accelerate-digital-transformation'}
-                    date={'March 9, 2023'}
-                    imgsrc={'https://images.pexels.com/photos/965345/pexels-photo-965345.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=300&w=600'}
+                    title={'Digital Lockout / Tagout: The Key to Ensuring Workplace Safety'}
+                    text={`Workplace safety is crucial. Lockout/tagout isolates energy sources to prevent accidental start-ups and protect workers from hazardous energy.`}
+                    page={'https://blog.halfnine.com/workplace-safety/digital-lockout-tagout-the-key-to-ensuring-workplace-safety'}
+                    date={'March 17, 2023'}
+                    imgsrc={'https://images.pexels.com/photos/11391947/pexels-photo-11391947.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=300&w=600'}
                   />
                 </SimpleGrid>
               </Center>

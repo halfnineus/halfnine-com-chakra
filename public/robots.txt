@@ -1,5 +1,5 @@
-Sitemap: https://www.zedir.com/sitemap.xml
-Sitemap: https://blog.zedir.com/sitemap.xml
+Sitemap: https://www.halfnine.com/sitemap.xml
+Sitemap: https://blog.halfnine.com/sitemap.xml
 
 User-agent: *
 Disallow: /contact

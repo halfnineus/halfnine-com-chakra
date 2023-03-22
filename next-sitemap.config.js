@@ -1,12 +1,12 @@
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
-    siteUrl: process.env.SITE_URL || 'https://www.zedir.com',
+    siteUrl: process.env.SITE_URL || 'https://www.halfnine.com',
     generateRobotsTxt: false,
     autoLastmod: false,
     changefreq: 'monthly',
     alternateRefs: [
         {
-            href: 'https://www.zedir.com/es/',
+            href: 'https://www.halfnine.com/es/',
             hreflang: 'es',
         },
     ],

@@ -3,7 +3,7 @@
         {
             "locale": "en",
             "head": {
-                "title": "Who we Are - Zedir",
+                "title": "Who we Are - HalfNine",
                 "description": "Developing systems to automate simple and complicated industrial processes. Contact us to know more."
             },
             "block1": {
@@ -12,6 +12,7 @@
             },
             "block2": {
                 "heading": "Why Choose Us?",
+                "whyus": "Choose us for reliable partnership. Transparent communication, experienced team, tailored solutions. Dedication to excellence for your satisfaction.",
                 "txt1": "Visible Live Progress",
                 "txt1d": "Our team works hard to ensure that you see progress throughout every single day. This helps you stay informed and confident that your project is on track.",
                 "txt2": "Weekly Status Meetings",
@@ -28,7 +29,7 @@
         {
             "locale": "es",
             "head": {
-                "title": "Acerca De - Zedir",
+                "title": "Acerca De - HalfNine",
                 "description": "Developing systems to automate simple and complicated industrial processes. Contact us to know more."
             },
             "block1": {
@@ -37,6 +38,7 @@
             },
             "block2": {
                 "heading": "¿Por qué elegirnos?",
+                "whyus": "Elige nuestra empresa para tener una asociación confiable. Comunicación transparente, equipo experimentado, soluciones a medida. Dedicación a la excelencia para tu satisfacción.",
                 "txt1": "Progreso visible en vivo",
                 "txt1d": "Nuestro equipo trabaja arduamente para garantizar que vea el progreso todos los días. Esto lo ayuda a mantenerse informado y seguro de que su proyecto va por buen camino.",
                 "txt2": "Reuniones de estado semanales",

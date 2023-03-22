@@ -109,15 +109,15 @@ const Index = () => {
                     <NextSeo
                         title={indexData.head.title}
                         description={indexData.head.description}
-                        canonical="https://www.zedir.com/services"
+                        canonical="https://www.halfnine.com/services"
                         languageAlternates={[
                             {
                                 hrefLang: 'es',
-                                href: 'https://www.zedir.com/es/services',
+                                href: 'https://www.halfnine.com/es/services',
                             }
                         ]}
                         openGraph={{
-                            url: `https://www.zedir.com/services`,
+                            url: `https://www.halfnine.com/services`,
                             title: indexData.head.title,
                             description: indexData.head.description
                         }}
