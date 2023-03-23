@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Box, Button, HStack, Icon, Spacer, Text } from "@chakra-ui/react";
-import Link from "next/link";
+import { Box, Button, HStack, Spacer, Text } from "@chakra-ui/react";
 import { setCookie, hasCookie } from 'cookies-next';
 import { BiCookie } from 'react-icons/bi'
 
@@ -35,7 +34,6 @@ function Consent() {
             bottom={2}
             left={0}
             right={0}
-            // opacity={'.98'}
             px={4}
             py={2}
             rounded={'xl'}

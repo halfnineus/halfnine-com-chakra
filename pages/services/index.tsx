@@ -210,11 +210,10 @@ const Index = () => {
                                 textAlign="center"
                                 border={'2px'}
                                 borderColor={'gray.200'}
-                                // boxShadow={'md'}
                                 rounded={'xl'}
                                 bg={'white'}
                                 mt={12}
-                                pt={4}
+                                p={4}
                             >
                                 <Heading size="lg" mb="4">
                                     {indexData.block4.Heading}
@@ -222,7 +221,7 @@ const Index = () => {
                                 <Text pb={8} maxW="3xl" mx="auto">
                                     {indexData.block4.Text}
                                 </Text>
-                                <Tabs px={4} py={2} isFitted size={'lg'} orientation={"horizontal"}>
+                                <Tabs isFitted size={'lg'} orientation={"horizontal"}>
                                     <TabList>
                                         <Tab fontWeight="semibold">{indexData.block4.t1}</Tab>
                                         <Tab fontWeight="semibold">{indexData.block4.t2}</Tab>

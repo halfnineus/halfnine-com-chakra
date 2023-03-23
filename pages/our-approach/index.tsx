@@ -8,7 +8,7 @@ const MyBox = (props: any) => {
     return (
         <Box background={'gray.50'} borderRadius="xl" overflow="hidden">
             <Box pos="relative">
-                <Image minH={'140px'} objectFit="cover" src={props.pexelimg} alt="image description" />
+                <Image minH={'150px'} objectFit="cover" src={props.pexelimg} alt="image description" />
                 <Box pos="absolute" bottom={0} w="100%" bg="blackAlpha.500">
                     <Text fontSize={'2xl'} color="white" fontWeight="bold" px={6} py={1}>
                         {props.mainTitle}
