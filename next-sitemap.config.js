@@ -10,4 +10,7 @@ module.exports = {
             hreflang: 'es',
         },
     ],
+    exclude: [
+        "/contact",
+    ],
 }

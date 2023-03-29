@@ -204,25 +204,25 @@ const IndexAbout = () => {
                   spacing={{ base: 6, md: 6, lg: 6, xl: 16 }}
                 >
                   <FeatureBlog
-                    title={`The Mechanics Behind Industrial Robots`}
-                    text={`Industrial robots have transformed manufacturing, improved efficiency, and accuracy. This article covers types, components, programming, etc.`}
-                    page={'https://blog.halfnine.com/industrial-robots/the-mechanics-behind-industrial-robots'}
-                    date={'March 19, 2023'}
-                    imgsrc={'https://images.pexels.com/photos/414579/pexels-photo-414579.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=300&w=600'}
+                    title={`Revolutionize Your Industry with Vision Inspection Systems`}
+                    text={`Vision inspection systems increase productivity and quality while reducing costs by inspecting products at high speeds and detecting defects.`}
+                    page={'https://blog.halfnine.com/inspection-systems/revolutionize-your-industry-with-vision-inspection-systems'}
+                    date={'March 26, 2023'}
+                    imgsrc={'https://images.pexels.com/photos/6801648/pexels-photo-6801648.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=300&w=600'}
                   />
                   <FeatureBlog
-                    title={`Designing an Effective Control Panel: A Beginner's Guide`}
-                    text={`Industrial control panels automate processes by distributing power, sensing inputs, executing logic, commanding outputs & allowing user interaction.`}
-                    page={'https://blog.halfnine.com/control-systems/designing-an-effective-control-panel-a-beginners-guide'}
-                    date={'March 18, 2023'}
-                    imgsrc={'https://images.pexels.com/photos/7663142/pexels-photo-7663142.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=300&w=600'}
+                    title={`Industrial Robot Design: Techniques and Best Practices`}
+                    text={`This article covers the basics of robot development design, including techniques, best practices, and common mistakes to avoid for effective design.`}
+                    page={'https://blog.halfnine.com/industrial-robots/industrial-robot-design-techniques-and-best-practices'}
+                    date={'March 25, 2023'}
+                    imgsrc={'https://images.pexels.com/photos/15888223/pexels-photo-15888223.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=300&w=600'}
                   />
                   <FeatureBlog
-                    title={'Digital Lockout / Tagout: The Key to Ensuring Workplace Safety'}
-                    text={`Workplace safety is crucial. Lockout/tagout isolates energy sources to prevent accidental start-ups and protect workers from hazardous energy.`}
-                    page={'https://blog.halfnine.com/workplace-safety/digital-lockout-tagout-the-key-to-ensuring-workplace-safety'}
-                    date={'March 17, 2023'}
-                    imgsrc={'https://images.pexels.com/photos/11391947/pexels-photo-11391947.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=300&w=600'}
+                    title={'Building Software with Security in Mind'}
+                    text={`Secure software is crucial for developers in the face of increasing cyberattacks. This article covers the risks and best practices for secure software.`}
+                    page={'https://blog.halfnine.com/software-development/building-software-with-security-in-mind-best-practices'}
+                    date={'March 24, 2023'}
+                    imgsrc={'https://images.pexels.com/photos/60504/security-protection-anti-virus-software-60504.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=300&w=600'}
                   />
                 </SimpleGrid>
               </Center>
