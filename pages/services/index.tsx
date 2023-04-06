@@ -16,13 +16,10 @@ import {
     TabPanel,
     TabPanels,
     Flex,
-    chakra
 } from "@chakra-ui/react";
 import { useRouter } from "next/router";
 import { NextSeo } from "next-seo";
 import Link from "next/link";
-
-import { IoBulbOutline, IoRocketOutline } from "react-icons/io5";
 
 import indexdat from "../../assets/services/index.json"
 import { Contactimg, Values } from "../../components";
@@ -30,7 +27,7 @@ import { Contactimg, Values } from "../../components";
 import { BiCustomize } from "react-icons/bi";
 import { BsVectorPen, BsTerminal, BsLifePreserver, BsSignpostSplit, BsPinAngle } from "react-icons/bs";
 import { MdOutlineMore, MdOutlineTransform } from "react-icons/md";
-import { SiLichess, SiAmazonaws, SiMicrosoftazure, SiGooglecloud, SiVercel, SiDotnet, SiNextdotjs, SiExpress, SiNuxtdotjs, SiRaspberrypi, SiArduino, SiPinboard } from "react-icons/si";
+import { SiLichess, SiAmazonaws, SiMicrosoftazure, SiGooglecloud, SiVercel, SiDotnet, SiNextdotjs, SiExpress, SiNuxtdotjs, SiRaspberrypi, SiArduino } from "react-icons/si";
 import { HiOutlineDocumentMagnifyingGlass, HiOutlineDocumentChartBar, HiOutlineBeaker, HiOutlineCheckBadge } from "react-icons/hi2";
 import { FaUserTag } from "react-icons/fa";
 import { GiSettingsKnobs } from "react-icons/gi";

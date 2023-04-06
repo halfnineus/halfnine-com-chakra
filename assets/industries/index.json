@@ -3,13 +3,13 @@
         {
             "locale": "en",
             "head": {
-                "title": "Industries We Serve - HalfNine",
+                "title": "Industries Automation Enhances - HalfNine",
                 "description": "Our industrial automation services deliver tailored, cost-effective solutions . With ongoing support and maintenance for optimal performance."
             },
             "img": "Proven and Replicable Solutions",
             "block1": {
                 "heading": "Automating every process together",
-                "text1": "HalfNine's industrial automation services are designed to provide clients with the best technology suited to their needs while guaranteeing quality. Our team of dedicated engineers has extensive experience in the industrial sector, allowing us to develop tailored solutions that meet each client's unique industry-specific needs. We prioritize delivering cost-effective solutions that offer maximum efficiency, productivity, and reliability. Our commitment to providing ongoing support and maintenance ensures that our clients can trust their automation solution to perform at an optimal level for years to come."
+                "text1": "HalfNine's automation services are designed to provide others with the best technology suited to their needs. Our team of dedicated engineers has extensive experience in the industrial sector, allowing us to develop tailored solutions that meet each client's unique industry-specific needs. We prioritize delivering solutions that make financial sense, offer efficiency, productivity, and reliability. Our commitment to providing ongoing support and maintenance ensures trust in their solutions to perform at an optimal level for years to come."
             },
             "block2": {
                 "heading": "Our Industry Expertise",
@@ -46,7 +46,7 @@
         {
             "locale": "es",
             "head": {
-                "title": "Industrias a las que servimos - HalfNine",
+                "title": "Industrias que la Automatización Mejoras - HalfNine",
                 "description": "Nuestros servicios de automatización industrial ofrecen soluciones personalizadas y rentables con soporte y mantenimiento continuo."
             },
             "img": "Soluciones comprobadas y replicables",

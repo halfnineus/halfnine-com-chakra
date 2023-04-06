@@ -1,5 +1,4 @@
 import {
-    Container,
     Flex,
     Box,
     Heading,
@@ -51,25 +50,18 @@ const INDEX = () => {
         containerStyle: { width: 'auto', maxWidth: '100%', paddingBottom: 'auto' },
     })
     const handleSubmit = (e: any) => {
-        var regex = /^([a-z0-9!#$%&'*+\-/=?^_`{|}~]+(?:\.[a-zA-Z0-9!#$%&'*+\-/=?^_`{|}~]+)*)@((?:[a-z0-9]+(?:[a-z-0-9-]*)\.)+[a-z]{2,})$/gi;
-
-        if ((name === "") || (!regex.test(email)) /* || (message === "")*/) {
+        const regex = /^([a-z0-9!#$%&'*+\-/=?^_`{|}~]+(?:\.[a-zA-Z0-9!#$%&'*+\-/=?^_`{|}~]+)*)@((?:[a-z0-9]+(?:[a-z-0-9-]*)\.)+[a-z]{2,})$/gi;
+        if (name === "" || !regex.test(email)) {
             toast.closeAll();
             toast({
                 description: 'Something went wrong while submitting the form, Please try again later.',
                 isClosable: true,
                 status: 'error',
-            })
+            });
         } else {
-            e.preventDefault()
-            let data = {
-                name,
-                email,
-                message,
-                phone,
-                company,
-            }
-            setSubmitted(true)
+            e.preventDefault();
+            const data = { name, email, message, phone, company };
+            setSubmitted(true);
             fetch('/api/contact', {
                 method: 'POST',
                 headers: {
@@ -78,29 +70,28 @@ const INDEX = () => {
                 },
                 body: JSON.stringify(data)
             }).then((res) => {
-                console.log('Response received')
                 if (res.status === 200) {
-                    console.log('Response succeeded!')
+                    console.log('Response succeeded!');
                 } else {
                     toast.closeAll();
                     toast({
                         description: 'Something went wrong while submitting the form, Please try again later.',
                         isClosable: true,
                         status: 'error',
-                    })
+                    });
                 }
-
-                setSubmitted(false)
+                setSubmitted(false);
                 toast.closeAll();
                 toast({
                     description: 'Message sent! We will contact you shortly.',
                     isClosable: true,
                     status: 'success',
                     containerStyle: { width: 'auto', maxWidth: '100%', paddingBottom: 'auto' }
-                })
-            })
+                });
+            });
         }
-    }
+    };
+
 
 
     const [refECV, setrefECV] = useState('');
@@ -168,7 +159,8 @@ const INDEX = () => {
                                     w={'full'}
                                     justify={'center'}
                                     px={{ base: 4, md: 8 }}
-                                    bgGradient={{ base: 'linear(to-r, blackAlpha.700, blackAlpha.500)', md: 'linear(to-r, blackAlpha.700, blackAlpha.300)' }}
+                                    // bgGradient={{ base: 'linear(to-r, blackAlpha.700, blackAlpha.500)', md: 'linear(to-r, blackAlpha.700, blackAlpha.300)' }}
+                                    bgGradient={'linear(to-r, blackAlpha.200, blackAlpha.600)'}
                                     textAlign='center'
                                 >
                                     <Stack maxW={'3xl'}>
@@ -190,13 +182,6 @@ const INDEX = () => {
                                 </VStack>
                             </Flex>
 
-                            {/* <Heading pt={'5'} fontSize={{ base: '2xl', md: '3xl' }}>
-                            {indexData.block2.heading}
-                            </Heading>
-                            <Text fontSize={{ base: 'md', md: 'lg' }}>
-                            {indexData.block2.text}
-                        </Text> */}
-
                             <Divider mt={5} mb={5} />
 
                             <Box
@@ -212,14 +197,10 @@ const INDEX = () => {
                                 </Heading>
                                 <form action={'submit'} onSubmit={handleSubmit}>
                                     <VStack spacing={5}>
-                                        {/* <HStack spacing={5} minW={'full'}> */}
                                         <SimpleGrid
                                             w="full"
-                                            // maxW={{ base: 'unset', lg: '4xl' }}
                                             columns={{ base: 1, sm: 2 }}
-                                            // columns={2}
                                             spacing={5}
-                                        // fontSize="sm"
                                         >
 
                                             <FormControl isRequired>
@@ -252,8 +233,6 @@ const INDEX = () => {
                                                     />
                                                 </InputGroup>
                                             </FormControl>
-                                            {/* </HStack> */}
-                                            {/* <HStack spacing={5} minW={'full'}> */}
                                             <FormControl id="company">
                                                 <FormLabel>{indexData.form.companyname}</FormLabel>
                                                 <InputGroup>
@@ -284,7 +263,6 @@ const INDEX = () => {
                                                 </InputGroup>
                                             </FormControl>
                                         </SimpleGrid>
-                                        {/* </HStack> */}
                                         <FormControl id="message">
                                             <FormLabel>{indexData.form.message}</FormLabel>
                                             <Textarea
