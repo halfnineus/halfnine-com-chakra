@@ -1,5 +1,5 @@
-import { useState } from "react";
-import NextImage, { ImageProps } from "next/image";
+import { useState } from "react"
+import NextImage, { ImageProps } from "next/image"
 
 type ProgressiveImageProps = Omit<ImageProps, 'onLoad'>;
 

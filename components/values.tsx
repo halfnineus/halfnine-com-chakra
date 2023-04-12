@@ -8,11 +8,11 @@ import {
     Grid,
     Icon,
     HStack,
-} from '@chakra-ui/react';
+} from '@chakra-ui/react'
 
 import { MdTouchApp, MdCheckCircleOutline, MdAvTimer, MdMoney, MdOutlineStars } from 'react-icons/md'
 import { GiReturnArrow } from 'react-icons/gi'
-import { useRouter } from 'next/router';
+import { useRouter } from 'next/router'
 
 interface FeatureProps {
     heading: string;

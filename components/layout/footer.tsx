@@ -13,13 +13,13 @@ import {
     Select,
     chakra,
     Button,
-} from '@chakra-ui/react';
+} from '@chakra-ui/react'
 
 import Link from 'next/link'
 import { useRouter } from "next/router"
-import { RiMailSendLine } from 'react-icons/ri';
+import { RiMailSendLine } from 'react-icons/ri'
 
-import { FaFacebookSquare, FaLinkedin, FaTwitterSquare } from "react-icons/fa";
+import { FaFacebookSquare, FaLinkedin, FaTwitterSquare } from "react-icons/fa"
 
 import footdat from '../../assets/components/footer.json'
 

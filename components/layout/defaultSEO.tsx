@@ -1,4 +1,4 @@
-import { DefaultSeo } from "next-seo";
+import { DefaultSeo } from "next-seo"
 
 const DefaultSEO = () => {
     return (

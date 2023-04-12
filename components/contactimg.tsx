@@ -1,7 +1,6 @@
-import { Box, Button, Flex, Link, Text, Image } from "@chakra-ui/react";
-import { useRouter } from "next/router";
-import { useState } from "react";
-import { MdOutlineContacts } from "react-icons/md";
+import { Box, Button, Flex, Link, Text, Image } from "@chakra-ui/react"
+import { useRouter } from "next/router"
+import { MdOutlineContacts } from "react-icons/md"
 
 interface NavItem {
   locale: string;

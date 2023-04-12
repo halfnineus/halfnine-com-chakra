@@ -1,6 +1,6 @@
-import { Box, Text, List, ListItem, Image, SimpleGrid, Heading } from "@chakra-ui/react";
-import { NextSeo } from "next-seo";
-import { useRouter } from "next/router";
+import { Box, Text, List, ListItem, Image, SimpleGrid, Heading } from "@chakra-ui/react"
+import { NextSeo } from "next-seo"
+import { useRouter } from "next/router"
 import indexdat from '../../assets/our-approach/index.json'
 
 

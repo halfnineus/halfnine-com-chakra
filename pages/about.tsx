@@ -18,7 +18,7 @@ import aboutdat from '../assets/about.json'
 import Link from 'next/link'
 import { BsFillFileEarmarkBarGraphFill, BsRecordCircle } from 'react-icons/bs'
 import { MdSupportAgent } from 'react-icons/md'
-import { RiOrganizationChart } from 'react-icons/ri';
+import { RiOrganizationChart } from 'react-icons/ri'
 
 
 const Feature = (props: any) => {
