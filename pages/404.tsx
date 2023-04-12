@@ -1,6 +1,6 @@
-import { Box, Button, Heading, Stack, Text } from '@chakra-ui/react';
-import { NextSeo } from 'next-seo';
-import Link from 'next/link';
+import { Box, Button, Heading, Stack, Text } from '@chakra-ui/react'
+import { NextSeo } from 'next-seo'
+import Link from 'next/link'
 
 export default function Custom404() {
   return (

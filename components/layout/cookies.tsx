@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'react';
-import { Box, Button, HStack, Spacer, Text } from "@chakra-ui/react";
-import { setCookie, hasCookie } from 'cookies-next';
+import React, { useEffect, useState } from 'react'
+import { Box, Button, HStack, Spacer, Text } from "@chakra-ui/react"
+import { setCookie, hasCookie } from 'cookies-next'
 import { BiCookie } from 'react-icons/bi'
 
 function Consent() {

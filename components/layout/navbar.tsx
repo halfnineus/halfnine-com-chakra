@@ -13,15 +13,15 @@ import {
     useColorModeValue as mode,
     useDisclosure,
     useBreakpointValue,
-} from '@chakra-ui/react';
+} from '@chakra-ui/react'
 import {
     HamburgerIcon,
     CloseIcon,
     ChevronRightIcon,
-} from '@chakra-ui/icons';
+} from '@chakra-ui/icons'
 
 import Link from 'next/link'
-import { useRouter } from 'next/router';
+import { useRouter } from 'next/router'
 
 export default function WithSubnavigation() {
     const { isOpen, onToggle } = useDisclosure();

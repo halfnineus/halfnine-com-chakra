@@ -24,18 +24,18 @@ import {
     ModalCloseButton,
     Center,
     SimpleGrid,
-} from '@chakra-ui/react';
+} from '@chakra-ui/react'
 
-import { MdCall, MdEmail, MdLocationOn, MdOutlineEmail, MdPhone, } from 'react-icons/md';
+import { MdCall, MdEmail, MdLocationOn, MdOutlineEmail, MdPhone, } from 'react-icons/md'
 import { BsPerson, BsBuilding } from 'react-icons/bs'
 
 import { useState } from "react"
-import { NextSeo } from "next-seo";
-import { useRouter } from "next/router";
-import { FiExternalLink } from "react-icons/fi";
+import { NextSeo } from "next-seo"
+import { useRouter } from "next/router"
+import { FiExternalLink } from "react-icons/fi"
 
 import indexdat from "../assets/contact.json"
-import Link from 'next/link';
+import Link from 'next/link'
 
 const INDEX = () => {
     const [name, setName] = useState('');

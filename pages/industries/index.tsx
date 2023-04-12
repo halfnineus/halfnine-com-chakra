@@ -4,19 +4,19 @@ import {
     SimpleGrid,
     HStack,
     Heading,
-} from "@chakra-ui/react";
-import { NextSeo } from "next-seo";
+} from "@chakra-ui/react"
+import { NextSeo } from "next-seo"
 
-import { useRouter } from "next/router";
-import { IoTrainOutline } from "react-icons/io5";
-import { MdOutlinePrecisionManufacturing } from "react-icons/md";
-import { TbBuildingFactory, TbBuildingFactory2 } from "react-icons/tb";
-import { GoLock } from "react-icons/go";
-import { CiMedicalCross } from "react-icons/ci";
+import { useRouter } from "next/router"
+import { IoTrainOutline } from "react-icons/io5"
+import { MdOutlinePrecisionManufacturing } from "react-icons/md"
+import { TbBuildingFactory, TbBuildingFactory2 } from "react-icons/tb"
+import { GoLock } from "react-icons/go"
+import { CiMedicalCross } from "react-icons/ci"
 
 import indexdat from "../../assets/industries/index.json"
-import { Contactimg } from "../../components";
-import { GiAntiAircraftGun, GiChemicalDrop, GiDefenseSatellite, GiFarmer, GiOilPump, GiPillDrop, GiRolledCloth, GiSodaCan } from "react-icons/gi";
+import { Contactimg } from "../../components"
+import { GiAntiAircraftGun, GiChemicalDrop, GiDefenseSatellite, GiFarmer, GiOilPump, GiPillDrop, GiRolledCloth, GiSodaCan } from "react-icons/gi"
 
 const Feature = (props: any) => {
     return (
@@ -66,7 +66,7 @@ const Index = () => {
                                 {/* Case Studies */}
                             </Text>
                             <SimpleGrid
-                                columns={{ base: 1 }}
+                                columns={{ base: 1, md: 2 }}
                                 spacing={12}
                                 mx="auto"
                                 my={20}
@@ -80,7 +80,7 @@ const Index = () => {
                                     icon={<MdOutlinePrecisionManufacturing />}
                                     title={indexData.block2.item2}
                                     text={indexData.block2.item2d}
-                                    />
+                                />
                                 <Feature
                                     icon={<TbBuildingFactory />}
                                     title={indexData.block2.item3}
@@ -90,27 +90,27 @@ const Index = () => {
                                     icon={<GiFarmer />}
                                     title={indexData.block2.item4}
                                     text={indexData.block2.item4d}
-                                    />
+                                />
                                 <Feature
                                     icon={<GiPillDrop />}
                                     title={indexData.block2.item5}
                                     text={indexData.block2.item5d}
-                                    />
+                                />
                                 <Feature
                                     icon={<GiDefenseSatellite />}
                                     title={indexData.block2.item6}
                                     text={indexData.block2.item6d}
-                                    />
+                                />
                                 <Feature
                                     icon={<GiRolledCloth />}
                                     title={indexData.block2.item7}
                                     text={indexData.block2.item7d}
-                                    />
+                                />
                                 <Feature
                                     icon={<GiChemicalDrop />}
                                     title={indexData.block2.item8}
                                     text={indexData.block2.item8d}
-                                    />
+                                />
                                 <Feature
                                     icon={<GiSodaCan />}
                                     title={indexData.block2.item9}
@@ -120,22 +120,22 @@ const Index = () => {
                                     icon={<GoLock />}
                                     title={indexData.block2.item10}
                                     text={indexData.block2.item10d}
-                                    />
+                                />
                                 <Feature
                                     icon={<GiAntiAircraftGun />}
                                     title={indexData.block2.item11}
                                     text={indexData.block2.item11d}
-                                    />
+                                />
                                 <Feature
                                     icon={<CiMedicalCross />}
                                     title={indexData.block2.item12}
                                     text={indexData.block2.item12d}
-                                    />
+                                />
                                 <Feature
                                     icon={<GiOilPump />}
                                     title={indexData.block2.item13}
                                     text={indexData.block2.item13d}
-                                    />
+                                />
                                 <Feature
                                     icon={<IoTrainOutline />}
                                     title={indexData.block2.item14}

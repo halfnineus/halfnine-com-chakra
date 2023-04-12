@@ -19,18 +19,18 @@ import {
 
 import indexdat from '../assets/index.json'
 
-import { FcApproval, FcServices, FcLock, } from 'react-icons/fc';
-import { IoPeopleOutline, IoRocketOutline, IoBulbOutline, } from 'react-icons/io5';
+import { FcApproval, FcServices, FcLock, } from 'react-icons/fc'
+import { IoPeopleOutline, IoRocketOutline, IoBulbOutline, } from 'react-icons/io5'
 import { ChevronRightIcon } from '@chakra-ui/icons'
 
-import { ReactElement } from 'react';
+import { ReactElement } from 'react'
 import { NextSeo } from 'next-seo'
 import Link from 'next/link'
-import { GiConqueror } from 'react-icons/gi';
-import { AiOutlineSetting } from 'react-icons/ai';
-import { MdOutlineContactSupport } from 'react-icons/md';
-import { RiLightbulbFlashLine, RiTeamFill } from 'react-icons/ri';
-import { HiOutlinePuzzlePiece } from 'react-icons/hi2';
+import { GiConqueror } from 'react-icons/gi'
+import { AiOutlineSetting } from 'react-icons/ai'
+import { MdOutlineContactSupport } from 'react-icons/md'
+import { RiLightbulbFlashLine, RiTeamFill } from 'react-icons/ri'
+import { HiOutlinePuzzlePiece } from 'react-icons/hi2'
 
 interface FeatureProps1 {
   title: string;

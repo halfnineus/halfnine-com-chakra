@@ -1,6 +1,6 @@
 import { Box, Heading, ListItem, OrderedList, Text } from "@chakra-ui/react"
 import { NextSeo } from "next-seo"
-import Link from "next/link";
+import Link from "next/link"
 
 const Privacy = () => {
     return (
