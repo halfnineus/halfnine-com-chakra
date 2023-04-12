@@ -1,21 +1,7 @@
-// import sqlite3 from 'sqlite3'
-// import { open } from 'sqlite'
-// import path from 'path'
-
-
-// you would have to import / invoke this in another file
 export default async function contactMail(req: any, res: any) {
 
-  // open({
-  //   filename: path.resolve("./databases/emails.db"),
-  //   driver: sqlite3.Database
-  // }).then((db) => {
-  //   db.exec('CREATE TABLE IF NOT EXISTS emaildb (col TEXT)')
-  //   db.exec('INSERT INTO emaildb VALUES ("test")')
-  // })
-
   if (req.method !== "POST") {
-    res.status(405).send(`Hi, I'd say nice try… but it wasn't`); // Incorrect request method
+    res.status(405).send(`Hi, I'd say nice try… but it wasn't`)
     return
   }
 
@@ -24,8 +10,8 @@ export default async function contactMail(req: any, res: any) {
   const sgMail = require('@sendgrid/mail')
   sgMail.setApiKey(process.env.SENDGRID_API_KEY)
   const msg = {
-    to: process.env.myemail,
-    from: process.env.donotreplyemail,
+    to: "diogamb@gmail.com",
+    from: "donotreply@ochoa.pro",
     subject: `Message From ${req.body.name}`,
     text: req.body.message + " | Sent from: " + req.body.email,
     html: `<div>${req.body.message}</div><p>Email: ${req.body.email}</p><p>Phone: ${req.body.phone}</p><p>Company: ${req.body.company}</p>`,
@@ -38,43 +24,47 @@ export default async function contactMail(req: any, res: any) {
     .catch((error: any) => {
       console.error(error)
     })
-
-
-
-  // let nodemailer = require('nodemailer')
-
-  // const transporter = nodemailer.createTransport({
-  //   host: process.env.smtpserver,
-  //   port: process.env.smtpport,
-  //   auth: {
-  //     user: process.env.donotreplyemail,
-  //     pass: process.env.password,
-  //   },
-  //   secure: true,
-  // });
-
-
-  // const mailData = {
-  //   from: process.env.donotreplyemail,
-  //   to: process.env.myemail,
-  //   subject: `Message From ${req.body.name}`,
-  //   text: req.body.message + " | Sent from: " + req.body.email,
-  //   html: `<div>${req.body.message}</div><p>Sent from: ${req.body.email}</p>`
-  // }
-
-  //transporter.sendMail(mailData)
-
-  // transporter.sendMail(mailData, function (err: any, info: any) {
-  //   if (err) {
-  //     console.log(err)
-  //   }
-  //   else {
-  //     console.log(info);
-  //   }
-  // })
-
-
-  // console.log(req.body)
   res.send('success')
 
 }
+
+
+// export default async function contactMail(req: any, res: any) {
+//   console.log('Request Method:', req.method);
+//   if (req.method === 'POST') {
+//     console.log('Request Body:', req.body);
+//     const { name, email, phone, company, message } = req.body;
+
+//     const nodemailer = require("nodemailer");
+    
+//     const transporter = nodemailer.createTransport({
+//       host: process.env.SMTP_SERVER,
+//       port: Number(process.env.SMTP_PORT),
+//       secure: false,
+//       auth: {
+//         user: process.env.DONOTREPLY_EMAIL,
+//         pass: process.env.PASSWORD,
+//       },
+//     });
+//     console.log('Transporter:', transporter);
+
+//     try {
+//       const info = await transporter.sendMail({
+//         from: process.env.DONOTREPLY_EMAIL,
+//         to: process.env.MY_EMAIL,
+//         subject: `New Message From ${name}`,
+//         text: `${message} | Sent from: ${email}`,
+//         html: `<div>${message}</div><p>Email: ${email}</p><p>Phone: ${phone}</p><p>Company: ${company}</p>`,
+//       });
+//       console.log('Email Info:', info);
+
+//       res.status(200).json({ status: 'success' });
+//     } catch (error) {
+//       console.error('Error:', error);
+//       res.status(500).json({ status: 'error', error });
+//     }
+//   } else {
+//     res.setHeader('Allow', ['POST']);
+//     res.status(405).end(`Method ${req.method} Not Allowed`);
+//   }
+// }

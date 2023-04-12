@@ -15,10 +15,6 @@
                 "heading": "Interested? We want to hear from you!",
                 "text": "Take the first step and reach out to us today."
             },
-            "block2": {
-                "heading": "Let's build something amazing together.",
-                "text": "Develop technology solutions, IT consulting & Digital transformation services."
-            },
             "form": {
                 "heading": "Contact form",
                 "name": "Name",
@@ -57,10 +53,6 @@
             "block1": {
                 "heading": "¿Interesado? ¡Queremos escuchar de ti!",
                 "text": "Da el primer paso y contáctanos hoy."
-            },
-            "block2": {
-                "heading": "Construyamos algo increíble juntos.",
-                "text": "Desarrolle soluciones tecnológicas, consultoría TI y servicios de transformación digital."
             },
             "form": {
                 "heading": "Formulario de contacto",

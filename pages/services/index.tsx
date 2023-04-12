@@ -121,13 +121,9 @@ const Index = () => {
                     />
                     <Box textAlign={'justify'} maxW={'container.xl'} px={{ base: '4', sm: '4', md: '4', lg: '4', xl: '0' }} mx="auto">
                         <Contactimg label={indexData.img} pexelsrc={'/img/xtra/pexels-photo-8439083.jpg'} />
-                        {/* <Heading color={'gray.800'} as={'h1'} size={'lg'} pt={6} pb={2}>{indexData.block1.heading}</Heading> */}
                         <Text pt={6} px={1} color={'gray.700'}>
                             {indexData.block1.text1}
                         </Text>
-                        {/* <Text pb={12} color={'gray.700'}>
-                                {indexData.block1.text2}
-                            </Text> */}
                         <Box py={20}>
                             <SimpleGrid
                                 columns={{ base: 1 }}

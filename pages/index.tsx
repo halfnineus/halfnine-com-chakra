@@ -1,5 +1,3 @@
-// Industrial Automation Development and Consulting services
-
 import React from 'react'
 import { useRouter } from "next/router"
 
@@ -51,7 +49,7 @@ const Feature2 = ({ text, icon, iconBg, refx }: FeatureProps2) => {
   return (
     <Link href={refx}>
       <Stack
-        _hover={{ textColor: 'blue.500', bg: 'blue.50', borderColor: 'blue.50', cursor: 'pointer' }}
+        _hover={{ textColor: 'blue.500',  borderColor: 'blue.100', cursor: 'pointer' }}
         role={'group'}
         direction={'row'}
         align={'center'}
@@ -260,7 +258,7 @@ const IndexPage = () => {
                       w="full"
                       rounded="3xl"
                       border={'1px'}
-                      _hover={{ shadow: 'md', borderColor: 'blue.500', transform: 'scale(1.005)' }}
+                      _hover={{ shadow: 'md', borderColor: 'blue.200', transform: 'scale(1.005)' }}
                       borderColor={'gray.400'}
                       src={'/img/index/diagram.jpg'}
                       alt="Basic IoT Enviroment"

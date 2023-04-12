@@ -24,6 +24,11 @@ module.exports = withBundleAnalyzer({
       //   permanent: false
       // },
       {
+        source: '/en/:path*',
+        destination: '/:path*',
+        permanent: false
+      },
+      {
         source: '/submit',
         destination: '/contact',
         permanent: false,

@@ -159,7 +159,6 @@ const INDEX = () => {
                                     w={'full'}
                                     justify={'center'}
                                     px={{ base: 4, md: 8 }}
-                                    // bgGradient={{ base: 'linear(to-r, blackAlpha.700, blackAlpha.500)', md: 'linear(to-r, blackAlpha.700, blackAlpha.300)' }}
                                     bgGradient={'linear(to-r, blackAlpha.200, blackAlpha.600)'}
                                     textAlign='center'
                                 >
