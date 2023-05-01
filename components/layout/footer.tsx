@@ -275,10 +275,52 @@ export default function SCFooter() {
                                             id="lang"
                                             name="lang"
                                             defaultValue={footerData.simpleform.valuedat}
+                                            onChange={(e) => {
+                                                const locale = e.target.value === "English (US)" ? "en" : "es";
+                                                router.push({ pathname, query }, asPath, { locale });
+                                            }}
                                         >
-                                            <option onClick={() => { router.push({ pathname, query }, asPath, { locale: 'en' }) }} onBlur={() => { router.push({ pathname, query }, asPath, { locale: 'en' }) }} value="English (US)">{`English (US)`}</option>
-                                            <option onClick={() => { router.push({ pathname, query }, asPath, { locale: 'es' }) }} onBlur={() => { router.push({ pathname, query }, asPath, { locale: 'es' }) }} value="Español (MX)">{`Español (MX)`}</option>
+                                            <option value="English (US)">{`English (US)`}</option>
+                                            <option value="Español (MX)">{`Español (MX)`}</option>
                                         </Select>
+                                        {/* <Select
+                                            w="124px"
+                                            flexShrink={0}
+                                            fontSize="inherit"
+                                            fontWeight="bold"
+                                            variant="unstyled"
+                                            id="lang"
+                                            name="lang"
+                                            defaultValue={footerData.simpleform.valuedat}
+                                            onChange={(e) => {
+                                                const locale = e.target.value === "English (US)" ? "en" : e.target.value === "Español (MX)" ? "es" : "hi";
+                                                router.push({ pathname, query }, asPath, { locale });
+                                            }}
+                                        >
+                                            <option value="English (US)">{`English (US)`}</option>
+                                            <option value="Español (MX)">{`Español (MX)`}</option>
+                                            <option value="हिन्दी (IN)">{`हिन्दी (IN)`}</option>
+                                        </Select> */}
+                                        {/* <Select
+                                            w="124px"
+                                            flexShrink={0}
+                                            fontSize="inherit"
+                                            fontWeight="bold"
+                                            variant="unstyled"
+                                            id="lang"
+                                            name="lang"
+                                            defaultValue={footerData.simpleform.valuedat}
+                                            onChange={(e) => {
+                                                const locale = e.target.value === "English (US)" ? "en" : e.target.value === "Español (MX)" ? "es" : e.target.value === "हिन्दी (IN)" ? "hi" : e.target.value === "Português (BR)" ? "pt" : "ja";
+                                                router.push({ pathname, query }, asPath, { locale });
+                                            }}
+                                        >
+                                            <option value="English (US)">{`English (US)`}</option>
+                                            <option value="Español (MX)">{`Español (MX)`}</option>
+                                            <option value="हिन्दी (IN)">{`हिन्दी (IN)`}</option>
+                                            <option value="Português (BR)">{`Português (BR)`}</option>
+                                            <option value="日本語 (JP)">{`日本語 (JP)`}</option>
+                                        </Select> */}
                                     </FormControl>
                                 </Flex>
                             </Container>

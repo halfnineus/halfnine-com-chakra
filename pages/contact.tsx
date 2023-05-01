@@ -3,6 +3,7 @@ import {
     Box,
     Heading,
     Text,
+    Tag,
     Button,
     VStack,
     Stack,
@@ -26,8 +27,12 @@ import {
     SimpleGrid,
 } from '@chakra-ui/react'
 
-import { MdCall, MdEmail, MdLocationOn, MdOutlineEmail, MdPhone, } from 'react-icons/md'
+import { MdOutlineEmail, MdPhone, } from 'react-icons/md'
+import { SlPhone } from 'react-icons/sl'
 import { BsPerson, BsBuilding } from 'react-icons/bs'
+import { BiMapPin } from 'react-icons/bi'
+import { RxCalendar } from 'react-icons/rx'
+import { IoMailOutline } from 'react-icons/io5'
 
 import { useState } from "react"
 import { NextSeo } from "next-seo"
@@ -36,6 +41,8 @@ import { FiExternalLink } from "react-icons/fi"
 
 import indexdat from "../assets/contact.json"
 import Link from 'next/link'
+import { Turnstile } from '@marsidev/react-turnstile'
+
 
 const INDEX = () => {
     const [name, setName] = useState('');
@@ -44,6 +51,13 @@ const INDEX = () => {
     const [phone, setPhone] = useState('');
     const [message, setMessage] = useState('');
     const [submitted, setSubmitted] = useState(false)
+
+    // const [cfTurnstileToken, setcfTurnstileToken] = useState(null);
+    const [turnstileSolved, setTurnstileSolved] = useState(false);
+    const onTurnstileSolved = (token: any) => {
+        setTurnstileSolved(true);
+        // setcfTurnstileToken(token);
+    };
 
     const toast = useToast({
         position: 'bottom-right',
@@ -60,7 +74,7 @@ const INDEX = () => {
             });
         } else {
             e.preventDefault();
-            const data = { name, email, message, phone, company };
+            const data = { name, email, message, phone, company/*, cfTurnstileToken */ };
             setSubmitted(true);
             fetch('/api/contact', {
                 method: 'POST',
@@ -72,6 +86,13 @@ const INDEX = () => {
             }).then((res) => {
                 if (res.status === 200) {
                     console.log('Response succeeded!');
+                    toast.closeAll();
+                    toast({
+                        description: 'Message sent! We will contact you shortly.',
+                        isClosable: true,
+                        status: 'success',
+                        containerStyle: { width: 'auto', maxWidth: '100%', paddingBottom: 'auto' }
+                    });
                 } else {
                     toast.closeAll();
                     toast({
@@ -81,18 +102,9 @@ const INDEX = () => {
                     });
                 }
                 setSubmitted(false);
-                toast.closeAll();
-                toast({
-                    description: 'Message sent! We will contact you shortly.',
-                    isClosable: true,
-                    status: 'success',
-                    containerStyle: { width: 'auto', maxWidth: '100%', paddingBottom: 'auto' }
-                });
             });
         }
     };
-
-
 
     const [refECV, setrefECV] = useState('');
     const [prettierECV, setprettierECV] = useState('');
@@ -271,16 +283,28 @@ const INDEX = () => {
                                             />
                                         </FormControl>
                                         <FormControl>
-                                            <Button
-                                                colorScheme={"blue"}
-                                                type={'submit'}
-                                                isLoading={submitted}
-                                                loadingText={'Submitting'}
-                                                _hover={{}}
-                                                onClick={(e: any) => { handleSubmit(e); }}
-                                            >
-                                                {indexData.form.submit}
-                                            </Button>
+                                            {!turnstileSolved && (
+                                                <>
+                                                    <Text pl={1} fontSize={'sm'} pb={1} mt={-2} color={'gray.600'}>
+                                                        Solve the Challenge to Submit the Form
+                                                    </Text>
+                                                    <Turnstile siteKey='0x4AAAAAAAEUIZr0ccnKjH16' onSuccess={onTurnstileSolved} />
+                                                </>
+                                            )}
+                                            {turnstileSolved && (
+                                                <Button
+                                                    colorScheme={"blue"}
+                                                    type={'submit'}
+                                                    isLoading={submitted}
+                                                    loadingText={'Submitting'}
+                                                    _hover={{}}
+                                                    onClick={(e: any) => {
+                                                        handleSubmit(e);
+                                                    }}
+                                                >
+                                                    {indexData.form.submit}
+                                                </Button>
+                                            )}
                                         </FormControl>
                                     </VStack>
                                 </form>
@@ -288,7 +312,7 @@ const INDEX = () => {
 
                             <Flex pt={5} pb={2} align="center">
                                 <Divider />
-                                <Heading fontSize={{ base: 'xl', md: '2xl' }} px="4">Or</Heading>
+                                <Heading fontSize={{ base: 'xl', md: '2xl' }} px="4">{indexData.alt}</Heading>
                                 <Divider />
                             </Flex>
 
@@ -307,7 +331,7 @@ const INDEX = () => {
                                     minH={'10'}
                                     variant="ghost"
                                     _hover={{ color: 'blue.500', bg: 'blackAlpha.100' }}
-                                    leftIcon={<MdEmail color={'black'} size="24px" />}
+                                    leftIcon={<IoMailOutline color={'black'} size="24px" />}
                                 >
                                     {indexData.mailblock.title}
                                 </Button>
@@ -325,7 +349,7 @@ const INDEX = () => {
                                     minH={'10'}
                                     variant="ghost"
                                     _hover={{ color: 'blue.500', bg: 'blackAlpha.100' }}
-                                    leftIcon={<MdCall color={'black'} size="24px" />}
+                                    leftIcon={<SlPhone color={'black'} size="24px" />}
                                 >
                                     {indexData.callblock.title}
                                 </Button>
@@ -343,9 +367,27 @@ const INDEX = () => {
                                     minH={'10'}
                                     variant="ghost"
                                     _hover={{ color: 'blue.500', bg: 'blackAlpha.100' }}
-                                    leftIcon={<MdLocationOn color={'black'} size="24px" />}
+                                    leftIcon={<BiMapPin color={'black'} size="24px" />}
                                 >
                                     {indexData.mapblock.title}
+                                </Button>
+                                <Button
+                                    onClick={(e: any) => {
+                                        setrefECV("https://meetings.hubspot.com/dan-ochoa");
+                                        setprettierECV("hubspot.com");
+                                        setecvReq(indexData.calblock.req);
+                                        setecvTarget(`_blank`);
+                                        onOpen()
+                                    }}
+                                    size="lg"
+                                    height="auto"
+                                    width="auto"
+                                    minH={'10'}
+                                    variant="ghost"
+                                    _hover={{ color: 'blue.500', bg: 'blackAlpha.100' }}
+                                    leftIcon={<RxCalendar color={'black'} size="24px" />}
+                                >
+                                    {indexData.calblock.title}
                                 </Button>
                             </Center>
                         </Box>

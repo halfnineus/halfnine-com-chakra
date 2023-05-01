@@ -9,7 +9,7 @@
             "modal": {
                 "modaltitle": "External Application",
                 "close": "Close",
-                "open": "Open App"
+                "open": "Open Link"
             },
             "block1": {
                 "heading": "Interested? We want to hear from you!",
@@ -24,6 +24,7 @@
                 "message": "Message",
                 "submit": "Send Message"
             },
+            "alt": "Alternatively",
             "mailblock": {
                 "title": "Email Us",
                 "mref": "mailto:contact@halfnine.com",
@@ -37,6 +38,10 @@
             "mapblock": {
                 "title": "Visit Us",
                 "req": "You are about to open maps at: "
+            },
+            "calblock": {
+                "title": "Meet Us",
+                "req": "You are about to open a link at: "
             }
         },
         {
@@ -48,7 +53,7 @@
             "modal": {
                 "modaltitle": "Aplicación Externa",
                 "close": "Cerrar",
-                "open": "Abrir App"
+                "open": "Abrir Enlace"
             },
             "block1": {
                 "heading": "¿Interesado? ¡Queremos escuchar de ti!",
@@ -63,19 +68,24 @@
                 "message": "Mensaje",
                 "submit": "Enviar mensaje"
             },
+            "alt": "Alternativamente",
             "mailblock": {
                 "title": "Correo Electrónico",
                 "mref": "mailto:contacto@halfnine.com",
                 "visiblemref": "contacto@halfnine.com",
-                "req": "Envíanos un correo a: "
+                "req": "Estas por abrir un enlace externo: "
             },
             "callblock": {
                 "title": "Márcanos",
-                "req": "Márcanos al siguiente número: "
+                "req": "Estas por abrir un enlace externo: "
             },
             "mapblock": {
                 "title": "Visítanos",
-                "req": "Abre mapas al siguiente link: "
+                "req": "Estas por abrir un enlace externo: "
+            },
+            "calblock": {
+                "title": "Conócenos",
+                "req": "Estas por abrir un enlace externo: "
             }
         }
     ]
