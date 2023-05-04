@@ -3,38 +3,32 @@
     {
       "locale": "en",
       "head": {
-        "title": "HalfNine - Tailored Automation Solutions for Industrial Processes",
-        "description": "Customized automation solutions to optimize industrial processes for maximum efficiency and productivity."
+        "title": "HalfNine - Information Technology Development Company",
+        "description": "Our team provides reliable, scalable and secure software solutions for any Operating System, browser and device. Contact us for custom IT solutions that perfectly fit your needs."
       },
       "block1": {
-        "h1_1": "Industrial Automation",
-        "h1_2": "Development & Consulting",
-        "txt_1": "Tailored Automation Solutions for Efficient Industrial Processes.",
-        "button": "Let's Talk!"
+        "h1_1": "INFORMATION TECHNOLOGY DEVELOPMENT",
+        "h1_2": "FOR YOUR DIGITAL SUCCESS",
+        "txt_1": "Our digital solutions are powerful and flexible, meeting the demands of the present while unlocking future potential for countless users and businesses."
       },
       "block2": {
-        "h2_1": "Transform your systems with",
-        "h2_2": "customized technology",
-        "txt": "Improve your products and services with the power of a digital transformation through",
-        "txturl": "Industrial Automation",
-        "button": "Email us"
-      },
-      "block3": {
-        "f1t": "Usability",
-        "f1b": "Applications can quickly become very complex, and modifying them or educating users can be costly. However, replicating the use of proven technology stacks and frameworks enables us to deliver a simple experience for a complicated system.",
-        "f2t": "Compliance",
-        "f2b": "When developing an application, there are several regulations that you may need to comply with, (GDPR, CCPA, AICPA SOC 2, HIPAA, CCPA, PCI, ISO/IEC 27001, etc... ). Failure to comply with these regulations can result in severe fines. We ensure that technology complies with all necessary regulations.",
-        "f3t": "Security",
-        "f3b": "More than fifty vulnerabilities are reported every day. Therefore, it's crucial to keep IT assets updated, secure accounts from data breaches, and protect users from social engineering. Having a security-conscious team of developers is essential for any application."
-      },
-      "block4": {
-        "title": "Unleash Your True Potential!",
-        "description": "Connect technology with your goals, and take your business to new heights by exploring what is possible.",
-        "srvc1": "Development Services",
+        "title": "Unleash Your Potential",
+        "description": "Through integrating technology with your objectives, you can discover new possibilities and elevate your business to unprecedented levels.",
+        "srvc1": "Software Development",
         "srvc2": "Digital Transformation",
         "srvc3": "Project Consultation"
       },
+      "block3": {
+        "title": "Rest Assured With Us",
+        "f1t": "Usability",
+        "f1b": "Applications can quickly become very complex, and modifying them or educating users can be costly. However, replicating the use of proven technology stacks and frameworks enables us to deliver a simple experience for a complicated system.",
+        "f2t": "Compliance",
+        "f2b": "When developing an application, there are several regulations that you may need to comply with, (GDPR, CCPA, AICPA SOC 2, HIPAA, CCPA, PCI, ISO/IEC 27001, etc...). Failure to comply with these regulations can result in severe fines. We ensure that technology complies with all necessary regulations.",
+        "f3t": "Security",
+        "f3b": "More than fifty vulnerabilities are reported every day. Therefore, it's crucial to keep IT assets updated, secure accounts from data breaches, and protect users from social engineering. Having a security-conscious team of developers is essential for any application."
+      },
       "features": {
+        "title": "We Are Passionate For",
         "f1t": "Teamwork",
         "f1d": "Collaborating with a shared vision builds a foundation for creativity, efficiency, and outstanding results in teamwork.",
         "f2t": "Innovation",
@@ -48,23 +42,23 @@
     {
       "locale": "es",
       "head": {
-        "title": "HalfNine - Soluciones de Automatización para Procesos Industriales",
-        "description": "Soluciones de automatización personalizadas para optimizar los procesos industriales para lograr la máxima eficiencia y productividad."
+        "title": "HalfNine - Empresa De Desarrollo De Tecnología De La Información",
+        "description": "Nuestro equipo brinda soluciones de software confiables, escalables y seguras para cualquier sistema operativo, navegador y dispositivo. Póngase en contacto con nosotros para obtener soluciones de TI personalizadas que se adapten perfectamente a sus necesidades."
       },
       "block1": {
-        "h1_1": "Automatización Industrial",
-        "h1_2": "Desarrollo & Consultoría",
-        "txt_1": "Soluciones de Automatización Personalizadas para Procesos Industriales Eficientes.",
-        "button": "Hablemos!"
+        "h1_1": "DESARROLLO DE TECNOLOGÍAS DE LA INFORMACIÓN",
+        "h1_2": "PARA SU ÉXITO DIGITAL",
+        "txt_1": "Nuestras soluciones digitales son poderosas y flexibles, satisfacen las demandas del presente y desbloquean el potencial futuro para innumerables usuarios y empresas."
       },
       "block2": {
-        "h2_1": "Transforme sus sistemas con",
-        "h2_2": "tecnología customizada",
-        "txt": "Mejore sus productos y servicios con una transformación digital impulsada por",
-        "txturl": "Automatización Industrial",
-        "button": "Envíanos un correo electrónico"
+        "title": "Libera Tu Potencial",
+        "description": "Mediante la integración de la tecnología con sus objetivos, puede descubrir nuevas posibilidades y elevar su negocio a niveles sin precedentes.",
+        "srvc1": "Desarrollo de software",
+        "srvc2": "Transformación Digital",
+        "srvc3": "Consulta de proyectos"
       },
       "block3": {
+        "title": "Sin Preocupaciones Con Nosotros",
         "f1t": "Usabilidad",
         "f1b": "Las aplicaciones pueden volverse muy complejas rápidamente, y modificarlas o educar a los usuarios puede resultar costoso. Sin embargo, replicar el uso de pilas y marcos de tecnología probados nos permite ofrecer una experiencia simple para un sistema complicado.",
         "f2t": "Cumplimiento",
@@ -72,14 +66,8 @@
         "f3t": "Seguridad",
         "f3b": "Cada día se reportan más de cincuenta vulnerabilidades. Por lo tanto, es crucial mantener actualizados los activos de TI, asegurar las cuentas contra filtraciones de datos y proteger a los usuarios de la ingeniería social. Tener un equipo de desarrolladores consciente de la seguridad es esencial para cualquier aplicación."
       },
-      "block4": {
-        "title": "¡Libera tu verdadero potencial!",
-        "description": "Conecte la tecnología con sus objetivos y lleve su negocio a nuevas alturas explorando lo que es posible.",
-        "srvc1": "Servicios de desarrollo",
-        "srvc2": "Transformación Digital",
-        "srvc3": "Consulta de proyectos"
-      },
       "features": {
+        "title": "Somos Apasionados Por",
         "f1t": "Colaboración",
         "f1d": "Colaborar con una visión compartida crea una base para la creatividad, eficiencia y resultados sobresalientes.",
         "f2t": "Innovación",

@@ -20,6 +20,8 @@ import {
     ChevronRightIcon,
 } from '@chakra-ui/icons'
 
+import { useState } from 'react'
+
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 
@@ -36,47 +38,77 @@ export default function WithSubnavigation() {
     )
     const { locale } = useRouter()
 
+    const [scrollPosition, setScrollPosition] = useState(0);
+    const handleScroll = () => {
+        const position = window.pageYOffset;
+        setScrollPosition(position);
+    };
+
+    // window.addEventListener('scroll', handleScroll, { passive: true });
+    if (typeof window !== 'undefined') {
+        window.addEventListener('scroll', handleScroll, { passive: true });
+    }
+
     return (
         <>
-            <Flex
+            <Box w={'full'} position="fixed" bg={'white'}
+                zIndex={999}
+                boxShadow={
+                    scrollPosition > 20
+                        ? mode('0px 4px 20px rgba(0,0,0,0.05)', '0px 4px 20px rgba(255,255,255,0.05)')
+                        : 'none'
+                }
+            >
+                <Flex
+                    maxW={'container.xl'}
+                    minH={{ base: '60px', md: '80px' }}
+                    align="center"
+                    mx={'auto'}
+                    px={{ base: '4', sm: '4', md: '4', lg: '4', xl: 0 }}
+                    top={0}
+                    width="100%"
+                    // zIndex={1000}
+                >
+                    {/* <Flex
                 maxW={'container.xl'}
                 minH={{ base: '60px', md: '80px' }}
                 align="center"
                 mx={'auto'}
                 px={{ base: '4', sm: '4', md: '4', lg: '4', xl: 0 }}
-            >
-                <IconButton
-                    display={{ base: 'flex', md: 'none' }}
-                    onClick={onToggle}
-                    icon={
-                        isOpen ? <CloseIcon w={3} h={3} /> : <HamburgerIcon w={5} h={5} />
-                    }
-                    variant={'ghost'}
-                    aria-label={'Toggle Navigation'}
-                />
-                <Flex flex={{ base: 1 }} justify={{ base: 'center', md: 'start' }}>
-                    <Link href={'/'}>
-                        <Icon fontSize={{ base: 120, md: 180 }} maxH={'40px'} viewBox='0 0 1912 280'>
-                            <path fill="#231f20" d="M54 0v116h134V0h54v280h-54V164H54v116H0V0h54ZM274 280 383 0h55l112 280h-56l-22-57H351l-21 57h-56Zm94-104h86L410 63l-42 113Zm226 104-25-62V0h54v230h133v50H594ZM996 0v50H845v66h135v48H845v116h-54V0h205ZM1086 0l136 198V0h52v280h-52L1085 82v198h-52V0h53ZM1322 280V0h54v280h-54ZM1476 0l136 198V0h52v280h-52L1475 82v198h-52V0h53ZM1711 230V0h201v50h-147v66h131v48h-131v66h147v50h-172l-29-50Z" />
-                        </Icon>
-                    </Link>
-                    <Box ml={{ base: 6, sm: 0 }} ></Box>
-                    <Flex display={{ base: 'none', md: 'flex' }} ml={12}>
-                        <DesktopNav />
+            > */}
+                    <IconButton
+                        display={{ base: 'flex', md: 'none' }}
+                        onClick={onToggle}
+                        icon={
+                            isOpen ? <CloseIcon w={3} h={3} /> : <HamburgerIcon w={5} h={5} />
+                        }
+                        variant={'ghost'}
+                        aria-label={'Toggle Navigation'}
+                    />
+                    <Flex flex={{ base: 1 }} justify={{ base: 'center', md: 'start' }}>
+                        <Link href={'/'}>
+                            <Icon fontSize={{ base: 120, md: 180 }} maxH={'40px'} viewBox='0 0 1912 280'>
+                                <path fill="#231f20" d="M54 0v116h134V0h54v280h-54V164H54v116H0V0h54ZM274 280 383 0h55l112 280h-56l-22-57H351l-21 57h-56Zm94-104h86L410 63l-42 113Zm226 104-25-62V0h54v230h133v50H594ZM996 0v50H845v66h135v48H845v116h-54V0h205ZM1086 0l136 198V0h52v280h-52L1085 82v198h-52V0h53ZM1322 280V0h54v280h-54ZM1476 0l136 198V0h52v280h-52L1475 82v198h-52V0h53ZM1711 230V0h201v50h-147v66h131v48h-131v66h147v50h-172l-29-50Z" />
+                            </Icon>
+                        </Link>
+                        <Box ml={{ base: 6, sm: 0 }} ></Box>
+                        <Flex display={{ base: 'none', md: 'flex' }} ml={12}>
+                            <DesktopNav />
+                        </Flex>
                     </Flex>
+                    {ContactItem.filter(p => p.locale === locale).map((contactItem) => (
+                        <Link key={contactItem.label} href={'/contact'} >
+                            <Button
+                                display={{ base: 'none', sm: 'block' }}
+                                colorScheme={buttonvariant}
+                                _focus={{ shadow: 'outline' }}
+                            >
+                                {contactItem.label}
+                            </Button>
+                        </Link>
+                    ))}
                 </Flex>
-                {ContactItem.filter(p => p.locale === locale).map((contactItem) => (
-                    <Link key={contactItem.label} href={'/contact'} >
-                        <Button
-                            display={{ base: 'none', sm: 'block' }}
-                            colorScheme={buttonvariant}
-                            _focus={{ shadow: 'outline' }}
-                        >
-                            {contactItem.label}
-                        </Button>
-                    </Link>
-                ))}
-            </Flex>
+            </Box>
             <Collapse onClick={onToggle} in={isOpen} animateOpacity>
                 <MobileNav />
             </Collapse>
@@ -143,12 +175,12 @@ const DesktopSubNav = ({ label, href, subLabel }: NavItem) => {
     return (
         <Link href={href}>
             <Stack
-                bg={mode("gray.50", 'gray.900')}
+                bg={mode("#fbfbfb", 'gray.900')}
                 role={'group'}
                 py={2}
                 px={3}
                 rounded={'md'}
-                _hover={{ bg: mode('gray.50', 'blue.900') }}
+                _hover={{ bg: mode('#fbfbfb', 'blue.900') }}
                 direction={'row'}
                 align={'center'}
             >

@@ -27,7 +27,7 @@ export default function Custom404() {
             <Text fontSize="18px" mt={3} mb={2}>
               Sorry about that
             </Text>
-            <Text color={'gray.500'} mb={6}>
+            <Text color={'#gray.500'} mb={6}>
               The page you&apos;re looking for does not seem to be available
             </Text>
 

@@ -88,7 +88,7 @@ const Feature2 = (props: any) => {
                 >
                     {props.title}
                 </Text>
-                <Text mt={2} color="gray.500">
+                <Text mt={2} color="#gray.500">
                     {props.children}
                 </Text>
             </Box>
@@ -124,7 +124,7 @@ const Index = () => {
                         <Text pt={6} px={1} color={'gray.700'}>
                             {indexData.block1.text1}
                         </Text>
-                        <Box py={20}>
+                        {/* <Box py={20}>
                             <SimpleGrid
                                 columns={{ base: 1 }}
                                 spacing={4}
@@ -154,11 +154,11 @@ const Index = () => {
                                     {indexData.block2.item3d}
                                 </Feature>
                             </SimpleGrid>
-                        </Box>
+                        </Box> */}
                         <Box height={'3rem'} />
                     </Box>
 
-                    <Box bg={"gray.50"}>
+                    <Box bg={"#fbfbfb"}>
                         <Box maxW={'container.xl'} px={{ base: '4', sm: '4', md: '4', lg: '4', xl: 0 }} py={20} mx="auto" id="development">
                             <Box pb={6} alignSelf="start">
                                 <Heading
@@ -355,7 +355,7 @@ const Index = () => {
                         </SimpleGrid>
                     </Box>
 
-                    <Box bg={'gray.50'}>
+                    <Box bg={'#fbfbfb'}>
                         <Box maxW={'container.xl'} px={{ base: '4', sm: '4', md: '4', lg: '4', xl: 0 }} py={20} mx="auto" id="consultation">
                             <Box pb={6} alignSelf="start">
                                 <Heading

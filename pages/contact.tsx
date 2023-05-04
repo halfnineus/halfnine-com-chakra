@@ -119,6 +119,7 @@ const INDEX = () => {
                     <>
                         <NextSeo
                             noindex={true}
+                            nofollow={true}
                             title={indexData.head.title}
                             description={indexData.head.description}
                             canonical="https://www.halfnine.com/contact"
@@ -196,7 +197,7 @@ const INDEX = () => {
                             <Divider mt={5} mb={5} />
 
                             <Box
-                                bg={'gray.50'}
+                                bg={'#fbfbfb'}
                                 borderRadius='xl'
                                 px={{ base: 5, sm: 5, md: 5, lg: 10 }}
                                 pb={{ base: 5, sm: 5, md: 5, lg: 10 }}

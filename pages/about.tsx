@@ -101,13 +101,13 @@ const FeatureBlog = (children: any) => {
             fontFamily={'body'}>
             {children.title}
           </Heading>
-          <Text overflow={'hidden'} textOverflow={'ellipsis'} noOfLines={2} color={'gray.500'}>
+          <Text overflow={'hidden'} textOverflow={'ellipsis'} noOfLines={2} color={'#gray.500'}>
             {children.text}
           </Text>
         </Stack>
         <Stack mt={2} direction={'row'} spacing={4} align={'center'}>
           <Stack direction={'column'} spacing={0} fontSize={'sm'}>
-            <Text color={'gray.500'}>{`Created on: `}{children.date}</Text>
+            <Text color={'#gray.500'}>{`Created on: `}{children.date}</Text>
           </Stack>
         </Stack>
       </Box>
@@ -145,7 +145,7 @@ const IndexAbout = () => {
                 <Text textAlign={'justify'}>{aboutData.block1.i1}</Text>
               </Box>
             </Box>
-            <Box bg={'gray.50'}>
+            <Box bg={'#fbfbfb'}>
               <Box maxW={'container.xl'} px={{ base: '4', sm: '4', md: '4', lg: '4', xl: '0' }} mx="auto">
                 <SimpleGrid
                   py={20}

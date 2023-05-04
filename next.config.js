@@ -20,7 +20,7 @@ module.exports = withBundleAnalyzer({
     return [
       // {
       //   source: '/es/:path*',
-      //   destination: '/es-MX/:path*',
+      //   destination: '/es_MX/:path*',
       //   permanent: false
       // },
       {
@@ -28,6 +28,11 @@ module.exports = withBundleAnalyzer({
         destination: '/:path*',
         permanent: false
       },
+      // {
+      //   source: '/en-US/:path*',
+      //   destination: '/:path*',
+      //   permanent: false
+      // },
       {
         source: '/submit',
         destination: '/contact',
