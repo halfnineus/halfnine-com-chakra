@@ -15,16 +15,17 @@ import {
 } from '@chakra-ui/react'
 import indexdat from '../assets/index.json'
 
-import { FcApproval, FcServices, FcLock, } from 'react-icons/fc'
-import { IoPeopleOutline, IoRocketOutline, IoBulbOutline, } from 'react-icons/io5'
-import { ChevronRightIcon } from '@chakra-ui/icons'
-
 import { ReactElement } from 'react'
 import { NextSeo } from 'next-seo'
 import Link from 'next/link'
+
 import { GiConqueror } from 'react-icons/gi'
 import { RiLightbulbFlashLine, RiTeamFill } from 'react-icons/ri'
 import { HiOutlinePuzzlePiece } from 'react-icons/hi2'
+import { FcApproval, FcServices, FcLock, } from 'react-icons/fc'
+import { IoPeopleOutline, IoRocketOutline, IoBulbOutline, } from 'react-icons/io5'
+import { ChevronRightIcon } from '@chakra-ui/icons'
+import { FadeInBox } from '../components'
 
 interface FeatureProps1 {
   title: string;
@@ -79,13 +80,13 @@ const Feature2 = ({ text, icon, iconBg, refx }: FeatureProps2) => {
   );
 };
 
-interface FeatureiProps {
+interface FeatureB5Props {
   icon: React.ReactElement
   title: string
   children: React.ReactNode
 }
 
-export const Featurei = ({ title, children, icon }: FeatureiProps) => {
+export const FeatureB5 = ({ title, children, icon }: FeatureB5Props) => {
   return (
     <Box>
       <Flex>
@@ -127,6 +128,7 @@ const Feature1 = ({ title, text, icon }: FeatureProps1) => {
   );
 };
 
+
 const IndexPage = () => {
   const { locale } = useRouter()
   return (
@@ -151,11 +153,9 @@ const IndexPage = () => {
               }}
             />
 
-            {/* <Box maxW={'container.xl'} px={{ base: '4', sm: '4', md: '4', lg: '4', xl: 0 }} pt={4} mx="auto"></Box> */}
-
             <Box maxW={'1520px'} px={{ base: '4', sm: '4', md: '4', lg: '4', xl: 0 }} pt={4} mx="auto">
               <Box position={'relative'}>
-                <Image alt='Background Image' src={'/img/index/indxbg.png'} position="absolute" opacity={0.03} zIndex={-1} mx={-4} />
+                <Image alt='Background Image' src={'/img/index/indxbg.png'} loading={'lazy'} position="absolute" opacity={0.03} zIndex={-1} mx={-4} />
               </Box>
               <Box maxW={'container.xl'} mx={'auto'} pt={8}>
                 <Box textAlign={"center"} >
@@ -177,7 +177,7 @@ const IndexPage = () => {
 
             <Box minH={{ base: '4rem', md: '8rem' }} />
 
-            <Box bg={'#fbfbfb'} py={{ base: 16, md: 20 }}>
+            <FadeInBox fadeDirection='down' bg={'#fbfbfb'} py={{ base: 16, md: 20 }}>
               <Box maxW={'container.xl'} px={{ base: '4', sm: '4', md: '4', lg: '4', xl: 0 }} mx="auto">
                 <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10}>
                   <Center>
@@ -231,9 +231,9 @@ const IndexPage = () => {
                   </Flex>
                 </SimpleGrid>
               </Box>
-            </Box>
+            </FadeInBox>
 
-            <Box py={{ base: 16, md: 20 }} maxW={'container.xl'} px={{ base: '4', sm: '4', md: '4', lg: '4', xl: 0 }} mx="auto">
+            <FadeInBox fadeDirection='down' py={{ base: 16, md: 20 }} maxW={'container.xl'} px={{ base: '4', sm: '4', md: '4', lg: '4', xl: 0 }} mx="auto">
               <Flex pb={4} direction="column-reverse">
                 <Box
                   as="hr"
@@ -261,9 +261,9 @@ const IndexPage = () => {
                   text={indexData.block3.f3b}
                 />
               </SimpleGrid>
-            </Box>
+            </FadeInBox>
 
-            <Box maxW={'container.xl'} px={{ base: '4', sm: '4', md: '4', lg: '4', xl: 0 }} mx="auto" py={{ base: 16, md: 20 }}>
+            <FadeInBox fadeDirection='down' maxW={'container.xl'} px={{ base: '4', sm: '4', md: '4', lg: '4', xl: 0 }} mx="auto" py={{ base: 16, md: 20 }}>
               <Flex pb={4} direction="column-reverse">
                 <Box
                   as="hr"
@@ -278,20 +278,20 @@ const IndexPage = () => {
                 columns={{ base: 1, md: 2, lg: 2 }}
                 spacing={16}
               >
-                <Featurei icon={<RiTeamFill />} title={indexData.features.f1t}>
+                <FeatureB5 icon={<RiTeamFill />} title={indexData.features.f1t}>
                   {indexData.features.f1d}
-                </Featurei>
-                <Featurei icon={<RiLightbulbFlashLine />} title={indexData.features.f2t}>
+                </FeatureB5>
+                <FeatureB5 icon={<RiLightbulbFlashLine />} title={indexData.features.f2t}>
                   {indexData.features.f2d}
-                </Featurei>
-                <Featurei icon={<GiConqueror />} title={indexData.features.f3t}>
+                </FeatureB5>
+                <FeatureB5 icon={<GiConqueror />} title={indexData.features.f3t}>
                   {indexData.features.f3d}
-                </Featurei>
-                <Featurei icon={<HiOutlinePuzzlePiece />} title={indexData.features.f4t}>
+                </FeatureB5>
+                <FeatureB5 icon={<HiOutlinePuzzlePiece />} title={indexData.features.f4t}>
                   {indexData.features.f4d}
-                </Featurei>
+                </FeatureB5>
               </SimpleGrid>
-            </Box >
+            </FadeInBox>
 
           </>
         )
