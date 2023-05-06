@@ -25,7 +25,7 @@ import { HiOutlinePuzzlePiece } from 'react-icons/hi2'
 import { FcApproval, FcServices, FcLock, } from 'react-icons/fc'
 import { IoPeopleOutline, IoRocketOutline, IoBulbOutline, } from 'react-icons/io5'
 import { ChevronRightIcon } from '@chakra-ui/icons'
-import { FadeInBox } from '../components'
+import { DevPractices } from '../components'
 
 interface FeatureProps1 {
   title: string;
@@ -177,63 +177,13 @@ const IndexPage = () => {
 
             <Box minH={{ base: '4rem', md: '8rem' }} />
 
-            <FadeInBox fadeDirection='down' bg={'#fbfbfb'} py={{ base: 16, md: 20 }}>
+            <Box bg={'#fbfbfb'} py={{ base: 16, md: 24 }}>
               <Box maxW={'container.xl'} px={{ base: '4', sm: '4', md: '4', lg: '4', xl: 0 }} mx="auto">
-                <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10}>
-                  <Center>
-                    <Stack spacing={4}>
-                      <Flex direction="column-reverse">
-                        <Box
-                          as="hr"
-                          bg="blue.500"
-                          h="3px"
-                          w="64px"
-                          my={1}
-                        />
-                        <Heading>{indexData.block2.title}</Heading>
-                      </Flex>
-                      <Text color={'#gray.500'} fontSize={'lg'}>
-                        {indexData.block2.description}
-                      </Text>
-                      <Stack
-                        spacing={2}
-                        divider={<StackDivider borderColor={'gray.100'} />}>
-                        <Feature2
-                          refx={'/services#development'}
-                          icon={<Icon as={IoPeopleOutline} color={'blue.600'} w={5} h={5} />}
-                          iconBg={'blue.100'}
-                          text={indexData.block2.srvc1}
-                        />
-                        <Feature2
-                          refx={'/services#digitalization'}
-                          icon={<Icon as={IoRocketOutline} color={'green.600'} w={5} h={5} />}
-                          iconBg={'green.100'}
-                          text={indexData.block2.srvc2}
-                        />
-                        <Feature2
-                          refx={'/services#consultation'}
-                          icon={<Icon as={IoBulbOutline} color={'orange.600'} w={5} h={5} />}
-                          iconBg={'orange.100'}
-                          text={indexData.block2.srvc3}
-                        />
-                      </Stack>
-                    </Stack>
-                  </Center>
-                  <Flex>
-                    <Image
-                      rounded={"2xl"}
-                      border='1px'
-                      borderColor={'gray.300'}
-                      alt={'feature image'}
-                      src={'/img/index/wpg.png'}
-                      objectFit={'cover'}
-                    />
-                  </Flex>
-                </SimpleGrid>
+                <DevPractices />
               </Box>
-            </FadeInBox>
+            </Box>
 
-            <FadeInBox fadeDirection='down' py={{ base: 16, md: 20 }} maxW={'container.xl'} px={{ base: '4', sm: '4', md: '4', lg: '4', xl: 0 }} mx="auto">
+            <Box py={{ base: 16, md: 24 }} maxW={'container.xl'} px={{ base: '4', sm: '4', md: '4', lg: '4', xl: 0 }} mx="auto">
               <Flex pb={4} direction="column-reverse">
                 <Box
                   as="hr"
@@ -261,9 +211,54 @@ const IndexPage = () => {
                   text={indexData.block3.f3b}
                 />
               </SimpleGrid>
-            </FadeInBox>
+            </Box>
 
-            <FadeInBox fadeDirection='down' maxW={'container.xl'} px={{ base: '4', sm: '4', md: '4', lg: '4', xl: 0 }} mx="auto" py={{ base: 16, md: 20 }}>
+            <Box bg={'#fbfbfb'} py={{ base: 16, md: 24 }}>
+              <Box maxW={'container.xl'} px={{ base: '4', sm: '4', md: '4', lg: '4', xl: 0 }} textAlign={'center'} mx={'auto'}>
+                <Stack spacing={4} maxW={'container.md'} mx={'auto'}>
+                  <Flex direction="column-reverse">
+                    <Center>
+                      <Box
+                        as="hr"
+                        bg="blue.500"
+                        h="4px"
+                        w="128px"
+                        mt={2}
+                        opacity={'0.9'}
+                      />
+                    </Center>
+                    <Heading>{indexData.block4.title}</Heading>
+                  </Flex>
+                  <Text fontSize={'lg'} color={"gray.700"}>
+                    {indexData.block4.description}
+                  </Text>
+                  <Stack
+                    spacing={2}
+                    divider={<StackDivider borderColor={'gray.100'} />}>
+                    <Feature2
+                      refx={'/services#development'}
+                      icon={<Icon as={IoPeopleOutline} color={'blue.600'} w={5} h={5} />}
+                      iconBg={'blue.100'}
+                      text={indexData.block4.srvc1}
+                    />
+                    <Feature2
+                      refx={'/services#digitalization'}
+                      icon={<Icon as={IoRocketOutline} color={'green.600'} w={5} h={5} />}
+                      iconBg={'green.100'}
+                      text={indexData.block4.srvc2}
+                    />
+                    <Feature2
+                      refx={'/services#consultation'}
+                      icon={<Icon as={IoBulbOutline} color={'orange.600'} w={5} h={5} />}
+                      iconBg={'orange.100'}
+                      text={indexData.block4.srvc3}
+                    />
+                  </Stack>
+                </Stack>
+              </Box>
+            </Box>
+
+            <Box maxW={'container.xl'} px={{ base: '4', sm: '4', md: '4', lg: '4', xl: 0 }} mx="auto" py={{ base: 16, md: 24 }}>
               <Flex pb={4} direction="column-reverse">
                 <Box
                   as="hr"
@@ -291,7 +286,7 @@ const IndexPage = () => {
                   {indexData.features.f4d}
                 </FeatureB5>
               </SimpleGrid>
-            </FadeInBox>
+            </Box>
 
           </>
         )

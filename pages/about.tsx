@@ -101,13 +101,13 @@ const FeatureBlog = (children: any) => {
             fontFamily={'body'}>
             {children.title}
           </Heading>
-          <Text overflow={'hidden'} textOverflow={'ellipsis'} noOfLines={2} color={'#gray.500'}>
+          <Text overflow={'hidden'} textOverflow={'ellipsis'} noOfLines={2} color={'gray.500'}>
             {children.text}
           </Text>
         </Stack>
         <Stack mt={2} direction={'row'} spacing={4} align={'center'}>
           <Stack direction={'column'} spacing={0} fontSize={'sm'}>
-            <Text color={'#gray.500'}>{`Created on: `}{children.date}</Text>
+            <Text color={'gray.500'}>{`Created on: `}{children.date}</Text>
           </Stack>
         </Stack>
       </Box>

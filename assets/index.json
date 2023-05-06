@@ -8,15 +8,8 @@
       },
       "block1": {
         "h1_1": "INFORMATION TECHNOLOGY DEVELOPMENT",
-        "h1_2": "FOR YOUR DIGITAL SUCCESS",
+        "h1_2": "MADE FOR DIGITAL SUCCESS",
         "txt_1": "Our digital solutions are powerful and flexible, meeting the demands of the present while unlocking future potential for countless users and businesses."
-      },
-      "block2": {
-        "title": "Unleash Your Potential",
-        "description": "Through integrating technology with your objectives, you can discover new possibilities and elevate your business to unprecedented levels.",
-        "srvc1": "Software Development",
-        "srvc2": "Digital Transformation",
-        "srvc3": "Project Consultation"
       },
       "block3": {
         "title": "Rest Assured With Us",
@@ -26,6 +19,13 @@
         "f2b": "When developing an application, there are several regulations that you may need to comply with, (GDPR, CCPA, AICPA SOC 2, HIPAA, CCPA, PCI, ISO/IEC 27001, etc...). Failure to comply with these regulations can result in severe fines. We ensure that technology complies with all necessary regulations.",
         "f3t": "Security",
         "f3b": "More than fifty vulnerabilities are reported every day. Therefore, it's crucial to keep IT assets updated, secure accounts from data breaches, and protect users from social engineering. Having a security-conscious team of developers is essential for any application."
+      },
+      "block4": {
+        "title": "Wherever You Need Us",
+        "description": "We are there in every step of the way where you might need us. From design and development to testing and deployment, our team delivers solutions that meet your unique needs.",
+        "srvc1": "Software Development",
+        "srvc2": "Digital Transformation",
+        "srvc3": "Project Consultation"
       },
       "features": {
         "title": "We Are Passionate For",
@@ -47,15 +47,8 @@
       },
       "block1": {
         "h1_1": "DESARROLLO DE TECNOLOGÍAS DE LA INFORMACIÓN",
-        "h1_2": "PARA SU ÉXITO DIGITAL",
+        "h1_2": "HECHO PARA ÉXITO DIGITAL",
         "txt_1": "Nuestras soluciones digitales son poderosas y flexibles, satisfacen las demandas del presente y desbloquean el potencial futuro para innumerables usuarios y empresas."
-      },
-      "block2": {
-        "title": "Libera Tu Potencial",
-        "description": "Mediante la integración de la tecnología con sus objetivos, puede descubrir nuevas posibilidades y elevar su negocio a niveles sin precedentes.",
-        "srvc1": "Desarrollo de software",
-        "srvc2": "Transformación Digital",
-        "srvc3": "Consulta de proyectos"
       },
       "block3": {
         "title": "Sin Preocupaciones Con Nosotros",
@@ -66,8 +59,15 @@
         "f3t": "Seguridad",
         "f3b": "Cada día se reportan más de cincuenta vulnerabilidades. Por lo tanto, es crucial mantener actualizados los activos de TI, asegurar las cuentas contra filtraciones de datos y proteger a los usuarios de la ingeniería social. Tener un equipo de desarrolladores consciente de la seguridad es esencial para cualquier aplicación."
       },
+      "block4": {
+        "title": "Libera Tu Potencial",
+        "description": "Mediante la integración de la tecnología con sus objetivos, puede descubrir nuevas posibilidades y elevar su negocio a niveles sin precedentes.",
+        "srvc1": "Desarrollo de software",
+        "srvc2": "Transformación Digital",
+        "srvc3": "Consulta de proyectos"
+      },
       "features": {
-        "title": "Somos Apasionados Por",
+        "title": "Estamos Apasionados Por",
         "f1t": "Colaboración",
         "f1d": "Colaborar con una visión compartida crea una base para la creatividad, eficiencia y resultados sobresalientes.",
         "f2t": "Innovación",

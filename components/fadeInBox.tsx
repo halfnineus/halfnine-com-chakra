@@ -16,7 +16,7 @@ const FadeInBox: React.FC<FadeInBoxProps> = ({
   children,
   fadeDirection = 'left',
   time = 0.5,
-  distance = 100,
+  distance = 50,
   delay = 0,
   ...props
 }) => {
@@ -29,7 +29,11 @@ const FadeInBox: React.FC<FadeInBoxProps> = ({
         opacity: 1,
         x: 0,
         y: 0,
-        transition: { duration: time, delay },
+        transition: { 
+          duration: time, 
+          delay,
+          ease: "easeOut"
+        },
       });
     }
   }, [controls, inView]);

@@ -13,6 +13,7 @@ import {
     Select,
     chakra,
     Button,
+    Spacer,
 } from '@chakra-ui/react'
 
 import Link from 'next/link'
@@ -53,42 +54,44 @@ export interface LinkGroup {
 }
 
 export const links: LinkGroup[] = [
+    // {
+    //     locale: "en",
+    //     title: 'Services',
+    //     links: [
+    //         { label: 'Development', href: '/services#development' },
+    //         { label: 'Digital Transformation', href: '/services#digitalization' },
+    //         { label: 'Project Consultation', href: '/services#consultation' },
+    //     ],
+    // },
     {
         locale: "en",
-        title: 'Services',
+        // title: 'Quick Links',
         links: [
-            { label: 'Development', href: '/services#development' },
-            { label: 'Digital Transformation', href: '/services#digitalization' },
-            { label: 'Project Consultation', href: '/services#consultation' },
-        ],
-    },
-    {
-        locale: "en",
-        title: 'Quick Links',
-        links: [
+            { label: 'Services', href: '/services' },
             { label: 'Industries', href: '/industries' },
             { label: 'Our Approach', href: '/our-approach' },
             { label: 'Blog', href: 'https://blog.halfnine.com' },
-            { label: 'About', href: '/about' },
+            { label: 'About HalfNine', href: '/about' },
         ],
     },
+    // {
+    //     locale: "es",
+    //     title: 'Servicios',
+    //     links: [
+    //         { label: 'Desarrollo', href: '/services#development' },
+    //         { label: 'Transformación Digital', href: '/services#digitalization' },
+    //         { label: 'Consulta de proyectos', href: '/services#consultation' },
+    //     ],
+    // },
     {
         locale: "es",
-        title: 'Servicios',
+        // title: 'Enlaces Rápidos',
         links: [
-            { label: 'Desarrollo', href: '/services#development' },
-            { label: 'Transformación Digital', href: '/services#digitalization' },
-            { label: 'Consulta de proyectos', href: '/services#consultation' },
-        ],
-    },
-    {
-        locale: "es",
-        title: 'Enlaces Rápidos',
-        links: [
+            { label: 'Nuestros Servicios', href: '/services' },
             { label: 'Industrias', href: '/industries' },
             { label: 'Nuestro enfoque', href: '/our-approach' },
             { label: 'Blog', href: 'https://blog.halfnine.com' },
-            { label: 'Acerca De', href: '/about' },
+            { label: 'Acerca De HalfNine', href: '/about' },
         ],
     },
 ]
@@ -108,13 +111,13 @@ export default function SCFooter() {
                         borderColor={'gray.200'}
                     >
                         <Container px={{ base: '4', xl: '0' }} maxW={'container.xl'}>
-                            <Flex
+                            {/* <Flex
                                 direction={{ base: 'column', lg: 'row' }}
                                 justify="space-between"
                                 align="flex-start"
                                 id="top"
-                            >
-                                <SimpleGrid
+                            > */}
+                            {/* <SimpleGrid
                                     w="full"
                                     maxW={{ base: 'unset', lg: '4xl' }}
                                     columns={{ base: 2, lg: 4 }}
@@ -127,19 +130,39 @@ export default function SCFooter() {
                                             <Text fontWeight="bold" mb={4}>
                                                 {group.title}
                                             </Text>
-                                            <Stack>
+                                            <Stack direction={'row'}>
                                                 {group.links.map((link, idx) => (
-                                                    <Link key={idx} href={link.href}>
-                                                        <Text _hover={{ color: 'blue.400' }}>
-                                                            {link.label}
-                                                        </Text>
-                                                    </Link>
+                                                    <Box minW="fit-content" maxW={'fit-content'} key={idx}>
+                                                        <Link href={link.href}>
+                                                            <Text _hover={{ color: 'blue.400' }}  >
+                                                                {link.label}
+                                                            </Text>
+                                                        </Link>
+                                                    </Box>
                                                 ))}
                                             </Stack>
                                         </Box>
                                     ))}
-                                </SimpleGrid>
-                                <Box maxW={'md'} paddingEnd="12">
+                                </SimpleGrid> */}
+                            <Box w="full" maxW={{ base: 'unset', lg: '4xl' }} fontSize="sm" mb={8}>
+                                {links.filter(p => p.locale === locale).map((group, idx) => (
+                                    <Box key={idx}>
+                                        <Stack direction={{ base: 'column', md: 'row' }} spacing={{ base: 1, md: 8 }}>
+                                            {group.links.map((link, idx) => (
+                                                <Box maxW="fit-content" key={idx}>
+                                                    <Link href={link.href}>
+                                                        <Text _hover={{ color: 'blue.400' }}>
+                                                            {link.label}
+                                                        </Text>
+                                                    </Link>
+                                                </Box>
+                                            ))}
+                                        </Stack>
+                                    </Box>
+                                ))}
+                            </Box>
+
+                            {/* <Box maxW={'md'} paddingEnd="12">
                                     <Stack
                                         direction={{ base: 'column', lg: 'column' }}
                                         align={{ base: 'flex-start', lg: 'flex-start' }}
@@ -181,10 +204,10 @@ export default function SCFooter() {
                                             </Button>
                                         </Link>
                                     </HStack>
-                                </Box>
-                            </Flex>
+                                </Box> */}
+                            {/* </Flex> */}
                         </Container>
-                        <HStack pt={2} spacing={"3.5"} justify="center">
+                        <HStack mt={-4} spacing={"3.5"} justify="center">
                             <Link href={'https://www.facebook.com/halfninecom'} target={'_blank'}>
                                 <Icon
                                     transform={'scale(0.95)'}
@@ -231,8 +254,11 @@ export default function SCFooter() {
                                 ml: 5,
                             }}>
                             <Link href={'/'}>
-                                <Icon maxH={6} fontSize={160} my={-20} viewBox='0 0 1912 280'>
-                                    <path fill="#231f20" d="M54 0v116h134V0h54v280h-54V164H54v116H0V0h54ZM274 280 383 0h55l112 280h-56l-22-57H351l-21 57h-56Zm94-104h86L410 63l-42 113Zm226 104-25-62V0h54v230h133v50H594ZM996 0v50H845v66h135v48H845v116h-54V0h205ZM1086 0l136 198V0h52v280h-52L1085 82v198h-52V0h53ZM1322 280V0h54v280h-54ZM1476 0l136 198V0h52v280h-52L1475 82v198h-52V0h53ZM1711 230V0h201v50h-147v66h131v48h-131v66h147v50h-172l-29-50Z" />
+                                <Icon fill="#231f20" maxH={6} fontSize={160} my={-20} viewBox='0 0 1912 280'>
+                                    <path d="M622.8,230h133v50h-187V0h54V230z M187.6,0h54v280h-54v-2l-66.4-96.3h57l9.4,13.8V164H54v116H0V0h53.4L54,0.9
+                                             l67,97.5H63.8L54,84.2v31.4h133.6V0z M1221.9,0h52v280h-52l-137-198v198h-52V0h53l136,198V0z M382.8,0l-109,280h56l21-57h121l22,57
+                                             h56L437.8,0H382.8z M367.8,176l42-113l44,113H367.8z M1611.8,0h52v280h-52l-137-198v198h-52V0h53l136,198V0z M1764.8,50v66h131v48
+                                             h-131v66h147v50h-201V0h201v50H1764.8z M1321.8,0h54v280h-54V0z M790.8,0h205v50h-151v66h135v48h-135v116h-54V0z"/>
                                 </Icon>
                             </Link>
                         </Flex>

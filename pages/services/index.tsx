@@ -88,7 +88,7 @@ const Feature2 = (props: any) => {
                 >
                     {props.title}
                 </Text>
-                <Text mt={2} color="#gray.500">
+                <Text mt={2} color="gray.500">
                     {props.children}
                 </Text>
             </Box>
