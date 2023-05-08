@@ -52,6 +52,7 @@ function Consent() {
                     onClick={() => {
                         acceptCookie();
                     }}
+                    rounded={'xl'}
                     fontWeight={'bold'}
                     fontSize={{ base: 'xs', sm: 'sm', md: "md" }}
                     colorScheme={'blue'}
