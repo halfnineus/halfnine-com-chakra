@@ -74,7 +74,7 @@ const INDEX = () => {
             });
         } else {
             e.preventDefault();
-            const data = { name, email, message, phone, company/*, cfTurnstileToken */ };
+            const data = { name, email, message, phone, company };
             setSubmitted(true);
             fetch('/api/contact', {
                 method: 'POST',

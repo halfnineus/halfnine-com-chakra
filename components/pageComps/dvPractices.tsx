@@ -10,7 +10,7 @@ import {
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import React, { useState } from "react";
-import FadeInBox from './fadeInBox';
+import FadeInBox from '../fadeInBox';
 
 const Untitled = () => {
   const { locale } = useRouter();
@@ -27,7 +27,7 @@ const Untitled = () => {
             w="64px"
             my={1}
           />
-          <Heading>{"Our Development Practices"}</Heading>
+          <Heading>{"Tailored For You"}</Heading>
         </Flex>
       </FadeInBox>
       <Stack direction={{ base: "column", md: "row" }}>
@@ -108,7 +108,7 @@ export default Untitled;
 const tabs = [
   {
     locale: "en",
-    title: 'Software Development',
+    title: 'Build Your Product',
     description: `We'll prototype in a week - creating reliable, versatile software tailored to user needs. Latest tech, industry expertise, and custom solutions for any OS, browser, or device.`,
     links: [
       { text: 'Link One', href: '#FirstTab_link1' },
@@ -118,7 +118,7 @@ const tabs = [
   },
   {
     locale: "en",
-    title: 'Lorem ipsum',
+    title: 'Scale Your Team',
     description: 'Sollicitudin nibh sit amet commodo. Etiam non quam lacus suspendisse faucibus. Est pellentesque elit ullamcorper dignissim cras tincidunt lobortis feugiat. ',
     links: [
       { text: 'Link Four', href: '#SecondTab_link1' },
@@ -129,7 +129,18 @@ const tabs = [
   },
   {
     locale: "en",
-    title: 'Lorem ipsum',
+    title: 'Consult Your Strategy',
+    description: 'Sollicitudin nibh sit amet commodo. Etiam non quam lacus suspendisse faucibus. Est pellentesque elit ullamcorper dignissim cras tincidunt lobortis feugiat. ',
+    links: [
+      { text: 'Link Seven', href: '#ThirdTab_link1' },
+      { text: 'Link Eight', href: '#ThirdTab_link2' },
+      { text: 'Link Nine', href: '#ThirdTab_link3' },
+      { text: 'Link Nine', href: '#ThirdTab_link3' },
+    ]
+  },
+  {
+    locale: "en",
+    title: 'Consult Your Strategy',
     description: 'Sollicitudin nibh sit amet commodo. Etiam non quam lacus suspendisse faucibus. Est pellentesque elit ullamcorper dignissim cras tincidunt lobortis feugiat. ',
     links: [
       { text: 'Link Seven', href: '#ThirdTab_link1' },

@@ -20,13 +20,6 @@
         "f3t": "Security",
         "f3b": "More than fifty vulnerabilities are reported every day. Therefore, it's crucial to keep IT assets updated, secure accounts from data breaches, and protect users from social engineering. Having a security-conscious team of developers is essential for any application."
       },
-      "block4": {
-        "title": "Wherever You Need Us",
-        "description": "We are there in every step of the way where you might need us. From design and development to testing and deployment, our team delivers solutions that meet your unique needs.",
-        "srvc1": "Software Development",
-        "srvc2": "Digital Transformation",
-        "srvc3": "Project Consultation"
-      },
       "features": {
         "title": "We Are Passionate For",
         "f1t": "Teamwork",
@@ -58,13 +51,6 @@
         "f2b": "A la hora de desarrollar una aplicación, existen varias normativas que es posible que deba cumplir (GDPR, CCPA, AICPA SOC 2, HIPAA, CCPA, PCI, ISO/IEC 27001, etc...). El incumplimiento de estas normas puede resultar en multas severas. Nos aseguramos de que la tecnología cumpla con todas las normativas necesarias.",
         "f3t": "Seguridad",
         "f3b": "Cada día se reportan más de cincuenta vulnerabilidades. Por lo tanto, es crucial mantener actualizados los activos de TI, asegurar las cuentas contra filtraciones de datos y proteger a los usuarios de la ingeniería social. Tener un equipo de desarrolladores consciente de la seguridad es esencial para cualquier aplicación."
-      },
-      "block4": {
-        "title": "Libera Tu Potencial",
-        "description": "Mediante la integración de la tecnología con sus objetivos, puede descubrir nuevas posibilidades y elevar su negocio a niveles sin precedentes.",
-        "srvc1": "Desarrollo de software",
-        "srvc2": "Transformación Digital",
-        "srvc3": "Consulta de proyectos"
       },
       "features": {
         "title": "Estamos Apasionados Por",

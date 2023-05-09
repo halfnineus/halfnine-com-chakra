@@ -9,7 +9,6 @@ import {
   Flex,
   SimpleGrid,
   Icon,
-  StackDivider,
   Center,
   Image,
 } from '@chakra-ui/react'
@@ -17,68 +16,18 @@ import indexdat from '../assets/index.json'
 
 import { ReactElement } from 'react'
 import { NextSeo } from 'next-seo'
-import Link from 'next/link'
 
 import { GiConqueror } from 'react-icons/gi'
 import { RiLightbulbFlashLine, RiTeamFill } from 'react-icons/ri'
 import { HiOutlinePuzzlePiece } from 'react-icons/hi2'
 import { FcApproval, FcServices, FcLock, } from 'react-icons/fc'
-import { IoPeopleOutline, IoRocketOutline, IoBulbOutline, } from 'react-icons/io5'
-import { ChevronRightIcon } from '@chakra-ui/icons'
-import { DevPractices, FadeInBox } from '../components'
+import { DevPractices, FadeInBox, MStats } from '../components'
 
 interface FeatureProps1 {
   title: string;
   text: string;
   icon: ReactElement;
 }
-
-interface FeatureProps2 {
-  text: string;
-  iconBg: string;
-  icon?: ReactElement;
-  refx: any;
-}
-
-const Feature2 = ({ text, icon, iconBg, refx }: FeatureProps2) => {
-  return (
-    <Link href={refx}>
-      <Stack
-        _hover={{ textColor: 'blue.500', borderColor: 'blue.100', cursor: 'pointer' }}
-        role={'group'}
-        direction={'row'}
-        align={'center'}
-        p={2}
-        rounded={'xl'}
-        border={'1px'}
-        borderColor={'gray.100'}
-        bg={"white"}
-      >
-        <Flex
-          w={8}
-          h={8}
-          align={'center'}
-          justify={'center'}
-          rounded={'full'}
-          bg={iconBg}>
-          {icon}
-        </Flex>
-        <Text pl={2} fontWeight={600}>
-          {text}
-        </Text>
-        <Flex
-          transition={'all .3s ease'}
-          transform={'translateX(-10px)'}
-          _groupHover={{ opacity: '100%', transform: 'translateX(0)' }}
-          justify={'flex-end'}
-          align={'center'}
-          flex={1}>
-          <Icon _groupHover={{ color: 'blue.400' }} color={'black'} w={5} h={5} as={ChevronRightIcon} />
-        </Flex>
-      </Stack>
-    </Link>
-  );
-};
 
 interface FeatureB5Props {
   icon: React.ReactElement
@@ -119,11 +68,11 @@ const Feature1 = ({ title, text, icon }: FeatureProps1) => {
         >
           {icon}
         </Center>
-        <Center>
-          <Text pl={4} display={'inline'} mb={2} fontWeight={600}>{title}</Text>
-        </Center>
+        <Stack pl={6} spacing={1} pt={3}>
+          <Text display={'inline'} fontWeight={600}>{title}</Text>
+          <Text mx={20} color={'gray.600'}>{text}</Text>
+        </Stack>
       </Flex>
-      <Text mx={20} my={'-4'} color={'gray.600'}>{text}</Text>
     </Box>
   );
 };
@@ -179,12 +128,14 @@ const IndexPage = () => {
 
             <Box bg={'#fbfbfb'} py={{ base: 16, md: 24 }}>
               <Box maxW={'container.xl'} px={{ base: '4', sm: '4', md: '4', lg: '4', xl: 0 }} mx="auto">
-                <DevPractices />
+                <FadeInBox>
+                  <MStats />
+                </FadeInBox>
               </Box>
             </Box>
 
             <Box py={{ base: 16, md: 24 }} maxW={'container.xl'} px={{ base: '4', sm: '4', md: '4', lg: '4', xl: 0 }} mx="auto">
-              <FadeInBox fadeDirection='up'>
+              <FadeInBox>
                 <Flex pb={4} direction="column-reverse">
                   <Box
                     as="hr"
@@ -195,79 +146,41 @@ const IndexPage = () => {
                   />
                   <Heading>{indexData.block3.title}</Heading>
                 </Flex>
-              </FadeInBox>
-              <SimpleGrid columns={1} spacing={12}>
-                <FadeInBox fadeDirection='left' delay={0.3}>
+                {/* </FadeInBox> */}
+                <SimpleGrid columns={1} spacing={12}>
+                  {/* <FadeInBox> */}
                   <Feature1
                     icon={<Icon as={FcServices} w={10} h={10} />}
                     title={indexData.block3.f1t}
                     text={indexData.block3.f1b}
                   />
-                </FadeInBox>
-                <FadeInBox fadeDirection='left' delay={0.6}>
+                  {/* </FadeInBox> */}
+                  {/* <FadeInBox delay={0.15}> */}
                   <Feature1
                     icon={<Icon as={FcApproval} w={10} h={10} />}
                     title={indexData.block3.f2t}
                     text={indexData.block3.f2b}
                   />
-                </FadeInBox>
-                <FadeInBox fadeDirection='left' delay={0.9}>
+                  {/* </FadeInBox> */}
+                  {/* <FadeInBox delay={0.3}> */}
                   <Feature1
                     icon={<Icon as={FcLock} w={10} h={10} />}
                     title={indexData.block3.f3t}
                     text={indexData.block3.f3b}
                   />
-                </FadeInBox>
-              </SimpleGrid>
+                  {/* </FadeInBox> */}
+                </SimpleGrid>
+              </FadeInBox>
             </Box>
 
             <Box bg={'#fbfbfb'} py={{ base: 16, md: 24 }}>
-              <Box maxW={'container.xl'} px={{ base: '4', sm: '4', md: '4', lg: '4', xl: 0 }} textAlign={'center'} mx={'auto'}>
-                <Stack spacing={4} maxW={'container.md'} mx={'auto'}>
-                  <Flex direction="column-reverse">
-                    <Center>
-                      <Box
-                        as="hr"
-                        bg="blue.500"
-                        h="4px"
-                        w="128px"
-                        mt={2}
-                        opacity={'0.9'}
-                      />
-                    </Center>
-                    <Heading>{indexData.block4.title}</Heading>
-                  </Flex>
-                  <Text fontSize={'lg'} color={"gray.700"}>
-                    {indexData.block4.description}
-                  </Text>
-                  <Stack
-                    spacing={2}
-                    divider={<StackDivider borderColor={'gray.100'} />}>
-                    <Feature2
-                      refx={'/services#development'}
-                      icon={<Icon as={IoPeopleOutline} color={'blue.600'} w={5} h={5} />}
-                      iconBg={'blue.100'}
-                      text={indexData.block4.srvc1}
-                    />
-                    <Feature2
-                      refx={'/services#digitalization'}
-                      icon={<Icon as={IoRocketOutline} color={'green.600'} w={5} h={5} />}
-                      iconBg={'green.100'}
-                      text={indexData.block4.srvc2}
-                    />
-                    <Feature2
-                      refx={'/services#consultation'}
-                      icon={<Icon as={IoBulbOutline} color={'orange.600'} w={5} h={5} />}
-                      iconBg={'orange.100'}
-                      text={indexData.block4.srvc3}
-                    />
-                  </Stack>
-                </Stack>
+              <Box maxW={'container.xl'} px={{ base: '4', sm: '4', md: '4', lg: '4', xl: 0 }} mx={'auto'}>
+                <DevPractices />
               </Box>
             </Box>
 
             <Box maxW={'container.xl'} px={{ base: '4', sm: '4', md: '4', lg: '4', xl: 0 }} mx="auto" py={{ base: 16, md: 24 }}>
-              <FadeInBox fadeDirection='up'>
+              <FadeInBox>
                 <Flex pb={4} direction="column-reverse">
                   <Box
                     as="hr"
@@ -278,34 +191,34 @@ const IndexPage = () => {
                   />
                   <Heading>{indexData.features.title}</Heading>
                 </Flex>
-              </FadeInBox>
-              <SimpleGrid
-                columns={{ base: 1, md: 2, lg: 2 }}
-                spacing={16}
-              >
-                <FadeInBox fadeDirection='down' delay={0.3}>
+                {/* </FadeInBox> */}
+                <SimpleGrid
+                  columns={{ base: 1, md: 2, lg: 2 }}
+                  spacing={16}
+                >
+                  {/* <FadeInBox> */}
                   <FeatureB5 icon={<RiTeamFill />} title={indexData.features.f1t}>
                     {indexData.features.f1d}
                   </FeatureB5>
-                </FadeInBox>
-                <FadeInBox fadeDirection='down' delay={0.6}>
+                  {/* </FadeInBox> */}
+                  {/* <FadeInBox delay={0.15}> */}
                   <FeatureB5 icon={<RiLightbulbFlashLine />} title={indexData.features.f2t}>
                     {indexData.features.f2d}
                   </FeatureB5>
-                </FadeInBox>
-                <FadeInBox fadeDirection='down' delay={0.9}>
+                  {/* </FadeInBox> */}
+                  {/* <FadeInBox delay={0.3}> */}
                   <FeatureB5 icon={<GiConqueror />} title={indexData.features.f3t}>
                     {indexData.features.f3d}
                   </FeatureB5>
-                </FadeInBox>
-                <FadeInBox fadeDirection='down' delay={1.2}>
+                  {/* </FadeInBox> */}
+                  {/* <FadeInBox delay={0.45}> */}
                   <FeatureB5 icon={<HiOutlinePuzzlePiece />} title={indexData.features.f4t}>
                     {indexData.features.f4d}
                   </FeatureB5>
-                </FadeInBox>
-              </SimpleGrid>
+                  {/* </FadeInBox> */}
+                </SimpleGrid>
+              </FadeInBox>
             </Box>
-
           </>
         )
       })}

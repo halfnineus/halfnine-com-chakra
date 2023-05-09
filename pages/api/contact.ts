@@ -1,19 +1,9 @@
 export default async function contactMail(req: any, res: any) {
   if (req.method === 'POST') {
-    const { name, email, phone, company, message, cfTurnstileToken } = req.body;
-
-    // const response = await fetch('https://api.cloudflare.com/client/v4/user/tokens/verify', {
-    //   method: 'GET',
-    //   headers: {
-    //     'Content-Type': 'application/json',
-    //     'Authorization': `Bearer ${cfTurnstileToken}`
-    //   }
-    // });
-    // const data = await response.json();
-    // if (!data.success) {
-    //   res.status(401).json({ status: 'error', message: 'Invalid Cloudflare token' });
-    //   return;
-    // }
+    const { name, email, phone, company, message } = req.body;
+    const senderIp = req.headers['x-forwarded-for'] || req.connection.remoteAddress;
+    const userAgent = req.headers['user-agent'];
+    const referrer = req.headers['referer'];
 
     const sgMail = require('@sendgrid/mail')
     sgMail.setApiKey(process.env.SENDGRID_API_KEY)
@@ -22,7 +12,7 @@ export default async function contactMail(req: any, res: any) {
       from: "donotreply@ochoa.pro",
       subject: `Message From ${name}`,
       text: message + " | Sent from: " + email,
-      html: `<div>${message}</div><p>Email: ${email}</p><p>Phone: ${phone}</p><p>Company: ${company}</p>`,
+      html: `<div>${message}</div><p>Email: ${email}</p><p>Phone: ${phone}</p><p>Company: ${company}</p><p>IP: ${senderIp}</p><p>User Agent: ${userAgent}</p><p>Referrer: ${referrer}</p>`,
     }
 
     try {

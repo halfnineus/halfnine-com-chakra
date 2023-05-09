@@ -27,6 +27,8 @@ import { useRouter } from 'next/router'
 
 export default function WithSubnavigation() {
     const { isOpen, onToggle } = useDisclosure();
+    const router = useRouter();
+    const isRootPage = router.pathname === '/';
     const buttonvariant = useBreakpointValue(
         {
             sm: 'gray',
@@ -89,14 +91,23 @@ export default function WithSubnavigation() {
                         aria-label={'Toggle Navigation'}
                     />
                     <Flex flex={{ base: 1 }} justify={{ base: 'center', md: 'start' }}>
-                        <Link href={'/'}>
+                        {isRootPage ? (
                             <Icon fill={'#231f20'} fontSize={{ base: 120, md: 180 }} maxH={'40px'} viewBox='0 0 1912 280'>
                                 <path d="M622.8,230h133v50h-187V0h54V230z M187.6,0h54v280h-54v-2l-66.4-96.3h57l9.4,13.8V164H54v116H0V0h53.4L54,0.9
                                          l67,97.5H63.8L54,84.2v31.4h133.6V0z M1221.9,0h52v280h-52l-137-198v198h-52V0h53l136,198V0z M382.8,0l-109,280h56l21-57h121l22,57
                                          h56L437.8,0H382.8z M367.8,176l42-113l44,113H367.8z M1611.8,0h52v280h-52l-137-198v198h-52V0h53l136,198V0z M1764.8,50v66h131v48
                                          h-131v66h147v50h-201V0h201v50H1764.8z M1321.8,0h54v280h-54V0z M790.8,0h205v50h-151v66h135v48h-135v116h-54V0z"/>
                             </Icon>
-                        </Link>
+                        ) : (
+                            <Link href={'/'}>
+                                <Icon fill={'#231f20'} fontSize={{ base: 120, md: 180 }} maxH={'40px'} viewBox='0 0 1912 280'>
+                                    <path d="M622.8,230h133v50h-187V0h54V230z M187.6,0h54v280h-54v-2l-66.4-96.3h57l9.4,13.8V164H54v116H0V0h53.4L54,0.9
+                                         l67,97.5H63.8L54,84.2v31.4h133.6V0z M1221.9,0h52v280h-52l-137-198v198h-52V0h53l136,198V0z M382.8,0l-109,280h56l21-57h121l22,57
+                                         h56L437.8,0H382.8z M367.8,176l42-113l44,113H367.8z M1611.8,0h52v280h-52l-137-198v198h-52V0h53l136,198V0z M1764.8,50v66h131v48
+                                         h-131v66h147v50h-201V0h201v50H1764.8z M1321.8,0h54v280h-54V0z M790.8,0h205v50h-151v66h135v48h-135v116h-54V0z"/>
+                                </Icon>
+                            </Link>
+                        )}
                         <Box ml={{ base: 6, sm: 0 }} ></Box>
                         <Flex display={{ base: 'none', md: 'flex' }} ml={12}>
                             <DesktopNav />
