@@ -25,7 +25,7 @@ import { HiOutlinePuzzlePiece } from 'react-icons/hi2'
 import { FcApproval, FcServices, FcLock, } from 'react-icons/fc'
 import { IoPeopleOutline, IoRocketOutline, IoBulbOutline, } from 'react-icons/io5'
 import { ChevronRightIcon } from '@chakra-ui/icons'
-import { DevPractices } from '../components'
+import { DevPractices, FadeInBox } from '../components'
 
 interface FeatureProps1 {
   title: string;
@@ -184,32 +184,40 @@ const IndexPage = () => {
             </Box>
 
             <Box py={{ base: 16, md: 24 }} maxW={'container.xl'} px={{ base: '4', sm: '4', md: '4', lg: '4', xl: 0 }} mx="auto">
-              <Flex pb={4} direction="column-reverse">
-                <Box
-                  as="hr"
-                  bg="blue.500"
-                  h="3px"
-                  w="64px"
-                  my={1}
-                />
-                <Heading>{indexData.block3.title}</Heading>
-              </Flex>
+              <FadeInBox fadeDirection='up'>
+                <Flex pb={4} direction="column-reverse">
+                  <Box
+                    as="hr"
+                    bg="blue.500"
+                    h="3px"
+                    w="64px"
+                    my={1}
+                  />
+                  <Heading>{indexData.block3.title}</Heading>
+                </Flex>
+              </FadeInBox>
               <SimpleGrid columns={1} spacing={12}>
-                <Feature1
-                  icon={<Icon as={FcServices} w={10} h={10} />}
-                  title={indexData.block3.f1t}
-                  text={indexData.block3.f1b}
-                />
-                <Feature1
-                  icon={<Icon as={FcApproval} w={10} h={10} />}
-                  title={indexData.block3.f2t}
-                  text={indexData.block3.f2b}
-                />
-                <Feature1
-                  icon={<Icon as={FcLock} w={10} h={10} />}
-                  title={indexData.block3.f3t}
-                  text={indexData.block3.f3b}
-                />
+                <FadeInBox fadeDirection='left' delay={0.3}>
+                  <Feature1
+                    icon={<Icon as={FcServices} w={10} h={10} />}
+                    title={indexData.block3.f1t}
+                    text={indexData.block3.f1b}
+                  />
+                </FadeInBox>
+                <FadeInBox fadeDirection='left' delay={0.6}>
+                  <Feature1
+                    icon={<Icon as={FcApproval} w={10} h={10} />}
+                    title={indexData.block3.f2t}
+                    text={indexData.block3.f2b}
+                  />
+                </FadeInBox>
+                <FadeInBox fadeDirection='left' delay={0.9}>
+                  <Feature1
+                    icon={<Icon as={FcLock} w={10} h={10} />}
+                    title={indexData.block3.f3t}
+                    text={indexData.block3.f3b}
+                  />
+                </FadeInBox>
               </SimpleGrid>
             </Box>
 
@@ -259,32 +267,42 @@ const IndexPage = () => {
             </Box>
 
             <Box maxW={'container.xl'} px={{ base: '4', sm: '4', md: '4', lg: '4', xl: 0 }} mx="auto" py={{ base: 16, md: 24 }}>
-              <Flex pb={4} direction="column-reverse">
-                <Box
-                  as="hr"
-                  bg="blue.500"
-                  h="3px"
-                  w="64px"
-                  my={1}
-                />
-                <Heading>{indexData.features.title}</Heading>
-              </Flex>
+              <FadeInBox fadeDirection='up'>
+                <Flex pb={4} direction="column-reverse">
+                  <Box
+                    as="hr"
+                    bg="blue.500"
+                    h="3px"
+                    w="64px"
+                    my={1}
+                  />
+                  <Heading>{indexData.features.title}</Heading>
+                </Flex>
+              </FadeInBox>
               <SimpleGrid
                 columns={{ base: 1, md: 2, lg: 2 }}
                 spacing={16}
               >
-                <FeatureB5 icon={<RiTeamFill />} title={indexData.features.f1t}>
-                  {indexData.features.f1d}
-                </FeatureB5>
-                <FeatureB5 icon={<RiLightbulbFlashLine />} title={indexData.features.f2t}>
-                  {indexData.features.f2d}
-                </FeatureB5>
-                <FeatureB5 icon={<GiConqueror />} title={indexData.features.f3t}>
-                  {indexData.features.f3d}
-                </FeatureB5>
-                <FeatureB5 icon={<HiOutlinePuzzlePiece />} title={indexData.features.f4t}>
-                  {indexData.features.f4d}
-                </FeatureB5>
+                <FadeInBox fadeDirection='down' delay={0.3}>
+                  <FeatureB5 icon={<RiTeamFill />} title={indexData.features.f1t}>
+                    {indexData.features.f1d}
+                  </FeatureB5>
+                </FadeInBox>
+                <FadeInBox fadeDirection='down' delay={0.6}>
+                  <FeatureB5 icon={<RiLightbulbFlashLine />} title={indexData.features.f2t}>
+                    {indexData.features.f2d}
+                  </FeatureB5>
+                </FadeInBox>
+                <FadeInBox fadeDirection='down' delay={0.9}>
+                  <FeatureB5 icon={<GiConqueror />} title={indexData.features.f3t}>
+                    {indexData.features.f3d}
+                  </FeatureB5>
+                </FadeInBox>
+                <FadeInBox fadeDirection='down' delay={1.2}>
+                  <FeatureB5 icon={<HiOutlinePuzzlePiece />} title={indexData.features.f4t}>
+                    {indexData.features.f4d}
+                  </FeatureB5>
+                </FadeInBox>
               </SimpleGrid>
             </Box>
 
