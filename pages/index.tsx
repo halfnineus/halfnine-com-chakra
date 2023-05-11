@@ -59,15 +59,16 @@ const Feature1 = ({ title, text, icon }: FeatureProps1) => {
   return (
     <Box>
       <Flex>
-        <Center
-          w={16}
-          h={16}
-          rounded={'full'}
-          bg={'#fbfbfb'}
-          mb={2}
-        >
-          {icon}
-        </Center>
+        <Stack>
+          <Center
+            w={16}
+            h={16}
+            rounded={'full'}
+            bg={'#fbfbfb'}
+          >
+            {icon}
+          </Center>
+        </Stack>
         <Stack pl={6} spacing={1} pt={3}>
           <Text display={'inline'} fontWeight={600}>{title}</Text>
           <Text mx={20} color={'gray.600'}>{text}</Text>
@@ -80,11 +81,12 @@ const Feature1 = ({ title, text, icon }: FeatureProps1) => {
 
 const IndexPage = () => {
   const { locale } = useRouter()
+  const filteredData = indexdat.data.filter((p) => p.locale === locale);
   return (
     <>
-      {indexdat.data.filter(p => p.locale === locale).map((indexData, i) => {
+      {filteredData.map((indexData, index) => {
         return (
-          <>
+          <React.Fragment key={index}>
             <NextSeo
               title={indexData.head.title}
               description={indexData.head.description}
@@ -110,9 +112,10 @@ const IndexPage = () => {
                 <Box textAlign={"center"} >
                   <Heading as={'h1'} fontSize={{ base: "3xl", md: "5xl" }}>
                     {indexData.block1.h1_1}
-                    <Text fontWeight={'bold'} fontSize={{ base: "3xl", md: "5xl" }}>
-                      {indexData.block1.h1_2}
-                    </Text>
+                    <br />
+                    {/* <Text  fontWeight={'bold'} fontSize={{ base: "3xl", md: "5xl" }}> */}
+                    {indexData.block1.h1_2}
+                    {/* </Text> */}
                   </Heading>
                 </Box>
               </Box>
@@ -146,29 +149,22 @@ const IndexPage = () => {
                   />
                   <Heading>{indexData.block3.title}</Heading>
                 </Flex>
-                {/* </FadeInBox> */}
                 <SimpleGrid columns={1} spacing={12}>
-                  {/* <FadeInBox> */}
                   <Feature1
                     icon={<Icon as={FcServices} w={10} h={10} />}
                     title={indexData.block3.f1t}
                     text={indexData.block3.f1b}
                   />
-                  {/* </FadeInBox> */}
-                  {/* <FadeInBox delay={0.15}> */}
                   <Feature1
                     icon={<Icon as={FcApproval} w={10} h={10} />}
                     title={indexData.block3.f2t}
                     text={indexData.block3.f2b}
                   />
-                  {/* </FadeInBox> */}
-                  {/* <FadeInBox delay={0.3}> */}
                   <Feature1
                     icon={<Icon as={FcLock} w={10} h={10} />}
                     title={indexData.block3.f3t}
                     text={indexData.block3.f3b}
                   />
-                  {/* </FadeInBox> */}
                 </SimpleGrid>
               </FadeInBox>
             </Box>
@@ -191,35 +187,26 @@ const IndexPage = () => {
                   />
                   <Heading>{indexData.features.title}</Heading>
                 </Flex>
-                {/* </FadeInBox> */}
                 <SimpleGrid
                   columns={{ base: 1, md: 2, lg: 2 }}
                   spacing={16}
                 >
-                  {/* <FadeInBox> */}
                   <FeatureB5 icon={<RiTeamFill />} title={indexData.features.f1t}>
                     {indexData.features.f1d}
                   </FeatureB5>
-                  {/* </FadeInBox> */}
-                  {/* <FadeInBox delay={0.15}> */}
                   <FeatureB5 icon={<RiLightbulbFlashLine />} title={indexData.features.f2t}>
                     {indexData.features.f2d}
                   </FeatureB5>
-                  {/* </FadeInBox> */}
-                  {/* <FadeInBox delay={0.3}> */}
                   <FeatureB5 icon={<GiConqueror />} title={indexData.features.f3t}>
                     {indexData.features.f3d}
                   </FeatureB5>
-                  {/* </FadeInBox> */}
-                  {/* <FadeInBox delay={0.45}> */}
                   <FeatureB5 icon={<HiOutlinePuzzlePiece />} title={indexData.features.f4t}>
                     {indexData.features.f4d}
                   </FeatureB5>
-                  {/* </FadeInBox> */}
                 </SimpleGrid>
               </FadeInBox>
             </Box>
-          </>
+          </React.Fragment>
         )
       })}
     </>

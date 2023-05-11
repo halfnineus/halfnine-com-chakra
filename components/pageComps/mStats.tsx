@@ -64,35 +64,40 @@ export default function BasicStatistics() {
   const { locale } = useRouter();
   const filteredData = datax.filter((p) => p.locale === locale);
   return (
-    <Box maxW="7xl" mx={'auto'}>
-      <Flex pb={6} direction="column-reverse">
-        <Box
-          as="hr"
-          bg="blue.500"
-          h="3px"
-          w="64px"
-          my={1}
-        />
-        <Heading>{"Benefits from Our Development Services"}</Heading>
-      </Flex>
-      <SimpleGrid columns={{ base: 1, lg: 3 }} spacing={{ base: 5, lg: 8 }}>
-        <StatsCard
-          title={'Less Trial and Error'}
-          stat={'100'}
-          icon={<TbTargetArrow size={'3em'} />}
-        />
-        <StatsCard
-          title={'Less Development Costs'}
-          stat={'33'}
-          icon={<BsPiggyBank size={'3em'} />}
-        />
-        <StatsCard
-          title={'Less Timeline on Updates '}
-          stat={'25'}
-          icon={<GiSpeedometer size={'3em'} />}
-        />
-      </SimpleGrid>
-    </Box>
+    <>
+      {filteredData.map((indexData, index) => (
+        <Box key={index} maxW="7xl" mx={'auto'}>
+          <Flex pb={6} direction="column-reverse">
+            <Box
+              as="hr"
+              bg="blue.500"
+              h="3px"
+              w="64px"
+              my={1}
+            />
+            <Heading>{indexData.text}</Heading>
+          </Flex>
+          <SimpleGrid columns={{ base: 1, lg: 3 }} spacing={{ base: 5, lg: 8 }}>
+            <StatsCard
+              title={indexData.b1}
+              stat={'99'}
+              icon={<TbTargetArrow size={'3em'} />}
+            />
+            <StatsCard
+              title={indexData.b2}
+              stat={'33'}
+              icon={<BsPiggyBank size={'3em'} />}
+            />
+            <StatsCard
+              title={indexData.b3}
+              stat={'25'}
+              icon={<GiSpeedometer size={'3em'} />}
+            />
+          </SimpleGrid>
+        </Box>
+      ))
+      }
+    </>
   );
 }
 
@@ -101,9 +106,15 @@ const datax = [
   {
     locale: "en",
     text: "Benefits from Our Development Services",
+    b1: "Less Trial and Error",
+    b2: "Less Development Costs",
+    b3: "Less Timeline on Updates",
   },
   {
     locale: "es",
-    text: "Beneficios de nuestros servicios de desarrollo",
+    text: "Beneficios de Nuestros Servicios de Desarrollo",
+    b1: "Menos Prueba y Error",
+    b2: "Menos Costos de Desarrollo",
+    b3: "Reduce Calendario de Actualizaciones",
   },
 ]

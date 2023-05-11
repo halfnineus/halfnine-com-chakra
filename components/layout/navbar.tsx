@@ -29,6 +29,7 @@ export default function WithSubnavigation() {
     const { isOpen, onToggle } = useDisclosure();
     const router = useRouter();
     const isRootPage = router.pathname === '/';
+    const isShadowPage = router.pathname === '/' || router.pathname === '/contact';
     const buttonvariant = useBreakpointValue(
         {
             sm: 'gray',
@@ -54,16 +55,19 @@ export default function WithSubnavigation() {
     return (
         <>
             <Box
-                w={'full'}
+                w="full"
                 position="fixed"
-                bg={'white'}
+                bg="white"
                 zIndex={999}
                 boxShadow={
-                    scrollPosition > 20
-                        ? '0px 4px 20px rgba(0,0,0,0.05)'
-                        : 'none'
+                    // isShadowPage
+                        /* ? */ scrollPosition > 20
+                            ? "0px 4px 20px rgba(0,0,0,0.08)"
+                            : "none"
+                        // : "0px 4px 20px rgba(0,0,0,0.08)"
                 }
             >
+
                 <Flex
                     maxW={'container.xl'}
                     minH={{ base: '60px', md: '80px' }}
@@ -72,15 +76,7 @@ export default function WithSubnavigation() {
                     px={{ base: '4', sm: '4', md: '4', lg: '4', xl: 0 }}
                     top={0}
                     width="100%"
-                // zIndex={1000}
                 >
-                    {/* <Flex
-                maxW={'container.xl'}
-                minH={{ base: '60px', md: '80px' }}
-                align="center"
-                mx={'auto'}
-                px={{ base: '4', sm: '4', md: '4', lg: '4', xl: 0 }}
-            > */}
                     <IconButton
                         display={{ base: 'flex', md: 'none' }}
                         onClick={onToggle}

@@ -27,8 +27,8 @@
             "alt": "Alternatively",
             "mailblock": {
                 "title": "Email Us",
-                "mref": "mailto:contact@halfnine.com",
-                "visiblemref": "contact@halfnine.com",
+                "mref": "mailto:contact@halfnine.tech",
+                "visiblemref": "contact@halfnine.tech",
                 "req": "You are about to email us at: "
             },
             "callblock": {
@@ -71,8 +71,8 @@
             "alt": "Alternativamente",
             "mailblock": {
                 "title": "Correo Electrónico",
-                "mref": "mailto:contacto@halfnine.com",
-                "visiblemref": "contacto@halfnine.com",
+                "mref": "mailto:contacto@halfnine.tech",
+                "visiblemref": "contacto@halfnine.tech",
                 "req": "Estas por abrir un enlace externo: "
             },
             "callblock": {

@@ -6,59 +6,9 @@
                 "title": "Services - HalfNine | Your Reliable Automation Solutions Partner",
                 "description": "Guaranteed excellence in industrial automation. Our experienced team of engineers is ready to replicate proven solutions for your business."
             },
-            "img": "Industrial Automation Services",
-            "lm": "Learn More",
             "block1": {
-                "heading": "Industrial Automation Services",
-                "text1": "HalfNine's services connect systems with the goal of maximizing  production, assuring safety, and optimizing the use of resources, resulting in significant return on investment (ROI). By understanding the unique requirements of each project, we develop solutions that ensure the highest level of quality and reliability. Our commitment to ongoing support and maintenance ensures that your automation solution will remain fully functional and reliable for years to come."
-            },
-            "block2": {
-                "item1": "Hardware, and Software Development",
-                "item1d": "Our focus is on developing a delivery management system that allows for fast, transparent, and efficient monitoring of progress, enabling informed decision-making. We also provide agile industrial automation services to enhance your systems based on your unique requirements. Our priority is delivering with transparency and efficiency.",
-                "item2": "Digital Transformation",
-                "item2d": "Improve your processes and systems with technologies that offer efficient and adaptable processing with information optimization and data gathering. Transform your organization's efficiency, production, and innovation with technology.",
-                "item3": "Project Consultation",
-                "item3d": "We offer solutions to help you keep peace of mind on the excellence and quality of your projects. With solutions that ensure high-quality covering feasibility, system design, project management, installation and commissioning, and maintenance. Our experienced team helps you maximize your potential in your project."
-            },
-            "block3": {
-                "Heading": "Development Services",
-                "t1": "Strategy & Features",
-                "d1": "We help you identify the best strategies and features for your products and applications. By analyzing your needs and challenges, we can determine key leverage points and create a plan for success.",
-                "t2": "UX & Architecture",
-                "d2": "Our expert team will assist you in selecting the appropriate technologies to build a customized technology stack that perfectly aligns with your desired User Experience.",
-                "t3": "Development & Testing",
-                "d3": "Our transparent process allows you to maintain control over the development and testing stages, ensuring a successful launch of functioning technology.",
-                "t4": "Support & Maintenance",
-                "d4": "We help with support and maintenance by offering a direct support line to address any bugs or issues promptly. This efficient response system saves valuable time and ensures uninterrupted operations."
-            },
-            "block4": {
-                "Heading": "Our Technology Stack for a Long-Lasting IT Evolution",
-                "Text": "We have the expertise to employ the latest, constantly evolving or the classic, and most trusted technologies, and use them to replicate proven strategies and methods.",
-                "t1": "Cloud",
-                "t2": "Web Frameworks",
-                "t3": "Hardware and Firmware"
-            },
-            "block5": {
-                "Heading": "Digital Transformation Services",
-                "t1": "Workforce Capacity",
-                "d1": "Enhancing your workforce capacity by facilitating organizational change and implementing new strategies. Empowering your team to provide better results with improved performance and productivity.",
-                "t2": "Operations Realignment",
-                "d2": "Achieving operations realignment and outgrowing competitors by leveraging data and information technologies. Enabling effective leadership strategies for success.",
-                "t3": "Sustainable Change",
-                "d3": "To achieve sustainable change, we prioritize customer relationships and embracing change by delivering reliable results.",
-                "t4": "Strategy Transformation",
-                "d4": "Breaking down barriers brings change by adopting new technologies and approaches to implement strategies."
-            },
-            "block6": {
-                "Heading": "Consulting Services",
-                "t1": "Feasibility Study",
-                "d1": "Make sure your project is feasible. Let us help you find out through a TELOS report, which assesses Technical, Economic, Legal, Operational, and Scheduling factors.",
-                "t2": "Performance Assessment",
-                "d2": "Evaluating your organization's employees and leaders on their performance, knowledge, and skills. We help identify areas for improvement and provide recommendations to enhance productivity and efficiency.",
-                "t3": "Research & Development",
-                "d3": "Helping enhance your projects by conducting thorough research and tapping into the expertise of industry professionals. Our research will take your capabilities to the next level.",
-                "t4": "Validation",
-                "d4": "Enhancing the reliability of your production and services by utilizing information technology to gather data for validation and analysis, optimizing processes for increased efficiency and profitability. "
+                "heading": "",
+                "text": ""
             }
         },
         {
@@ -67,59 +17,9 @@
                 "title": "Servicios - HalfNine | Socio Confiable De Soluciones De Automatización",
                 "description": "Excelencia garantizada en automatización industrial. Nuestro equipo experimentado de ingenieros está listo para replicar soluciones probadas para su negocio."
             },
-            "img": "Servicios de Automatización Industrial",
-            "lm": "Leer Más",
             "block1": {
-                "heading": "Automatizando todas las industrias juntos",
-                "text1": "Los servicios de HalfNine conectan sistemas con el objetivo de maximizar la producción, garantizar la seguridad y optimizar el uso de los recursos, lo que genera un retorno de la inversión (ROI) significativo. Al comprender los requisitos únicos de cada proyecto, desarrollamos soluciones que garantizan el más alto nivel de calidad y confiabilidad. Nuestro compromiso con el soporte y el mantenimiento continuos garantiza que su solución de automatización seguirá siendo completamente funcional y confiable en los años venideros."
-            },
-            "block2": {
-                "item1": "Desarrollo de Hardware y Software",
-                "item1d": "Nuestro enfoque es desarrollar un sistema de gestión de entrega que permita un seguimiento rápido, transparente y eficiente del progreso, lo que permite una toma de decisiones informada. También proporcionamos servicios ágiles de automatización industrial para mejorar sus sistemas en función de sus requisitos únicos. Nuestra prioridad es entregar con transparencia y eficiencia.",
-                "item2": "Transformación Digital",
-                "item2d": "Mejore sus procesos y sistemas con tecnologías que ofrecen procesamiento eficiente y adaptable con optimización de información y recopilación de datos. Transforme la eficiencia, la producción y la innovación de su organización con la tecnología.",
-                "item3": "Consultoría de Proyectos",
-                "item3d": "Ofrecemos soluciones para ayudarlo a estar tranquilo sobre la excelencia y la calidad de sus proyectos. Con soluciones que aseguran cobertura de alta calidad, factibilidad, diseño de sistemas, gestión de proyectos, instalación y puesta en marcha, y mantenimiento. Nuestro experimentado equipo le ayuda a maximizar su potencial en su proyecto."
-            },
-            "block3": {
-                "Heading": "Servicios de desarrollo",
-                "t1": "Estrategia y características",
-                "d1": "Le ayudamos a identificar las mejores estrategias y características para sus productos y aplicaciones. Al analizar sus necesidades y desafíos, podemos determinar los puntos clave de apalancamiento y crear un plan para el éxito.",
-                "t2": "UX y arquitectura",
-                "d2": "Nuestro equipo de expertos lo ayudará a seleccionar las tecnologías apropiadas para crear una pila de tecnología personalizada que se alinee perfectamente con su experiencia de usuario deseada.",
-                "t3": "Desarrollo y pruebas",
-                "d3": "Nuestro proceso transparente le permite mantener el control sobre las etapas de desarrollo y prueba, lo que garantiza un lanzamiento exitoso de la tecnología en funcionamiento.",
-                "t4": "Soporte y mantenimiento",
-                "d4": "Ayudamos con el soporte y el mantenimiento al ofrecer una línea de soporte directo para abordar cualquier error o problema de inmediato. Este eficiente sistema de respuesta ahorra un tiempo valioso y garantiza operaciones ininterrumpidas."
-            },
-            "block4": {
-                "Heading": "Nuestro Stack de tecnología para una evolución de TI duradera",
-                "Text": "Tenemos la experiencia para emplear las tecnologías más recientes, en constante evolución o las clásicas y más confiables, y las usamos para replicar estrategias y métodos probados.",
-                "t1": "Nube",
-                "t2": "Framework Web",
-                "t3": "Hardware y Firmware"
-            },
-            "block5": {
-                "Heading": "Servicios de Transformación Digital",
-                "t1": "Capacidad de la fuerza laboral",
-                "d1": "Mejorando su fuerza laboral facilitando el cambio organizacional e implementando nuevas estrategias. Empoderando a su equipo para que brinde mejores resultados con un mejor rendimiento y productividad.",
-                "t2": "Realineación de operaciones",
-                "d2": "Logrando superar a los competidores mediante el aprovechamiento de las tecnologías de datos e información. Habilitación de estrategias de liderazgo efectivas para el éxito.",
-                "t3": "Cambio Sostenible",
-                "d3": "Concéntrese en resultados consistentes a través de la inversión en las relaciones con los clientes y el cambio.",
-                "t4": "Transformación de la estrategia",
-                "d4": "Derribando barreras trae cambios al adoptar nuevas tecnologías y enfoques para implementar estrategias."
-            },
-            "block6": {
-                "Heading": "Consultoría Tecnológica",
-                "t1": "Estudio de factibilidad",
-                "d1": "Asegúrate de que tu proyecto sea factible. Permítanos ayudarlo a averiguarlo a través de un informe TELOS, que evalúa los factores técnicos, económicos, legales, operativos y de programación.",
-                "t2": "Evaluación del desempeño",
-                "d2": "Evaluar a los empleados y líderes de su organización en su desempeño, conocimiento y habilidades. Ayudamos a identificar áreas de mejora y brindamos recomendaciones para mejorar la productividad y la eficiencia.",
-                "t3": "Investigación y desarrollo",
-                "d3": "Mejorar sus proyectos realizando una investigación exhaustiva y aprovechando la experiencia de los profesionales de la industria. Nuestra investigación llevará sus capacidades al siguiente nivel.",
-                "t4": "Validación",
-                "d4": "Mejorar la confiabilidad de su producción y servicios mediante el uso de tecnología de la información para recopilar datos para validación y análisis, optimizando procesos para aumentar la eficiencia y la rentabilidad."
+                "heading": "",
+                "text": ""
             }
         }
     ]

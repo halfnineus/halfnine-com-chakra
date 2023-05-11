@@ -9,70 +9,63 @@ import { useRouter } from 'next/router';
 import React from "react";
 import FadeInBox from '../fadeInBox';
 
-const devPractices = ({ currentStep, setCurrentStep }: any) => {
+const DevPractices = () => {
   const { locale } = useRouter();
-  // const [activeTab, setActiveTab] = useState(0);
   const filteredData = data.filter((p) => p.locale === locale);
   return (
-    <>
-      <FadeInBox>
-        <Flex direction="column-reverse" mb={2}>
-          <Box
-            as="hr"
-            bg="blue.500"
-            h="3px"
-            w="64px"
-            my={1}
-          />
-          {datax.filter(p => p.locale === locale).map((indexData, i) => (
-            <div key={i}>
-              <Heading pb={2}>
-                {indexData.text}
-              </Heading>
-              <Text pb={4} color={'gray.600'} fontStyle={'oblique'}>
-                {indexData.description}
-              </Text>
-            </div>
-          ))}
-        </Flex>
-        {/* </FadeInBox> */}
-        {/* <FadeInBox shadow={'xs'} w={'full'} rounded={'xl'} bg={'white'} p={4}> */}
-        <SimpleGrid
-          shadow={'xs'} w={'full'} rounded={'xl'} bg={'white'} p={4}
-          columns={{ base: 2, md: 4, }}
-          spacing={6}
-        >
-          {filteredData.map((tab, index) => (
-            <div key={index}>
-              {/* <FadeInBox delay={index * 0.15} key={index}> */}
-              <Flex direction="column-reverse" mb={2}>
-                <Box
-                  as="hr"
-                  bg="cyan.500"
-                  h="2px"
-                  w="46px"
-                  my={1}
-                />
-                <Heading as={'h3'} fontSize={{ base: 'xl', md: '2xl' }}>
-                  {/* <span style={{ fontSize: '0.6em', marginRight: '0.2em' }}>
+    <FadeInBox>
+      <Flex direction="column-reverse" mb={2}>
+        <Box
+          as="hr"
+          bg="blue.500"
+          h="3px"
+          w="64px"
+          my={1}
+        />
+        {datax.filter(p => p.locale === locale).map((indexData, i) => (
+          <div key={i}>
+            <Heading pb={2}>
+              {indexData.text}
+            </Heading>
+            <Text pb={4} color={'gray.600'} fontStyle={'oblique'}>
+              {indexData.description}
+            </Text>
+          </div>
+        ))}
+      </Flex>
+      <SimpleGrid
+        shadow={'xs'} w={'full'} rounded={'xl'} bg={'white'} p={4}
+        columns={{ base: 2, md: 4, }}
+        spacing={6}
+      >
+        {filteredData.map((tab, index) => (
+          <div key={index}>
+            <Flex direction="column-reverse" mb={2}>
+              <Box
+                as="hr"
+                bg="cyan.500"
+                h="2px"
+                w="46px"
+                my={1}
+              />
+              <Heading as={'h3'} fontSize={{ base: 'xl', md: '2xl' }}>
+                {/* <span style={{ fontSize: '0.6em', marginRight: '0.2em' }}>
                   {index + 1}.
                 </span> */}
-                  {tab.title}
-                </Heading>
-              </Flex>
-              <Text pb={4}>
-                {tab.description}
-              </Text>
-              {/* </FadeInBox> */}
-            </div>
-          ))}
-        </SimpleGrid>
-      </FadeInBox>
-    </>
+                {tab.title}
+              </Heading>
+            </Flex>
+            <Text pb={4}>
+              {tab.description}
+            </Text>
+          </div>
+        ))}
+      </SimpleGrid>
+    </FadeInBox>
   );
 }
 
-export default devPractices;
+export default DevPractices;
 
 const datax = [
   {
@@ -122,7 +115,7 @@ const data = [
     locale: "en",
     title: "Deployment",
     description:
-      "After trial and following all processes, your app is ready to launch on the App Store or Play Store.",
+      "After trial and following all processes, your app is ready to be deployed on any Pre-Determined System.",
   },
   {
     locale: "en",
@@ -167,7 +160,7 @@ const data = [
     locale: "es",
     title: "Despliegue",
     description:
-      "Después de la prueba y siguiendo todos los procesos, su aplicación está lista para ser lanzada en la App Store o Play Store.",
+      "Después de la prueba y siguiendo todos los procesos, su aplicación está lista para implementarse en cualquier sistema predeterminado.",
   },
   {
     locale: "es",

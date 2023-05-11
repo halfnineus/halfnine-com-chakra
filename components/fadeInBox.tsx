@@ -29,14 +29,10 @@ const FadeInBox: React.FC<FadeInBoxProps> = ({
         opacity: 1,
         x: 0,
         y: 0,
-        transition: { 
-          duration: time, 
-          delay,
-          ease: "easeOut"
-        },
+        transition: { duration: time, delay, ease: "easeOut" },
       });
     }
-  }, [controls, inView]);
+  }, [controls, inView, time, delay]);
 
   return (
     <MotionBox
@@ -47,14 +43,14 @@ const FadeInBox: React.FC<FadeInBoxProps> = ({
           fadeDirection === 'left'
             ? -distance
             : fadeDirection === 'right'
-            ? distance
-            : 0,
+              ? distance
+              : 0,
         y:
           fadeDirection === 'up'
             ? -distance
             : fadeDirection === 'down'
-            ? distance
-            : 0,
+              ? distance
+              : 0,
       }}
       animate={controls}
       {...props}

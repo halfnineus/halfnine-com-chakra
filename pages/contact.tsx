@@ -3,7 +3,6 @@ import {
     Box,
     Heading,
     Text,
-    Tag,
     Button,
     VStack,
     Stack,
@@ -30,8 +29,6 @@ import {
 import { MdOutlineEmail, MdPhone, } from 'react-icons/md'
 import { SlPhone } from 'react-icons/sl'
 import { BsPerson, BsBuilding } from 'react-icons/bs'
-import { BiMapPin } from 'react-icons/bi'
-import { RxCalendar } from 'react-icons/rx'
 import { IoMailOutline } from 'react-icons/io5'
 
 import { useState } from "react"
@@ -52,11 +49,9 @@ const INDEX = () => {
     const [message, setMessage] = useState('');
     const [submitted, setSubmitted] = useState(false)
 
-    // const [cfTurnstileToken, setcfTurnstileToken] = useState(null);
     const [turnstileSolved, setTurnstileSolved] = useState(false);
     const onTurnstileSolved = (token: any) => {
         setTurnstileSolved(true);
-        // setcfTurnstileToken(token);
     };
 
     const toast = useToast({
@@ -354,7 +349,7 @@ const INDEX = () => {
                                 >
                                     {indexData.callblock.title}
                                 </Button>
-                                <Button
+                                {/* <Button
                                     onClick={(e: any) => {
                                         setrefECV("https://duckduckgo.com/?q=Orlando%2C+FL&iaxm=maps");
                                         setprettierECV("duckduckgo.com");
@@ -371,8 +366,8 @@ const INDEX = () => {
                                     leftIcon={<BiMapPin color={'black'} size="24px" />}
                                 >
                                     {indexData.mapblock.title}
-                                </Button>
-                                <Button
+                                </Button> */}
+                                {/* <Button
                                     onClick={(e: any) => {
                                         setrefECV("https://meetings.hubspot.com/dan-ochoa");
                                         setprettierECV("hubspot.com");
@@ -389,7 +384,7 @@ const INDEX = () => {
                                     leftIcon={<RxCalendar color={'black'} size="24px" />}
                                 >
                                     {indexData.calblock.title}
-                                </Button>
+                                </Button> */}
                             </Center>
                         </Box>
                     </>

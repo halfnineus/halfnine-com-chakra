@@ -226,7 +226,7 @@ export default function SCFooter() {
                                     as={FaTwitterSquare}
                                 />
                             </Link>
-                            <Link href={'https://www.linkedin.com/company/halfninecom/'} target={'_blank'}>
+                            <Link href={'https://www.linkedin.com/company/halfnineus/'} target={'_blank'}>
                                 <Icon
                                     transform={'scale(0.95)'}
                                     _hover={{ color: "#0077B5", transform: 'scale(1)' }}

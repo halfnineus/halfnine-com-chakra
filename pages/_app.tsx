@@ -23,7 +23,7 @@ export default function MyApp({ Component, pageProps }: AppProps) {
     return () => {
       router.events.off('routeChangeComplete', handleRouteChange)
     }
-  }, [router.events])
+  }, [])
   // Analytics
   return (
     <ChakraProvider theme={Theme}>
