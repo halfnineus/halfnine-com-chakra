@@ -1,5 +1,6 @@
-import { Box, Text, List, ListItem, Image, SimpleGrid, Heading } from "@chakra-ui/react"
+import { Box, Text, List, ListItem, Image, SimpleGrid, Heading, Breadcrumb, BreadcrumbItem } from "@chakra-ui/react"
 import { NextSeo } from "next-seo"
+import Link from "next/link";
 import { useRouter } from "next/router"
 import indexdat from '../../assets/our-approach/index.json'
 
@@ -25,8 +26,8 @@ const MyBox = (props: any) => {
 const MyFeature = (props: any) => {
     return (
         <ListItem>
-            <Text  fontWeight="bold" display={'inline'}>{props.txt}{`: `}</Text>
-            <Text  display={'inline'}>{props.txtd}</Text>
+            <Text fontWeight="bold" display={'inline'}>{props.txt}{`: `}</Text>
+            <Text display={'inline'}>{props.txtd}</Text>
         </ListItem>
     );
 };
@@ -54,6 +55,24 @@ const Index = () => {
                                 description: indexData.head.description
                             }}
                         />
+                        <Box py={4} maxW={'container.xl'} px={{ base: '4', sm: '4', md: '4', lg: '4', xl: 0 }} mx="auto">
+                            <Breadcrumb fontSize={'sm'} textColor="blackAlpha.700" letterSpacing={'tighter'}>
+                                <BreadcrumbItem>
+                                    <Link href="/">
+                                        <Text _hover={{ color: 'blue.400' }}>{"Home"}</Text>
+                                    </Link>
+                                </BreadcrumbItem>
+                                <BreadcrumbItem>
+                                    <Text pointerEvents={'none'}>{"Our Approach"}</Text>
+                                </BreadcrumbItem>
+                            </Breadcrumb>
+                        </Box>
+                        <Box bg={'blue.600'} textColor={'white'}>
+                            <Box maxW={'container.xl'} px={{ base: '4', sm: '4', md: '4', lg: '4', xl: 0 }} mx="auto">
+                                <Heading py={2}>
+                                </Heading>
+                            </Box>
+                        </Box>
                         <Box maxW={'container.xl'} px={{ base: '4', sm: '4', md: '4', lg: '4', xl: '0' }} mx="auto">
                             <Box pt={4} pb={12}>
                                 <Heading as={"h1"} letterSpacing="tight" fontWeight="bold" pb={2}>{indexData.title.h1}</Heading>

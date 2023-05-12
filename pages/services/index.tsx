@@ -1,9 +1,12 @@
 import {
     Box,
+    BreadcrumbItem,
     Heading,
     SimpleGrid,
+    Breadcrumb,
+    Text,
 } from "@chakra-ui/react"
-import { useRouter } from "next/router"
+import router, { useRouter } from "next/router"
 import { NextSeo } from "next-seo"
 import Link from "next/link"
 
@@ -35,6 +38,18 @@ const Index = () => {
                             description: indexData.head.description
                         }}
                     />
+                    <Box py={4} maxW={'container.xl'} px={{ base: '4', sm: '4', md: '4', lg: '4', xl: 0 }} mx="auto">
+                        <Breadcrumb fontSize={'sm'} textColor="blackAlpha.700" letterSpacing={'tighter'}>
+                            <BreadcrumbItem>
+                                <Link href="/" passHref>
+                                    <Text _hover={{ color: 'blue.400' }}>{"Home"}</Text>
+                                </Link>
+                            </BreadcrumbItem>
+                            <BreadcrumbItem>
+                                <Text _hover={{ color: 'blue.400' }}>{"Services"}</Text>
+                            </BreadcrumbItem>
+                        </Breadcrumb>
+                    </Box>
                     <Box bg={'blue.600'} textColor={'white'}>
                         <Box maxW={'container.xl'} px={{ base: '4', sm: '4', md: '4', lg: '4', xl: 0 }} mx="auto">
                             <Heading py={2}>

@@ -6,7 +6,7 @@ export default function Custom404() {
   return (
     <>
       <NextSeo title={'404 Not Found'} description={'404 Not Found'} />
-      <Box mx="auto" maxW={'container.xl'}>
+      <Box mx="auto" maxW={'container.xl'} height={"68vh"}>
         <Stack
           direction={['column', 'row']}
           align={['center', 'flex-start']}

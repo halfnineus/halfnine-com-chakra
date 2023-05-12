@@ -4,8 +4,11 @@ import {
     SimpleGrid,
     HStack,
     Heading,
+    Breadcrumb,
+    BreadcrumbItem,
 } from "@chakra-ui/react"
 import { NextSeo } from "next-seo"
+import Link from "next/link"
 
 import { useRouter } from "next/router"
 import { IoTrainOutline } from "react-icons/io5"
@@ -59,9 +62,22 @@ const Index = () => {
                             description: indexData.head.description
                         }}
                     />
-
-                    <Box py={{ base: 16, md: 24 }} bg={'blue.600'} textColor={'white'}>
+                    <Box py={4} maxW={'container.xl'} px={{ base: '4', sm: '4', md: '4', lg: '4', xl: 0 }} mx="auto">
+                        <Breadcrumb fontSize={'sm'} textColor="blackAlpha.700" letterSpacing={'tighter'}>
+                            <BreadcrumbItem>
+                                <Link href="/">
+                                    <Text _hover={{ color: 'blue.400' }}>{"Home"}</Text>
+                                </Link>
+                            </BreadcrumbItem>
+                            <BreadcrumbItem>
+                                <Text pointerEvents={'none'}>{"Industries"}</Text>
+                            </BreadcrumbItem>
+                        </Breadcrumb>
+                    </Box>
+                    <Box bg={'blue.600'} textColor={'white'}>
                         <Box maxW={'container.xl'} px={{ base: '4', sm: '4', md: '4', lg: '4', xl: 0 }} mx="auto">
+                            <Heading py={2}>
+                            </Heading>
                         </Box>
                     </Box>
                     <Box py={{ base: 16, md: 24 }} maxW={'container.xl'} px={{ base: '4', sm: '4', md: '4', lg: '4', xl: 0 }} mx="auto">

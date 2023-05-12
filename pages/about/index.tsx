@@ -9,13 +9,16 @@ import {
   Stack,
   Center,
   Icon,
+  Breadcrumb,
+  BreadcrumbItem,
+  Link,
 } from '@chakra-ui/react'
 import { useRouter } from "next/router"
 import { NextSeo } from 'next-seo'
 
 
-import aboutdat from '../assets/about.json'
-import Link from 'next/link'
+import aboutdat from '../../assets/about.json'
+// import Link from 'next/link'
 import { BsFillFileEarmarkBarGraphFill, BsRecordCircle } from 'react-icons/bs'
 import { MdSupportAgent } from 'react-icons/md'
 import { RiOrganizationChart } from 'react-icons/ri'
@@ -139,6 +142,24 @@ const IndexAbout = () => {
                 description: aboutData.head.description
               }}
             />
+            <Box py={4} maxW={'container.xl'} px={{ base: '4', sm: '4', md: '4', lg: '4', xl: 0 }} mx="auto">
+              <Breadcrumb fontSize={'sm'} textColor="blackAlpha.700" letterSpacing={'tighter'}>
+                <BreadcrumbItem>
+                  <Link href="/">
+                    <Text _hover={{ color: 'blue.400' }}>{"Home"}</Text>
+                  </Link>
+                </BreadcrumbItem>
+                <BreadcrumbItem>
+                  <Text pointerEvents={'none'}>{"About"}</Text>
+                </BreadcrumbItem>
+              </Breadcrumb>
+            </Box>
+            <Box bg={'blue.600'} textColor={'white'}>
+              <Box maxW={'container.xl'} px={{ base: '4', sm: '4', md: '4', lg: '4', xl: 0 }} mx="auto">
+                <Heading py={2}>
+                </Heading>
+              </Box>
+            </Box>
             <Box maxW={'container.xl'} px={{ base: '4', sm: '4', md: '4', lg: '4', xl: '0' }} mx="auto">
               <Box pt={4} pb={20}>
                 <Heading as={'h1'} letterSpacing="tight" fontWeight="bold" pb={2}>{aboutData.block1.heading}</Heading>
