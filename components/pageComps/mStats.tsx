@@ -25,11 +25,12 @@ function StatsCard(props: StatsCardProps) {
   const targetPercentage = parseInt(props.stat);
 
   useEffect(() => {
+    const intervalDuration = 1000 / targetPercentage;
     const interval = setInterval(() => {
       if (percentage < targetPercentage) {
         setPercentage((prevPercentage) => prevPercentage + 1);
       }
-    }, 20);
+    }, intervalDuration);
 
     return () => clearInterval(interval);
   }, [percentage, targetPercentage]);
@@ -59,6 +60,7 @@ function StatsCard(props: StatsCardProps) {
     </Stat>
   );
 }
+
 
 export default function BasicStatistics() {
   const { locale } = useRouter();

@@ -1,0 +1,26 @@
+{
+    "data": [
+        {
+            "locale": "en",
+            "head": {
+                "title": "Get a Quote - HalfNine",
+                "description": ""
+            },
+            "block1": {
+                "heading": "",
+                "text": ""
+            }
+        },
+        {
+            "locale": "es",
+            "head": {
+                "title": "Obtenga una Cotización - HalfNine",
+                "description": ""
+            },
+            "block1": {
+                "heading": "",
+                "text": ""
+            }
+        }
+    ]
+}

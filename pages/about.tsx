@@ -17,7 +17,7 @@ import { useRouter } from "next/router"
 import { NextSeo } from 'next-seo'
 
 
-import aboutdat from '../../assets/about.json'
+import aboutdat from '../assets/about.json'
 // import Link from 'next/link'
 import { BsFillFileEarmarkBarGraphFill, BsRecordCircle } from 'react-icons/bs'
 import { MdSupportAgent } from 'react-icons/md'

@@ -103,7 +103,7 @@ const IndexPage = () => {
                 description: indexData.head.description
               }}
             />
-
+            <React.Fragment />
             <Box maxW={'1520px'} px={{ base: '4', sm: '4', md: '4', lg: '4', xl: 0 }} pt={4} mx="auto">
               <Box position={'relative'}>
                 <Image alt='Background Image' src={'/img/index/indxbg.png'} loading={'lazy'} position="absolute" opacity={0.03} zIndex={-1} mx={-4} />
@@ -113,9 +113,7 @@ const IndexPage = () => {
                   <Heading as={'h1'} fontSize={{ base: "3xl", md: "5xl" }}>
                     {indexData.block1.h1_1}
                     <br />
-                    {/* <Text  fontWeight={'bold'} fontSize={{ base: "3xl", md: "5xl" }}> */}
                     {indexData.block1.h1_2}
-                    {/* </Text> */}
                   </Heading>
                 </Box>
               </Box>
@@ -131,7 +129,7 @@ const IndexPage = () => {
 
             <Box bg={'#fbfbfb'} py={{ base: 16, md: 24 }}>
               <Box maxW={'container.xl'} px={{ base: '4', sm: '4', md: '4', lg: '4', xl: 0 }} mx="auto">
-                <FadeInBox>
+                <FadeInBox fadeDirection='down' >
                   <MStats />
                 </FadeInBox>
               </Box>

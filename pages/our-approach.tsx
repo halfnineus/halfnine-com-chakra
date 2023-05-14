@@ -2,7 +2,7 @@ import { Box, Text, List, ListItem, Image, SimpleGrid, Heading, Breadcrumb, Brea
 import { NextSeo } from "next-seo"
 import Link from "next/link";
 import { useRouter } from "next/router"
-import indexdat from '../../assets/our-approach/index.json'
+import indexdat from '../assets/our-approach/index.json'
 
 
 const MyBox = (props: any) => {

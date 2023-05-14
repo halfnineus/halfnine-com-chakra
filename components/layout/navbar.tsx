@@ -1,19 +1,15 @@
 import {
     Box,
     Button,
-    Container,
     Flex,
     HStack,
     IconButton,
     useBreakpointValue,
     useDisclosure,
     Icon,
-    Image,
     SimpleGrid,
-    SlideFade,
     Stack,
     Text,
-    AspectRatio,
     Divider,
     Center,
     Collapse,
@@ -24,9 +20,8 @@ import * as React from 'react'
 import { useState } from 'react'
 import Link from 'next/link'
 
-import { FiPlayCircle } from 'react-icons/fi'
-import { FiChevronDown } from 'react-icons/fi'
-import { items, tutorials } from './data'
+import { FiChevronDown, FiChevronsRight } from 'react-icons/fi'
+import { items } from './navbardata'
 import { CloseIcon, HamburgerIcon } from '@chakra-ui/icons'
 import { MdPhone } from 'react-icons/md'
 
@@ -42,6 +37,7 @@ const App = () => {
         const position = window.pageYOffset;
         setScrollPosition(position);
     };
+
     if (typeof window !== 'undefined') {
         window.addEventListener('scroll', handleScroll, { passive: true });
     }
@@ -49,6 +45,7 @@ const App = () => {
         base: false,
         lg: true,
     })
+
     const { onToggle, isOpen, onClose } = useDisclosure()
     const { onToggle: onToggleMobile, isOpen: isOpenMobile, onClose: onCloseMobile } = useDisclosure()
 
@@ -90,74 +87,59 @@ const App = () => {
                 top={0}
                 width="100%"
             >
-                {isRootPage ? Logo : <Link onClick={onClose} href={'/'}>{Logo}</Link>}
-                {isDesktop ? (
-                    <Flex justify="space-between" flex="1">
-                        <Center>
-                            <Button _hover={{ textDecor: "none", color: 'blue.400' }}
-                                variant="link"
-                                rightIcon={<PopoverIcon isOpen={isOpen} />}
-                                onClick={onToggle}
-                                mr={2}
-                                color={'gray.600'}
-                            >
-                                Services
-                            </Button>
-                            <Link onClick={onClose} href={'/industries'}>
-                                <Button mx={6} variant="link" color={'gray.600'} _hover={{ textDecor: "none", color: 'blue.400' }}>
-                                    Industries
+                {isRootPage ? Logo : <Link href={'/'} onClick={() => { onClose(); onCloseMobile(); }}>{Logo}</Link>}
+                <Flex display={{ base: 'none', lg: 'flex' }} justify="space-between" flex="1">
+                    <Center>
+                        {ServiceItem.filter(p => p.locale === locale).map((serviceItem, index) => (
+                            <Box mr={2} width={'fit-content'} key={index}>
+                                <Button onClick={onToggle} rightIcon={<PopoverIcon isOpen={isOpen} />} variant="link" color={'gray.600'} _hover={{ textDecor: "none", color: 'blue.400' }}>
+                                    {serviceItem.label}
                                 </Button>
-                            </Link>
-                            <Link onClick={onClose} href={'/our-approach'}>
-                                <Button mx={6} variant="link" color={'gray.600'} _hover={{ textDecor: "none", color: 'blue.400' }}>
-                                    Approach
-                                </Button>
-                            </Link>
-                            <Link onClick={onClose} href={'/about'}>
-                                <Button mx={6} variant="link" color={'gray.600'} _hover={{ textDecor: "none", color: 'blue.400' }}>
-                                    About
-                                </Button>
-                            </Link>
-                            <Link onClick={onClose} href={'/pricing'}>
-                                <Button mx={6} variant="link" color={'gray.600'} _hover={{ textDecor: "none", color: 'blue.400' }}>
-                                    Pricing
-                                </Button>
-                            </Link>
-                        </Center>
-                        {ContactItem.filter(p => p.locale === locale).map((contactItem, index) => (
-                            <Link key={index} href={'/contact'} >
-                                <Button
-                                    display={{ base: 'none', sm: 'block' }}
-                                    _focus={{ shadow: 'outline' }}
-                                    colorScheme={'blue'}
-                                >
-                                    {contactItem.label}
-                                </Button>
-                            </Link>
+                            </Box>
                         ))}
-                    </Flex>
-                ) : (
-                    <HStack>
-                        <Link href={'/contact'}>
-                            <IconButton
-                                icon={<MdPhone />}
-                                variant={'outline'}
-                                aria-label={'Call Button'}
-                                colorScheme='gray'
-                                fontSize='20px'
-                            />
+                        {NAV_ITEMS.filter(p => p.locale === locale).map((contactItem, index) => (
+                            <Box width={'fit-content'} mx={5} key={index}>
+                                <Link onClick={onClose} href={contactItem.href}>
+                                    <Button variant="link" color={'gray.600'} _hover={{ textDecor: "none", color: 'blue.400' }}>
+                                        {contactItem.label}
+                                    </Button>
+                                </Link>
+                            </Box>
+                        ))}
+                    </Center>
+                    {ContactItem.filter(p => p.locale === locale).map((contactItem, index) => (
+                        <Link onClick={onClose} key={index} href={'/contact'} >
+                            <Button
+                                display={{ base: 'none', sm: 'block' }}
+                                _focus={{ shadow: 'outline' }}
+                                colorScheme={'blue'}
+                            >
+                                {contactItem.label}
+                            </Button>
                         </Link>
+                    ))}
+                </Flex>
+                <HStack display={{ base: 'inherit', lg: 'none' }}>
+                    <Link href={'/contact'}>
                         <IconButton
-                            display={{ base: 'flex', lg: 'none' }}
-                            onClick={onToggleMobile}
-                            icon={
-                                isOpenMobile ? <CloseIcon fontSize="1rem" /> : <HamburgerIcon fontSize="1.25rem" />
-                            }
-                            variant={'ghost'}
-                            aria-label={'Toggle Navigation'}
+                            icon={<MdPhone />}
+                            variant={'outline'}
+                            aria-label={'Call Button'}
+                            colorScheme='gray'
+                            fontSize='20px'
                         />
-                    </HStack>
-                )}
+                    </Link>
+                    <IconButton
+                        display={{ base: 'flex', lg: 'none' }}
+                        onClick={onToggleMobile}
+                        icon={
+                            isOpenMobile ? <CloseIcon fontSize="1rem" /> : <HamburgerIcon fontSize="1.25rem" />
+                        }
+                        variant={'ghost'}
+                        aria-label={'Toggle Navigation'}
+                    />
+                </HStack>
+
             </HStack>
             <Collapse onClick={onToggleMobile} in={isOpenMobile} animateOpacity>
                 <MobileNav />
@@ -166,7 +148,7 @@ const App = () => {
             <Collapse in={isOpen} animateOpacity>
                 <ResourcesSubmenu isOpen={isDesktop && isOpen} onToggle={onToggle} />
             </Collapse>
-        </Box >
+        </Box>
     );
 }
 
@@ -189,135 +171,88 @@ const PopoverIcon = (props: any) => {
     }
     return <Icon mt={1} aria-hidden as={FiChevronDown} __css={iconStyles} />
 }
-
-
 const ResourcesSubmenu = (props: any) => {
-    const { isOpen, onToggle } = props
-    // const { isOpen, onToggle } = useDisclosure();
+    const { isOpen, onToggle } = props;
+    const { locale } = useRouter();
+    const filteredData = items.filter((p) => p.locale === locale);
     return (
-        <Box position="absolute" boxSize="full">
-            {/* <SlideFade in={isOpen}> */}
-            <Box
-                bg={'white'}
-                // bg="bg-surface"
-                boxShadow={'md'}
-                pt={{
-                    base: '4',
-                    md: '8',
-                }}
-                pb="8"
-            >
-                <Container maxW={'container.xl'}>
-                    <Stack
-                        direction={{
-                            base: 'column',
-                            lg: 'row',
-                        }}
-                        spacing={{
-                            base: '14',
-                            lg: '16',
-                        }}
+        <Box position="absolute" boxSize="full" display={{ base: 'none', lg: 'block' }}>
+            <Box bg={'white'} boxShadow={'md'} pt={{ base: '4', md: '8' }} pb="4">
+                <Box maxW={'container.xl'} mx={'auto'} px={{ base: '4', sm: '4', md: '4', lg: '4', xl: 0 }}>
+                    {/* <Stack
+                        direction={{ base: 'column', lg: 'row' }}
+                        spacing={{ base: '14', lg: '8' }}
+                    > */}
+                    <SimpleGrid
+                        width={'full'}
+                        columns={{ md: 4 }}
+                    // maxW={{ lg: '5xl' }}
+                    // gap={{ lg: 'inherit', xl: 24 }}
                     >
-                        <SimpleGrid
-                            columns={{
-                                base: 1,
-                                md: 2,
-                            }}
-                            maxW={{
-                                lg: '3xl',
-                            }}
-                            gap={6}
-                        >
-                            {items.map((item, id) => (
-                                <Stack key={id} spacing="3">
-                                    <Text fontSize="sm" fontWeight="medium" color="accent">
-                                        {item.title}
-                                    </Text>
-                                    <Stack>
-                                        {item.links.map((link, id) => (
-                                            <Link onClick={onToggle} href={link.href} key={id}>
-                                                <Stack spacing="4" direction="row" p="3">
-                                                    <Icon as={link.icon} boxSize="6" color="accent" />
-                                                    <Stack spacing="1">
-                                                        <Text fontWeight="medium">{link.title}</Text>
-                                                        <Text fontSize="sm" color="muted">
-                                                            {link.description}
-                                                        </Text>
-                                                    </Stack>
+                        {SRvItem.filter(p => p.locale === locale).map((rmItem) => (
+                            <Box width={'fit-content'} maxW={"52"} key={rmItem.label}>
+                                <Flex pb={2} direction="column">
+                                    <Box width={'fit-content'} role={'group'}>
+                                        <Link onClick={onToggle} href={'/services'} >
+                                            <Text _groupHover={{ color: 'blue.600' }} key={rmItem.label} fontSize={'lg'} fontWeight={'semibold'}>{rmItem.label}</Text>
+                                        </Link>
+                                    </Box>
+                                    <Box
+                                        as="hr"
+                                        bg="blue.500"
+                                        h="2px"
+                                        w="30px"
+                                    />
+                                </Flex>
+                                <Text fontSize={'sm'}>
+                                    {rmItem.txt}
+                                    {/* We provide full-cycle software development services for any businesses needs. */}
+                                </Text>
+                            </Box>
+                        ))}
+                        {filteredData.map((item, id) => (
+                            <Stack key={id} spacing="4">
+                                <Text fontSize="sm" fontWeight="medium" color="gray.600" pointerEvents={'none'}>
+                                    {item.title}
+                                </Text>
+                                <Stack spacing={5}>
+                                    {item.links.map((link, id) => (
+                                        <Box key={id} width={'fit-content'}>
+                                            <Link onClick={onToggle} href={link.href}>
+                                                <Stack spacing="4" direction="row" role={'group'}>
+                                                    <Icon as={link.icon} boxSize="6" color="gray.600" _groupHover={{ color: 'blue.600' }} />
+                                                    {/* <Stack spacing="1"> */}
+                                                    <Text fontWeight="medium" color="gray.800" _groupHover={{ color: 'blue.400' }}>{link.title}</Text>
+                                                    {/* <Text fontSize="sm" color="muted">{link.description}</Text> */}
+                                                    {/* </Stack> */}
                                                 </Stack>
                                             </Link>
-                                        ))}
-                                    </Stack>
+                                        </Box>
+                                    ))}
                                 </Stack>
-                            ))}
-                        </SimpleGrid>
-                        {/* {tutorials.map((item, id) => (
-                                <Stack key={id} spacing="6">
-                                    <Text fontSize="sm" fontWeight="medium" color="accent">
-                                        {item.title}
-                                    </Text>
-                                    <Stack
-                                        spacing="8"
-                                        direction={{
-                                            base: 'column',
-                                            md: 'row',
-                                            lg: 'column',
-                                        }}
-                                    >
-                                        {item.links.map((link, id) => (
-                                            <Stack
-                                                direction={{
-                                                    base: 'column',
-                                                    lg: 'row',
-                                                }}
-                                                spacing="6"
-                                                key={id}
-                                            >
-                                                <Box>
-                                                    <AspectRatio
-                                                        ratio={3 / 2}
-                                                        width={{
-                                                            base: '60',
-                                                            lg: '40',
-                                                        }}
-                                                    >
-                                                        <Image
-                                                            borderRadius="md"
-                                                            objectFit="cover"
-                                                            src={link.previewImage}
-                                                            alt={link.title}
-                                                        />
-                                                    </AspectRatio>
-                                                </Box>
-
-                                                <Stack spacing="3" shouldWrapChildren>
-                                                    <Stack spacing="1">
-                                                        <Text fontWeight="medium">{link.title}</Text>
-                                                        <Text fontSize="sm" color="muted">
-                                                            {link.description}
-                                                        </Text>
-                                                    </Stack>
-                                                    <Button
-                                                        variant="link"
-                                                        colorScheme="blue"
-                                                        leftIcon={<FiPlayCircle fontSize="1.25rem" />}
-                                                    >
-                                                        Watch video
-                                                    </Button>
-                                                </Stack>
-                                            </Stack>
-                                        ))}
-                                    </Stack>
-                                </Stack>
-                            ))} */}
-                    </Stack>
-                </Container>
+                            </Stack>
+                        ))}
+                    </SimpleGrid>
+                    {RMItem.filter(p => p.locale === locale).map((rmItem, index) => (
+                        <Box py={2} display="flex" justifyContent="flex-end" key={index}>
+                            <Box role={'group'}>
+                                <Link onClick={onToggle} href="/services">
+                                    <HStack>
+                                        <Text color={'gray.700'} _groupHover={{ color: 'blue.400' }}>{rmItem.label}</Text>
+                                        <Icon color={'gray.700'} _groupHover={{ color: 'blue.400' }} pt={0.5} fontSize="2xl">
+                                            <FiChevronsRight />
+                                        </Icon>
+                                    </HStack>
+                                </Link>
+                            </Box>
+                        </Box>
+                    ))}
+                    {/* </Stack> */}
+                </Box>
             </Box>
-            {/* </SlideFade> */}
         </Box>
-    )
-}
-
+    );
+};
 
 
 const MobileNav = () => {
@@ -357,11 +292,11 @@ const MobileNav = () => {
 };
 
 
-const MobileNavItem = ({ label, children, href, subhref }: NavItem) => {
+const MobileNavItem = ({ label, children, href }: NavItem) => {
     const { isOpen, onToggle } = useDisclosure();
     return (
         <Stack spacing={4} onClick={children && onToggle}>
-            <Link href={subhref ?? ''}>
+            <Link href={href ?? ''}>
                 <Flex
                     py={2}
                     justify={'space-between'}
@@ -387,87 +322,38 @@ interface NavItem {
     subLabel?: string;
     children?: Array<NavItem>;
     href?: any;
-    subhref?: any;
 }
 
 const NAV_ITEMS: Array<NavItem> = [
     {
         locale: "en",
-        label: 'Services',
-        subhref: '/services',
-        children: [
-            {
-                label: 'Development',
-                subLabel: 'Transform Ideas into Solutions',
-                href: '/services#development',
-            },
-            {
-                label: 'Digital Transformation',
-                subLabel: 'Efficiency in a Digital Approach',
-                href: '/services#digitalization',
-            },
-            {
-                label: 'Project Consultation',
-                subLabel: 'Change Is Hard - And Necessary',
-                href: '/services#consultation',
-            }
-        ],
+        label: 'Quote',
+        href: '/quote',
     },
     {
         locale: "en",
-        label: 'Industries',
-        subhref: '/industries',
-    },
-    {
-        locale: "en",
-        label: 'Our Approach',
+        label: 'Approach',
         href: '/our-approach',
-        subhref: '/our-approach',
     },
     {
         locale: "en",
         label: 'About',
         href: '/about',
-        subhref: '/about',
     },
     {
         locale: "es",
-        label: 'Servicios',
-        subhref: '/services',
-        children: [
-            {
-                label: 'Desarrollo',
-                subLabel: 'Transforme ideas en soluciones',
-                href: '/services#development',
-            },
-            {
-                label: 'Transformación Digital',
-                subLabel: 'Eficiencia & Modernización de Seguridad',
-                href: '/services#digitalization',
-            },
-            {
-                label: 'Consulta de proyectos',
-                subLabel: 'El cambio es difícil - Y necesario',
-                href: '/services#consultation',
-            }
-        ],
+        label: 'Cotizar',
+        href: '/quote',
     },
     {
         locale: "es",
-        label: 'Industrias',
-        subhref: '/industries',
-    },
-    {
-        locale: "es",
-        label: 'Nuestro enfoque',
+        label: 'Método',
         href: '/our-approach',
-        subhref: '/our-approach',
     },
     {
         locale: "es",
         label: 'Acerca De',
         href: '/about',
-        subhref: '/about',
     },
 ];
 
@@ -479,5 +365,39 @@ const ContactItem = [
     {
         locale: "es",
         label: 'Contáctanos',
+    },
+]
+
+const ServiceItem = [
+    {
+        locale: "en",
+        label: 'Services',
+    },
+    {
+        locale: "es",
+        label: 'Servicios',
+    },
+]
+
+const RMItem = [
+    {
+        locale: "en",
+        label: 'And More',
+    },
+    {
+        locale: "es",
+        label: 'Leer más',
+    },
+]
+const SRvItem = [
+    {
+        locale: "en",
+        label: 'Services',
+        txt: 'We provide full-cycle software development services for any businesses needs.',
+    },
+    {
+        locale: "es",
+        label: 'Servicios',
+        txt: 'Ofrecemos servicios de desarrollo de software de ciclo completo para cualquier necesidad empresarial.',
     },
 ]
