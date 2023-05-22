@@ -1,9 +1,9 @@
-const Staffing = () => {
+const Index = () => {
     return (
         <div>
-            Enter
+            Under Construction
         </div>
     );
 }
 
-export default Staffing;
+export default Index;

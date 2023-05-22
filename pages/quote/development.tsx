@@ -1,9 +1,9 @@
-const Development = () => {
+const Index = () => {
     return (
         <div>
-            Enter
+            Under Construction
         </div>
     );
 }
 
-export default Development;
+export default Index;

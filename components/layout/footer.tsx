@@ -68,7 +68,7 @@ export const links: LinkGroup[] = [
         // title: 'Quick Links',
         links: [
             { label: 'Services', href: '/services' },
-            { label: 'Quote', href: '/quote' },
+            // { label: 'Quote', href: '/quote' },
             { label: 'Approach', href: '/our-approach' },
             { label: 'About', href: '/about' },
             { label: 'Blog', href: 'https://blog.halfnine.com' },
@@ -88,7 +88,7 @@ export const links: LinkGroup[] = [
         // title: 'Enlaces Rápidos',
         links: [
             { label: 'Nuestros Servicios', href: '/services' },
-            { label: 'Cotizar', href: '/quote' },
+            // { label: 'Cotizar', href: '/quote' },
             { label: 'Nuestro enfoque', href: '/our-approach' },
             { label: 'Acerca De', href: '/about' },
             { label: 'Blog', href: 'https://blog.halfnine.com' },

@@ -5,16 +5,16 @@ import { MainLayout, DefaultSEO, Theme } from '../components'
 import React, { useEffect } from 'react'
 
 // Analytics
-import { hotjar } from 'react-hotjar'
+// import { hotjar } from 'react-hotjar'
 import * as gtag from '../lib/gtag'
 import router from 'next/router'
 import Script from 'next/script'
 
 export default function MyApp({ Component, pageProps }: AppProps) {
   // Analytics
-  useEffect(() => {
-    hotjar.initialize(3273893, 6)
-  }, [])
+  // useEffect(() => {
+  //   hotjar.initialize(3273893, 6)
+  // }, [])
   useEffect(() => {
     const handleRouteChange = (url: any) => {
       gtag.pageview(url)

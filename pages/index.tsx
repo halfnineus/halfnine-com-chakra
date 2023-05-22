@@ -103,7 +103,6 @@ const IndexPage = () => {
                 description: indexData.head.description
               }}
             />
-            <React.Fragment />
             <Box maxW={'1520px'} px={{ base: '4', sm: '4', md: '4', lg: '4', xl: 0 }} pt={4} mx="auto">
               <Box position={'relative'}>
                 <Image alt='Background Image' src={'/img/index/indxbg.png'} loading={'lazy'} position="absolute" opacity={0.03} zIndex={-1} mx={-4} />
