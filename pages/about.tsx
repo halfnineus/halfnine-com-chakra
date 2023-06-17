@@ -7,24 +7,22 @@ import {
   Flex,
   SimpleGrid,
   Stack,
-  Center,
   Icon,
   Breadcrumb,
   BreadcrumbItem,
   Link,
   chakra,
   Button,
+  HStack,
 } from '@chakra-ui/react'
 import { useRouter } from "next/router"
 import { NextSeo } from 'next-seo'
 
-
 import aboutdat from '../assets/about.json'
-// import Link from 'next/link'
 import { BsFillFileEarmarkBarGraphFill, BsRecordCircle } from 'react-icons/bs'
 import { MdSupportAgent } from 'react-icons/md'
 import { RiOrganizationChart } from 'react-icons/ri'
-import { BiLinkExternal } from 'react-icons/bi'
+import { FiExternalLink } from 'react-icons/fi'
 
 
 const Feature = (props: any) => {
@@ -277,27 +275,46 @@ const IndexAbout = () => {
                     </chakra.p>
 
                     <Box mt={8}>
-                      <Link
-                        target='_blank'
-                        href='https://surveyr.io'
-                      >
-                        <Button
-                          bg="gray.900"
-                          color="gray.100"
-                          px={5}
-                          py={3}
-                          fontWeight="semibold"
-                          rounded="lg"
-                          _hover={{ bg: "gray.800" }}
-                          rightIcon={<BiLinkExternal size={16} />}
+                      <HStack spacing={2}>
+                        <Link
+                          target='_blank'
+                          href='https://surveyr.io'
                         >
-                          Try Surveyr
-                        </Button>
-                      </Link>
+                          <Button
+                            bg="gray.900"
+                            color="gray.100"
+                            px={5}
+                            py={3}
+                            fontWeight="semibold"
+                            rounded="lg"
+                            _hover={{ bg: "gray.800" }}
+                            rightIcon={<FiExternalLink size={16} />}
+                          >
+                            Try Surveyr
+                          </Button>
+                        </Link>
+                        <Link
+                          target='_blank'
+                          href='https://dev.surveyr.io'
+                        >
+                          <Button
+                            colorScheme='gray'
+                            variant='outline'
+                            px={5}
+                            py={3}
+                            fontWeight="semibold"
+                            rounded="lg"
+                            // _hover={{ bg: "gray.800" }}
+                            rightIcon={<FiExternalLink size={16} />}
+                          >
+                            Development
+                          </Button>
+                        </Link>
+                      </HStack>
                     </Box>
                   </Box>
                 </Box>
-              </Flex>
+              </Flex >
               {/* <Center>
                 <SimpleGrid
                   columns={{ base: 1, sm: 1, md: 1, lg: 3 }}
@@ -305,7 +322,7 @@ const IndexAbout = () => {
                 >
                 </SimpleGrid>
               </Center> */}
-            </Box>
+            </Box >
           </>)
       })}
     </>
