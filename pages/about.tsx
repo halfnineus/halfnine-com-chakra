@@ -12,6 +12,8 @@ import {
   Breadcrumb,
   BreadcrumbItem,
   Link,
+  chakra,
+  Button,
 } from '@chakra-ui/react'
 import { useRouter } from "next/router"
 import { NextSeo } from 'next-seo'
@@ -22,6 +24,7 @@ import aboutdat from '../assets/about.json'
 import { BsFillFileEarmarkBarGraphFill, BsRecordCircle } from 'react-icons/bs'
 import { MdSupportAgent } from 'react-icons/md'
 import { RiOrganizationChart } from 'react-icons/ri'
+import { BiLinkExternal } from 'react-icons/bi'
 
 
 const Feature = (props: any) => {
@@ -219,34 +222,89 @@ const IndexAbout = () => {
             </Box>
             <Box maxW={'container.xl'} px={{ base: '4', sm: '4', md: '4', lg: '4', xl: '0' }} mx="auto" my={20}>
               <Heading pb={8} textAlign={'center'}>{aboutData.block3.heading}</Heading>
-              <Center>
+              <Flex
+                // bg="#edf3f8"
+                // _dark={{ bg: "#3e3e3e" }}
+                // p={50}
+                w="full"
+                alignItems="center"
+                justifyContent="center"
+              >
+                <Box
+                  bg="white"
+                  _dark={{ bg: "gray.800" }}
+                  mx={{ lg: 8 }}
+                  display={{ lg: "flex" }}
+                  maxW={{ lg: "5xl" }}
+                  shadow={{ lg: "lg" }}
+                  rounded={{ lg: "lg" }}
+                >
+                  <Box w={{ lg: "50%" }}>
+                    <Box
+                      h={{ base: 64, lg: "full" }}
+                      rounded={{ lg: "lg" }}
+                      bgSize="cover"
+                      style={{
+                        backgroundImage:
+                          "url('/img/about/surveyr.webp')",
+                      }}
+                    ></Box>
+                  </Box>
+
+                  <Box py={12} px={6} maxW={{ base: "xl", lg: "5xl" }} w={{ lg: "50%" }}>
+                    <chakra.h2
+                      fontSize={{ base: "2xl", md: "3xl" }}
+                      color="gray.800"
+                      _dark={{ color: "white" }}
+                      fontWeight="bold"
+                    >
+                      Cron Monitoring{" "}
+                      <chakra.span color="brand.600" _dark={{ color: "brand.400" }}>
+                        For Laravel
+                      </chakra.span>
+                    </chakra.h2>
+                    <chakra.p mt={4} color="gray.600" _dark={{ color: "gray.400" }}>
+                      {/* Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem
+                      modi reprehenderit vitae exercitationem aliquid dolores ullam
+                      temporibus enim expedita aperiam mollitia iure consectetur dicta
+                      tenetur, porro consequuntur saepe accusantium consequatur. */}
+                      Surveyr.io is made to Schedule Laravel cron jobs. Cron jobs are the backbone of a Laravel application,
+                      carrying out critical tasks on behalf of your customers.
+                      Yet, often these jobs are hard to monitor as they run in the background.
+                      We solve this by monitoring them for you.
+                      {/* No system is 100% resilient and downtime is inevitable. */}
+                      {/* If these jobs stop working for any reason, you may lose data and even customers.  */}
+                    </chakra.p>
+
+                    <Box mt={8}>
+                      <Link
+                        target='_blank'
+                        href='https://surveyr.io'
+                      >
+                        <Button
+                          bg="gray.900"
+                          color="gray.100"
+                          px={5}
+                          py={3}
+                          fontWeight="semibold"
+                          rounded="lg"
+                          _hover={{ bg: "gray.800" }}
+                          rightIcon={<BiLinkExternal size={16} />}
+                        >
+                          Try Surveyr
+                        </Button>
+                      </Link>
+                    </Box>
+                  </Box>
+                </Box>
+              </Flex>
+              {/* <Center>
                 <SimpleGrid
                   columns={{ base: 1, sm: 1, md: 1, lg: 3 }}
                   spacing={{ base: 6, md: 6, lg: 6, xl: 16 }}
                 >
-                  <FeatureBlog
-                    title={`Revolutionize Your Industry with Vision Inspection Systems`}
-                    text={`Vision inspection systems increase productivity and quality while reducing costs by inspecting products at high speeds and detecting defects.`}
-                    page={'https://blog.halfnine.com/inspection-systems/revolutionize-your-industry-with-vision-inspection-systems'}
-                    date={'March 26, 2023'}
-                    imgsrc={'https://images.pexels.com/photos/6801648/pexels-photo-6801648.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=300&w=600'}
-                  />
-                  <FeatureBlog
-                    title={`Industrial Robot Design: Techniques and Best Practices`}
-                    text={`This article covers the basics of robot development design, including techniques, best practices, and common mistakes to avoid for effective design.`}
-                    page={'https://blog.halfnine.com/industrial-robots/industrial-robot-design-techniques-and-best-practices'}
-                    date={'March 25, 2023'}
-                    imgsrc={'https://images.pexels.com/photos/15888223/pexels-photo-15888223.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=300&w=600'}
-                  />
-                  <FeatureBlog
-                    title={'Building Software with Security in Mind'}
-                    text={`Secure software is crucial for developers in the face of increasing cyberattacks. This article covers the risks and best practices for secure software.`}
-                    page={'https://blog.halfnine.com/software-development/building-software-with-security-in-mind-best-practices'}
-                    date={'March 24, 2023'}
-                    imgsrc={'https://images.pexels.com/photos/60504/security-protection-anti-virus-software-60504.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=300&w=600'}
-                  />
                 </SimpleGrid>
-              </Center>
+              </Center> */}
             </Box>
           </>)
       })}

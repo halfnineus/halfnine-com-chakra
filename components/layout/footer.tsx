@@ -67,7 +67,7 @@ export const links: LinkGroup[] = [
         locale: "en",
         // title: 'Quick Links',
         links: [
-            { label: 'Services', href: '/services' },
+            // { label: 'Services', href: '/services' },
             // { label: 'Quote', href: '/quote' },
             { label: 'Approach', href: '/our-approach' },
             { label: 'About', href: '/about' },
@@ -87,7 +87,7 @@ export const links: LinkGroup[] = [
         locale: "es",
         // title: 'Enlaces Rápidos',
         links: [
-            { label: 'Nuestros Servicios', href: '/services' },
+            // { label: 'Nuestros Servicios', href: '/services' },
             // { label: 'Cotizar', href: '/quote' },
             { label: 'Nuestro enfoque', href: '/our-approach' },
             { label: 'Acerca De', href: '/about' },

@@ -89,14 +89,14 @@ const App = () => {
             >
                 {isRootPage ? Logo : <Link href={'/'} onClick={() => { onClose(); onCloseMobile(); }}>{Logo}</Link>}
                 <Flex display={{ base: 'none', lg: 'flex' }} justify="space-between" flex="1">
-                    <Center>
-                        {ServiceItem.filter(p => p.locale === locale).map((serviceItem, index) => (
+                    <Center ml={-5}>
+                        {/* {ServiceItem.filter(p => p.locale === locale).map((serviceItem, index) => (
                             <Box mr={2} width={'fit-content'} key={index}>
                                 <Button onClick={onToggle} rightIcon={<PopoverIcon isOpen={isOpen} />} variant="link" color={'gray.600'} _hover={{ textDecor: "none", color: 'blue.400' }}>
                                     {serviceItem.label}
                                 </Button>
                             </Box>
-                        ))}
+                        ))} */}
                         {NAV_ITEMS.filter(p => p.locale === locale).map((contactItem, index) => (
                             <Box width={'fit-content'} mx={5} key={index}>
                                 <Link onClick={onClose} href={contactItem.href}>
@@ -192,11 +192,11 @@ const ResourcesSubmenu = (props: any) => {
                         {SRvItem.filter(p => p.locale === locale).map((rmItem) => (
                             <Box width={'fit-content'} maxW={"52"} key={rmItem.label}>
                                 <Flex pb={2} direction="column">
-                                    <Box width={'fit-content'} role={'group'}>
+                                    {/* <Box width={'fit-content'} role={'group'}>
                                         <Link onClick={onToggle} href={'/services'} >
                                             <Text _groupHover={{ color: 'blue.600' }} key={rmItem.label} fontSize={'lg'} fontWeight={'semibold'}>{rmItem.label}</Text>
                                         </Link>
-                                    </Box>
+                                    </Box> */}
                                     <Box
                                         as="hr"
                                         bg="blue.500"
@@ -233,7 +233,7 @@ const ResourcesSubmenu = (props: any) => {
                             </Stack>
                         ))}
                     </SimpleGrid>
-                    {RMItem.filter(p => p.locale === locale).map((rmItem, index) => (
+                    {/* {RMItem.filter(p => p.locale === locale).map((rmItem, index) => (
                         <Box py={2} display="flex" justifyContent="flex-end" key={index}>
                             <Box role={'group'}>
                                 <Link onClick={onToggle} href="/services">
@@ -246,7 +246,7 @@ const ResourcesSubmenu = (props: any) => {
                                 </Link>
                             </Box>
                         </Box>
-                    ))}
+                    ))} */}
                     {/* </Stack> */}
                 </Box>
             </Box>
