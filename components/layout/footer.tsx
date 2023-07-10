@@ -208,7 +208,7 @@ export default function SCFooter() {
                             {/* </Flex> */}
                         </Container>
                         <HStack mt={-4} spacing={"3.5"} justify="center">
-                            <Link href={'https://www.facebook.com/halfninecom'} target={'_blank'}>
+                            <Link href={'https://www.facebook.com/halfnineus'} target={'_blank'}>
                                 <Icon
                                     transform={'scale(0.95)'}
                                     _hover={{ color: "#4267B2", transform: 'scale(1)' }}
@@ -217,7 +217,7 @@ export default function SCFooter() {
                                     as={FaFacebookSquare}
                                 />
                             </Link>
-                            <Link href={'https://twitter.com/halfninecom'} target={'_blank'}>
+                            <Link href={'https://twitter.com/halfnine'} target={'_blank'}>
                                 <Icon
                                     transform={'scale(0.95)'}
                                     _hover={{ color: "#1DA1F2", transform: 'scale(1)' }}

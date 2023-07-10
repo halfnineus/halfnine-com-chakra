@@ -27,8 +27,8 @@ const DefaultSEO = () => {
                 ]
             }}
             twitter={{
-                handle: '@halfninecom',
-                site: '@halfninecom',
+                handle: '@halfnine',
+                site: '@halfnine',
                 cardType: 'summary_large_image',
             }}
         />
