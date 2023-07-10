@@ -1,47 +1,34 @@
-# Docker build img
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-`docker build -t ochoadan/opc .`
+## Getting Started
 
-## Built with Next.JS - The React Framework
+First, run the development server:
 
-https://github.com/vercel/next.js
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+```
 
-<a href="https://github.com/vercel/next.js">
-<img src="https://assets.vercel.com/image/upload/v1607554385/repositories/next-js/next-logo.png" height="80">
-</a>
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-## Written in TypeScript
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-https://github.com/microsoft/TypeScript
+This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-<a href="https://github.com/microsoft/TypeScript">
-<img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftkssharma.com%2Fstatic%2Fe265c0549199861ccf1736cb37001aac%2F79a80%2Ftypescript.png&f=1&nofb=1" width="80" />
-</a>
+## Learn More
 
-## User Interface - Chakra-UI
+To learn more about Next.js, take a look at the following resources:
 
-https://github.com/chakra-ui/chakra-ui
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-<a href="https://github.com/chakra-ui/chakra-ui">
-<img src="https://raw.githubusercontent.com/chakra-ui/chakra-ui/main/media/logo-colored@2x.png?raw=true" height="80"/>
-</a>
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-## Mail Handler - Nodemailer
+## Deploy on Vercel
 
-https://github.com/nodemailer/nodemailer
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-<a href="https://github.com/nodemailer/nodemailer">
-<img src="https://nodemailer.com/nm_logo_200x136.png" height="80"/>
-</a>
-
-## Seo Handler - Next-Seo
-
-https://github.com/garmeeh/next-seo
-
-## Extras -
-
-<a href="https://github.com/react-icons/react-icons">react-icons</a>
-
-<a href="https://github.com/framer/motion">framer-motion</a>
-
-<a href="https://github.com/emotion-js/emotion">emotion</a>
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
