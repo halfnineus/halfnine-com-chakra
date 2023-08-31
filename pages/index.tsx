@@ -71,7 +71,7 @@ const Feature1 = ({ title, text, icon }: FeatureProps1) => {
         </Stack>
         <Stack pl={6} spacing={1} pt={3}>
           <Text display={'inline'} fontWeight={600}>{title}</Text>
-          <Text mx={20} color={'gray.600'}>{text}</Text>
+          <Text  color={'gray.600'}>{text}</Text>
         </Stack>
       </Flex>
     </Box>
@@ -135,7 +135,7 @@ const IndexPage = () => {
             </Box>
 
             <Box py={{ base: 16, md: 24 }} maxW={'container.xl'} px={{ base: '4', sm: '4', md: '4', lg: '4', xl: 0 }} mx="auto">
-              <FadeInBox>
+              <FadeInBox fadeDirection='down'>
                 <Flex pb={4} direction="column-reverse">
                   <Box
                     as="hr"
@@ -173,7 +173,7 @@ const IndexPage = () => {
             </Box>
 
             <Box maxW={'container.xl'} px={{ base: '4', sm: '4', md: '4', lg: '4', xl: 0 }} mx="auto" py={{ base: 16, md: 24 }}>
-              <FadeInBox>
+              <FadeInBox fadeDirection='down'>
                 <Flex pb={4} direction="column-reverse">
                   <Box
                     as="hr"

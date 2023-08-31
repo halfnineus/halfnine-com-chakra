@@ -13,7 +13,7 @@ const DevPractices = () => {
   const { locale } = useRouter();
   const filteredData = data.filter((p) => p.locale === locale);
   return (
-    <FadeInBox>
+    <FadeInBox fadeDirection='down'>
       <Flex direction="column-reverse" mb={2}>
         <Box
           as="hr"
@@ -43,7 +43,7 @@ const DevPractices = () => {
             <Flex direction="column-reverse" mb={2}>
               <Box
                 as="hr"
-                bg="cyan.500"
+                bg="blue.500"
                 h="2px"
                 w="46px"
                 my={1}

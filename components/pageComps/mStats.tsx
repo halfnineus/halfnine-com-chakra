@@ -7,12 +7,17 @@ import {
   StatLabel,
   StatNumber,
   Heading,
-} from '@chakra-ui/react';
-import { ReactNode, useEffect, useState } from 'react';
-import { BsPiggyBank } from 'react-icons/bs';
-import { TbTargetArrow } from 'react-icons/tb';
-import { GiSpeedometer } from 'react-icons/gi';
-import { useRouter } from 'next/router';
+  Card,
+  Button,
+  CardBody,
+  CardFooter,
+  CardHeader,
+} from "@chakra-ui/react";
+import { ReactNode, useEffect, useState } from "react";
+import { BsPiggyBank } from "react-icons/bs";
+import { TbTargetArrow } from "react-icons/tb";
+import { GiSpeedometer } from "react-icons/gi";
+import { useRouter } from "next/router";
 
 interface StatsCardProps {
   title: string;
@@ -46,12 +51,12 @@ function StatsCard(props: StatsCardProps) {
     >
       <Flex justifyContent={"space-between"}>
         <Box pl={{ base: 2, md: 4 }}>
-          <StatLabel fontSize={'md'} fontWeight={"medium"} isTruncated>
+          <StatLabel fontSize={"md"} fontWeight={"semibold"} isTruncated>
             {title}
           </StatLabel>
-          <StatNumber mt={-1} fontSize={"3xl"} fontWeight={"medium"}>
+          {/* <StatNumber mt={-1} fontSize={"3xl"} fontWeight={"medium"}>
             {percentage}%
-          </StatNumber>
+          </StatNumber> */}
         </Box>
         <Box my={"auto"} color={"gray.800"} alignContent={"center"}>
           {icon}
@@ -61,26 +66,43 @@ function StatsCard(props: StatsCardProps) {
   );
 }
 
-
 export default function BasicStatistics() {
   const { locale } = useRouter();
   const filteredData = datax.filter((p) => p.locale === locale);
   return (
     <>
       {filteredData.map((indexData, index) => (
-        <Box key={index} maxW="7xl" mx={'auto'}>
+        <Box key={index} maxW="7xl" mx={"auto"}>
           <Flex pb={6} direction="column-reverse">
-            <Box
-              as="hr"
-              bg="blue.500"
-              h="3px"
-              w="64px"
-              my={1}
-            />
+            <Box as="hr" bg="blue.500" h="3px" w="64px" my={1} />
             <Heading>{indexData.text}</Heading>
           </Flex>
           <SimpleGrid columns={{ base: 1, lg: 3 }} spacing={{ base: 5, lg: 8 }}>
-            <StatsCard
+            <Card>
+              <CardHeader mb={-6}>
+                <Heading size="md">{indexData.b1}</Heading>
+              </CardHeader>
+              <CardBody>
+                <Text>{indexData.d1}</Text>
+              </CardBody>
+            </Card>
+            <Card>
+              <CardHeader mb={-6}>
+                <Heading size="md">{indexData.b2}</Heading>
+              </CardHeader>
+              <CardBody>
+                <Text>{indexData.d2}</Text>
+              </CardBody>
+            </Card>
+            <Card>
+              <CardHeader mb={-6}>
+                <Heading size="md">{indexData.b3}</Heading>
+              </CardHeader>
+              <CardBody>
+                <Text>{indexData.d3}</Text>
+              </CardBody>
+            </Card>
+            {/* <StatsCard
               title={indexData.b1}
               stat={'99'}
               icon={<TbTargetArrow size={'3em'} />}
@@ -94,29 +116,33 @@ export default function BasicStatistics() {
               title={indexData.b3}
               stat={'25'}
               icon={<GiSpeedometer size={'3em'} />}
-            />
+            /> */}
           </SimpleGrid>
         </Box>
-      ))
-      }
+      ))}
     </>
   );
 }
-
 
 const datax = [
   {
     locale: "en",
     text: "Benefits from Our Development Services",
     b1: "Less Trial and Error",
+    d1: "We use our Knowledge and Expertise to avoid unnecessary trial and error.",
     b2: "Less Development Costs",
+    d2: "We leverage offshore models to ensure you get competitive rates for the work we provide.",
     b3: "Less Timeline on Updates",
+    d3: "We use agile development methodologies, which allow us to quickly and efficiently.",
   },
   {
     locale: "es",
     text: "Beneficios de Nuestros Servicios de Desarrollo",
     b1: "Menos Prueba y Error",
+    d1: "Utilizamos nuestro conocimiento y experiencia para evitar pruebas y errores innecesarias.",
     b2: "Menos Costos de Desarrollo",
+    d2: "Garantizamos tarifas competitivas por el trabajo que proporcionamos utilizando modelos internacionales.",
     b3: "Reduce Calendario de Actualizaciones",
+    d3: "Utilizamos metodologías de desarrollo ágiles, que nos permiten trabajar de forma rápida y eficiente.",
   },
-]
+];
