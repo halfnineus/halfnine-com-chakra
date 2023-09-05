@@ -1,3 +1,5 @@
+import nodemailer from 'nodemailer';
+
 export default async function contactMail(req: any, res: any) {
   if (req.method === 'POST') {
     const { name, email, phone, company, message } = req.body;
@@ -5,18 +7,26 @@ export default async function contactMail(req: any, res: any) {
     const userAgent = req.headers['user-agent'];
     const referrer = req.headers['referer'];
 
-    const sgMail = require('@sendgrid/mail')
-    sgMail.setApiKey(process.env.SENDGRID_API_KEY)
-    const msg = {
-      to: "diogamb@gmail.com",
-      from: "donotreply@ochoa.pro",
+    let transporter = nodemailer.createTransport({
+      host: process.env.SMTP_HOST,
+      port: process.env.SMTP_PORT,
+      secure: process.env.SMTP_SECURE === 'true',
+      auth: {
+        user: process.env.SMTP_USER,
+        pass: process.env.SMTP_PASS,
+      },
+    });
+
+    let mailOptions = {
+      from: 'contactform@halfnine.com',
+      to: 'diogamb@gmail.com',
       subject: `Message From ${name}`,
       text: message + " | Sent from: " + email,
       html: `<div>${message}</div><p>Email: ${email}</p><p>Phone: ${phone}</p><p>Company: ${company}</p><p>IP: ${senderIp}</p><p>User Agent: ${userAgent}</p><p>Referrer: ${referrer}</p>`,
-    }
+    };
 
     try {
-      await sgMail.send(msg);
+      await transporter.sendMail(mailOptions);
       res.status(200).json({ status: 'success' });
     } catch (error) {
       console.error('Error:', error);
