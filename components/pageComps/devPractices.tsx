@@ -70,12 +70,12 @@ export default DevPractices;
 const datax = [
   {
     locale: "en",
-    text: "Our Development Process",
+    text: "The Development Process",
     description: "We are dedicated to providing support and guidance at every step of the way. Our team is here to help you achieve your goals through a thorough and transparent development process."
   },
   {
     locale: "es",
-    text: "Nuestro Processo de Desarrollo",
+    text: "El Processo de Desarrollo",
     description: "Estamos dedicados a brindar apoyo y orientación en cada paso del camino. Nuestro equipo está aquí para ayudarlo a lograr sus objetivos a través de un proceso de desarrollo completo y transparente."
   },
 ]
@@ -91,7 +91,7 @@ const data = [
     locale: "en",
     title: "UI/UX Design",
     description:
-      "Our team uses the latest design tools to create user-friendly and visually appealing designs.",
+      "Our designs team creates user-friendly and visually appealing models, using trends to stand out while maintaining brand safety.",
   },
   {
     locale: "en",

@@ -20,7 +20,7 @@ import Link from 'next/link'
 import { useRouter } from "next/router"
 import { RiMailSendLine } from 'react-icons/ri'
 
-import { FaFacebookSquare, FaLinkedin, FaTwitterSquare } from "react-icons/fa"
+import { FaSquareFacebook, FaLinkedin, FaSquareXTwitter } from "react-icons/fa6"
 
 import footdat from '../../assets/components/footer.json'
 
@@ -214,16 +214,16 @@ export default function SCFooter() {
                                     _hover={{ color: "#4267B2", transform: 'scale(1)' }}
                                     h="34px"
                                     w="34px"
-                                    as={FaFacebookSquare}
+                                    as={FaSquareFacebook}
                                 />
                             </Link>
-                            <Link href={'https://twitter.com/halfnine'} target={'_blank'}>
+                            <Link href={'https://x.com/halfnine'} target={'_blank'}>
                                 <Icon
                                     transform={'scale(0.95)'}
                                     _hover={{ color: "#1DA1F2", transform: 'scale(1)' }}
                                     h="34px"
                                     w="34px"
-                                    as={FaTwitterSquare}
+                                    as={FaSquareXTwitter}
                                 />
                             </Link>
                             <Link href={'https://www.linkedin.com/company/halfnineus/'} target={'_blank'}>
