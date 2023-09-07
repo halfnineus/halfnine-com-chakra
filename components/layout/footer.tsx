@@ -220,7 +220,7 @@ export default function SCFooter() {
                             <Link href={'https://x.com/halfnine'} target={'_blank'}>
                                 <Icon
                                     transform={'scale(0.95)'}
-                                    _hover={{ color: "#1DA1F2", transform: 'scale(1)' }}
+                                    _hover={{ color: "#000000", transform: 'scale(1)' }}
                                     h="34px"
                                     w="34px"
                                     as={FaSquareXTwitter}
