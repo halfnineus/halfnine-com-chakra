@@ -129,7 +129,7 @@ const datax = [
     locale: "en",
     text: "Benefits from Our Development Services",
     b1: "Less Trial and Error",
-    d1: "We use our Knowledge and Expertise to avoid unnecessary trial and error.",
+    d1: "We use our Experience and Expertise to avoid unnecessary trial and error.",
     b2: "Less Development Costs",
     d2: "We leverage offshore models to ensure you get competitive rates for the work we provide.",
     b3: "Less Timeline on Updates",
